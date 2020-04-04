@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="关键词：摄像头、组合优化、遗传算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遗传算法 | 展馆安全保障问题">
+<meta property="og:url" content="http://mozheyang.top/2017/05/11/MathModellingGA/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="关键词：摄像头、组合优化、遗传算法">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/CircleSector.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/CameraCover.gif">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/MAIGallery.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/SG&NG.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/PEA.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/Optimum.png">
+<meta property="article:published_time" content="2017-05-11T07:51:49.000Z">
+<meta property="article:modified_time" content="2020-02-02T08:15:45.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Model  模型">
+<meta property="article:tag" content="MATLAB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/MathModellingGA/CircleSector.png">
+
+<link rel="canonical" href="http://mozheyang.top/2017/05/11/MathModellingGA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>遗传算法 | 展馆安全保障问题 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/05/11/MathModellingGA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          遗传算法 | 展馆安全保障问题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-05-11 15:51:49" itemprop="dateCreated datePublished" datetime="2017-05-11T15:51:49+08:00">2017-05-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 16:15:45" itemprop="dateModified" datetime="2020-02-02T16:15:45+08:00">2020-02-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/zh/categories/Mathematical-Modeling-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="index"><span itemprop="name">Mathematical Modeling  数学模型</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/05/11/MathModellingGA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/05/11/MathModellingGA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>关键词：</strong>摄像头、组合优化、遗传算法</p>
+<a id="more"></a>
+
+<h1 id="原题目及其分析"><a href="#原题目及其分析" class="headerlink" title="原题目及其分析"></a>原题目及其分析</h1><p>首先，放上完整的题目，如下所示。</p>
+<blockquote>
+<p>你们保安公司与某艺术展馆签订了一项安保合同，为他们安装摄像监视装置。由于这些摄像装置较大，会对展馆参观者视线形成干扰，所以展馆管理方希望这些装置安装得越少越好，并且希望摄像机尽可能装在角落处。<br>摄像机当固定摄像时能清晰分辨的距离为7.5米，当水平旋转摄像时能清晰分辨的距离为2.5米，摄像头视角大约为50度。<br>多数展馆都希望最大限度地利用空间展示展品，所以展馆的平面布局相当复杂，有一些隔板会以各种角度立在房间中间或者走廊上。尽管该展厅很大（见图1、图2），但任何两个对面墙之间的距离并不大，所以参观者不需要无谓地走很多路。所有的墙壁以及隔板都是平的。</p>
+<ol>
+<li>主要任务：你们的任务是为固定或可转动摄像机设计安装位置，以期在夜晚能够提供尽可能多的覆盖面积，包括地面与墙壁展示区域。</li>
+<li>资金拮据问题：由于预算资金不足，不能在全馆安装足够数量的监视摄像机，试讨论这种情形下的最优安装策略，并给出相应的安全性评价。</li>
+</ol>
+</blockquote>
+<p>看完题目后，第一步我们需要分析题目给我们提出的两个问题是什么<strong>性质</strong>的问题。</p>
+<blockquote>
+<p>主要任务：你们的任务是为固定或可转动摄像机设计安装位置，以期在夜晚能够提供<strong>尽可能多的覆盖面积</strong>，包括地面与墙壁展示区域。</p>
+</blockquote>
+<p>从题中可以清晰看出，“尽可能多”意味着这本质上是一个<strong>优化问题</strong>。而优化问题的本质可以解释为，在可选策略中找到一个最好的，实现优化目标值的最大化。</p>
+<p>这是什么意思呢？</p>
+<p>以上题为例。安装摄像头的种类，以及我们选择安装在什么位置，是我们可选的<strong>策略</strong>。在这些策略中，显然会出现监视覆盖面积的不同，这是由摄像头的物理本质所导致的。而题目后半部分提出，要使得覆盖面积最大化，即取一个摄像头安装方案，与其他的安装方案相比，能够获得最大的监视覆盖面积。</p>
+<p>由以上分析，我们不难想到，如果我们能够把所有的安装方案都罗列并充分计算，然后比较各方案的监视器覆盖面积，岂不是很轻易就解决了问题？</p>
+<p>在这里，问题不如想象那么复杂，却也没有那么简单。要实现这个优化算法，我们需要克服以下几个困难：</p>
+<ol>
+<li>将所有摄像头安装策略量化。这一步是数学建模的基础，没有量化的生活问题是没法建立模型进行计算的。</li>
+<li>考虑到这样的问题难以实现<strong>解析</strong>的描述，我们还需要实现决策的离散化，即把安装策略控制在<strong>有限个数</strong>内。这样的话，问题规模足够小的情况下，我们甚至是可以通过暴力<strong>穷举</strong>来进行求解的。</li>
+<li>问题规模较大时，穷举法将不适用。这时我们需要另辟蹊径，或许可以求助与大规模离散优化算法中的智能算法。</li>
+</ol>
+<p>接下来的解题过程中，我们需要一步步依次解决以上三个问题。这其实也是大多数优化类型题目的解题套路。本文着重介绍如何使用遗传算法（GA，Genetic Algorithm）。至于遗传算法思路，在本文不做详细介绍，感兴趣的同学可以自行查找相关资料。</p>
+<blockquote>
+<p>资金拮据问题：由于预算资金不足，不能在全馆安装足够数量的监视摄像机，试讨论这种情形下的最优安装策略，并给出相应的安全性评价。</p>
+</blockquote>
+<p>如果只是求摄像头监视覆盖面积的最大化，其实是不符合实际的。因为我们只需增加摄像头的个数，便可以毫无疑问地提高监视覆盖面积。因此，有可能是资金受限，有可能是摄像头种类或者个数受限，总之必需对摄像头施加一定约束才可以使问题更贴近于实际。这也是题目中第二点要求给我们提出的要求。</p>
+<p>在最后，题目还要求我们做出“安全性评价”。由于这个“安全性”这个名词没有任何严格定义，实际上我们能够选择任何我们喜欢的指标进行评价，例如监视覆盖面积（很明显）、地面覆盖面积、单位时间覆盖面积等等。</p>
+<p>题目分析基本完成以后，就可以开始以下的解题过程了。</p>
+<h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1><h2 id="摄像头模型分析"><a href="#摄像头模型分析" class="headerlink" title="摄像头模型分析"></a>摄像头模型分析</h2><p>题中给出摄像头的两种安装方式：固定式安装和旋转式安装，其中固定式安装清晰分辨的距离为7.5米，旋转式安装清晰分辨的距离为2.5米，两种方式摄像头视角大约为50°。由题意得固定式摄像头的监控为一个顶角为50°，母线长为7.5m的圆锥和半径为7.5m的球壳围成的区域，旋转式摄像头的监控范围为一个半径为2.5m的半球壳被一个同旋转中心的顶角为50°，母线长2.5m的圆锥截剩下区域。假设监控设备水平安装，在距固定式摄像头垂直距离不超过5.74m，距旋转式摄像头垂直距离不超过1.92m的一水平高度上两者监视范围分别为监视区域的一个水平截面。<br>由于摄像头尽量安装在角落处，固定式摄像头有效监视区与墙壁及临近摄像头有效监视区可将监视盲区包围，旋转式摄像头自身监视盲区被有效监视区包围，参观者无法避过监视区域到达监视盲区，可将该盲区视为安全范围，因此可将两者的三维监视区域二维化，简化为其监视区域在水平面上的投影，即一个顶角为50°，半径为7.5m的扇形和一个半径为2.5m的圆。如下图所示：</p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/CircleSector.png" alt=""> </p>
+<div  align="center">
+摄像头监视范围示意图
+</div>
+
+<h2 id="摄像头安装策略"><a href="#摄像头安装策略" class="headerlink" title="摄像头安装策略"></a>摄像头安装策略</h2><h3 id="样本制作（从0到1）"><a href="#样本制作（从0到1）" class="headerlink" title="样本制作（从0到1）"></a>样本制作（从0到1）</h3><p>为了将<strong>“所有摄像头安装策略量化”</strong>，我们想到的方案是，人工筛选摄像头安装方案的<strong>样本</strong>。这样做不仅使得安装策略变成了简单的<strong>安装方案的简单叠加</strong>，还使得安装策略个数限制在了<strong>有限个数</strong>内，效果如下图所示：</p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/CameraCover.gif" alt=""> </p>
+<p>整个制作过程主要依赖Photoshop 2014cc版本进行完成，这其中，当然不可避免的会掺杂主观因素——至少基本的摄像头安装方案样本是我们主观选取的。可以想象，选取的基本样本不同，对最后的安装方案也会有一定影响。但是，这些问题在数学建模这个大背景下显得不是那么重要，我们需要做的就是大胆想象，并客观地分析模型利弊。</p>
+<p>具体地，三个展厅分别的基础样本展示如下：</p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/MAIGallery.png" alt=""> </p>
+<div  align="center">
+Challenge of Modern Art Interactive Gallery摄像头安装方案样本
+</div>
+
+<p><img src="http://mozheyang.top/images/MathModellingGA/SG&NG.png" alt=""> </p>
+<div  align="center">
+South Gallery & North Gallery摄像头安装方案样本
+</div>
+
+<p><img src="http://mozheyang.top/images/MathModellingGA/PEA.png" alt=""> </p>
+<div  align="center">
+Permanent Exhibition Area摄像头安装方案样本
+</div>
+
+<h3 id="样本叠加（从1到n）"><a href="#样本叠加（从1到n）" class="headerlink" title="样本叠加（从1到n）"></a>样本叠加（从1到n）</h3><p>得到图片样本后，我们还需将图片读入MATLAB进行处理。这主要依赖MATLAB提供的图片信息读取函数imread解决。而为了提高图片运算速度，我们还需要将图片信息<strong>二值化</strong>。</p>
+<p>JPG图片信息导入MATLAB后，是一个二维矩阵。矩阵上的每一个点包含三个值，即RGB的颜色信息。二值化就是把RGB信息变成0或者1，这样整个图片信息矩阵可以变成一个纯粹<strong>逻辑矩阵</strong>，叠加运算的速度可以加快很多。这样的处理是有意义而必要的。</p>
+<p>根据上述逻辑，</p>
+<blockquote>
+<p>图片叠加 = 逻辑矩阵叠加 = 逻辑矩阵1 + 逻辑矩阵2 + … 逻辑矩阵n</p>
+</blockquote>
+<p>因此，我们通过图片处理得到逻辑矩阵后，就可以实现安装策略的充分定义了——安装策略 = 基本安装方案的简单叠加。至此，我们已经可以估计各个待监视区域摄像头安装方案解空间的大小了：</p>
+<p>Challenge of Modern Art Interactive Gallery选取了15个基本样本，其解空间大小为$2^{15}$；</p>
+<p>South Gallery &amp; North Gallery选取了13个基本样本，其解空间大小为选取了13个基本样本，其解空间大小为$2^{13}$；</p>
+<p>Permanent Exhibition Area选取了13个基本样本，其解空间大小为$2^{27}$。</p>
+<h2 id="监视区域覆盖面积"><a href="#监视区域覆盖面积" class="headerlink" title="监视区域覆盖面积"></a>监视区域覆盖面积</h2><h3 id="穷举法求解"><a href="#穷举法求解" class="headerlink" title="穷举法求解"></a>穷举法求解</h3><p>以上模型有一个缺陷，当然也应该是题目要求的缺陷。</p>
+<p>很明显，摄像头个数越多，那么监视区域覆盖面积就会越大。在这里，本文定义了摄像头的单位覆盖面积为“监视区域覆盖面积/摄像头总个数”。从而可以达到一个比较好的符合实际的优化结果。</p>
+<p>通过上机进行穷举实验，我们发现，$2^{13-15}$的解空间是可以利用穷举法求解的，即对各基础样本进行叠加实验，试出最大的监视区域覆盖面积。很顺利的，笔者通过两次穷举方法求解出了最佳安装方案（最大的摄像头单位覆盖面积），可参见本文最后图中结果。</p>
+<h3 id="遗传算法求解"><a href="#遗传算法求解" class="headerlink" title="遗传算法求解"></a>遗传算法求解</h3><p>而$2^{27}$的解空间大小则不能通过简单的穷举方法进行求解。因此，考虑使用遗传算法对Permanent Exhibition Area的安装方案进行优化求解。</p>
+<p>在下面，由于空间所限，笔者暂时只讲核心算法——遗传算法代码（使用MATLAB编写）列于下方。需要声明的是，本段代码设计参考并修改自网络上的开源代码，如有侵权，请联系本人删除。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 二进制编码遗传算法求解</span></span><br><span class="line">clc;</span><br><span class="line">clear all;</span><br><span class="line">close all;</span><br><span class="line"><span class="comment">% 主程序中声明global，子程序可调用</span></span><br><span class="line"><span class="keyword">global</span> BitLength</span><br><span class="line"><span class="keyword">global</span> boundsbegin</span><br><span class="line"><span class="keyword">global</span> boundsend</span><br><span class="line"><span class="comment">%% 算法初始状态设置</span></span><br><span class="line">bounds=[<span class="number">0</span> <span class="number">1</span>];<span class="comment">%一维自变量的取值范围</span></span><br><span class="line">precision=<span class="number">1e-4</span>; <span class="comment">%运算精度</span></span><br><span class="line">boundsbegin=bounds(:,<span class="number">1</span>);</span><br><span class="line">boundsend=bounds(:,<span class="number">2</span>);</span><br><span class="line">BitLength=<span class="number">27</span>;</span><br><span class="line">popsize=<span class="number">50</span>; <span class="comment">%初始种群大小</span></span><br><span class="line">Generationnmax=<span class="number">20</span>;  <span class="comment">%最大代数</span></span><br><span class="line">pcrossover=<span class="number">0.60</span>; <span class="comment">%交配概率</span></span><br><span class="line">pmutation=<span class="number">0.02</span>; <span class="comment">%变异概率</span></span><br><span class="line"><span class="comment">%% 主程序</span></span><br><span class="line"><span class="comment">%产生初始种群，摄像头个数在9个以上</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    population=<span class="built_in">round</span>(<span class="built_in">rand</span>(popsize,BitLength));</span><br><span class="line">    <span class="keyword">if</span> sum(population)&gt;<span class="number">9</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%计算适应度,返回适应度Fitvalue和累积概率cumsump</span></span><br><span class="line">[Fitvalue,cumsump]=fitnessval(population);  </span><br><span class="line">Generation=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 循环终止条件为达到最大代数，在机时较充裕时可设置达到误差精度后终止</span></span><br><span class="line"><span class="keyword">while</span> Generation&lt;Generationnmax+<span class="number">1</span></span><br><span class="line">    str=strcat(<span class="string">'目前是第'</span>,Generation,<span class="string">'代！'</span>);</span><br><span class="line">    <span class="built_in">disp</span>(str)</span><br><span class="line">   <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:<span class="number">2</span>:popsize </span><br><span class="line">      <span class="comment">%选择操作</span></span><br><span class="line">      seln=selection(population,cumsump);</span><br><span class="line">      <span class="comment">%交叉操作</span></span><br><span class="line">      scro=crossover(population,seln,pcrossover);</span><br><span class="line">      scnew(<span class="built_in">j</span>,:)=scro(<span class="number">1</span>,:);</span><br><span class="line">      scnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=scro(<span class="number">2</span>,:);</span><br><span class="line">      <span class="comment">%变异操作</span></span><br><span class="line">      smnew(<span class="built_in">j</span>,:)=mutation(scnew(<span class="built_in">j</span>,:),pmutation);</span><br><span class="line">      smnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=mutation(scnew(<span class="built_in">j</span>+<span class="number">1</span>,:),pmutation);</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line">   population=smnew;  <span class="comment">%产生了新的种群</span></span><br><span class="line">   <span class="comment">%计算新种群的适应度   </span></span><br><span class="line">   [Fitvalue,cumsump]=fitnessval(population);</span><br><span class="line">   <span class="comment">%记录当前代最好的适应度和平均适应度</span></span><br><span class="line">   [fmax,nmax]=<span class="built_in">max</span>(Fitvalue);</span><br><span class="line">   fmean=<span class="built_in">mean</span>(Fitvalue);</span><br><span class="line">   ymax(Generation)=fmax;</span><br><span class="line">   ymean(Generation)=fmean;</span><br><span class="line">   <span class="comment">%记录当前代的最佳染色体个体</span></span><br><span class="line">   xmax(Generation)=Room1Search(population(nmax,:));</span><br><span class="line">   Bestpopulation=population(nmax,:);</span><br><span class="line">   Generation=Generation+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%% 结果显示</span></span><br><span class="line">Generation=Generation<span class="number">-1</span></span><br><span class="line">Besttargetfunvalue=Room1Search(Bestpopulation)</span><br><span class="line">Bestpopulation</span><br><span class="line">hand=<span class="built_in">plot</span>(<span class="number">1</span>:Generation,ymean);</span><br><span class="line">set(hand,<span class="string">'color'</span>,<span class="string">'r'</span>,<span class="string">'linestyle'</span>,<span class="string">'-'</span>,<span class="string">'linewidth'</span>,<span class="number">1.8</span>,<span class="string">'marker'</span>,<span class="string">'h'</span>,<span class="string">'markersize'</span>,<span class="number">6</span>)</span><br><span class="line">xlabel(<span class="string">'进化代数'</span>);ylabel(<span class="string">'最大/平均适应度'</span>);xlim([<span class="number">1</span> Generationnmax]);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'最大适应度'</span>,<span class="string">'平均适应度'</span>);</span><br><span class="line">box off;<span class="built_in">hold</span> off;</span><br></pre></td></tr></table></figure>
+
+<h3 id="求解结果"><a href="#求解结果" class="headerlink" title="求解结果"></a>求解结果</h3><p>最后最优方案的覆盖示意图：</p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/Optimum.png" alt=""> </p>
+<div  align="center">
+三个展馆最优方案的MATLAB二值化覆盖示意图
+(a) Permanent Exhibition Area
+(b) Challenge of Modern Art Interactive Gallery
+(c) South Gallery&North Gallery
+</div>
+
+<p>至此，本文已经搭建了一个摄像头安装方案的较完整的解决思路框架。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/05/11/MathModellingGA/" title="遗传算法 | 展馆安全保障问题">http://mozheyang.top/2017/05/11/MathModellingGA/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Model-%E6%A8%A1%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> Model  模型</a>
+              <a href="/blog/zh/tags/MATLAB/" rel="tag"><i class="fa fa-tag"></i> MATLAB</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/05/11/MathModellingPrimer/" rel="prev" title="思路整理 | 数学建模解题思路">
+      <i class="fa fa-chevron-left"></i> 思路整理 | 数学建模解题思路
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/05/12/KindleAnki/" rel="next" title="利用Kindle和Anki进行阅读生词闭环记忆">
+      利用Kindle和Anki进行阅读生词闭环记忆 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原题目及其分析"><span class="nav-number">1.</span> <span class="nav-text">原题目及其分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题过程"><span class="nav-number">2.</span> <span class="nav-text">解题过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#摄像头模型分析"><span class="nav-number">2.1.</span> <span class="nav-text">摄像头模型分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#摄像头安装策略"><span class="nav-number">2.2.</span> <span class="nav-text">摄像头安装策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#样本制作（从0到1）"><span class="nav-number">2.2.1.</span> <span class="nav-text">样本制作（从0到1）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样本叠加（从1到n）"><span class="nav-number">2.2.2.</span> <span class="nav-text">样本叠加（从1到n）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监视区域覆盖面积"><span class="nav-number">2.3.</span> <span class="nav-text">监视区域覆盖面积</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#穷举法求解"><span class="nav-number">2.3.1.</span> <span class="nav-text">穷举法求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遗传算法求解"><span class="nav-number">2.3.2.</span> <span class="nav-text">遗传算法求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求解结果"><span class="nav-number">2.3.3.</span> <span class="nav-text">求解结果</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

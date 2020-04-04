@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.原文地址：https:&#x2F;&#x2F;www.nature.com&#x2F;nature&#x2F;journal&#x2F;v546&#x2F;n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IT与材料 | 通过MC-EMMA算法探索无机材料最优结构">
+<meta property="og:url" content="http://mozheyang.top/2017/11/02/collins2017/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.原文地址：https:&#x2F;&#x2F;www.nature.com&#x2F;nature&#x2F;journal&#x2F;v546&#x2F;n">
+<meta property="og:image" content="http://mozheyang.top/images/collins2017/collins2017-title.png">
+<meta property="og:image" content="http://mozheyang.top/images/collins2017/collins2017-fig1.png">
+<meta property="article:published_time" content="2017-11-02T03:11:20.000Z">
+<meta property="article:modified_time" content="2020-02-02T07:58:16.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Information Science &amp; Technology  信息科学与技术">
+<meta property="article:tag" content="Material  材料">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/collins2017/collins2017-title.png">
+
+<link rel="canonical" href="http://mozheyang.top/2017/11/02/collins2017/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>IT与材料 | 通过MC-EMMA算法探索无机材料最优结构 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/11/02/collins2017/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          IT与材料 | 通过MC-EMMA算法探索无机材料最优结构
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-11-02 11:11:20" itemprop="dateCreated datePublished" datetime="2017-11-02T11:11:20+08:00">2017-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 15:58:16" itemprop="dateModified" datetime="2020-02-02T15:58:16+08:00">2020-02-02</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/11/02/collins2017/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/11/02/collins2017/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="http://mozheyang.top/images/collins2017/collins2017-title.png" alt=""></p>
+<p><em>解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.</em><br><em>原文地址：<a href="https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html" target="_blank" rel="noopener">https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html</a></em></p>
+<a id="more"></a>
+
+<p>原文地址中的补充数据也是很有价值的，例如计算数据等。</p>
+<p>另外，Collins等人公开了MC-EMMA算法的Python源码。感兴趣的朋友可前去下载一读。笔者也计划在后来的博客中对源码内容进行分析。<br>MC-EMMA算法源码地址如下：<br><a href="http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html" target="_blank" rel="noopener">http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html</a></p>
+<hr>
+<p>在已知物质结构领域，计算方法的应用已经取得了许多成就。但是，纯粹的第一性原理计算，由于计算量巨大，无法完成普遍宏观尺度材料的模拟；只在已知结构的物质里，利用大数据原理进行新材料结构的搜索，又很有可能找不到最优的材料结构，不能很好地发挥计算模拟方法先于实验，从而指导实验方法的优势。</p>
+<p>因此，大数据原理和第一性原理的结合是一个很好的思路。这就产生了<strong>Extended Module Materials Assembly (EMMA) **此类算法。本研究在原有的EMMA算法的基础上，利用有权值的</strong>蒙特卡洛（MC，Monte Carlo；即随机算法算法）**进行改进，对已知无机物成分及结构进行复杂置换，实现了对新的无机物质结构的探索，并通过实验验证了其可行性。</p>
+<h1 id="核心算法"><a href="#核心算法" class="headerlink" title="核心算法"></a>核心算法</h1><p>本研究主要依赖独创的MC-EMMA算法进行材料成分及结构的筛选优化。<br><img src="http://mozheyang.top/images/collins2017/collins2017-fig1.png" alt=""></p>
+<p>本文通过对六类蒙特卡洛规则附以一定权值p来决定使用何种随机算法使结构“进化”（在这里，“进化”并不一定意味着“优化”）。以下称不同成分、结构的物质结构为“模块”，“模块”组合从而形成材料系统。</p>
+<blockquote>
+<p><strong>第一类随机算法：</strong>选取两个模块互相交换位置<br><strong>第二类随机算法：</strong>系统内所有模块位置重排<br><strong>第三类随机算法：</strong>其中一个随机选取的模块被换成一种新类型（不同于系统内现有的模块）<br><strong>第四类随机算法：</strong>创建一个新的体系，保持现有的模块总数，模块类型发生变化<br><strong>第五类随机算法：</strong>改变现有的模块总数，如果总数增加则需新增模块（在不改变整体成分的前提下，该模块将被随机地选自包含所有模块的完整集合）<br><strong>第六类随机算法：</strong>创建一个新的体系，模块总数和模块类型都将是随机的。</p>
+</blockquote>
+<p>需要注意的是，前三类随机算法对结构的改变较小，后三类随机算法对结构的改变较大，所以权值的合理选择是非常重要的。</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>综上所述，本文的随机选取过程是经过精心设计的。但是笔者并没有看出太多的优越性，因为本文既不能证明这些随机抽样组合能够尽可能遍历最优解空间，也不能证明这些随机抽样组合能够把我们带向更好的优化结构，或者拥有更快的求解效率。</p>
+<p>实际上，目前大多数“人工智能”算法，或者说“机器智能”算法的思想还停留在“黑箱”阶段。即我们对这个“黑箱”的内部机制实际上是不清楚的。或许随着计算机数学的发展，我们能更清楚地认识到计算机给认识物质结构以及物质结构优化所真实带来的变化吧。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/11/02/collins2017/" title="IT与材料 | 通过MC-EMMA算法探索无机材料最优结构">http://mozheyang.top/2017/11/02/collins2017/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> Information Science & Technology  信息科学与技术</a>
+              <a href="/blog/zh/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/10/29/EClecturenote4/" rel="prev" title="课后回顾 | 电化学动力学（宏观尺度）">
+      <i class="fa fa-chevron-left"></i> 课后回顾 | 电化学动力学（宏观尺度）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/11/07/CATAlecturenote1/" rel="next" title="课后回顾 | 吸附热力学">
+      课后回顾 | 吸附热力学 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#核心算法"><span class="nav-number">1.</span> <span class="nav-text">核心算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">2.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

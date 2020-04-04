@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-$$一种是二电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2$$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论">
+<meta property="og:url" content="http://mozheyang.top/2019/03/31/LSV-KLeq/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-$$一种是二电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2$$">
+<meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
+<meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/RDEcoordinate.png">
+<meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/GammaFunc.png">
+<meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/KLplot.png">
+<meta property="article:published_time" content="2019-03-31T02:10:32.000Z">
+<meta property="article:modified_time" content="2020-03-19T12:40:59.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Chemistry  化学">
+<meta property="article:tag" content="Material  材料">
+<meta property="article:tag" content="Catalysis  催化">
+<meta property="article:tag" content="Model  模型">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
+
+<link rel="canonical" href="http://mozheyang.top/2019/03/31/LSV-KLeq/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2019/03/31/LSV-KLeq/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-31 10:10:32" itemprop="dateCreated datePublished" datetime="2019-03-31T10:10:32+08:00">2019-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-19 20:40:59" itemprop="dateModified" datetime="2020-03-19T20:40:59+08:00">2020-03-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/zh/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">Electrochemistry  电化学</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2019/03/31/LSV-KLeq/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2019/03/31/LSV-KLeq/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：<br>$$<br>\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- = 4\text{OH}^-<br>$$<br>一种是二电子过程：<br>$$<br>\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2<br>$$</p>
+<a id="more"></a>
+
+<p><strong>四电子过程</strong>可以保证在更短的时间内提供更大的电流，即四电子过程可以保证更大的电池（fuel cell/metal-air batteries）功率。氧还原反应的电化学性能测试常使用基于K-L方程的旋转圆盘电极（RDE）方法对反应转移电子数进行测算。</p>
+<p><img src="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p>
+<p class="refs">Ref: 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p>
+
+<p>K-L方程实际上建立了极限扩散电流$i_l$与旋转圆盘转速等物理因素之间的关系。通过不同转速下测试极限扩散电流，便可以拟合出关键的反应动力学参数——转移电子数。那么极限扩散电流到底是不是材料的本征性质呢？这个问题没有想象的那么简单，笔者首先介绍了K-L理论后我们再作判断不迟。</p>
+<h1 id="RDE下液流层的流体力学描述"><a href="#RDE下液流层的流体力学描述" class="headerlink" title="RDE下液流层的流体力学描述"></a>RDE下液流层的流体力学描述</h1><p>如下图，建立RDE的柱坐标系。z = 0处为圆盘电极表面。</p>
+<p><img src="http://mozheyang.top/images/LSV_KLeq/RDEcoordinate.png" alt=""></p>
+<p class="refs">Ref: Bard et al., Electrochemical Methods: Fundamentals and Applications; wiley New York, 1980; Vol. 2.</p>
+
+<p>定义液流速度<br>$$<br>\vec{v} = (v_r, v_\phi, v_z)<br>$$</p>
+<p>已知：</p>
+<ul>
+<li><strong>圆盘表面</strong>液体流速满足$v_r=0, v_phi=0, v_y=\omega r$.</li>
+<li><strong>本体溶液</strong>液体流速满足$v_r=0, v_phi=0, v_y=-U_0$.</li>
+</ul>
+<p>由<strong>稳态</strong>下的纳维-斯托克斯方程（Navier–Stokes equations）可描述<strong>柱坐标</strong>下不同方向液体流速之间的关系<br>$$<br>v_r + r \frac{\partial v_r}{\partial r} + r\frac{\partial v_z}{\partial z} = 0 \</p>
+<p>v_r \frac{\partial v_r}{\partial r} - \frac{v_\phi^2}{r} </p>
+<ul>
+<li>v_z \frac{\partial v_r}{\partial z}<br>= -\frac{1}{\rho} \frac{\partial p}{\partial r} + v_\phi<br>\left[<br>\frac{\partial^2 v_r}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_r}{r})</li>
+<li>\frac{\partial^2 v_r}{\partial z^2}<br>\right] \</li>
+</ul>
+<p>v_r \frac{\partial v_\phi}{\partial r} - \frac{v_r v_\phi}{r} </p>
+<ul>
+<li>v_z \frac{\partial v_\phi}{\partial z}<br>= v_\phi<br>\left[<br>\frac{\partial^2 v_\phi}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_\phi}{r})</li>
+<li>\frac{\partial^2 v_\phi}{\partial z^2}<br>\right] \</li>
+</ul>
+<p>v_r \frac{\partial v_z}{\partial r} + v_z \frac{\partial v_z}{\partial z}<br>= -\frac{1}{\rho} \frac{\partial p}{\partial z} + v_\phi \left[<br>\frac{\partial^2 v_z}{\partial r^2} + \frac{1}{r} \frac{\partial v_z}{\partial r}</p>
+<ul>
+<li>\frac{\partial^2 v_z}{\partial z^2} \right] \<br>$$</li>
+</ul>
+<p class="refs">Ref: Real-Ramirez, C. A., & Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen. </p>
+
+<p>von Karman在1921年提出以独立无量纲变量来描述各方向速度值，可以满足N-S方程的限制条件，即<br>$$<br>\gamma = (\frac{\omega}{\mu})^{1/2} z<br>$$<br>其中$\omega$为圆盘转速，$\mu$为液体粘度. 此时定义<br>$$<br>F(\gamma) = \frac{v_r}{r \omega}, G(\gamma) = \frac{v_\phi}{r \omega},<br>H(\gamma) = \frac{v_z}{\sqrt{\omega \mu}}<br>\quad and \quad P(\gamma) = \frac{p}{\rho \mu \omega}<br>$$<br>可将N-S方程简化为<br>$$<br>2F + H’ = 0 \<br>F’’ - HF’ - F^2 + G^2 = 0 \<br>G’’ - HG’ - 2FG = 0 \<br>H’’ - HH’ - P’ = 0<br>$$<br>其边界条件为<br>$$<br>H = F = P = 0, G = 1 \quad at \quad z = 0 \<br>and \quad F = G = 0 \quad at \quad z = \infty \<br>$$</p>
+<p class="refs">Ref: von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486. </p>
+
+<p>Chochran在1934年提出使用无穷级数方法近似表示$F, G, H$三个函数。在离电极表面较近处，即$z$较小时，$\gamma &lt;&lt; 1$，此时各方向速度值可表示为<br>$$<br>v_r = r \omega F(\gamma)<br>= r \omega (a \gamma - \frac{\gamma^2}{2} - \frac{b \gamma^3}{3} + \cdots) \<br>v_\phi = r \omega G(\gamma)<br>= r \omega (1 + b \gamma + \frac{a \gamma^2}{3} + \cdots) \<br>v_z =(\omega \mu)^{1/2} H(\gamma)<br>= (\omega \mu)^{1/2} (-\alpha \gamma + \frac{\gamma^3}{3} + \frac{b \gamma^4}{6} + \cdots)<br>$$<br>其中，$a=0.51026$，$b=-0.6159$。</p>
+<p class="refs">Ref: Cochran, W. G. (1934). The flow due to a rotating disc. Proceedings of the Cambridge Philosophical Society, 30, 365-375. </p>
+
+<p>在圆盘表面$z \rightarrow 0$，即$\gamma \rightarrow 0$，可以获得速度值表达式<br>$$<br>v_r = r \omega (a \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} r z \<br>v_z = (\omega \mu)^{1/2} (-\alpha \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} z^2<br>$$</p>
+<h1 id="RDE法向的物质对流及扩散"><a href="#RDE法向的物质对流及扩散" class="headerlink" title="RDE法向的物质对流及扩散"></a>RDE法向的物质对流及扩散</h1><p>柱坐标下的反应物的对流-扩散方程可以写为<br>$$<br>v_r (\frac{\partial C_o}{\partial r}) </p>
+<ul>
+<li>\frac{v_\phi}{r} (\frac{\partial C_o}{\partial \phi})</li>
+<li>v_z (\frac{\partial C_o}{\partial z})<br>= D_o [\frac{\partial^2 C_o}{\partial z^2}</li>
+<li>\frac{\partial^2 C_o}{\partial r^2}</li>
+<li>\frac{1}{r} (\frac{\partial C_o}{\partial r}) </li>
+<li>\frac{1}{r^2}\frac{\partial^2 C_o}{\partial \phi^2}]<br>$$<br>由于反应物浓度相对于RDE轴对称，即反应物浓度在$\phi$方向无差别，所以有<br>$$<br>\frac{\partial C_o}{\partial \phi}<br>= \frac{\partial^2 C_o}{\partial \phi^2} = 0<br>$$<br>在RDE表面径向上，在$0 \leq r \leq r_{disk}$，反应物浓度无差别，有<br>$$<br>\frac{\partial C_o}{\partial r}<br>= \frac{\partial^2 C_o}{\partial r^2} = 0<br>$$<br>因此可将反应物物质对流-扩散方程简化为</li>
+</ul>
+<center><p class="eqnBlock">
+$$
+v_z (\frac{\partial C_o}{\partial z})
+= D_o \frac{\partial^2 C_o}{\partial z^2}
+$$
+</p></center>
+
+<p>将$v_z= -0.51 \omega^{2/3} v^{-1/2} z^2$代入上式得<br>$$<br>\frac{\partial^2 C_o}{\partial z^2} = - \frac{z^2}{B} \frac{\partial C_o}{\partial z}<br>$$<br>其中，$B = \frac{D_o \omega^{-3/2} v^{-1/2}}{0.51}$. 接下来的任务就是对该偏微分方程进行积分处理，尝试求解。可以先令$X = \frac{\partial C_o}{\partial z}$，有<br>$$<br>\frac{\partial X}{\partial z} = - \frac{z^2}{B} X<br>$$<br>两边积分可解得<br>$$<br>\frac{X}{X_0} = \exp(-\frac{z^3}{3B})<br>$$<br>再将$X = \frac{\partial C_o}{\partial z}$带回，有<br>$$<br>\frac{\partial C_o}{\partial z} = (\frac{\partial C_o}{\partial z})_{z=0}<br>\exp(-\frac{z^3}{3B})<br>$$<br>这时候即将对该式进行二次积分。但是该次积分积分限的选取具有不同的物理意义。一种情形是电极表面的反应动力学很快，反应物一到电极表面就转化为产物，电极表面反应物浓度为零的情形。这种情况下，电流仅受到物质扩散传质的限制，我们称之为“<strong>极限电流情形</strong>”。另一种情形是电极表面的反应动力学没有那么快，电极表面反应物浓度不为零的情形，我们称之为“<strong>非极限电流情形</strong>”。接下来我们就来讨论分别描述这两种情形的<strong>Levich方程</strong>和<strong>Koutecky-Levich方程</strong>。</p>
+<h2 id="极限电流情形"><a href="#极限电流情形" class="headerlink" title="极限电流情形"></a>极限电流情形</h2><p>在<strong>极限电流</strong>情形下，电极表面反应物浓度<strong>为零</strong>，则<br>$$<br>\int_0^{C_o^*} dC_o = (\frac{\partial C_o}{\partial z})_{z=0}<br>\int_0^\infty \exp(-\frac{z^3}{3B}) dz<br>$$<br>有定积分<br>$$<br>\exp(a z^3) dz = (-a)^{1/3} \Gamma(\frac{4}{3}) = 0.8934(-a)^{1/3}<br>$$<br>其中$\Gamma$函数为<br>$$<br>\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt<br>$$<br>其在[0,3]区间的函数图像如下</p>
+<p><img src="http://mozheyang.top/images/LSV_KLeq/GammaFunc.png" alt=""></p>
+<p>故<br>$$<br>C_o^* = (\frac{\partial C_o}{\partial z})<em>{z=0} 0.8934(3B)^{1/3}<br>= (\frac{\partial C_o}{\partial z})</em>{z=0}<br>0.8934(\frac{3D_o \omega^{-3/2} \mu^{1/2}}{0.51})^{1/3}<br>$$<br>又因为电流与电极表面的物质流量相关，由法拉第定律可得<br>$$<br>i = nFAD_o (\frac{\partial C_o}{\partial z})_{z=0}<br>$$<br>与上式联立可得Levich方程</p>
+<center><p class="eqnBlock">
+$$
+i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*
+$$
+</p></center>
+
+
+<p>从上式我们已经可以知道，对特定电极反应（转移电子数n不变），<strong>极限扩散电流是旋转圆盘转速的函数</strong>——因为法拉第常数$F$、电极面积$A$、圆盘尺寸、电解液中反应物扩散系数$D$、电解液粘度$\mu$和电解液浓度$C_o^*$都是恒定的。对不同材料，氧还原所经历路径不同，也就可能导致电极表面的电极反应不同，会反应在转移电子数上，从而导致极限扩散电流的不同。因此，本文的结论就是，在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</p>
+<h2 id="非极限电流情形"><a href="#非极限电流情形" class="headerlink" title="非极限电流情形"></a>非极限电流情形</h2><p>在<strong>非极限电流</strong>情形下，电极表面反应物浓度<strong>不为零</strong>，则<br>$$<br>\int_{C_o(z=0)}^{C_o^<em>} dC_o = C_o^</em> - C_o(z=0)<br>= (\frac{\partial C_o}{\partial z})_{z=0}<br>\int_0^\infty \exp(-\frac{z^3}{3B}) dz<br>$$<br>且$C_o(z=0) \neq 0$. 同极限电流情形进行积分可得<br>$$<br>i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} [C_o^* - C_o(z=0)]<br>$$<br>由Levich方程可得<br>$$<br>i = i_l [\frac{C_o^* - C_o(z=0)}{C_o^<em>}]<br>$$<br>对单步骤完全不可逆反应过程有<br>$$<br>i = nFAk_f(E)C_o(z=0)<br>$$<br>其中反应速率常数$k_f(E) = k_0 \exp[-\alpha f(E-E^\Theta)]$可由反应动力学B-V方程导出。那么该式与上式联立可得<br>$$<br>i = nFAk_f(E) C_o^</em>(1-\frac{i}{i_l})<br>$$<br>可以定义<br>$$<br>i_k = nFAk_f(E)C_o^*<br>$$<br>那么便有Koutecky-Levich方程</p>
+<center><p class="eqnBlock">
+$$
+\frac{1}{i} = \frac{1}{i_k} + \frac{1}{i_l} = \frac{1}{i_k} + \frac{1}{0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*}
+$$
+</p></center>
+
+
+<p>从上式我们可以看出，Levich方程所描述的极限电流情形是Koutecky-Levich方程中$i_k \rightarrow \infty$时的情形。K-L方程的物理意义是：<u><strong>在无表面修饰的电极上，总电流主要由反应动力学导致的电流$i_k$和传质所导致的电流$i_l$构成。</strong></u></p>
+<p><img src="http://mozheyang.top/images/Electrocatalysis/KLplot.png" alt="K-L plot"></p>
+<p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L拟合直线的<strong>斜率</strong>上。当然，这个变化也会反映在拟合直线的<strong>截距</strong>$\frac{1}{i_k}$上，但其中含有$k_f(E)$这一不易确定的反应动力学参数，所以其不容易被定量分析。</p>
+<p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="http://mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>总结本文得到的结论：</p>
+<ul>
+<li><p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</p>
+</li>
+<li><p>在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</p>
+</li>
+<li><p>负载量可能会<strong>通过活性位点暴露</strong>的角度对极限扩散电流产生影响。但在一定范围内，其影响可能是不大的。</p>
+</li>
+<li><p>在ORR测试中，需要通过K-L方程计算不同偏压下的转移电子数。这时候一定要注意各数值的<strong>量纲</strong>问题！在转速使用“rpm”（Revolutions Per Minute，圈/分）时，<strong>常数取“0.2”</strong>，[5] 即使用公式：$i_l = 0.2 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$；在转速使用“rad/s”（Radian Per Second，弧度/秒）时，<strong>常数取“0.62”</strong>，[6] 即使用公式：$i_l = 0.62 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$（如果纵坐标已经取电流密度，记得将等式右边的A略掉）。 </p>
+</li>
+<li><p>ORR计算常用物理常数：法拉第常数$F=96485 C mol^{-1}$，氧气在电解液中的饱和浓度$C_o = 1.2 \times 10^{-3} mol L^{-1}$，氧气在KOH溶液中的扩散系数$D_o = 1.9 \times 10^{-5} cm s^{-1}$，电解液粘度$\mu = 0.01 cm^2 s^{-1}$. </p>
+</li>
+</ul>
+<p>总之，极限扩散电流影响因素较多，非预期的实验结果一定要仔细分析！</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Bard, A. J., Faulkner, L. R., Leddy, J., &amp; Zoski, C. G. (1980). Electrochemical methods: fundamentals and applications (Vol. 2). New York: wiley.</p>
+<p>[2] Real-Ramirez, C. A., &amp; Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen.</p>
+<p>[3] von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486.</p>
+<p>[4] Cochran, W. G. (1934). The flow due to a rotating disc. Proceedings of the Cambridge Philosophical Society, 30, 365-375.</p>
+<p>[5] Han S, Hu X, Wang J, et al. Novel Route to Fe‐Based Cathode as an Efficient Bifunctional Catalysts for Rechargeable Zn–Air Battery[J]. Advanced Energy Materials, 2018, 8(22): 1800955.</p>
+<p>[6] Liang Y, Li Y, Wang H, et al. Co 3 O 4 nanocrystals on graphene as a synergistic catalyst for oxygen reduction reaction[J]. Nature materials, 2011, 10(10): 780-786.</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2019/03/31/LSV-KLeq/" title="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论">http://mozheyang.top/2019/03/31/LSV-KLeq/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Chemistry-%E5%8C%96%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> Chemistry  化学</a>
+              <a href="/blog/zh/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
+              <a href="/blog/zh/tags/Catalysis-%E5%82%AC%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i> Catalysis  催化</a>
+              <a href="/blog/zh/tags/Model-%E6%A8%A1%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> Model  模型</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2019/03/19/BulkMetal2SAC/" rel="prev" title="块体金属变成单个原子？ | 单原子催化剂的大规模制备">
+      <i class="fa fa-chevron-left"></i> 块体金属变成单个原子？ | 单原子催化剂的大规模制备
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2019/06/16/ORRresearch2industry/" rel="next" title="从学术到工业 | 氧还原反应中的性能指标与实际燃料电池应用有何关系？">
+      从学术到工业 | 氧还原反应中的性能指标与实际燃料电池应用有何关系？ <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RDE下液流层的流体力学描述"><span class="nav-number">2.</span> <span class="nav-text">RDE下液流层的流体力学描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RDE法向的物质对流及扩散"><span class="nav-number">3.</span> <span class="nav-text">RDE法向的物质对流及扩散</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#极限电流情形"><span class="nav-number">3.1.</span> <span class="nav-text">极限电流情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非极限电流情形"><span class="nav-number">3.2.</span> <span class="nav-text">非极限电流情形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

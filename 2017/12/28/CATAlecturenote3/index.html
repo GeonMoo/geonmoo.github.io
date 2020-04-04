@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本文还在持续写作中… 关键词：表面黏附几率、一&#x2F;二&#x2F;三维扩散、前驱态吸附、L-H（Langmuir-Hinshelwood）机理、E-R（Eley-Rideal）机理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="课后回顾 | 吸附动力学">
+<meta property="og:url" content="http://mozheyang.top/2017/12/28/CATAlecturenote3/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="本文还在持续写作中… 关键词：表面黏附几率、一&#x2F;二&#x2F;三维扩散、前驱态吸附、L-H（Langmuir-Hinshelwood）机理、E-R（Eley-Rideal）机理">
+<meta property="article:published_time" content="2017-12-28T12:51:41.000Z">
+<meta property="article:modified_time" content="2020-02-02T07:57:52.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Chemistry  化学">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://mozheyang.top/2017/12/28/CATAlecturenote3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>课后回顾 | 吸附动力学 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/12/28/CATAlecturenote3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          课后回顾 | 吸附动力学
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-12-28 20:51:41" itemprop="dateCreated datePublished" datetime="2017-12-28T20:51:41+08:00">2017-12-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 15:57:52" itemprop="dateModified" datetime="2020-02-02T15:57:52+08:00">2020-02-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/zh/categories/Lecture-Notes-%E8%AF%BE%E7%A8%8B%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/" itemprop="url" rel="index"><span itemprop="name">Lecture Notes  课程知识回顾</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/12/28/CATAlecturenote3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/12/28/CATAlecturenote3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文还在持续写作中…</p>
+<p><strong>关键词：</strong>表面黏附几率、一/二/三维扩散、前驱态吸附、L-H（Langmuir-Hinshelwood）机理、E-R（Eley-Rideal）机理</p>
+<a id="more"></a>
+
+<p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：<a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a></p>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><h2 id="表面粘附几率"><a href="#表面粘附几率" class="headerlink" title="表面粘附几率"></a>表面粘附几率</h2><p>吸附速率<br>$$<br>r_a = \frac{dn_s}{dt} = sZ<br>$$<br>其中，$Z$ 为吸附分子碰撞表面的频率，$s$ 便可以被定义为<strong>表面粘附系数</strong><br>$$<br>s=\frac{1}{Z} \frac{dn_s}{dt}<br>$$<br>在Langmiur模型的推导中我们已经提到了分子碰撞频率的有关公式<br>$$<br>Z=\frac{dn}{dt}=\frac{P}{\sqrt{2 \pi m k_B T}}<br>$$<br>于是表面粘附系数可以写为<br>$$<br>s = \frac{\sqrt{2 \pi m k_B T}}{P} \frac{dn_s}{dt} = \frac{\sqrt{2 \pi m k_B T} dn_s}{dE_x}<br>$$<br>其中气体暴露量$E_x = Pdt$。</p>
+<h2 id="扩散系数"><a href="#扩散系数" class="headerlink" title="扩散系数"></a>扩散系数</h2><ul>
+<li><p>一维扩散$E(x^2)=(2Dt)^{\frac{1}{2}}$</p>
+</li>
+<li><p>二维扩散$E(x^2)=(4Dt)^{\frac{1}{2}}$</p>
+</li>
+<li><p>三维扩散$E(x^2)=(6Dt)^{\frac{1}{2}}$</p>
+</li>
+</ul>
+<h1 id="直接吸附（Langmuir吸附）"><a href="#直接吸附（Langmuir吸附）" class="headerlink" title="直接吸附（Langmuir吸附）"></a>直接吸附（Langmuir吸附）</h1><h1 id="前驱态吸附"><a href="#前驱态吸附" class="headerlink" title="前驱态吸附"></a>前驱态吸附</h1><h1 id="表面反应"><a href="#表面反应" class="headerlink" title="表面反应"></a>表面反应</h1><h2 id="L-H（Langmuir-Hinshelwood）机理"><a href="#L-H（Langmuir-Hinshelwood）机理" class="headerlink" title="L-H（Langmuir-Hinshelwood）机理"></a>L-H（Langmuir-Hinshelwood）机理</h2><p>符合大多数实际表面反应情形。前提：<strong>表面反应</strong>为速控步。<br>$$<br>A_{ads} + B_{ads} \rightarrow C<br>$$<br>其中$C$可为$C_{ads}$或$C_g$。</p>
+<h2 id="E-R（Eley-Rideal）机理"><a href="#E-R（Eley-Rideal）机理" class="headerlink" title="E-R（Eley-Rideal）机理"></a>E-R（Eley-Rideal）机理</h2><p>实例很少，反应要求没有活化能，并且放热。例如：自由基反应。<br>$$<br>A_g + B_a \rightarrow C<br>$$</p>
+<h2 id="“热原子”（布朗运动）机理"><a href="#“热原子”（布朗运动）机理" class="headerlink" title="“热原子”（布朗运动）机理"></a>“热原子”（布朗运动）机理</h2><p>例如：氢原子覆盖的Cu，Ni，Al，Pt等金属表面反应。<br>$$<br>A_a + B_a \rightarrow C<br>$$</p>
+<h1 id="表面脱附"><a href="#表面脱附" class="headerlink" title="表面脱附"></a>表面脱附</h1><p>补偿效应</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/12/28/CATAlecturenote3/" title="课后回顾 | 吸附动力学">http://mozheyang.top/2017/12/28/CATAlecturenote3/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Chemistry-%E5%8C%96%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> Chemistry  化学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/12/27/2017AFinal/" rel="prev" title="回首2017 | 课程知识回顾">
+      <i class="fa fa-chevron-left"></i> 回首2017 | 课程知识回顾
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2018/01/15/QMGreenFunction/" rel="next" title="量子物理中的Green函数定义及其应用">
+      量子物理中的Green函数定义及其应用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表面粘附几率"><span class="nav-number">1.1.</span> <span class="nav-text">表面粘附几率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩散系数"><span class="nav-number">1.2.</span> <span class="nav-text">扩散系数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#直接吸附（Langmuir吸附）"><span class="nav-number">2.</span> <span class="nav-text">直接吸附（Langmuir吸附）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前驱态吸附"><span class="nav-number">3.</span> <span class="nav-text">前驱态吸附</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表面反应"><span class="nav-number">4.</span> <span class="nav-text">表面反应</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#L-H（Langmuir-Hinshelwood）机理"><span class="nav-number">4.1.</span> <span class="nav-text">L-H（Langmuir-Hinshelwood）机理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E-R（Eley-Rideal）机理"><span class="nav-number">4.2.</span> <span class="nav-text">E-R（Eley-Rideal）机理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“热原子”（布朗运动）机理"><span class="nav-number">4.3.</span> <span class="nav-text">“热原子”（布朗运动）机理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表面脱附"><span class="nav-number">5.</span> <span class="nav-text">表面脱附</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

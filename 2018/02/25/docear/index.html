@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="如果你喜欢笔者的这篇分享，欢迎联系笔者：mozheyang@outlook.com Docear初体验Docear是一款结合了Freeplane（思维导图）和JabRef（文献管理）两个开源工具的思维导图文献管理工具 ，其也是开源的。思维导图的好处自不必笔者赘述，若有感兴趣的读者可以读一读东尼.伯赞（Buzan T.）思维导图系列丛书。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="思维导图+文献管理 | Docear使用体会">
+<meta property="og:url" content="http://mozheyang.top/2018/02/25/docear/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="如果你喜欢笔者的这篇分享，欢迎联系笔者：mozheyang@outlook.com Docear初体验Docear是一款结合了Freeplane（思维导图）和JabRef（文献管理）两个开源工具的思维导图文献管理工具 ，其也是开源的。思维导图的好处自不必笔者赘述，若有感兴趣的读者可以读一读东尼.伯赞（Buzan T.）思维导图系列丛书。">
+<meta property="og:image" content="http://mozheyang.top/images/docear/newproject.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/newmindmap.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/editnode.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/addnode.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/dragPDF.gif">
+<meta property="og:image" content="http://mozheyang.top/images/docear/attribute.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/GoogleCite.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/GoogleBibTeX.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/GoogleBibTeXWeb.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/docearCreate.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/BibTeXSource2.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/AddBibTeX.gif">
+<meta property="og:image" content="http://mozheyang.top/images/docear/mendeleyBib.gif">
+<meta property="og:image" content="http://mozheyang.top/images/docear/pdfnotes.png">
+<meta property="og:image" content="http://mozheyang.top/images/docear/pdfeditor.png">
+<meta property="article:published_time" content="2018-02-24T16:01:40.000Z">
+<meta property="article:modified_time" content="2020-02-02T08:01:41.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Docear">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/docear/newproject.png">
+
+<link rel="canonical" href="http://mozheyang.top/2018/02/25/docear/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>思维导图+文献管理 | Docear使用体会 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2018/02/25/docear/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          思维导图+文献管理 | Docear使用体会
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-02-25 00:01:40" itemprop="dateCreated datePublished" datetime="2018-02-25T00:01:40+08:00">2018-02-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 16:01:41" itemprop="dateModified" datetime="2020-02-02T16:01:41+08:00">2020-02-02</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2018/02/25/docear/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2018/02/25/docear/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>如果你喜欢笔者的这篇分享，欢迎联系笔者：<a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a></p>
+<h1 id="Docear初体验"><a href="#Docear初体验" class="headerlink" title="Docear初体验"></a>Docear初体验</h1><p>Docear是一款结合了Freeplane（思维导图）和JabRef（文献管理）两个开源工具的<strong>思维导图文献管理工具</strong> ，其也是开源的。思维导图的好处自不必笔者赘述，若有感兴趣的读者可以读一读东尼.伯赞（Buzan T.）思维导图系列丛书。</p>
+<a id="more"></a>
+
+<p>除了通过思维导图进行文献管理这一特点以外，Docear吸引理工磕盐汪的另一大特色便是可以使用LaTeX进行公式编辑并嵌入思维导图中。这意味着，复杂晦涩的公式知识也可以通过思维导图软件进行整理啦，Amazing！</p>
+<h2 id="环境配置与安装"><a href="#环境配置与安装" class="headerlink" title="环境配置与安装"></a>环境配置与安装</h2><p>Docear官网：<a href="http://www.docear.org/" target="_blank" rel="noopener">http://www.docear.org/</a></p>
+<p>Docear下载页面：<a href="http://www.docear.org/software/download/" target="_blank" rel="noopener">http://www.docear.org/software/download/</a></p>
+<p>我们需要在Docear下载页面上将Docear最新版本安装包（Windows版本有msi和zip两种格式可以下载）下载下来并进行安装。笔者在安装过程中发生了错误，是由于缺乏较新的JAVA开发支持环境所致（Docear是使用JAVA开发的开源软件）。于是笔者来到了Oracle官网下载了最新的Server JRE (Java SE Runtime Environment) 8.0版本，下载地址如下：<a href="http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html" target="_blank" rel="noopener">Server JRE (Java SE Runtime Environment) 8 Downloads</a>. </p>
+<h2 id="思维导图（Freeplane）"><a href="#思维导图（Freeplane）" class="headerlink" title="思维导图（Freeplane）"></a>思维导图（Freeplane）</h2><p>虽然Docear是一个非常强大的思维导图+文献管理工具，但其思维导图方面的应用极其简单。</p>
+<ol>
+<li><p>新建项目。<img src="http://mozheyang.top/images/docear/newproject.png" alt=""></p>
+</li>
+<li><p>新建导图。<img src="http://mozheyang.top/images/docear/newmindmap.png" alt=""></p>
+</li>
+<li><p>编辑节点。后续大多数复杂功能实现的都是<strong>对节点本身及其关系</strong>的编辑。<img src="http://mozheyang.top/images/docear/editnode.png" alt=""></p>
+</li>
+<li><p>增加/删除节点。<img src="http://mozheyang.top/images/docear/addnode.png" alt=""></p>
+</li>
+<li><p>添加有标注的PDF文件（文献）。</p>
+</li>
+</ol>
+<h2 id="文献管理（JabRef）"><a href="#文献管理（JabRef）" class="headerlink" title="文献管理（JabRef）"></a>文献管理（JabRef）</h2><p>要是Docear只有思维导图的功能，或许还不能让它从众多成熟的商业软件中脱颖而出。作为一款初衷为“文献管理”的软件，Docear的文献管理功能也是不容小觑的。</p>
+<p>仅仅通过简单的拖拽就能把文献汇入思维导图中，Amazing！</p>
+<p><img src="http://mozheyang.top/images/docear/dragPDF.gif" alt=""></p>
+<p>通过文献的“Attribute（属性）”项可以方便地查看文献的标题、年份和作者等文献信息。</p>
+<p><img src="http://mozheyang.top/images/docear/attribute.png" alt=""></p>
+<p>但由于Docear长期没有进行更新，经笔者测试，其通过PDF直接进行文献信息完善的功能已完全失效（Sad…）。这一功能的最好实现者是被Elsevier收购、与网络科研社区结合紧密的<strong>Mendeley</strong>。于是更新PDF文献准确文献信息的<strong>最可行方法</strong>便是——通过导入文献的BibTeX信息（可从Web of Knowledge、Google Scholar、百度学术、Mendeley等多种渠道获得）实现PDF文献准确文献信息的更新。</p>
+<p>下面，笔者将以从Google Scholar下载文献的BibTeX信息为例演示如何为文献添加准确的Attribute。</p>
+<ol>
+<li><p>首先在Google Scholar搜索到所需文献。然后点击文献下边的“引号”。<img src="http://mozheyang.top/images/docear/GoogleCite.png" alt=""></p>
+</li>
+<li><p>接着会弹出引用格式的窗口。我们选择“BibTeX”格式。<img src="http://mozheyang.top/images/docear/GoogleBibTeX.png" alt=""></p>
+</li>
+<li><p>接着就会弹出“BibTeX”格式的引用信息。这使，我们把网页上的信息复制下来备用。<img src="http://mozheyang.top/images/docear/GoogleBibTeXWeb.png" alt=""></p>
+</li>
+<li><p>重新转回Docear，在Docear的JabRef文献管理窗口中点击“+”，新建一个文献。如果没有找到该窗口，可以尝试点击Docear右边栏（可能被收回隐藏）。<img src="http://mozheyang.top/images/docear/docearCreate.png" alt=""></p>
+</li>
+<li><p>将之前复制下来的BibTeX文献信息复制到新建窗口的“BibTeX source”中。<img src="http://mozheyang.top/images/docear/BibTeXSource2.png" alt=""></p>
+</li>
+<li><p>文献新建完成啦！Amazing！接下来可以通过简单的拖拽把它加入到文献Attribute中了。<img src="http://mozheyang.top/images/docear/AddBibTeX.gif" alt=""></p>
+</li>
+</ol>
+<p>有些同学可能会觉得这样添加文献信息比较麻烦。但是还是知足吧，总比手打添加文献信息好是不？</p>
+<p>真的懒的话…</p>
+<p><img src="http://mozheyang.top/images/docear/mendeleyBib.gif" alt=""></p>
+<p>Mendeley大法好！</p>
+<h1 id="体验提升"><a href="#体验提升" class="headerlink" title="体验提升"></a>体验提升</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>Docear作为一个较为粗糙的开源软件，其使用体验并不是太好。但是通过快捷键的熟悉，可以极大提高Docear的使用体验。</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ENTER</td>
+<td>Add sibling above current node</td>
+</tr>
+<tr>
+<td>SHIFT+ENTER</td>
+<td>Add sibling below current node</td>
+</tr>
+<tr>
+<td>INS</td>
+<td>Add child node</td>
+</tr>
+<tr>
+<td>F2 (or double click it)</td>
+<td>Edit node in-line</td>
+</tr>
+<tr>
+<td>ALT+ENTER</td>
+<td>Edit node in dialog</td>
+</tr>
+<tr>
+<td>SPACE</td>
+<td>(Un)fold node</td>
+</tr>
+<tr>
+<td>Page UP/DOWN</td>
+<td>Go to highest/lowest node in that level</td>
+</tr>
+<tr>
+<td>ESC</td>
+<td>Go to root node</td>
+</tr>
+<tr>
+<td>CTRL+SPACE</td>
+<td>(Un)fold children</td>
+</tr>
+<tr>
+<td>ALT+PAGE UP/DOWN</td>
+<td>(Un)fold next level</td>
+</tr>
+<tr>
+<td>CTRL+TAB</td>
+<td>Switch to next map</td>
+</tr>
+<tr>
+<td>CTRL+SHIFT+TAB</td>
+<td>Switch to previous map</td>
+</tr>
+<tr>
+<td>WIN+LEFT</td>
+<td>Move application to left part of the screen</td>
+</tr>
+<tr>
+<td>WIN+RIGHT</td>
+<td>Move application to right part of the screen</td>
+</tr>
+<tr>
+<td>WIN+UP</td>
+<td>Maximize application window</td>
+</tr>
+<tr>
+<td>ALT+F9</td>
+<td>Edit attributes inline</td>
+</tr>
+<tr>
+<td>CTRL+MOUSE WHEEL</td>
+<td>Zoom in/out</td>
+</tr>
+<tr>
+<td>MOUSE WHEEL</td>
+<td>Scroll up/down</td>
+</tr>
+<tr>
+<td>TAB</td>
+<td>Hide/Show menu elements</td>
+</tr>
+<tr>
+<td>CTRL+S</td>
+<td>Save mind map</td>
+</tr>
+<tr>
+<td>CTRL+G</td>
+<td>Open search dialog</td>
+</tr>
+<tr>
+<td>ALT+UP</td>
+<td>Move selected node up</td>
+</tr>
+<tr>
+<td>ALT+DOWN</td>
+<td>Move selected node down</td>
+</tr>
+<tr>
+<td>ALT+RIGHT</td>
+<td>Move selected node to the right</td>
+</tr>
+<tr>
+<td>ALT+DOWN</td>
+<td>Move selected node to the left</td>
+</tr>
+</tbody></table>
+<p>以上是Docear官网给出的默认快捷键。以下快捷键是笔者常用的：</p>
+<h3 id="增加节点"><a href="#增加节点" class="headerlink" title="增加节点"></a>增加节点</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ENTER</td>
+<td>在当前节点下方增加<strong>同级节点</strong></td>
+</tr>
+<tr>
+<td>INSERT</td>
+<td>为当前节点增加<strong>子节点</strong></td>
+</tr>
+</tbody></table>
+<h3 id="编辑节点"><a href="#编辑节点" class="headerlink" title="编辑节点"></a>编辑节点</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F2</td>
+<td>编辑当前节点（文字）</td>
+</tr>
+</tbody></table>
+<h3 id="查看导图"><a href="#查看导图" class="headerlink" title="查看导图"></a>查看导图</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SPACE</td>
+<td>折叠/展开当前节点的所有子节点</td>
+</tr>
+</tbody></table>
+<h2 id="不同的分享格式"><a href="#不同的分享格式" class="headerlink" title="不同的分享格式"></a>不同的分享格式</h2><p>Docear允许使用者通过“导出”功能将思维导图导出，分享给其它没有Docear软件的读者浏览。笔者常用的导出格式有以下几种：</p>
+<ul>
+<li><p>PDF</p>
+</li>
+<li><p>svg</p>
+</li>
+<li><p>图片：jpg、png</p>
+</li>
+</ul>
+<h2 id="PDF标注软件对比及推荐"><a href="#PDF标注软件对比及推荐" class="headerlink" title="PDF标注软件对比及推荐"></a>PDF标注软件对比及推荐</h2><p>由于Docear允许<strong>直接将PDF中的标注导入</strong>（但只有特殊的PDF编辑器可以做到）。因此，选择合适的PDF编辑器来打开Docear内组织的PDF文献就显得十分重要了。</p>
+<p><img src="http://mozheyang.top/images/docear/pdfnotes.png" alt=""></p>
+<p>以下对比图来自Docear官网：</p>
+<p><img src="http://mozheyang.top/images/docear/pdfeditor.png" alt=""></p>
+<p>综上所述，最适合搭配Docear使用的PDF编辑器是<strong>PDF-Xchange Viewer</strong>，其次是福昕(Foxit) PDF Viewer和Adobe Acrobat。</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] <a href="http://www.docear.org/support/user-manual/" target="_blank" rel="noopener">http://www.docear.org/support/user-manual/</a> </p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2018/02/25/docear/" title="思维导图+文献管理 | Docear使用体会">http://mozheyang.top/2018/02/25/docear/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Docear/" rel="tag"><i class="fa fa-tag"></i> Docear</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2018/02/15/ORRbasic/" rel="prev" title="氧还原反应（Oxygen Reduction Reaction）基础">
+      <i class="fa fa-chevron-left"></i> 氧还原反应（Oxygen Reduction Reaction）基础
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2018/02/25/awesomeIOSapp/" rel="next" title="值得推荐 | Awesome IOS Software">
+      值得推荐 | Awesome IOS Software <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docear初体验"><span class="nav-number">1.</span> <span class="nav-text">Docear初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置与安装"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置与安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思维导图（Freeplane）"><span class="nav-number">1.2.</span> <span class="nav-text">思维导图（Freeplane）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文献管理（JabRef）"><span class="nav-number">1.3.</span> <span class="nav-text">文献管理（JabRef）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#体验提升"><span class="nav-number">2.</span> <span class="nav-text">体验提升</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">2.1.</span> <span class="nav-text">快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增加节点"><span class="nav-number">2.1.1.</span> <span class="nav-text">增加节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑节点"><span class="nav-number">2.1.2.</span> <span class="nav-text">编辑节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看导图"><span class="nav-number">2.1.3.</span> <span class="nav-text">查看导图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同的分享格式"><span class="nav-number">2.2.</span> <span class="nav-text">不同的分享格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF标注软件对比及推荐"><span class="nav-number">2.3.</span> <span class="nav-text">PDF标注软件对比及推荐</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

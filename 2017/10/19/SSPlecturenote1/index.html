@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一维单原子链和一维双原子链的详细推导思路见PDF文件 :)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="课后回顾 | 晶格热振动模型的初步建立">
+<meta property="og:url" content="http://mozheyang.top/2017/10/19/SSPlecturenote1/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="一维单原子链和一维双原子链的详细推导思路见PDF文件 :)">
+<meta property="og:image" content="http://mozheyang.top/images/SSPlecturenote1/OAbranch.png">
+<meta property="article:published_time" content="2017-10-19T03:06:48.000Z">
+<meta property="article:modified_time" content="2020-02-02T08:24:49.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Physics  物理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/SSPlecturenote1/OAbranch.png">
+
+<link rel="canonical" href="http://mozheyang.top/2017/10/19/SSPlecturenote1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>课后回顾 | 晶格热振动模型的初步建立 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/10/19/SSPlecturenote1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          课后回顾 | 晶格热振动模型的初步建立
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-10-19 11:06:48" itemprop="dateCreated datePublished" datetime="2017-10-19T11:06:48+08:00">2017-10-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 16:24:49" itemprop="dateModified" datetime="2020-02-02T16:24:49+08:00">2020-02-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/zh/categories/Lecture-Notes-%E8%AF%BE%E7%A8%8B%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/" itemprop="url" rel="index"><span itemprop="name">Lecture Notes  课程知识回顾</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/10/19/SSPlecturenote1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/10/19/SSPlecturenote1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>一维单原子链和一维双原子链</strong>的详细推导思路见<a href="http://mozheyang.top/documents/LatticeVibration20171021.pdf">PDF文件</a> :) </p>
+<a id="more"></a>
+
+<p>欢迎提出任何宝贵的改错、改进意见和建议，谢谢！<br>笔者联系方式：<a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a></p>
+<h1 id="一维单原子链"><a href="#一维单原子链" class="headerlink" title="一维单原子链"></a>一维单原子链</h1><p>考虑相邻两个原子之间存在相互作用，只有在平衡位置两原子不受力。于是两原子系统的相互作用可以看做一个弹簧振子。根据以上假设，可以获得以下两个物理表达：</p>
+<ul>
+<li>只考虑相邻原子（左右各一）间的相互作用，忽略原子间的长程作用；</li>
+<li>原子间作用力与相隔距离之间满足胡克定律，即$F=-k\Delta x$.</li>
+</ul>
+<p>可依据上述假设得到表达式：<br>$$<br>m\ddot{\mu_{n}}=\beta(\mu_{n+1}+\mu_{n-1}-2\mu_{n})<br>$$</p>
+<p>实际上该方程是个带微分的递归方程，而我们希望求出其通项。若希望求解含n个原子的单原子链，则可根据方程列出n个等式。这样看上去直接求解上式是难以下手的。我们可以先猜测一个解，再去验证其可行性。而这个解，我们猜测其应满足格波方程。</p>
+<h2 id="色散关系"><a href="#色散关系" class="headerlink" title="色散关系"></a>色散关系</h2><p>$$<br>\omega^{2}=\frac{4\beta}{m}sin^{2} \left(\frac{1}{2}aq \right)<br>$$</p>
+<p>上式即为<strong>色散关系（Dispersion Relation）</strong>，描述了电磁波频率会随波数变化而变化的规律。这种现象在光穿透通过五棱镜的时候会体现出来——一束白光“散”成多束彩色的光，因此将该式所表达的规律称为色散关系。</p>
+<h2 id="Born-Von-Karman条件（周期性边界条件）"><a href="#Born-Von-Karman条件（周期性边界条件）" class="headerlink" title="Born-Von Karman条件（周期性边界条件）"></a>Born-Von Karman条件（周期性边界条件）</h2><p>如果需要求解含n个原子的单原子链的n个原子的情况，我们实际需要使用到第n+1个原子的信息。如果需要真的求解该方程，至少要给第n+1个原子定义一个值，即定义边界条件。<br>$$<br>e^{-i(Naq)}=1<br>$$</p>
+<p>或者<br>$$<br>q=-\frac{2 \pi k}{Na}<br>$$</p>
+<p>其中$k$为整数。上方两式即<strong>Born-Von Karman条件</strong>。</p>
+<h1 id="一维双原子链"><a href="#一维双原子链" class="headerlink" title="一维双原子链"></a>一维双原子链</h1><p>一维双原子链求解过程与一维单原子链类似。其色散关系如下:<br>$$<br>\omega^{2}= \beta \frac{m+M}{mM}<br>\left{<br>1 \pm<br>\left[1- \frac{4mM}{(m+M)^2}sin^{2}aq \right]^{1/2}<br>\right}<br>$$</p>
+<h2 id="长波极限"><a href="#长波极限" class="headerlink" title="长波极限"></a>长波极限</h2><p>长波极限即为考虑波数$q \rightarrow 0$时的极限情况。声学支和光学支在长波极限下的示意图[2]如下所示：</p>
+<p><img src="http://mozheyang.top/images/SSPlecturenote1/OAbranch.png" alt=""></p>
+<p>由以下对长声学支和长光学支的讨论可知：长声学支中两类原子振动完全一致，其格波与连续介质中的弹性波性质基本相同；长光学支中两类原子发生相对振动，会产生偶极矩，从而影响其光学性质（与电磁波相互作用）。</p>
+<h3 id="长声学支"><a href="#长声学支" class="headerlink" title="长声学支"></a>长声学支</h3><p>长波极限下，声学支中两原子振幅有如下关系<br>$$<br>\left( \frac{B}{A} \right)_{-}<br>\approx -\frac{0 - 2\beta}{2\beta \cdot 1}<br>=1<br>$$</p>
+<h3 id="长光学支"><a href="#长光学支" class="headerlink" title="长光学支"></a>长光学支</h3><p>长波极限下，光学支中两原子振幅有如下关系<br>$$<br>\left( \frac{B}{A} \right)_{+}<br>\approx -\frac{2\beta \frac{m+M}{M} - 2\beta}{2\beta \cdot 1}<br>=-\frac{m}{M}<br>$$</p>
+<h1 id="三维晶格——一维原子链的推广"><a href="#三维晶格——一维原子链的推广" class="headerlink" title="三维晶格——一维原子链的推广"></a>三维晶格——一维原子链的推广</h1><p>求解3n个线性齐次方程的有解条件方程，可得3n个解。具体地，在长波极限，$q \rightarrow 0$时，有3个解满足$\omega \propto q$，与弹性波相同，这3个格波频率属于声学支；而其余解描述了n个格子间的相对振动，即有（3n-3）个频率属于光学支。</p>
+<p><strong>推广：</strong>对于复式晶格，若每个原胞有n个原子，则对应3n支格波。其中3支为声学支，（3n-3）支为光学支。</p>
+<h2 id="周期性边界条件"><a href="#周期性边界条件" class="headerlink" title="周期性边界条件"></a>周期性边界条件</h2><p>对第i支格波，设有两个波矢$\vec{q}$和$\vec{q’}$所描述的晶格振动状态完全相同，有<br>$$<br>\omega(\vec{q})=\omega(\vec{q’})=\omega(\vec{q} \pm \vec{G}_{n})<br>$$</p>
+<p>第一布里渊区外的波矢所代表的振动模式只不过是第一布里渊区内的波矢所代表的模式的<strong>重复</strong>。当格波的波矢超出第一布里渊区时，必须平移<strong>一个适当的倒易点阵矢量</strong>，再用第一布里渊区内的波矢进行描写。</p>
+<h1 id="离子晶体——三维晶格规律应用"><a href="#离子晶体——三维晶格规律应用" class="headerlink" title="离子晶体——三维晶格规律应用"></a>离子晶体——三维晶格规律应用</h1><p>长声学波即将晶体中的格波看成连续介质时的弹性波，其满足弹性波的宏观理论方程，即非量子理论方程。黄昆提出，长光学波也可以建立类似的宏观描述方程对其性质进行讨论。</p>
+<h2 id="长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论"><a href="#长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论" class="headerlink" title="长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论"></a>长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论</h2><p>基于<strong>唯象方程（黄昆方程）</strong>讨论长光学波振动。</p>
+<p>$$<br>\frac{\omega_{LO}}{\omega_{TO}} = \left[ \frac{\epsilon(0)}{\epsilon(\infty)} \right]^{\frac{1}{2}}<br>$$<br>上式称为<strong>LST（Lyddano-Sachs-Teller）关系</strong>。该关系可以用来估计有效电荷量。因为一般来说，有效电荷量越大，长光学纵波与长光学横波之差越大。</p>
+<h2 id="静电学方程-宏观方程——离子晶体的原子理论"><a href="#静电学方程-宏观方程——离子晶体的原子理论" class="headerlink" title="静电学方程+宏观方程——离子晶体的原子理论"></a>静电学方程+宏观方程——离子晶体的原子理论</h2><p>基于一般原子理论讨论长光学波振动，可建立黄昆方程。<br>$$<br>\ddot{\vec{W}}=b_{11}\vec{W}+b_{12}\vec{E}<br>\vec{P}=b_{21}\vec{W}+b_{22}\vec{E}<br>$$</p>
+<h2 id="Maxwell电磁方程-宏观方程——离子晶体的光学性质"><a href="#Maxwell电磁方程-宏观方程——离子晶体的光学性质" class="headerlink" title="Maxwell电磁方程+宏观方程——离子晶体的光学性质"></a>Maxwell电磁方程+宏观方程——离子晶体的光学性质</h2><p>以上部分通过联立原子振动的宏观力学方程与静电方程，可以得到长光学波的宏观描述方程。而实际晶格振动中，长光学波中带电相反离子产生相对振动，会产生一定的偶极矩，从而长光学波与电磁波的相互作用便不可忽略。</p>
+<p>沿着这个思路，我们可以将Maxwell电磁方程与原子振动的宏观力学方程相联立，从而获得考虑长光学波与电磁波的相互作用的离子晶体的原子理论。晶体相对介电常数$\epsilon(\omega)$被定义如下：<br>$$<br>\vec{D}=\epsilon_{0}\vec{E}+\vec{P}<br>$$</p>
+<p>$\epsilon(\omega)$可以被分为两个部分，右边一项为晶格振动对晶体介电常数的贡献<br>$$<br>\epsilon(\omega)=\epsilon(\infty)<br>+\frac{\epsilon(0)-\epsilon(\infty)}{\omega_{0}^{2}-\omega^{2}-i \omega r}<br>\omega_{0}^{2}<br>$$</p>
+<p>高频介电常数是一个复数，可以写成实部与虚部之和<br>$$<br>\epsilon(\infty)=\epsilon’(\omega)+i \epsilon’’(\omega)<br>$$</p>
+<p>其中<strong>虚部</strong>与晶体内耗散有关<br>$$<br>\epsilon’’(\omega)<br>=\frac{\omega r}{(\omega_{0}^{2}-\omega^{2})^{2}-\omega^{2}r^{2}}<br>[\epsilon(0)-\epsilon(\infty)] \omega_{0}^{2}<br>$$</p>
+<p>吸收功率正比于介电常数的虚部。在$\omega=\omega_{0}$时，介电常数虚部取最大值，即吸收功率取最大值。这意味着，在$\omega=\omega_{0}$处有一个吸收峰。根据文献[1]所说，该峰宽度为$\omega r$（有待理解）. </p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 黄昆, 韩汝琦(改). 固体物理学[M]. 高等教育出版社, 1988.<br>[2] Kittel C. Introduction to Solid State Physics, 8th Edition[J]. American Journal of Physics, 2005, 21(8):547-548.</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/10/19/SSPlecturenote1/" title="课后回顾 | 晶格热振动模型的初步建立">http://mozheyang.top/2017/10/19/SSPlecturenote1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Physics-%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> Physics  物理</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/10/18/EClecturenote2/" rel="prev" title="课后回顾 | 电化学中的各种“势”">
+      <i class="fa fa-chevron-left"></i> 课后回顾 | 电化学中的各种“势”
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/10/22/EClecturenote3/" rel="next" title="课后回顾 | 双电层结构">
+      课后回顾 | 双电层结构 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一维单原子链"><span class="nav-number">1.</span> <span class="nav-text">一维单原子链</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#色散关系"><span class="nav-number">1.1.</span> <span class="nav-text">色散关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Born-Von-Karman条件（周期性边界条件）"><span class="nav-number">1.2.</span> <span class="nav-text">Born-Von Karman条件（周期性边界条件）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一维双原子链"><span class="nav-number">2.</span> <span class="nav-text">一维双原子链</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#长波极限"><span class="nav-number">2.1.</span> <span class="nav-text">长波极限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#长声学支"><span class="nav-number">2.1.1.</span> <span class="nav-text">长声学支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长光学支"><span class="nav-number">2.1.2.</span> <span class="nav-text">长光学支</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三维晶格——一维原子链的推广"><span class="nav-number">3.</span> <span class="nav-text">三维晶格——一维原子链的推广</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#周期性边界条件"><span class="nav-number">3.1.</span> <span class="nav-text">周期性边界条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#离子晶体——三维晶格规律应用"><span class="nav-number">4.</span> <span class="nav-text">离子晶体——三维晶格规律应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论"><span class="nav-number">4.1.</span> <span class="nav-text">长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静电学方程-宏观方程——离子晶体的原子理论"><span class="nav-number">4.2.</span> <span class="nav-text">静电学方程+宏观方程——离子晶体的原子理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maxwell电磁方程-宏观方程——离子晶体的光学性质"><span class="nav-number">4.3.</span> <span class="nav-text">Maxwell电磁方程+宏观方程——离子晶体的光学性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

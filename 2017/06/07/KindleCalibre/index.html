@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Calibre是一个电子书管理器。所有格式的电子书可以放入里面。常见的如txt、mobi、epdu，甚至PDF格式的电子书都可以通过Calibre进行存储和管理，并互相进行转换。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kindle神器Calibre | 电子书管理 &amp; 无线同步书籍">
+<meta property="og:url" content="http://mozheyang.top/2017/06/07/KindleCalibre/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="Calibre是一个电子书管理器。所有格式的电子书可以放入里面。常见的如txt、mobi、epdu，甚至PDF格式的电子书都可以通过Calibre进行存储和管理，并互相进行转换。">
+<meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreConvert.png">
+<meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreFormat.png">
+<meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreOption.png">
+<meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreEmail.png">
+<meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_EmailOption.png">
+<meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_SendEmail.png">
+<meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_NewsDownload.png">
+<meta property="article:published_time" content="2017-06-07T11:04:38.000Z">
+<meta property="article:modified_time" content="2020-02-02T08:12:42.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Kindle">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreConvert.png">
+
+<link rel="canonical" href="http://mozheyang.top/2017/06/07/KindleCalibre/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Kindle神器Calibre | 电子书管理 & 无线同步书籍 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/06/07/KindleCalibre/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Kindle神器Calibre | 电子书管理 & 无线同步书籍
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-06-07 19:04:38" itemprop="dateCreated datePublished" datetime="2017-06-07T19:04:38+08:00">2017-06-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 16:12:42" itemprop="dateModified" datetime="2020-02-02T16:12:42+08:00">2020-02-02</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/06/07/KindleCalibre/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/06/07/KindleCalibre/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Calibre是一个电子书管理器。所有格式的电子书可以放入里面。常见的如txt、mobi、epdu，甚至PDF格式的电子书都可以通过Calibre进行存储和管理，并互相进行转换。</p>
+<a id="more"></a>
+
+<h1 id="电子书管理"><a href="#电子书管理" class="headerlink" title="电子书管理"></a>电子书管理</h1><p>亚马逊官方已经提供了不少的免费书籍了，但这往往还不能满足我们的需求。</p>
+<blockquote>
+<p>一种情况可能是，亚马逊官方不提供该书籍的正版版本，有钱都无法购买；还有另一种情况，中国用户不很习惯为书籍这种知识产品付费，希望找免费盗版资源替代正版资源。当然后者是不提倡的，如果有正版书籍资源请支持正版。</p>
+</blockquote>
+<p>前面一种情况相对后一种情况较少，但也还是相当常见的。一般情况，我们有了epdu或者其他格式的书籍，却无法在Kindle原版系统中进行阅读，这时候我们应该怎么办呢？</p>
+<p>针对这种问题，我们一般有两种解决方法：</p>
+<ol>
+<li>为了一劳永逸，把Kindle刷成多看系统，从而顺利支持epdu格式（笔者个人对Kindle有原装癖好，不喜欢该方法）；</li>
+<li>把epdu文件进行格式转换，转换成Kindle能够正常支持的mobi格式，再导入Kindle中阅读。</li>
+</ol>
+<p>如果选择第二种方法，这时候的Calibre就充当了一个专业的<strong>“图书格式转换器”</strong>的角色。Calibre所能够支持的文本格式很多，足以满足Kindle用户的需求。如果需要转化图书格式，可以参考下图：</p>
+<p><img src="http://mozheyang.top/images/KindleCalibre/snip_CalibreConvert.png" alt=""></p>
+<p>可以在选中的图书条目上单击鼠标右键，选择“转换书籍”，再选择“逐个转换”。</p>
+<p><img src="http://mozheyang.top/images/KindleCalibre/snip_CalibreFormat.png" alt=""></p>
+<p>在弹出的对话框中可以看出，Calibre能够输出的电子书格式确实不少。</p>
+<p>列表中我们还可以看到如DOCX和RTF这样的文本格式。这些格式的文件是可以在MS Word等办公软件中进行编辑的。这就就为我们<strong>自定义</strong>编辑、排版文字后，输出mobi格式，再到Kindle中阅读提供了一个可靠的方法。</p>
+<p>是的，我们GEEK就喜欢<strong>自定义</strong>！</p>
+<h1 id="无线同步书籍"><a href="#无线同步书籍" class="headerlink" title="无线同步书籍"></a>无线同步书籍</h1><h2 id="Kindle同步书籍常见方法"><a href="#Kindle同步书籍常见方法" class="headerlink" title="Kindle同步书籍常见方法"></a>Kindle同步书籍常见方法</h2><p>在这里笔者首先要给大家提一下Kindle同步书籍的两种常见方法：</p>
+<ol>
+<li>USB同步书籍。使用usb线连接Kindle和pc，将电子书拷贝至Kindle内部存储的“Document”文件夹中。断开Kindle和pc的连接后，在Kindle中就能看到刚拷贝进去的图书了。</li>
+<li>电子邮箱同步书籍。设定一个可接受的邮箱，发送到Kindle绑定账号的专属邮箱（<a href="mailto:xxx@kindle.cn">xxx@kindle.cn</a>）。在联网的情况下，Kindle会自动同步发送到邮箱的电子书。关于如何进行电子邮箱传书，大家可以参考这篇文章：<a href="https://kindlefere.com/post/3.html" target="_blank" rel="noopener">Kindle 推送教程：教你用电子邮箱推送电子书</a>。</li>
+</ol>
+<p>以上所说的方法2，结合了邮箱，为自定义玩家提供了很大的自由度，增加了很多乐趣。我们可以自己发送该邮件，也可以让朋友发送该邮件，可以使用网络服务（IFTTT）发送该邮件，也可以使用软件（Calibre）发送该邮件，甚至也可以写一段发送该邮件的代码来发送该邮件…只要最后触发了发送邮件的动作，我们就能在Kindle上收到书籍，感觉很GEEK有！没！有！</p>
+<h2 id="使用Calibre给Kindle同步书籍"><a href="#使用Calibre给Kindle同步书籍" class="headerlink" title="使用Calibre给Kindle同步书籍"></a>使用Calibre给Kindle同步书籍</h2><p>那么，老规矩，咱就不卖关子了。接下来我们就将讨论如何使用Calibre发送该邮件。掌握该方法后，以后Kindle就不再需要再使用USB数据线来同步书籍了。这样的同步方式很方便，很干净！</p>
+<p>在这之前，我们需要确认我们已经了解如何使用邮箱传书了，即：</p>
+<ol>
+<li>了解Kindle绑定账号专属邮箱（<a href="mailto:xxx@kindle.cn">xxx@kindle.cn</a>）；</li>
+<li>已经设置Kindle可以接受的发送图书的特定邮箱（只有设定后特定邮箱后才能接受该邮箱发送的电子书）。</li>
+</ol>
+<p><img src="http://mozheyang.top/images/KindleCalibre/snip_CalibreOption.png" alt=""></p>
+<p>首先进入“首选项”，设置我们前面说的两个邮箱。</p>
+<p><img src="http://mozheyang.top/images/KindleCalibre/snip_CalibreEmail.png" alt=""></p>
+<p>在这里我们选择“通过邮件分享”。</p>
+<p><img src="http://mozheyang.top/images/KindleCalibre/snip_EmailOption.png" alt=""></p>
+<p>根据上图进行设置之后就完成了。可以单击右下角“测试邮件发送”测试一下是否设置正确。</p>
+<p>Ok，it’s done. So, now let’s enjoy it!</p>
+<p><img src="http://mozheyang.top/images/KindleCalibre/snip_SendEmail.png" alt=""></p>
+<p>这时候，我们想发送任何一本在Calibre书库中的书籍时，只需在该书籍条目上单击鼠标右键，依次选择“连接/共享”、“发送邮件至<a href="mailto:xxx@kindle.cn">xxx@kindle.cn</a>”就可以了。接下来就等待任务的完成吧～</p>
+<p><img src="http://mozheyang.top/images/KindleCalibre/snip_NewsDownload.png" alt=""></p>
+<p>观察一下已经联网的Kindle，应该很快就能够发现，已经发送成功的电子书列入了下载队列进行下载。当然，网络不畅的时候，这段等待的时间可能会长一些，但请一定要耐心！</p>
+<h2 id="One-more-thing…"><a href="#One-more-thing…" class="headerlink" title="One more thing…"></a>One more thing…</h2><p>电子邮箱传书还有一个优点，某些格式的文件发送之后，亚马逊会自动将其转换为适合Kindle阅读的格式。主要是DOC（Word文件）和JPG（图像文件）等。</p>
+<p>还有一个小技能：<strong>向Kindle绑定账户的专属邮箱发送PDF文件，并自动转换成Kindle阅读体验较好的格式。</strong>如果只是一般的发送方式，我们能在在Kindle上看到的也就只是一个PDF文件。但是，如果我们将发送邮件的主题改为“<strong>convert</strong>”，那么我们就可以获得<strong>已经自动重排的的Kindle阅读格式文件</strong>了！挺有意思的，PDF重度阅读者可以试一试。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/06/07/KindleCalibre/" title="Kindle神器Calibre | 电子书管理 &amp; 无线同步书籍">http://mozheyang.top/2017/06/07/KindleCalibre/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Kindle/" rel="tag"><i class="fa fa-tag"></i> Kindle</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/06/03/RSSFeed/" rel="prev" title="即刻已失效 - RSS信息聚合 | 让信息世界更纯粹">
+      <i class="fa fa-chevron-left"></i> 即刻已失效 - RSS信息聚合 | 让信息世界更纯粹
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/06/07/RSSCalibre/" rel="next" title="Kindle神器Calibre | 当RSS碰上Calibre">
+      Kindle神器Calibre | 当RSS碰上Calibre <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#电子书管理"><span class="nav-number">1.</span> <span class="nav-text">电子书管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无线同步书籍"><span class="nav-number">2.</span> <span class="nav-text">无线同步书籍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kindle同步书籍常见方法"><span class="nav-number">2.1.</span> <span class="nav-text">Kindle同步书籍常见方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Calibre给Kindle同步书籍"><span class="nav-number">2.2.</span> <span class="nav-text">使用Calibre给Kindle同步书籍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-more-thing…"><span class="nav-number">2.3.</span> <span class="nav-text">One more thing…</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="写在前面为什么我们会离不开手机？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="即刻已失效 - RSS信息聚合 | 让信息世界更纯粹">
+<meta property="og:url" content="http://mozheyang.top/2017/06/03/RSSFeed/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="写在前面为什么我们会离不开手机？">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_blog.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_science.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_nature.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/icon_RSS.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_science.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_BrowserRSS.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_FeedDemon.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/icon_gray.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/icon_yellow.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/phone_Robots.jpg">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/phone_RobotRSS.jpg">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_calibre.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_CalibreNews.png">
+<meta property="og:image" content="http://mozheyang.top/images/RSS/snip_CalibreCustom.png">
+<meta property="article:published_time" content="2017-06-03T07:50:59.000Z">
+<meta property="article:modified_time" content="2020-02-02T08:24:27.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Information Science &amp; Technology  信息科学与技术">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/RSS/snip_blog.png">
+
+<link rel="canonical" href="http://mozheyang.top/2017/06/03/RSSFeed/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>即刻已失效 - RSS信息聚合 | 让信息世界更纯粹 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/06/03/RSSFeed/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          即刻已失效 - RSS信息聚合 | 让信息世界更纯粹
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-06-03 15:50:59" itemprop="dateCreated datePublished" datetime="2017-06-03T15:50:59+08:00">2017-06-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 16:24:27" itemprop="dateModified" datetime="2020-02-02T16:24:27+08:00">2020-02-02</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/06/03/RSSFeed/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/06/03/RSSFeed/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>为什么我们会离不开手机？</p>
+<a id="more"></a>
+
+<p>笔者以为，一个很重要的原因是手机给我们提供了一个互联网“窗口”。通过这个窗口，我们可以得到足够丰富的最新信息，从而使得我们感觉自己仿佛与世界是时刻连通的。</p>
+<p>但对于正常人来说，把时间都花在手机无穷无尽的信息上，显然不是明智之举。</p>
+<p>信息不是知识。如果不能很好地处理爆炸的信息，那么时间浪费了，到头来我们也不会收获有价值的信息。</p>
+<p>于是<strong>RSS（ 简易资讯聚合，一种消息来源格式规范，用以聚合经常发布更新资料的网站  ）</strong>出现了，</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_blog.png" alt=""> </p>
+<p>从此我们可以只关注那些我们真正想关注的信息。</p>
+<p>对于我们这种未来的科研搬砖工呢，那必然也是也是大有益处的。</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_science.png" alt=""> </p>
+<p><em>上图为Science官网RSS Feed。</em></p>
+<p><img src="http://mozheyang.top/images/RSS/snip_nature.png" alt=""> </p>
+<p><em>上图为Nature官网RSS Feed。</em></p>
+<p>通过RSS Feed，我们可以第一时间收到更新的论文或者目录，感觉自己好像就站在科学的风口浪尖，紧跟科研时尚潮流==！！！</p>
+<p>好吧，先冷静一下…关键还是在于能不能看懂好伐==</p>
+<p>闲话少说，接下来我们就可以开始讨论，具体怎么实现RSS的接受和阅读。这主要是两个问题：一个是找到RSS，一个是阅读RSS。</p>
+<h1 id="寻找RSS源"><a href="#寻找RSS源" class="headerlink" title="寻找RSS源"></a>寻找RSS源</h1><p>这件事情其实不难。一般较大信息网站或者博客都能找到RSS源（虽然可能不太明显，可以Ctrl+F搜索“RSS”）。尤其是当我们看到下面这个图标的时候，</p>
+<p><img src="http://mozheyang.top/images/RSS/icon_RSS.png" alt=""> </p>
+<p>或者是进入了类似下图的RSS feed webpage的时候，</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_science.png" alt=""> </p>
+<p>那我们离最后的RSS源也已经不远了。大家都那么聪明我就不具体细说过程了。</p>
+<p>最后使用浏览器访问RSS源大约是下图这样的：</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_BrowserRSS.png" alt=""></p>
+<p>上图对应：<a href="http://science.sciencemag.org/rss/express.xml" target="_blank" rel="noopener">http://science.sciencemag.org/rss/express.xml</a></p>
+<p>这时候对应的网站就是RSS源的http地址了。在这里给刚入门的小伙伴们推荐一个RSS源的集合：<a href="https://www.zhihu.com/question/19580096" target="_blank" rel="noopener">知乎 - 你必读的 RSS 订阅源有哪些？</a> </p>
+<h1 id="阅读RSS"><a href="#阅读RSS" class="headerlink" title="阅读RSS"></a>阅读RSS</h1><p>考虑到目前主流的阅读硬件，可以分为以下三个平台分别进行讨论。</p>
+<h2 id="Windows个人电脑"><a href="#Windows个人电脑" class="headerlink" title="Windows个人电脑"></a>Windows个人电脑</h2><p>在这里推荐一个我正在使用的。</p>
+<blockquote>
+<p>FeedDemon - Free Windows RSS Reader<br><a href="http://www.feeddemon.com/" target="_blank" rel="noopener">http://www.feeddemon.com/</a></p>
+</blockquote>
+<p><img src="http://mozheyang.top/images/RSS/snip_FeedDemon.png" alt=""></p>
+<p>以上是FeedDemon基本界面。可以集中快速阅读大量信息并筛选（标星收藏），充分体现了RSS信息聚合的优点。</p>
+<h2 id="手机"><a href="#手机" class="headerlink" title="手机"></a>手机</h2><blockquote>
+<p>即刻</p>
+</blockquote>
+<p>可以到移动端应用商店下载。</p>
+<p>其实我更喜欢之前没更新时候那个灰色很GEEK的配色。</p>
+<p><img src="http://mozheyang.top/images/RSS/icon_gray.png" alt=""></p>
+<p>现在这个gay里gay气的黄色icon算个…香蕉吗？</p>
+<p><img src="http://mozheyang.top/images/RSS/icon_yellow.png" alt=""></p>
+<p>吐槽归吐槽，其可自定义的RSS聚合机器人那还是挺好用的~</p>
+<p><img src="http://mozheyang.top/images/RSS/phone_Robots.jpg" alt=""></p>
+<p>追微信公众号、微博、豆瓣、知乎…那都是棒棒的！</p>
+<p><img src="http://mozheyang.top/images/RSS/phone_RobotRSS.jpg" alt=""></p>
+<p>支持自定义RSS！作为喜欢折腾自定的GEEK用户感到很是欣慰。</p>
+<h2 id="Kindle"><a href="#Kindle" class="headerlink" title="Kindle"></a>Kindle</h2><blockquote>
+<p>Calibre</p>
+</blockquote>
+<p>经常被Kindle粉们奉为神器。</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_calibre.png" alt=""></p>
+<p><em>Calibre基本界面。</em></p>
+<p><img src="http://mozheyang.top/images/RSS/snip_CalibreNews.png" alt=""></p>
+<p>可定义收集下载新闻，并自动发送到Kindle邮箱。</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_CalibreCustom.png" alt=""></p>
+<p>还可以自己定义RSS，要不然怎能深得我心呢。</p>
+<p>关于使用Calibre阅读RSS的更详细的教程写在这里<a href="https://mozheyang.top/2017/06/07/RSSCalibre/">Kindle神器Calibre | 当RSS碰上Calibre</a>。</p>
+<p>本文未接受任何广告费用，纯属安利。<br>如果喜欢的话，请邮件鼓励我哦 :)<br>个人邮箱：<a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a>。</p>
+<p>感谢大家的支持。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/06/03/RSSFeed/" title="即刻已失效 - RSS信息聚合 | 让信息世界更纯粹">http://mozheyang.top/2017/06/03/RSSFeed/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> Information Science & Technology  信息科学与技术</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/05/29/PPTDesign/" rel="prev" title="PPT Design | PPT设计资源整合">
+      <i class="fa fa-chevron-left"></i> PPT Design | PPT设计资源整合
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/06/07/KindleCalibre/" rel="next" title="Kindle神器Calibre | 电子书管理 & 无线同步书籍">
+      Kindle神器Calibre | 电子书管理 & 无线同步书籍 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寻找RSS源"><span class="nav-number">2.</span> <span class="nav-text">寻找RSS源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阅读RSS"><span class="nav-number">3.</span> <span class="nav-text">阅读RSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows个人电脑"><span class="nav-number">3.1.</span> <span class="nav-text">Windows个人电脑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手机"><span class="nav-number">3.2.</span> <span class="nav-text">手机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kindle"><span class="nav-number">3.3.</span> <span class="nav-text">Kindle</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

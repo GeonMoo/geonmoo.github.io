@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="写在前面 TuShare是一个免费、开源的python财经数据接口包。主要实现对股票等金融数据从数据采集、清洗加工到数据存储的过程，能够为金融分析人员提供快速、整洁和多样的便于分析的数据，为他们在数据获取方面极大地减轻工作量，使他们更加专注于策略和模型的研究与实现上。考虑到Python pandas包在金融量化分析中体现出的优势，TuShare返回的绝大部分的数据格式都是pandas DataFr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Tushare和Pandas进行金融数据收集">
+<meta property="og:url" content="http://mozheyang.top/2017/04/17/TusharePandas/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="写在前面 TuShare是一个免费、开源的python财经数据接口包。主要实现对股票等金融数据从数据采集、清洗加工到数据存储的过程，能够为金融分析人员提供快速、整洁和多样的便于分析的数据，为他们在数据获取方面极大地减轻工作量，使他们更加专注于策略和模型的研究与实现上。考虑到Python pandas包在金融量化分析中体现出的优势，TuShare返回的绝大部分的数据格式都是pandas DataFr">
+<meta property="article:published_time" content="2017-04-17T10:33:02.000Z">
+<meta property="article:modified_time" content="2020-02-02T08:25:18.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Data Analysis  数据分析">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://mozheyang.top/2017/04/17/TusharePandas/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>利用Tushare和Pandas进行金融数据收集 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/04/17/TusharePandas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          利用Tushare和Pandas进行金融数据收集
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-04-17 18:33:02" itemprop="dateCreated datePublished" datetime="2017-04-17T18:33:02+08:00">2017-04-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 16:25:18" itemprop="dateModified" datetime="2020-02-02T16:25:18+08:00">2020-02-02</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/04/17/TusharePandas/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/04/17/TusharePandas/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><hr>
+<p>TuShare是一个免费、开源的python财经数据接口包。主要实现对股票等金融数据从数据采集、清洗加工到数据存储的过程，能够为金融分析人员提供快速、整洁和多样的便于分析的数据，为他们在数据获取方面极大地减轻工作量，使他们更加专注于策略和模型的研究与实现上。考虑到Python pandas包在金融量化分析中体现出的优势，TuShare返回的绝大部分的数据格式都是pandas DataFrame类型，非常便于用pandas/NumPy/Matplotlib进行数据分析和可视化。</p>
+<a id="more"></a>
+
+<p>Tushare在ubuntu14.04版本中可以直接使用以下bash命令安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tushare</span><br></pre></td></tr></table></figure>
+<h2 id="收集目标"><a href="#收集目标" class="headerlink" title="收集目标"></a>收集目标</h2><p>收集<strong>目标上市公司指定时间内</strong>成交价<strong>日均值</strong>数据，每个上市公司专门存储为一个csv文件。csv文件可以很容易地使用Excel、MATLAB等数据分析软件进行进一步分析处理。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>Tushare提供的API中可使用以下数据可以获取某日成交价tick数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line">df = ts.get_tick_data(stock0, date = date0)</span><br></pre></td></tr></table></figure>
+
+<p>注：在这里不选择<strong>ts.get_hist_data</strong>或者<strong>get_k_data</strong>函数，因为所求成交价<strong>日均值</strong>数据要通过日成交价tick数据来求全天均值，数据受开盘价或收盘价的偶然因素影响小。</p>
+<p><strong>ts.get_tick_data</strong>函数返回一个DataFrame格式的数据，可以使用Python里的Pandas模块进行处理。其中stock0为string格式的<strong>股票代码</strong>，data0为string格式的<strong>日期</strong>。示例如下所示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = ts.get_tick_data(<span class="string">'600848'</span>, date=<span class="string">'2014-01-09'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>*<em>PS: *</em>来自<a href="http://tushare.org/trading.html" target="_blank" rel="noopener">Tushare官方网站 - 交易数据栏目</a>。另外，Tushare API的详细使用方法可查看<a href="http://tushare.org/" target="_blank" rel="noopener">Tushare官方网站</a>。</p>
+<p>接下来，所得到的DataFrame格式数据df，可以被转化为Series格式来求得指定日期的日成交价均值。然后，多个日期成交价均值可以再组成Series格式数据，Series格式数据再组成DataFrame格式数据，最后输出到csv文件中。详细命令笔者会在后面进行讨论。</p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><h3 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h3><ul>
+<li>Ubuntu 14.04, 64bit</li>
+<li>python 2.7.6</li>
+<li>Python Tushare模块</li>
+<li>Python Pandas模块</li>
+</ul>
+<h3 id="变量说明"><a href="#变量说明" class="headerlink" title="变量说明"></a>变量说明</h3><p><strong>STOCKS:</strong> Python list数据格式，对象为int.<br><strong>DATES:</strong> Python list数据格式，对象为string.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series, DataFrame</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> stocki <span class="keyword">in</span> STOCKS:</span><br><span class="line">	day_date = Series([]); day_mean = Series([]); <span class="comment"># 初始化Series</span></span><br><span class="line">	<span class="keyword">for</span> datei <span class="keyword">in</span> DATES:</span><br><span class="line">		df = ts.get_tick_data(str(stocki), date = datei)</span><br><span class="line">		mean = sum(df.price)/len(df.price)</span><br><span class="line">		day_date = day_date.append(Series([datei], index = [len(day_mean)]))</span><br><span class="line">		day_mean = day_mean.append(Series([mean], index = [len(day_mean)]))</span><br><span class="line">		<span class="keyword">print</span> <span class="string">'In'</span>+str(stocki)+<span class="string">', '</span>+datei+<span class="string">'completed'</span></span><br><span class="line">	</span><br><span class="line">	day_date_mean = DataFrame([day_date,day_mean]).T</span><br><span class="line">	day_date_mean.columns = [<span class="string">'Date'</span>, <span class="string">'Price'</span>]</span><br><span class="line">	<span class="keyword">print</span> day_date_mean</span><br><span class="line">	location = <span class="string">'/home/theone/文档/data/'</span> + str(stocki) + <span class="string">'.csv'</span></span><br><span class="line">	day_date_mean.to_csv(location)</span><br></pre></td></tr></table></figure>
+
+<p>如果因为采集速度太快导致数据出现采集缺失或者IP被禁止，可以考虑使用sleep函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line">sleep(<span class="number">1</span>)  <span class="comment">#休息一秒</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h1><h2 id="Tushare模块"><a href="#Tushare模块" class="headerlink" title="Tushare模块"></a>Tushare模块</h2><p>首先需要确认Tushare模块已经被正常安装，可以使用简洁的python命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -c <span class="string">"import tushare"</span></span><br></pre></td></tr></table></figure>
+
+<p>若未返回任何错误信息，则证明Tushare模块已被正常安装。</p>
+<h2 id="Pandas模块"><a href="#Pandas模块" class="headerlink" title="Pandas模块"></a>Pandas模块</h2><p>Pandas是一个开源的Python模块，为使用Python进行数据分析提供了高效便捷的数据结构和分析工具。</p>
+<p>Pandas模块有时候会比较麻烦。建议直接安装Anaconda的Python模块包，笔者正是这么做的。Anaconda是关于Python数据分析和科学计算的分发包，可以轻松地在网络上搜索到。</p>
+<p>如果希望直接安装Pandas模块也是可以的，详细方法可以从百度上轻松得到。</p>
+<p>下面的的说明仅针对本例中使用到的进行讨论，若需要更详细的Pandas命令说明，可以参考<a href="http://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook" target="_blank" rel="noopener">Pandas Documentation - cookbook</a>.</p>
+<p>本例中着重讨论的是Pandas模块所提供的数据结构Series和DataFrame。对Tushare API所返回的DataFrame结构数据进行处理并存储，正是本文的主要目的。</p>
+<p>以下例子我们首先从Tushare获得DataFrame数据df开始。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line">df = ts.get_tick_data(<span class="string">'600848'</span>, date=<span class="string">'2014-01-09'</span>)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+
+<p>以上例子会返回一个DataFrame数据：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">        time  price change  volume  amount type</span><br><span class="line"><span class="number">0</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">59</span>   <span class="number">9.05</span>     --      <span class="number">28</span>   <span class="number">25340</span>   买盘</span><br><span class="line"><span class="number">1</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">54</span>   <span class="number">9.05</span>     --      <span class="number">70</span>   <span class="number">63350</span>   买盘</span><br><span class="line"><span class="number">2</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">44</span>   <span class="number">9.05</span>     --      <span class="number">61</span>   <span class="number">55205</span>   买盘</span><br><span class="line"><span class="number">3</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">39</span>   <span class="number">9.05</span>     --      <span class="number">61</span>   <span class="number">55205</span>   买盘</span><br><span class="line"><span class="number">4</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">29</span>   <span class="number">9.05</span>     --      <span class="number">47</span>   <span class="number">42535</span>   买盘</span><br><span class="line"><span class="number">5</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">24</span>   <span class="number">9.05</span>  <span class="number">-0.01</span>      <span class="number">23</span>   <span class="number">20815</span>   卖盘</span><br><span class="line"><span class="number">6</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">19</span>   <span class="number">9.06</span>   <span class="number">0.01</span>      <span class="number">40</span>   <span class="number">36240</span>   买盘</span><br><span class="line"><span class="number">7</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">14</span>   <span class="number">9.05</span>   <span class="number">0.01</span>      <span class="number">10</span>    <span class="number">9050</span>  中性盘</span><br><span class="line"><span class="number">8</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">09</span>   <span class="number">9.04</span>  <span class="number">-0.01</span>     <span class="number">104</span>   <span class="number">94015</span>   卖盘</span><br><span class="line"><span class="number">9</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">04</span>   <span class="number">9.05</span>     --     <span class="number">117</span>  <span class="number">105885</span>   买盘</span><br><span class="line"><span class="number">10</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">54</span>   <span class="number">9.05</span>     --      <span class="number">12</span>   <span class="number">10860</span>   买盘</span><br><span class="line"><span class="number">11</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">49</span>   <span class="number">9.05</span>     --      <span class="number">79</span>   <span class="number">71495</span>   卖盘</span><br><span class="line"><span class="number">12</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">44</span>   <span class="number">9.05</span>     --       <span class="number">5</span>    <span class="number">4525</span>   卖盘</span><br><span class="line"><span class="number">13</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">39</span>   <span class="number">9.05</span>     --       <span class="number">5</span>    <span class="number">4525</span>   卖盘</span><br><span class="line"><span class="number">14</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">29</span>   <span class="number">9.05</span>   <span class="number">0.01</span>      <span class="number">68</span>   <span class="number">61540</span>   买盘</span><br><span class="line"><span class="number">15</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">19</span>   <span class="number">9.04</span>     --      <span class="number">14</span>   <span class="number">12990</span>   卖盘</span><br><span class="line"><span class="number">16</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">14</span>   <span class="number">9.04</span>  <span class="number">-0.01</span>     <span class="number">103</span>   <span class="number">93111</span>   卖盘</span><br><span class="line"><span class="number">17</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">09</span>   <span class="number">9.05</span>     --       <span class="number">1</span>     <span class="number">905</span>   买盘</span><br><span class="line"><span class="number">18</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">59</span>   <span class="number">9.05</span>     --      <span class="number">25</span>   <span class="number">22625</span>   买盘</span><br><span class="line"><span class="number">19</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">54</span>   <span class="number">9.05</span>  <span class="number">-0.01</span>      <span class="number">58</span>   <span class="number">52490</span>  中性盘</span><br><span class="line"><span class="number">20</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">49</span>   <span class="number">9.06</span>     --     <span class="number">110</span>   <span class="number">99660</span>   买盘</span><br><span class="line"><span class="number">21</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">44</span>   <span class="number">9.06</span>     --       <span class="number">5</span>    <span class="number">4530</span>   买盘</span><br><span class="line"><span class="number">22</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">39</span>   <span class="number">9.06</span>     --      <span class="number">20</span>   <span class="number">18120</span>   买盘</span><br><span class="line"><span class="number">23</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">34</span>   <span class="number">9.06</span>     --      <span class="number">60</span>   <span class="number">54360</span>   买盘</span><br><span class="line"><span class="number">24</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">23</span>   <span class="number">9.06</span>     --     <span class="number">100</span>   <span class="number">90600</span>   买盘</span><br><span class="line"><span class="number">25</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">18</span>   <span class="number">9.06</span>     --      <span class="number">85</span>   <span class="number">77010</span>   买盘</span><br><span class="line"><span class="number">26</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">08</span>   <span class="number">9.06</span>     --       <span class="number">9</span>    <span class="number">8154</span>   买盘</span><br><span class="line"><span class="number">27</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">03</span>   <span class="number">9.06</span>   <span class="number">0.02</span>       <span class="number">7</span>    <span class="number">6342</span>   买盘</span><br><span class="line"><span class="number">28</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">58</span>   <span class="number">9.04</span>  <span class="number">-0.02</span>      <span class="number">10</span>    <span class="number">9040</span>   卖盘</span><br><span class="line"><span class="number">29</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">53</span>   <span class="number">9.06</span>   <span class="number">0.01</span>      <span class="number">50</span>   <span class="number">45300</span>   买盘</span><br><span class="line"><span class="number">30</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">43</span>   <span class="number">9.05</span>     --     <span class="number">117</span>  <span class="number">105885</span>   买盘</span><br><span class="line"><span class="number">31</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">38</span>   <span class="number">9.05</span>     --      <span class="number">11</span>    <span class="number">9955</span>   买盘</span><br><span class="line"><span class="number">32</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">23</span>   <span class="number">9.05</span>   <span class="number">0.01</span>      <span class="number">18</span>   <span class="number">16290</span>   买盘</span><br><span class="line"><span class="number">33</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">18</span>   <span class="number">9.04</span>     --       <span class="number">3</span>    <span class="number">2711</span>   卖盘</span><br><span class="line"><span class="number">34</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">13</span>   <span class="number">9.04</span>   <span class="number">0.01</span>     <span class="number">457</span>  <span class="number">413652</span>   买盘</span><br><span class="line"><span class="number">35</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">08</span>   <span class="number">9.03</span>     --      <span class="number">49</span>   <span class="number">44247</span>   卖盘</span><br><span class="line"><span class="number">36</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">03</span>   <span class="number">9.03</span>  <span class="number">-0.01</span>      <span class="number">18</span>   <span class="number">16253</span>   卖盘</span><br><span class="line"><span class="number">37</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">58</span>   <span class="number">9.04</span>   <span class="number">0.01</span>       <span class="number">2</span>    <span class="number">1807</span>   买盘</span><br><span class="line"><span class="number">38</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">53</span>   <span class="number">9.03</span>     --       <span class="number">5</span>    <span class="number">4515</span>   卖盘</span><br><span class="line"><span class="number">39</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">48</span>   <span class="number">9.03</span>  <span class="number">-0.01</span>       <span class="number">5</span>    <span class="number">4515</span>   卖盘</span><br><span class="line"><span class="number">40</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">43</span>   <span class="number">9.04</span>     --      <span class="number">16</span>   <span class="number">14463</span>   买盘</span><br><span class="line"><span class="number">41</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">38</span>   <span class="number">9.04</span>   <span class="number">0.01</span>       <span class="number">5</span>    <span class="number">4520</span>   买盘</span><br><span class="line"><span class="number">42</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">33</span>   <span class="number">9.03</span>     --      <span class="number">35</span>   <span class="number">31604</span>   买盘</span><br><span class="line"><span class="number">43</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">28</span>   <span class="number">9.03</span>  <span class="number">-0.01</span>      <span class="number">53</span>   <span class="number">47859</span>   卖盘</span><br><span class="line"><span class="number">44</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">23</span>   <span class="number">9.04</span>   <span class="number">0.01</span>      <span class="number">10</span>    <span class="number">9040</span>   买盘</span><br><span class="line"><span class="number">45</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">13</span>   <span class="number">9.03</span>     --      <span class="number">28</span>   <span class="number">25284</span>   卖盘</span><br><span class="line"><span class="number">46</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">13</span>   <span class="number">9.03</span>     --      <span class="number">10</span>    <span class="number">9030</span>   卖盘</span><br><span class="line"><span class="number">47</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">08</span>   <span class="number">9.03</span>  <span class="number">-0.01</span>      <span class="number">74</span>   <span class="number">66822</span>   卖盘</span><br><span class="line"><span class="number">48</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">03</span>   <span class="number">9.04</span>     --       <span class="number">8</span>    <span class="number">7231</span>   买盘</span><br><span class="line"><span class="number">49</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">58</span>   <span class="number">9.04</span>   <span class="number">0.01</span>      <span class="number">50</span>   <span class="number">45199</span>   买盘</span><br><span class="line"><span class="number">50</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">53</span>   <span class="number">9.03</span>     --      <span class="number">10</span>    <span class="number">9030</span>   卖盘</span><br><span class="line"><span class="number">51</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">48</span>   <span class="number">9.03</span>  <span class="number">-0.01</span>      <span class="number">51</span>   <span class="number">46053</span>   卖盘</span><br><span class="line"><span class="number">52</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">43</span>   <span class="number">9.04</span>     --      <span class="number">29</span>   <span class="number">26215</span>   买盘</span><br><span class="line"><span class="number">53</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">38</span>   <span class="number">9.04</span>   <span class="number">0.01</span>      <span class="number">96</span>   <span class="number">86783</span>   买盘</span><br><span class="line"><span class="number">54</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">33</span>   <span class="number">9.03</span>  <span class="number">-0.01</span>       <span class="number">1</span>     <span class="number">902</span>   卖盘</span><br><span class="line"><span class="number">55</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">23</span>   <span class="number">9.04</span>     --       <span class="number">5</span>    <span class="number">4520</span>   买盘</span><br><span class="line"><span class="number">56</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">18</span>   <span class="number">9.04</span>   <span class="number">0.01</span>       <span class="number">3</span>    <span class="number">2711</span>   买盘</span><br><span class="line"><span class="number">57</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">08</span>   <span class="number">9.03</span>  <span class="number">-0.01</span>      <span class="number">13</span>   <span class="number">11739</span>   卖盘</span><br><span class="line"><span class="number">58</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">03</span>   <span class="number">9.04</span>     --      <span class="number">16</span>   <span class="number">14463</span>   买盘</span><br><span class="line"><span class="number">59</span>  <span class="number">14</span>:<span class="number">53</span>:<span class="number">53</span>   <span class="number">9.04</span>   <span class="number">0.02</span>      <span class="number">10</span>    <span class="number">9040</span>   买盘</span><br><span class="line">         ...    ...    ...     ...     ...  ...</span><br><span class="line"></span><br><span class="line">[<span class="number">1540</span> rows x <span class="number">6</span> columns]</span><br></pre></td></tr></table></figure>
+
+<h3 id="DataFrame数据类型"><a href="#DataFrame数据类型" class="headerlink" title="DataFrame数据类型"></a>DataFrame数据类型</h3><p>因为通过Tushare模块返回的df是DataFrame类型数据，所以我们先从DataFrame开始讨论。</p>
+<p>从上面命令的输出中可以看出，DataFrame类型数据类似于一个<strong>二维表</strong>，因此我们可以对其<strong>行、列及表中单个数据</strong>进行操作。接下来是具体的命令实例。</p>
+<h4 id="选取列数据"><a href="#选取列数据" class="headerlink" title="选取列数据"></a>选取列数据</h4><p>执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.price)</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">1</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">2</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">3</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">4</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">5</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">6</span>     <span class="number">9.06</span></span><br><span class="line"><span class="number">7</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">8</span>     <span class="number">9.04</span></span><br><span class="line"><span class="number">9</span>     <span class="number">9.05</span></span><br><span class="line"><span class="number">10</span>    <span class="number">9.05</span></span><br><span class="line"><span class="number">11</span>    <span class="number">9.05</span></span><br><span class="line"><span class="number">12</span>    <span class="number">9.05</span></span><br><span class="line"><span class="number">13</span>    <span class="number">9.05</span></span><br><span class="line"><span class="number">14</span>    <span class="number">9.05</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="number">1525</span>    <span class="number">8.80</span></span><br><span class="line"><span class="number">1526</span>    <span class="number">8.82</span></span><br><span class="line"><span class="number">1527</span>    <span class="number">8.83</span></span><br><span class="line"><span class="number">1528</span>    <span class="number">8.80</span></span><br><span class="line"><span class="number">1529</span>    <span class="number">8.81</span></span><br><span class="line"><span class="number">1530</span>    <span class="number">8.80</span></span><br><span class="line"><span class="number">1531</span>    <span class="number">8.80</span></span><br><span class="line"><span class="number">1532</span>    <span class="number">8.82</span></span><br><span class="line"><span class="number">1533</span>    <span class="number">8.80</span></span><br><span class="line"><span class="number">1534</span>    <span class="number">8.83</span></span><br><span class="line"><span class="number">1535</span>    <span class="number">8.80</span></span><br><span class="line"><span class="number">1536</span>    <span class="number">8.83</span></span><br><span class="line"><span class="number">1537</span>    <span class="number">8.76</span></span><br><span class="line"><span class="number">1538</span>    <span class="number">8.80</span></span><br><span class="line"><span class="number">1539</span>    <span class="number">8.76</span></span><br><span class="line"><span class="attr">Name:</span> <span class="string">price,</span> <span class="attr">Length:</span> <span class="number">1540</span><span class="string">,</span> <span class="attr">dtype:</span> <span class="string">float64</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="选取行数据"><a href="#选取行数据" class="headerlink" title="选取行数据"></a>选取行数据</h4><p>执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df[<span class="number">0</span>:<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">       time  price change  volume  amount type</span><br><span class="line"><span class="number">0</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">59</span>   <span class="number">9.05</span>     --      <span class="number">28</span>   <span class="number">25340</span>   买盘</span><br><span class="line"><span class="number">1</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">54</span>   <span class="number">9.05</span>     --      <span class="number">70</span>   <span class="number">63350</span>   买盘</span><br><span class="line"><span class="number">2</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">44</span>   <span class="number">9.05</span>     --      <span class="number">61</span>   <span class="number">55205</span>   买盘</span><br><span class="line"><span class="number">3</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">39</span>   <span class="number">9.05</span>     --      <span class="number">61</span>   <span class="number">55205</span>   买盘</span><br><span class="line"><span class="number">4</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">29</span>   <span class="number">9.05</span>     --      <span class="number">47</span>   <span class="number">42535</span>   买盘</span><br><span class="line"><span class="number">5</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">24</span>   <span class="number">9.05</span>  <span class="number">-0.01</span>      <span class="number">23</span>   <span class="number">20815</span>   卖盘</span><br><span class="line"><span class="number">6</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">19</span>   <span class="number">9.06</span>   <span class="number">0.01</span>      <span class="number">40</span>   <span class="number">36240</span>   买盘</span><br><span class="line"><span class="number">7</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">14</span>   <span class="number">9.05</span>   <span class="number">0.01</span>      <span class="number">10</span>    <span class="number">9050</span>  中性盘</span><br><span class="line"><span class="number">8</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">09</span>   <span class="number">9.04</span>  <span class="number">-0.01</span>     <span class="number">104</span>   <span class="number">94015</span>   卖盘</span><br><span class="line"><span class="number">9</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">04</span>   <span class="number">9.05</span>     --     <span class="number">117</span>  <span class="number">105885</span>   买盘</span><br><span class="line"></span><br><span class="line">[<span class="number">10</span> rows x <span class="number">6</span> columns]</span><br></pre></td></tr></table></figure>
+
+<h4 id="选取单个数据"><a href="#选取单个数据" class="headerlink" title="选取单个数据"></a>选取单个数据</h4><p>执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.price[<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">9.05</span></span><br></pre></td></tr></table></figure>
+
+<p>在理解了以上三类操作之后，对DataFrame数据基本上就能够进行简单的处理了。</p>
+<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><h5 id="选取多行"><a href="#选取多行" class="headerlink" title="选取多行"></a>选取多行</h5><p>执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.price[<span class="number">5</span>:<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>    <span class="number">9.05</span></span><br><span class="line"><span class="number">6</span>    <span class="number">9.06</span></span><br><span class="line"><span class="number">7</span>    <span class="number">9.05</span></span><br><span class="line"><span class="number">8</span>    <span class="number">9.04</span></span><br><span class="line"><span class="number">9</span>    <span class="number">9.05</span></span><br><span class="line"><span class="attr">Name:</span> <span class="string">price,</span> <span class="attr">dtype:</span> <span class="string">float64</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="选取多列"><a href="#选取多列" class="headerlink" title="选取多列"></a>选取多列</h5><p>执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> DataFrame</span><br><span class="line">print(DataFrame(df, columns = [<span class="string">'time'</span>, <span class="string">'price'</span>]))</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">        time  price</span><br><span class="line"><span class="number">0</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">59</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">1</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">54</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">2</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">44</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">3</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">39</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">4</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">29</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">5</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">24</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">6</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">19</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">7</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">14</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">8</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">09</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">9</span>   <span class="number">14</span>:<span class="number">59</span>:<span class="number">04</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">10</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">54</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">11</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">49</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">12</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">44</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">13</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">39</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">14</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">29</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">15</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">19</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">16</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">14</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">17</span>  <span class="number">14</span>:<span class="number">58</span>:<span class="number">09</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">18</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">59</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">19</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">54</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">20</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">49</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">21</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">44</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">22</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">39</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">23</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">34</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">24</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">23</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">25</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">18</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">26</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">08</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">27</span>  <span class="number">14</span>:<span class="number">57</span>:<span class="number">03</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">28</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">58</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">29</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">53</span>   <span class="number">9.06</span></span><br><span class="line"><span class="number">30</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">43</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">31</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">38</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">32</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">23</span>   <span class="number">9.05</span></span><br><span class="line"><span class="number">33</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">18</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">34</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">13</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">35</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">08</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">36</span>  <span class="number">14</span>:<span class="number">56</span>:<span class="number">03</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">37</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">58</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">38</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">53</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">39</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">48</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">40</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">43</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">41</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">38</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">42</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">33</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">43</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">28</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">44</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">23</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">45</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">13</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">46</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">13</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">47</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">08</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">48</span>  <span class="number">14</span>:<span class="number">55</span>:<span class="number">03</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">49</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">58</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">50</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">53</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">51</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">48</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">52</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">43</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">53</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">38</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">54</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">33</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">55</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">23</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">56</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">18</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">57</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">08</span>   <span class="number">9.03</span></span><br><span class="line"><span class="number">58</span>  <span class="number">14</span>:<span class="number">54</span>:<span class="number">03</span>   <span class="number">9.04</span></span><br><span class="line"><span class="number">59</span>  <span class="number">14</span>:<span class="number">53</span>:<span class="number">53</span>   <span class="number">9.04</span></span><br><span class="line">         ...    ...</span><br><span class="line"></span><br><span class="line">[<span class="number">1540</span> rows x <span class="number">2</span> columns]</span><br><span class="line"></span><br><span class="line">Name: price, dtype: <span class="built_in">float</span>64</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除特定行"><a href="#删除特定行" class="headerlink" title="删除特定行"></a>删除特定行</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = df.drop(<span class="string">'change'</span>, <span class="number">1</span>)</span><br><span class="line">print(df[<span class="number">0</span>:<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">       time  price  volume  amount type</span><br><span class="line"><span class="number">0</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">59</span>   <span class="number">9.05</span>      <span class="number">28</span>   <span class="number">25340</span>   买盘</span><br><span class="line"><span class="number">1</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">54</span>   <span class="number">9.05</span>      <span class="number">70</span>   <span class="number">63350</span>   买盘</span><br><span class="line"><span class="number">2</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">44</span>   <span class="number">9.05</span>      <span class="number">61</span>   <span class="number">55205</span>   买盘</span><br><span class="line"><span class="number">3</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">39</span>   <span class="number">9.05</span>      <span class="number">61</span>   <span class="number">55205</span>   买盘</span><br><span class="line"><span class="number">4</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">29</span>   <span class="number">9.05</span>      <span class="number">47</span>   <span class="number">42535</span>   买盘</span><br><span class="line"><span class="number">5</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">24</span>   <span class="number">9.05</span>      <span class="number">23</span>   <span class="number">20815</span>   卖盘</span><br><span class="line"><span class="number">6</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">19</span>   <span class="number">9.06</span>      <span class="number">40</span>   <span class="number">36240</span>   买盘</span><br><span class="line"><span class="number">7</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">14</span>   <span class="number">9.05</span>      <span class="number">10</span>    <span class="number">9050</span>  中性盘</span><br><span class="line"><span class="number">8</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">09</span>   <span class="number">9.04</span>     <span class="number">104</span>   <span class="number">94015</span>   卖盘</span><br><span class="line"><span class="number">9</span>  <span class="number">14</span>:<span class="number">59</span>:<span class="number">04</span>   <span class="number">9.05</span>     <span class="number">117</span>  <span class="number">105885</span>   买盘</span><br><span class="line"></span><br><span class="line">[<span class="number">10</span> rows x <span class="number">5</span> columns]</span><br></pre></td></tr></table></figure>
+
+<h3 id="Series数据类型"><a href="#Series数据类型" class="headerlink" title="Series数据类型"></a>Series数据类型</h3><p>从DataFrame数据中提取其中一列，所得到的数据就是Series数据。其与一般的“列”数据不同，它是有<strong>“序号 (Index)”</strong>的（或者理解成“索引号”更恰当）。因此我们可以清楚看出，一个Series数据，由两列数据组成：一列是列数据本身，一列是数据的索引号。</p>
+<p>索引序号可以自动生成，也可以人工指定。我们可以通过序号索引数据，也可以通过一般与对list数据类似的操作这提高了Series数据的灵活性。</p>
+<p>在这里我们不讨论对Series数据的基本操作，入门操作在网络上资源很充足也很完善。</p>
+<p>在本例中需要重点关注的是如何生成一个Series数据，并不断在尾部添加数据。</p>
+<h4 id="生成Series"><a href="#生成Series" class="headerlink" title="生成Series"></a>生成Series</h4><p>执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series</span><br><span class="line">obj = Series([<span class="number">4</span>, <span class="number">7</span>, <span class="number">-5</span>, <span class="number">3</span>])</span><br><span class="line">print(obj)</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>    <span class="number">4</span></span><br><span class="line"><span class="number">1</span>    <span class="number">7</span></span><br><span class="line"><span class="number">2</span>   <span class="number">-5</span></span><br><span class="line"><span class="number">3</span>    <span class="number">3</span></span><br><span class="line">dtype: <span class="built_in">int</span>64</span><br></pre></td></tr></table></figure>
+
+<p>生成<strong>空的Series</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series</span><br><span class="line">obj = Series([])</span><br><span class="line">print(obj)</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constructor">Series([], <span class="params">dtype</span>: <span class="params">float64</span>)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="在Series尾部添加数据"><a href="#在Series尾部添加数据" class="headerlink" title="在Series尾部添加数据"></a>在Series尾部添加数据</h4><p>执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series</span><br><span class="line">obj = Series([<span class="number">4</span>, <span class="number">7</span>, <span class="number">-5</span>, <span class="number">3</span>])</span><br><span class="line">data = <span class="number">8</span></span><br><span class="line">obj = obj.append(Series([data], index = [len(obj)]))</span><br><span class="line">print(obj)</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>    <span class="number">4</span></span><br><span class="line"><span class="number">1</span>    <span class="number">7</span></span><br><span class="line"><span class="number">2</span>   <span class="number">-5</span></span><br><span class="line"><span class="number">3</span>    <span class="number">3</span></span><br><span class="line"><span class="number">4</span>    <span class="number">8</span></span><br><span class="line">dtype: <span class="built_in">int</span>64</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>在使用DataFrame和Series命令时，一定记住先导入pandas相关模块，使用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> DataFrame, Series</span><br></pre></td></tr></table></figure>
+
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>笔者水平有限，在某朋友邀请下共同完成本次需求。如果内容有所错漏，还请见谅。欢迎联系笔者。<br>Email: <a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/04/17/TusharePandas/" title="利用Tushare和Pandas进行金融数据收集">http://mozheyang.top/2017/04/17/TusharePandas/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/blog/zh/tags/Data-Analysis-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> Data Analysis  数据分析</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/04/16/NmatPdfDownload/" rel="prev" title="使用Python正则表达式批量下载Nature Materials">
+      <i class="fa fa-chevron-left"></i> 使用Python正则表达式批量下载Nature Materials
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/04/25/ImageJParticle/" rel="next" title="利用Image J进行第二相尺寸和分布分析">
+      利用Image J进行第二相尺寸和分布分析 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#收集目标"><span class="nav-number">1.1.</span> <span class="nav-text">收集目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源代码"><span class="nav-number">1.3.</span> <span class="nav-text">源代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行环境"><span class="nav-number">1.3.1.</span> <span class="nav-text">运行环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量说明"><span class="nav-number">1.3.2.</span> <span class="nav-text">变量说明</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码解析"><span class="nav-number">2.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tushare模块"><span class="nav-number">2.1.</span> <span class="nav-text">Tushare模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pandas模块"><span class="nav-number">2.2.</span> <span class="nav-text">Pandas模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DataFrame数据类型"><span class="nav-number">2.2.1.</span> <span class="nav-text">DataFrame数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选取列数据"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">选取列数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选取行数据"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">选取行数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选取单个数据"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">选取单个数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其它"><span class="nav-number">2.2.1.4.</span> <span class="nav-text">其它</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#选取多行"><span class="nav-number">2.2.1.4.1.</span> <span class="nav-text">选取多行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选取多列"><span class="nav-number">2.2.1.4.2.</span> <span class="nav-text">选取多列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除特定行"><span class="nav-number">2.2.1.4.3.</span> <span class="nav-text">删除特定行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Series数据类型"><span class="nav-number">2.2.2.</span> <span class="nav-text">Series数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成Series"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">生成Series</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在Series尾部添加数据"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">在Series尾部添加数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">2.2.3.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">3.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

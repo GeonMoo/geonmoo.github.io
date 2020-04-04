@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="原文链接：Man, M. K. L. et al. Imaging the motion of electrons across semiconductor heterojunctions. Nat. Nanotechnol. 1–6 (2016). doi:10.1038&#x2F;nnano.2016.183">
+<meta property="og:type" content="article">
+<meta property="og:title" content="结合泵-探测器和光发射电子显微镜进行半导体电子原位表征">
+<meta property="og:url" content="http://mozheyang.top/2017/07/29/man2016/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="原文链接：Man, M. K. L. et al. Imaging the motion of electrons across semiconductor heterojunctions. Nat. Nanotechnol. 1–6 (2016). doi:10.1038&#x2F;nnano.2016.183">
+<meta property="og:image" content="http://mozheyang.top/images/man2016/man2016-title.png">
+<meta property="og:image" content="http://phy.hzau.edu.cn/phisicsnet/phyclass/chapater/lightyanshe/movie/ruilipju.jpg">
+<meta property="og:image" content="http://mozheyang.top/images/man2016/man2016-fig1.png">
+<meta property="og:image" content="http://mozheyang.top/images/man2016/man2016-fig2.png">
+<meta property="og:image" content="http://mozheyang.top/images/man2016/man2016-fig3.png">
+<meta property="og:image" content="http://mozheyang.top/images/man2016/man2016-fig4.png">
+<meta property="article:published_time" content="2017-07-29T11:41:47.000Z">
+<meta property="article:modified_time" content="2020-02-02T08:14:18.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Material  材料">
+<meta property="article:tag" content="Characterization  表征">
+<meta property="article:tag" content="Semiconductor  半导体">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/man2016/man2016-title.png">
+
+<link rel="canonical" href="http://mozheyang.top/2017/07/29/man2016/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>结合泵-探测器和光发射电子显微镜进行半导体电子原位表征 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/07/29/man2016/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          结合泵-探测器和光发射电子显微镜进行半导体电子原位表征
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-07-29 19:41:47" itemprop="dateCreated datePublished" datetime="2017-07-29T19:41:47+08:00">2017-07-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 16:14:18" itemprop="dateModified" datetime="2020-02-02T16:14:18+08:00">2020-02-02</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/07/29/man2016/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/07/29/man2016/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="http://mozheyang.top/images/man2016/man2016-title.png" alt=""></p>
+<p><em>原文链接：<a href="http://mozheyang.top/documents/man2016.pdf">Man, M. K. L. et al. Imaging the motion of electrons across semiconductor heterojunctions. Nat. Nanotechnol. 1–6 (2016). doi:10.1038/nnano.2016.183</a></em></p>
+<a id="more"></a>
+
+<h1 id="研究背景及目的"><a href="#研究背景及目的" class="headerlink" title="研究背景及目的"></a>研究背景及目的</h1><p>实现对电子运动的原位观测，需要高的空间+时间分辨度。<br>但是，</p>
+<p><img src="http://phy.hzau.edu.cn/phisicsnet/phyclass/chapater/lightyanshe/movie/ruilipju.jpg" alt=""><br><em>[图片来自网络，侵删]</em></p>
+<p>由Rayleigh判据<br>$$ \Delta l = 1.220 \frac{f\lambda}{D} $$<br>其中，$\Delta l$ 为可分辨最小距离，$f$为透镜焦距，$\lambda$为波长，$D$为粒子穿过的小孔直径。可知可分辨最小距离与小孔直径成反比，而光子波长较大，因此<strong>光学显微镜空间分辨度不够。</strong>由于受到电子发射速率的限制，两个电子之间的时间间隔难以达到飞秒的分辨量级，又可知<strong>电子显微镜时间分辨度不够。</strong></p>
+<p>因此，发展了一种表征技术——能以短时连续的粒子（光子）激发获得信号（获得时间分辨度），所激发信号又具有较短波长（物质波），可以满足Rayleigh判据的可分辨条件——TR-PEEM = Time-Resolved Photoemission Electron Microscopy，即时间可分辨的光电子显微分析技术。</p>
+<p>本文结合泵-探测器及光发射电子显微镜来实现上述表征技术。</p>
+<h1 id="研究方法"><a href="#研究方法" class="headerlink" title="研究方法"></a>研究方法</h1><p>本文主要特点在于巧妙地使用先进表征技术对电子活动进行表征，因此实验方法是我们需要着重关注的。</p>
+<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><p>InSe/GaAs异质结材料。其中二维InSe的厚度可以通过激光雕刻控制，与在其下方的GaAs通过范德华力相互作用。InSe/GaAs异质结的能带结构会受到二维InSe的厚度的影响，从而导致光致电子逸出功在局域的不均匀。</p>
+<h2 id="泵-探测器（Pump-probe）"><a href="#泵-探测器（Pump-probe）" class="headerlink" title="泵-探测器（Pump-probe）"></a>泵-探测器（Pump-probe）</h2><p>首先，通过波长为800nm的激光脉冲将电子激发到InSe/GaAs异质结材料导带上，随后，在间隔200fs左右的时间后，再通过波长为286nm的探测光束将已经激发至导带上的电子，通过光生电子原理由表面击出，从而可以使电子被探测器所探测。</p>
+<h2 id="光发射电子显微镜（PEEM-Photoemission-Electron-Microscopy）"><a href="#光发射电子显微镜（PEEM-Photoemission-Electron-Microscopy）" class="headerlink" title="光发射电子显微镜（PEEM, Photoemission Electron Microscopy）"></a>光发射电子显微镜（PEEM, Photoemission Electron Microscopy）</h2><p>该电子显微镜能够分辨光生电子。根据爱因斯坦提出的光电效应方程<br>$$ h\nu  = \frac{1}{2}mv_{m}^{2}+W $$<br>其中，$W$为光激发电子逸出功。由于不同表面光激发电子逸出功的不同，因此导致激发总电子数目不一致，在电子成像上就会体现为颜色或者亮暗的不一致，从而形成衬度。</p>
+<h1 id="研究结果"><a href="#研究结果" class="headerlink" title="研究结果"></a>研究结果</h1><p><strong>1. 利用TR-PEEM技术进行电子运动原位表征的原理展示。</strong></p>
+<p><img src="http://mozheyang.top/images/man2016/man2016-fig1.png" alt=""></p>
+<div  align="center">
+图1  TR-PEEM技术和InSe/GaAs 能带分布示意图
+</div>
+
+<p><strong>2. 分析电子运动在空间上的不均匀性。因为type-II的能带结构，GaAs中光生电子比之于InSe能量更高。</strong></p>
+<p><img src="http://mozheyang.top/images/man2016/man2016-fig2.png" alt=""></p>
+<div  align="center">
+图2  PEEM及TR-PEEM实验图像
+</div>
+
+<p><strong>3. 分析电子运动在时间上的不均匀性。随（延迟）时间增加，InSe/GaAs异质结光生电子的增加（红）和减少（蓝）。</strong></p>
+<p><img src="http://mozheyang.top/images/man2016/man2016-fig3.png" alt=""></p>
+<div  align="center">
+图3  不同时间下的TR-PEEM实验图像
+</div>
+
+<p><strong>4. 建立电荷隔离和输运模型。电子从GaAs流向InSe。</strong></p>
+<p><img src="http://mozheyang.top/images/man2016/man2016-fig4.png" alt=""></p>
+<div  align="center">
+图4  电荷隔离和输运模型
+</div>
+
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>本文是笔者尝试的第二篇文献分析类博文。希望本文能得到各位读者宝贵的改进意见。另外，祝学习愉快，工作顺利！</p>
+<p>感谢大家的阅读。<br>Email: <a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a></p>
+<p>笔者水平有限，望各位批评指正！</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/07/29/man2016/" title="结合泵-探测器和光发射电子显微镜进行半导体电子原位表征">http://mozheyang.top/2017/07/29/man2016/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
+              <a href="/blog/zh/tags/Characterization-%E8%A1%A8%E5%BE%81/" rel="tag"><i class="fa fa-tag"></i> Characterization  表征</a>
+              <a href="/blog/zh/tags/Semiconductor-%E5%8D%8A%E5%AF%BC%E4%BD%93/" rel="tag"><i class="fa fa-tag"></i> Semiconductor  半导体</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/07/18/ncomms15447/" rel="prev" title="基于SHINERS技术的催化过程原位研究">
+      <i class="fa fa-chevron-left"></i> 基于SHINERS技术的催化过程原位研究
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/08/12/curtarolo2013/" rel="next" title="高通量计算 | 现状及展望">
+      高通量计算 | 现状及展望 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#研究背景及目的"><span class="nav-number">1.</span> <span class="nav-text">研究背景及目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#研究方法"><span class="nav-number">2.</span> <span class="nav-text">研究方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#材料"><span class="nav-number">2.1.</span> <span class="nav-text">材料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泵-探测器（Pump-probe）"><span class="nav-number">2.2.</span> <span class="nav-text">泵-探测器（Pump-probe）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#光发射电子显微镜（PEEM-Photoemission-Electron-Microscopy）"><span class="nav-number">2.3.</span> <span class="nav-text">光发射电子显微镜（PEEM, Photoemission Electron Microscopy）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#研究结果"><span class="nav-number">3.</span> <span class="nav-text">研究结果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+
+<link rel="stylesheet" href="/blog/zh/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="关键词：大数据、材料信息学、计算材料学、高通量计算 原文链接：Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038&#x2F;nmat3568">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高通量计算 | 现状及展望">
+<meta property="og:url" content="http://mozheyang.top/2017/08/12/curtarolo2013/index.html">
+<meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
+<meta property="og:description" content="关键词：大数据、材料信息学、计算材料学、高通量计算 原文链接：Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038&#x2F;nmat3568">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-title.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-table1.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/high-throughput.jpg">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig1.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig2.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig3.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig4.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig5.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig6.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/map_high-throughput.png">
+<meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/diffusion.png">
+<meta property="article:published_time" content="2017-08-12T08:24:35.000Z">
+<meta property="article:modified_time" content="2020-02-11T09:16:25.000Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Information Science &amp; Technology  信息科学与技术">
+<meta property="article:tag" content="Material  材料">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-title.png">
+
+<link rel="canonical" href="http://mozheyang.top/2017/08/12/curtarolo2013/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>高通量计算 | 现状及展望 | Mo's Blog | 摸着羊的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/zh/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Email | mozheyang@outlook.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/08/12/curtarolo2013/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Blog | 摸着羊的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          高通量计算 | 现状及展望
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-08-12 16:24:35" itemprop="dateCreated datePublished" datetime="2017-08-12T16:24:35+08:00">2017-08-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-11 17:16:25" itemprop="dateModified" datetime="2020-02-11T17:16:25+08:00">2020-02-11</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/zh/2017/08/12/curtarolo2013/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2017/08/12/curtarolo2013/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>关键词：</strong>大数据、材料信息学、计算材料学、高通量计算</p>
+<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
+<a id="more"></a>
+
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近“人工智能（AI）”的风头很盛。如果说前几年国内所有行业都在追求“互联网+”的话，那这几年，以及未来几年，国内所有行业可能都会追求“人工智能+”。这可不是空穴来风，国务院甚至已经下达了人工智能未来发展规划（且看<a href="http://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm" target="_blank" rel="noopener">《国务院关于印发新一代人工智能发展规划的通知》</a>。</p>
+<p>这么看来，“三百六十行，行行写代码”的未来生活真是越来越清晰了。要是在目前这个时代，用不上先进的信息/效率工具来充实自己，来强大自己，还真有可能被快速发展的时代所抛弃。</p>
+<p>要说信息科技目前在材料科学领域的成功应用，那是有目共睹的：通过计算机的降噪和球差矫正算法，最先进的透射电子显微镜已经能够达到亚埃级别的分辨能力；通过计算力学、计算材料学可以完成宏观、微观（微米、纳米）不同尺度下的材料理论模拟，成功预测不少高性能新材料；通过材料数据库的构建，工业界各企业能够快速选取适当性能的材料，为自己所用，很好地兼顾了性能与成本的平衡…而今，随着信息科技的不断发展，我们迎来了新的技术——通过对大量数据的计算收集，完成人类难以胜任的分析任务，从而发现材料结构与性能之间的规律。这就是目前“数据智能”技术可以给我们材料科研工作者们带来的一大有力工具。</p>
+<h1 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h1><p>“高通量（high-throughput）”，顾名思义，意味着较大的流量。在这里，可以理解为巨大的<strong>数据流量</strong>。人类习惯于通过小样本数据进行规律寻找，进行学习。这样的学习效率很高，也是我们人类传统的学习和研究习惯。</p>
+<p>但是计算机往往比较“笨”，目前还没有开发出能够通过小样本数据就能完成复杂学习的算法。不过，他们擅长与做重复的事情。又脏又累的机械工作，计算机可以轻松胜任。人类的精力只能保证完成少量的信息输入，而计算机可以快速获取大量信息，再快速（机械）处理，最后输出。因此，在大数据的处理方面，计算机的出现和发展，拓展了人类所能达到的信息处理水平。</p>
+<p>今天所介绍的是一篇在Nature Material期刊上发表的关于”高通量计算“在材料设计方面应用的综述。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-title.png" alt=""></p>
+<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
+<p>本文着重对高通量“计算”进行了介绍，并声明本文中的“高通量材料研究（HT material research）”与“材料性能的综合评价（combinatorial evaluation of material properties）”不同。此处的“高通量“特指数据量过大，而不能直接研究，必需通过计算机自动化完成的此类研究。<em>（原文：Here we defne HT as the throughput of data that is way too high to be produced or analysed by the researcher’s direct intervention, and must therefore be performed automatically: HT implies an automatic ﬂow from ideas to results. Te confusion of HT with combinatorial approaches is thus resolved. Te latter, in fact, specifes how the degrees of freedom are investigated, whereas HT strictly defnes the overwhelming and automatic ﬂow of the investigations.）</em></p>
+<p>高通量计算通过三个结合紧密的步骤完成：</p>
+<ul>
+<li>材料合成模拟</li>
+<li>合理的材料信息存储</li>
+<li>材料性能表征及其选择</li>
+</ul>
+<p>材料合成模拟的数学建模是很重要的一个步骤。由于人类对微观世界的研究尚未完全（是目前物理研究的一大前沿——凝聚态物理及弦理论），因此或多或少地，材料合成生长模型及其性能表征会有其局限性。但科学家们还是进行了大量有意义的探索。</p>
+<p>以下是文献中有所报道的材料模拟中所关注的部分指标。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-table1.png" alt=""></p>
+<h1 id="综述主要内容"><a href="#综述主要内容" class="headerlink" title="综述主要内容"></a>综述主要内容</h1><p>文章主要从目前现状及其发展展望两个角度对”高通量计算“进行介绍。笔者通过Docear对其文章结构整理如下：</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/high-throughput.jpg" alt=""></p>
+<p>接下来，笔者将对图表进行简要分析。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig1.png" alt=""></p>
+<div  align="center">
+图1 关于二元合金互溶程度的HT结果及实验结果的对比
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig2.png" alt=""></p>
+<div  align="center">
+图2 通过高通量能带计算完成光伏材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig3.png" alt=""></p>
+<div  align="center">
+图3 通过高通量能带计算完成电化学电池材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig4.png" alt=""></p>
+<div  align="center">
+图4 通过HT方法完成热电材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig5.png" alt=""></p>
+<div  align="center">
+图5 通过高通量能带计算完成电催化析氢材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig6.png" alt=""></p>
+<div  align="center">
+图6 通过HT方法权衡锂离子电池材料安全性与电压
+</div>
+
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>高通量方法极大地拓展了材料科研工作者所能探索的范围。如下图所示。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/map_high-throughput.png" alt=""><br><em>引自：Celiz, a D. et al. Materials for stem cell factories of the future. Nat Mater 13, 570–579 (2014).</em></p>
+<p>该综述只讨论了”高通量“的一个方面，即”高通量计算（high-throughput computation）“。而由于理论的缺陷，材料计算模拟的结果，目前的实际可靠性还是不如实验结果。</p>
+<p>因此不得不引出与”高通量“相关的另外一个研究方向——高通量实验（high-throughput experimentation）。自动化实验室——只需调整材料合成原料及材料制备压力、温度等参数，保持实验流程不变，从而获得fali多组对比实验数据——是一个比较好的例子。</p>
+<p>另一个比较好的例子或许是利用扩散偶进行不同合金成分合金性能的表征。通过过扩散偶（两种或两种以上的相互紧贴的纯金属）在较高温度下所发生的扩散现象，可以获得连续变化的合金成分。通过对合金局部的成分表征，及局部性能表征（如硬度测试、导电率测试等），可以得到多组对应良好的材料成分-性能数据，极大节省了实验成本和时间。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/diffusion.png" alt=""></p>
+<p>上图展示了最理想状态下扩散偶可以达到的效果。如使用该方法进行合金局部TSC(Thermally stimulated current, 差热分析)测试，预测将能够在较少时间（不太确定，扩散所需时间较长）和较少材料下进行合金相图测定。</p>
+<p>由于笔者学识所限，难免出现内容错漏的情况，望各位读者批评指正！<br>Email: <a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://mozheyang.top/2017/08/12/curtarolo2013/" title="高通量计算 | 现状及展望">http://mozheyang.top/2017/08/12/curtarolo2013/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog/zh/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> Information Science & Technology  信息科学与技术</a>
+              <a href="/blog/zh/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/07/29/man2016/" rel="prev" title="结合泵-探测器和光发射电子显微镜进行半导体电子原位表征">
+      <i class="fa fa-chevron-left"></i> 结合泵-探测器和光发射电子显微镜进行半导体电子原位表征
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/zh/2017/08/26/ModelPPT/" rel="next" title="任何事情都没那么简单——尤其是你真的想把它做好的时候">
+      任何事情都没那么简单——尤其是你真的想把它做好的时候 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#研究背景"><span class="nav-number">2.</span> <span class="nav-text">研究背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#综述主要内容"><span class="nav-number">3.</span> <span class="nav-text">综述主要内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/blog/zh/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/zh/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/zh/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/zh/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/zh/lib/anime.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/zh/js/utils.js"></script>
+
+<script src="/blog/zh/js/motion.js"></script>
+
+
+<script src="/blog/zh/js/schemes/muse.js"></script>
+
+
+<script src="/blog/zh/js/next-boot.js"></script>
+
+<script src="/blog/zh/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/blog/zh/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
