@@ -6,22 +6,22 @@
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
 
-<link rel="stylesheet" href="/blog/zh/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="在物理中可以引用Green函数求解下列形式的线性微分方程 $$[z-\hat{L}(\mathbf{r})]u(\textbf{r}) &#x3D; f(\mathbf{r})$$">
+  <meta name="description" content="在物理中可以引用Green函数求解下列形式的线性微分方程  [z-\hat{L}(\mathbf{r})]u(\textbf{r}) &#x3D; f(\mathbf{r})">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Green函数在量子物理中定义与广义定义的联系">
 <meta property="og:url" content="http://mozheyang.top/2018/01/21/GreenFunction/index.html">
 <meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
-<meta property="og:description" content="在物理中可以引用Green函数求解下列形式的线性微分方程 $$[z-\hat{L}(\mathbf{r})]u(\textbf{r}) &#x3D; f(\mathbf{r})$$">
+<meta property="og:description" content="在物理中可以引用Green函数求解下列形式的线性微分方程  [z-\hat{L}(\mathbf{r})]u(\textbf{r}) &#x3D; f(\mathbf{r})">
 <meta property="article:published_time" content="2018-01-21T11:04:06.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:34:38.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -71,6 +71,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="Mo's Blog | 摸着羊的个人博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -90,7 +91,7 @@
   <div class="site-meta">
 
     <div>
-      <a href="/blog/zh/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
         <span class="logo-line-after"><i></i></span>
@@ -112,27 +113,27 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -196,7 +197,7 @@
     <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2018/01/21/GreenFunction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Geon Mo">
       <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
     </span>
@@ -231,7 +232,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/zh/categories/Mathematical-Modeling-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="index"><span itemprop="name">Mathematical Modeling  数学模型</span></a>
+                  <a href="/categories/Mathematical-Modeling-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="index"><span itemprop="name">Mathematical Modeling  数学模型</span></a>
                 </span>
             </span>
 
@@ -251,8 +252,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/blog/zh/2018/01/21/GreenFunction/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2018/01/21/GreenFunction/" itemprop="commentCount"></span>
+    <a title="valine" href="/2018/01/21/GreenFunction/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/01/21/GreenFunction/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -268,14 +269,50 @@
 
       
         <p>在物理中可以引用Green函数求解下列形式的线性微分方程</p>
-<p>$$<br>[z-\hat{L}(\mathbf{r})]u(\textbf{r}) = f(\mathbf{r})<br>$$</p>
-<a id="more"></a>
-
-<p>那么$u(\mathbf{r’})$可以通过Green函数$G$进行表示<br>$$<br>u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r’};z) f(\mathbf{r’}) \text{d} \mathbf{r’}<br>$$<br>这时的Green函数$G$可以被定义为<br>$$<br>[z-\hat{L}(\mathbf{r})] G(\mathbf{r},\mathbf{r’};z) = \delta(\mathbf{r}-\mathbf{r’})<br>$$<br>该函数也被称为对应算符$\hat{L}$的Green函数$G$。</p>
+<script type="math/tex; mode=display">
+[z-\hat{L}(\mathbf{r})]u(\textbf{r}) = f(\mathbf{r})</script><a id="more"></a>
+<p>那么$u(\mathbf{r’})$可以通过Green函数$G$进行表示</p>
+<script type="math/tex; mode=display">
+u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r'};z) f(\mathbf{r'}) \text{d} \mathbf{r'}</script><p>这时的Green函数$G$可以被定义为</p>
+<script type="math/tex; mode=display">
+[z-\hat{L}(\mathbf{r})] G(\mathbf{r},\mathbf{r'};z) = \delta(\mathbf{r}-\mathbf{r'})</script><p>该函数也被称为对应算符$\hat{L}$的Green函数$G$。</p>
 <hr>
-<p>略去复数$z$的影响，可以做一个不那么严格的定义<br>$$<br>\cases{<br>  \hat{L}(\mathbf{r}) u(\mathbf{r}) = f(\mathbf{r}) \<br>  \hat{L}(\mathbf{r}) G(\mathbf{r},\mathbf{r’}) = \delta(\mathbf{r}-\mathbf{r’})<br>  }<br>$$<br>其解$u(\mathbf{r})$可以通过Green函数$G$进行表示为<br>$$<br>u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r’};z) f(\mathbf{r’}) \text{d} \mathbf{r’}<br>$$</p>
-<hr>
-<p>经以上推导过程可以在量子力学中定义微扰算符$\hat{V}$ ，其也可被视为态矢量$|\psi \rangle $的函数<br>$$<br>\hat{V} |\psi \rangle = (E-\hat{H}<em>0) |\psi \rangle = f(|\psi \rangle)<br>$$<br>那么由Green函数（算符）$\hat{G}$定义，可以得到对应非转移（稳态）项的Green函数<br>$$<br>\hat{G}_0 = (E-\hat{H}_0)^{-1}<br>$$<br>接下来可以得到$\hat{V}$与$\hat{G}$的联系<br>$$<br>\langle \psi_i| \hat{G} \hat{V} |\psi_j \rangle = \langle \psi_i | \psi_j \rangle = \delta</em>{ij}<br>$$<br>即<br>$$<br>(E_j-\hat{H}<em>0)  \langle \psi_i| \hat{G} |\psi_j \rangle<br>= \hat{V}_j \langle \psi_i| \hat{G} |\psi_j \rangle<br>= \delta</em>{ij}<br>$$<br>对比最初对Green函数的广义描述，我们可以发现该物理问题数学形式正与Green函数广义描述相符。下面我们将尝试将其解以积分形式表达。对上式两边同乘右矢$$|\psi_j \rangle $$有<br>$$<br>\hat{V}<em>j |\psi_j \rangle \langle \psi_i| \hat{G} |\psi_j \rangle<br>= f_j(|\psi_j \rangle ) \langle \psi_i| \hat{G} |\psi_j \rangle<br>= \delta</em>{ij} |\psi_j \rangle<br>$$<br>等式两边同时对右矢$|\psi \rangle$在$(-\infty, \infty)$范围内积分<br>$$<br>\int_{-\infty}^{\infty}  f_j(|\psi_j \rangle ) \langle \psi_i| \hat{G} |\psi_j \rangle \text{d}|\psi_j \rangle = \int_{-\infty}^{\infty}  \delta_{ij} |\psi_j \rangle \text{d}|\psi_j \rangle<br>$$<br>做替换<br>$$<br>\begin{array}\<br>|\psi_i \rangle &amp; \rightarrow &amp; \psi \<br>|\psi_j \rangle &amp; \rightarrow &amp;  \psi’ \<br>\end{array}<br>$$<br>由Kronecker $\delta$ 函数与Dirac $\delta$ 函数的关系不难得到$\delta_{ij} = \delta(|\psi_i \rangle - |\psi_j \rangle)$，因此有<br>$$<br>\int_{-\infty}^{\infty}  f_j(\psi’) G(\psi, \psi’) \text{d}\psi’<br>= \int_{-\infty}^{\infty}  \psi’ \delta(\psi - \psi’) \text{d}\psi’<br>= \psi(\mathbf{r})<br>$$<br>等式右边的波函数$\psi$是位置矢量$\mathbf{r}$的函数，因此<br>$$<br>\psi(\mathbf{r}) = \int_{-\infty}^{\infty}  f(\mathbf{r’}) G(\mathbf{r}, \mathbf{r’}) \text{d} \mathbf{r’}<br>$$<br>注意到我们在上式中还将$f_j$ 替换成了$f$ 。这是没有影响的，因为将$f_j$ 本身也是一个函数的表示，当式中其他项与$j$ 都无关的时候，其下标$j$ 的去留也变得无关紧要了。</p>
+<p>略去复数$z$的影响，可以做一个不那么严格的定义</p>
+<script type="math/tex; mode=display">
+\cases{
+  \hat{L}(\mathbf{r}) u(\mathbf{r}) = f(\mathbf{r}) \\
+  \hat{L}(\mathbf{r}) G(\mathbf{r},\mathbf{r’}) = \delta(\mathbf{r}-\mathbf{r'})
+  }</script><p>其解$u(\mathbf{r})$可以通过Green函数$G$进行表示为</p>
+<script type="math/tex; mode=display">
+u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r'};z) f(\mathbf{r'}) \text{d} \mathbf{r'}</script><hr>
+<p>经以上推导过程可以在量子力学中定义微扰算符$\hat{V}$ ，其也可被视为态矢量$|\psi \rangle $的函数</p>
+<script type="math/tex; mode=display">
+\hat{V} |\psi \rangle = (E-\hat{H}_0) |\psi \rangle = f(|\psi \rangle)</script><p>那么由Green函数（算符）$\hat{G}$定义，可以得到对应非转移（稳态）项的Green函数</p>
+<script type="math/tex; mode=display">
+\hat{G}_0 = (E-\hat{H}_0)^{-1}</script><p>接下来可以得到$\hat{V}$与$\hat{G}$的联系</p>
+<script type="math/tex; mode=display">
+\langle \psi_i| \hat{G} \hat{V} |\psi_j \rangle = \langle \psi_i | \psi_j \rangle = \delta_{ij}</script><p>即</p>
+<script type="math/tex; mode=display">
+(E_j-\hat{H}_0)  \langle \psi_i| \hat{G} |\psi_j \rangle 
+= \hat{V}_j \langle \psi_i| \hat{G} |\psi_j \rangle
+= \delta_{ij}</script><p>对比最初对Green函数的广义描述，我们可以发现该物理问题数学形式正与Green函数广义描述相符。下面我们将尝试将其解以积分形式表达。对上式两边同乘右矢<script type="math/tex">|\psi_j \rangle</script>有</p>
+<script type="math/tex; mode=display">
+\hat{V}_j |\psi_j \rangle \langle \psi_i| \hat{G} |\psi_j \rangle
+= f_j(|\psi_j \rangle ) \langle \psi_i| \hat{G} |\psi_j \rangle
+= \delta_{ij} |\psi_j \rangle</script><p>等式两边同时对右矢$|\psi \rangle$在$(-\infty, \infty)$范围内积分</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}  f_j(|\psi_j \rangle ) \langle \psi_i| \hat{G} |\psi_j \rangle \text{d}|\psi_j \rangle = \int_{-\infty}^{\infty}  \delta_{ij} |\psi_j \rangle \text{d}|\psi_j \rangle</script><p>做替换</p>
+<script type="math/tex; mode=display">
+\begin{array}\\
+|\psi_i \rangle & \rightarrow & \psi \\
+|\psi_j \rangle & \rightarrow &  \psi' \\
+\end{array}</script><p>由Kronecker $\delta$ 函数与Dirac $\delta$ 函数的关系不难得到$\delta_{ij} = \delta(|\psi_i \rangle - |\psi_j \rangle)$，因此有</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}  f_j(\psi') G(\psi, \psi') \text{d}\psi'
+= \int_{-\infty}^{\infty}  \psi' \delta(\psi - \psi') \text{d}\psi'
+= \psi(\mathbf{r})</script><p>等式右边的波函数$\psi$是位置矢量$\mathbf{r}$的函数，因此</p>
+<script type="math/tex; mode=display">
+\psi(\mathbf{r}) = \int_{-\infty}^{\infty}  f(\mathbf{r'}) G(\mathbf{r}, \mathbf{r'}) \text{d} \mathbf{r'}</script><p>注意到我们在上式中还将$f_j$ 替换成了$f$ 。这是没有影响的，因为将$f_j$ 本身也是一个函数的表示，当式中其他项与$j$ 都无关的时候，其下标$j$ 的去留也变得无关紧要了。</p>
 <p>上式与Green函数广义定义是一致的。于是我们对量子物理中的Green函数与广义定义Green函数之间的联系有了更深的认识。由以上推导可以看出，Green函数$G$包含了两个态之间转变的信息，自然与某些物理量紧密联系。</p>
 
     </div>
@@ -304,7 +341,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/blog/zh/tags/Physics-%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> Physics  物理</a>
+              <a href="/tags/Physics-%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> Physics  物理</a>
           </div>
 
         
@@ -313,11 +350,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/zh/2018/01/18/TiO2ForCO2/" rel="prev" title="The Application of Titanium for Photoreduction of Carbon Dioxide">
+    <a href="/2018/01/18/TiO2ForCO2/" rel="prev" title="The Application of Titanium for Photoreduction of Carbon Dioxide">
       <i class="fa fa-chevron-left"></i> The Application of Titanium for Photoreduction of Carbon Dioxide
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/zh/2018/01/21/SKSModel/" rel="next" title="Santos-Koper-Schmickler电荷转移模型">
+    <a href="/2018/01/21/SKSModel/" rel="next" title="Santos-Koper-Schmickler电荷转移模型">
       Santos-Koper-Schmickler电荷转移模型 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -386,27 +423,27 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Geon Mo"
-      src="/blog/zh/images/avatar.jpg">
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Geon Mo</p>
   <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/blog/zh/archives/">
+          <a href="/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/blog/zh/categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/blog/zh/tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
@@ -416,6 +453,9 @@
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -500,21 +540,21 @@
   </div>
 
   
-  <script src="/blog/zh/lib/anime.min.js"></script>
-  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/blog/zh/js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="/blog/zh/js/motion.js"></script>
-
-
-<script src="/blog/zh/js/schemes/muse.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="/blog/zh/js/next-boot.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
-<script src="/blog/zh/js/bookmark.js"></script>
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
 
 
 
@@ -534,7 +574,7 @@
 
 
   
-<script src="/blog/zh/js/local-search.js"></script>
+<script src="/js/local-search.js"></script>
 
 
 

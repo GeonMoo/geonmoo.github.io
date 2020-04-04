@@ -6,22 +6,22 @@
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
 
-<link rel="stylesheet" href="/blog/zh/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="在经典物理中，Green函数主要被当做一种求解线性微分方程数学物理方法来使用。在量子物理中，其定义稍显“不同”：$$\hat{G} &#x3D; (E-\hat{H})^{-1}$$当然其本质还是求解线性微分方程，关于它们之间的联系，详见博客文章：量子物理中Green函数与其广义定义的联系。在这里，我们先看看Green函数在量子物理中是如何被定义的。">
+  <meta name="description" content="在经典物理中，Green函数主要被当做一种求解线性微分方程数学物理方法来使用。在量子物理中，其定义稍显“不同”：  \hat{G} &#x3D; (E-\hat{H})^{-1}当然其本质还是求解线性微分方程，关于它们之间的联系，详见博客文章：量子物理中Green函数与其广义定义的联系。在这里，我们先看看Green函数在量子物理中是如何被定义的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="量子物理中的Green函数定义及其应用">
 <meta property="og:url" content="http://mozheyang.top/2018/01/15/QMGreenFunction/index.html">
 <meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
-<meta property="og:description" content="在经典物理中，Green函数主要被当做一种求解线性微分方程数学物理方法来使用。在量子物理中，其定义稍显“不同”：$$\hat{G} &#x3D; (E-\hat{H})^{-1}$$当然其本质还是求解线性微分方程，关于它们之间的联系，详见博客文章：量子物理中Green函数与其广义定义的联系。在这里，我们先看看Green函数在量子物理中是如何被定义的。">
+<meta property="og:description" content="在经典物理中，Green函数主要被当做一种求解线性微分方程数学物理方法来使用。在量子物理中，其定义稍显“不同”：  \hat{G} &#x3D; (E-\hat{H})^{-1}当然其本质还是求解线性微分方程，关于它们之间的联系，详见博客文章：量子物理中Green函数与其广义定义的联系。在这里，我们先看看Green函数在量子物理中是如何被定义的。">
 <meta property="article:published_time" content="2018-01-15T14:34:46.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:36:13.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -71,6 +71,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="Mo's Blog | 摸着羊的个人博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -90,7 +91,7 @@
   <div class="site-meta">
 
     <div>
-      <a href="/blog/zh/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
         <span class="logo-line-after"><i></i></span>
@@ -112,27 +113,27 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -196,7 +197,7 @@
     <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2018/01/15/QMGreenFunction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Geon Mo">
       <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
     </span>
@@ -231,7 +232,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/zh/categories/Mathematical-Modeling-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="index"><span itemprop="name">Mathematical Modeling  数学模型</span></a>
+                  <a href="/categories/Mathematical-Modeling-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="index"><span itemprop="name">Mathematical Modeling  数学模型</span></a>
                 </span>
             </span>
 
@@ -251,8 +252,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/blog/zh/2018/01/15/QMGreenFunction/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2018/01/15/QMGreenFunction/" itemprop="commentCount"></span>
+    <a title="valine" href="/2018/01/15/QMGreenFunction/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/01/15/QMGreenFunction/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -267,14 +268,49 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在经典物理中，Green函数主要被当做一种求解线性微分方程数学物理方法来使用。在量子物理中，其定义稍显“不同”：<br>$$<br>\hat{G} = (E-\hat{H})^{-1}<br>$$<br>当然其本质还是求解线性微分方程，关于它们之间的联系，详见博客文章：量子物理中Green函数与其广义定义的联系。在这里，我们先看看Green函数在量子物理中是如何被定义的。</p>
+        <p>在经典物理中，Green函数主要被当做一种求解线性微分方程数学物理方法来使用。在量子物理中，其定义稍显“不同”：</p>
+<script type="math/tex; mode=display">
+\hat{G} = (E-\hat{H})^{-1}</script><p>当然其本质还是求解线性微分方程，关于它们之间的联系，详见博客文章：量子物理中Green函数与其广义定义的联系。在这里，我们先看看Green函数在量子物理中是如何被定义的。</p>
 <a id="more"></a>
-
-<h1 id="Green函数的定义"><a href="#Green函数的定义" class="headerlink" title="Green函数的定义"></a>Green函数的定义</h1><p>我们将系统看做一个微扰系统，即系统总哈密顿量$\hat{H}$为零级近似哈密顿量$\hat{H_0}$与微扰哈密顿量$\hat{V}$之和：<br>$$<br>\hat{H} = \hat{H_0} + \hat{V}<br>$$<br>那么可将其代入定态薛定谔方程$\hat{H} \psi = E \psi$中，有<br>$$<br>(\hat{H_0} + \hat{V}) \psi = E \psi<br>$$<br>移项整理后有<br>$$<br>\hat{V} \psi = (E-\hat{H_0}) \psi<br>$$<br>两边同时乘以逆算符$(E-\hat{H_0})$，有<br>$$<br>(E-\hat{H_0})^{-1} \hat{V} \psi =  \psi<br>$$<br>此时我们可以定义零级近似哈密顿量$\hat{H_0}$所对应的Green函数为<br>$$<br>\hat{G}_0 = (E-\hat{H_0})^{-1}<br>$$<br>自然地，系统总哈密顿量$\hat{H}$所对应的Green函数可被定义为<br>$$<br>\hat{G} = (E-\hat{H})^{-1}<br>$$</p>
-<h1 id="Green函数与态密度的关系"><a href="#Green函数与态密度的关系" class="headerlink" title="Green函数与态密度的关系"></a>Green函数与态密度的关系</h1><p>量子物理/固体物理中，Green函数可以通过与态密度相联系，以诠释其物理意义. 态密度(Density of States, DOS)可被定义为<br>$$<br>\rho(E) = \sum_j \delta (E-E_j)<br>$$<br>上式可以直观地理解为，当能量$E_{j}$取值为$E$的时候，在该能量位置的电子数目加1. 如果有$N$个能量为$E$的电子，那么其Kronecker $\delta$全部取1，计数为$N$. 依次类推，就得到了电子数目$N$在能量$E$上的分布，这也就是态密度的定义. </p>
-<p>为了表达方便，接下来的表述都将采用Dirac符号. 由于同一个哈密顿量作用在不同的本征矢上会得到不同的本征能量，因此我们可以定义<br>$$<br>\hat{H} \psi_j = E_j \psi_j<br>$$<br>Green函数可以被看做一个算符. 其可以作用在态矢上得到<br>$$<br>&lt;\psi_j|G |\psi_j&gt; = &lt;\psi_j| (E-\hat{H})^{-1}|\psi_j&gt;<br>= (E-E_j)^{-1} &lt;\psi_j|\psi_j&gt;<br>$$<br>由基础态的正交性有<br>$$<br>&lt;\psi_i|\psi_j&gt; = \delta_{ij}<br>$$<br>于是<br>$$<br>&lt;\psi_j|G |\psi_j&gt; = (E-E_j)^{-1}<br>$$</p>
-<p>以上公式对j进行求和有<br>$$<br>\sum_j &lt;\psi_j|G |\psi_j&gt; = \sum_j (E-E_j)^{-1}<br>$$<br>在量子力学中，一个算符可以被用一个矩阵表示。上式可以认为是对该矩阵对角线元素求和（其他元素如$&lt;\psi_{1}|G|\psi_{2}&gt; $, $&lt;\psi_{3}|G|\psi_{2}&gt; $都不是对角线上的元素），即求矩阵的迹（Trace）. 于是上式也可以写成<br>$$<br>Tr G(E) = \sum_j(E-E_{j})^{-1}<br>$$<br>这时候对比上式与态密度的定义$\rho(E) = \sum_j \delta (E-E_j)$，已经可以发现Green函数和态密度之间可以存在联系，只不过相差了一个$\delta$函数. 接下来的工作就是要在Green函数中添加一个$\delta$函数. 为了避免分母为零，引入复数能量$E \rightarrow E+is$. 再令$\xi_{j}=E-E_{j}$，则上式可以写为<br>$$<br>\sum_j &lt;\psi_j|G |\psi_j&gt; = \sum_{j}(\xi_{j}+is)^{-1}<br>$$<br>由Plemelj公式[1]<br>$$<br>\sum_{j}(\xi_{j}+is)^{-1} = \sum_j \left[ P(\frac{1}{\epsilon}) - i \pi \delta(\xi_j) \right]<br>$$<br>我们所在意的仅仅是$\delta$函数部分，因此只取上述复数的虚部（Imaginary）应有<br>$$<br>Im\sum_{j}(\xi_{j}+is)^{-1} =  - \pi \sum_j \delta(\xi_j) = - \pi \sum_j \delta(E-E_j)<br>$$<br>回到态密度的定义，得到Green函数与态密度的关系如下<br>$$<br>Im \sum_j &lt;\psi_j|G |\psi_j&gt; = - \pi \rho(E)<br>$$<br>对单独的一个态a，可以有关系<br>$$<br>Im  &lt;a|G |a&gt; = - \pi \rho_a(E)<br>$$</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Davison S G, Sulston K W. Green-function theory of chemisorption[M]. Springer Science &amp; Business Media, 2006.</p>
+<h1 id="Green函数的定义"><a href="#Green函数的定义" class="headerlink" title="Green函数的定义"></a>Green函数的定义</h1><p>我们将系统看做一个微扰系统，即系统总哈密顿量$\hat{H}$为零级近似哈密顿量$\hat{H_0}$与微扰哈密顿量$\hat{V}$之和：</p>
+<script type="math/tex; mode=display">
+\hat{H} = \hat{H_0} + \hat{V}</script><p>那么可将其代入定态薛定谔方程$\hat{H} \psi = E \psi$中，有</p>
+<script type="math/tex; mode=display">
+(\hat{H_0} + \hat{V}) \psi = E \psi</script><p>移项整理后有</p>
+<script type="math/tex; mode=display">
+\hat{V} \psi = (E-\hat{H_0}) \psi</script><p>两边同时乘以逆算符$(E-\hat{H_0})$，有</p>
+<script type="math/tex; mode=display">
+(E-\hat{H_0})^{-1} \hat{V} \psi =  \psi</script><p>此时我们可以定义零级近似哈密顿量$\hat{H_0}$所对应的Green函数为</p>
+<script type="math/tex; mode=display">
+\hat{G}_0 = (E-\hat{H_0})^{-1}</script><p>自然地，系统总哈密顿量$\hat{H}$所对应的Green函数可被定义为</p>
+<script type="math/tex; mode=display">
+\hat{G} = (E-\hat{H})^{-1}</script><h1 id="Green函数与态密度的关系"><a href="#Green函数与态密度的关系" class="headerlink" title="Green函数与态密度的关系"></a>Green函数与态密度的关系</h1><p>量子物理/固体物理中，Green函数可以通过与态密度相联系，以诠释其物理意义. 态密度(Density of States, DOS)可被定义为</p>
+<script type="math/tex; mode=display">
+\rho(E) = \sum_j \delta (E-E_j)</script><p>上式可以直观地理解为，当能量$E_{j}$取值为$E$的时候，在该能量位置的电子数目加1. 如果有$N$个能量为$E$的电子，那么其Kronecker $\delta$全部取1，计数为$N$. 依次类推，就得到了电子数目$N$在能量$E$上的分布，这也就是态密度的定义. </p>
+<p>为了表达方便，接下来的表述都将采用Dirac符号. 由于同一个哈密顿量作用在不同的本征矢上会得到不同的本征能量，因此我们可以定义</p>
+<script type="math/tex; mode=display">
+\hat{H} \psi_j = E_j \psi_j</script><p>Green函数可以被看做一个算符. 其可以作用在态矢上得到</p>
+<script type="math/tex; mode=display">
+<\psi_j|G |\psi_j> = <\psi_j| (E-\hat{H})^{-1}|\psi_j> 
+= (E-E_j)^{-1} <\psi_j|\psi_j></script><p>由基础态的正交性有</p>
+<script type="math/tex; mode=display">
+<\psi_i|\psi_j> = \delta_{ij}</script><p>于是</p>
+<script type="math/tex; mode=display">
+<\psi_j|G |\psi_j> = (E-E_j)^{-1}</script><p>以上公式对j进行求和有</p>
+<script type="math/tex; mode=display">
+\sum_j <\psi_j|G |\psi_j> = \sum_j (E-E_j)^{-1}</script><p>在量子力学中，一个算符可以被用一个矩阵表示。上式可以认为是对该矩阵对角线元素求和（其他元素如$&lt;\psi_{1}|G|\psi_{2}&gt; $, $&lt;\psi_{3}|G|\psi_{2}&gt; $都不是对角线上的元素），即求矩阵的迹（Trace）. 于是上式也可以写成</p>
+<script type="math/tex; mode=display">
+Tr G(E) = \sum_j(E-E_{j})^{-1}</script><p>这时候对比上式与态密度的定义$\rho(E) = \sum_j \delta (E-E_j)$，已经可以发现Green函数和态密度之间可以存在联系，只不过相差了一个$\delta$函数. 接下来的工作就是要在Green函数中添加一个$\delta$函数. 为了避免分母为零，引入复数能量$E \rightarrow E+is$. 再令$\xi_{j}=E-E_{j}$，则上式可以写为</p>
+<script type="math/tex; mode=display">
+\sum_j <\psi_j|G |\psi_j> = \sum_{j}(\xi_{j}+is)^{-1}</script><p>由Plemelj公式[1]</p>
+<script type="math/tex; mode=display">
+\sum_{j}(\xi_{j}+is)^{-1} = \sum_j \left[ P(\frac{1}{\epsilon}) - i \pi \delta(\xi_j) \right]</script><p>我们所在意的仅仅是$\delta$函数部分，因此只取上述复数的虚部（Imaginary）应有</p>
+<script type="math/tex; mode=display">
+Im\sum_{j}(\xi_{j}+is)^{-1} =  - \pi \sum_j \delta(\xi_j) = - \pi \sum_j \delta(E-E_j)</script><p>回到态密度的定义，得到Green函数与态密度的关系如下</p>
+<script type="math/tex; mode=display">
+Im \sum_j <\psi_j|G |\psi_j> = - \pi \rho(E)</script><p>对单独的一个态a，可以有关系</p>
+<script type="math/tex; mode=display">
+Im  <a|G |a> = - \pi \rho_a(E)</script><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Davison S G, Sulston K W. Green-function theory of chemisorption[M]. Springer Science &amp; Business Media, 2006.</p>
 
     </div>
 
@@ -302,7 +338,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/blog/zh/tags/Physics-%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> Physics  物理</a>
+              <a href="/tags/Physics-%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> Physics  物理</a>
           </div>
 
         
@@ -311,11 +347,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/zh/2017/12/28/CATAlecturenote3/" rel="prev" title="课后回顾 | 吸附动力学">
+    <a href="/2017/12/28/CATAlecturenote3/" rel="prev" title="课后回顾 | 吸附动力学">
       <i class="fa fa-chevron-left"></i> 课后回顾 | 吸附动力学
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/zh/2018/01/16/DeltaFunction/" rel="next" title="Something About Dirac and Kronecker Delta Function">
+    <a href="/2018/01/16/DeltaFunction/" rel="next" title="Something About Dirac and Kronecker Delta Function">
       Something About Dirac and Kronecker Delta Function <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -385,27 +421,27 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Geon Mo"
-      src="/blog/zh/images/avatar.jpg">
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Geon Mo</p>
   <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/blog/zh/archives/">
+          <a href="/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/blog/zh/categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/blog/zh/tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
@@ -415,6 +451,9 @@
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -499,21 +538,21 @@
   </div>
 
   
-  <script src="/blog/zh/lib/anime.min.js"></script>
-  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/blog/zh/js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="/blog/zh/js/motion.js"></script>
-
-
-<script src="/blog/zh/js/schemes/muse.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="/blog/zh/js/next-boot.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
-<script src="/blog/zh/js/bookmark.js"></script>
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
 
 
 
@@ -533,7 +572,7 @@
 
 
   
-<script src="/blog/zh/js/local-search.js"></script>
+<script src="/js/local-search.js"></script>
 
 
 

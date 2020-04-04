@@ -6,22 +6,22 @@
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
 
-<link rel="stylesheet" href="/blog/zh/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/blog/zh/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mozheyang.top","root":"/blog/zh/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-$$一种是二电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2$$">
+  <meta name="description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论">
 <meta property="og:url" content="http://mozheyang.top/2019/03/31/LSV-KLeq/index.html">
 <meta property="og:site_name" content="Mo&#39;s Blog | 摸着羊的个人博客">
-<meta property="og:description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-$$一种是二电子过程：$$\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2$$">
+<meta property="og:description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2">
 <meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
 <meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/RDEcoordinate.png">
 <meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/GammaFunc.png">
@@ -79,6 +79,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="Mo's Blog | 摸着羊的个人博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -98,7 +99,7 @@
   <div class="site-meta">
 
     <div>
-      <a href="/blog/zh/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Mo's Blog | 摸着羊的个人博客</span>
         <span class="logo-line-after"><i></i></span>
@@ -120,27 +121,27 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/blog/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/blog/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/blog/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/blog/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -204,7 +205,7 @@
     <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2019/03/31/LSV-KLeq/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/zh/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Geon Mo">
       <meta itemprop="description" content="SciGeek | 一个有科学思维的GEEK">
     </span>
@@ -239,7 +240,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/zh/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">Electrochemistry  电化学</span></a>
+                  <a href="/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">Electrochemistry  电化学</span></a>
                 </span>
             </span>
 
@@ -259,8 +260,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/blog/zh/2019/03/31/LSV-KLeq/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/blog/zh/2019/03/31/LSV-KLeq/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/03/31/LSV-KLeq/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/03/31/LSV-KLeq/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -275,9 +276,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：<br>$$<br>\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- = 4\text{OH}^-<br>$$<br>一种是二电子过程：<br>$$<br>\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2<br>$$</p>
-<a id="more"></a>
-
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：</p>
+<script type="math/tex; mode=display">
+\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- = 4\text{OH}^-</script><p>一种是二电子过程：</p>
+<script type="math/tex; mode=display">
+\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2</script><a id="more"></a>
 <p><strong>四电子过程</strong>可以保证在更短的时间内提供更大的电流，即四电子过程可以保证更大的电池（fuel cell/metal-air batteries）功率。氧还原反应的电化学性能测试常使用基于K-L方程的旋转圆盘电极（RDE）方法对反应转移电子数进行测算。</p>
 <p><img src="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p>
 <p class="refs">Ref: 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p>
@@ -287,44 +290,82 @@
 <p><img src="http://mozheyang.top/images/LSV_KLeq/RDEcoordinate.png" alt=""></p>
 <p class="refs">Ref: Bard et al., Electrochemical Methods: Fundamentals and Applications; wiley New York, 1980; Vol. 2.</p>
 
-<p>定义液流速度<br>$$<br>\vec{v} = (v_r, v_\phi, v_z)<br>$$</p>
-<p>已知：</p>
+<p>定义液流速度</p>
+<script type="math/tex; mode=display">
+\vec{v} = (v_r, v_\phi, v_z)</script><p>已知：</p>
 <ul>
 <li><strong>圆盘表面</strong>液体流速满足$v_r=0, v_phi=0, v_y=\omega r$.</li>
 <li><strong>本体溶液</strong>液体流速满足$v_r=0, v_phi=0, v_y=-U_0$.</li>
 </ul>
-<p>由<strong>稳态</strong>下的纳维-斯托克斯方程（Navier–Stokes equations）可描述<strong>柱坐标</strong>下不同方向液体流速之间的关系<br>$$<br>v_r + r \frac{\partial v_r}{\partial r} + r\frac{\partial v_z}{\partial z} = 0 \</p>
-<p>v_r \frac{\partial v_r}{\partial r} - \frac{v_\phi^2}{r} </p>
-<ul>
-<li>v_z \frac{\partial v_r}{\partial z}<br>= -\frac{1}{\rho} \frac{\partial p}{\partial r} + v_\phi<br>\left[<br>\frac{\partial^2 v_r}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_r}{r})</li>
-<li>\frac{\partial^2 v_r}{\partial z^2}<br>\right] \</li>
-</ul>
-<p>v_r \frac{\partial v_\phi}{\partial r} - \frac{v_r v_\phi}{r} </p>
-<ul>
-<li>v_z \frac{\partial v_\phi}{\partial z}<br>= v_\phi<br>\left[<br>\frac{\partial^2 v_\phi}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_\phi}{r})</li>
-<li>\frac{\partial^2 v_\phi}{\partial z^2}<br>\right] \</li>
-</ul>
-<p>v_r \frac{\partial v_z}{\partial r} + v_z \frac{\partial v_z}{\partial z}<br>= -\frac{1}{\rho} \frac{\partial p}{\partial z} + v_\phi \left[<br>\frac{\partial^2 v_z}{\partial r^2} + \frac{1}{r} \frac{\partial v_z}{\partial r}</p>
-<ul>
-<li>\frac{\partial^2 v_z}{\partial z^2} \right] \<br>$$</li>
-</ul>
-<p class="refs">Ref: Real-Ramirez, C. A., & Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen. </p>
+<p>由<strong>稳态</strong>下的纳维-斯托克斯方程（Navier–Stokes equations）可描述<strong>柱坐标</strong>下不同方向液体流速之间的关系</p>
+<script type="math/tex; mode=display">
+v_r + r \frac{\partial v_r}{\partial r} + r\frac{\partial v_z}{\partial z} = 0 \\
 
-<p>von Karman在1921年提出以独立无量纲变量来描述各方向速度值，可以满足N-S方程的限制条件，即<br>$$<br>\gamma = (\frac{\omega}{\mu})^{1/2} z<br>$$<br>其中$\omega$为圆盘转速，$\mu$为液体粘度. 此时定义<br>$$<br>F(\gamma) = \frac{v_r}{r \omega}, G(\gamma) = \frac{v_\phi}{r \omega},<br>H(\gamma) = \frac{v_z}{\sqrt{\omega \mu}}<br>\quad and \quad P(\gamma) = \frac{p}{\rho \mu \omega}<br>$$<br>可将N-S方程简化为<br>$$<br>2F + H’ = 0 \<br>F’’ - HF’ - F^2 + G^2 = 0 \<br>G’’ - HG’ - 2FG = 0 \<br>H’’ - HH’ - P’ = 0<br>$$<br>其边界条件为<br>$$<br>H = F = P = 0, G = 1 \quad at \quad z = 0 \<br>and \quad F = G = 0 \quad at \quad z = \infty \<br>$$</p>
-<p class="refs">Ref: von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486. </p>
+v_r \frac{\partial v_r}{\partial r} - \frac{v_\phi^2}{r} 
++ v_z \frac{\partial v_r}{\partial z} 
+= -\frac{1}{\rho} \frac{\partial p}{\partial r} + v_\phi 
+\left[ 
+\frac{\partial^2 v_r}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_r}{r})
++ \frac{\partial^2 v_r}{\partial z^2} 
+\right] \\
 
-<p>Chochran在1934年提出使用无穷级数方法近似表示$F, G, H$三个函数。在离电极表面较近处，即$z$较小时，$\gamma &lt;&lt; 1$，此时各方向速度值可表示为<br>$$<br>v_r = r \omega F(\gamma)<br>= r \omega (a \gamma - \frac{\gamma^2}{2} - \frac{b \gamma^3}{3} + \cdots) \<br>v_\phi = r \omega G(\gamma)<br>= r \omega (1 + b \gamma + \frac{a \gamma^2}{3} + \cdots) \<br>v_z =(\omega \mu)^{1/2} H(\gamma)<br>= (\omega \mu)^{1/2} (-\alpha \gamma + \frac{\gamma^3}{3} + \frac{b \gamma^4}{6} + \cdots)<br>$$<br>其中，$a=0.51026$，$b=-0.6159$。</p>
+v_r \frac{\partial v_\phi}{\partial r} - \frac{v_r v_\phi}{r} 
++ v_z \frac{\partial v_\phi}{\partial z} 
+= v_\phi 
+\left[ 
+\frac{\partial^2 v_\phi}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_\phi}{r})
++ \frac{\partial^2 v_\phi}{\partial z^2} 
+\right] \\
+
+v_r \frac{\partial v_z}{\partial r} + v_z \frac{\partial v_z}{\partial z} 
+= -\frac{1}{\rho} \frac{\partial p}{\partial z} + v_\phi \left[ 
+\frac{\partial^2 v_z}{\partial r^2} + \frac{1}{r} \frac{\partial v_z}{\partial r}
++ \frac{\partial^2 v_z}{\partial z^2} \right] \\</script><p class="refs">Ref: Real-Ramirez, C. A., & Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen. </p>
+
+<p>von Karman在1921年提出以独立无量纲变量来描述各方向速度值，可以满足N-S方程的限制条件，即</p>
+<script type="math/tex; mode=display">
+\gamma = (\frac{\omega}{\mu})^{1/2} z</script><p>其中$\omega$为圆盘转速，$\mu$为液体粘度. 此时定义</p>
+<script type="math/tex; mode=display">
+F(\gamma) = \frac{v_r}{r \omega}, G(\gamma) = \frac{v_\phi}{r \omega}, 
+H(\gamma) = \frac{v_z}{\sqrt{\omega \mu}}
+\quad and \quad P(\gamma) = \frac{p}{\rho \mu \omega}</script><p>可将N-S方程简化为</p>
+<script type="math/tex; mode=display">
+2F + H' = 0 \\
+F'' - HF' - F^2 + G^2 = 0 \\
+G'' - HG' - 2FG = 0 \\
+H'' - HH' - P' = 0</script><p>其边界条件为</p>
+<script type="math/tex; mode=display">
+H = F = P = 0, G = 1 \quad at \quad z = 0 \\
+and \quad F = G = 0 \quad at \quad z = \infty \\</script><p class="refs">Ref: von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486. </p>
+
+<p>Chochran在1934年提出使用无穷级数方法近似表示$F, G, H$三个函数。在离电极表面较近处，即$z$较小时，$\gamma &lt;&lt; 1$，此时各方向速度值可表示为</p>
+<script type="math/tex; mode=display">
+v_r = r \omega F(\gamma)
+= r \omega (a \gamma - \frac{\gamma^2}{2} - \frac{b \gamma^3}{3} + \cdots) \\
+v_\phi = r \omega G(\gamma)
+= r \omega (1 + b \gamma + \frac{a \gamma^2}{3} + \cdots) \\
+v_z =(\omega \mu)^{1/2} H(\gamma)
+= (\omega \mu)^{1/2} (-\alpha \gamma + \frac{\gamma^3}{3} + \frac{b \gamma^4}{6} + \cdots)</script><p>其中，$a=0.51026$，$b=-0.6159$。</p>
 <p class="refs">Ref: Cochran, W. G. (1934). The flow due to a rotating disc. Proceedings of the Cambridge Philosophical Society, 30, 365-375. </p>
 
-<p>在圆盘表面$z \rightarrow 0$，即$\gamma \rightarrow 0$，可以获得速度值表达式<br>$$<br>v_r = r \omega (a \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} r z \<br>v_z = (\omega \mu)^{1/2} (-\alpha \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} z^2<br>$$</p>
-<h1 id="RDE法向的物质对流及扩散"><a href="#RDE法向的物质对流及扩散" class="headerlink" title="RDE法向的物质对流及扩散"></a>RDE法向的物质对流及扩散</h1><p>柱坐标下的反应物的对流-扩散方程可以写为<br>$$<br>v_r (\frac{\partial C_o}{\partial r}) </p>
-<ul>
-<li>\frac{v_\phi}{r} (\frac{\partial C_o}{\partial \phi})</li>
-<li>v_z (\frac{\partial C_o}{\partial z})<br>= D_o [\frac{\partial^2 C_o}{\partial z^2}</li>
-<li>\frac{\partial^2 C_o}{\partial r^2}</li>
-<li>\frac{1}{r} (\frac{\partial C_o}{\partial r}) </li>
-<li>\frac{1}{r^2}\frac{\partial^2 C_o}{\partial \phi^2}]<br>$$<br>由于反应物浓度相对于RDE轴对称，即反应物浓度在$\phi$方向无差别，所以有<br>$$<br>\frac{\partial C_o}{\partial \phi}<br>= \frac{\partial^2 C_o}{\partial \phi^2} = 0<br>$$<br>在RDE表面径向上，在$0 \leq r \leq r_{disk}$，反应物浓度无差别，有<br>$$<br>\frac{\partial C_o}{\partial r}<br>= \frac{\partial^2 C_o}{\partial r^2} = 0<br>$$<br>因此可将反应物物质对流-扩散方程简化为</li>
-</ul>
+<p>在圆盘表面$z \rightarrow 0$，即$\gamma \rightarrow 0$，可以获得速度值表达式</p>
+<script type="math/tex; mode=display">
+v_r = r \omega (a \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} r z \\
+v_z = (\omega \mu)^{1/2} (-\alpha \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} z^2</script><h1 id="RDE法向的物质对流及扩散"><a href="#RDE法向的物质对流及扩散" class="headerlink" title="RDE法向的物质对流及扩散"></a>RDE法向的物质对流及扩散</h1><p>柱坐标下的反应物的对流-扩散方程可以写为</p>
+<script type="math/tex; mode=display">
+v_r (\frac{\partial C_o}{\partial r}) 
++ \frac{v_\phi}{r} (\frac{\partial C_o}{\partial \phi})
++ v_z (\frac{\partial C_o}{\partial z})
+= D_o [\frac{\partial^2 C_o}{\partial z^2}
++ \frac{\partial^2 C_o}{\partial r^2}
++ \frac{1}{r} (\frac{\partial C_o}{\partial r}) 
++ \frac{1}{r^2}\frac{\partial^2 C_o}{\partial \phi^2}]</script><p>由于反应物浓度相对于RDE轴对称，即反应物浓度在$\phi$方向无差别，所以有</p>
+<script type="math/tex; mode=display">
+\frac{\partial C_o}{\partial \phi}
+= \frac{\partial^2 C_o}{\partial \phi^2} = 0</script><p>在RDE表面径向上，在$0 \leq r \leq r_{disk}$，反应物浓度无差别，有</p>
+<script type="math/tex; mode=display">
+\frac{\partial C_o}{\partial r}
+= \frac{\partial^2 C_o}{\partial r^2} = 0</script><p>因此可将反应物物质对流-扩散方程简化为</p>
 <center><p class="eqnBlock">
 $$
 v_z (\frac{\partial C_o}{\partial z})
@@ -332,10 +373,32 @@ v_z (\frac{\partial C_o}{\partial z})
 $$
 </p></center>
 
-<p>将$v_z= -0.51 \omega^{2/3} v^{-1/2} z^2$代入上式得<br>$$<br>\frac{\partial^2 C_o}{\partial z^2} = - \frac{z^2}{B} \frac{\partial C_o}{\partial z}<br>$$<br>其中，$B = \frac{D_o \omega^{-3/2} v^{-1/2}}{0.51}$. 接下来的任务就是对该偏微分方程进行积分处理，尝试求解。可以先令$X = \frac{\partial C_o}{\partial z}$，有<br>$$<br>\frac{\partial X}{\partial z} = - \frac{z^2}{B} X<br>$$<br>两边积分可解得<br>$$<br>\frac{X}{X_0} = \exp(-\frac{z^3}{3B})<br>$$<br>再将$X = \frac{\partial C_o}{\partial z}$带回，有<br>$$<br>\frac{\partial C_o}{\partial z} = (\frac{\partial C_o}{\partial z})_{z=0}<br>\exp(-\frac{z^3}{3B})<br>$$<br>这时候即将对该式进行二次积分。但是该次积分积分限的选取具有不同的物理意义。一种情形是电极表面的反应动力学很快，反应物一到电极表面就转化为产物，电极表面反应物浓度为零的情形。这种情况下，电流仅受到物质扩散传质的限制，我们称之为“<strong>极限电流情形</strong>”。另一种情形是电极表面的反应动力学没有那么快，电极表面反应物浓度不为零的情形，我们称之为“<strong>非极限电流情形</strong>”。接下来我们就来讨论分别描述这两种情形的<strong>Levich方程</strong>和<strong>Koutecky-Levich方程</strong>。</p>
-<h2 id="极限电流情形"><a href="#极限电流情形" class="headerlink" title="极限电流情形"></a>极限电流情形</h2><p>在<strong>极限电流</strong>情形下，电极表面反应物浓度<strong>为零</strong>，则<br>$$<br>\int_0^{C_o^*} dC_o = (\frac{\partial C_o}{\partial z})_{z=0}<br>\int_0^\infty \exp(-\frac{z^3}{3B}) dz<br>$$<br>有定积分<br>$$<br>\exp(a z^3) dz = (-a)^{1/3} \Gamma(\frac{4}{3}) = 0.8934(-a)^{1/3}<br>$$<br>其中$\Gamma$函数为<br>$$<br>\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt<br>$$<br>其在[0,3]区间的函数图像如下</p>
+<p>将$v_z= -0.51 \omega^{2/3} v^{-1/2} z^2$代入上式得</p>
+<script type="math/tex; mode=display">
+\frac{\partial^2 C_o}{\partial z^2} = - \frac{z^2}{B} \frac{\partial C_o}{\partial z}</script><p>其中，$B = \frac{D_o \omega^{-3/2} v^{-1/2}}{0.51}$. 接下来的任务就是对该偏微分方程进行积分处理，尝试求解。可以先令$X = \frac{\partial C_o}{\partial z}$，有</p>
+<script type="math/tex; mode=display">
+\frac{\partial X}{\partial z} = - \frac{z^2}{B} X</script><p>两边积分可解得</p>
+<script type="math/tex; mode=display">
+\frac{X}{X_0} = \exp(-\frac{z^3}{3B})</script><p>再将$X = \frac{\partial C_o}{\partial z}$带回，有</p>
+<script type="math/tex; mode=display">
+\frac{\partial C_o}{\partial z} = (\frac{\partial C_o}{\partial z})_{z=0} 
+\exp(-\frac{z^3}{3B})</script><p>这时候即将对该式进行二次积分。但是该次积分积分限的选取具有不同的物理意义。一种情形是电极表面的反应动力学很快，反应物一到电极表面就转化为产物，电极表面反应物浓度为零的情形。这种情况下，电流仅受到物质扩散传质的限制，我们称之为“<strong>极限电流情形</strong>”。另一种情形是电极表面的反应动力学没有那么快，电极表面反应物浓度不为零的情形，我们称之为“<strong>非极限电流情形</strong>”。接下来我们就来讨论分别描述这两种情形的<strong>Levich方程</strong>和<strong>Koutecky-Levich方程</strong>。</p>
+<h2 id="极限电流情形"><a href="#极限电流情形" class="headerlink" title="极限电流情形"></a>极限电流情形</h2><p>在<strong>极限电流</strong>情形下，电极表面反应物浓度<strong>为零</strong>，则</p>
+<script type="math/tex; mode=display">
+\int_0^{C_o^*} dC_o = (\frac{\partial C_o}{\partial z})_{z=0} 
+\int_0^\infty \exp(-\frac{z^3}{3B}) dz</script><p>有定积分</p>
+<script type="math/tex; mode=display">
+\exp(a z^3) dz = (-a)^{1/3} \Gamma(\frac{4}{3}) = 0.8934(-a)^{1/3}</script><p>其中$\Gamma$函数为</p>
+<script type="math/tex; mode=display">
+\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt</script><p>其在[0,3]区间的函数图像如下</p>
 <p><img src="http://mozheyang.top/images/LSV_KLeq/GammaFunc.png" alt=""></p>
-<p>故<br>$$<br>C_o^* = (\frac{\partial C_o}{\partial z})<em>{z=0} 0.8934(3B)^{1/3}<br>= (\frac{\partial C_o}{\partial z})</em>{z=0}<br>0.8934(\frac{3D_o \omega^{-3/2} \mu^{1/2}}{0.51})^{1/3}<br>$$<br>又因为电流与电极表面的物质流量相关，由法拉第定律可得<br>$$<br>i = nFAD_o (\frac{\partial C_o}{\partial z})_{z=0}<br>$$<br>与上式联立可得Levich方程</p>
+<p>故</p>
+<script type="math/tex; mode=display">
+C_o^* = (\frac{\partial C_o}{\partial z})_{z=0} 0.8934(3B)^{1/3}
+= (\frac{\partial C_o}{\partial z})_{z=0} 
+0.8934(\frac{3D_o \omega^{-3/2} \mu^{1/2}}{0.51})^{1/3}</script><p>又因为电流与电极表面的物质流量相关，由法拉第定律可得</p>
+<script type="math/tex; mode=display">
+i = nFAD_o (\frac{\partial C_o}{\partial z})_{z=0}</script><p>与上式联立可得Levich方程</p>
 <center><p class="eqnBlock">
 $$
 i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*
@@ -344,7 +407,21 @@ $$
 
 
 <p>从上式我们已经可以知道，对特定电极反应（转移电子数n不变），<strong>极限扩散电流是旋转圆盘转速的函数</strong>——因为法拉第常数$F$、电极面积$A$、圆盘尺寸、电解液中反应物扩散系数$D$、电解液粘度$\mu$和电解液浓度$C_o^*$都是恒定的。对不同材料，氧还原所经历路径不同，也就可能导致电极表面的电极反应不同，会反应在转移电子数上，从而导致极限扩散电流的不同。因此，本文的结论就是，在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</p>
-<h2 id="非极限电流情形"><a href="#非极限电流情形" class="headerlink" title="非极限电流情形"></a>非极限电流情形</h2><p>在<strong>非极限电流</strong>情形下，电极表面反应物浓度<strong>不为零</strong>，则<br>$$<br>\int_{C_o(z=0)}^{C_o^<em>} dC_o = C_o^</em> - C_o(z=0)<br>= (\frac{\partial C_o}{\partial z})_{z=0}<br>\int_0^\infty \exp(-\frac{z^3}{3B}) dz<br>$$<br>且$C_o(z=0) \neq 0$. 同极限电流情形进行积分可得<br>$$<br>i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} [C_o^* - C_o(z=0)]<br>$$<br>由Levich方程可得<br>$$<br>i = i_l [\frac{C_o^* - C_o(z=0)}{C_o^<em>}]<br>$$<br>对单步骤完全不可逆反应过程有<br>$$<br>i = nFAk_f(E)C_o(z=0)<br>$$<br>其中反应速率常数$k_f(E) = k_0 \exp[-\alpha f(E-E^\Theta)]$可由反应动力学B-V方程导出。那么该式与上式联立可得<br>$$<br>i = nFAk_f(E) C_o^</em>(1-\frac{i}{i_l})<br>$$<br>可以定义<br>$$<br>i_k = nFAk_f(E)C_o^*<br>$$<br>那么便有Koutecky-Levich方程</p>
+<h2 id="非极限电流情形"><a href="#非极限电流情形" class="headerlink" title="非极限电流情形"></a>非极限电流情形</h2><p>在<strong>非极限电流</strong>情形下，电极表面反应物浓度<strong>不为零</strong>，则</p>
+<script type="math/tex; mode=display">
+\int_{C_o(z=0)}^{C_o^*} dC_o = C_o^* - C_o(z=0)
+= (\frac{\partial C_o}{\partial z})_{z=0} 
+\int_0^\infty \exp(-\frac{z^3}{3B}) dz</script><p>且$C_o(z=0) \neq 0$. 同极限电流情形进行积分可得</p>
+<script type="math/tex; mode=display">
+i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} [C_o^* - C_o(z=0)]</script><p>由Levich方程可得</p>
+<script type="math/tex; mode=display">
+i = i_l [\frac{C_o^* - C_o(z=0)}{C_o^*}]</script><p>对单步骤完全不可逆反应过程有</p>
+<script type="math/tex; mode=display">
+i = nFAk_f(E)C_o(z=0)</script><p>其中反应速率常数$k_f(E) = k_0 \exp[-\alpha f(E-E^\Theta)]$可由反应动力学B-V方程导出。那么该式与上式联立可得</p>
+<script type="math/tex; mode=display">
+i = nFAk_f(E) C_o^*(1-\frac{i}{i_l})</script><p>可以定义</p>
+<script type="math/tex; mode=display">
+i_k = nFAk_f(E)C_o^*</script><p>那么便有Koutecky-Levich方程</p>
 <center><p class="eqnBlock">
 $$
 \frac{1}{i} = \frac{1}{i_k} + \frac{1}{i_l} = \frac{1}{i_k} + \frac{1}{0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*}
@@ -358,12 +435,9 @@ $$
 <p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="http://mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
 <h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>总结本文得到的结论：</p>
 <ul>
-<li><p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</p>
-</li>
-<li><p>在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</p>
-</li>
-<li><p>负载量可能会<strong>通过活性位点暴露</strong>的角度对极限扩散电流产生影响。但在一定范围内，其影响可能是不大的。</p>
-</li>
+<li>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</li>
+<li>在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</li>
+<li>负载量可能会<strong>通过活性位点暴露</strong>的角度对极限扩散电流产生影响。但在一定范围内，其影响可能是不大的。</li>
 <li><p>在ORR测试中，需要通过K-L方程计算不同偏压下的转移电子数。这时候一定要注意各数值的<strong>量纲</strong>问题！在转速使用“rpm”（Revolutions Per Minute，圈/分）时，<strong>常数取“0.2”</strong>，[5] 即使用公式：$i_l = 0.2 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$；在转速使用“rad/s”（Radian Per Second，弧度/秒）时，<strong>常数取“0.62”</strong>，[6] 即使用公式：$i_l = 0.62 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$（如果纵坐标已经取电流密度，记得将等式右边的A略掉）。 </p>
 </li>
 <li><p>ORR计算常用物理常数：法拉第常数$F=96485 C mol^{-1}$，氧气在电解液中的饱和浓度$C_o = 1.2 \times 10^{-3} mol L^{-1}$，氧气在KOH溶液中的扩散系数$D_o = 1.9 \times 10^{-5} cm s^{-1}$，电解液粘度$\mu = 0.01 cm^2 s^{-1}$. </p>
@@ -403,10 +477,10 @@ $$
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/blog/zh/tags/Chemistry-%E5%8C%96%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> Chemistry  化学</a>
-              <a href="/blog/zh/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
-              <a href="/blog/zh/tags/Catalysis-%E5%82%AC%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i> Catalysis  催化</a>
-              <a href="/blog/zh/tags/Model-%E6%A8%A1%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> Model  模型</a>
+              <a href="/tags/Chemistry-%E5%8C%96%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> Chemistry  化学</a>
+              <a href="/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
+              <a href="/tags/Catalysis-%E5%82%AC%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i> Catalysis  催化</a>
+              <a href="/tags/Model-%E6%A8%A1%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> Model  模型</a>
           </div>
 
         
@@ -415,11 +489,11 @@ $$
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/zh/2019/03/19/BulkMetal2SAC/" rel="prev" title="块体金属变成单个原子？ | 单原子催化剂的大规模制备">
+    <a href="/2019/03/19/BulkMetal2SAC/" rel="prev" title="块体金属变成单个原子？ | 单原子催化剂的大规模制备">
       <i class="fa fa-chevron-left"></i> 块体金属变成单个原子？ | 单原子催化剂的大规模制备
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/zh/2019/06/16/ORRresearch2industry/" rel="next" title="从学术到工业 | 氧还原反应中的性能指标与实际燃料电池应用有何关系？">
+    <a href="/2019/06/16/ORRresearch2industry/" rel="next" title="从学术到工业 | 氧还原反应中的性能指标与实际燃料电池应用有何关系？">
       从学术到工业 | 氧还原反应中的性能指标与实际燃料电池应用有何关系？ <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -489,27 +563,27 @@ $$
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Geon Mo"
-      src="/blog/zh/images/avatar.jpg">
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Geon Mo</p>
   <div class="site-description" itemprop="description">SciGeek | 一个有科学思维的GEEK</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/blog/zh/archives/">
+          <a href="/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/blog/zh/categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/blog/zh/tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
@@ -519,6 +593,9 @@ $$
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -603,21 +680,21 @@ $$
   </div>
 
   
-  <script src="/blog/zh/lib/anime.min.js"></script>
-  <script src="/blog/zh/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/zh/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/blog/zh/js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="/blog/zh/js/motion.js"></script>
-
-
-<script src="/blog/zh/js/schemes/muse.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="/blog/zh/js/next-boot.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
-<script src="/blog/zh/js/bookmark.js"></script>
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
 
 
 
@@ -637,7 +714,7 @@ $$
 
 
   
-<script src="/blog/zh/js/local-search.js"></script>
+<script src="/js/local-search.js"></script>
 
 
 
