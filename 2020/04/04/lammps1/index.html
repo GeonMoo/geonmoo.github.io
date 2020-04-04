@@ -16,23 +16,26 @@
     var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="最后更新时间：2018年2月25日 由于笔者目前只使用iPad，因此此处只进行iPad软件的推荐。敬请期待IOS的其它硬件平台软件的更新。欢迎讨论交流！Email: mozheyang@outlook.com">
+  <meta name="description" content="对“分子动力学”的认识最初来自于本科时的《计算材料学》课程。那时候就听说有个叫做LAMMPS的开源软件，可以实现分子动力学模拟。但是苦于安装困难，并没有继续深究。作为一个GEEK（极客），没有深究这件事一直让我过意不去。 好在，时过境迁。今天的LAMMPS早已不是过去的LAMMPS，行云流水的安装进度让人止不住地鼓掌叫好。那么，究竟有多简单？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="值得推荐 | Awesome IOS Software">
-<meta property="og:url" content="http://mozheyang.top/2018/02/25/awesomeIOSapp/index.html">
+<meta property="og:title" content="计算材料外行的LAMMPS学习札记（一）——安装篇">
+<meta property="og:url" content="http://mozheyang.top/2020/04/04/lammps1/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
-<meta property="og:description" content="最后更新时间：2018年2月25日 由于笔者目前只使用iPad，因此此处只进行iPad软件的推荐。敬请期待IOS的其它硬件平台软件的更新。欢迎讨论交流！Email: mozheyang@outlook.com">
-<meta property="og:image" content="http://mozheyang.top/images/awesomeIOS/marginnote.png">
-<meta property="og:image" content="http://mozheyang.top/images/awesomeIOS/wordflex.png">
-<meta property="article:published_time" content="2018-02-24T16:01:53.000Z">
-<meta property="article:modified_time" content="2020-02-02T07:52:32.000Z">
+<meta property="og:description" content="对“分子动力学”的认识最初来自于本科时的《计算材料学》课程。那时候就听说有个叫做LAMMPS的开源软件，可以实现分子动力学模拟。但是苦于安装困难，并没有继续深究。作为一个GEEK（极客），没有深究这件事一直让我过意不去。 好在，时过境迁。今天的LAMMPS早已不是过去的LAMMPS，行云流水的安装进度让人止不住地鼓掌叫好。那么，究竟有多简单？">
+<meta property="og:image" content="https://lammps.sandia.gov/movies/logo.gif">
+<meta property="og:image" content="e:/Personal/Desktop/LAMMPS/download.png">
+<meta property="og:image" content="e:/Personal/Desktop/LAMMPS/folder.png">
+<meta property="og:image" content="e:/Personal/Desktop/LAMMPS/powershell.png">
+<meta property="og:image" content="e:/Personal/Desktop/LAMMPS/running.png">
+<meta property="article:published_time" content="2020-04-04T10:38:18.000Z">
+<meta property="article:modified_time" content="2020-04-04T10:41:47.189Z">
 <meta property="article:author" content="Geon Mo">
-<meta property="article:tag" content="Updating  持续更新中...">
-<meta property="article:tag" content="Resources  资源">
+<meta property="article:tag" content="Information Science &amp; Technology  信息科学与技术">
+<meta property="article:tag" content="Material  材料">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mozheyang.top/images/awesomeIOS/marginnote.png">
+<meta name="twitter:image" content="https://lammps.sandia.gov/movies/logo.gif">
 
-<link rel="canonical" href="http://mozheyang.top/2018/02/25/awesomeIOSapp/">
+<link rel="canonical" href="http://mozheyang.top/2020/04/04/lammps1/">
 
 
 <script id="page-configurations">
@@ -44,7 +47,7 @@
   };
 </script>
 
-  <title>值得推荐 | Awesome IOS Software | Mo's Notebook | 摸着羊的笔记本</title>
+  <title>计算材料外行的LAMMPS学习札记（一）——安装篇 | Mo's Notebook | 摸着羊的笔记本</title>
   
 
 
@@ -198,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2018/02/25/awesomeIOSapp/">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2020/04/04/lammps1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -211,7 +214,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          值得推荐 | Awesome IOS Software
+          计算材料外行的LAMMPS学习札记（一）——安装篇
         </h1>
 
         <div class="post-meta">
@@ -220,24 +223,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2018-02-25 00:01:53" itemprop="dateCreated datePublished" datetime="2018-02-25T00:01:53+08:00">2018-02-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-02 15:52:32" itemprop="dateModified" datetime="2020-02-02T15:52:32+08:00">2020-02-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Treasure-%E7%A7%81%E5%AE%B6%E7%8F%8D%E8%97%8F/" itemprop="url" rel="index"><span itemprop="name">Treasure  私家珍藏</span></a>
-                </span>
+              <time title="创建时间：2020-04-04 18:38:18 / 修改时间：18:41:47" itemprop="dateCreated datePublished" datetime="2020-04-04T18:38:18+08:00">2020-04-04</time>
             </span>
 
           
@@ -256,8 +244,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/02/25/awesomeIOSapp/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/02/25/awesomeIOSapp/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/04/lammps1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/lammps1/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -272,22 +260,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>最后更新时间：2018年2月25日</p>
-<p>由于笔者目前只使用iPad，因此此处只进行iPad软件的推荐。敬请期待IOS的其它硬件平台软件的更新。欢迎讨论交流！Email: mozheyang@outlook.com</p>
+        <p><img src="https://lammps.sandia.gov/movies/logo.gif" alt=""></p>
+<p>对“分子动力学”的认识最初来自于本科时的《计算材料学》课程。那时候就听说有个叫做LAMMPS的开源软件，可以实现分子动力学模拟。但是苦于安装困难，并没有继续深究。作为一个GEEK（极客），没有深究这件事一直让我过意不去。</p>
+<p>好在，时过境迁。今天的LAMMPS早已不是过去的LAMMPS，<strong>行云流水的安装进度</strong>让人止不住地鼓掌叫好。那么，究竟有多简单？</p>
 <a id="more"></a>
-<p>iPad除了可以是一个娱乐工具，同时也可以成为我们学生党、磕盐汪忠实而有效的学习工具、效率工具。今天笔者就给大家推荐两款付费App…买了一直用，真真是真爱！</p>
-<h1 id="MarginNote"><a href="#MarginNote" class="headerlink" title="MarginNote"></a>MarginNote</h1><p>在浮躁的社会，我们拿起电子产品就想要刷社交软件和游戏。就算是想要认真读上一篇文章，却也总会觉得电子产品显示区域的不足的缺点，难以给我们的思想提供任意翱翔的场所。</p>
-<p><strong>思维导图</strong>是深入理解知识结构的利器。笔者第一次了解到思维导图这种思维工具是在大学读了东尼.伯赞（Buzan T.）的思维导图系列丛书之后了。现已经有了不少思维导图构造软件如Xmind、MindManager，网页App中也有百度脑图等可以推荐。</p>
-<p>但上述构造思维导图的方式都<strong>滞后</strong>于阅读。也就是说，我们需要先阅读，甚至有了一定的理解之后，才能将看似混乱的逻辑知识点整理成为思维导图，最后使用上述软件输出。笔者这次给大家推荐的软件，正是针对这个问题，提出了——<strong>阅读过程“收集”，阅读过后“整理”</strong>的解决方案。整个书籍/文献的阅读学习过程变得一气呵成，从而大大提高我们阅读学习的效率。</p>
-<p><img src="http://mozheyang.top/images/awesomeIOS/marginnote.png" alt=""></p>
-<p>目前该软件只有iPad和Mac版本，也就是说Windows PC用户暂时还无法享受到如此好用的一款软件。据说该软件作者（中国人！）已经在着手开发Windows版本的MarginNote，或许2020年的大学生就有机会用上了啊。</p>
-<p>笔者认为现今Windows PC也只有Docear这个开源软件可能与之匹敌，详情请关注笔者博文：<a href="http://mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a>。</p>
-<h1 id="Wordflex"><a href="#Wordflex" class="headerlink" title="Wordflex"></a>Wordflex</h1><p>接触过大量单词背诵（四/六级、托福/雅思、GRE，尤其是GRE）的同学可能会感受到这样一些困难：单词近义词太多，导致记忆混乱；单词意义太过抽象，难以理解；单词书太丑，缺乏艺术感 :)</p>
-<p><strong>单词释义记忆混乱</strong>主要是因为近义词与反义词记忆的混乱。在使用中文理解英文单词时，可能会发现好像好几个单词的中文释义相近甚至相同，但是在英文语境中却不能互换。这时候一个可以表现近义词与反义词联系的工具就会显得很重要。</p>
-<p>在寻找类似单词网络工具的过程中，笔者还发现了WordNet项目与一款名叫Visual Thesaurus的网页App。但最后选择了Wordflex。大家可以很明显地看到它在界面上的优势，使用之后还会感叹他在词库（牛津词典）上的优势。</p>
-<p><img src="http://mozheyang.top/images/awesomeIOS/wordflex.png" alt=""></p>
-<p>通过近义词和反义词，我们可以更立体地理解一个英文单词。在Wordflex中，我们可以通过一个单词从而了解一批近义词——通过轻松的<strong>点击（Tap）</strong>就可以进入下一个单词的单词网络，超值！</p>
-<p>目前该软件只有iPad版本，其他平台可以考虑网页软件Visual Thesaurus. 该网站免费版似乎有查询次数限制，总之还是付费软件更舒心啦。买苹果就为了它平台上的几个好用的软件，也算是值了吧。</p>
+<h1 id="Windows-10系统上安装"><a href="#Windows-10系统上安装" class="headerlink" title="Windows 10系统上安装"></a>Windows 10系统上安装</h1><p>在Windows上的安装，可以直接访问美国Sandia国家实验室地官网：<a href="https://lammps.sandia.gov/" target="_blank" rel="noopener">https://lammps.sandia.gov/</a>。进入Download界面，找到你所需要的Windows版本。说时候，网站导航不是一般的迷惑，很容易迷路，所以在这我给大家一个参考：关键词是<a href="https://lammps.sandia.gov/doc/Install_windows.html" target="_blank" rel="noopener">Pre-built Windows executables</a>，含义是已经编译好的Windows可运行程序（exe文件）。如果你是开发者的话，也可以选源代码，自己编译代码运行，灵活度更高。</p>
+<p><img src="E:/Personal/Desktop/LAMMPS/download.png" alt=""></p>
+<p>下载下来一步步安装就好了。然后我们会收获一个文件夹。</p>
+<p><img src="E:/Personal/Desktop/LAMMPS/folder.png" alt=""></p>
+<p>好了，你没看错，我们什么都不需要配置，已经获得了一个可以输出有趣结果的LAMMPS程序了！需要在Linux编译，还有很多奇怪的参数需要配置的日子已经一去不复返了。</p>
+<h1 id="运行LAMMPS"><a href="#运行LAMMPS" class="headerlink" title="运行LAMMPS"></a>运行LAMMPS</h1><h2 id="正确的文件夹"><a href="#正确的文件夹" class="headerlink" title="正确的文件夹"></a>正确的文件夹</h2><p>我们可以跑个demo（示例）试试。记住以下路径：</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当前目录 -&gt; Examples -&gt; colloid</span><br></pre></td></tr></table></figure>
+<p>这就是一个简单的colloid示例所在的项目位置。LAMMPS启动的方式很GEEK：先进入以上文件夹（colloid），右键单击后，选择在此处打开Powershell（cmd也可以，俗称小黑框）：</p>
+<p><img src="E:/Personal/Desktop/LAMMPS/powershell.png" alt=""></p>
+<p>输入<code>ls</code>，可以显示当前文件下下的文件：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files\LAMMPS <span class="number">64</span>-bit <span class="number">27</span>Feb2020\Examples\colloid&gt; ls                                                        </span><br><span class="line"></span><br><span class="line">    目录: D:\Program Files\LAMMPS <span class="number">64</span>-bit <span class="number">27</span>Feb2020\Examples\colloid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line">----                -------------         ------ ----</span><br><span class="line">-a----        <span class="number">2020</span>/<span class="number">2</span>/<span class="number">28</span>      <span class="number">5</span>:<span class="number">21</span>           <span class="number">1117</span> <span class="keyword">in</span>.colloid</span><br></pre></td></tr></table></figure>
+<p>或者输入<code>dir</code>（cmd中没有<code>ls</code>命令）：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files\LAMMPS <span class="number">64</span>-bit <span class="number">27</span>Feb2020\Examples\colloid&gt; dir                                                       </span><br><span class="line"></span><br><span class="line">    目录: D:\Program Files\LAMMPS <span class="number">64</span>-bit <span class="number">27</span>Feb2020\Examples\colloid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line">----                -------------         ------ ----</span><br><span class="line">-a----        <span class="number">2020</span>/<span class="number">2</span>/<span class="number">28</span>      <span class="number">5</span>:<span class="number">21</span>           <span class="number">1117</span> <span class="keyword">in</span>.colloid</span><br></pre></td></tr></table></figure>
+<p>可以看到文件夹里有一个叫做<code>in.collide</code>的文件。这便是LAMMPS的输入文件了。更改输入文件，我们可以实现不同模型的计算。对原子/分子结构和坐标还可以用<code>data</code>文件定义，我们之后再进行讨论。</p>
+<p>一定要进入有<code>in.collide</code>文件的文件夹，要不然下一步操作是无效的。</p>
+<h2 id="正确的运行"><a href="#正确的运行" class="headerlink" title="正确的运行"></a>正确的运行</h2><p>接下来输入一个<strong>简单的命令</strong>（这是最重要的）：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">lmp_serial</span> <span class="selector-tag">-i</span> <span class="selector-tag">in</span><span class="selector-class">.collid</span></span><br></pre></td></tr></table></figure>
+<p>如果出现下列状态，恭喜你，运行成功了。</p>
+<p><img src="E:/Personal/Desktop/LAMMPS/running.png" alt=""></p>
+<p>知其然，还要知其所以然。这命令是什么意思呢？</p>
+<p>我试着查了一下，输入<code>lmp_serial -h</code>（<code>-h</code>参数常做help使用）：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files\LAMMPS 64-bit 27Feb2020\Examples\colloid&gt; lmp_serial -h                                             </span><br><span class="line">Large-scale Atomic/Molecular Massively Parallel Simulator - 27 Feb 2020</span><br><span class="line"></span><br><span class="line">Usage example: D:\Program Files\LAMMPS 64-bit 27Feb2020\bin\lmp_serial.exe -var t 300 -echo<span class="built_in"> screen </span>-in <span class="keyword">in</span>.alloy</span><br><span class="line"></span><br><span class="line">List of command line options supported by this LAMMPS executable:</span><br><span class="line"></span><br><span class="line">-echo none/screen/log/both  : echoing of input<span class="built_in"> script </span>(-e)</span><br><span class="line">-help                       : <span class="builtin-name">print</span> this help message (-h)</span><br><span class="line">-in filename                : read input <span class="keyword">from</span> file, <span class="keyword">not</span> stdin (-i)</span><br></pre></td></tr></table></figure>
+<p>OK，我们这里的<code>lmp_serial</code>是串行（serial）的版本的LAMMPS；<code>-i</code>的意思是”read input from file“，即从<code>in</code>文件中读取关于LAMMPS运行的一切模型和参数；最后接上<code>in</code>文件的名字<code>in.collid</code>，就大功告成了。</p>
+<blockquote>
+<p>对应串行运行命令<code>lmp_serial</code>的是并行运行命令<code>lmp_mpi</code>。如果在计算中心进行模拟，多是并行多核计算。</p>
+</blockquote>
+<p>到此为止我们已经能够让LAMMPS<strong>正常运行</strong>了。怎么让LAMMPS根据物理规律和我们的意图<strong>正确运行</strong>，是我们下一次的讨论的主题。</p>
 
     </div>
 
@@ -303,7 +306,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://mozheyang.top/2018/02/25/awesomeIOSapp/" title="值得推荐 | Awesome IOS Software">http://mozheyang.top/2018/02/25/awesomeIOSapp/</a>
+    <a href="http://mozheyang.top/2020/04/04/lammps1/" title="计算材料外行的LAMMPS学习札记（一）——安装篇">http://mozheyang.top/2020/04/04/lammps1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -315,8 +318,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> Updating  持续更新中...</a>
-              <a href="/tags/Resources-%E8%B5%84%E6%BA%90/" rel="tag"><i class="fa fa-tag"></i> Resources  资源</a>
+              <a href="/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> Information Science & Technology  信息科学与技术</a>
+              <a href="/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
           </div>
 
         
@@ -325,12 +328,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/02/25/docear/" rel="prev" title="思维导图+文献管理 | Docear使用体会">
-      <i class="fa fa-chevron-left"></i> 思维导图+文献管理 | Docear使用体会
+    <a href="/2020/04/03/insane/" rel="prev" title="在路上，略感焦虑">
+      <i class="fa fa-chevron-left"></i> 在路上，略感焦虑
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/06/03/LiteratureReading/" rel="next" title="文献与写作 | 文献“被动”获取（推送获取）　">
-      文献与写作 | 文献“被动”获取（推送获取）　 <i class="fa fa-chevron-right"></i>
+    <a href="/2201/03/14/TOP/" rel="next" title="置顶公告">
+      置顶公告 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -392,7 +395,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MarginNote"><span class="nav-number">1.</span> <span class="nav-text">MarginNote</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wordflex"><span class="nav-number">2.</span> <span class="nav-text">Wordflex</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-10系统上安装"><span class="nav-number">1.</span> <span class="nav-text">Windows 10系统上安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行LAMMPS"><span class="nav-number">2.</span> <span class="nav-text">运行LAMMPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正确的文件夹"><span class="nav-number">2.1.</span> <span class="nav-text">正确的文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正确的运行"><span class="nav-number">2.2.</span> <span class="nav-text">正确的运行</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
