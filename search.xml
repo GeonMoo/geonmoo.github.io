@@ -666,54 +666,6 @@ A_a + B_a \rightarrow C</script><h1 id="表面脱附"><a href="#表面脱附" cl
       </tags>
   </entry>
   <entry>
-    <title>课后回顾 | 电化学热力学</title>
-    <url>/2017/10/18/EClecturenote1/</url>
-    <content><![CDATA[<p><strong>关键词：</strong>Faraday定律、Nernst方程、相对电极电势、绝对电极电势</p>
-<a id="more"></a>
-<h1 id="什么是电化学"><a href="#什么是电化学" class="headerlink" title="什么是电化学"></a>什么是电化学</h1><p>电子导体能够单独地完成导电任务，而离子导体则不能。离子导体需要通过连接电子导体后才能导电。一般来说，我们使用电子导体作为“电极”，离子导体作为“电解质”。</p>
-<p>在没有化学反应发生的情况下，即使两类导体相互连接，也不能产生持续通过两类导体的电流。</p>
-<p>电化学是研究两类导体形成的带电界面及其上所发生的变化的科学。这一过程中伴随着电能的产生与消耗及其他电现象。其研究对象主要包括三个：电子导体（电极）、离子导体（电解质溶液）和两类导体的界面及其上所发生的一切变化。</p>
-<p>对<strong>电子导体</strong>的研究主要属于固体物理研究范畴。对<strong>离子导体</strong>的研究是经典电化学的研究主体。而两类导体的界面及其上所发生的一切变化是近代电化学所研究的主要对象。</p>
-<h1 id="Faraday定律"><a href="#Faraday定律" class="headerlink" title="Faraday定律"></a>Faraday定律</h1><p>法拉第定律是<strong>经验定律</strong>，但并不代表其使用具有很大局限性。事实上，它是自然界中最严格的定律之一（笔者认为，其地位可与热力学三大定律比肩）。</p>
-<p>对电极反应$M^{z+}+z_{+}e^{-} \rightarrow M$，通入任意电荷量$Q$，则沉积出金属$M$的物质的量为</p>
-<script type="math/tex; mode=display">
-n_{M} = \frac{Q}{z_{+}F}</script><p>$F$为Faraday常数，有</p>
-<script type="math/tex; mode=display">
-F=eL</script><p>其中，$L$为Avogadro常数，其值为$6.022 \times 10^{23} mol^{-1}$；$e$为元电荷电荷量，其值为$1.602 \times 10^{-19} C$。</p>
-<p>若考虑更深一步，法拉第定律也有其成立前提。即，电子导体中不能存在离子导电的成分，而且在离子导体中也不能存在任何电子导电成分。</p>
-<h1 id="电化学与热力学的桥梁"><a href="#电化学与热力学的桥梁" class="headerlink" title="电化学与热力学的桥梁"></a>电化学与热力学的桥梁</h1><p>在等温等压的条件下，当系统发生变化时，系统的Gibbs自由能变化量应等于系统对外所做非体积功，即</p>
-<script type="math/tex; mode=display">
-(\Delta_{r}G)_{T,p}=W'=-nEF</script><p>该方程将电化学与热力学连接了起来。现在我们可以使用热力学方法来对电化学系统进行分析了。</p>
-<h1 id="Nernst方程"><a href="#Nernst方程" class="headerlink" title="Nernst方程"></a>Nernst方程</h1><p>在电化学系统中，电子会在两类导体间流动。这说明，电流回路中存在电势的差别，从而可以驱动电子发生运动。这个电势的差别即我们所希望知道的电池电动势。</p>
-<p>通过上述热力学桥梁，我们可以求出一个电化学反应的具体电动势。由反应动力学可知</p>
-<script type="math/tex; mode=display">
-\Delta_{r}G=-RTlnK</script><p>对电化学反应$aA+bB \rightarrow gG+hH$，</p>
-<script type="math/tex; mode=display">
-K=\frac{(a_{G})^{g}(a_{H})^{h}}{(a_{A})^{a}(a_{B})^{b}}</script><p>那么可以将电池电动势描述为</p>
-<script type="math/tex; mode=display">
-E=E_{0}-\frac{RT}{zF}ln \frac{(a_{G})^{g}(a_{H})^{h}}{(a_{A})^{a}(a_{B})^{b}}</script><p>此即<strong>Nernst方程</strong>。式中$E_{0}=\frac{RT}{zF}lnK_{0}$，$K_{0}$为反应平衡常数。</p>
-<h1 id="相对电极电势"><a href="#相对电极电势" class="headerlink" title="相对电极电势"></a>相对电极电势</h1><p>我们意识到，电池电动势不仅可以直接通过Nernst方程求解，还可以通过对两个半电池电动势求差得出。即</p>
-<script type="math/tex; mode=display">
-E=E_{+}-E_{-}</script><p>而半电池反应电动势实际上就是电极电势</p>
-<script type="math/tex; mode=display">
-E=\phi_{+}-\phi_{-}</script><p>依照这个思路，若希望测量某个电极电势，只需一个标准电极作为参考电极。我们取标准氢电极（SHE, Standard Hydrogen Electrode）作为参考电极，所测出的电极电势便为相对标准氢电极的<strong>相对电极电势</strong>。通常，电势的绝对值不方便直接测出，因此我们可以定义标准氢电极的电极电势为电势零点，从而在大部分应用电化学系统内可以较准确求出电池电动s势。</p>
-<p>标准电极电势越负，说明其氧化态的还原能力越弱，而其还原态氧化能力强；反之亦然。</p>
-<h1 id="绝对电极电势"><a href="#绝对电极电势" class="headerlink" title="绝对电极电势"></a>绝对电极电势</h1><p>诚然，对于一般的电化学系统，使用相对电极电势足以较准确求解电池电动势。但对于某些要求精度较高的微观系统，如太阳能电池等，需要更精确地考虑电子迁移所产生的能量，将“任意选择的电极电势零点”，转变为物理、化学领域常使用的“无穷远电势零点（vacuum level）”。这样，最后所得到的电极电势可以称为<strong>绝对电极电势</strong>。</p>
-<p>对无电作用存在的电化学系统，我们曾使用物种i的化学势作为物种i的偏摩尔吉布斯自由能。那么一个孤立系统达到平衡的条件是<strong>化学</strong>吉布斯自由能变化量为零，即<strong>反应物与产物的化学势相等</strong>。</p>
-<p>但在电化学系统中，需要考虑静电做功。于是，定义了一个新的势——电化学势。对物种i，其电化学势可定义为</p>
-<script type="math/tex; mode=display">
-\bar{\mu_{i}} = \mu_{i}+zF \phi</script><p>电化学势就包括了化学势和静电功两个部分的能量。此时，一个孤立系统达到平衡的条件是<strong>电化学</strong>吉布斯自由能变化量为零（在这里我们需要注意，化学吉布斯自由能与电化学吉布斯自由能时不同的，可参考《电化学原理与方法-Bard》）。物种i的偏摩尔吉布斯自由能变为<strong>物种i的电化学势</strong>。从而系统平衡条件是：<strong>反应物与产物的电化学势相等</strong>。从这个角度来看，电化学势把“传统”化学“物理化”，引入了物理上的势能零点。</p>
-<p>绝对电极电势可通过氧化还原电极进行定义如下（可参考博文：<a href="https://mozheyang.top/2017/10/18/EClecturenote2/">课下回顾 | 电化学中的各种“势”</a>）：</p>
-<script type="math/tex; mode=display">
-\phi = \phi^{0} + \frac{RT}{nF}ln \frac{a_{ox}}{a_{red}}</script>]]></content>
-      <categories>
-        <category>Electrochemistry  电化学</category>
-      </categories>
-      <tags>
-        <tag>Chemistry  化学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>课后回顾 | 电化学中的各种“势”</title>
     <url>/2017/10/18/EClecturenote2/</url>
     <content><![CDATA[<p>这部分介绍的概念较为丰富，笔者学起来感觉比较吃力。目前稍作总结，欢迎讨论。如果大家已经掌握基本概念，可以直接看最后的概念关系总结。</p>
@@ -754,6 +706,54 @@ E=\phi_{+}-\phi_{-}</script><p>依照这个思路，若希望测量某个电极�
 <script type="math/tex; mode=display">
 \phi^{0} = {\mu_{ox}^{0} - \mu_{red}^{0}}{nF} + const</script><h1 id="总结-各概念之间的相互关系"><a href="#总结-各概念之间的相互关系" class="headerlink" title="总结 | 各概念之间的相互关系"></a>总结 | 各概念之间的相互关系</h1><p><img src="http://mozheyang.top/images/EClecturenote2/EnergyCompare.jpg" alt=""></p>
 ]]></content>
+      <categories>
+        <category>Electrochemistry  电化学</category>
+      </categories>
+      <tags>
+        <tag>Chemistry  化学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>课后回顾 | 电化学热力学</title>
+    <url>/2017/10/18/EClecturenote1/</url>
+    <content><![CDATA[<p><strong>关键词：</strong>Faraday定律、Nernst方程、相对电极电势、绝对电极电势</p>
+<a id="more"></a>
+<h1 id="什么是电化学"><a href="#什么是电化学" class="headerlink" title="什么是电化学"></a>什么是电化学</h1><p>电子导体能够单独地完成导电任务，而离子导体则不能。离子导体需要通过连接电子导体后才能导电。一般来说，我们使用电子导体作为“电极”，离子导体作为“电解质”。</p>
+<p>在没有化学反应发生的情况下，即使两类导体相互连接，也不能产生持续通过两类导体的电流。</p>
+<p>电化学是研究两类导体形成的带电界面及其上所发生的变化的科学。这一过程中伴随着电能的产生与消耗及其他电现象。其研究对象主要包括三个：电子导体（电极）、离子导体（电解质溶液）和两类导体的界面及其上所发生的一切变化。</p>
+<p>对<strong>电子导体</strong>的研究主要属于固体物理研究范畴。对<strong>离子导体</strong>的研究是经典电化学的研究主体。而两类导体的界面及其上所发生的一切变化是近代电化学所研究的主要对象。</p>
+<h1 id="Faraday定律"><a href="#Faraday定律" class="headerlink" title="Faraday定律"></a>Faraday定律</h1><p>法拉第定律是<strong>经验定律</strong>，但并不代表其使用具有很大局限性。事实上，它是自然界中最严格的定律之一（笔者认为，其地位可与热力学三大定律比肩）。</p>
+<p>对电极反应$M^{z+}+z_{+}e^{-} \rightarrow M$，通入任意电荷量$Q$，则沉积出金属$M$的物质的量为</p>
+<script type="math/tex; mode=display">
+n_{M} = \frac{Q}{z_{+}F}</script><p>$F$为Faraday常数，有</p>
+<script type="math/tex; mode=display">
+F=eL</script><p>其中，$L$为Avogadro常数，其值为$6.022 \times 10^{23} mol^{-1}$；$e$为元电荷电荷量，其值为$1.602 \times 10^{-19} C$。</p>
+<p>若考虑更深一步，法拉第定律也有其成立前提。即，电子导体中不能存在离子导电的成分，而且在离子导体中也不能存在任何电子导电成分。</p>
+<h1 id="电化学与热力学的桥梁"><a href="#电化学与热力学的桥梁" class="headerlink" title="电化学与热力学的桥梁"></a>电化学与热力学的桥梁</h1><p>在等温等压的条件下，当系统发生变化时，系统的Gibbs自由能变化量应等于系统对外所做非体积功，即</p>
+<script type="math/tex; mode=display">
+(\Delta_{r}G)_{T,p}=W'=-nEF</script><p>该方程将电化学与热力学连接了起来。现在我们可以使用热力学方法来对电化学系统进行分析了。</p>
+<h1 id="Nernst方程"><a href="#Nernst方程" class="headerlink" title="Nernst方程"></a>Nernst方程</h1><p>在电化学系统中，电子会在两类导体间流动。这说明，电流回路中存在电势的差别，从而可以驱动电子发生运动。这个电势的差别即我们所希望知道的电池电动势。</p>
+<p>通过上述热力学桥梁，我们可以求出一个电化学反应的具体电动势。由反应动力学可知</p>
+<script type="math/tex; mode=display">
+\Delta_{r}G=-RTlnK</script><p>对电化学反应$aA+bB \rightarrow gG+hH$，</p>
+<script type="math/tex; mode=display">
+K=\frac{(a_{G})^{g}(a_{H})^{h}}{(a_{A})^{a}(a_{B})^{b}}</script><p>那么可以将电池电动势描述为</p>
+<script type="math/tex; mode=display">
+E=E_{0}-\frac{RT}{zF}ln \frac{(a_{G})^{g}(a_{H})^{h}}{(a_{A})^{a}(a_{B})^{b}}</script><p>此即<strong>Nernst方程</strong>。式中$E_{0}=\frac{RT}{zF}lnK_{0}$，$K_{0}$为反应平衡常数。</p>
+<h1 id="相对电极电势"><a href="#相对电极电势" class="headerlink" title="相对电极电势"></a>相对电极电势</h1><p>我们意识到，电池电动势不仅可以直接通过Nernst方程求解，还可以通过对两个半电池电动势求差得出。即</p>
+<script type="math/tex; mode=display">
+E=E_{+}-E_{-}</script><p>而半电池反应电动势实际上就是电极电势</p>
+<script type="math/tex; mode=display">
+E=\phi_{+}-\phi_{-}</script><p>依照这个思路，若希望测量某个电极电势，只需一个标准电极作为参考电极。我们取标准氢电极（SHE, Standard Hydrogen Electrode）作为参考电极，所测出的电极电势便为相对标准氢电极的<strong>相对电极电势</strong>。通常，电势的绝对值不方便直接测出，因此我们可以定义标准氢电极的电极电势为电势零点，从而在大部分应用电化学系统内可以较准确求出电池电动s势。</p>
+<p>标准电极电势越负，说明其氧化态的还原能力越弱，而其还原态氧化能力强；反之亦然。</p>
+<h1 id="绝对电极电势"><a href="#绝对电极电势" class="headerlink" title="绝对电极电势"></a>绝对电极电势</h1><p>诚然，对于一般的电化学系统，使用相对电极电势足以较准确求解电池电动势。但对于某些要求精度较高的微观系统，如太阳能电池等，需要更精确地考虑电子迁移所产生的能量，将“任意选择的电极电势零点”，转变为物理、化学领域常使用的“无穷远电势零点（vacuum level）”。这样，最后所得到的电极电势可以称为<strong>绝对电极电势</strong>。</p>
+<p>对无电作用存在的电化学系统，我们曾使用物种i的化学势作为物种i的偏摩尔吉布斯自由能。那么一个孤立系统达到平衡的条件是<strong>化学</strong>吉布斯自由能变化量为零，即<strong>反应物与产物的化学势相等</strong>。</p>
+<p>但在电化学系统中，需要考虑静电做功。于是，定义了一个新的势——电化学势。对物种i，其电化学势可定义为</p>
+<script type="math/tex; mode=display">
+\bar{\mu_{i}} = \mu_{i}+zF \phi</script><p>电化学势就包括了化学势和静电功两个部分的能量。此时，一个孤立系统达到平衡的条件是<strong>电化学</strong>吉布斯自由能变化量为零（在这里我们需要注意，化学吉布斯自由能与电化学吉布斯自由能时不同的，可参考《电化学原理与方法-Bard》）。物种i的偏摩尔吉布斯自由能变为<strong>物种i的电化学势</strong>。从而系统平衡条件是：<strong>反应物与产物的电化学势相等</strong>。从这个角度来看，电化学势把“传统”化学“物理化”，引入了物理上的势能零点。</p>
+<p>绝对电极电势可通过氧化还原电极进行定义如下（可参考博文：<a href="https://mozheyang.top/2017/10/18/EClecturenote2/">课下回顾 | 电化学中的各种“势”</a>）：</p>
+<script type="math/tex; mode=display">
+\phi = \phi^{0} + \frac{RT}{nF}ln \frac{a_{ox}}{a_{red}}</script>]]></content>
       <categories>
         <category>Electrochemistry  电化学</category>
       </categories>
@@ -1348,6 +1348,67 @@ Average Grain Size = \dfrac {L}{N}</script><p><strong>需要注意的是，</str
       </tags>
   </entry>
   <entry>
+    <title>文献与写作 | 文献“被动”获取（推送获取）　</title>
+    <url>/2018/06/03/LiteratureReading/</url>
+    <content><![CDATA[<p>笔者经过了几年所谓的“学术训练”，实（ban）验（zhuan）技能没多大提高（现实远比理想情况复杂，实验科学惹不起惹不起），但文献阅读的套路还是积累了一些的（所谓“套路”，必须是已经形成的，并令人较为舒服的流程）。</p>
+<a id="more"></a>
+<p>今天，笔者首先希望与大家分享的是在<strong>文献被动获取</strong>方面的一些积累。虽然笔者没有期望这套流程能适用于任何人，但是却希望该例子能为各位读者制定符合自己需求的文献获取流程提供一个参考。以下流程将主要从四个部分展开，分别是：</p>
+<ul>
+<li>摘要获取</li>
+<li>全文收集</li>
+<li>整理索引</li>
+<li>吸收引用</li>
+</ul>
+<h1 id="摘要获取"><a href="#摘要获取" class="headerlink" title="摘要获取"></a>摘要获取</h1><p>这一步骤主要依赖于Email和RSS客户端。笔者的方法是通过Stork（文献鸟，Stanford团队开发）订阅相关<strong>关键词</strong>的文献，一周进行一次推送；再利用FeedDemon（Google团队开发，已于2013年停止更新）订阅领域内重要<strong>期刊</strong>，每天检索新的文献前都会先检查一遍FeedDemon的文献更新。FeedDemon可以自定义过滤器（filter），从而对特定关键词的文献进行过滤筛选。</p>
+<p><img src="../../../../images/literature/EmailRSS.png" alt=""></p>
+<blockquote>
+<p>Make literatures come to you.</p>
+</blockquote>
+<p>与被动获取方法相对的方法是主动获取方法。文献被动获取的好处是很明显的。主动获取方法依赖于<strong>关键词检索</strong>，而检索必定耗费时间（选择检索平台与选择检索关键词），而且容易导致疏漏。被动获取方法使用预先设定的检索平台和检索关键词进行定期推送，极大地提高了我们对领域前沿的跟踪能力。</p>
+<p>笔者目前研究方向在化学材料领域。这一领域对文献的<strong>全</strong>与<strong>新</strong>要求较高。但同时，该领域期刊论文极多，且质量参差不齐。因此，笔者的被动获取策略是<strong>以期刊为主线</strong>的：</p>
+<blockquote>
+<p>以重要期刊相关领域论文为主，其他期刊了解覆盖为辅。</p>
+</blockquote>
+<p><img src="../../../../images/literature/FeedJournal.png" alt=""></p>
+<p>这就意味着FeedDemon在笔者的文献摘要获取步骤中起到了举足轻重的作用。另外需要注意的是，这一步骤给我们提供的只是文献的“入口”（包括题目、摘要、DOI、全文链接等重要信息），仅足够让我们判断该篇文献<strong>是否对自己有用</strong>。要想进一步了解文献中的研究细节，我们必须获取其原文（Full text）。这就引出了我们文献被动获取的下一个阶段——全文收集。</p>
+<p><strong><u>总结：摘要获取阶段主要工具为FeedDemon。</u></strong></p>
+<h1 id="全文收集"><a href="#全文收集" class="headerlink" title="全文收集"></a>全文收集</h1><p>为了让不同平台不同方法搜集的文献都能装进一个口袋里，笔者也是进行过诸多尝试的。最终笔者选择使用<strong>浏览器</strong>（chrome，Google浏览器）作为文献收集的主要平台。使用浏览器作为文献收集平台有以下几个好处：</p>
+<ul>
+<li>几乎所有电子文献都提供网页访问的链接，因此使用浏览器作为收集工具对多类型的文献具有普适性，保证了收集文献“全”的特性；</li>
+<li>由于该方法所需的Zotero软件和浏览器插件对不同系统的支持都较好，该方法受操作系统的影响较小；</li>
+<li>该方法较容易实现云端数据库的同步，从而方便在不同操作系统不同计算机之间同步文献信息数据库。</li>
+</ul>
+<p>笔者最后采用的方法是，通过Zotero浏览器连接插件（Zotero connector）和Zotero Standalone（客户端）在网页上点击收集，操作十分方便。</p>
+<p><img src="../../../../images/literature/zotero.png" alt=""></p>
+<p>如果我们在一个拥有该文献数据库的IP范围内（校园网络或科研机构网络），那么Zotero会在我们收集文献信息的同时对该文献进行下载。</p>
+<p>Zotero本身有1G的免费云存储空间，存放文献信息是较为充足的，但是存放PDF文件便是有些吃力了。此时我们可以考虑结合【坚果云】对PDF文件进行同步。但该话题已超出了本篇文章的讨论范围。如果诸位读者感兴趣的话欢迎来信，如有需要，笔者将会尽快补充相关细节。</p>
+<p><strong><u>总结：全文收集阶段主要工具为Zotero（及其支持浏览器Chrome/Firefox）。</u></strong></p>
+<h1 id="整理索引"><a href="#整理索引" class="headerlink" title="整理索引"></a>整理索引</h1><p>所有被我们阅读的文献，我们当然都希望其是有用的。但是处于一个快速发展的科研领域，要记住所有的文献，并在需要的时候准确地将其找到，并不是一件很容易的事情。因此，为了后续利用文献的方便，我们需要整理文献。</p>
+<blockquote>
+<p>任何文献工具最终都无法取代人对文献的阅读。</p>
+</blockquote>
+<p>但我们整理文献的前提是我们已经<strong>对文章类型和大意有了初步了解</strong>。在此基础上，我们能对文献值不值得进一步深入研读，或者该贴上什么样的标签做到心里有数。</p>
+<p>在整理上，笔者将文献基本分为了“<strong>待读文献</strong>”和“<strong>已读文献</strong>”两类。在两大文件夹下，笔者依照时间顺序又建立了子文件夹，相当于在<strong>时间维度</strong>上再对文献进行了分类。为了方便索引，我们还可以在每天的文件夹下建立带有相关内容（关键字/词）的子文件夹。</p>
+<p><img src="../../../../images/literature/files.png" alt=""></p>
+<p>经过此番折腾过后，我们得到的PDF也都还是以“乱码”命名的，亟待更名。Mendeley对PDF文献的识别率非常高，并可实现在识别文献后对文献进行<strong>批量重命名</strong>操作。因此，笔者选择了Mendeley，放弃了成熟的商业软件Endnote、Noteexpress等其它文献管理工具。重命名完成之后，我们便已经可以使用Everything（文件名索引）和File Locator（文件名+全文索引）进行功能强大的本地索引了。</p>
+<p>当然，一般地，也可以直接使用Mendeley自带的全文关键词索引功能。一般来说，会有更快的检索速度，而且该方法的实现可以让我们在更少的工具下完成任务。</p>
+<p><u><strong>总结：整理索引阶段主要工具为Mendeley。</strong></u></p>
+<h1 id="吸收引用"><a href="#吸收引用" class="headerlink" title="吸收引用"></a>吸收引用</h1><p>只将文献存在电脑里不会将文献知识变成自己的知识。甚至只读过一两遍，我们也不能充分吸收其精华。</p>
+<blockquote>
+<p>知识吸收理解的最好方法是去应用它。</p>
+</blockquote>
+<p>在学术研究中，对文献的引用便算是对文献阅读收获的一种应用。</p>
+<p>此时，我们可以尝试用Docear绘制文献思维导图，将众多看似散乱的文献联系起来，抽丝剥茧；接下来还可以尝试写一篇综述或者文献调研报告，找出多篇文献中的联系（印证与矛盾），以阐述自己对该研究领域的认识；也可以在组内文献汇报时，将自己的文献调研结果做成演示文稿（PPT/Keynote/Prezi）给组内成员展示。我认为以上方法都是较好的消化文献的方法。</p>
+<p><img src="../../../../images/literature/mindmap.png" alt=""></p>
+<p><strong><u>总结：吸收引用阶段主要工具为思维导图（Docear、幕布）和Office套件（Word、PPT）。</u></strong></p>
+<p>很多同学在组内的学习过程中也正面临着这样的压力，所以我期望以上方法能给大家提供一些小的帮助。以上便是本人近期总结的文献阅读“套路”，欢迎各路高手不断提出新思路、新方法！期待交流！</p>
+<p>笔者联系方式：mozheyang@outlook.com</p>
+]]></content>
+      <tags>
+        <tag>Literature  文献</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</title>
     <url>/2019/03/31/LSV-KLeq/</url>
     <content><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：</p>
@@ -1610,6 +1671,44 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>已失效-材料结构分析方法-XRD</title>
+    <url>/2017/04/06/MaterialAnalysis-XRD/</url>
+    <content><![CDATA[<p>材料分析手段是十分丰富的。</p>
+<p>笔者认为，材料专业运用最广泛的分析手段之一是谱图类的分析手段。</p>
+<p>其中XRD （X-Ray Diffraction，X射线衍射分析）是其中典型代表。其原理可靠，已经过漫长的时间考验，多位学者依靠对其深入研究而获诺贝尔奖项，称之为材料表征界之“元老”也不为过。</p>
+<a id="more"></a>
+<h1 id="物相分析基本原理"><a href="#物相分析基本原理" class="headerlink" title="物相分析基本原理"></a>物相分析基本原理</h1><hr>
+<p>谱图类的物相分析（也即判断具体有些什么物质），说起来基本原理起来并不复杂。笔者认为，主要基于两个基本“公理”（目前没找到相关的证明）：</p>
+<blockquote>
+<p>不同的物相对应着<strong>不同的衍射花样</strong>，也就是对应着<strong>不同的谱图</strong>。<br>混合物相的衍射花样可以由不同物相的衍射花样<strong>直接叠加</strong>而得。</p>
+</blockquote>
+<p>是否浅显易懂？</p>
+<p>不是的话，我们可以通过函数的思想再行理解。</p>
+<blockquote>
+<p>物质1对应谱图函数$f_1(x)$<br>物质2对应谱图函数$f_2(x)$<br>…<br>物质n对应谱图函数$f_n(x)$</p>
+</blockquote>
+<p>那么，n种物质混合起来的谱图函数</p>
+<blockquote>
+<p>$ f(x)=f_1(x)+f_2(x)+…+f_n(x) $</p>
+</blockquote>
+<p>这说明谱图之间的关系没有很复杂，仅为简单的线性叠加关系，如下图所示。</p>
+<p><img src="http://mozheyang.top/images/xrd/sketchmap_xrd.jpg" alt=""> </p>
+<p>实际数据分析过程中，我们一般会拿到一个<strong>未知</strong>混合物质的XRD谱图$f(x)$。从别人手里拿到一个装满各种单类物质$ f_1(x)，f_2(x)…f_n(x) $谱图的数据库。</p>
+<h1 id="实际谱图与标准数据库的匹配"><a href="#实际谱图与标准数据库的匹配" class="headerlink" title="实际谱图与标准数据库的匹配"></a>实际谱图与标准数据库的匹配</h1><hr>
+<p>如果我们知道谱图是叠加而成，那我们就把谱图一一匹配，不就反推得到都有些什么物质了么？</p>
+<p>这就是基于谱图匹配的材料分析手段了。</p>
+<p>但是显然，实际检测分析中并不会如此简单。由于固溶、应力织构以及析出相状态等种种因素的影响，未知混合物质与标准谱图的匹配总不那么理想。</p>
+<p>这样我们还可以给“实际谱图的若干衍射峰”与“标准谱图衍射峰”之间定义一个距离，这样我们在匹配的时候，只要求其距离最小，便算是确定了物相。</p>
+<p>其他的材料分析方法，例如拉曼光谱（Raman spectra）、XPS（X-ray photoelectron spectroscopy，X射线光电子能谱）和XRF（X-ray Fluorescence，X射线荧光光谱）等等检测手段，均使用的同一思想。不过是不同方法所探测的信号不同，而且使用的数据库不同而已。</p>
+<hr>
+<p>笔者水平有限，对材料分析手段还并未深入了解，仅能做出科普性质的解释。若有错漏，恳请您向本人提出。<br>Email: mozheyang@outlook.com</p>
+]]></content>
+      <tags>
+        <tag>Material  材料</tag>
+        <tag>Characterization  表征</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>遗传算法 | 展馆安全保障问题</title>
     <url>/2017/05/11/MathModellingGA/</url>
     <content><![CDATA[<p><strong>关键词：</strong>摄像头、组合优化、遗传算法</p>
@@ -1704,44 +1803,6 @@ Permanent Exhibition Area摄像头安装方案样本
       </tags>
   </entry>
   <entry>
-    <title>已失效-材料结构分析方法-XRD</title>
-    <url>/2017/04/06/MaterialAnalysis-XRD/</url>
-    <content><![CDATA[<p>材料分析手段是十分丰富的。</p>
-<p>笔者认为，材料专业运用最广泛的分析手段之一是谱图类的分析手段。</p>
-<p>其中XRD （X-Ray Diffraction，X射线衍射分析）是其中典型代表。其原理可靠，已经过漫长的时间考验，多位学者依靠对其深入研究而获诺贝尔奖项，称之为材料表征界之“元老”也不为过。</p>
-<a id="more"></a>
-<h1 id="物相分析基本原理"><a href="#物相分析基本原理" class="headerlink" title="物相分析基本原理"></a>物相分析基本原理</h1><hr>
-<p>谱图类的物相分析（也即判断具体有些什么物质），说起来基本原理起来并不复杂。笔者认为，主要基于两个基本“公理”（目前没找到相关的证明）：</p>
-<blockquote>
-<p>不同的物相对应着<strong>不同的衍射花样</strong>，也就是对应着<strong>不同的谱图</strong>。<br>混合物相的衍射花样可以由不同物相的衍射花样<strong>直接叠加</strong>而得。</p>
-</blockquote>
-<p>是否浅显易懂？</p>
-<p>不是的话，我们可以通过函数的思想再行理解。</p>
-<blockquote>
-<p>物质1对应谱图函数$f_1(x)$<br>物质2对应谱图函数$f_2(x)$<br>…<br>物质n对应谱图函数$f_n(x)$</p>
-</blockquote>
-<p>那么，n种物质混合起来的谱图函数</p>
-<blockquote>
-<p>$ f(x)=f_1(x)+f_2(x)+…+f_n(x) $</p>
-</blockquote>
-<p>这说明谱图之间的关系没有很复杂，仅为简单的线性叠加关系，如下图所示。</p>
-<p><img src="http://mozheyang.top/images/xrd/sketchmap_xrd.jpg" alt=""> </p>
-<p>实际数据分析过程中，我们一般会拿到一个<strong>未知</strong>混合物质的XRD谱图$f(x)$。从别人手里拿到一个装满各种单类物质$ f_1(x)，f_2(x)…f_n(x) $谱图的数据库。</p>
-<h1 id="实际谱图与标准数据库的匹配"><a href="#实际谱图与标准数据库的匹配" class="headerlink" title="实际谱图与标准数据库的匹配"></a>实际谱图与标准数据库的匹配</h1><hr>
-<p>如果我们知道谱图是叠加而成，那我们就把谱图一一匹配，不就反推得到都有些什么物质了么？</p>
-<p>这就是基于谱图匹配的材料分析手段了。</p>
-<p>但是显然，实际检测分析中并不会如此简单。由于固溶、应力织构以及析出相状态等种种因素的影响，未知混合物质与标准谱图的匹配总不那么理想。</p>
-<p>这样我们还可以给“实际谱图的若干衍射峰”与“标准谱图衍射峰”之间定义一个距离，这样我们在匹配的时候，只要求其距离最小，便算是确定了物相。</p>
-<p>其他的材料分析方法，例如拉曼光谱（Raman spectra）、XPS（X-ray photoelectron spectroscopy，X射线光电子能谱）和XRF（X-ray Fluorescence，X射线荧光光谱）等等检测手段，均使用的同一思想。不过是不同方法所探测的信号不同，而且使用的数据库不同而已。</p>
-<hr>
-<p>笔者水平有限，对材料分析手段还并未深入了解，仅能做出科普性质的解释。若有错漏，恳请您向本人提出。<br>Email: mozheyang@outlook.com</p>
-]]></content>
-      <tags>
-        <tag>Material  材料</tag>
-        <tag>Characterization  表征</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>思路整理 | 数学建模解题思路</title>
     <url>/2017/05/11/MathModellingPrimer/</url>
     <content><![CDATA[<h1 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h1><hr>
@@ -1770,67 +1831,6 @@ Permanent Exhibition Area摄像头安装方案样本
       </categories>
       <tags>
         <tag>Model  模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献与写作 | 文献“被动”获取（推送获取）　</title>
-    <url>/2018/06/03/LiteratureReading/</url>
-    <content><![CDATA[<p>笔者经过了几年所谓的“学术训练”，实（ban）验（zhuan）技能没多大提高（现实远比理想情况复杂，实验科学惹不起惹不起），但文献阅读的套路还是积累了一些的（所谓“套路”，必须是已经形成的，并令人较为舒服的流程）。</p>
-<a id="more"></a>
-<p>今天，笔者首先希望与大家分享的是在<strong>文献被动获取</strong>方面的一些积累。虽然笔者没有期望这套流程能适用于任何人，但是却希望该例子能为各位读者制定符合自己需求的文献获取流程提供一个参考。以下流程将主要从四个部分展开，分别是：</p>
-<ul>
-<li>摘要获取</li>
-<li>全文收集</li>
-<li>整理索引</li>
-<li>吸收引用</li>
-</ul>
-<h1 id="摘要获取"><a href="#摘要获取" class="headerlink" title="摘要获取"></a>摘要获取</h1><p>这一步骤主要依赖于Email和RSS客户端。笔者的方法是通过Stork（文献鸟，Stanford团队开发）订阅相关<strong>关键词</strong>的文献，一周进行一次推送；再利用FeedDemon（Google团队开发，已于2013年停止更新）订阅领域内重要<strong>期刊</strong>，每天检索新的文献前都会先检查一遍FeedDemon的文献更新。FeedDemon可以自定义过滤器（filter），从而对特定关键词的文献进行过滤筛选。</p>
-<p><img src="../../../../images/literature/EmailRSS.png" alt=""></p>
-<blockquote>
-<p>Make literatures come to you.</p>
-</blockquote>
-<p>与被动获取方法相对的方法是主动获取方法。文献被动获取的好处是很明显的。主动获取方法依赖于<strong>关键词检索</strong>，而检索必定耗费时间（选择检索平台与选择检索关键词），而且容易导致疏漏。被动获取方法使用预先设定的检索平台和检索关键词进行定期推送，极大地提高了我们对领域前沿的跟踪能力。</p>
-<p>笔者目前研究方向在化学材料领域。这一领域对文献的<strong>全</strong>与<strong>新</strong>要求较高。但同时，该领域期刊论文极多，且质量参差不齐。因此，笔者的被动获取策略是<strong>以期刊为主线</strong>的：</p>
-<blockquote>
-<p>以重要期刊相关领域论文为主，其他期刊了解覆盖为辅。</p>
-</blockquote>
-<p><img src="../../../../images/literature/FeedJournal.png" alt=""></p>
-<p>这就意味着FeedDemon在笔者的文献摘要获取步骤中起到了举足轻重的作用。另外需要注意的是，这一步骤给我们提供的只是文献的“入口”（包括题目、摘要、DOI、全文链接等重要信息），仅足够让我们判断该篇文献<strong>是否对自己有用</strong>。要想进一步了解文献中的研究细节，我们必须获取其原文（Full text）。这就引出了我们文献被动获取的下一个阶段——全文收集。</p>
-<p><strong><u>总结：摘要获取阶段主要工具为FeedDemon。</u></strong></p>
-<h1 id="全文收集"><a href="#全文收集" class="headerlink" title="全文收集"></a>全文收集</h1><p>为了让不同平台不同方法搜集的文献都能装进一个口袋里，笔者也是进行过诸多尝试的。最终笔者选择使用<strong>浏览器</strong>（chrome，Google浏览器）作为文献收集的主要平台。使用浏览器作为文献收集平台有以下几个好处：</p>
-<ul>
-<li>几乎所有电子文献都提供网页访问的链接，因此使用浏览器作为收集工具对多类型的文献具有普适性，保证了收集文献“全”的特性；</li>
-<li>由于该方法所需的Zotero软件和浏览器插件对不同系统的支持都较好，该方法受操作系统的影响较小；</li>
-<li>该方法较容易实现云端数据库的同步，从而方便在不同操作系统不同计算机之间同步文献信息数据库。</li>
-</ul>
-<p>笔者最后采用的方法是，通过Zotero浏览器连接插件（Zotero connector）和Zotero Standalone（客户端）在网页上点击收集，操作十分方便。</p>
-<p><img src="../../../../images/literature/zotero.png" alt=""></p>
-<p>如果我们在一个拥有该文献数据库的IP范围内（校园网络或科研机构网络），那么Zotero会在我们收集文献信息的同时对该文献进行下载。</p>
-<p>Zotero本身有1G的免费云存储空间，存放文献信息是较为充足的，但是存放PDF文件便是有些吃力了。此时我们可以考虑结合【坚果云】对PDF文件进行同步。但该话题已超出了本篇文章的讨论范围。如果诸位读者感兴趣的话欢迎来信，如有需要，笔者将会尽快补充相关细节。</p>
-<p><strong><u>总结：全文收集阶段主要工具为Zotero（及其支持浏览器Chrome/Firefox）。</u></strong></p>
-<h1 id="整理索引"><a href="#整理索引" class="headerlink" title="整理索引"></a>整理索引</h1><p>所有被我们阅读的文献，我们当然都希望其是有用的。但是处于一个快速发展的科研领域，要记住所有的文献，并在需要的时候准确地将其找到，并不是一件很容易的事情。因此，为了后续利用文献的方便，我们需要整理文献。</p>
-<blockquote>
-<p>任何文献工具最终都无法取代人对文献的阅读。</p>
-</blockquote>
-<p>但我们整理文献的前提是我们已经<strong>对文章类型和大意有了初步了解</strong>。在此基础上，我们能对文献值不值得进一步深入研读，或者该贴上什么样的标签做到心里有数。</p>
-<p>在整理上，笔者将文献基本分为了“<strong>待读文献</strong>”和“<strong>已读文献</strong>”两类。在两大文件夹下，笔者依照时间顺序又建立了子文件夹，相当于在<strong>时间维度</strong>上再对文献进行了分类。为了方便索引，我们还可以在每天的文件夹下建立带有相关内容（关键字/词）的子文件夹。</p>
-<p><img src="../../../../images/literature/files.png" alt=""></p>
-<p>经过此番折腾过后，我们得到的PDF也都还是以“乱码”命名的，亟待更名。Mendeley对PDF文献的识别率非常高，并可实现在识别文献后对文献进行<strong>批量重命名</strong>操作。因此，笔者选择了Mendeley，放弃了成熟的商业软件Endnote、Noteexpress等其它文献管理工具。重命名完成之后，我们便已经可以使用Everything（文件名索引）和File Locator（文件名+全文索引）进行功能强大的本地索引了。</p>
-<p>当然，一般地，也可以直接使用Mendeley自带的全文关键词索引功能。一般来说，会有更快的检索速度，而且该方法的实现可以让我们在更少的工具下完成任务。</p>
-<p><u><strong>总结：整理索引阶段主要工具为Mendeley。</strong></u></p>
-<h1 id="吸收引用"><a href="#吸收引用" class="headerlink" title="吸收引用"></a>吸收引用</h1><p>只将文献存在电脑里不会将文献知识变成自己的知识。甚至只读过一两遍，我们也不能充分吸收其精华。</p>
-<blockquote>
-<p>知识吸收理解的最好方法是去应用它。</p>
-</blockquote>
-<p>在学术研究中，对文献的引用便算是对文献阅读收获的一种应用。</p>
-<p>此时，我们可以尝试用Docear绘制文献思维导图，将众多看似散乱的文献联系起来，抽丝剥茧；接下来还可以尝试写一篇综述或者文献调研报告，找出多篇文献中的联系（印证与矛盾），以阐述自己对该研究领域的认识；也可以在组内文献汇报时，将自己的文献调研结果做成演示文稿（PPT/Keynote/Prezi）给组内成员展示。我认为以上方法都是较好的消化文献的方法。</p>
-<p><img src="../../../../images/literature/mindmap.png" alt=""></p>
-<p><strong><u>总结：吸收引用阶段主要工具为思维导图（Docear、幕布）和Office套件（Word、PPT）。</u></strong></p>
-<p>很多同学在组内的学习过程中也正面临着这样的压力，所以我期望以上方法能给大家提供一些小的帮助。以上便是本人近期总结的文献阅读“套路”，欢迎各路高手不断提出新思路、新方法！期待交流！</p>
-<p>笔者联系方式：mozheyang@outlook.com</p>
-]]></content>
-      <tags>
-        <tag>Literature  文献</tag>
       </tags>
   </entry>
   <entry>
@@ -2171,6 +2171,65 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>横看成岭侧成峰 | 理工科思维论现象与本质</title>
+    <url>/2018/07/22/PhenoNature/</url>
+    <content><![CDATA[<p>众所周知，现象不等于本质。所谓“本质”，一定是隐藏在现象背后的“真理”。</p>
+<p>但如果现象与本质不同，那二者又究竟是何种关系呢？为什么我们需要透过现象才能看到本质，而不能直接看到本质？</p>
+<p>笔者最近看到一篇文章，又重新思考起这个问题来。</p>
+<a id="more"></a>
+<h1 id="人类思维？计算机思维？"><a href="#人类思维？计算机思维？" class="headerlink" title="人类思维？计算机思维？"></a>人类思维？计算机思维？</h1><p>这篇文章介绍了计算机视觉领域中的一种识别PS处理过的图片的方法[1]。文中通过对原图（Authentic image）和修改图（Tampered image）进行运算，获取了二者的噪声谱（Noise map）。再通过模型识别出噪声谱中的异常来对异常增加（或减少）的物体进行识别。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv1.png" alt=""></p>
+<p>如上图，PS中被增加或者减少的物体都逃不过这种算法的“火眼金睛”。这似乎让人们觉得，计算机实在是比人类强大很多，人类都不能分辨真假的东西，却仍然逃不过计算机的眼睛。</p>
+<p>但我们也应该认识到，计算机也是可以被欺骗的。我们人类至少不会因为一个或几个像素的改变而轻易改变对一个图像的判断。但目前的计算机人工智能会。一些具有明确意义的图片，通过一个像素的改变就可以显著降低计算机（现有深度学习算法）对其识别率[2]。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv2.png" alt=""></p>
+<p>对无明确意义的图片，也可以通过一个像素点的改变欺骗计算机，将其归于任何一个分类（近乎100%的置信度）[2]。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv3.png" alt=""></p>
+<p>在以上研究的基础上，我们也开始质疑计算机的可靠性了。不过，在这个世界上还真是没有什么东西是完全靠谱的。在笔者狭隘的眼中，还是会认为，普遍地计算机会比人类更靠谱些。毕竟人类比计算机更容易被欺骗，例如目前发展很快的GAN（生成式对抗网络）技术，可以极其方便地生成以假乱真的图片[3]。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv4.png" alt=""></p>
+<p>你真的能相信图中虚拟世界（Virtural world）不是真实世界（Real world）吗？</p>
+<p>当然，我们不需要对此感到绝望。因为这个世界本就是如此。</p>
+<p>我们人类的思维与计算机的思维是<strong><u>看待世界的不同角度</u></strong>。</p>
+<p>而真理，永远隐藏在我们所看到的现象背后。</p>
+<h1 id="现象与本质的量子物理意义"><a href="#现象与本质的量子物理意义" class="headerlink" title="现象与本质的量子物理意义"></a>现象与本质的量子物理意义</h1><p>测量（Measurement）是需要通过干扰我们所需测量的系统，获得其干扰反馈，从而实现分析我们感兴趣系统内部信息的一个过程。如果说$A$是一个需要我们测量的系统，$M$是我们测量$A$时所采用的一种（干扰）方法，而$B$是我们最终的测量结果。那么三者之间的关系可以被表示为</p>
+<script type="math/tex; mode=display">
+B = MA</script><p>在公式中，$M$可以理解为算符，其作用在$A$这个对象上，结果是获得了$B$这个对象。很好理解对不对？</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/seeThings.png" alt=""></p>
+<p>我们能够看到东西，也正是通过<strong>光作用于我们关注的物体并与之作用，我们利用眼睛接收到光信号，最终大脑对光信号作出处理和判断</strong>的这样一个过程。在这个现实过程中，我们关注的物体是$A$，光（包括其所经历的一切过程）是$M$，而我们大脑最终接收到的信号是$B$。容易理解，因为经过了<strong>复杂</strong>方法$M$的作用，$A$与$B$在<strong>大多数情况下</strong>都是难以相等的（理论上存在相等的可能，但目前在现实世界中没有遇到过二者相等的例子）。</p>
+<p>如果简单地，将$A$、$B$对象看作向量，$M$算符看作矩阵，那么当且仅当$M$为单位矩阵时，可以满足$A=B$。这时可以实现所谓“现象即本质”。但这在现实生活中并没有被观测的例子。可以理解，当$M$可以为任何算符，其取单位矩阵值的可能性无限趋近于零。</p>
+<h1 id="线性代数与现象本质的关系"><a href="#线性代数与现象本质的关系" class="headerlink" title="线性代数与现象本质的关系"></a>线性代数与现象本质的关系</h1><p>从数学角度来看，$M$算符属于一种变换（Transform）。那么$B = MA$可以看作是一种<strong>降维（投影）变换</strong>。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/projection.png" alt=""></p>
+<p>从上图中简单的二维投影一维的例子中，我们不难得知，降维会损失维度信息（从x、y坐标到只剩下x坐标）。低维度信息难以完美重构高维度的情况。正如上图，只从x轴上的投影无法得知是以上哪种二维图线投影得到的。当然，如果我们再获得了二维图线在y轴上的投影，那么就可以重构出原来的二维图线了。这也正是我们需要<strong>多角度看待事物</strong>的原因。</p>
+<p>另外，从上图我们还可以得到启发：当各观测角度相互正交（相互独立，毫不相关）时，我们能够在最少的观测次数下得到事物的“本质”。当然这是后话了。</p>
+<h1 id="给我们带来启发"><a href="#给我们带来启发" class="headerlink" title="给我们带来启发"></a>给我们带来启发</h1><p>作为一个材料科研工作者，笔者还希望从自然科学发展的角度思考思考我们能够前进的方向。</p>
+<p>生物信息中基因组的利用最初是从孟德尔遗传定律开始的。笔者认为这个思想的基础是“确定的基因决定了生物的特性”。这与材料科学中“成分结构决定性能”的理论基础不谋而合。</p>
+<p>在电催化研究中，我们常使用“描述符（descriptor）”尝试对电极催化剂的催化活性进行“描述”。从线性代数的角度上说，也可以说，它是在试图做一种“投影”。把复杂无比的影响催化活性的各种因素，全都包含在一个“描述符”中去。那这个描述符可以认为是各种混杂因素在催化活性这个角度的一个投影。</p>
+<p>在计算机优化算法中，有些目标优化函数会过于复杂，会占用很长的机时才能得到答案，也就是寻找最优解所需机时以及最优解。针对此，我们可以采用较简单的代价估计函数来替代目标优化函数，进行一个机时估计，从而缩短调试算法的时间。</p>
+<p>在材料研究中，我们实际也面临着这样一个规模巨大的优化问题。我们在思考，何种成分，何种工艺处理，在何种条件下，能够获得期望的最佳材料性能。这么说来，材料与计算机都使用“炼丹”的原理，但到底是什么限制了材料学科的发展速度呢？笔者认为是<strong><u>反馈速度</u></strong>。计算机学科拥有相对更确定的物理规律，也就能够拥有对目标函数更好的掌控能力。这意味着，“代价估计函数来替代目标优化函数”的这条道路对计算机学科来说是相对容易的。但对自然科学，如材料学科来说，不然。材料缺少的就是这样一个（更准确说是”多个“）好用的代价估计函数，更本质的，可以认为其也是一种描述符。</p>
+<p>在笔者眼中，高通量计算与高通量实验（材料基因组）的研究工作，正是材料学科模仿生物学科进行的描述符快速搜索的研究工作。找到了材料某种性能的描述符，也即建立起了目标和材料结构参数（或其它可调控参数）之间的桥梁。与工程经验公式同理，这也就意味着该性能在工程上已经具有实际应用的价值（或可能），材料研发速度将会迎来质的飞跃。届时，限制材料研发速度的关键很可能会重新回到计算速度和机械自动化的速度上，极大地解放了材料领域科研人员的劳动力。可以预见，材料（科学与工程）学科将会迎来新的发展机会。</p>
+<p>目前已经有很多研究者在进行着描述符的研究。描述符的发现方面，笔者已经发现不少文章利用近年来大热的机器学习方法对影响材料最终性能的因素进行研究[4]；描述符的理解方面，每种材料体系已经总结出了“各自不同”的物理描述符，但对影响材料性能的物理本质理解还有待加深[5-7]。</p>
+<h1 id="我们能做些什么"><a href="#我们能做些什么" class="headerlink" title="我们能做些什么"></a>我们能做些什么</h1><p>说了那么多，那现象与本质关系的理解能给我们一般的生活带来什么启发呢？</p>
+<p>笔者认为至少应该有两点。</p>
+<p>第一，日常生活中的判断我们应该能够做到<strong><u>多角度听取意见</u></strong>。任何个体、组织所发表的意见言论都是片面的，他们只能从自己的角度去看待一个问题。甚至是新闻媒体，也无法回避（如政治倾向）。或许他们本意不坏，但人类认识事物、做成判断的片面性物理本质已经限制了其作出完全立体判断的能力。所以好的（或理想的）新闻和学术论文应该能够把相左的意见都陈列出来，并基于此给出自己的判断。这就给读者留下了自己独立判断的空间（笔者认为，个体独立思考的空间总是有的，不过是个体进入的难度有差异）。</p>
+<p>第二，在获得多角度意见后，我们还应该<strong><u>多角度分析问题</u></strong>。由于个体受到所处环境和所受教育等因素的限制，作出完全客观无偏见的判断是十分困难的。但这不意味着我们不能去追求一种相对理性客观的思考方式。当我们意识到自己已经具有某种偏见，或者已经盲从大流时，就应该提醒自己需要从另一个角度去思考问题了。在最近大热的电影《我不是药神》中，就涉及了多个利益角度。从人民角度来说，药企制定的过高药价是不人道的行为；从药企角度来说，需要制定足够高的药价，以维持给研发人员提供的有吸引力的工资，从而持续进行新药的研发；从政府的角度来说，每个阶段社会所面对的主要矛盾都有所不同，同时保证人民的生命权益和药企的可持续发展并不是一朝一夕就能完成的。虽然对问题的全面（多角度）分析并不意味着能够解决问题本身（矛盾无处不在），但却可以从根本上为我们提供对问题更深入的理解。</p>
+<hr>
+<p>以上便是笔者近日对“现象与本质”关系的一些微小的思考。</p>
+<p>欢迎各位读者提出意见与建议！</p>
+<p>Email: mozheyang@outlook.com</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Zhou P, Han X, Morariu V I, et al. Learning rich features for image manipulation detection[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018: 1053-1061.</p>
+<p>[2] Su J, Vargas D V, Sakurai K. One pixel attack for fooling deep neural networks[J]. IEEE Transactions on Evolutionary Computation, 2019, 23(5): 828-841.</p>
+<p>[3] Li P, Liang X, Jia D, et al. Semantic-aware grad-gan for virtual-to-real urban scene adaption[J]. arXiv preprint arXiv:1801.01726, 2018.</p>
+<p>[4] Jonayat, A. S. M.; Janik, M. J.; Senftle, T. P. Interaction Trends between Single Metal Atoms and Oxide Supports Identified with Density Functional Theory and Statistical Learning. Nat. Catal. 2018.</p>
+<p>[5] Suntivich, J.; Gasteiger, H. A.; Yabuuchi, N.; Nakanishi, H.; Goodenough, J. B.; Shao-Horn, Y. Design Principles for Oxygen-Reduction Activity on Perovskite Oxide Catalysts for Fuel Cells and Metal-Air Batteries. Nat. Chem. 2011, 3 (7), 546–550.</p>
+<p>[6] Wei, C.; Feng, Z.; Scherer, G. G.; Barber, J.; Shao-Horn, Y.; Xu, Z. J. Cations in Octahedral Sites: A Descriptor for Oxygen Electrocatalysis on Transition-Metal Spinels. Adv. Mater. 2017, 29 (23), 1–8.</p>
+<p>[7] Tang, C.; Wang, H. F.; Chen, X.; Li, B. Q.; Hou, T. Z.; Zhang, B.; Zhang, Q.; Titirici, M. M.; Wei, F. Topological Defects in Metal-Free Nanocarbon for Oxygen Electrocatalysis. Advanced Materials. 2016, 7030.</p>
+]]></content>
+      <tags>
+        <tag>Thought  随想</tag>
+        <tag>Information Science &amp; Technology  信息科学与技术</tag>
+        <tag>Material  材料</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PPT Design | PPT设计资源整合</title>
     <url>/2017/05/29/PPTDesign/</url>
     <content><![CDATA[<p>最后更新时间2017年5月29日。<br><img src="http://mozheyang.top/images/gif/content.gif" alt=""> </p>
@@ -2260,65 +2319,6 @@ $$
         <tag>Updating  持续更新中...</tag>
         <tag>Resources  资源</tag>
         <tag>PPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>横看成岭侧成峰 | 理工科思维论现象与本质</title>
-    <url>/2018/07/22/PhenoNature/</url>
-    <content><![CDATA[<p>众所周知，现象不等于本质。所谓“本质”，一定是隐藏在现象背后的“真理”。</p>
-<p>但如果现象与本质不同，那二者又究竟是何种关系呢？为什么我们需要透过现象才能看到本质，而不能直接看到本质？</p>
-<p>笔者最近看到一篇文章，又重新思考起这个问题来。</p>
-<a id="more"></a>
-<h1 id="人类思维？计算机思维？"><a href="#人类思维？计算机思维？" class="headerlink" title="人类思维？计算机思维？"></a>人类思维？计算机思维？</h1><p>这篇文章介绍了计算机视觉领域中的一种识别PS处理过的图片的方法[1]。文中通过对原图（Authentic image）和修改图（Tampered image）进行运算，获取了二者的噪声谱（Noise map）。再通过模型识别出噪声谱中的异常来对异常增加（或减少）的物体进行识别。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv1.png" alt=""></p>
-<p>如上图，PS中被增加或者减少的物体都逃不过这种算法的“火眼金睛”。这似乎让人们觉得，计算机实在是比人类强大很多，人类都不能分辨真假的东西，却仍然逃不过计算机的眼睛。</p>
-<p>但我们也应该认识到，计算机也是可以被欺骗的。我们人类至少不会因为一个或几个像素的改变而轻易改变对一个图像的判断。但目前的计算机人工智能会。一些具有明确意义的图片，通过一个像素的改变就可以显著降低计算机（现有深度学习算法）对其识别率[2]。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv2.png" alt=""></p>
-<p>对无明确意义的图片，也可以通过一个像素点的改变欺骗计算机，将其归于任何一个分类（近乎100%的置信度）[2]。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv3.png" alt=""></p>
-<p>在以上研究的基础上，我们也开始质疑计算机的可靠性了。不过，在这个世界上还真是没有什么东西是完全靠谱的。在笔者狭隘的眼中，还是会认为，普遍地计算机会比人类更靠谱些。毕竟人类比计算机更容易被欺骗，例如目前发展很快的GAN（生成式对抗网络）技术，可以极其方便地生成以假乱真的图片[3]。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv4.png" alt=""></p>
-<p>你真的能相信图中虚拟世界（Virtural world）不是真实世界（Real world）吗？</p>
-<p>当然，我们不需要对此感到绝望。因为这个世界本就是如此。</p>
-<p>我们人类的思维与计算机的思维是<strong><u>看待世界的不同角度</u></strong>。</p>
-<p>而真理，永远隐藏在我们所看到的现象背后。</p>
-<h1 id="现象与本质的量子物理意义"><a href="#现象与本质的量子物理意义" class="headerlink" title="现象与本质的量子物理意义"></a>现象与本质的量子物理意义</h1><p>测量（Measurement）是需要通过干扰我们所需测量的系统，获得其干扰反馈，从而实现分析我们感兴趣系统内部信息的一个过程。如果说$A$是一个需要我们测量的系统，$M$是我们测量$A$时所采用的一种（干扰）方法，而$B$是我们最终的测量结果。那么三者之间的关系可以被表示为</p>
-<script type="math/tex; mode=display">
-B = MA</script><p>在公式中，$M$可以理解为算符，其作用在$A$这个对象上，结果是获得了$B$这个对象。很好理解对不对？</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/seeThings.png" alt=""></p>
-<p>我们能够看到东西，也正是通过<strong>光作用于我们关注的物体并与之作用，我们利用眼睛接收到光信号，最终大脑对光信号作出处理和判断</strong>的这样一个过程。在这个现实过程中，我们关注的物体是$A$，光（包括其所经历的一切过程）是$M$，而我们大脑最终接收到的信号是$B$。容易理解，因为经过了<strong>复杂</strong>方法$M$的作用，$A$与$B$在<strong>大多数情况下</strong>都是难以相等的（理论上存在相等的可能，但目前在现实世界中没有遇到过二者相等的例子）。</p>
-<p>如果简单地，将$A$、$B$对象看作向量，$M$算符看作矩阵，那么当且仅当$M$为单位矩阵时，可以满足$A=B$。这时可以实现所谓“现象即本质”。但这在现实生活中并没有被观测的例子。可以理解，当$M$可以为任何算符，其取单位矩阵值的可能性无限趋近于零。</p>
-<h1 id="线性代数与现象本质的关系"><a href="#线性代数与现象本质的关系" class="headerlink" title="线性代数与现象本质的关系"></a>线性代数与现象本质的关系</h1><p>从数学角度来看，$M$算符属于一种变换（Transform）。那么$B = MA$可以看作是一种<strong>降维（投影）变换</strong>。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/projection.png" alt=""></p>
-<p>从上图中简单的二维投影一维的例子中，我们不难得知，降维会损失维度信息（从x、y坐标到只剩下x坐标）。低维度信息难以完美重构高维度的情况。正如上图，只从x轴上的投影无法得知是以上哪种二维图线投影得到的。当然，如果我们再获得了二维图线在y轴上的投影，那么就可以重构出原来的二维图线了。这也正是我们需要<strong>多角度看待事物</strong>的原因。</p>
-<p>另外，从上图我们还可以得到启发：当各观测角度相互正交（相互独立，毫不相关）时，我们能够在最少的观测次数下得到事物的“本质”。当然这是后话了。</p>
-<h1 id="给我们带来启发"><a href="#给我们带来启发" class="headerlink" title="给我们带来启发"></a>给我们带来启发</h1><p>作为一个材料科研工作者，笔者还希望从自然科学发展的角度思考思考我们能够前进的方向。</p>
-<p>生物信息中基因组的利用最初是从孟德尔遗传定律开始的。笔者认为这个思想的基础是“确定的基因决定了生物的特性”。这与材料科学中“成分结构决定性能”的理论基础不谋而合。</p>
-<p>在电催化研究中，我们常使用“描述符（descriptor）”尝试对电极催化剂的催化活性进行“描述”。从线性代数的角度上说，也可以说，它是在试图做一种“投影”。把复杂无比的影响催化活性的各种因素，全都包含在一个“描述符”中去。那这个描述符可以认为是各种混杂因素在催化活性这个角度的一个投影。</p>
-<p>在计算机优化算法中，有些目标优化函数会过于复杂，会占用很长的机时才能得到答案，也就是寻找最优解所需机时以及最优解。针对此，我们可以采用较简单的代价估计函数来替代目标优化函数，进行一个机时估计，从而缩短调试算法的时间。</p>
-<p>在材料研究中，我们实际也面临着这样一个规模巨大的优化问题。我们在思考，何种成分，何种工艺处理，在何种条件下，能够获得期望的最佳材料性能。这么说来，材料与计算机都使用“炼丹”的原理，但到底是什么限制了材料学科的发展速度呢？笔者认为是<strong><u>反馈速度</u></strong>。计算机学科拥有相对更确定的物理规律，也就能够拥有对目标函数更好的掌控能力。这意味着，“代价估计函数来替代目标优化函数”的这条道路对计算机学科来说是相对容易的。但对自然科学，如材料学科来说，不然。材料缺少的就是这样一个（更准确说是”多个“）好用的代价估计函数，更本质的，可以认为其也是一种描述符。</p>
-<p>在笔者眼中，高通量计算与高通量实验（材料基因组）的研究工作，正是材料学科模仿生物学科进行的描述符快速搜索的研究工作。找到了材料某种性能的描述符，也即建立起了目标和材料结构参数（或其它可调控参数）之间的桥梁。与工程经验公式同理，这也就意味着该性能在工程上已经具有实际应用的价值（或可能），材料研发速度将会迎来质的飞跃。届时，限制材料研发速度的关键很可能会重新回到计算速度和机械自动化的速度上，极大地解放了材料领域科研人员的劳动力。可以预见，材料（科学与工程）学科将会迎来新的发展机会。</p>
-<p>目前已经有很多研究者在进行着描述符的研究。描述符的发现方面，笔者已经发现不少文章利用近年来大热的机器学习方法对影响材料最终性能的因素进行研究[4]；描述符的理解方面，每种材料体系已经总结出了“各自不同”的物理描述符，但对影响材料性能的物理本质理解还有待加深[5-7]。</p>
-<h1 id="我们能做些什么"><a href="#我们能做些什么" class="headerlink" title="我们能做些什么"></a>我们能做些什么</h1><p>说了那么多，那现象与本质关系的理解能给我们一般的生活带来什么启发呢？</p>
-<p>笔者认为至少应该有两点。</p>
-<p>第一，日常生活中的判断我们应该能够做到<strong><u>多角度听取意见</u></strong>。任何个体、组织所发表的意见言论都是片面的，他们只能从自己的角度去看待一个问题。甚至是新闻媒体，也无法回避（如政治倾向）。或许他们本意不坏，但人类认识事物、做成判断的片面性物理本质已经限制了其作出完全立体判断的能力。所以好的（或理想的）新闻和学术论文应该能够把相左的意见都陈列出来，并基于此给出自己的判断。这就给读者留下了自己独立判断的空间（笔者认为，个体独立思考的空间总是有的，不过是个体进入的难度有差异）。</p>
-<p>第二，在获得多角度意见后，我们还应该<strong><u>多角度分析问题</u></strong>。由于个体受到所处环境和所受教育等因素的限制，作出完全客观无偏见的判断是十分困难的。但这不意味着我们不能去追求一种相对理性客观的思考方式。当我们意识到自己已经具有某种偏见，或者已经盲从大流时，就应该提醒自己需要从另一个角度去思考问题了。在最近大热的电影《我不是药神》中，就涉及了多个利益角度。从人民角度来说，药企制定的过高药价是不人道的行为；从药企角度来说，需要制定足够高的药价，以维持给研发人员提供的有吸引力的工资，从而持续进行新药的研发；从政府的角度来说，每个阶段社会所面对的主要矛盾都有所不同，同时保证人民的生命权益和药企的可持续发展并不是一朝一夕就能完成的。虽然对问题的全面（多角度）分析并不意味着能够解决问题本身（矛盾无处不在），但却可以从根本上为我们提供对问题更深入的理解。</p>
-<hr>
-<p>以上便是笔者近日对“现象与本质”关系的一些微小的思考。</p>
-<p>欢迎各位读者提出意见与建议！</p>
-<p>Email: mozheyang@outlook.com</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Zhou P, Han X, Morariu V I, et al. Learning rich features for image manipulation detection[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018: 1053-1061.</p>
-<p>[2] Su J, Vargas D V, Sakurai K. One pixel attack for fooling deep neural networks[J]. IEEE Transactions on Evolutionary Computation, 2019, 23(5): 828-841.</p>
-<p>[3] Li P, Liang X, Jia D, et al. Semantic-aware grad-gan for virtual-to-real urban scene adaption[J]. arXiv preprint arXiv:1801.01726, 2018.</p>
-<p>[4] Jonayat, A. S. M.; Janik, M. J.; Senftle, T. P. Interaction Trends between Single Metal Atoms and Oxide Supports Identified with Density Functional Theory and Statistical Learning. Nat. Catal. 2018.</p>
-<p>[5] Suntivich, J.; Gasteiger, H. A.; Yabuuchi, N.; Nakanishi, H.; Goodenough, J. B.; Shao-Horn, Y. Design Principles for Oxygen-Reduction Activity on Perovskite Oxide Catalysts for Fuel Cells and Metal-Air Batteries. Nat. Chem. 2011, 3 (7), 546–550.</p>
-<p>[6] Wei, C.; Feng, Z.; Scherer, G. G.; Barber, J.; Shao-Horn, Y.; Xu, Z. J. Cations in Octahedral Sites: A Descriptor for Oxygen Electrocatalysis on Transition-Metal Spinels. Adv. Mater. 2017, 29 (23), 1–8.</p>
-<p>[7] Tang, C.; Wang, H. F.; Chen, X.; Li, B. Q.; Hou, T. Z.; Zhang, B.; Zhang, Q.; Titirici, M. M.; Wei, F. Topological Defects in Metal-Free Nanocarbon for Oxygen Electrocatalysis. Advanced Materials. 2016, 7030.</p>
-]]></content>
-      <tags>
-        <tag>Thought  随想</tag>
-        <tag>Information Science &amp; Technology  信息科学与技术</tag>
-        <tag>Material  材料</tag>
       </tags>
   </entry>
   <entry>
@@ -2452,34 +2452,69 @@ Im  <a|G |a> = - \pi \rho_a(E)</script><h1 id="参考文献"><a href="#参考文
       </tags>
   </entry>
   <entry>
-    <title>Kindle神器Calibre | 当RSS碰上Calibre</title>
-    <url>/2017/06/07/RSSCalibre/</url>
-    <content><![CDATA[<p>在之前，笔者跟各位讨论了Calibre在kindle使用过程中的各种便利（<a href="https://mozheyang.top/2017/06/07/KindleCalibre/">Kindle神器Calibre | 电子书管理 &amp; 无线同步书籍</a>）。这一次，结合RSS，让我们对Kindle阅读进行重新定义：kindle不再是一个只能阅读“书籍”的机器，它还可以成为一个优秀的现代信息接收终端。</p>
+    <title>即刻已失效 - RSS信息聚合 | 让信息世界更纯粹</title>
+    <url>/2017/06/03/RSSFeed/</url>
+    <content><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>为什么我们会离不开手机？</p>
 <a id="more"></a>
-<p>Calibre的信息流如何建立？<br><strong>抓取新闻</strong>。</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_CalibrePreNews.png" alt=""></p>
-<h1 id="接收新闻"><a href="#接收新闻" class="headerlink" title="接收新闻"></a>接收新闻</h1><p>我们可以先从Calibre预设的一些新闻源开始，让新闻流向kindle。让我们先从“定制新闻下载”里的“The Guardian（卫报）”开始。</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_Guardian.png" alt=""></p>
-<p>像上图一样勾选“计划下载”就可以了，是不是很简单？</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsPlaned.png" alt=""></p>
-<p>然后所有已设置的新闻源就在“已计划”下拉菜单中显示出来了。<br>如果不想等待计划日期再给kindle，可以马上回首页，选择“下载所有设置了定期下载的新闻源”就可以了。</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsDownload.png" alt=""></p>
-<p>让Kindle与世界连通，就是这么简单。</p>
-<h1 id="创建自定义新闻源"><a href="#创建自定义新闻源" class="headerlink" title="创建自定义新闻源"></a>创建自定义新闻源</h1><p>GEEK是不会喜欢只有“预设”的世界的。他们总喜欢搞一些自定义有个性的东西。</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_CalibreNewsCustom.png" alt=""></p>
-<p>如果想要自定义新闻源，那就从选择“添加自定义新闻源”开始。</p>
-<p>RSS就可以设置为一类新闻源了。</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsCustom1.png" alt=""></p>
-<p>接下来，我们就可以在“自定义”下拉菜单中找到对应的自定义新闻源了。</p>
-<p>也是非常的简单。</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsCustom2.png" alt=""></p>
-<p>这时候自定义新闻源已经与Calibre预设的新闻源没有什么不同了，同样可以设置“计划下载”。</p>
-<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsCustom3.png" alt=""></p>
-<p>Then, enjoy your Kindle！</p>
+<p>笔者以为，一个很重要的原因是手机给我们提供了一个互联网“窗口”。通过这个窗口，我们可以得到足够丰富的最新信息，从而使得我们感觉自己仿佛与世界是时刻连通的。</p>
+<p>但对于正常人来说，把时间都花在手机无穷无尽的信息上，显然不是明智之举。</p>
+<p>信息不是知识。如果不能很好地处理爆炸的信息，那么时间浪费了，到头来我们也不会收获有价值的信息。</p>
+<p>于是<strong>RSS（ 简易资讯聚合，一种消息来源格式规范，用以聚合经常发布更新资料的网站  ）</strong>出现了，</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_blog.png" alt=""> </p>
+<p>从此我们可以只关注那些我们真正想关注的信息。</p>
+<p>对于我们这种未来的科研搬砖工呢，那必然也是也是大有益处的。</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_science.png" alt=""> </p>
+<p><em>上图为Science官网RSS Feed。</em></p>
+<p><img src="http://mozheyang.top/images/RSS/snip_nature.png" alt=""> </p>
+<p><em>上图为Nature官网RSS Feed。</em></p>
+<p>通过RSS Feed，我们可以第一时间收到更新的论文或者目录，感觉自己好像就站在科学的风口浪尖，紧跟科研时尚潮流==！！！</p>
+<p>好吧，先冷静一下…关键还是在于能不能看懂好伐==</p>
+<p>闲话少说，接下来我们就可以开始讨论，具体怎么实现RSS的接受和阅读。这主要是两个问题：一个是找到RSS，一个是阅读RSS。</p>
+<h1 id="寻找RSS源"><a href="#寻找RSS源" class="headerlink" title="寻找RSS源"></a>寻找RSS源</h1><p>这件事情其实不难。一般较大信息网站或者博客都能找到RSS源（虽然可能不太明显，可以Ctrl+F搜索“RSS”）。尤其是当我们看到下面这个图标的时候，</p>
+<p><img src="http://mozheyang.top/images/RSS/icon_RSS.png" alt=""> </p>
+<p>或者是进入了类似下图的RSS feed webpage的时候，</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_science.png" alt=""> </p>
+<p>那我们离最后的RSS源也已经不远了。大家都那么聪明我就不具体细说过程了。</p>
+<p>最后使用浏览器访问RSS源大约是下图这样的：</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_BrowserRSS.png" alt=""></p>
+<p>上图对应：<a href="http://science.sciencemag.org/rss/express.xml" target="_blank" rel="noopener">http://science.sciencemag.org/rss/express.xml</a></p>
+<p>这时候对应的网站就是RSS源的http地址了。在这里给刚入门的小伙伴们推荐一个RSS源的集合：<a href="https://www.zhihu.com/question/19580096" target="_blank" rel="noopener">知乎 - 你必读的 RSS 订阅源有哪些？</a> </p>
+<h1 id="阅读RSS"><a href="#阅读RSS" class="headerlink" title="阅读RSS"></a>阅读RSS</h1><p>考虑到目前主流的阅读硬件，可以分为以下三个平台分别进行讨论。</p>
+<h2 id="Windows个人电脑"><a href="#Windows个人电脑" class="headerlink" title="Windows个人电脑"></a>Windows个人电脑</h2><p>在这里推荐一个我正在使用的。</p>
+<blockquote>
+<p>FeedDemon - Free Windows RSS Reader<br><a href="http://www.feeddemon.com/" target="_blank" rel="noopener">http://www.feeddemon.com/</a></p>
+</blockquote>
+<p><img src="http://mozheyang.top/images/RSS/snip_FeedDemon.png" alt=""></p>
+<p>以上是FeedDemon基本界面。可以集中快速阅读大量信息并筛选（标星收藏），充分体现了RSS信息聚合的优点。</p>
+<h2 id="手机"><a href="#手机" class="headerlink" title="手机"></a>手机</h2><blockquote>
+<p>即刻</p>
+</blockquote>
+<p>可以到移动端应用商店下载。</p>
+<p>其实我更喜欢之前没更新时候那个灰色很GEEK的配色。</p>
+<p><img src="http://mozheyang.top/images/RSS/icon_gray.png" alt=""></p>
+<p>现在这个gay里gay气的黄色icon算个…香蕉吗？</p>
+<p><img src="http://mozheyang.top/images/RSS/icon_yellow.png" alt=""></p>
+<p>吐槽归吐槽，其可自定义的RSS聚合机器人那还是挺好用的~</p>
+<p><img src="http://mozheyang.top/images/RSS/phone_Robots.jpg" alt=""></p>
+<p>追微信公众号、微博、豆瓣、知乎…那都是棒棒的！</p>
+<p><img src="http://mozheyang.top/images/RSS/phone_RobotRSS.jpg" alt=""></p>
+<p>支持自定义RSS！作为喜欢折腾自定的GEEK用户感到很是欣慰。</p>
+<h2 id="Kindle"><a href="#Kindle" class="headerlink" title="Kindle"></a>Kindle</h2><blockquote>
+<p>Calibre</p>
+</blockquote>
+<p>经常被Kindle粉们奉为神器。</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_calibre.png" alt=""></p>
+<p><em>Calibre基本界面。</em></p>
+<p><img src="http://mozheyang.top/images/RSS/snip_CalibreNews.png" alt=""></p>
+<p>可定义收集下载新闻，并自动发送到Kindle邮箱。</p>
+<p><img src="http://mozheyang.top/images/RSS/snip_CalibreCustom.png" alt=""></p>
+<p>还可以自己定义RSS，要不然怎能深得我心呢。</p>
+<p>关于使用Calibre阅读RSS的更详细的教程写在这里<a href="https://mozheyang.top/2017/06/07/RSSCalibre/">Kindle神器Calibre | 当RSS碰上Calibre</a>。</p>
+<p>本文未接受任何广告费用，纯属安利。<br>如果喜欢的话，请邮件鼓励我哦 :)<br>个人邮箱：mozheyang@outlook.com。</p>
+<p>感谢大家的支持。</p>
 ]]></content>
       <tags>
         <tag>Information Science &amp; Technology  信息科学与技术</tag>
-        <tag>Kindle</tag>
       </tags>
   </entry>
   <entry>
@@ -2630,69 +2665,34 @@ Im  <a|G |a> = - \pi \rho_a(E)</script><h1 id="参考文献"><a href="#参考文
       </tags>
   </entry>
   <entry>
-    <title>即刻已失效 - RSS信息聚合 | 让信息世界更纯粹</title>
-    <url>/2017/06/03/RSSFeed/</url>
-    <content><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>为什么我们会离不开手机？</p>
+    <title>Kindle神器Calibre | 当RSS碰上Calibre</title>
+    <url>/2017/06/07/RSSCalibre/</url>
+    <content><![CDATA[<p>在之前，笔者跟各位讨论了Calibre在kindle使用过程中的各种便利（<a href="https://mozheyang.top/2017/06/07/KindleCalibre/">Kindle神器Calibre | 电子书管理 &amp; 无线同步书籍</a>）。这一次，结合RSS，让我们对Kindle阅读进行重新定义：kindle不再是一个只能阅读“书籍”的机器，它还可以成为一个优秀的现代信息接收终端。</p>
 <a id="more"></a>
-<p>笔者以为，一个很重要的原因是手机给我们提供了一个互联网“窗口”。通过这个窗口，我们可以得到足够丰富的最新信息，从而使得我们感觉自己仿佛与世界是时刻连通的。</p>
-<p>但对于正常人来说，把时间都花在手机无穷无尽的信息上，显然不是明智之举。</p>
-<p>信息不是知识。如果不能很好地处理爆炸的信息，那么时间浪费了，到头来我们也不会收获有价值的信息。</p>
-<p>于是<strong>RSS（ 简易资讯聚合，一种消息来源格式规范，用以聚合经常发布更新资料的网站  ）</strong>出现了，</p>
-<p><img src="http://mozheyang.top/images/RSS/snip_blog.png" alt=""> </p>
-<p>从此我们可以只关注那些我们真正想关注的信息。</p>
-<p>对于我们这种未来的科研搬砖工呢，那必然也是也是大有益处的。</p>
-<p><img src="http://mozheyang.top/images/RSS/snip_science.png" alt=""> </p>
-<p><em>上图为Science官网RSS Feed。</em></p>
-<p><img src="http://mozheyang.top/images/RSS/snip_nature.png" alt=""> </p>
-<p><em>上图为Nature官网RSS Feed。</em></p>
-<p>通过RSS Feed，我们可以第一时间收到更新的论文或者目录，感觉自己好像就站在科学的风口浪尖，紧跟科研时尚潮流==！！！</p>
-<p>好吧，先冷静一下…关键还是在于能不能看懂好伐==</p>
-<p>闲话少说，接下来我们就可以开始讨论，具体怎么实现RSS的接受和阅读。这主要是两个问题：一个是找到RSS，一个是阅读RSS。</p>
-<h1 id="寻找RSS源"><a href="#寻找RSS源" class="headerlink" title="寻找RSS源"></a>寻找RSS源</h1><p>这件事情其实不难。一般较大信息网站或者博客都能找到RSS源（虽然可能不太明显，可以Ctrl+F搜索“RSS”）。尤其是当我们看到下面这个图标的时候，</p>
-<p><img src="http://mozheyang.top/images/RSS/icon_RSS.png" alt=""> </p>
-<p>或者是进入了类似下图的RSS feed webpage的时候，</p>
-<p><img src="http://mozheyang.top/images/RSS/snip_science.png" alt=""> </p>
-<p>那我们离最后的RSS源也已经不远了。大家都那么聪明我就不具体细说过程了。</p>
-<p>最后使用浏览器访问RSS源大约是下图这样的：</p>
-<p><img src="http://mozheyang.top/images/RSS/snip_BrowserRSS.png" alt=""></p>
-<p>上图对应：<a href="http://science.sciencemag.org/rss/express.xml" target="_blank" rel="noopener">http://science.sciencemag.org/rss/express.xml</a></p>
-<p>这时候对应的网站就是RSS源的http地址了。在这里给刚入门的小伙伴们推荐一个RSS源的集合：<a href="https://www.zhihu.com/question/19580096" target="_blank" rel="noopener">知乎 - 你必读的 RSS 订阅源有哪些？</a> </p>
-<h1 id="阅读RSS"><a href="#阅读RSS" class="headerlink" title="阅读RSS"></a>阅读RSS</h1><p>考虑到目前主流的阅读硬件，可以分为以下三个平台分别进行讨论。</p>
-<h2 id="Windows个人电脑"><a href="#Windows个人电脑" class="headerlink" title="Windows个人电脑"></a>Windows个人电脑</h2><p>在这里推荐一个我正在使用的。</p>
-<blockquote>
-<p>FeedDemon - Free Windows RSS Reader<br><a href="http://www.feeddemon.com/" target="_blank" rel="noopener">http://www.feeddemon.com/</a></p>
-</blockquote>
-<p><img src="http://mozheyang.top/images/RSS/snip_FeedDemon.png" alt=""></p>
-<p>以上是FeedDemon基本界面。可以集中快速阅读大量信息并筛选（标星收藏），充分体现了RSS信息聚合的优点。</p>
-<h2 id="手机"><a href="#手机" class="headerlink" title="手机"></a>手机</h2><blockquote>
-<p>即刻</p>
-</blockquote>
-<p>可以到移动端应用商店下载。</p>
-<p>其实我更喜欢之前没更新时候那个灰色很GEEK的配色。</p>
-<p><img src="http://mozheyang.top/images/RSS/icon_gray.png" alt=""></p>
-<p>现在这个gay里gay气的黄色icon算个…香蕉吗？</p>
-<p><img src="http://mozheyang.top/images/RSS/icon_yellow.png" alt=""></p>
-<p>吐槽归吐槽，其可自定义的RSS聚合机器人那还是挺好用的~</p>
-<p><img src="http://mozheyang.top/images/RSS/phone_Robots.jpg" alt=""></p>
-<p>追微信公众号、微博、豆瓣、知乎…那都是棒棒的！</p>
-<p><img src="http://mozheyang.top/images/RSS/phone_RobotRSS.jpg" alt=""></p>
-<p>支持自定义RSS！作为喜欢折腾自定的GEEK用户感到很是欣慰。</p>
-<h2 id="Kindle"><a href="#Kindle" class="headerlink" title="Kindle"></a>Kindle</h2><blockquote>
-<p>Calibre</p>
-</blockquote>
-<p>经常被Kindle粉们奉为神器。</p>
-<p><img src="http://mozheyang.top/images/RSS/snip_calibre.png" alt=""></p>
-<p><em>Calibre基本界面。</em></p>
-<p><img src="http://mozheyang.top/images/RSS/snip_CalibreNews.png" alt=""></p>
-<p>可定义收集下载新闻，并自动发送到Kindle邮箱。</p>
-<p><img src="http://mozheyang.top/images/RSS/snip_CalibreCustom.png" alt=""></p>
-<p>还可以自己定义RSS，要不然怎能深得我心呢。</p>
-<p>关于使用Calibre阅读RSS的更详细的教程写在这里<a href="https://mozheyang.top/2017/06/07/RSSCalibre/">Kindle神器Calibre | 当RSS碰上Calibre</a>。</p>
-<p>本文未接受任何广告费用，纯属安利。<br>如果喜欢的话，请邮件鼓励我哦 :)<br>个人邮箱：mozheyang@outlook.com。</p>
-<p>感谢大家的支持。</p>
+<p>Calibre的信息流如何建立？<br><strong>抓取新闻</strong>。</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_CalibrePreNews.png" alt=""></p>
+<h1 id="接收新闻"><a href="#接收新闻" class="headerlink" title="接收新闻"></a>接收新闻</h1><p>我们可以先从Calibre预设的一些新闻源开始，让新闻流向kindle。让我们先从“定制新闻下载”里的“The Guardian（卫报）”开始。</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_Guardian.png" alt=""></p>
+<p>像上图一样勾选“计划下载”就可以了，是不是很简单？</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsPlaned.png" alt=""></p>
+<p>然后所有已设置的新闻源就在“已计划”下拉菜单中显示出来了。<br>如果不想等待计划日期再给kindle，可以马上回首页，选择“下载所有设置了定期下载的新闻源”就可以了。</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsDownload.png" alt=""></p>
+<p>让Kindle与世界连通，就是这么简单。</p>
+<h1 id="创建自定义新闻源"><a href="#创建自定义新闻源" class="headerlink" title="创建自定义新闻源"></a>创建自定义新闻源</h1><p>GEEK是不会喜欢只有“预设”的世界的。他们总喜欢搞一些自定义有个性的东西。</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_CalibreNewsCustom.png" alt=""></p>
+<p>如果想要自定义新闻源，那就从选择“添加自定义新闻源”开始。</p>
+<p>RSS就可以设置为一类新闻源了。</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsCustom1.png" alt=""></p>
+<p>接下来，我们就可以在“自定义”下拉菜单中找到对应的自定义新闻源了。</p>
+<p>也是非常的简单。</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsCustom2.png" alt=""></p>
+<p>这时候自定义新闻源已经与Calibre预设的新闻源没有什么不同了，同样可以设置“计划下载”。</p>
+<p><img src="http://mozheyang.top/images/RSSCalibre/snip_NewsCustom3.png" alt=""></p>
+<p>Then, enjoy your Kindle！</p>
 ]]></content>
       <tags>
         <tag>Information Science &amp; Technology  信息科学与技术</tag>
+        <tag>Kindle</tag>
       </tags>
   </entry>
   <entry>
@@ -2871,21 +2871,77 @@ E_{tot} = \left\{ 2 \sum\limits_\sigma E_\sigma \right\}
       </tags>
   </entry>
   <entry>
-    <title>置顶公告</title>
-    <url>/2201/03/14/TOP/</url>
-    <content><![CDATA[<h1 id="最近更新"><a href="#最近更新" class="headerlink" title="最近更新"></a>最近更新</h1><ul>
-<li>新域名<a href="http://mozheyang.com/" target="_blank" rel="noopener">http://mozheyang.com/</a>已同时启用，预计今年（2020年）底之前将<strong>全部转换为新域名</strong>。</li>
-<li>推荐使用【<strong>网站搜索</strong>】功能。</li>
-<li>已开启【<strong>评论功能</strong>】，快来勾搭！</li>
-<li>【<strong>评论功能</strong>】目前仍处于并可能长期处于测试状态，要想联系博主还是麻烦大家通过邮箱联系我吧。</li>
+    <title>课后回顾 | 晶格热振动模型的初步建立</title>
+    <url>/2017/10/19/SSPlecturenote1/</url>
+    <content><![CDATA[<p><strong>一维单原子链和一维双原子链</strong>的详细推导思路见<a href="http://mozheyang.top/documents/LatticeVibration20171021.pdf">PDF文件</a> :) </p>
+<a id="more"></a>
+<p>欢迎提出任何宝贵的改错、改进意见和建议，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
+<h1 id="一维单原子链"><a href="#一维单原子链" class="headerlink" title="一维单原子链"></a>一维单原子链</h1><p>考虑相邻两个原子之间存在相互作用，只有在平衡位置两原子不受力。于是两原子系统的相互作用可以看做一个弹簧振子。根据以上假设，可以获得以下两个物理表达：</p>
+<ul>
+<li>只考虑相邻原子（左右各一）间的相互作用，忽略原子间的长程作用；</li>
+<li>原子间作用力与相隔距离之间满足胡克定律，即$F=-k\Delta x$.</li>
 </ul>
-<h1 id="热门博客"><a href="#热门博客" class="headerlink" title="热门博客"></a>热门博客</h1><ul>
-<li><a href="http://mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a></li>
-<li><a href="http://mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a></li>
-<li><a href="http://mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a></li>
-<li><a href="http://mozheyang.top/2018/07/22/PhenoNature/">横看成岭侧成峰 | 理工科思维论现象与本质</a></li>
-</ul>
-<a id="more"></a>]]></content>
+<p>可依据上述假设得到表达式：</p>
+<script type="math/tex; mode=display">
+m\ddot{\mu_{n}}=\beta(\mu_{n+1}+\mu_{n-1}-2\mu_{n})</script><p>实际上该方程是个带微分的递归方程，而我们希望求出其通项。若希望求解含n个原子的单原子链，则可根据方程列出n个等式。这样看上去直接求解上式是难以下手的。我们可以先猜测一个解，再去验证其可行性。而这个解，我们猜测其应满足格波方程。</p>
+<h2 id="色散关系"><a href="#色散关系" class="headerlink" title="色散关系"></a>色散关系</h2><script type="math/tex; mode=display">
+\omega^{2}=\frac{4\beta}{m}sin^{2} \left(\frac{1}{2}aq \right)</script><p>上式即为<strong>色散关系（Dispersion Relation）</strong>，描述了电磁波频率会随波数变化而变化的规律。这种现象在光穿透通过五棱镜的时候会体现出来——一束白光“散”成多束彩色的光，因此将该式所表达的规律称为色散关系。</p>
+<h2 id="Born-Von-Karman条件（周期性边界条件）"><a href="#Born-Von-Karman条件（周期性边界条件）" class="headerlink" title="Born-Von Karman条件（周期性边界条件）"></a>Born-Von Karman条件（周期性边界条件）</h2><p>如果需要求解含n个原子的单原子链的n个原子的情况，我们实际需要使用到第n+1个原子的信息。如果需要真的求解该方程，至少要给第n+1个原子定义一个值，即定义边界条件。</p>
+<script type="math/tex; mode=display">
+e^{-i(Naq)}=1</script><p>或者</p>
+<script type="math/tex; mode=display">
+q=-\frac{2 \pi k}{Na}</script><p>其中$k$为整数。上方两式即<strong>Born-Von Karman条件</strong>。</p>
+<h1 id="一维双原子链"><a href="#一维双原子链" class="headerlink" title="一维双原子链"></a>一维双原子链</h1><p>一维双原子链求解过程与一维单原子链类似。其色散关系如下:</p>
+<script type="math/tex; mode=display">
+\omega^{2}= \beta \frac{m+M}{mM}
+\left\{
+1 \pm
+\left[1- \frac{4mM}{(m+M)^2}sin^{2}aq \right]^{1/2}
+\right\}</script><h2 id="长波极限"><a href="#长波极限" class="headerlink" title="长波极限"></a>长波极限</h2><p>长波极限即为考虑波数$q \rightarrow 0$时的极限情况。声学支和光学支在长波极限下的示意图[2]如下所示：</p>
+<p><img src="http://mozheyang.top/images/SSPlecturenote1/OAbranch.png" alt=""></p>
+<p>由以下对长声学支和长光学支的讨论可知：长声学支中两类原子振动完全一致，其格波与连续介质中的弹性波性质基本相同；长光学支中两类原子发生相对振动，会产生偶极矩，从而影响其光学性质（与电磁波相互作用）。</p>
+<h3 id="长声学支"><a href="#长声学支" class="headerlink" title="长声学支"></a>长声学支</h3><p>长波极限下，声学支中两原子振幅有如下关系</p>
+<script type="math/tex; mode=display">
+\left( \frac{B}{A} \right)_{-}
+\approx -\frac{0 - 2\beta}{2\beta \cdot 1}
+=1</script><h3 id="长光学支"><a href="#长光学支" class="headerlink" title="长光学支"></a>长光学支</h3><p>长波极限下，光学支中两原子振幅有如下关系</p>
+<script type="math/tex; mode=display">
+\left( \frac{B}{A} \right)_{+}
+\approx -\frac{2\beta \frac{m+M}{M} - 2\beta}{2\beta \cdot 1}
+=-\frac{m}{M}</script><h1 id="三维晶格——一维原子链的推广"><a href="#三维晶格——一维原子链的推广" class="headerlink" title="三维晶格——一维原子链的推广"></a>三维晶格——一维原子链的推广</h1><p>求解3n个线性齐次方程的有解条件方程，可得3n个解。具体地，在长波极限，$q \rightarrow 0$时，有3个解满足$\omega \propto q$，与弹性波相同，这3个格波频率属于声学支；而其余解描述了n个格子间的相对振动，即有（3n-3）个频率属于光学支。</p>
+<p><strong>推广：</strong>对于复式晶格，若每个原胞有n个原子，则对应3n支格波。其中3支为声学支，（3n-3）支为光学支。</p>
+<h2 id="周期性边界条件"><a href="#周期性边界条件" class="headerlink" title="周期性边界条件"></a>周期性边界条件</h2><p>对第i支格波，设有两个波矢$\vec{q}$和$\vec{q’}$所描述的晶格振动状态完全相同，有</p>
+<script type="math/tex; mode=display">
+\omega(\vec{q})=\omega(\vec{q'})=\omega(\vec{q} \pm \vec{G}_{n})</script><p>第一布里渊区外的波矢所代表的振动模式只不过是第一布里渊区内的波矢所代表的模式的<strong>重复</strong>。当格波的波矢超出第一布里渊区时，必须平移<strong>一个适当的倒易点阵矢量</strong>，再用第一布里渊区内的波矢进行描写。</p>
+<h1 id="离子晶体——三维晶格规律应用"><a href="#离子晶体——三维晶格规律应用" class="headerlink" title="离子晶体——三维晶格规律应用"></a>离子晶体——三维晶格规律应用</h1><p>长声学波即将晶体中的格波看成连续介质时的弹性波，其满足弹性波的宏观理论方程，即非量子理论方程。黄昆提出，长光学波也可以建立类似的宏观描述方程对其性质进行讨论。</p>
+<h2 id="长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论"><a href="#长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论" class="headerlink" title="长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论"></a>长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论</h2><p>基于<strong>唯象方程（黄昆方程）</strong>讨论长光学波振动。</p>
+<script type="math/tex; mode=display">
+\frac{\omega_{LO}}{\omega_{TO}} = \left[ \frac{\epsilon(0)}{\epsilon(\infty)} \right]^{\frac{1}{2}}</script><p>上式称为<strong>LST（Lyddano-Sachs-Teller）关系</strong>。该关系可以用来估计有效电荷量。因为一般来说，有效电荷量越大，长光学纵波与长光学横波之差越大。</p>
+<h2 id="静电学方程-宏观方程——离子晶体的原子理论"><a href="#静电学方程-宏观方程——离子晶体的原子理论" class="headerlink" title="静电学方程+宏观方程——离子晶体的原子理论"></a>静电学方程+宏观方程——离子晶体的原子理论</h2><p>基于一般原子理论讨论长光学波振动，可建立黄昆方程。</p>
+<script type="math/tex; mode=display">
+\ddot{\vec{W}}=b_{11}\vec{W}+b_{12}\vec{E}
+\vec{P}=b_{21}\vec{W}+b_{22}\vec{E}</script><h2 id="Maxwell电磁方程-宏观方程——离子晶体的光学性质"><a href="#Maxwell电磁方程-宏观方程——离子晶体的光学性质" class="headerlink" title="Maxwell电磁方程+宏观方程——离子晶体的光学性质"></a>Maxwell电磁方程+宏观方程——离子晶体的光学性质</h2><p>以上部分通过联立原子振动的宏观力学方程与静电方程，可以得到长光学波的宏观描述方程。而实际晶格振动中，长光学波中带电相反离子产生相对振动，会产生一定的偶极矩，从而长光学波与电磁波的相互作用便不可忽略。</p>
+<p>沿着这个思路，我们可以将Maxwell电磁方程与原子振动的宏观力学方程相联立，从而获得考虑长光学波与电磁波的相互作用的离子晶体的原子理论。晶体相对介电常数$\epsilon(\omega)$被定义如下：</p>
+<script type="math/tex; mode=display">
+\vec{D}=\epsilon_{0}\vec{E}+\vec{P}</script><p>$\epsilon(\omega)$可以被分为两个部分，右边一项为晶格振动对晶体介电常数的贡献</p>
+<script type="math/tex; mode=display">
+\epsilon(\omega)=\epsilon(\infty)
++\frac{\epsilon(0)-\epsilon(\infty)}{\omega_{0}^{2}-\omega^{2}-i \omega r}
+\omega_{0}^{2}</script><p>高频介电常数是一个复数，可以写成实部与虚部之和</p>
+<script type="math/tex; mode=display">
+\epsilon(\infty)=\epsilon'(\omega)+i \epsilon''(\omega)</script><p>其中<strong>虚部</strong>与晶体内耗散有关</p>
+<script type="math/tex; mode=display">
+\epsilon''(\omega)
+=\frac{\omega r}{(\omega_{0}^{2}-\omega^{2})^{2}-\omega^{2}r^{2}}
+[\epsilon(0)-\epsilon(\infty)] \omega_{0}^{2}</script><p>吸收功率正比于介电常数的虚部。在$\omega=\omega_{0}$时，介电常数虚部取最大值，即吸收功率取最大值。这意味着，在$\omega=\omega_{0}$处有一个吸收峰。根据文献[1]所说，该峰宽度为$\omega r$（有待理解）. </p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 黄昆, 韩汝琦(改). 固体物理学[M]. 高等教育出版社, 1988.<br>[2] Kittel C. Introduction to Solid State Physics, 8th Edition[J]. American Journal of Physics, 2005, 21(8):547-548.</p>
+]]></content>
+      <categories>
+        <category>Lecture Notes  课程知识回顾</category>
+      </categories>
+      <tags>
+        <tag>Physics  物理</tag>
+      </tags>
   </entry>
   <entry>
     <title>课后回顾 | 热容、热膨胀与热传导</title>
@@ -2920,6 +2976,23 @@ Z=\frac{1}{3}C_{V} \nu_{0} \lambda</script>]]></content>
       <tags>
         <tag>Physics  物理</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>置顶公告</title>
+    <url>/2201/03/14/TOP/</url>
+    <content><![CDATA[<h1 id="最近更新"><a href="#最近更新" class="headerlink" title="最近更新"></a>最近更新</h1><ul>
+<li>新域名<a href="http://mozheyang.com/" target="_blank" rel="noopener">http://mozheyang.com/</a>已同时启用，预计今年（2020年）底之前将<strong>全部转换为新域名</strong>。</li>
+<li>推荐使用【<strong>网站搜索</strong>】功能。</li>
+<li>已开启【<strong>评论功能</strong>】，快来勾搭！</li>
+<li>【<strong>评论功能</strong>】目前仍处于并可能长期处于测试状态，要想联系博主还是麻烦大家通过邮箱联系我吧。</li>
+</ul>
+<h1 id="热门博客"><a href="#热门博客" class="headerlink" title="热门博客"></a>热门博客</h1><ul>
+<li><a href="http://mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a></li>
+<li><a href="http://mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a></li>
+<li><a href="http://mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a></li>
+<li><a href="http://mozheyang.top/2018/07/22/PhenoNature/">横看成岭侧成峰 | 理工科思维论现象与本质</a></li>
+</ul>
+<a id="more"></a>]]></content>
   </entry>
   <entry>
     <title>The Application of Titanium for Photoreduction of Carbon Dioxide</title>
@@ -3036,6 +3109,27 @@ Z=\frac{1}{3}C_{V} \nu_{0} \lambda</script>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>值得推荐 | Awesome Android Software</title>
+    <url>/2018/02/10/awesomeAndroidApp/</url>
+    <content><![CDATA[<p>最后更新时间：2018年2月10日</p>
+<p>欢迎讨论交流！笔者联系方式如下。<br>Email: mozheyang@outlook.com</p>
+<a id="more"></a>
+<h1 id="Podcast-Addict"><a href="#Podcast-Addict" class="headerlink" title="Podcast Addict"></a>Podcast Addict</h1><p>RSS音频订阅工具。每天都可以听到最新的BBC、NPR、Economist新闻音频更新，另外搞科研的同学们还能订阅Science、Nature的音频，想想就觉得自己跟国际前沿接轨了呢！PS：IOS用户就不用折腾啦，乔爸爸已经给大家提供了好用的Podcast（播客）。</p>
+<p><img src="http://mozheyang.top/images/awesomeAPP/snip_RSSpodcast.jpg" alt=""></p>
+<h1 id="扫描全能王"><a href="#扫描全能王" class="headerlink" title="扫描全能王"></a>扫描全能王</h1><p>每每想起那个大家在群里激烈争论我的照片是不是电子版的时候…我心里就忍不住地自豪！没错，我有扫描全能王！并且因为我有<strong>edu教育邮箱</strong>，多享受了<strong>400M的云存储空间</strong>和<strong>免费OCR（光学文字识别）功能</strong>。有了它，以后交个扫描件什么的就不用跑复印店啦！</p>
+<p><img src="http://mozheyang.top/images/awesomeAPP/snip_scan.jpg" alt=""></p>
+<h1 id="Anki"><a href="#Anki" class="headerlink" title="Anki"></a>Anki</h1><p>基于艾宾浩斯记忆曲线的记忆工具。乍一看，好像跟传统的单词记忆工具没什么区别。实际上，Anki可不仅仅可以用来记忆单词~所有<strong>可以通过反复重复记忆的零散知识点</strong>，都可以制作成Anki卡片进行记忆。而单词恰是一种很合适该种记忆方法的材料。开始使用该工具的同学只需记住要坚持即可…肯定会大有收获！</p>
+<h1 id="欧路词典"><a href="#欧路词典" class="headerlink" title="欧路词典"></a>欧路词典</h1><p>MDict词典驱动。这意味着，我的词典不受限于词典提供商了，我只要拥有该词典的MDict文件，什么词典我都可以往词典驱动里加入（包括自定义的MDict词典！例如专业词汇词典…）。拥有词典驱动，还相当于可以同时查<strong>多部词典</strong>的能力，效率杠杠的。</p>
+]]></content>
+      <categories>
+        <category>Treasure  私家珍藏</category>
+      </categories>
+      <tags>
+        <tag>Updating  持续更新中...</tag>
+        <tag>Resources  资源</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>走过那些路 | 张家界见闻 &amp; 攻略</title>
     <url>/2017/07/16/ZhangjiajieTravel/</url>
     <content><![CDATA[<p>本来6月底就结束了的旅行，因为个人问题拖到了今天。在这里要给关心我的读者，还有我自己道个歉。</p>
@@ -3114,90 +3208,24 @@ Z=\frac{1}{3}C_{V} \nu_{0} \lambda</script>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>课后回顾 | 晶格热振动模型的初步建立</title>
-    <url>/2017/10/19/SSPlecturenote1/</url>
-    <content><![CDATA[<p><strong>一维单原子链和一维双原子链</strong>的详细推导思路见<a href="http://mozheyang.top/documents/LatticeVibration20171021.pdf">PDF文件</a> :) </p>
+    <title>值得推荐 | Awesome IOS Software</title>
+    <url>/2018/02/25/awesomeIOSapp/</url>
+    <content><![CDATA[<p>最后更新时间：2018年2月25日</p>
+<p>由于笔者目前只使用iPad，因此此处只进行iPad软件的推荐。敬请期待IOS的其它硬件平台软件的更新。欢迎讨论交流！Email: mozheyang@outlook.com</p>
 <a id="more"></a>
-<p>欢迎提出任何宝贵的改错、改进意见和建议，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
-<h1 id="一维单原子链"><a href="#一维单原子链" class="headerlink" title="一维单原子链"></a>一维单原子链</h1><p>考虑相邻两个原子之间存在相互作用，只有在平衡位置两原子不受力。于是两原子系统的相互作用可以看做一个弹簧振子。根据以上假设，可以获得以下两个物理表达：</p>
-<ul>
-<li>只考虑相邻原子（左右各一）间的相互作用，忽略原子间的长程作用；</li>
-<li>原子间作用力与相隔距离之间满足胡克定律，即$F=-k\Delta x$.</li>
-</ul>
-<p>可依据上述假设得到表达式：</p>
-<script type="math/tex; mode=display">
-m\ddot{\mu_{n}}=\beta(\mu_{n+1}+\mu_{n-1}-2\mu_{n})</script><p>实际上该方程是个带微分的递归方程，而我们希望求出其通项。若希望求解含n个原子的单原子链，则可根据方程列出n个等式。这样看上去直接求解上式是难以下手的。我们可以先猜测一个解，再去验证其可行性。而这个解，我们猜测其应满足格波方程。</p>
-<h2 id="色散关系"><a href="#色散关系" class="headerlink" title="色散关系"></a>色散关系</h2><script type="math/tex; mode=display">
-\omega^{2}=\frac{4\beta}{m}sin^{2} \left(\frac{1}{2}aq \right)</script><p>上式即为<strong>色散关系（Dispersion Relation）</strong>，描述了电磁波频率会随波数变化而变化的规律。这种现象在光穿透通过五棱镜的时候会体现出来——一束白光“散”成多束彩色的光，因此将该式所表达的规律称为色散关系。</p>
-<h2 id="Born-Von-Karman条件（周期性边界条件）"><a href="#Born-Von-Karman条件（周期性边界条件）" class="headerlink" title="Born-Von Karman条件（周期性边界条件）"></a>Born-Von Karman条件（周期性边界条件）</h2><p>如果需要求解含n个原子的单原子链的n个原子的情况，我们实际需要使用到第n+1个原子的信息。如果需要真的求解该方程，至少要给第n+1个原子定义一个值，即定义边界条件。</p>
-<script type="math/tex; mode=display">
-e^{-i(Naq)}=1</script><p>或者</p>
-<script type="math/tex; mode=display">
-q=-\frac{2 \pi k}{Na}</script><p>其中$k$为整数。上方两式即<strong>Born-Von Karman条件</strong>。</p>
-<h1 id="一维双原子链"><a href="#一维双原子链" class="headerlink" title="一维双原子链"></a>一维双原子链</h1><p>一维双原子链求解过程与一维单原子链类似。其色散关系如下:</p>
-<script type="math/tex; mode=display">
-\omega^{2}= \beta \frac{m+M}{mM}
-\left\{
-1 \pm
-\left[1- \frac{4mM}{(m+M)^2}sin^{2}aq \right]^{1/2}
-\right\}</script><h2 id="长波极限"><a href="#长波极限" class="headerlink" title="长波极限"></a>长波极限</h2><p>长波极限即为考虑波数$q \rightarrow 0$时的极限情况。声学支和光学支在长波极限下的示意图[2]如下所示：</p>
-<p><img src="http://mozheyang.top/images/SSPlecturenote1/OAbranch.png" alt=""></p>
-<p>由以下对长声学支和长光学支的讨论可知：长声学支中两类原子振动完全一致，其格波与连续介质中的弹性波性质基本相同；长光学支中两类原子发生相对振动，会产生偶极矩，从而影响其光学性质（与电磁波相互作用）。</p>
-<h3 id="长声学支"><a href="#长声学支" class="headerlink" title="长声学支"></a>长声学支</h3><p>长波极限下，声学支中两原子振幅有如下关系</p>
-<script type="math/tex; mode=display">
-\left( \frac{B}{A} \right)_{-}
-\approx -\frac{0 - 2\beta}{2\beta \cdot 1}
-=1</script><h3 id="长光学支"><a href="#长光学支" class="headerlink" title="长光学支"></a>长光学支</h3><p>长波极限下，光学支中两原子振幅有如下关系</p>
-<script type="math/tex; mode=display">
-\left( \frac{B}{A} \right)_{+}
-\approx -\frac{2\beta \frac{m+M}{M} - 2\beta}{2\beta \cdot 1}
-=-\frac{m}{M}</script><h1 id="三维晶格——一维原子链的推广"><a href="#三维晶格——一维原子链的推广" class="headerlink" title="三维晶格——一维原子链的推广"></a>三维晶格——一维原子链的推广</h1><p>求解3n个线性齐次方程的有解条件方程，可得3n个解。具体地，在长波极限，$q \rightarrow 0$时，有3个解满足$\omega \propto q$，与弹性波相同，这3个格波频率属于声学支；而其余解描述了n个格子间的相对振动，即有（3n-3）个频率属于光学支。</p>
-<p><strong>推广：</strong>对于复式晶格，若每个原胞有n个原子，则对应3n支格波。其中3支为声学支，（3n-3）支为光学支。</p>
-<h2 id="周期性边界条件"><a href="#周期性边界条件" class="headerlink" title="周期性边界条件"></a>周期性边界条件</h2><p>对第i支格波，设有两个波矢$\vec{q}$和$\vec{q’}$所描述的晶格振动状态完全相同，有</p>
-<script type="math/tex; mode=display">
-\omega(\vec{q})=\omega(\vec{q'})=\omega(\vec{q} \pm \vec{G}_{n})</script><p>第一布里渊区外的波矢所代表的振动模式只不过是第一布里渊区内的波矢所代表的模式的<strong>重复</strong>。当格波的波矢超出第一布里渊区时，必须平移<strong>一个适当的倒易点阵矢量</strong>，再用第一布里渊区内的波矢进行描写。</p>
-<h1 id="离子晶体——三维晶格规律应用"><a href="#离子晶体——三维晶格规律应用" class="headerlink" title="离子晶体——三维晶格规律应用"></a>离子晶体——三维晶格规律应用</h1><p>长声学波即将晶体中的格波看成连续介质时的弹性波，其满足弹性波的宏观理论方程，即非量子理论方程。黄昆提出，长光学波也可以建立类似的宏观描述方程对其性质进行讨论。</p>
-<h2 id="长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论"><a href="#长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论" class="headerlink" title="长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论"></a>长光学波中的Lyddano-Sachs-Teller（LST）关系——离子晶体的唯象理论</h2><p>基于<strong>唯象方程（黄昆方程）</strong>讨论长光学波振动。</p>
-<script type="math/tex; mode=display">
-\frac{\omega_{LO}}{\omega_{TO}} = \left[ \frac{\epsilon(0)}{\epsilon(\infty)} \right]^{\frac{1}{2}}</script><p>上式称为<strong>LST（Lyddano-Sachs-Teller）关系</strong>。该关系可以用来估计有效电荷量。因为一般来说，有效电荷量越大，长光学纵波与长光学横波之差越大。</p>
-<h2 id="静电学方程-宏观方程——离子晶体的原子理论"><a href="#静电学方程-宏观方程——离子晶体的原子理论" class="headerlink" title="静电学方程+宏观方程——离子晶体的原子理论"></a>静电学方程+宏观方程——离子晶体的原子理论</h2><p>基于一般原子理论讨论长光学波振动，可建立黄昆方程。</p>
-<script type="math/tex; mode=display">
-\ddot{\vec{W}}=b_{11}\vec{W}+b_{12}\vec{E}
-\vec{P}=b_{21}\vec{W}+b_{22}\vec{E}</script><h2 id="Maxwell电磁方程-宏观方程——离子晶体的光学性质"><a href="#Maxwell电磁方程-宏观方程——离子晶体的光学性质" class="headerlink" title="Maxwell电磁方程+宏观方程——离子晶体的光学性质"></a>Maxwell电磁方程+宏观方程——离子晶体的光学性质</h2><p>以上部分通过联立原子振动的宏观力学方程与静电方程，可以得到长光学波的宏观描述方程。而实际晶格振动中，长光学波中带电相反离子产生相对振动，会产生一定的偶极矩，从而长光学波与电磁波的相互作用便不可忽略。</p>
-<p>沿着这个思路，我们可以将Maxwell电磁方程与原子振动的宏观力学方程相联立，从而获得考虑长光学波与电磁波的相互作用的离子晶体的原子理论。晶体相对介电常数$\epsilon(\omega)$被定义如下：</p>
-<script type="math/tex; mode=display">
-\vec{D}=\epsilon_{0}\vec{E}+\vec{P}</script><p>$\epsilon(\omega)$可以被分为两个部分，右边一项为晶格振动对晶体介电常数的贡献</p>
-<script type="math/tex; mode=display">
-\epsilon(\omega)=\epsilon(\infty)
-+\frac{\epsilon(0)-\epsilon(\infty)}{\omega_{0}^{2}-\omega^{2}-i \omega r}
-\omega_{0}^{2}</script><p>高频介电常数是一个复数，可以写成实部与虚部之和</p>
-<script type="math/tex; mode=display">
-\epsilon(\infty)=\epsilon'(\omega)+i \epsilon''(\omega)</script><p>其中<strong>虚部</strong>与晶体内耗散有关</p>
-<script type="math/tex; mode=display">
-\epsilon''(\omega)
-=\frac{\omega r}{(\omega_{0}^{2}-\omega^{2})^{2}-\omega^{2}r^{2}}
-[\epsilon(0)-\epsilon(\infty)] \omega_{0}^{2}</script><p>吸收功率正比于介电常数的虚部。在$\omega=\omega_{0}$时，介电常数虚部取最大值，即吸收功率取最大值。这意味着，在$\omega=\omega_{0}$处有一个吸收峰。根据文献[1]所说，该峰宽度为$\omega r$（有待理解）. </p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 黄昆, 韩汝琦(改). 固体物理学[M]. 高等教育出版社, 1988.<br>[2] Kittel C. Introduction to Solid State Physics, 8th Edition[J]. American Journal of Physics, 2005, 21(8):547-548.</p>
-]]></content>
-      <categories>
-        <category>Lecture Notes  课程知识回顾</category>
-      </categories>
-      <tags>
-        <tag>Physics  物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>值得推荐 | Awesome Android Software</title>
-    <url>/2018/02/10/awesomeAndroidApp/</url>
-    <content><![CDATA[<p>最后更新时间：2018年2月10日</p>
-<p>欢迎讨论交流！笔者联系方式如下。<br>Email: mozheyang@outlook.com</p>
-<a id="more"></a>
-<h1 id="Podcast-Addict"><a href="#Podcast-Addict" class="headerlink" title="Podcast Addict"></a>Podcast Addict</h1><p>RSS音频订阅工具。每天都可以听到最新的BBC、NPR、Economist新闻音频更新，另外搞科研的同学们还能订阅Science、Nature的音频，想想就觉得自己跟国际前沿接轨了呢！PS：IOS用户就不用折腾啦，乔爸爸已经给大家提供了好用的Podcast（播客）。</p>
-<p><img src="http://mozheyang.top/images/awesomeAPP/snip_RSSpodcast.jpg" alt=""></p>
-<h1 id="扫描全能王"><a href="#扫描全能王" class="headerlink" title="扫描全能王"></a>扫描全能王</h1><p>每每想起那个大家在群里激烈争论我的照片是不是电子版的时候…我心里就忍不住地自豪！没错，我有扫描全能王！并且因为我有<strong>edu教育邮箱</strong>，多享受了<strong>400M的云存储空间</strong>和<strong>免费OCR（光学文字识别）功能</strong>。有了它，以后交个扫描件什么的就不用跑复印店啦！</p>
-<p><img src="http://mozheyang.top/images/awesomeAPP/snip_scan.jpg" alt=""></p>
-<h1 id="Anki"><a href="#Anki" class="headerlink" title="Anki"></a>Anki</h1><p>基于艾宾浩斯记忆曲线的记忆工具。乍一看，好像跟传统的单词记忆工具没什么区别。实际上，Anki可不仅仅可以用来记忆单词~所有<strong>可以通过反复重复记忆的零散知识点</strong>，都可以制作成Anki卡片进行记忆。而单词恰是一种很合适该种记忆方法的材料。开始使用该工具的同学只需记住要坚持即可…肯定会大有收获！</p>
-<h1 id="欧路词典"><a href="#欧路词典" class="headerlink" title="欧路词典"></a>欧路词典</h1><p>MDict词典驱动。这意味着，我的词典不受限于词典提供商了，我只要拥有该词典的MDict文件，什么词典我都可以往词典驱动里加入（包括自定义的MDict词典！例如专业词汇词典…）。拥有词典驱动，还相当于可以同时查<strong>多部词典</strong>的能力，效率杠杠的。</p>
+<p>iPad除了可以是一个娱乐工具，同时也可以成为我们学生党、磕盐汪忠实而有效的学习工具、效率工具。今天笔者就给大家推荐两款付费App…买了一直用，真真是真爱！</p>
+<h1 id="MarginNote"><a href="#MarginNote" class="headerlink" title="MarginNote"></a>MarginNote</h1><p>在浮躁的社会，我们拿起电子产品就想要刷社交软件和游戏。就算是想要认真读上一篇文章，却也总会觉得电子产品显示区域的不足的缺点，难以给我们的思想提供任意翱翔的场所。</p>
+<p><strong>思维导图</strong>是深入理解知识结构的利器。笔者第一次了解到思维导图这种思维工具是在大学读了东尼.伯赞（Buzan T.）的思维导图系列丛书之后了。现已经有了不少思维导图构造软件如Xmind、MindManager，网页App中也有百度脑图等可以推荐。</p>
+<p>但上述构造思维导图的方式都<strong>滞后</strong>于阅读。也就是说，我们需要先阅读，甚至有了一定的理解之后，才能将看似混乱的逻辑知识点整理成为思维导图，最后使用上述软件输出。笔者这次给大家推荐的软件，正是针对这个问题，提出了——<strong>阅读过程“收集”，阅读过后“整理”</strong>的解决方案。整个书籍/文献的阅读学习过程变得一气呵成，从而大大提高我们阅读学习的效率。</p>
+<p><img src="http://mozheyang.top/images/awesomeIOS/marginnote.png" alt=""></p>
+<p>目前该软件只有iPad和Mac版本，也就是说Windows PC用户暂时还无法享受到如此好用的一款软件。据说该软件作者（中国人！）已经在着手开发Windows版本的MarginNote，或许2020年的大学生就有机会用上了啊。</p>
+<p>笔者认为现今Windows PC也只有Docear这个开源软件可能与之匹敌，详情请关注笔者博文：<a href="http://mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a>。</p>
+<h1 id="Wordflex"><a href="#Wordflex" class="headerlink" title="Wordflex"></a>Wordflex</h1><p>接触过大量单词背诵（四/六级、托福/雅思、GRE，尤其是GRE）的同学可能会感受到这样一些困难：单词近义词太多，导致记忆混乱；单词意义太过抽象，难以理解；单词书太丑，缺乏艺术感 :)</p>
+<p><strong>单词释义记忆混乱</strong>主要是因为近义词与反义词记忆的混乱。在使用中文理解英文单词时，可能会发现好像好几个单词的中文释义相近甚至相同，但是在英文语境中却不能互换。这时候一个可以表现近义词与反义词联系的工具就会显得很重要。</p>
+<p>在寻找类似单词网络工具的过程中，笔者还发现了WordNet项目与一款名叫Visual Thesaurus的网页App。但最后选择了Wordflex。大家可以很明显地看到它在界面上的优势，使用之后还会感叹他在词库（牛津词典）上的优势。</p>
+<p><img src="http://mozheyang.top/images/awesomeIOS/wordflex.png" alt=""></p>
+<p>通过近义词和反义词，我们可以更立体地理解一个英文单词。在Wordflex中，我们可以通过一个单词从而了解一批近义词——通过轻松的<strong>点击（Tap）</strong>就可以进入下一个单词的单词网络，超值！</p>
+<p>目前该软件只有iPad版本，其他平台可以考虑网页软件Visual Thesaurus. 该网站免费版似乎有查询次数限制，总之还是付费软件更舒心啦。买苹果就为了它平台上的几个好用的软件，也算是值了吧。</p>
 ]]></content>
       <categories>
         <category>Treasure  私家珍藏</category>
@@ -3279,34 +3307,6 @@ q=-\frac{2 \pi k}{Na}</script><p>其中$k$为整数。上方两式即<strong>Bor
       </tags>
   </entry>
   <entry>
-    <title>值得推荐 | Awesome IOS Software</title>
-    <url>/2018/02/25/awesomeIOSapp/</url>
-    <content><![CDATA[<p>最后更新时间：2018年2月25日</p>
-<p>由于笔者目前只使用iPad，因此此处只进行iPad软件的推荐。敬请期待IOS的其它硬件平台软件的更新。欢迎讨论交流！Email: mozheyang@outlook.com</p>
-<a id="more"></a>
-<p>iPad除了可以是一个娱乐工具，同时也可以成为我们学生党、磕盐汪忠实而有效的学习工具、效率工具。今天笔者就给大家推荐两款付费App…买了一直用，真真是真爱！</p>
-<h1 id="MarginNote"><a href="#MarginNote" class="headerlink" title="MarginNote"></a>MarginNote</h1><p>在浮躁的社会，我们拿起电子产品就想要刷社交软件和游戏。就算是想要认真读上一篇文章，却也总会觉得电子产品显示区域的不足的缺点，难以给我们的思想提供任意翱翔的场所。</p>
-<p><strong>思维导图</strong>是深入理解知识结构的利器。笔者第一次了解到思维导图这种思维工具是在大学读了东尼.伯赞（Buzan T.）的思维导图系列丛书之后了。现已经有了不少思维导图构造软件如Xmind、MindManager，网页App中也有百度脑图等可以推荐。</p>
-<p>但上述构造思维导图的方式都<strong>滞后</strong>于阅读。也就是说，我们需要先阅读，甚至有了一定的理解之后，才能将看似混乱的逻辑知识点整理成为思维导图，最后使用上述软件输出。笔者这次给大家推荐的软件，正是针对这个问题，提出了——<strong>阅读过程“收集”，阅读过后“整理”</strong>的解决方案。整个书籍/文献的阅读学习过程变得一气呵成，从而大大提高我们阅读学习的效率。</p>
-<p><img src="http://mozheyang.top/images/awesomeIOS/marginnote.png" alt=""></p>
-<p>目前该软件只有iPad和Mac版本，也就是说Windows PC用户暂时还无法享受到如此好用的一款软件。据说该软件作者（中国人！）已经在着手开发Windows版本的MarginNote，或许2020年的大学生就有机会用上了啊。</p>
-<p>笔者认为现今Windows PC也只有Docear这个开源软件可能与之匹敌，详情请关注笔者博文：<a href="http://mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a>。</p>
-<h1 id="Wordflex"><a href="#Wordflex" class="headerlink" title="Wordflex"></a>Wordflex</h1><p>接触过大量单词背诵（四/六级、托福/雅思、GRE，尤其是GRE）的同学可能会感受到这样一些困难：单词近义词太多，导致记忆混乱；单词意义太过抽象，难以理解；单词书太丑，缺乏艺术感 :)</p>
-<p><strong>单词释义记忆混乱</strong>主要是因为近义词与反义词记忆的混乱。在使用中文理解英文单词时，可能会发现好像好几个单词的中文释义相近甚至相同，但是在英文语境中却不能互换。这时候一个可以表现近义词与反义词联系的工具就会显得很重要。</p>
-<p>在寻找类似单词网络工具的过程中，笔者还发现了WordNet项目与一款名叫Visual Thesaurus的网页App。但最后选择了Wordflex。大家可以很明显地看到它在界面上的优势，使用之后还会感叹他在词库（牛津词典）上的优势。</p>
-<p><img src="http://mozheyang.top/images/awesomeIOS/wordflex.png" alt=""></p>
-<p>通过近义词和反义词，我们可以更立体地理解一个英文单词。在Wordflex中，我们可以通过一个单词从而了解一批近义词——通过轻松的<strong>点击（Tap）</strong>就可以进入下一个单词的单词网络，超值！</p>
-<p>目前该软件只有iPad版本，其他平台可以考虑网页软件Visual Thesaurus. 该网站免费版似乎有查询次数限制，总之还是付费软件更舒心啦。买苹果就为了它平台上的几个好用的软件，也算是值了吧。</p>
-]]></content>
-      <categories>
-        <category>Treasure  私家珍藏</category>
-      </categories>
-      <tags>
-        <tag>Updating  持续更新中...</tag>
-        <tag>Resources  资源</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文献数据库 | BibTeX文件读取的Python实现</title>
     <url>/2019/01/06/bibRead20190106/</url>
     <content><![CDATA[<p>基础知识准备的差不多了。</p>
@@ -3354,48 +3354,6 @@ q=-\frac{2 \pi k}{Na}</script><p>其中$k$为整数。上方两式即<strong>Bor
         <tag>Information Science &amp; Technology  信息科学与技术</tag>
         <tag>Literature  文献</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IT与材料 | 通过MC-EMMA算法探索无机材料最优结构</title>
-    <url>/2017/11/02/collins2017/</url>
-    <content><![CDATA[<p><img src="http://mozheyang.top/images/collins2017/collins2017-title.png" alt=""></p>
-<p><em>解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.</em><br><em>原文地址：<a href="https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html" target="_blank" rel="noopener">https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html</a></em></p>
-<a id="more"></a>
-<p>原文地址中的补充数据也是很有价值的，例如计算数据等。</p>
-<p>另外，Collins等人公开了MC-EMMA算法的Python源码。感兴趣的朋友可前去下载一读。笔者也计划在后来的博客中对源码内容进行分析。<br>MC-EMMA算法源码地址如下：<br><a href="http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html" target="_blank" rel="noopener">http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html</a></p>
-<hr>
-<p>在已知物质结构领域，计算方法的应用已经取得了许多成就。但是，纯粹的第一性原理计算，由于计算量巨大，无法完成普遍宏观尺度材料的模拟；只在已知结构的物质里，利用大数据原理进行新材料结构的搜索，又很有可能找不到最优的材料结构，不能很好地发挥计算模拟方法先于实验，从而指导实验方法的优势。</p>
-<p>因此，大数据原理和第一性原理的结合是一个很好的思路。这就产生了<strong>Extended Module Materials Assembly (EMMA) </strong>此类算法。本研究在原有的EMMA算法的基础上，利用有权值的<strong>蒙特卡洛（MC，Monte Carlo；即随机算法算法）</strong>进行改进，对已知无机物成分及结构进行复杂置换，实现了对新的无机物质结构的探索，并通过实验验证了其可行性。</p>
-<h1 id="核心算法"><a href="#核心算法" class="headerlink" title="核心算法"></a>核心算法</h1><p>本研究主要依赖独创的MC-EMMA算法进行材料成分及结构的筛选优化。<br><img src="http://mozheyang.top/images/collins2017/collins2017-fig1.png" alt=""></p>
-<p>本文通过对六类蒙特卡洛规则附以一定权值p来决定使用何种随机算法使结构“进化”（在这里，“进化”并不一定意味着“优化”）。以下称不同成分、结构的物质结构为“模块”，“模块”组合从而形成材料系统。</p>
-<blockquote>
-<p><strong>第一类随机算法：</strong>选取两个模块互相交换位置<br><strong>第二类随机算法：</strong>系统内所有模块位置重排<br><strong>第三类随机算法：</strong>其中一个随机选取的模块被换成一种新类型（不同于系统内现有的模块）<br><strong>第四类随机算法：</strong>创建一个新的体系，保持现有的模块总数，模块类型发生变化<br><strong>第五类随机算法：</strong>改变现有的模块总数，如果总数增加则需新增模块（在不改变整体成分的前提下，该模块将被随机地选自包含所有模块的完整集合）<br><strong>第六类随机算法：</strong>创建一个新的体系，模块总数和模块类型都将是随机的。</p>
-</blockquote>
-<p>需要注意的是，前三类随机算法对结构的改变较小，后三类随机算法对结构的改变较大，所以权值的合理选择是非常重要的。</p>
-<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>综上所述，本文的随机选取过程是经过精心设计的。但是笔者并没有看出太多的优越性，因为本文既不能证明这些随机抽样组合能够尽可能遍历最优解空间，也不能证明这些随机抽样组合能够把我们带向更好的优化结构，或者拥有更快的求解效率。</p>
-<p>实际上，目前大多数“人工智能”算法，或者说“机器智能”算法的思想还停留在“黑箱”阶段。即我们对这个“黑箱”的内部机制实际上是不清楚的。或许随着计算机数学的发展，我们能更清楚地认识到计算机给认识物质结构以及物质结构优化所真实带来的变化吧。</p>
-]]></content>
-      <tags>
-        <tag>Information Science &amp; Technology  信息科学与技术</tag>
-        <tag>Material  材料</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>国内科研环境是否顺应时代？</title>
-    <url>/2018/12/16/complain/</url>
-    <content><![CDATA[<p>我是一个理工科在读研究生。生于父母均为经管类教授的家庭，却从高中开始嗜读科普读物，自此与自然科学结下不解之缘。</p>
-<a id="more"></a>
-<p>虽早早与自然科学结缘，我却逐渐觉得自然（实验）科学研究方式及研究环境不尽人意：大家蜷缩在自己的研究领域，教授们为了申基金，学生们为了毕业，很少敢于挑战学界权威，甚至研究方法都不敢于进行大的改动。“保守型”的研究自有他的好处，好出成果，大家也看得懂，可以认同，皆大欢喜。“一口吃不成个大胖子”，这句话成了“保守学派”的最“有力”论据——大家都这么慢，你要是太快超前了，那才是件怪事呢。</p>
-<p>埋怨归埋怨，但实验科学的物理限制仍然是无法忽视的。实验需要时间才能看到反馈。但教授需要基金维持项目运行，学生需要论文毕业，这都有着严格的时间限制。特别是在一个硕博士找工作都不是很顺利的社会背景下，让学生毕不了业那基本相当于断送了学生的未来。这种情况下，如何能从根本上解决为了发论文而发论文的现象？我不知道。我想大多数人也跟我一样。</p>
-<p>但我不想将就。</p>
-<p>一个没有办法给大多数年轻人提供更高平台（理想与待遇）的行业，是不配拥有这么多年轻人为之奋斗和工作的。</p>
-<p>现代的年轻人不是吃不了苦。我们只是希望我们的付出能得到合理的回报，不论是金钱或是自我/社会认同，而不是一直廉价的无谓付出。“不患寡而患不均”，互联网让大家都能看到最好的，必然会怂恿越来越多的人去竞争所谓的最好的。</p>
-<p>或许是没有远见吧。</p>
-<p>顺应时代还是最轻松的活法。</p>
-]]></content>
-      <tags>
-        <tag>Thought  随想</tag>
       </tags>
   </entry>
   <entry>
@@ -3483,70 +3441,41 @@ $$
       </tags>
   </entry>
   <entry>
-    <title>高通量计算 | 现状及展望</title>
-    <url>/2017/08/12/curtarolo2013/</url>
-    <content><![CDATA[<p><strong>关键词：</strong>大数据、材料信息学、计算材料学、高通量计算</p>
-<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
+    <title>国内科研环境是否顺应时代？</title>
+    <url>/2018/12/16/complain/</url>
+    <content><![CDATA[<p>我是一个理工科在读研究生。生于父母均为经管类教授的家庭，却从高中开始嗜读科普读物，自此与自然科学结下不解之缘。</p>
 <a id="more"></a>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近“人工智能（AI）”的风头很盛。如果说前几年国内所有行业都在追求“互联网+”的话，那这几年，以及未来几年，国内所有行业可能都会追求“人工智能+”。这可不是空穴来风，国务院甚至已经下达了人工智能未来发展规划（且看<a href="http://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm" target="_blank" rel="noopener">《国务院关于印发新一代人工智能发展规划的通知》</a>。</p>
-<p>这么看来，“三百六十行，行行写代码”的未来生活真是越来越清晰了。要是在目前这个时代，用不上先进的信息/效率工具来充实自己，来强大自己，还真有可能被快速发展的时代所抛弃。</p>
-<p>要说信息科技目前在材料科学领域的成功应用，那是有目共睹的：通过计算机的降噪和球差矫正算法，最先进的透射电子显微镜已经能够达到亚埃级别的分辨能力；通过计算力学、计算材料学可以完成宏观、微观（微米、纳米）不同尺度下的材料理论模拟，成功预测不少高性能新材料；通过材料数据库的构建，工业界各企业能够快速选取适当性能的材料，为自己所用，很好地兼顾了性能与成本的平衡…而今，随着信息科技的不断发展，我们迎来了新的技术——通过对大量数据的计算收集，完成人类难以胜任的分析任务，从而发现材料结构与性能之间的规律。这就是目前“数据智能”技术可以给我们材料科研工作者们带来的一大有力工具。</p>
-<h1 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h1><p>“高通量（high-throughput）”，顾名思义，意味着较大的流量。在这里，可以理解为巨大的<strong>数据流量</strong>。人类习惯于通过小样本数据进行规律寻找，进行学习。这样的学习效率很高，也是我们人类传统的学习和研究习惯。</p>
-<p>但是计算机往往比较“笨”，目前还没有开发出能够通过小样本数据就能完成复杂学习的算法。不过，他们擅长与做重复的事情。又脏又累的机械工作，计算机可以轻松胜任。人类的精力只能保证完成少量的信息输入，而计算机可以快速获取大量信息，再快速（机械）处理，最后输出。因此，在大数据的处理方面，计算机的出现和发展，拓展了人类所能达到的信息处理水平。</p>
-<p>今天所介绍的是一篇在Nature Material期刊上发表的关于”高通量计算“在材料设计方面应用的综述。</p>
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-title.png" alt=""></p>
-<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
-<p>本文着重对高通量“计算”进行了介绍，并声明本文中的“高通量材料研究（HT material research）”与“材料性能的综合评价（combinatorial evaluation of material properties）”不同。此处的“高通量“特指数据量过大，而不能直接研究，必需通过计算机自动化完成的此类研究。<em>（原文：Here we defne HT as the throughput of data that is way too high to be produced or analysed by the researcher’s direct intervention, and must therefore be performed automatically: HT implies an automatic ﬂow from ideas to results. Te confusion of HT with combinatorial approaches is thus resolved. Te latter, in fact, specifes how the degrees of freedom are investigated, whereas HT strictly defnes the overwhelming and automatic ﬂow of the investigations.）</em></p>
-<p>高通量计算通过三个结合紧密的步骤完成：</p>
-<ul>
-<li>材料合成模拟</li>
-<li>合理的材料信息存储</li>
-<li>材料性能表征及其选择</li>
-</ul>
-<p>材料合成模拟的数学建模是很重要的一个步骤。由于人类对微观世界的研究尚未完全（是目前物理研究的一大前沿——凝聚态物理及弦理论），因此或多或少地，材料合成生长模型及其性能表征会有其局限性。但科学家们还是进行了大量有意义的探索。</p>
-<p>以下是文献中有所报道的材料模拟中所关注的部分指标。</p>
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-table1.png" alt=""></p>
-<h1 id="综述主要内容"><a href="#综述主要内容" class="headerlink" title="综述主要内容"></a>综述主要内容</h1><p>文章主要从目前现状及其发展展望两个角度对”高通量计算“进行介绍。笔者通过Docear对其文章结构整理如下：</p>
-<p><img src="http://mozheyang.top/images/curtarolo2013/high-throughput.jpg" alt=""></p>
-<p>接下来，笔者将对图表进行简要分析。</p>
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig1.png" alt=""></p>
-<div  align="center">
-图1 关于二元合金互溶程度的HT结果及实验结果的对比
-</div>
-
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig2.png" alt=""></p>
-<div  align="center">
-图2 通过高通量能带计算完成光伏材料选取
-</div>
-
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig3.png" alt=""></p>
-<div  align="center">
-图3 通过高通量能带计算完成电化学电池材料选取
-</div>
-
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig4.png" alt=""></p>
-<div  align="center">
-图4 通过HT方法完成热电材料选取
-</div>
-
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig5.png" alt=""></p>
-<div  align="center">
-图5 通过高通量能带计算完成电催化析氢材料选取
-</div>
-
-<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig6.png" alt=""></p>
-<div  align="center">
-图6 通过HT方法权衡锂离子电池材料安全性与电压
-</div>
-
-<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>高通量方法极大地拓展了材料科研工作者所能探索的范围。如下图所示。</p>
-<p><img src="http://mozheyang.top/images/curtarolo2013/map_high-throughput.png" alt=""><br><em>引自：Celiz, a D. et al. Materials for stem cell factories of the future. Nat Mater 13, 570–579 (2014).</em></p>
-<p>该综述只讨论了”高通量“的一个方面，即”高通量计算（high-throughput computation）“。而由于理论的缺陷，材料计算模拟的结果，目前的实际可靠性还是不如实验结果。</p>
-<p>因此不得不引出与”高通量“相关的另外一个研究方向——高通量实验（high-throughput experimentation）。自动化实验室——只需调整材料合成原料及材料制备压力、温度等参数，保持实验流程不变，从而获得fali多组对比实验数据——是一个比较好的例子。</p>
-<p>另一个比较好的例子或许是利用扩散偶进行不同合金成分合金性能的表征。通过过扩散偶（两种或两种以上的相互紧贴的纯金属）在较高温度下所发生的扩散现象，可以获得连续变化的合金成分。通过对合金局部的成分表征，及局部性能表征（如硬度测试、导电率测试等），可以得到多组对应良好的材料成分-性能数据，极大节省了实验成本和时间。</p>
-<p><img src="http://mozheyang.top/images/curtarolo2013/diffusion.png" alt=""></p>
-<p>上图展示了最理想状态下扩散偶可以达到的效果。如使用该方法进行合金局部TSC(Thermally stimulated current, 差热分析)测试，预测将能够在较少时间（不太确定，扩散所需时间较长）和较少材料下进行合金相图测定。</p>
-<p>由于笔者学识所限，难免出现内容错漏的情况，望各位读者批评指正！<br>Email: mozheyang@outlook.com</p>
+<p>虽早早与自然科学结缘，我却逐渐觉得自然（实验）科学研究方式及研究环境不尽人意：大家蜷缩在自己的研究领域，教授们为了申基金，学生们为了毕业，很少敢于挑战学界权威，甚至研究方法都不敢于进行大的改动。“保守型”的研究自有他的好处，好出成果，大家也看得懂，可以认同，皆大欢喜。“一口吃不成个大胖子”，这句话成了“保守学派”的最“有力”论据——大家都这么慢，你要是太快超前了，那才是件怪事呢。</p>
+<p>埋怨归埋怨，但实验科学的物理限制仍然是无法忽视的。实验需要时间才能看到反馈。但教授需要基金维持项目运行，学生需要论文毕业，这都有着严格的时间限制。特别是在一个硕博士找工作都不是很顺利的社会背景下，让学生毕不了业那基本相当于断送了学生的未来。这种情况下，如何能从根本上解决为了发论文而发论文的现象？我不知道。我想大多数人也跟我一样。</p>
+<p>但我不想将就。</p>
+<p>一个没有办法给大多数年轻人提供更高平台（理想与待遇）的行业，是不配拥有这么多年轻人为之奋斗和工作的。</p>
+<p>现代的年轻人不是吃不了苦。我们只是希望我们的付出能得到合理的回报，不论是金钱或是自我/社会认同，而不是一直廉价的无谓付出。“不患寡而患不均”，互联网让大家都能看到最好的，必然会怂恿越来越多的人去竞争所谓的最好的。</p>
+<p>或许是没有远见吧。</p>
+<p>顺应时代还是最轻松的活法。</p>
+]]></content>
+      <tags>
+        <tag>Thought  随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IT与材料 | 通过MC-EMMA算法探索无机材料最优结构</title>
+    <url>/2017/11/02/collins2017/</url>
+    <content><![CDATA[<p><img src="http://mozheyang.top/images/collins2017/collins2017-title.png" alt=""></p>
+<p><em>解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.</em><br><em>原文地址：<a href="https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html" target="_blank" rel="noopener">https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html</a></em></p>
+<a id="more"></a>
+<p>原文地址中的补充数据也是很有价值的，例如计算数据等。</p>
+<p>另外，Collins等人公开了MC-EMMA算法的Python源码。感兴趣的朋友可前去下载一读。笔者也计划在后来的博客中对源码内容进行分析。<br>MC-EMMA算法源码地址如下：<br><a href="http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html" target="_blank" rel="noopener">http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html</a></p>
+<hr>
+<p>在已知物质结构领域，计算方法的应用已经取得了许多成就。但是，纯粹的第一性原理计算，由于计算量巨大，无法完成普遍宏观尺度材料的模拟；只在已知结构的物质里，利用大数据原理进行新材料结构的搜索，又很有可能找不到最优的材料结构，不能很好地发挥计算模拟方法先于实验，从而指导实验方法的优势。</p>
+<p>因此，大数据原理和第一性原理的结合是一个很好的思路。这就产生了<strong>Extended Module Materials Assembly (EMMA) </strong>此类算法。本研究在原有的EMMA算法的基础上，利用有权值的<strong>蒙特卡洛（MC，Monte Carlo；即随机算法算法）</strong>进行改进，对已知无机物成分及结构进行复杂置换，实现了对新的无机物质结构的探索，并通过实验验证了其可行性。</p>
+<h1 id="核心算法"><a href="#核心算法" class="headerlink" title="核心算法"></a>核心算法</h1><p>本研究主要依赖独创的MC-EMMA算法进行材料成分及结构的筛选优化。<br><img src="http://mozheyang.top/images/collins2017/collins2017-fig1.png" alt=""></p>
+<p>本文通过对六类蒙特卡洛规则附以一定权值p来决定使用何种随机算法使结构“进化”（在这里，“进化”并不一定意味着“优化”）。以下称不同成分、结构的物质结构为“模块”，“模块”组合从而形成材料系统。</p>
+<blockquote>
+<p><strong>第一类随机算法：</strong>选取两个模块互相交换位置<br><strong>第二类随机算法：</strong>系统内所有模块位置重排<br><strong>第三类随机算法：</strong>其中一个随机选取的模块被换成一种新类型（不同于系统内现有的模块）<br><strong>第四类随机算法：</strong>创建一个新的体系，保持现有的模块总数，模块类型发生变化<br><strong>第五类随机算法：</strong>改变现有的模块总数，如果总数增加则需新增模块（在不改变整体成分的前提下，该模块将被随机地选自包含所有模块的完整集合）<br><strong>第六类随机算法：</strong>创建一个新的体系，模块总数和模块类型都将是随机的。</p>
+</blockquote>
+<p>需要注意的是，前三类随机算法对结构的改变较小，后三类随机算法对结构的改变较大，所以权值的合理选择是非常重要的。</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>综上所述，本文的随机选取过程是经过精心设计的。但是笔者并没有看出太多的优越性，因为本文既不能证明这些随机抽样组合能够尽可能遍历最优解空间，也不能证明这些随机抽样组合能够把我们带向更好的优化结构，或者拥有更快的求解效率。</p>
+<p>实际上，目前大多数“人工智能”算法，或者说“机器智能”算法的思想还停留在“黑箱”阶段。即我们对这个“黑箱”的内部机制实际上是不清楚的。或许随着计算机数学的发展，我们能更清楚地认识到计算机给认识物质结构以及物质结构优化所真实带来的变化吧。</p>
 ]]></content>
       <tags>
         <tag>Information Science &amp; Technology  信息科学与技术</tag>
@@ -4190,6 +4119,77 @@ $$
       <tags>
         <tag>Material  材料</tag>
         <tag>Characterization  表征</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高通量计算 | 现状及展望</title>
+    <url>/2017/08/12/curtarolo2013/</url>
+    <content><![CDATA[<p><strong>关键词：</strong>大数据、材料信息学、计算材料学、高通量计算</p>
+<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
+<a id="more"></a>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近“人工智能（AI）”的风头很盛。如果说前几年国内所有行业都在追求“互联网+”的话，那这几年，以及未来几年，国内所有行业可能都会追求“人工智能+”。这可不是空穴来风，国务院甚至已经下达了人工智能未来发展规划（且看<a href="http://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm" target="_blank" rel="noopener">《国务院关于印发新一代人工智能发展规划的通知》</a>。</p>
+<p>这么看来，“三百六十行，行行写代码”的未来生活真是越来越清晰了。要是在目前这个时代，用不上先进的信息/效率工具来充实自己，来强大自己，还真有可能被快速发展的时代所抛弃。</p>
+<p>要说信息科技目前在材料科学领域的成功应用，那是有目共睹的：通过计算机的降噪和球差矫正算法，最先进的透射电子显微镜已经能够达到亚埃级别的分辨能力；通过计算力学、计算材料学可以完成宏观、微观（微米、纳米）不同尺度下的材料理论模拟，成功预测不少高性能新材料；通过材料数据库的构建，工业界各企业能够快速选取适当性能的材料，为自己所用，很好地兼顾了性能与成本的平衡…而今，随着信息科技的不断发展，我们迎来了新的技术——通过对大量数据的计算收集，完成人类难以胜任的分析任务，从而发现材料结构与性能之间的规律。这就是目前“数据智能”技术可以给我们材料科研工作者们带来的一大有力工具。</p>
+<h1 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h1><p>“高通量（high-throughput）”，顾名思义，意味着较大的流量。在这里，可以理解为巨大的<strong>数据流量</strong>。人类习惯于通过小样本数据进行规律寻找，进行学习。这样的学习效率很高，也是我们人类传统的学习和研究习惯。</p>
+<p>但是计算机往往比较“笨”，目前还没有开发出能够通过小样本数据就能完成复杂学习的算法。不过，他们擅长与做重复的事情。又脏又累的机械工作，计算机可以轻松胜任。人类的精力只能保证完成少量的信息输入，而计算机可以快速获取大量信息，再快速（机械）处理，最后输出。因此，在大数据的处理方面，计算机的出现和发展，拓展了人类所能达到的信息处理水平。</p>
+<p>今天所介绍的是一篇在Nature Material期刊上发表的关于”高通量计算“在材料设计方面应用的综述。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-title.png" alt=""></p>
+<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
+<p>本文着重对高通量“计算”进行了介绍，并声明本文中的“高通量材料研究（HT material research）”与“材料性能的综合评价（combinatorial evaluation of material properties）”不同。此处的“高通量“特指数据量过大，而不能直接研究，必需通过计算机自动化完成的此类研究。<em>（原文：Here we defne HT as the throughput of data that is way too high to be produced or analysed by the researcher’s direct intervention, and must therefore be performed automatically: HT implies an automatic ﬂow from ideas to results. Te confusion of HT with combinatorial approaches is thus resolved. Te latter, in fact, specifes how the degrees of freedom are investigated, whereas HT strictly defnes the overwhelming and automatic ﬂow of the investigations.）</em></p>
+<p>高通量计算通过三个结合紧密的步骤完成：</p>
+<ul>
+<li>材料合成模拟</li>
+<li>合理的材料信息存储</li>
+<li>材料性能表征及其选择</li>
+</ul>
+<p>材料合成模拟的数学建模是很重要的一个步骤。由于人类对微观世界的研究尚未完全（是目前物理研究的一大前沿——凝聚态物理及弦理论），因此或多或少地，材料合成生长模型及其性能表征会有其局限性。但科学家们还是进行了大量有意义的探索。</p>
+<p>以下是文献中有所报道的材料模拟中所关注的部分指标。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-table1.png" alt=""></p>
+<h1 id="综述主要内容"><a href="#综述主要内容" class="headerlink" title="综述主要内容"></a>综述主要内容</h1><p>文章主要从目前现状及其发展展望两个角度对”高通量计算“进行介绍。笔者通过Docear对其文章结构整理如下：</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/high-throughput.jpg" alt=""></p>
+<p>接下来，笔者将对图表进行简要分析。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig1.png" alt=""></p>
+<div  align="center">
+图1 关于二元合金互溶程度的HT结果及实验结果的对比
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig2.png" alt=""></p>
+<div  align="center">
+图2 通过高通量能带计算完成光伏材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig3.png" alt=""></p>
+<div  align="center">
+图3 通过高通量能带计算完成电化学电池材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig4.png" alt=""></p>
+<div  align="center">
+图4 通过HT方法完成热电材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig5.png" alt=""></p>
+<div  align="center">
+图5 通过高通量能带计算完成电催化析氢材料选取
+</div>
+
+<p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-fig6.png" alt=""></p>
+<div  align="center">
+图6 通过HT方法权衡锂离子电池材料安全性与电压
+</div>
+
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>高通量方法极大地拓展了材料科研工作者所能探索的范围。如下图所示。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/map_high-throughput.png" alt=""><br><em>引自：Celiz, a D. et al. Materials for stem cell factories of the future. Nat Mater 13, 570–579 (2014).</em></p>
+<p>该综述只讨论了”高通量“的一个方面，即”高通量计算（high-throughput computation）“。而由于理论的缺陷，材料计算模拟的结果，目前的实际可靠性还是不如实验结果。</p>
+<p>因此不得不引出与”高通量“相关的另外一个研究方向——高通量实验（high-throughput experimentation）。自动化实验室——只需调整材料合成原料及材料制备压力、温度等参数，保持实验流程不变，从而获得fali多组对比实验数据——是一个比较好的例子。</p>
+<p>另一个比较好的例子或许是利用扩散偶进行不同合金成分合金性能的表征。通过过扩散偶（两种或两种以上的相互紧贴的纯金属）在较高温度下所发生的扩散现象，可以获得连续变化的合金成分。通过对合金局部的成分表征，及局部性能表征（如硬度测试、导电率测试等），可以得到多组对应良好的材料成分-性能数据，极大节省了实验成本和时间。</p>
+<p><img src="http://mozheyang.top/images/curtarolo2013/diffusion.png" alt=""></p>
+<p>上图展示了最理想状态下扩散偶可以达到的效果。如使用该方法进行合金局部TSC(Thermally stimulated current, 差热分析)测试，预测将能够在较少时间（不太确定，扩散所需时间较长）和较少材料下进行合金相图测定。</p>
+<p>由于笔者学识所限，难免出现内容错漏的情况，望各位读者批评指正！<br>Email: mozheyang@outlook.com</p>
+]]></content>
+      <tags>
+        <tag>Information Science &amp; Technology  信息科学与技术</tag>
+        <tag>Material  材料</tag>
       </tags>
   </entry>
   <entry>
