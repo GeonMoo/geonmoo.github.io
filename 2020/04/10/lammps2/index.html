@@ -22,23 +22,26 @@
     var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="最后更新时间：2018年2月10日 欢迎讨论交流！笔者联系方式如下。Email: mozheyang@outlook.com">
+  <meta name="description" content="上回我们说到，如何实现LAMMPS的安装和（利用串行程序）运行一次LAMMPS。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="值得推荐 | Awesome Android Software">
-<meta property="og:url" content="http://mozheyang.top/2018/02/10/awesomeAndroidApp/index.html">
+<meta property="og:title" content="LAMMPS学习札记（二）——输出与输入篇">
+<meta property="og:url" content="http://mozheyang.top/2020/04/10/lammps2/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
-<meta property="og:description" content="最后更新时间：2018年2月10日 欢迎讨论交流！笔者联系方式如下。Email: mozheyang@outlook.com">
-<meta property="og:image" content="http://mozheyang.top/images/awesomeAPP/snip_RSSpodcast.jpg">
-<meta property="og:image" content="http://mozheyang.top/images/awesomeAPP/snip_scan.jpg">
-<meta property="article:published_time" content="2018-02-10T03:02:30.000Z">
-<meta property="article:modified_time" content="2020-02-02T07:52:16.000Z">
+<meta property="og:description" content="上回我们说到，如何实现LAMMPS的安装和（利用串行程序）运行一次LAMMPS。">
+<meta property="og:image" content="https://lammps.sandia.gov/movies/logo.gif">
+<meta property="og:image" content="http://mozheyang.top/images/LAMMPS/dumpfile.png">
+<meta property="og:image" content="http://mozheyang.top/images/LAMMPS/dumpstructure.png">
+<meta property="og:image" content="http://mozheyang.top/images/LAMMPS/OVITO.png">
+<meta property="og:image" content="http://mozheyang.top/images/LAMMPS/datafile.png">
+<meta property="article:published_time" content="2020-04-10T03:43:03.000Z">
+<meta property="article:modified_time" content="2020-04-10T04:00:36.280Z">
 <meta property="article:author" content="Geon Mo">
-<meta property="article:tag" content="Updating  持续更新中...">
-<meta property="article:tag" content="Resources  资源">
+<meta property="article:tag" content="Information Science &amp; Technology  信息科学与技术">
+<meta property="article:tag" content="Material  材料">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mozheyang.top/images/awesomeAPP/snip_RSSpodcast.jpg">
+<meta name="twitter:image" content="https://lammps.sandia.gov/movies/logo.gif">
 
-<link rel="canonical" href="http://mozheyang.top/2018/02/10/awesomeAndroidApp/">
+<link rel="canonical" href="http://mozheyang.top/2020/04/10/lammps2/">
 
 
 <script id="page-configurations">
@@ -50,7 +53,7 @@
   };
 </script>
 
-  <title>值得推荐 | Awesome Android Software | Mo's Notebook | 摸着羊的笔记本</title>
+  <title>LAMMPS学习札记（二）——输出与输入篇 | Mo's Notebook | 摸着羊的笔记本</title>
   
 
 
@@ -209,7 +212,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2018/02/10/awesomeAndroidApp/">
+    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2020/04/10/lammps2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -222,7 +225,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          值得推荐 | Awesome Android Software
+          LAMMPS学习札记（二）——输出与输入篇
         </h1>
 
         <div class="post-meta">
@@ -231,24 +234,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2018-02-10 11:02:30" itemprop="dateCreated datePublished" datetime="2018-02-10T11:02:30+08:00">2018-02-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-02 15:52:16" itemprop="dateModified" datetime="2020-02-02T15:52:16+08:00">2020-02-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Treasure-%E7%A7%81%E5%AE%B6%E7%8F%8D%E8%97%8F/" itemprop="url" rel="index"><span itemprop="name">Treasure  私家珍藏</span></a>
-                </span>
+              <time title="创建时间：2020-04-10 11:43:03 / 修改时间：12:00:36" itemprop="dateCreated datePublished" datetime="2020-04-10T11:43:03+08:00">2020-04-10</time>
             </span>
 
           
@@ -267,8 +255,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/02/10/awesomeAndroidApp/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/02/10/awesomeAndroidApp/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/10/lammps2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/lammps2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -283,15 +271,50 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>最后更新时间：2018年2月10日</p>
-<p>欢迎讨论交流！笔者联系方式如下。<br>Email: mozheyang@outlook.com</p>
+        <p><img src="https://lammps.sandia.gov/movies/logo.gif" alt=""></p>
+<p><a href="">上回</a>我们说到，如何实现LAMMPS的安装和（利用串行程序）运行一次LAMMPS。</p>
 <a id="more"></a>
-<h1 id="Podcast-Addict"><a href="#Podcast-Addict" class="headerlink" title="Podcast Addict"></a>Podcast Addict</h1><p>RSS音频订阅工具。每天都可以听到最新的BBC、NPR、Economist新闻音频更新，另外搞科研的同学们还能订阅Science、Nature的音频，想想就觉得自己跟国际前沿接轨了呢！PS：IOS用户就不用折腾啦，乔爸爸已经给大家提供了好用的Podcast（播客）。</p>
-<p><img src="http://mozheyang.top/images/awesomeAPP/snip_RSSpodcast.jpg" alt=""></p>
-<h1 id="扫描全能王"><a href="#扫描全能王" class="headerlink" title="扫描全能王"></a>扫描全能王</h1><p>每每想起那个大家在群里激烈争论我的照片是不是电子版的时候…我心里就忍不住地自豪！没错，我有扫描全能王！并且因为我有<strong>edu教育邮箱</strong>，多享受了<strong>400M的云存储空间</strong>和<strong>免费OCR（光学文字识别）功能</strong>。有了它，以后交个扫描件什么的就不用跑复印店啦！</p>
-<p><img src="http://mozheyang.top/images/awesomeAPP/snip_scan.jpg" alt=""></p>
-<h1 id="Anki"><a href="#Anki" class="headerlink" title="Anki"></a>Anki</h1><p>基于艾宾浩斯记忆曲线的记忆工具。乍一看，好像跟传统的单词记忆工具没什么区别。实际上，Anki可不仅仅可以用来记忆单词~所有<strong>可以通过反复重复记忆的零散知识点</strong>，都可以制作成Anki卡片进行记忆。而单词恰是一种很合适该种记忆方法的材料。开始使用该工具的同学只需记住要坚持即可…肯定会大有收获！</p>
-<h1 id="欧路词典"><a href="#欧路词典" class="headerlink" title="欧路词典"></a>欧路词典</h1><p>MDict词典驱动。这意味着，我的词典不受限于词典提供商了，我只要拥有该词典的MDict文件，什么词典我都可以往词典驱动里加入（包括自定义的MDict词典！例如专业词汇词典…）。拥有词典驱动，还相当于可以同时查<strong>多部词典</strong>的能力，效率杠杠的。</p>
+<p>本文的题目是输出与输入，而不是常见顺序（输入与输出），目的是强调将<strong>输出</strong>命令的学习顺序放在前面，有利于我们调试程序，从而更好地理解LAMMPS中各命令的作用。</p>
+<h1 id="输出命令——dump"><a href="#输出命令——dump" class="headerlink" title="输出命令——dump"></a>输出命令——dump</h1><p>本文还是先以<code>Example/colloid/in.colloid</code>为例。</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#dump		<span class="number">1</span> all atom <span class="number">1000</span> dump.colloid</span><br><span class="line"></span><br><span class="line">#dump		<span class="number">2</span> all image <span class="number">1000</span> image.*.jpg type type &amp;</span><br><span class="line">#		zoom <span class="number">1.5</span> center d <span class="number">0.5</span> <span class="number">0.5</span> <span class="number">0.5</span></span><br><span class="line">#dump_modify	<span class="number">2</span> pad <span class="number">5</span> adiam <span class="number">1</span> <span class="number">5.0</span> adiam <span class="number">2</span> <span class="number">1.5</span></span><br><span class="line"></span><br><span class="line">#dump		<span class="number">3</span> all movie <span class="number">1000</span> movie.mpg type type &amp;</span><br><span class="line">#		zoom <span class="number">1.5</span> center d <span class="number">0.5</span> <span class="number">0.5</span> <span class="number">0.5</span></span><br><span class="line">#dump_modify	<span class="number">3</span> pad <span class="number">5</span> adiam <span class="number">1</span> <span class="number">5.0</span> adiam <span class="number">2</span> <span class="number">1.5</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>“#”是注释的意思。<code>in.colloid</code>默认把输出都注释掉了，所以没有输出文件。<br>我们只要把“#”删除，就可以执行对应的命令。</p>
+</blockquote>
+<p>以上命令中出现了三种类型的数据：<strong>dump数据文件</strong>、<strong>jpg格式图片</strong>以及<strong>mpg格式视频</strong>。</p>
+<p>最简单的是<code>dump</code>数据文件，也是我们最常用的。通过dump文件我们可以利用其它软件，例如<a href="https://www.ovito.org/" target="_blank" rel="noopener">OVITO</a>，很方便的进行数据可视化。效果要比LAMMPS内置的图片和视频输出效果更好。对应的命令是：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dump		<span class="number">1</span> all atom <span class="number">1000</span> dump.colloid</span><br></pre></td></tr></table></figure>
+<p>他的意思其实是：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">dump</span>		<span class="selector-attr">[ID]</span> <span class="selector-attr">[group ID]</span> <span class="selector-attr">[style]</span> <span class="selector-attr">[timestep]</span> <span class="selector-attr">[filename]</span> <span class="selector-attr">[args]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>ID</code>：为一个<code>dump</code>命令起一个唯一的代号，一般就是1、2、3</li>
+<li><code>group ID</code>：之前定义的一组对象的组（group）唯一代号，比如所有原子（all），后者氧原子氢原子。除了默认的<code>group ID</code>外，其它<code>group ID</code>需要在使用之前通过<code>group</code>命令定义。</li>
+<li><code>style</code>：数据类型，比如原子三维坐标（<code>atom</code>）。</li>
+<li><code>timestep</code>：记录的时间步长，每隔一个<code>timestep</code>就会记录一行数据。</li>
+<li><code>filename</code>：输出文件名。这里面的“*”指的是每一个<code>timestep</code>记录一个<code>dump</code>文件，“*”处利用当时的时间步进行替代。</li>
+<li><code>args</code>：对应于不同<code>style</code>的一些其它参数，在<a href="https://lammps.sandia.gov/doc/dump.html" target="_blank" rel="noopener"><code>dump</code>命令</a>有更详细的介绍。</li>
+</ul>
+<p>输出文件的格式如下所示：</p>
+<p><img src="http://mozheyang.top/images/LAMMPS/dumpfile.png" alt=""></p>
+<blockquote>
+<p>所使用的编辑器为<code>Sublime Text</code>，相对于记事本，更适合于用来编辑代码和数据，不容易产生未知的符号（编码和文件头问题）。同类竞品有<code>VS Code</code>或<code>Atom</code>，随便下载一个顺手的即可。</p>
+</blockquote>
+<p>可以分析LAMMPS输出的dump文件格式为：</p>
+<p><img src="http://mozheyang.top/images/LAMMPS/dumpstructure.png" alt=""></p>
+<p><a href="https://lammps.sandia.gov/doc/dump_image.html" target="_blank" rel="noopener">图片或视频</a>的输出类似，不过在<code>args</code>处有其他的参数。博主认为直接输出图片或视频不很必要，感兴趣的读者可以自行了解。另外，<code>dump_modify</code>命令是对之前<code>dump</code>命令中的设置进行的调整，一般是一些默认设置。博主作为新手也不是很了解，感兴趣的读者可以参考官方文档：<a href="https://lammps.sandia.gov/doc/dump.html" target="_blank" rel="noopener">dump命令</a>和<a href="https://lammps.sandia.gov/doc/dump_modify.html" target="_blank" rel="noopener">dump_modify命令</a>。</p>
+<p>OVITO可视化<code>dump</code>文件是很方便的。在这里博主直接引用一个操作流程。</p>
+<p><img src="http://mozheyang.top/images/LAMMPS/OVITO.png" alt=""></p>
+<p class="refs">Ref: http://cms.sjtu.edu.cn/md_manual.html</p>
+
+<h1 id="输入命令read-data"><a href="#输入命令read-data" class="headerlink" title="输入命令read_data"></a>输入命令read_data</h1><p>LAMMPS支持<code>lattice</code>命令建立晶体模型，对金属模拟来说是很有用的，在互联网上的教程也很多。博主主要研究的是分子运动的模拟，不属于晶体模拟范畴；而且分子形态和位置都需要自己定义，那么<code>lattice</code>命令就不是那么理想了。接下来博主准备以<code>molecule</code>目录的<code>in.water</code>为例进行LAMMPS数据输入的实例介绍：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LAMMPS根目录\Examples\USER\atc\molecule</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>in.water</code>读取了一个文件<code>water.init</code>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">read_data</span> <span class="selector-tag">water</span><span class="selector-class">.init</span></span><br></pre></td></tr></table></figure>
+<p>通过LAMMPS运行文件，只要是<code>utf-8</code>编码的文本文件，那么后缀或前缀的不同不会产生太大影响。但一般均按照习惯进行命名。<code>*.init</code>文件也可命名为<code>*.data</code>。我们可以来看看<code>water.init</code>文件的格式。此格式即LAMMPS输入文件的格式。</p>
+<p><img src="http://mozheyang.top/images/LAMMPS/datafile.png" alt=""></p>
+<p>LAMMPS输入文件格式要求较为严格。如果格式不正确将不能正常运行。好在LAMMPS系统做的错误提示比较好用，一般能够根据提示找到输入文件的问题所在。输入文件可以很立体全面地定义输入分子的结构和作用势信息，如原子质量、原子间作用势参数、原子坐标、原子成键等等。读者可以具体参考关于<a href="https://lammps.sandia.gov/doc/99/data_format.html" target="_blank" rel="noopener">data format的官方链接</a>。</p>
+<h1 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h1><p>到此为止，我们已经是一个可以随意调试脚本并查看调试结果的LAMMPS“脚本小子”了。</p>
+<p>如何利用LAMMPS成为真正的盐酒者与磕雪家呢？那其中命令的物理意义是一定要了解的。</p>
+<p>博主会挑一些自己用过的命令进行实践和介绍。Love and peace。</p>
 
     </div>
 
@@ -307,7 +330,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://mozheyang.top/2018/02/10/awesomeAndroidApp/" title="值得推荐 | Awesome Android Software">http://mozheyang.top/2018/02/10/awesomeAndroidApp/</a>
+    <a href="http://mozheyang.top/2020/04/10/lammps2/" title="LAMMPS学习札记（二）——输出与输入篇">http://mozheyang.top/2020/04/10/lammps2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -323,8 +346,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> Updating  持续更新中...</a>
-              <a href="/tags/Resources-%E8%B5%84%E6%BA%90/" rel="tag"><i class="fa fa-tag"></i> Resources  资源</a>
+              <a href="/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> Information Science & Technology  信息科学与技术</a>
+              <a href="/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
           </div>
 
         
@@ -333,12 +356,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/01/21/SKSModel/" rel="prev" title="Santos-Koper-Schmickler电荷转移模型">
-      <i class="fa fa-chevron-left"></i> Santos-Koper-Schmickler电荷转移模型
+    <a href="/2020/04/04/lammps1/" rel="prev" title="LAMMPS学习札记（一）——安装篇">
+      <i class="fa fa-chevron-left"></i> LAMMPS学习札记（一）——安装篇
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/02/15/2017thought/" rel="next" title="二零一柒，我一直在成长">
-      二零一柒，我一直在成长 <i class="fa fa-chevron-right"></i>
+    <a href="/2201/03/14/TOP/" rel="next" title="置顶公告">
+      置顶公告 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -400,7 +423,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Podcast-Addict"><span class="nav-number">1.</span> <span class="nav-text">Podcast Addict</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扫描全能王"><span class="nav-number">2.</span> <span class="nav-text">扫描全能王</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Anki"><span class="nav-number">3.</span> <span class="nav-text">Anki</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#欧路词典"><span class="nav-number">4.</span> <span class="nav-text">欧路词典</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#输出命令——dump"><span class="nav-number">1.</span> <span class="nav-text">输出命令——dump</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入命令read-data"><span class="nav-number">2.</span> <span class="nav-text">输入命令read_data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下期预告"><span class="nav-number">3.</span> <span class="nav-text">下期预告</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
