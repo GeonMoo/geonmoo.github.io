@@ -184,13 +184,17 @@
   <entry>
     <title>Bookmarks of Websites | 网站书签收藏</title>
     <url>/2017/04/08/Bookmarks/</url>
-    <content><![CDATA[<p>最后更新时间2020年4月5日。<strong>鼠标悬停</strong>在特定项目上可显示更详细的介绍哦！</p>
+    <content><![CDATA[<p>最后更新时间2020年4月11日。<strong>鼠标悬停</strong>在特定项目上可显示更详细的介绍哦！</p>
 <blockquote>
 <p><strong>最近一个月更新：</strong></p>
 <ul>
-<li><a href="https://www.nazhumi.com/" target="_blank" rel="noopener" title="全球域名，一键比价">哪煮米 - https://www.nazhumi.com/</a></li>
-<li><a href="https://siguso.com/google/" target="_blank" rel="noopener" title="提供Sci-hub镜像">思谷学术 - https://siguso.com/google/</a></li>
+<li><a href="http://googlehelper.net/" target="_blank" rel="noopener" title="珍惜有Google学术的每一天，具体使用方法可自行百度">Ghelper - Google学术代理Chrome插件 - http://googlehelper.net/</a></li>
+<li><a href="https://arxiv.org/" target="_blank" rel="noopener" title="数学、物理、计算机论文预印本网站，在论文正式投出发表前可以上载，时效性强">Arxiv - https://arxiv.org/</a></li>
+<li><a href="https://chemrxiv.org/" target="_blank" rel="noopener" title="发现数理不带自己后，心酸的化学家们自己交流">ChemRxiv - https://chemrxiv.org/</a></li>
+<li><a href="https://www.biorxiv.org/" target="_blank" rel="noopener" title="心酸的还有生物学家">BioRxiv - https://www.biorxiv.org/</a></li>
+<li><a href="https://stackoverflow.com/" target="_blank" rel="noopener" title="你的bug交给我">Stack Overflow - https://stackoverflow.com/</a></li>
 <li><del><a href="https://xueshu.glgoo.org/" target="_blank" rel="noopener" title="Glgoo学术（Google学术镜像）- 无需翻墙即可访问的“Google学术”">Glgoo学术（Google学术镜像） - https://xueshu.glgoo.org/</a></del></li>
+<li><del><a href="https://cn.sharelatex.com/" target="_blank" rel="noopener" title="LaTeX Online - 同上">ShareLaTeX（与Overleaf合并）</a></del></li>
 </ul>
 </blockquote>
 <a id="more"></a>
@@ -199,28 +203,24 @@
 <li><a href="https://www.mendeley.com/" target="_blank" rel="noopener" title="Mendeley - 文献管理工具+科研社交圈">Mendeley - https://www.mendeley.com/</a></li>
 <li><a href="https://www.researchgate.net/" target="_blank" rel="noopener" title="ResearchGate - 科研社交网站...与Gayhub(Github)类似">ResearchGate - https://www.researchgate.net/</a></li>
 <li><a href="https://www.storkapp.me/" target="_blank" rel="noopener" title="Stork - 可设置根据关键词定期推送最新文献">Stork - https://www.storkapp.me/</a></li>
+<li><a href="https://arxiv.org/" target="_blank" rel="noopener" title="数学、物理、计算机论文预印本网站，在论文正式投出发表前可以上载，时效性强">Arxiv - https://arxiv.org/</a></li>
+<li><a href="https://chemrxiv.org/" target="_blank" rel="noopener" title="发现数理不带自己后，心酸的化学家们自己交流">ChemRxiv - https://chemrxiv.org/</a></li>
+<li><a href="https://www.biorxiv.org/" target="_blank" rel="noopener" title="心酸的还有生物学家">BioRxiv - https://www.biorxiv.org/</a></li>
 <li><a href="https://www.feedly.com/" target="_blank" rel="noopener" title="Feedly - 多平台RSS资源阅读器">Feedly - https://www.feedly.com/</a></li>
 <li><a href="https://nlpprogress.com/" target="_blank" rel="noopener" title="跟踪自然语言处理领域前沿">NLP-progress - https://nlpprogress.com/</a></li>
 </ul>
 <h2 id="文献检索"><a href="#文献检索" class="headerlink" title="文献检索"></a>文献检索</h2><ul>
-<li><p><a href="https://scholar.google.com/" target="_blank" rel="noopener" title="Google学术 - 众所周知的文献搜索利器">Google学术（墙内不可用）- https://scholar.google.com/</a></p>
-</li>
-<li><p><a href="http://xueshu.baidu.com/" target="_blank" rel="noopener" title="百度学术 - 中英文整合文献搜索利器">百度学术 - http://xueshu.baidu.com/</a></p>
-</li>
-<li><p><a href="https://academic.microsoft.com/" target="_blank" rel="noopener" title="微软学术（OpenAccess） - 该平台收录的都是开放资源">微软学术 - https://academic.microsoft.com/</a></p>
-</li>
-<li><p><a href="http://www.ixueshu.com/" target="_blank" rel="noopener" title="爱学术 - 该平台提供了部分中文文献的免费下载">爱学术 - http://www.ixueshu.com/</a></p>
-</li>
-<li><p><a href="http://geenmedical.com/" target="_blank" rel="noopener" title="GeenMedical - 获取文献不求人，解锁文献免费下载新姿势！">GeenMedical - http://geenmedical.com/</a></p>
-</li>
-<li><p><a href="http://www.ncpssd.org/" target="_blank" rel="noopener" title="国家哲学社会科学文献中心 - 新上线学术平台，下载论文全免费！......说实话，现在上面还没什么资源......">国家哲学社会科学文献中心 - http://www.ncpssd.org/</a></p>
-</li>
+<li><a href="http://googlehelper.net/" target="_blank" rel="noopener" title="珍惜有Google学术的每一天，具体使用方法可自行百度">Ghelper - Google学术代理Chrome插件 - http://googlehelper.net/</a></li>
+<li><a href="https://scholar.google.com/" target="_blank" rel="noopener" title="Google学术 - 众所周知的文献搜索利器">Google学术（墙内不可用）- https://scholar.google.com/</a></li>
+<li><a href="http://xueshu.baidu.com/" target="_blank" rel="noopener" title="百度学术 - 中英文整合文献搜索利器">百度学术 - http://xueshu.baidu.com/</a></li>
+<li><a href="https://academic.microsoft.com/" target="_blank" rel="noopener" title="微软学术（OpenAccess） - 该平台收录的都是开放资源">微软学术 - https://academic.microsoft.com/</a></li>
+<li><a href="http://www.ixueshu.com/" target="_blank" rel="noopener" title="爱学术 - 该平台提供了部分中文文献的免费下载">爱学术 - http://www.ixueshu.com/</a></li>
+<li><a href="http://geenmedical.com/" target="_blank" rel="noopener" title="GeenMedical - 获取文献不求人，解锁文献免费下载新姿势！">GeenMedical - http://geenmedical.com/</a></li>
+<li><a href="http://www.ncpssd.org/" target="_blank" rel="noopener" title="国家哲学社会科学文献中心 - 新上线学术平台，下载论文全免费！......说实话，现在上面还没什么资源......">国家哲学社会科学文献中心 - http://www.ncpssd.org/</a></li>
 </ul>
 <h2 id="学术翻译"><a href="#学术翻译" class="headerlink" title="学术翻译"></a>学术翻译</h2><ul>
-<li><p><a href="https://translate.google.cn/?hl=cn" target="_blank" rel="noopener" title="Google翻译 - Google翻译引擎升级，整句翻译，句意更准确！">Google翻译 - https://translate.google.cn/</a></p>
-</li>
-<li><p><a href="https://translate.google.cn/?hl=cn" target="_blank" rel="noopener" title="CNKI翻译助手 - 学术翻译查词神器">CNKI翻译助手 - https://translate.google.cn/</a></p>
-</li>
+<li><a href="https://translate.google.cn/?hl=cn" target="_blank" rel="noopener" title="Google翻译 - Google翻译引擎升级，整句翻译，句意更准确！">Google翻译 - https://translate.google.cn/</a></li>
+<li><a href="https://translate.google.cn/?hl=cn" target="_blank" rel="noopener" title="CNKI翻译助手 - 学术翻译查词神器">CNKI翻译助手 - https://translate.google.cn/</a></li>
 </ul>
 <h2 id="资源检索"><a href="#资源检索" class="headerlink" title="资源检索"></a>资源检索</h2><ul>
 <li><a href="http://search.chongbuluo.com/" target="_blank" rel="noopener" title="快搜 - 各类搜索利器，只有想不到，没有搜不到">快搜</a></li>
@@ -241,38 +241,31 @@
 </ul>
 <h1 id="英语学习"><a href="#英语学习" class="headerlink" title="英语学习"></a>英语学习</h1><hr>
 <ul>
-<li><p><a href="http://bbs.gter.net/thread-1510435-1-1.html" target="_blank" rel="noopener" title="GRE/GMAT考友必看">非传统: Foolproof Guide To A 340 on GRE</a></p>
-</li>
-<li><p><a href="http://etymonline.com/" target="_blank" rel="noopener" title="Online Etymology Dictionary - 词源词典，了解词汇来龙去脉">在线词源词典 - Online Etymology Dictionary</a></p>
-</li>
-<li><p><a href="http://mnemonicdictionary.com/" target="_blank" rel="noopener" title="Mnemonic Dictionary - 英语学习者的特别记忆方法，值得参考">助记词典 - Mnemonic Dictionary</a></p>
-</li>
-<li><p><a href="https://www.vocabulary.com/" target="_blank" rel="noopener" title="Vocabulary.com - 界面现代美观的英英词典">在线英英词典 - Vocabulary.com</a></p>
-</li>
+<li><a href="http://bbs.gter.net/thread-1510435-1-1.html" target="_blank" rel="noopener" title="GRE/GMAT考友必看">非传统: Foolproof Guide To A 340 on GRE</a></li>
+<li><a href="http://etymonline.com/" target="_blank" rel="noopener" title="Online Etymology Dictionary - 词源词典，了解词汇来龙去脉">在线词源词典 - Online Etymology Dictionary</a></li>
+<li><a href="http://mnemonicdictionary.com/" target="_blank" rel="noopener" title="Mnemonic Dictionary - 英语学习者的特别记忆方法，值得参考">助记词典 - Mnemonic Dictionary</a></li>
+<li><a href="https://www.vocabulary.com/" target="_blank" rel="noopener" title="Vocabulary.com - 界面现代美观的英英词典">在线英英词典 - Vocabulary.com</a></li>
 </ul>
 <h1 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h1><hr>
 <ul>
 <li><a href="https://www.office.com/" target="_blank" rel="noopener" title="Microsoft Office - 可以免费使用的Office">在线Office</a></li>
 <li><a href="https://smallpdf.com/" target="_blank" rel="noopener" title="Smallpdf - 目前发现最好用的PDF在线全能处理网站，包括PDF2WORD/PDF2EXCEL/PDF2JPG等功能，每小时可以处理两份PDF文档">在线PDF处理 - Smallpdf</a></li>
-<li><a href="http://www.regexr.com/" target="_blank" rel="noopener" title="RegExr - 正则表达式学习者/使用者必备">正则表达式 - RegExr</a></li>
-<li><a href="http://ideone.com/" target="_blank" rel="noopener" title="ideone - 身边没有编译环境也可以写代码">在线编译器 - ideone</a></li>
 <li><a href="www.soogif.com" title="一站满足新媒体GIF难题">SOOGIF - www.soogif.com/</a></li>
 <li><a href="http://www.nicetool.net" target="_blank" rel="noopener" title="神器集合网站+1">NICETOOL - http://www.nicetool.net/</a></li>
 <li><a href="https://zhitu.isux.us/" target="_blank" rel="noopener" title="图片压缩+图片格式转换">智图 - https://zhitu.isux.us/</a></li>
 <li><a href="zh.pickfrom.net" title="视频下载，支持B站、抖音、微信公众号等">Pickfrom - http://zh.pickfrom.net/</a></li>
 <li><a href="http://ef.zhiweidata.com/" target="_blank" rel="noopener" title="专注热点研究">知微事见 - http://ef.zhiweidata.com/</a></li>
-<li><a href="http://ictclas.nlpir.org/" target="_blank" rel="noopener" title="自然语言处理...">语义分析NLP - http://ictclas.nlpir.org/</a></li>
 </ul>
-<p><strong>LaTeX</strong></p>
-<ul>
-<li><p><a href="https://www.overleaf.com/" target="_blank" rel="noopener" title="LaTeX Online - 使用LaTeX在线编辑文档，可提供免费存储空间">Overleaf</a></p>
-</li>
-<li><p><a href="https://cn.sharelatex.com/" target="_blank" rel="noopener" title="LaTeX Online - 同上">ShareLaTeX</a></p>
-</li>
-<li><p><a href="http://www.codecogs.com/latex/eqneditor.php" target="_blank" rel="noopener" title="LaTeX公式转公式图片">LaTeX公式转换</a></p>
-</li>
-<li><p><a href="http://www.latextemplates.com/" target="_blank" rel="noopener" title="LaTeX模板免费下载网站">LaTeX Templates</a></p>
-</li>
+<h2 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h2><ul>
+<li><a href="https://www.overleaf.com/" target="_blank" rel="noopener" title="LaTeX Online - 使用LaTeX在线编辑文档，可提供免费存储空间">Overleaf</a></li>
+<li><a href="http://www.codecogs.com/latex/eqneditor.php" target="_blank" rel="noopener" title="LaTeX公式转公式图片">LaTeX公式转换</a></li>
+<li><a href="http://www.latextemplates.com/" target="_blank" rel="noopener" title="LaTeX模板免费下载网站">LaTeX Templates</a></li>
+</ul>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><ul>
+<li><a href="https://stackoverflow.com/" target="_blank" rel="noopener" title="你的bug交给我">Stack Overflow - https://stackoverflow.com/</a></li>
+<li><a href="http://www.regexr.com/" target="_blank" rel="noopener" title="RegExr - 正则表达式学习者/使用者必备">正则表达式 - RegExr</a></li>
+<li><a href="http://ideone.com/" target="_blank" rel="noopener" title="ideone - 身边没有编译环境也可以写代码">在线编译器 - ideone</a></li>
+<li><a href="http://ictclas.nlpir.org/" target="_blank" rel="noopener" title="自然语言处理...">语义分析NLP - http://ictclas.nlpir.org/</a></li>
 </ul>
 <h1 id="冷门"><a href="#冷门" class="headerlink" title="冷门"></a>冷门</h1><hr>
 <ul>
