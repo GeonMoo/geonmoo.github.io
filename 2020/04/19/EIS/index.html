@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <meta name="google-site-verification" content="true">
+  <meta name="msvalidate.01" content="true">
+  <meta name="yandex-verification" content="true">
+  <meta name="baidu-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="本文所涉及理论内容十分丰富。博主水平有限，暂时不能一次全部覆盖，将会持续修补更新。望各位读者批评指正！ 交流阻抗谱学的优势在哪？我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（稳态分析）的方法，具有高精度（相对）、简化分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交流阻抗谱学的理论基础">
+<meta property="og:url" content="https://www.mozheyang.top/2020/04/19/EIS/index.html">
+<meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
+<meta property="og:description" content="本文所涉及理论内容十分丰富。博主水平有限，暂时不能一次全部覆盖，将会持续修补更新。望各位读者批评指正！ 交流阻抗谱学的优势在哪？我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（稳态分析）的方法，具有高精度（相对）、简化分">
+<meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/eq-circuit.png">
+<meta property="og:image" content="https://www.mozheyang.top/images/EIS/double-layer.jpg">
+<meta property="og:image" content="https://www.mozheyang.top/images/EIS/in-output.png">
+<meta property="og:image" content="https://www.mozheyang.top/images/EIS/low-frequency.png">
+<meta property="og:image" content="https://www.mozheyang.top/images/EIS/high-frequency.png">
+<meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/Nyquist-plot.png">
+<meta property="article:published_time" content="2020-04-19T09:03:20.000Z">
+<meta property="article:modified_time" content="2020-04-19T09:42:32.443Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Updating  持续更新中...">
+<meta property="article:tag" content="Chemistry  化学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mozheyang.top/images/Electrocatalysis/eq-circuit.png">
+
+<link rel="canonical" href="https://www.mozheyang.top/2020/04/19/EIS/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>交流阻抗谱学的理论基础 | Mo's Notebook | 摸着羊的笔记本</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Mo's Notebook | 摸着羊的笔记本" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Notebook | 摸着羊的笔记本</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">设计 / 思考 / 材料 / 信息</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-项目">
+
+    <a href="/projects/" rel="section"><i class="fa fa-fw fa-coffee"></i>项目</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2020/04/19/EIS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="主业搬砖，兼职磕盐">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Notebook | 摸着羊的笔记本">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          交流阻抗谱学的理论基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-19 17:03:20 / 修改时间：17:42:32" itemprop="dateCreated datePublished" datetime="2020-04-19T17:03:20+08:00">2020-04-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">Electrochemistry  电化学</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/19/EIS/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/19/EIS/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文所涉及理论内容十分丰富。<br>博主水平有限，暂时不能一次全部覆盖，将会持续修补更新。<br>望各位读者批评指正！</p>
+<h1 id="交流阻抗谱学的优势在哪？"><a href="#交流阻抗谱学的优势在哪？" class="headerlink" title="交流阻抗谱学的优势在哪？"></a>交流阻抗谱学的优势在哪？</h1><p>我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（<strong>稳态分析</strong>）的方法，具有高精度（相对）、简化分析和可分析系统长时表现的特点，一定程度上弥补了暂态分析的不足。</p>
+<p>交流阻抗分析的主要思想是将复杂的电化学系统简化为一定的等效电路，通过电信号的输入输出对比，基于电工学探知其内部结构的具体参数。</p>
+<a id="more"></a>
+<h1 id="电化学系统中的等效电路"><a href="#电化学系统中的等效电路" class="headerlink" title="电化学系统中的等效电路"></a>电化学系统中的等效电路</h1><p>交流阻抗分析的核心正在于此。若将整个电化学系统（电极、电解质、隔膜、电极片等）视作一个灰盒（介于黑盒与白盒之间），通过输入已知信号，得到一定的输出信号，便可印证灰盒中是否存在之前假定的电路元件。同时，在理想情况下，可以通过拟合，实现对电路元件具体参数的测定。</p>
+<h2 id="构成电化学系统的基本元器件"><a href="#构成电化学系统的基本元器件" class="headerlink" title="构成电化学系统的基本元器件"></a>构成电化学系统的基本元器件</h2><ul>
+<li>物理元器件：电阻、电容、电感（以及，第四类基本电子元器件：忆阻器。新兴领域，非教科书观点。可参考相关文章：<a href="[https://www.cbicr.tsinghua.edu.cn/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E5%9C%A8%E5%BF%86%E9%98%BB%E5%99%A8%E9%98%B5%E5%88%97%E9%9B%86%E6%88%90%E4%B8%8E%E9%AB%98%E8%83%BD%E6%95%88%E7%B1%BB%E8%84%91%E8%AE%A1%E7%AE%97%E7%9A%84%E5%AE%9E/](https://www.cbicr.tsinghua.edu.cn/清华大学在忆阻器阵列集成与高能效类脑计算的实/">钱鹤、吴华强团队在基于新型忆阻器阵列的类脑计算取得重大突破</a>。</li>
+<li>电化学系统元器件：电容（双电层结构）、电阻（溶液电阻、接触电阻、材料电阻等）、阻抗（= 电阻 + 电容）。</li>
+</ul>
+<h2 id="Randles等效电路"><a href="#Randles等效电路" class="headerlink" title="Randles等效电路"></a>Randles等效电路</h2><p>如下的Randles电路是常用的一种针对<strong>单个工作电极</strong>的等效电路。</p>
+<p><img src="http://mozheyang.top/images/Electrocatalysis/eq-circuit.png" alt=""></p>
+<center>Randles等效电路</center>
+
+<p>需要注意的是，这里我们说的<strong>“等效”</strong>与<strong>“约等于”</strong>不同：“约等于”代表我们可以用数学结构去描述未知的部分，我们甚至有方法去减小这个未知的部分。比如通过Taylor公式我们知道，$x \rightarrow 0$时，$\ln (1+x) \approx x$。这是因为</p>
+<script type="math/tex; mode=display">
+\ln(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots</script><p>当$x \rightarrow 0$时，$x^2$、$x^3$及高阶次方$x^n$都趋近于0，于是此时有$\ln (1+x) \rightarrow x$。</p>
+<p>“等效”不太一样。我们不清楚电路的具体模型是什么，因此我们假设了一个，对不对我们也不知道。有的时候能够描述比较好，而有的时候不行。因此不代表我们可以用足够复杂的电路去描述一个电化学系统。</p>
+<p>但<strong>Randles等效电路远非随意假设</strong>。在电化学分析中，我们最关注的是<strong>化学过程</strong>。<strong>法拉第过程</strong>在电极与电解质之间产生了电子转移，在不同物质之间发生了氧化还原，是我们电化学分析中着重关注的过程。这一过程对应的阻抗即法拉第阻抗$Z_f$，也是我们后来理论推导中的着力点。</p>
+<h2 id="电解质电阻与双电层电容"><a href="#电解质电阻与双电层电容" class="headerlink" title="电解质电阻与双电层电容"></a>电解质电阻与双电层电容</h2><p>交流信号通过电解质后不发生相位改变，因此其可以简单用一个电阻$R_\Omega$表示。双电层电容指的是由于双电层形成而产生的，类似于物理中双极板电容器的一种化学元器件。受热力学平衡影响，电极浸入电解液后会自动带上电荷，于是在电极-电解质界面的两边，会分别形成所带电荷符号相反的电荷分布。如下图（Stern模型）所示，电极内部带正电荷，电解质中阴离子形成双电层，且阴（阳）离子由于溶剂化而被溶剂分子包裹。</p>
+<p><img src="https://www.mozheyang.top/images/EIS/double-layer.jpg" alt=""></p>
+<p class="refs">Ref: https://www.seas.ucla.edu/~pilon/EDLCs.htm</p>
+
+<p>有关电荷产生原因的电毛细理论和双电层电容理论模型在之前的课后回顾中有所提及，感兴趣的读者可以查看：<a href="http://mozheyang.top/2017/10/22/EClecturenote3/" target="_blank" rel="noopener">课后回顾 | 双电层结构</a>。</p>
+<h2 id="法拉第阻抗-Z-f"><a href="#法拉第阻抗-Z-f" class="headerlink" title="法拉第阻抗$Z_f$"></a>法拉第阻抗$Z_f$</h2><p>考虑把法拉第阻抗$Z_f$单独拿出来分析。既然电化学系统中只有电阻和电容两种元器件，那么直观地，阻抗也就可以分解为电阻$R_s$和电容$C_s$的组合。</p>
+<h2 id="如果是纯粹物理电路"><a href="#如果是纯粹物理电路" class="headerlink" title="如果是纯粹物理电路"></a>如果是纯粹物理电路</h2><p>只有电阻$R_s$和电容$C_s$电路的电压-电流特征是</p>
+<script type="math/tex; mode=display">
+E = iR_s + \frac{q}{C_s}</script><p>两边对时间$t$求导</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}E}{\text{d}t} = R_s \frac{\text{d}i}{\text{d}t} + \frac{i}{C_s}</script><p>输入正弦交流信号</p>
+<script type="math/tex; mode=display">
+i = I \sin (\omega t)</script><blockquote>
+<p>此处无需考虑电压信号，因此电流信号$i$可以忽略相位差$\phi$，以简化公式。详情可查看附录。</p>
+</blockquote>
+<p>得到等效电路电压特征</p>
+<center><div class="eqnBlock" id="eq-circuit">
+
+
+$$
+\frac{\text{d}E}{\text{d}t} 
+= \left( R_sI\omega \right) \cos(\omega t) 
++ \left( \frac{I}{C_s} \right) \sin(\omega t)
+$$
+
+ </div></center>
+
+<h2 id="回到现实电化学系统"><a href="#回到现实电化学系统" class="headerlink" title="回到现实电化学系统"></a>回到现实电化学系统</h2><p>对于一个一般的电化学氧化还原反应</p>
+<script type="math/tex; mode=display">
+O + ne^- \rightleftharpoons R</script><blockquote>
+<p>以下为了清晰显示关系，存在符号的简化。物质浓度均为电极表面浓度，且与电极电势保持同一时刻$t$：</p>
+<script type="math/tex; mode=display">
+\begin{split}
+C_O &= C_O(0, t) \\
+C_R &= C_R(0, t)
+\end{split}</script></blockquote>
+<p>反应的电极电势$E$与电流$i$、氧化物浓度$C_O$和还原物浓度$C_R$都有关系</p>
+<script type="math/tex; mode=display">
+E = f(i, C_o, C_R)</script><p>由E的全微分定义有</p>
+<center><div class="eqnBlock" id="dE-dt">
+
+
+$$
+\frac{\text{d}E}{\text{d}t}
+ = \frac{\partial E}{\partial i} \frac{\text{d} i}{\text{d} t}
+ + \frac{\partial E}{\partial C_O} \frac{\text{d} C_O}{\text{d} t}
+ + \frac{\partial E}{\partial C_R} \frac{\text{d} C_R}{\text{d} t}
+$$
+
+ </div></center>
+
+<p>再做一个代换，使关系更为清晰</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}E}{\text{d}t}
+ = R_{ct} \frac{\text{d} i}{\text{d} t}
+ + \beta_O \frac{\text{d} C_O}{\text{d} t}
+ + \beta_R \frac{\text{d} C_R}{\text{d} t}</script><p>可以得出结论，$\text{d}E / \text{d} t$依赖于等式右边的<strong>六个变量</strong></p>
+<script type="math/tex; mode=display">
+\begin{split}
+R_{ct} &= \frac{\partial E}{\partial i} \\
+\beta_O &= \frac{\partial E}{\partial C_O} \\
+\beta_R &= \frac{\partial E}{\partial C_R} \\
+\\i,\quad &C_o,\quad C_R
+\end{split}</script><h2 id="通过组装-R-s-和-C-s-获得法拉第阻抗-Z-f"><a href="#通过组装-R-s-和-C-s-获得法拉第阻抗-Z-f" class="headerlink" title="通过组装$R_s$和$C_s$获得法拉第阻抗$Z_f$"></a>通过组装$R_s$和$C_s$获得法拉第阻抗$Z_f$</h2><p>直接对电流信号$i= I \sin (\omega t+\phi)$进行求导可得</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}i}{\text{d}t} = I \omega \cos(\omega t)</script><p>基于半无限扩散模型，经过足够长的时间$t$，系统达到稳态，（中间省略部分数学处理）可得</p>
+<script type="math/tex; mode=display">
+\frac{\text{d} C_O}{\text{d} t} 
+= \frac{I}{nFA} \left( \frac{\omega}{2D_O} \right)^{1/2}
+\sin(\omega t) + \cos(\omega t) \\
+
+\frac{\text{d} C_R}{\text{d} t} 
+= \frac{I}{nFA} \left( \frac{\omega}{2D_R} \right)^{1/2}
+\sin(\omega t) + \cos(\omega t)</script><p>以上三式可带入<a href="#dE-dt">$\text{d}E / \text{d} t$的描述公式</a>中，简化得到</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}E}{\text{d}t} 
+= \left( R_{ct} + \sigma\omega^{-1/2} \right) \cos(\omega t) 
++ \left( \frac{I}{C_s} \right) \sin(\omega t)</script><p>与<a href="#eq-circuit">从纯物理角度得到的电压特征</a>相比后得到</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}E}{\text{d}t} 
+= \left( R_sI\omega \right) \cos(\omega t) 
++ \left( \frac{I}{C_s} \right) \sin(\omega t)</script><p>于是可得出对应电阻$R_s$和电容$C_s$</p>
+<script type="math/tex; mode=display">
+R_s = R_{ct} + \sigma \omega^{-1/2}</script><script type="math/tex; mode=display">
+C_s = \sigma^{-1} \omega^{-1/2}</script><p>通过组装可以得出法拉第阻抗$z_f$</p>
+<center><div class="eqnBlock" id="dE-dt">
+$$
+Z_f = R_s - j \frac{1}{\omega C_s}
+= R_{ct} + \sigma \omega^{-1/2}-j(\sigma \omega^{-1/2})
+$$
+
+ </div></center>
+
+
+<h3 id="电荷传递阻抗-R-ct-和-Warburg-阻抗"><a href="#电荷传递阻抗-R-ct-和-Warburg-阻抗" class="headerlink" title="电荷传递阻抗$R_{ct}$和$Warburg$阻抗"></a>电荷传递阻抗$R_{ct}$和$Warburg$阻抗</h3><p>回到阻抗分析的方法上来。我们输入的是<strong>不同频率</strong>的小幅正弦交流电信号，然后观察电化学系统的响应。</p>
+<blockquote>
+<p><strong>小幅</strong>是因为$x \rightarrow 0$时，才有$sin(x) \approx x$，对正弦信号的响应与对线性信号响应趋同，从而简化分析。</p>
+</blockquote>
+<p><img src="https://www.mozheyang.top/images/EIS/in-output.png" style="zoom:60%;" /></p>
+<p>那么在理论模型上就应该把<strong>受频率影响</strong>的部分和<strong>不受频率影响</strong>的部分都单独拎出来。于是有了如下的写法，</p>
+<p><strong>电荷传递阻抗</strong></p>
+<script type="math/tex; mode=display">
+R_{ct}</script><p><strong>Warburg​阻抗</strong>（与传质相关）</p>
+<script type="math/tex; mode=display">
+\sigma \omega^{-1/2}-j(\sigma \omega^{-1/2})</script><h1 id="电化学系统总阻抗"><a href="#电化学系统总阻抗" class="headerlink" title="电化学系统总阻抗"></a>电化学系统总阻抗</h1><p>总阻抗为负数，因此可分为实部和虚部</p>
+<script type="math/tex; mode=display">
+Z = Z_{Re} + Z_{Im}</script><p>（中间省略部分数学处理）且</p>
+<script type="math/tex; mode=display">
+Z_{Re} = R_\Omega 
++ \frac{R_{ct} + \sigma \omega^{-1/2}}
+{(C_d \sigma \omega^{1/2})^2 + (R_{ct} + \sigma \omega^{-1/2})^2}</script><script type="math/tex; mode=display">
+Z_{Im} = \frac{\omega C_d  (R_{ct} + \sigma \omega^{-1/2}) 
++ \sigma \omega^{-1/2} (\omega^{1/2} C_d + 1)}
+{(\sigma\omega^{1/2} C_d + 1)^2 + \omega^2 C_d^2(R_{ct} + \sigma \omega^{-1/2})^2}</script><h2 id="低频极限时，-omega-rightarrow-0"><a href="#低频极限时，-omega-rightarrow-0" class="headerlink" title="低频极限时，$\omega \rightarrow 0$"></a>低频极限时，$\omega \rightarrow 0$</h2><script type="math/tex; mode=display">
+Z_{Re} = Z_{Re} - R_\Omega - R_{ct} + 2 \sigma C_d</script><p>对应Nyquist图如下</p>
+<p><img src="https://www.mozheyang.top/images/EIS/low-frequency.png" style="zoom:97%;" /></p>
+<h2 id="高频极限，-omega-rightarrow-infty"><a href="#高频极限，-omega-rightarrow-infty" class="headerlink" title="高频极限，$\omega \rightarrow \infty$"></a>高频极限，$\omega \rightarrow \infty$</h2><script type="math/tex; mode=display">
+\left( Z_{Re} - R_\Omega - \frac{R_{ct}}{2}\right)^2 + Z_{Im}^2 
+= \left( \frac{R_{ct}}{2} \right)^2</script><p>对应Nyquist图如下</p>
+<p><img src="https://www.mozheyang.top/images/EIS/high-frequency.png" style="zoom:80%;" /></p>
+<p>而中频部分正是高频与低频阻抗谱的过渡，因此呈以下形状</p>
+<p><img src="https://www.mozheyang.top/images/Electrocatalysis/Nyquist-plot.png" alt=""></p>
+<p>这也就是经典的Randles等效电路对应的Nyquist图。可通过基于最小二乘法等优化方法的软件可对其进行拟合，从而得到具体的电化学系统元器件参数。</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Bard, A. J., Faulkner, L. R., Leddy, J., &amp; Zoski, C. G. (1980). Electrochemical methods: fundamentals and applications (Vol. 2). New York: wiley.</p>
+<h1 id="附录：电工学"><a href="#附录：电工学" class="headerlink" title="附录：电工学"></a>附录：电工学</h1><h2 id="电阻"><a href="#电阻" class="headerlink" title="电阻"></a>电阻</h2><p>假设一个正弦电压信号</p>
+<script type="math/tex; mode=display">
+e = E \sin (\omega t)</script><p>与其对应的电流信号往往会与电压信号存在一定相位差$\phi$</p>
+<script type="math/tex; mode=display">
+i=I \sin(\omega t + \phi)</script><p>在恒电位仪上，我们可以对只含一个阻值为$R$的电阻施加正弦电压信号，此时Ohm定律$E=IR$和$e=iR$一直成立，于是有</p>
+<blockquote>
+<p>只在纯电阻电路中Ohm定律总是适用。</p>
+</blockquote>
+<script type="math/tex; mode=display">
+e = RI \sin(\omega t) = Ri = R \sin(\omega t + \phi)</script><p>即此时电压信号$e$和电流信号$i$的相位差$\phi$为0。</p>
+<h2 id="电容"><a href="#电容" class="headerlink" title="电容"></a>电容</h2><p>施加正弦电压信号$e = E \sin(\omega t)$通过一个电容值为$C$的纯电容，根据电容定义$q=Ce$，两边对$t$求导</p>
+<script type="math/tex; mode=display">
+i = \frac{\text{d} q}{\text{d} t} 
+= C \frac{\text{d} e}{\text{d} t} 
+= \omega CE \cos(\omega t)
+= \omega CE \sin(\omega t)</script><p>考虑容抗后，Ohm定律$e=iR$仍成立</p>
+<script type="math/tex; mode=display">
+i = \frac{e}{Z_C}
+= \frac{E}{Z_C} \sin \left( \omega t + \frac{\pi}{2} \right)</script><p>其中容抗$Z_C = \frac{1}{\omega C}$。此时可以对比出电压信号$e$和电流信号$i$的相位差$\phi$为$\frac{\pi}{2}$。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.mozheyang.top/2020/04/19/EIS/" title="交流阻抗谱学的理论基础">https://www.mozheyang.top/2020/04/19/EIS/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+  <li class="post-copyright-contact">
+    <strong>联系方式： </strong>
+    <a href="mailto:mozheyang@outlook.com" target="_blank">mozheyang@outlook.com</a>
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> Updating  持续更新中...</a>
+              <a href="/tags/Chemistry-%E5%8C%96%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> Chemistry  化学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/10/lammps2/" rel="prev" title="LAMMPS学习札记（二）——输出与输入篇">
+      <i class="fa fa-chevron-left"></i> LAMMPS学习札记（二）——输出与输入篇
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2201/03/14/TOP/" rel="next" title="置顶公告">
+      置顶公告 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#交流阻抗谱学的优势在哪？"><span class="nav-number">1.</span> <span class="nav-text">交流阻抗谱学的优势在哪？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电化学系统中的等效电路"><span class="nav-number">2.</span> <span class="nav-text">电化学系统中的等效电路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构成电化学系统的基本元器件"><span class="nav-number">2.1.</span> <span class="nav-text">构成电化学系统的基本元器件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Randles等效电路"><span class="nav-number">2.2.</span> <span class="nav-text">Randles等效电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电解质电阻与双电层电容"><span class="nav-number">2.3.</span> <span class="nav-text">电解质电阻与双电层电容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#法拉第阻抗-Z-f"><span class="nav-number">2.4.</span> <span class="nav-text">法拉第阻抗$Z_f$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果是纯粹物理电路"><span class="nav-number">2.5.</span> <span class="nav-text">如果是纯粹物理电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回到现实电化学系统"><span class="nav-number">2.6.</span> <span class="nav-text">回到现实电化学系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过组装-R-s-和-C-s-获得法拉第阻抗-Z-f"><span class="nav-number">2.7.</span> <span class="nav-text">通过组装$R_s$和$C_s$获得法拉第阻抗$Z_f$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#电荷传递阻抗-R-ct-和-Warburg-阻抗"><span class="nav-number">2.7.1.</span> <span class="nav-text">电荷传递阻抗$R_{ct}$和$Warburg$阻抗</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电化学系统总阻抗"><span class="nav-number">3.</span> <span class="nav-text">电化学系统总阻抗</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#低频极限时，-omega-rightarrow-0"><span class="nav-number">3.1.</span> <span class="nav-text">低频极限时，$\omega \rightarrow 0$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高频极限，-omega-rightarrow-infty"><span class="nav-number">3.2.</span> <span class="nav-text">高频极限，$\omega \rightarrow \infty$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录：电工学"><span class="nav-number">5.</span> <span class="nav-text">附录：电工学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电阻"><span class="nav-number">5.1.</span> <span class="nav-text">电阻</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电容"><span class="nav-number">5.2.</span> <span class="nav-text">电容</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">主业搬砖，兼职磕盐</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/sitemap.xml" title="Sitemap → &#x2F;sitemap.xml"><i class="fa fa-fw fa-sitemap"></i>Sitemap</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian">
+      <img src="https://www.mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
