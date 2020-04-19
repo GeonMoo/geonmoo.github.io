@@ -19,13 +19,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者在此只做核心思想的简单归纳。本文的主要参考材料也正是何师兄的LectureNote[1]。 关于过渡态理论，有部分难以理解的地方，笔者特地做了一个较为详细的背景补充和补充解释，详见PDF文件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="课后回顾 | 电化学动力学（宏观尺度）">
-<meta property="og:url" content="http://mozheyang.top/2017/10/29/EClecturenote4/index.html">
+<meta property="og:url" content="https://www.mozheyang.top/2017/10/29/EClecturenote4/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者在此只做核心思想的简单归纳。本文的主要参考材料也正是何师兄的LectureNote[1]。 关于过渡态理论，有部分难以理解的地方，笔者特地做了一个较为详细的背景补充和补充解释，详见PDF文件。">
 <meta property="og:image" content="https://www.mozheyang.top/images/EClecturenote4/BVequation.png">
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.mozheyang.top/images/EClecturenote4/BVequation.png">
 
-<link rel="canonical" href="http://mozheyang.top/2017/10/29/EClecturenote4/">
+<link rel="canonical" href="https://www.mozheyang.top/2017/10/29/EClecturenote4/">
 
 
 <script id="page-configurations">
@@ -106,7 +106,7 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <p class="site-subtitle">Bridging the virtual and reality | 虚拟与现实的交点</p>
+        <p class="site-subtitle">一个想成为设计师却一直在材料研究路上奔波的信息科技爱好者</p>
   </div>
 
   <div class="site-nav-right">
@@ -208,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/10/29/EClecturenote4/">
+    <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2017/10/29/EClecturenote4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -283,7 +283,7 @@
 
       
         <p>这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者在此只做核心思想的简单归纳。本文的主要参考材料也正是何师兄的LectureNote[1]。</p>
-<p>关于过渡态理论，有部分难以理解的地方，笔者特地做了一个较为详细的背景补充和补充解释，详见<a href="https://www.mozheyang.top/documents/TransitionStateTheory20171029.pdf" target="_blank" rel="noopener">PDF文件</a>。</p>
+<p>关于过渡态理论，有部分难以理解的地方，笔者特地做了一个较为详细的背景补充和补充解释，详见<a href="https://www.mozheyang.top/documents/TransitionStateTheory20171029.pdf">PDF文件</a>。</p>
 <a id="more"></a>
 <p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
 <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>宏观模型（Macroscopic Model）主要通过热力学方法，对化学反应中的动力学过程进行讨论。其中过渡态理论是对Arrhenius公式所进行的完善，Butler-Volmer公式是利用以上规律对电流电压关系的求解，而Marcus-Hush理论是对以上所考虑的电子传递过程的更复杂化（溶剂化）的考虑。接下来，笔者会对四个模型的核心思想进行简要介绍。</p>
@@ -324,7 +324,7 @@ E_{a}=\frac{(E_{e}+2\lambda)^{2}}{4\lambda}</script><p>有关于Marcus-Hush理�
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://mozheyang.top/2017/10/29/EClecturenote4/" title="课后回顾 | 电化学动力学（宏观尺度）">http://mozheyang.top/2017/10/29/EClecturenote4/</a>
+    <a href="https://www.mozheyang.top/2017/10/29/EClecturenote4/" title="课后回顾 | 电化学动力学（宏观尺度）">https://www.mozheyang.top/2017/10/29/EClecturenote4/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -493,7 +493,7 @@ E_{a}=\frac{(E_{e}+2\lambda)^{2}}{4\lambda}</script><p>有关于Marcus-Hush理�
       <div class="footer-inner">
         
   <div class="beian">
-      <img src="http://mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
+      <img src="https://www.mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
   </div>
 
 <div class="copyright">

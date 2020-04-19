@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Mo&#39;s Notebook | 摸着羊的笔记本</title>
   
-  <subtitle>Bridging the virtual and reality | 虚拟与现实的交点</subtitle>
+  <subtitle>一个想成为设计师却一直在材料研究路上奔波的信息科技爱好者</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://mozheyang.top/"/>
-  <updated>2020-04-19T02:47:22.051Z</updated>
-  <id>http://mozheyang.top/</id>
+  <link href="https://www.mozheyang.top/"/>
+  <updated>2020-04-19T02:51:26.601Z</updated>
+  <id>https://www.mozheyang.top/</id>
   
   <author>
     <name>Geon Mo</name>
@@ -18,26 +18,26 @@
   
   <entry>
     <title>置顶公告</title>
-    <link href="http://mozheyang.top/2201/03/14/TOP/"/>
-    <id>http://mozheyang.top/2201/03/14/TOP/</id>
+    <link href="https://www.mozheyang.top/2201/03/14/TOP/"/>
+    <id>https://www.mozheyang.top/2201/03/14/TOP/</id>
     <published>2201-03-14T12:13:14.000Z</published>
-    <updated>2020-04-19T02:47:22.051Z</updated>
+    <updated>2020-04-19T02:51:26.601Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="最近更新"><a href="#最近更新" class="headerlink" title="最近更新"></a>最近更新</h1><ul><li>网站链接逐渐正升级为https，加强了网站的安全性。关于https可参考：<a href="https://cloud.tencent.com/developer/article/1340721" target="_blank" rel="noopener">最详细的 HTTPS 科普扫盲帖</a>。</li><li>新增<a href="https://www.mozheyang.top/projects/" target="_blank" rel="noopener"><strong>项目</strong></a>板块，已更新<code>期刊信息可视化</code>。</li><li>新域名<a href="https://www.mozheyang.com/" target="_blank" rel="noopener">https://www.mozheyang.com/</a>已同时启用，主要利于国外访问。</li><li><code>评论功能</code>目前仍处于并可能长期处于测试状态。</li></ul><h1 id="热门博客"><a href="#热门博客" class="headerlink" title="热门博客"></a>热门博客</h1><ul><li><a href="https://www.mozheyang.top/2018/02/15/ORRbasic/" target="_blank" rel="noopener">氧还原反应（Oxygen Reduction Reaction）基础</a></li><li><a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/" target="_blank" rel="noopener">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a></li><li><a href="https://www.mozheyang.top/2018/02/25/docear/" target="_blank" rel="noopener">思维导图+文献管理 | Docear使用体会</a></li><li><a href="https://www.mozheyang.top/2018/07/22/PhenoNature/" target="_blank" rel="noopener">横看成岭侧成峰 | 理工科思维论现象与本质</a></li></ul><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<h1 id="最近更新"><a href="#最近更新" class="headerlink" title="最近更新"></a>最近更新</h1><ul><li>为增强网站的安全性，网站链接正逐渐升级为https。关于https可参考：<a href="https://cloud.tencent.com/developer/article/1340721" target="_blank" rel="noopener">最详细的 HTTPS 科普扫盲帖</a>。</li><li>新增<a href="https://www.mozheyang.top/projects/"><strong>项目</strong></a>板块，已更新<code>期刊信息可视化</code>。</li><li>新域名<a href="https://mozheyang.com/" target="_blank" rel="noopener">https://mozheyang.com/</a>已同时启用，主要利于国外访问。</li><li><code>评论功能</code>目前仍处于并可能长期处于测试状态。</li></ul><h1 id="热门博客"><a href="#热门博客" class="headerlink" title="热门博客"></a>热门博客</h1><ul><li><a href="https://www.mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a></li><li><a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a></li><li><a href="https://www.mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a></li><li><a href="https://www.mozheyang.top/2018/07/22/PhenoNature/">横看成岭侧成峰 | 理工科思维论现象与本质</a></li></ul><a id="more"></a>]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;最近更新&quot;&gt;&lt;a href=&quot;#最近更新&quot; class=&quot;headerlink&quot; title=&quot;最近更新&quot;&gt;&lt;/a&gt;最近更新&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;网站链接逐渐正升级为https，加强了网站的安全性。关于https可参考：&lt;a href=&quot;https://cloud.tencent.com/developer/article/1340721&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;最详细的 HTTPS 科普扫盲帖&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;新增&lt;a href=&quot;https://www.mozheyang.top/projects/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;项目&lt;/strong&gt;&lt;/a&gt;板块，已更新&lt;code&gt;期刊信息可视化&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;新域名&lt;a href=&quot;https://www.mozheyang.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.mozheyang.com/&lt;/a&gt;已同时启用，主要利于国外访问。&lt;/li&gt;
+&lt;li&gt;为增强网站的安全性，网站链接正逐渐升级为https。关于https可参考：&lt;a href=&quot;https://cloud.tencent.com/developer/article/1340721&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;最详细的 HTTPS 科普扫盲帖&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;新增&lt;a href=&quot;https://www.mozheyang.top/projects/&quot;&gt;&lt;strong&gt;项目&lt;/strong&gt;&lt;/a&gt;板块，已更新&lt;code&gt;期刊信息可视化&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;新域名&lt;a href=&quot;https://mozheyang.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://mozheyang.com/&lt;/a&gt;已同时启用，主要利于国外访问。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;评论功能&lt;/code&gt;目前仍处于并可能长期处于测试状态。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;热门博客&quot;&gt;&lt;a href=&quot;#热门博客&quot; class=&quot;headerlink&quot; title=&quot;热门博客&quot;&gt;&lt;/a&gt;热门博客&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/02/15/ORRbasic/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;氧还原反应（Oxygen Reduction Reaction）基础&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2019/03/31/LSV-KLeq/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/02/25/docear/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;思维导图+文献管理 | Docear使用体会&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/07/22/PhenoNature/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;横看成岭侧成峰 | 理工科思维论现象与本质&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/02/15/ORRbasic/&quot;&gt;氧还原反应（Oxygen Reduction Reaction）基础&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2019/03/31/LSV-KLeq/&quot;&gt;极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/02/25/docear/&quot;&gt;思维导图+文献管理 | Docear使用体会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/07/22/PhenoNature/&quot;&gt;横看成岭侧成峰 | 理工科思维论现象与本质&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -48,8 +48,8 @@
   
   <entry>
     <title>LAMMPS学习札记（二）——输出与输入篇</title>
-    <link href="http://mozheyang.top/2020/04/10/lammps2/"/>
-    <id>http://mozheyang.top/2020/04/10/lammps2/</id>
+    <link href="https://www.mozheyang.top/2020/04/10/lammps2/"/>
+    <id>https://www.mozheyang.top/2020/04/10/lammps2/</id>
     <published>2020-04-10T03:43:03.000Z</published>
     <updated>2020-04-19T02:25:26.014Z</updated>
     
@@ -64,16 +64,16 @@
     
     
     
-      <category term="Information Science &amp; Technology  信息科学与技术" scheme="http://mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+      <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="Material  材料" scheme="http://mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+      <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
   </entry>
   
   <entry>
     <title>LAMMPS学习札记（一）——安装篇</title>
-    <link href="http://mozheyang.top/2020/04/04/lammps1/"/>
-    <id>http://mozheyang.top/2020/04/04/lammps1/</id>
+    <link href="https://www.mozheyang.top/2020/04/04/lammps1/"/>
+    <id>https://www.mozheyang.top/2020/04/04/lammps1/</id>
     <published>2020-04-04T10:38:18.000Z</published>
     <updated>2020-04-19T02:25:26.002Z</updated>
     
@@ -89,16 +89,16 @@
     
     
     
-      <category term="Information Science &amp; Technology  信息科学与技术" scheme="http://mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+      <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="Material  材料" scheme="http://mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+      <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
   </entry>
   
   <entry>
     <title>在路上，略感焦虑</title>
-    <link href="http://mozheyang.top/2020/04/03/insane/"/>
-    <id>http://mozheyang.top/2020/04/03/insane/</id>
+    <link href="https://www.mozheyang.top/2020/04/03/insane/"/>
+    <id>https://www.mozheyang.top/2020/04/03/insane/</id>
     <published>2020-04-03T12:04:23.000Z</published>
     <updated>2020-04-19T02:25:26.002Z</updated>
     
@@ -113,22 +113,22 @@
     
     
     
-      <category term="Thought  随想" scheme="http://mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>高通量制备 | 加快材料领域研究步伐</title>
-    <link href="http://mozheyang.top/2020/02/11/benjamin2020/"/>
-    <id>http://mozheyang.top/2020/02/11/benjamin2020/</id>
+    <link href="https://www.mozheyang.top/2020/02/11/benjamin2020/"/>
+    <id>https://www.mozheyang.top/2020/02/11/benjamin2020/</id>
     <published>2020-02-11T09:11:45.000Z</published>
     <updated>2020-04-19T02:25:25.999Z</updated>
     
-    <content type="html"><![CDATA[<p>博主一直关注的材料”高通量制备”领域终于出现了新的进展。不了解”高通量”概念的同学呢，可以先看看博主之前的一篇博文：<a href="https://www.mozheyang.top/2017/08/12/curtarolo2013/" target="_blank" rel="noopener">高通量计算 | 现状及展望</a>。相信厌倦了“炒菜式”材料学的同学会对这种新的方法学有一定兴趣。</p><p>今天跟大家分享的是一篇有关高通量纳米合成的文章，发表在2020年1月24日的《Science》期刊上。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/title.png" alt=""></p><p class="refs">参考文献：Steimle B C, Fenton J L, Schaak R E. Rational construction of a scalable heterostructured nanorod megalibrary[J]. Science, 2020, 367(6476): 418-424.</p><a id="more"></a><h1 id="为什么说这一进展是重要的呢？"><a href="#为什么说这一进展是重要的呢？" class="headerlink" title="为什么说这一进展是重要的呢？"></a>为什么说这一进展是重要的呢？</h1><p>博主浅见，高通量（High-throughput）领域可以主要分为三块儿：<strong>高通量计算</strong>、<strong>高通量制备</strong>和<strong>高通量表征</strong>。前者基于人们的模型和假设，有坚实的理论基础，实现难度相对小；由于自然规律的复杂性和未知性，缺少坚实的理论基础，后两者实现难度相对更大。<br>这篇文章的主要内容是：作者基于界面反应性和晶体结构关系，合成了具有多达6种材料（过渡金属硫化物，事实唯一自变量），8个片段和11种界面结构的<strong>65520种金属硫化物纳米棒</strong>。通过这种方法，研究者们可以合成其他化合物样品库。如果还能结合某些性能的高通量表征，那么材料研究中最实用的<strong>工艺-性能</strong>关系便可以进一步利用如今当红的<strong>机器学习技术</strong>被得出。因为<strong>大规模制备技术有助于自动化技术的应用</strong>，从而有助于材料的高通量筛选，因此在博主眼里，这一进展是很重要的。</p><p>不从事IT行业的部分同学可能还是对人工智能/机器学习一类的自动化技术存在敌意。毕竟如果机器能够做我们的工作之后，那我们又能去做什么呢？<br>其实大可不必这么想。机器取代是无聊而重复的工作。重复的工作无聊，却必要，如果都让机器给抢走了，咱们人类不就有机会从事有趣的工作了吗？<br>还有同学可能会说：“何不食肉糜？”你不想做无聊的工作，但总有人喜欢，比如我就喜欢。不否认确实存在这一可能性。但事实就是，<strong>具有“无聊”属性的重复工作会越来越少</strong>。世界上越来越多的企业都会要求职员具有自动化技能。下面的一份McKinsey的报告就能说明一部分问题：预计到2030年，相对于2016年的情况，人们花在IT（自动化）技术工作上的时间会增长55%，而花在机械重复人工工作上的时间却减少14%。</p><p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Future%20of%20Organizations/Skill%20shift%20Automation%20and%20the%20future%20of%20the%20workforce/SVGZ-FutureWorkforce-Ex1-v2.ashx" alt=""></p><p class="refs">参考文献：Jacques Bughin, Eric Hazan, Susan Lund, Peter Dahlström, Anna Wiesinger, and Amresh Subramaniam. Skill shift: Automation and the future of the workforce. McKinsey Global Institute, 2018, https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce.</p><h1 id="合成方法论"><a href="#合成方法论" class="headerlink" title="合成方法论"></a>合成方法论</h1><p>接下来，我们来看看文章作者具体采用了何种方法论吧。<br>特别地，本文所采用的方式是液相中的<strong>阳离子交换反应</strong>（cation-exchange reactions），<strong>即将固相（金属硫化物、硒化物、碲化物、磷化物、卤化物和氧化物）中的阳离子替换为液相（溶液）中的阳离子</strong>。具体方法为：首先将装有蒸馏的油胺（oleylamine）作为稳定配体以及苄基醚（benzyl ether）和十八碳烯（octadecene）作为溶剂的烧瓶加热至120°C，再将作为Lewis碱的分散在三辛基膦（tri-octyl phosphine）中的Cu<sub>1.8</sub>S纳米棒注入。接下来注入具有其它金属离子的交换溶液注入（控制好化学计量比），逐步将Cu<sub>1.8</sub>S实现结构替换，如图1所示。这里所使用的合成方法基于该课题组2018的成果：</p><p class="refs">    参考文献：Fenton J L, Steimle B C, Schaak R E. Tunable intraparticle frameworks for creating complex heterostructured nanoparticle libraries[J]. Science, 2018, 360(6388): 513-517.</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure1.png" style="zoom:67%;" /></p><center>图1  G-6纳米棒的合成</center><p>这个合成方法还是挺有意思的，只交换了Cu<sub>1.8</sub>S的部分，不对已交换的部分产生影响。这是实现稳定合成的关键。图1G-n（generation n）中n为代（generation）数。</p><h2 id="基本原则"><a href="#基本原则" class="headerlink" title="基本原则"></a>基本原则</h2><p>通过改变纳米棒中<strong>交换溶液注入顺序</strong>，可以实现材料组合顺序及其形成的异质界面的改变；改变<strong>交换溶液的量</strong>，还可以实现对纳米交换程度的控制。如图2所示的G-8纳米棒的合成示意图展示了为什么大样品库合成是可以实现的。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure2.jpg" alt=""></p><center>图2  G-8纳米棒合成过程产生的16380种样品</center><h2 id="拓展合成方法（暂不计入样品库）"><a href="#拓展合成方法（暂不计入样品库）" class="headerlink" title="拓展合成方法（暂不计入样品库）"></a>拓展合成方法（暂不计入样品库）</h2><p>依赖以上基本原则完成样品库只是一种思路。事实上，从G-2开始还可以选择其它更复杂的反应路径。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure3.png" style="zoom: 67%;" /></p><center>图3  通过G-2纳米棒直接合成G-4G-8纳米棒的反应路径</center><h1 id="样品库大小"><a href="#样品库大小" class="headerlink" title="样品库大小"></a>样品库大小</h1><p>作为一种高通量制备方法，我们需要关注的是，该方法在多大范围内使用，也即其潜在样品库多大。<br>由图2可知，基于基本的合成原则，从G-1到G-2体现的是可以插入异质结构的<strong>三种位置</strong>，从G-2之后体现的是五种可交换离子除去一个（Zn<sup>2+</sup>）之后所剩下的<strong>四种可交换离子</strong>（In<sup>3+</sup>、Ga<sup>3+</sup>、Co<sup>2+</sup>、Cd<sup>2+</sup>）。由此可计算出该路径样品库大小为：</p><script type="math/tex; mode=display">\begin{cases}\begin{split}& G-3: 1 \times 3 \times 4^1 = 12 \\& G-4: 1 \times 3 \times 4^2 = 48 \\& G-5: 1 \times 3 \times 4^3 = 192 \\& G-6: 1 \times 3 \times 4^4 = 768 \\& G-7: 1 \times 3 \times 4^5 = 3072 \\& G-8: 1 \times 3 \times 4^6 = 12288 \\\end{split}\end{cases}</script><script type="math/tex; mode=display">\text{Library Size}_1 = 12+48+192+768+3072+12288=16380</script><p>将图3所示的方法计入，那么除去Zn<sup>2+</sup>外，还有另外三种可交换离子（注：这里有一些疑惑，是否应该还剩四种可交换离子？如果是这样，那就有12种G-2纳米棒）可以掺入Cu<sub>1.8</sub>S合成G-2纳米棒，共计$3 \times 3 = 9$种G-2纳米棒。同上计算方法，可计算出样品库大小：</p><script type="math/tex; mode=display">\begin{cases}\begin{split}& G-3: 9 \times 4^1 = 36 \\& G-4: 9 \times 4^2 = 144 \\& G-5: 9 \times 4^3 = 576 \\& G-6: 9 \times 4^4 = 2304 \\& G-7: 9 \times 4^5 = 9216 \\& G-8: 9 \times 4^6 = 36864 \\\end{split}\end{cases}</script><script type="math/tex; mode=display">\text{Library Size}_2 = 36+144+576+2304+9216+36864=49140</script><p>两个样品库相加可得总样品库大小为：</p><center><p class="eqnBlock">$$\text{Library Size}_\text{total} = 16380 + 49140 = 65520$$</p></center><p>也就是作者在摘要中所提及的样品库大小。<br>作者认为，其它阳离子也可以实现对Cu<sup>+</sup>的交换，例如Ag<sup>+</sup>、Au<sup>+</sup>、Mn<sup>2+</sup>、Ni<sup>2+</sup>、Pd<sup>2+</sup>、Pt<sup>2+</sup>、Sn<sup>2+</sup>和Sn<sup>4+</sup>等。因此，该样品库可能会被扩充得更大。</p><h1 id="关于组合逻辑之外的一些物理限制"><a href="#关于组合逻辑之外的一些物理限制" class="headerlink" title="关于组合逻辑之外的一些物理限制"></a>关于组合逻辑之外的一些物理限制</h1><h2 id="界面结构"><a href="#界面结构" class="headerlink" title="界面结构"></a>界面结构</h2><p>材料学与传统化学之间的一个重要分界线是材料学更关注物质结构。本文更偏向于材料学研究，因为其不仅关注了纳米棒的成分，更关注了纳米棒间各元素的相及相界面。经过阳离子交换形成的产物为纤锌矿结构（Wurtzite, WZ），具有六方密堆积结构；而交换反应基体Cu<sub>1.8</sub>S为方铁矿结构（Roxbyite），S原子以扭曲的六方密堆积排列。不同的晶格类型产生了界面上的晶格错配。需要声明的是，并不是所有界面结构都能够稳定存在。关于界面的组合，是难以实现随机组合的。其遵从于不同元素原子之间匹配的热力学原理。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure4.jpg" alt=""></p><center>图4  不同物相（交换相和基体相）之间的界面结构</center><h2 id="异构体与反应选择性"><a href="#异构体与反应选择性" class="headerlink" title="异构体与反应选择性"></a>异构体与反应选择性</h2><p>作者对146个颗粒的分析表明，有88％的颗粒形成了预期的ZnS–CuInS<sub>2</sub>–CoS–Cu<sub>1.8</sub>S构型，其余样品（12%）主要由源自中心带G-2 Cu<sub>1.8</sub>S–ZnS–Cu<sub>1.8</sub>S的相关纳米棒组成<strong>杂质</strong>。其余样品（12%）中的大多数仍然遵循以上<strong>基本合成原则</strong>。但是，一小部分样品（&lt;2％）不符合该合成原则，这表明其他因素有可能可以被利用以生产更复杂的纳米棒。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure5.png" style="zoom: 67%;" /></p><center>图5  合成反应具有选择性，大部分符合预期</center><h2 id="从微量到宏量反应"><a href="#从微量到宏量反应" class="headerlink" title="从微量到宏量反应"></a>从微量到宏量反应</h2><p>反应物数目变化有可能对产物产生影响。事实也的确如此。<br>作者对155个颗粒的分析表明，有70％的颗粒形成了预期的ZnS–CuInS<sub>2</sub>–ZnS–CuInS<sub>2</sub>–ZnS–CuInS<sub>2</sub>构型。其余颗粒为含较少条纹的纳米棒，这些条纹是由六个顺序反应步骤中的任何一个步骤中的<strong>过度交换</strong>引起的。这种过度交换可能来自反应容器中的局部浓度或热梯度，也可能来自基于纳米棒形态，尺寸和缺陷密度差异的反应性效应。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure6.png" style="zoom: 50%;" /></p><center>图6  宏量反应中会因过度交换产生纳米棒中的条纹</center><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>综上所述，该文实现的是<strong>元素及其排列顺序</strong>二者的组合方法，通过该方法可以合成非常大量的多过渡金属硫化物。<br>能够发表在《Science》或《Nature》期刊的文章都不会只是特定领域的文章。他们会给各领域的研究者都带来一定的启发。比如这篇文章，是纳米合成领域的一个突破，也是高通量制备领域的一个突破。<br>博主结合自身认知理解了这篇文章，希望能给你带来一些启发。博主水平有限，难免错漏，望各位读者老爷不吝赐教。咱们下次见。 </p>]]></content>
+    <content type="html"><![CDATA[<p>博主一直关注的材料”高通量制备”领域终于出现了新的进展。不了解”高通量”概念的同学呢，可以先看看博主之前的一篇博文：<a href="https://www.mozheyang.top/2017/08/12/curtarolo2013/">高通量计算 | 现状及展望</a>。相信厌倦了“炒菜式”材料学的同学会对这种新的方法学有一定兴趣。</p><p>今天跟大家分享的是一篇有关高通量纳米合成的文章，发表在2020年1月24日的《Science》期刊上。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/title.png" alt=""></p><p class="refs">参考文献：Steimle B C, Fenton J L, Schaak R E. Rational construction of a scalable heterostructured nanorod megalibrary[J]. Science, 2020, 367(6476): 418-424.</p><a id="more"></a><h1 id="为什么说这一进展是重要的呢？"><a href="#为什么说这一进展是重要的呢？" class="headerlink" title="为什么说这一进展是重要的呢？"></a>为什么说这一进展是重要的呢？</h1><p>博主浅见，高通量（High-throughput）领域可以主要分为三块儿：<strong>高通量计算</strong>、<strong>高通量制备</strong>和<strong>高通量表征</strong>。前者基于人们的模型和假设，有坚实的理论基础，实现难度相对小；由于自然规律的复杂性和未知性，缺少坚实的理论基础，后两者实现难度相对更大。<br>这篇文章的主要内容是：作者基于界面反应性和晶体结构关系，合成了具有多达6种材料（过渡金属硫化物，事实唯一自变量），8个片段和11种界面结构的<strong>65520种金属硫化物纳米棒</strong>。通过这种方法，研究者们可以合成其他化合物样品库。如果还能结合某些性能的高通量表征，那么材料研究中最实用的<strong>工艺-性能</strong>关系便可以进一步利用如今当红的<strong>机器学习技术</strong>被得出。因为<strong>大规模制备技术有助于自动化技术的应用</strong>，从而有助于材料的高通量筛选，因此在博主眼里，这一进展是很重要的。</p><p>不从事IT行业的部分同学可能还是对人工智能/机器学习一类的自动化技术存在敌意。毕竟如果机器能够做我们的工作之后，那我们又能去做什么呢？<br>其实大可不必这么想。机器取代是无聊而重复的工作。重复的工作无聊，却必要，如果都让机器给抢走了，咱们人类不就有机会从事有趣的工作了吗？<br>还有同学可能会说：“何不食肉糜？”你不想做无聊的工作，但总有人喜欢，比如我就喜欢。不否认确实存在这一可能性。但事实就是，<strong>具有“无聊”属性的重复工作会越来越少</strong>。世界上越来越多的企业都会要求职员具有自动化技能。下面的一份McKinsey的报告就能说明一部分问题：预计到2030年，相对于2016年的情况，人们花在IT（自动化）技术工作上的时间会增长55%，而花在机械重复人工工作上的时间却减少14%。</p><p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Future%20of%20Organizations/Skill%20shift%20Automation%20and%20the%20future%20of%20the%20workforce/SVGZ-FutureWorkforce-Ex1-v2.ashx" alt=""></p><p class="refs">参考文献：Jacques Bughin, Eric Hazan, Susan Lund, Peter Dahlström, Anna Wiesinger, and Amresh Subramaniam. Skill shift: Automation and the future of the workforce. McKinsey Global Institute, 2018, https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce.</p><h1 id="合成方法论"><a href="#合成方法论" class="headerlink" title="合成方法论"></a>合成方法论</h1><p>接下来，我们来看看文章作者具体采用了何种方法论吧。<br>特别地，本文所采用的方式是液相中的<strong>阳离子交换反应</strong>（cation-exchange reactions），<strong>即将固相（金属硫化物、硒化物、碲化物、磷化物、卤化物和氧化物）中的阳离子替换为液相（溶液）中的阳离子</strong>。具体方法为：首先将装有蒸馏的油胺（oleylamine）作为稳定配体以及苄基醚（benzyl ether）和十八碳烯（octadecene）作为溶剂的烧瓶加热至120°C，再将作为Lewis碱的分散在三辛基膦（tri-octyl phosphine）中的Cu<sub>1.8</sub>S纳米棒注入。接下来注入具有其它金属离子的交换溶液注入（控制好化学计量比），逐步将Cu<sub>1.8</sub>S实现结构替换，如图1所示。这里所使用的合成方法基于该课题组2018的成果：</p><p class="refs">    参考文献：Fenton J L, Steimle B C, Schaak R E. Tunable intraparticle frameworks for creating complex heterostructured nanoparticle libraries[J]. Science, 2018, 360(6388): 513-517.</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure1.png" style="zoom:67%;" /></p><center>图1  G-6纳米棒的合成</center><p>这个合成方法还是挺有意思的，只交换了Cu<sub>1.8</sub>S的部分，不对已交换的部分产生影响。这是实现稳定合成的关键。图1G-n（generation n）中n为代（generation）数。</p><h2 id="基本原则"><a href="#基本原则" class="headerlink" title="基本原则"></a>基本原则</h2><p>通过改变纳米棒中<strong>交换溶液注入顺序</strong>，可以实现材料组合顺序及其形成的异质界面的改变；改变<strong>交换溶液的量</strong>，还可以实现对纳米交换程度的控制。如图2所示的G-8纳米棒的合成示意图展示了为什么大样品库合成是可以实现的。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure2.jpg" alt=""></p><center>图2  G-8纳米棒合成过程产生的16380种样品</center><h2 id="拓展合成方法（暂不计入样品库）"><a href="#拓展合成方法（暂不计入样品库）" class="headerlink" title="拓展合成方法（暂不计入样品库）"></a>拓展合成方法（暂不计入样品库）</h2><p>依赖以上基本原则完成样品库只是一种思路。事实上，从G-2开始还可以选择其它更复杂的反应路径。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure3.png" style="zoom: 67%;" /></p><center>图3  通过G-2纳米棒直接合成G-4G-8纳米棒的反应路径</center><h1 id="样品库大小"><a href="#样品库大小" class="headerlink" title="样品库大小"></a>样品库大小</h1><p>作为一种高通量制备方法，我们需要关注的是，该方法在多大范围内使用，也即其潜在样品库多大。<br>由图2可知，基于基本的合成原则，从G-1到G-2体现的是可以插入异质结构的<strong>三种位置</strong>，从G-2之后体现的是五种可交换离子除去一个（Zn<sup>2+</sup>）之后所剩下的<strong>四种可交换离子</strong>（In<sup>3+</sup>、Ga<sup>3+</sup>、Co<sup>2+</sup>、Cd<sup>2+</sup>）。由此可计算出该路径样品库大小为：</p><script type="math/tex; mode=display">\begin{cases}\begin{split}& G-3: 1 \times 3 \times 4^1 = 12 \\& G-4: 1 \times 3 \times 4^2 = 48 \\& G-5: 1 \times 3 \times 4^3 = 192 \\& G-6: 1 \times 3 \times 4^4 = 768 \\& G-7: 1 \times 3 \times 4^5 = 3072 \\& G-8: 1 \times 3 \times 4^6 = 12288 \\\end{split}\end{cases}</script><script type="math/tex; mode=display">\text{Library Size}_1 = 12+48+192+768+3072+12288=16380</script><p>将图3所示的方法计入，那么除去Zn<sup>2+</sup>外，还有另外三种可交换离子（注：这里有一些疑惑，是否应该还剩四种可交换离子？如果是这样，那就有12种G-2纳米棒）可以掺入Cu<sub>1.8</sub>S合成G-2纳米棒，共计$3 \times 3 = 9$种G-2纳米棒。同上计算方法，可计算出样品库大小：</p><script type="math/tex; mode=display">\begin{cases}\begin{split}& G-3: 9 \times 4^1 = 36 \\& G-4: 9 \times 4^2 = 144 \\& G-5: 9 \times 4^3 = 576 \\& G-6: 9 \times 4^4 = 2304 \\& G-7: 9 \times 4^5 = 9216 \\& G-8: 9 \times 4^6 = 36864 \\\end{split}\end{cases}</script><script type="math/tex; mode=display">\text{Library Size}_2 = 36+144+576+2304+9216+36864=49140</script><p>两个样品库相加可得总样品库大小为：</p><center><p class="eqnBlock">$$\text{Library Size}_\text{total} = 16380 + 49140 = 65520$$</p></center><p>也就是作者在摘要中所提及的样品库大小。<br>作者认为，其它阳离子也可以实现对Cu<sup>+</sup>的交换，例如Ag<sup>+</sup>、Au<sup>+</sup>、Mn<sup>2+</sup>、Ni<sup>2+</sup>、Pd<sup>2+</sup>、Pt<sup>2+</sup>、Sn<sup>2+</sup>和Sn<sup>4+</sup>等。因此，该样品库可能会被扩充得更大。</p><h1 id="关于组合逻辑之外的一些物理限制"><a href="#关于组合逻辑之外的一些物理限制" class="headerlink" title="关于组合逻辑之外的一些物理限制"></a>关于组合逻辑之外的一些物理限制</h1><h2 id="界面结构"><a href="#界面结构" class="headerlink" title="界面结构"></a>界面结构</h2><p>材料学与传统化学之间的一个重要分界线是材料学更关注物质结构。本文更偏向于材料学研究，因为其不仅关注了纳米棒的成分，更关注了纳米棒间各元素的相及相界面。经过阳离子交换形成的产物为纤锌矿结构（Wurtzite, WZ），具有六方密堆积结构；而交换反应基体Cu<sub>1.8</sub>S为方铁矿结构（Roxbyite），S原子以扭曲的六方密堆积排列。不同的晶格类型产生了界面上的晶格错配。需要声明的是，并不是所有界面结构都能够稳定存在。关于界面的组合，是难以实现随机组合的。其遵从于不同元素原子之间匹配的热力学原理。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure4.jpg" alt=""></p><center>图4  不同物相（交换相和基体相）之间的界面结构</center><h2 id="异构体与反应选择性"><a href="#异构体与反应选择性" class="headerlink" title="异构体与反应选择性"></a>异构体与反应选择性</h2><p>作者对146个颗粒的分析表明，有88％的颗粒形成了预期的ZnS–CuInS<sub>2</sub>–CoS–Cu<sub>1.8</sub>S构型，其余样品（12%）主要由源自中心带G-2 Cu<sub>1.8</sub>S–ZnS–Cu<sub>1.8</sub>S的相关纳米棒组成<strong>杂质</strong>。其余样品（12%）中的大多数仍然遵循以上<strong>基本合成原则</strong>。但是，一小部分样品（&lt;2％）不符合该合成原则，这表明其他因素有可能可以被利用以生产更复杂的纳米棒。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure5.png" style="zoom: 67%;" /></p><center>图5  合成反应具有选择性，大部分符合预期</center><h2 id="从微量到宏量反应"><a href="#从微量到宏量反应" class="headerlink" title="从微量到宏量反应"></a>从微量到宏量反应</h2><p>反应物数目变化有可能对产物产生影响。事实也的确如此。<br>作者对155个颗粒的分析表明，有70％的颗粒形成了预期的ZnS–CuInS<sub>2</sub>–ZnS–CuInS<sub>2</sub>–ZnS–CuInS<sub>2</sub>构型。其余颗粒为含较少条纹的纳米棒，这些条纹是由六个顺序反应步骤中的任何一个步骤中的<strong>过度交换</strong>引起的。这种过度交换可能来自反应容器中的局部浓度或热梯度，也可能来自基于纳米棒形态，尺寸和缺陷密度差异的反应性效应。</p><p><img src="https://www.mozheyang.top/images/benjamin2020/figure6.png" style="zoom: 50%;" /></p><center>图6  宏量反应中会因过度交换产生纳米棒中的条纹</center><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>综上所述，该文实现的是<strong>元素及其排列顺序</strong>二者的组合方法，通过该方法可以合成非常大量的多过渡金属硫化物。<br>能够发表在《Science》或《Nature》期刊的文章都不会只是特定领域的文章。他们会给各领域的研究者都带来一定的启发。比如这篇文章，是纳米合成领域的一个突破，也是高通量制备领域的一个突破。<br>博主结合自身认知理解了这篇文章，希望能给你带来一些启发。博主水平有限，难免错漏，望各位读者老爷不吝赐教。咱们下次见。 </p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;博主一直关注的材料”高通量制备”领域终于出现了新的进展。不了解”高通量”概念的同学呢，可以先看看博主之前的一篇博文：&lt;a href=&quot;https://www.mozheyang.top/2017/08/12/curtarolo2013/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;高通量计算 | 现状及展望&lt;/a&gt;。相信厌倦了“炒菜式”材料学的同学会对这种新的方法学有一定兴趣。&lt;/p&gt;
+      &lt;p&gt;博主一直关注的材料”高通量制备”领域终于出现了新的进展。不了解”高通量”概念的同学呢，可以先看看博主之前的一篇博文：&lt;a href=&quot;https://www.mozheyang.top/2017/08/12/curtarolo2013/&quot;&gt;高通量计算 | 现状及展望&lt;/a&gt;。相信厌倦了“炒菜式”材料学的同学会对这种新的方法学有一定兴趣。&lt;/p&gt;
 &lt;p&gt;今天跟大家分享的是一篇有关高通量纳米合成的文章，发表在2020年1月24日的《Science》期刊上。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://www.mozheyang.top/images/benjamin2020/title.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p class=&quot;refs&quot;&gt;参考文献：Steimle B C, Fenton J L, Schaak R E. Rational construction of a scalable heterostructured nanorod megalibrary[J]. Science, 2020, 367(6476): 418-424.&lt;/p&gt;
@@ -137,16 +137,16 @@
     
     
     
-      <category term="Chemistry  化学" scheme="http://mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+      <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
-      <category term="Material  材料" scheme="http://mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+      <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
   </entry>
   
   <entry>
     <title>检索原理与技巧</title>
-    <link href="http://mozheyang.top/2020/02/05/AdvancedSearch/"/>
-    <id>http://mozheyang.top/2020/02/05/AdvancedSearch/</id>
+    <link href="https://www.mozheyang.top/2020/02/05/AdvancedSearch/"/>
+    <id>https://www.mozheyang.top/2020/02/05/AdvancedSearch/</id>
     <published>2020-02-05T03:10:28.000Z</published>
     <updated>2020-02-05T04:07:39.000Z</updated>
     
@@ -161,14 +161,14 @@
     
     
     
-      <category term="Information Science &amp; Technology  信息科学与技术" scheme="http://mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+      <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>国有战，召必回，战必胜</title>
-    <link href="http://mozheyang.top/2020/02/03/2019ncov/"/>
-    <id>http://mozheyang.top/2020/02/03/2019ncov/</id>
+    <link href="https://www.mozheyang.top/2020/02/03/2019ncov/"/>
+    <id>https://www.mozheyang.top/2020/02/03/2019ncov/</id>
     <published>2020-02-03T03:24:43.000Z</published>
     <updated>2020-04-19T02:26:32.860Z</updated>
     
@@ -184,14 +184,14 @@
     
     
     
-      <category term="Thought  随想" scheme="http://mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>我的二〇一玖</title>
-    <link href="http://mozheyang.top/2020/01/24/2019experience/"/>
-    <id>http://mozheyang.top/2020/01/24/2019experience/</id>
+    <link href="https://www.mozheyang.top/2020/01/24/2019experience/"/>
+    <id>https://www.mozheyang.top/2020/01/24/2019experience/</id>
     <published>2020-01-24T02:39:39.000Z</published>
     <updated>2020-04-19T02:26:32.860Z</updated>
     
@@ -207,14 +207,14 @@
     
     
     
-      <category term="Thought  随想" scheme="http://mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>从学术到工业 | 氧还原反应中的性能指标与实际燃料电池应用有何关系？</title>
-    <link href="http://mozheyang.top/2019/06/16/ORRresearch2industry/"/>
-    <id>http://mozheyang.top/2019/06/16/ORRresearch2industry/</id>
+    <link href="https://www.mozheyang.top/2019/06/16/ORRresearch2industry/"/>
+    <id>https://www.mozheyang.top/2019/06/16/ORRresearch2industry/</id>
     <published>2019-06-16T14:00:33.000Z</published>
     <updated>2020-04-19T02:25:26.053Z</updated>
     
@@ -227,27 +227,27 @@
     </summary>
     
     
-      <category term="Industry  产业" scheme="http://mozheyang.top/categories/Industry-%E4%BA%A7%E4%B8%9A/"/>
+      <category term="Industry  产业" scheme="https://www.mozheyang.top/categories/Industry-%E4%BA%A7%E4%B8%9A/"/>
     
     
-      <category term="Chemistry  化学" scheme="http://mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+      <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
-      <category term="Material  材料" scheme="http://mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+      <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
-      <category term="Catalysis  催化" scheme="http://mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
+      <category term="Catalysis  催化" scheme="https://www.mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
     
-      <category term="Fuel cell  燃料电池" scheme="http://mozheyang.top/tags/Fuel-cell-%E7%87%83%E6%96%99%E7%94%B5%E6%B1%A0/"/>
+      <category term="Fuel cell  燃料电池" scheme="https://www.mozheyang.top/tags/Fuel-cell-%E7%87%83%E6%96%99%E7%94%B5%E6%B1%A0/"/>
     
   </entry>
   
   <entry>
     <title>极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</title>
-    <link href="http://mozheyang.top/2019/03/31/LSV-KLeq/"/>
-    <id>http://mozheyang.top/2019/03/31/LSV-KLeq/</id>
+    <link href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/"/>
+    <id>https://www.mozheyang.top/2019/03/31/LSV-KLeq/</id>
     <published>2019-03-31T02:10:32.000Z</published>
     <updated>2020-04-19T02:25:26.056Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：</p><script type="math/tex; mode=display">\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- = 4\text{OH}^-</script><p>一种是二电子过程：</p><script type="math/tex; mode=display">\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2</script><a id="more"></a><p><strong>四电子过程</strong>可以保证在更短的时间内提供更大的电流，即四电子过程可以保证更大的电池（fuel cell/metal-air batteries）功率。氧还原反应的电化学性能测试常使用基于K-L方程的旋转圆盘电极（RDE）方法对反应转移电子数进行测算。</p><p><img src="https://www.mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p><p class="refs">Ref: 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p><p>K-L方程实际上建立了极限扩散电流$i_l$与旋转圆盘转速等物理因素之间的关系。通过不同转速下测试极限扩散电流，便可以拟合出关键的反应动力学参数——转移电子数。那么极限扩散电流到底是不是材料的本征性质呢？这个问题没有想象的那么简单，笔者首先介绍了K-L理论后我们再作判断不迟。</p><h1 id="RDE下液流层的流体力学描述"><a href="#RDE下液流层的流体力学描述" class="headerlink" title="RDE下液流层的流体力学描述"></a>RDE下液流层的流体力学描述</h1><p>如下图，建立RDE的柱坐标系。z = 0处为圆盘电极表面。</p><p><img src="https://www.mozheyang.top/images/LSV_KLeq/RDEcoordinate.png" alt=""></p><p class="refs">Ref: Bard et al., Electrochemical Methods: Fundamentals and Applications; wiley New York, 1980; Vol. 2.</p><p>定义液流速度</p><script type="math/tex; mode=display">\vec{v} = (v_r, v_\phi, v_z)</script><p>已知：</p><ul><li><strong>圆盘表面</strong>液体流速满足$v_r=0, v_phi=0, v_y=\omega r$.</li><li><strong>本体溶液</strong>液体流速满足$v_r=0, v_phi=0, v_y=-U_0$.</li></ul><p>由<strong>稳态</strong>下的纳维-斯托克斯方程（Navier–Stokes equations）可描述<strong>柱坐标</strong>下不同方向液体流速之间的关系</p><script type="math/tex; mode=display">v_r + r \frac{\partial v_r}{\partial r} + r\frac{\partial v_z}{\partial z} = 0 \\v_r \frac{\partial v_r}{\partial r} - \frac{v_\phi^2}{r} + v_z \frac{\partial v_r}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial r} + v_\phi \left[ \frac{\partial^2 v_r}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_r}{r})+ \frac{\partial^2 v_r}{\partial z^2} \right] \\v_r \frac{\partial v_\phi}{\partial r} - \frac{v_r v_\phi}{r} + v_z \frac{\partial v_\phi}{\partial z} = v_\phi \left[ \frac{\partial^2 v_\phi}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_\phi}{r})+ \frac{\partial^2 v_\phi}{\partial z^2} \right] \\v_r \frac{\partial v_z}{\partial r} + v_z \frac{\partial v_z}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial z} + v_\phi \left[ \frac{\partial^2 v_z}{\partial r^2} + \frac{1}{r} \frac{\partial v_z}{\partial r}+ \frac{\partial^2 v_z}{\partial z^2} \right] \\</script><p class="refs">Ref: Real-Ramirez, C. A., & Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen. </p><p>von Karman在1921年提出以独立无量纲变量来描述各方向速度值，可以满足N-S方程的限制条件，即</p><script type="math/tex; mode=display">\gamma = (\frac{\omega}{\mu})^{1/2} z</script><p>其中$\omega$为圆盘转速，$\mu$为液体粘度. 此时定义</p><script type="math/tex; mode=display">F(\gamma) = \frac{v_r}{r \omega}, G(\gamma) = \frac{v_\phi}{r \omega}, H(\gamma) = \frac{v_z}{\sqrt{\omega \mu}}\quad and \quad P(\gamma) = \frac{p}{\rho \mu \omega}</script><p>可将N-S方程简化为</p><script type="math/tex; mode=display">2F + H' = 0 \\F'' - HF' - F^2 + G^2 = 0 \\G'' - HG' - 2FG = 0 \\H'' - HH' - P' = 0</script><p>其边界条件为</p><script type="math/tex; mode=display">H = F = P = 0, G = 1 \quad at \quad z = 0 \\and \quad F = G = 0 \quad at \quad z = \infty \\</script><p class="refs">Ref: von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486. </p><p>Chochran在1934年提出使用无穷级数方法近似表示$F, G, H$三个函数。在离电极表面较近处，即$z$较小时，$\gamma &lt;&lt; 1$，此时各方向速度值可表示为</p><script type="math/tex; mode=display">v_r = r \omega F(\gamma)= r \omega (a \gamma - \frac{\gamma^2}{2} - \frac{b \gamma^3}{3} + \cdots) \\v_\phi = r \omega G(\gamma)= r \omega (1 + b \gamma + \frac{a \gamma^2}{3} + \cdots) \\v_z =(\omega \mu)^{1/2} H(\gamma)= (\omega \mu)^{1/2} (-\alpha \gamma + \frac{\gamma^3}{3} + \frac{b \gamma^4}{6} + \cdots)</script><p>其中，$a=0.51026$，$b=-0.6159$。</p><p class="refs">Ref: Cochran, W. G. (1934). The flow due to a rotating disc. Proceedings of the Cambridge Philosophical Society, 30, 365-375. </p><p>在圆盘表面$z \rightarrow 0$，即$\gamma \rightarrow 0$，可以获得速度值表达式</p><script type="math/tex; mode=display">v_r = r \omega (a \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} r z \\v_z = (\omega \mu)^{1/2} (-\alpha \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} z^2</script><h1 id="RDE法向的物质对流及扩散"><a href="#RDE法向的物质对流及扩散" class="headerlink" title="RDE法向的物质对流及扩散"></a>RDE法向的物质对流及扩散</h1><p>柱坐标下的反应物的对流-扩散方程可以写为</p><script type="math/tex; mode=display">v_r (\frac{\partial C_o}{\partial r}) + \frac{v_\phi}{r} (\frac{\partial C_o}{\partial \phi})+ v_z (\frac{\partial C_o}{\partial z})= D_o [\frac{\partial^2 C_o}{\partial z^2}+ \frac{\partial^2 C_o}{\partial r^2}+ \frac{1}{r} (\frac{\partial C_o}{\partial r}) + \frac{1}{r^2}\frac{\partial^2 C_o}{\partial \phi^2}]</script><p>由于反应物浓度相对于RDE轴对称，即反应物浓度在$\phi$方向无差别，所以有</p><script type="math/tex; mode=display">\frac{\partial C_o}{\partial \phi}= \frac{\partial^2 C_o}{\partial \phi^2} = 0</script><p>在RDE表面径向上，在$0 \leq r \leq r_{disk}$，反应物浓度无差别，有</p><script type="math/tex; mode=display">\frac{\partial C_o}{\partial r}= \frac{\partial^2 C_o}{\partial r^2} = 0</script><p>因此可将反应物物质对流-扩散方程简化为</p><center><p class="eqnBlock">$$v_z (\frac{\partial C_o}{\partial z})= D_o \frac{\partial^2 C_o}{\partial z^2}$$</p></center><p>将$v_z= -0.51 \omega^{2/3} v^{-1/2} z^2$代入上式得</p><script type="math/tex; mode=display">\frac{\partial^2 C_o}{\partial z^2} = - \frac{z^2}{B} \frac{\partial C_o}{\partial z}</script><p>其中，$B = \frac{D_o \omega^{-3/2} v^{-1/2}}{0.51}$. 接下来的任务就是对该偏微分方程进行积分处理，尝试求解。可以先令$X = \frac{\partial C_o}{\partial z}$，有</p><script type="math/tex; mode=display">\frac{\partial X}{\partial z} = - \frac{z^2}{B} X</script><p>两边积分可解得</p><script type="math/tex; mode=display">\frac{X}{X_0} = \exp(-\frac{z^3}{3B})</script><p>再将$X = \frac{\partial C_o}{\partial z}$带回，有</p><script type="math/tex; mode=display">\frac{\partial C_o}{\partial z} = (\frac{\partial C_o}{\partial z})_{z=0} \exp(-\frac{z^3}{3B})</script><p>这时候即将对该式进行二次积分。但是该次积分积分限的选取具有不同的物理意义。一种情形是电极表面的反应动力学很快，反应物一到电极表面就转化为产物，电极表面反应物浓度为零的情形。这种情况下，电流仅受到物质扩散传质的限制，我们称之为“<strong>极限电流情形</strong>”。另一种情形是电极表面的反应动力学没有那么快，电极表面反应物浓度不为零的情形，我们称之为“<strong>非极限电流情形</strong>”。接下来我们就来讨论分别描述这两种情形的<strong>Levich方程</strong>和<strong>Koutecky-Levich方程</strong>。</p><h2 id="极限电流情形"><a href="#极限电流情形" class="headerlink" title="极限电流情形"></a>极限电流情形</h2><p>在<strong>极限电流</strong>情形下，电极表面反应物浓度<strong>为零</strong>，则</p><script type="math/tex; mode=display">\int_0^{C_o^*} dC_o = (\frac{\partial C_o}{\partial z})_{z=0} \int_0^\infty \exp(-\frac{z^3}{3B}) dz</script><p>有定积分</p><script type="math/tex; mode=display">\exp(a z^3) dz = (-a)^{1/3} \Gamma(\frac{4}{3}) = 0.8934(-a)^{1/3}</script><p>其中$\Gamma$函数为</p><script type="math/tex; mode=display">\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt</script><p>其在[0,3]区间的函数图像如下</p><p><img src="https://www.mozheyang.top/images/LSV_KLeq/GammaFunc.png" alt=""></p><p>故</p><script type="math/tex; mode=display">C_o^* = (\frac{\partial C_o}{\partial z})_{z=0} 0.8934(3B)^{1/3}= (\frac{\partial C_o}{\partial z})_{z=0} 0.8934(\frac{3D_o \omega^{-3/2} \mu^{1/2}}{0.51})^{1/3}</script><p>又因为电流与电极表面的物质流量相关，由法拉第定律可得</p><script type="math/tex; mode=display">i = nFAD_o (\frac{\partial C_o}{\partial z})_{z=0}</script><p>与上式联立可得Levich方程</p><center><p class="eqnBlock">$$i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$$</p></center><p>从上式我们已经可以知道，对特定电极反应（转移电子数n不变），<strong>极限扩散电流是旋转圆盘转速的函数</strong>——因为法拉第常数$F$、电极面积$A$、圆盘尺寸、电解液中反应物扩散系数$D$、电解液粘度$\mu$和电解液浓度$C_o^*$都是恒定的。对不同材料，氧还原所经历路径不同，也就可能导致电极表面的电极反应不同，会反应在转移电子数上，从而导致极限扩散电流的不同。因此，本文的结论就是，在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</p><h2 id="非极限电流情形"><a href="#非极限电流情形" class="headerlink" title="非极限电流情形"></a>非极限电流情形</h2><p>在<strong>非极限电流</strong>情形下，电极表面反应物浓度<strong>不为零</strong>，则</p><script type="math/tex; mode=display">\int_{C_o(z=0)}^{C_o^*} dC_o = C_o^* - C_o(z=0)= (\frac{\partial C_o}{\partial z})_{z=0} \int_0^\infty \exp(-\frac{z^3}{3B}) dz</script><p>且$C_o(z=0) \neq 0$. 同极限电流情形进行积分可得</p><script type="math/tex; mode=display">i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} [C_o^* - C_o(z=0)]</script><p>由Levich方程可得</p><script type="math/tex; mode=display">i = i_l [\frac{C_o^* - C_o(z=0)}{C_o^*}]</script><p>对单步骤完全不可逆反应过程有</p><script type="math/tex; mode=display">i = nFAk_f(E)C_o(z=0)</script><p>其中反应速率常数$k_f(E) = k_0 \exp[-\alpha f(E-E^\Theta)]$可由反应动力学B-V方程导出。那么该式与上式联立可得</p><script type="math/tex; mode=display">i = nFAk_f(E) C_o^*(1-\frac{i}{i_l})</script><p>可以定义</p><script type="math/tex; mode=display">i_k = nFAk_f(E)C_o^*</script><p>那么便有Koutecky-Levich方程</p><center><p class="eqnBlock">$$\frac{1}{i} = \frac{1}{i_k} + \frac{1}{i_l} = \frac{1}{i_k} + \frac{1}{0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*}$$</p></center><p>从上式我们可以看出，Levich方程所描述的极限电流情形是Koutecky-Levich方程中$i_k \rightarrow \infty$时的情形。K-L方程的物理意义是：<u><strong>在无表面修饰的电极上，总电流主要由反应动力学导致的电流$i_k$和传质所导致的电流$i_l$构成。</strong></u></p><p><img src="https://www.mozheyang.top/images/Electrocatalysis/KLplot.png" alt="K-L plot"></p><p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L拟合直线的<strong>斜率</strong>上。当然，这个变化也会反映在拟合直线的<strong>截距</strong>$\frac{1}{i_k}$上，但其中含有$k_f(E)$这一不易确定的反应动力学参数，所以其不容易被定量分析。</p><p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="https://www.mozheyang.top/2018/02/15/ORRbasic/" target="_blank" rel="noopener">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>总结本文得到的结论：</p><ul><li>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</li><li>在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</li><li>负载量可能会<strong>通过活性位点暴露</strong>的角度对极限扩散电流产生影响。但在一定范围内，其影响可能是不大的。</li><li><p>在ORR测试中，需要通过K-L方程计算不同偏压下的转移电子数。这时候一定要注意各数值的<strong>量纲</strong>问题！在转速使用“rpm”（Revolutions Per Minute，圈/分）时，<strong>常数取“0.2”</strong>，[5] 即使用公式：$i_l = 0.2 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$；在转速使用“rad/s”（Radian Per Second，弧度/秒）时，<strong>常数取“0.62”</strong>，[6] 即使用公式：$i_l = 0.62 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$（如果纵坐标已经取电流密度，记得将等式右边的A略掉）。 </p></li><li><p>ORR计算常用物理常数：法拉第常数$F=96485 C mol^{-1}$，氧气在电解液中的饱和浓度$C_o = 1.2 \times 10^{-3} mol L^{-1}$，氧气在KOH溶液中的扩散系数$D_o = 1.9 \times 10^{-5} cm s^{-1}$，电解液粘度$\mu = 0.01 cm^2 s^{-1}$. </p></li></ul><p>总之，极限扩散电流影响因素较多，非预期的实验结果一定要仔细分析！</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Bard, A. J., Faulkner, L. R., Leddy, J., &amp; Zoski, C. G. (1980). Electrochemical methods: fundamentals and applications (Vol. 2). New York: wiley.</p><p>[2] Real-Ramirez, C. A., &amp; Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen.</p><p>[3] von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486.</p><p>[4] Cochran, W. G. (1934). The flow due to a rotating disc. Proceedings of the Cambridge Philosophical Society, 30, 365-375.</p><p>[5] Han S, Hu X, Wang J, et al. Novel Route to Fe‐Based Cathode as an Efficient Bifunctional Catalysts for Rechargeable Zn–Air Battery[J]. Advanced Energy Materials, 2018, 8(22): 1800955.</p><p>[6] Liang Y, Li Y, Wang H, et al. Co 3 O 4 nanocrystals on graphene as a synergistic catalyst for oxygen reduction reaction[J]. Nature materials, 2011, 10(10): 780-786.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：</p><script type="math/tex; mode=display">\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- = 4\text{OH}^-</script><p>一种是二电子过程：</p><script type="math/tex; mode=display">\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2</script><a id="more"></a><p><strong>四电子过程</strong>可以保证在更短的时间内提供更大的电流，即四电子过程可以保证更大的电池（fuel cell/metal-air batteries）功率。氧还原反应的电化学性能测试常使用基于K-L方程的旋转圆盘电极（RDE）方法对反应转移电子数进行测算。</p><p><img src="https://www.mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p><p class="refs">Ref: 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p><p>K-L方程实际上建立了极限扩散电流$i_l$与旋转圆盘转速等物理因素之间的关系。通过不同转速下测试极限扩散电流，便可以拟合出关键的反应动力学参数——转移电子数。那么极限扩散电流到底是不是材料的本征性质呢？这个问题没有想象的那么简单，笔者首先介绍了K-L理论后我们再作判断不迟。</p><h1 id="RDE下液流层的流体力学描述"><a href="#RDE下液流层的流体力学描述" class="headerlink" title="RDE下液流层的流体力学描述"></a>RDE下液流层的流体力学描述</h1><p>如下图，建立RDE的柱坐标系。z = 0处为圆盘电极表面。</p><p><img src="https://www.mozheyang.top/images/LSV_KLeq/RDEcoordinate.png" alt=""></p><p class="refs">Ref: Bard et al., Electrochemical Methods: Fundamentals and Applications; wiley New York, 1980; Vol. 2.</p><p>定义液流速度</p><script type="math/tex; mode=display">\vec{v} = (v_r, v_\phi, v_z)</script><p>已知：</p><ul><li><strong>圆盘表面</strong>液体流速满足$v_r=0, v_phi=0, v_y=\omega r$.</li><li><strong>本体溶液</strong>液体流速满足$v_r=0, v_phi=0, v_y=-U_0$.</li></ul><p>由<strong>稳态</strong>下的纳维-斯托克斯方程（Navier–Stokes equations）可描述<strong>柱坐标</strong>下不同方向液体流速之间的关系</p><script type="math/tex; mode=display">v_r + r \frac{\partial v_r}{\partial r} + r\frac{\partial v_z}{\partial z} = 0 \\v_r \frac{\partial v_r}{\partial r} - \frac{v_\phi^2}{r} + v_z \frac{\partial v_r}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial r} + v_\phi \left[ \frac{\partial^2 v_r}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_r}{r})+ \frac{\partial^2 v_r}{\partial z^2} \right] \\v_r \frac{\partial v_\phi}{\partial r} - \frac{v_r v_\phi}{r} + v_z \frac{\partial v_\phi}{\partial z} = v_\phi \left[ \frac{\partial^2 v_\phi}{\partial r^2} + \frac{\partial}{\partial r}(\frac{v_\phi}{r})+ \frac{\partial^2 v_\phi}{\partial z^2} \right] \\v_r \frac{\partial v_z}{\partial r} + v_z \frac{\partial v_z}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial z} + v_\phi \left[ \frac{\partial^2 v_z}{\partial r^2} + \frac{1}{r} \frac{\partial v_z}{\partial r}+ \frac{\partial^2 v_z}{\partial z^2} \right] \\</script><p class="refs">Ref: Real-Ramirez, C. A., & Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen. </p><p>von Karman在1921年提出以独立无量纲变量来描述各方向速度值，可以满足N-S方程的限制条件，即</p><script type="math/tex; mode=display">\gamma = (\frac{\omega}{\mu})^{1/2} z</script><p>其中$\omega$为圆盘转速，$\mu$为液体粘度. 此时定义</p><script type="math/tex; mode=display">F(\gamma) = \frac{v_r}{r \omega}, G(\gamma) = \frac{v_\phi}{r \omega}, H(\gamma) = \frac{v_z}{\sqrt{\omega \mu}}\quad and \quad P(\gamma) = \frac{p}{\rho \mu \omega}</script><p>可将N-S方程简化为</p><script type="math/tex; mode=display">2F + H' = 0 \\F'' - HF' - F^2 + G^2 = 0 \\G'' - HG' - 2FG = 0 \\H'' - HH' - P' = 0</script><p>其边界条件为</p><script type="math/tex; mode=display">H = F = P = 0, G = 1 \quad at \quad z = 0 \\and \quad F = G = 0 \quad at \quad z = \infty \\</script><p class="refs">Ref: von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486. </p><p>Chochran在1934年提出使用无穷级数方法近似表示$F, G, H$三个函数。在离电极表面较近处，即$z$较小时，$\gamma &lt;&lt; 1$，此时各方向速度值可表示为</p><script type="math/tex; mode=display">v_r = r \omega F(\gamma)= r \omega (a \gamma - \frac{\gamma^2}{2} - \frac{b \gamma^3}{3} + \cdots) \\v_\phi = r \omega G(\gamma)= r \omega (1 + b \gamma + \frac{a \gamma^2}{3} + \cdots) \\v_z =(\omega \mu)^{1/2} H(\gamma)= (\omega \mu)^{1/2} (-\alpha \gamma + \frac{\gamma^3}{3} + \frac{b \gamma^4}{6} + \cdots)</script><p>其中，$a=0.51026$，$b=-0.6159$。</p><p class="refs">Ref: Cochran, W. G. (1934). The flow due to a rotating disc. Proceedings of the Cambridge Philosophical Society, 30, 365-375. </p><p>在圆盘表面$z \rightarrow 0$，即$\gamma \rightarrow 0$，可以获得速度值表达式</p><script type="math/tex; mode=display">v_r = r \omega (a \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} r z \\v_z = (\omega \mu)^{1/2} (-\alpha \gamma) = -0.51 \omega^{2/3} \mu^{-1/2} z^2</script><h1 id="RDE法向的物质对流及扩散"><a href="#RDE法向的物质对流及扩散" class="headerlink" title="RDE法向的物质对流及扩散"></a>RDE法向的物质对流及扩散</h1><p>柱坐标下的反应物的对流-扩散方程可以写为</p><script type="math/tex; mode=display">v_r (\frac{\partial C_o}{\partial r}) + \frac{v_\phi}{r} (\frac{\partial C_o}{\partial \phi})+ v_z (\frac{\partial C_o}{\partial z})= D_o [\frac{\partial^2 C_o}{\partial z^2}+ \frac{\partial^2 C_o}{\partial r^2}+ \frac{1}{r} (\frac{\partial C_o}{\partial r}) + \frac{1}{r^2}\frac{\partial^2 C_o}{\partial \phi^2}]</script><p>由于反应物浓度相对于RDE轴对称，即反应物浓度在$\phi$方向无差别，所以有</p><script type="math/tex; mode=display">\frac{\partial C_o}{\partial \phi}= \frac{\partial^2 C_o}{\partial \phi^2} = 0</script><p>在RDE表面径向上，在$0 \leq r \leq r_{disk}$，反应物浓度无差别，有</p><script type="math/tex; mode=display">\frac{\partial C_o}{\partial r}= \frac{\partial^2 C_o}{\partial r^2} = 0</script><p>因此可将反应物物质对流-扩散方程简化为</p><center><p class="eqnBlock">$$v_z (\frac{\partial C_o}{\partial z})= D_o \frac{\partial^2 C_o}{\partial z^2}$$</p></center><p>将$v_z= -0.51 \omega^{2/3} v^{-1/2} z^2$代入上式得</p><script type="math/tex; mode=display">\frac{\partial^2 C_o}{\partial z^2} = - \frac{z^2}{B} \frac{\partial C_o}{\partial z}</script><p>其中，$B = \frac{D_o \omega^{-3/2} v^{-1/2}}{0.51}$. 接下来的任务就是对该偏微分方程进行积分处理，尝试求解。可以先令$X = \frac{\partial C_o}{\partial z}$，有</p><script type="math/tex; mode=display">\frac{\partial X}{\partial z} = - \frac{z^2}{B} X</script><p>两边积分可解得</p><script type="math/tex; mode=display">\frac{X}{X_0} = \exp(-\frac{z^3}{3B})</script><p>再将$X = \frac{\partial C_o}{\partial z}$带回，有</p><script type="math/tex; mode=display">\frac{\partial C_o}{\partial z} = (\frac{\partial C_o}{\partial z})_{z=0} \exp(-\frac{z^3}{3B})</script><p>这时候即将对该式进行二次积分。但是该次积分积分限的选取具有不同的物理意义。一种情形是电极表面的反应动力学很快，反应物一到电极表面就转化为产物，电极表面反应物浓度为零的情形。这种情况下，电流仅受到物质扩散传质的限制，我们称之为“<strong>极限电流情形</strong>”。另一种情形是电极表面的反应动力学没有那么快，电极表面反应物浓度不为零的情形，我们称之为“<strong>非极限电流情形</strong>”。接下来我们就来讨论分别描述这两种情形的<strong>Levich方程</strong>和<strong>Koutecky-Levich方程</strong>。</p><h2 id="极限电流情形"><a href="#极限电流情形" class="headerlink" title="极限电流情形"></a>极限电流情形</h2><p>在<strong>极限电流</strong>情形下，电极表面反应物浓度<strong>为零</strong>，则</p><script type="math/tex; mode=display">\int_0^{C_o^*} dC_o = (\frac{\partial C_o}{\partial z})_{z=0} \int_0^\infty \exp(-\frac{z^3}{3B}) dz</script><p>有定积分</p><script type="math/tex; mode=display">\exp(a z^3) dz = (-a)^{1/3} \Gamma(\frac{4}{3}) = 0.8934(-a)^{1/3}</script><p>其中$\Gamma$函数为</p><script type="math/tex; mode=display">\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt</script><p>其在[0,3]区间的函数图像如下</p><p><img src="https://www.mozheyang.top/images/LSV_KLeq/GammaFunc.png" alt=""></p><p>故</p><script type="math/tex; mode=display">C_o^* = (\frac{\partial C_o}{\partial z})_{z=0} 0.8934(3B)^{1/3}= (\frac{\partial C_o}{\partial z})_{z=0} 0.8934(\frac{3D_o \omega^{-3/2} \mu^{1/2}}{0.51})^{1/3}</script><p>又因为电流与电极表面的物质流量相关，由法拉第定律可得</p><script type="math/tex; mode=display">i = nFAD_o (\frac{\partial C_o}{\partial z})_{z=0}</script><p>与上式联立可得Levich方程</p><center><p class="eqnBlock">$$i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$$</p></center><p>从上式我们已经可以知道，对特定电极反应（转移电子数n不变），<strong>极限扩散电流是旋转圆盘转速的函数</strong>——因为法拉第常数$F$、电极面积$A$、圆盘尺寸、电解液中反应物扩散系数$D$、电解液粘度$\mu$和电解液浓度$C_o^*$都是恒定的。对不同材料，氧还原所经历路径不同，也就可能导致电极表面的电极反应不同，会反应在转移电子数上，从而导致极限扩散电流的不同。因此，本文的结论就是，在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</p><h2 id="非极限电流情形"><a href="#非极限电流情形" class="headerlink" title="非极限电流情形"></a>非极限电流情形</h2><p>在<strong>非极限电流</strong>情形下，电极表面反应物浓度<strong>不为零</strong>，则</p><script type="math/tex; mode=display">\int_{C_o(z=0)}^{C_o^*} dC_o = C_o^* - C_o(z=0)= (\frac{\partial C_o}{\partial z})_{z=0} \int_0^\infty \exp(-\frac{z^3}{3B}) dz</script><p>且$C_o(z=0) \neq 0$. 同极限电流情形进行积分可得</p><script type="math/tex; mode=display">i_l = 0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} [C_o^* - C_o(z=0)]</script><p>由Levich方程可得</p><script type="math/tex; mode=display">i = i_l [\frac{C_o^* - C_o(z=0)}{C_o^*}]</script><p>对单步骤完全不可逆反应过程有</p><script type="math/tex; mode=display">i = nFAk_f(E)C_o(z=0)</script><p>其中反应速率常数$k_f(E) = k_0 \exp[-\alpha f(E-E^\Theta)]$可由反应动力学B-V方程导出。那么该式与上式联立可得</p><script type="math/tex; mode=display">i = nFAk_f(E) C_o^*(1-\frac{i}{i_l})</script><p>可以定义</p><script type="math/tex; mode=display">i_k = nFAk_f(E)C_o^*</script><p>那么便有Koutecky-Levich方程</p><center><p class="eqnBlock">$$\frac{1}{i} = \frac{1}{i_k} + \frac{1}{i_l} = \frac{1}{i_k} + \frac{1}{0.62 nFAD^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*}$$</p></center><p>从上式我们可以看出，Levich方程所描述的极限电流情形是Koutecky-Levich方程中$i_k \rightarrow \infty$时的情形。K-L方程的物理意义是：<u><strong>在无表面修饰的电极上，总电流主要由反应动力学导致的电流$i_k$和传质所导致的电流$i_l$构成。</strong></u></p><p><img src="https://www.mozheyang.top/images/Electrocatalysis/KLplot.png" alt="K-L plot"></p><p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L拟合直线的<strong>斜率</strong>上。当然，这个变化也会反映在拟合直线的<strong>截距</strong>$\frac{1}{i_k}$上，但其中含有$k_f(E)$这一不易确定的反应动力学参数，所以其不容易被定量分析。</p><p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="https://www.mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>总结本文得到的结论：</p><ul><li>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</li><li>在正确的表征方法下，<strong>极限扩散电流是材料的本征性质</strong>（活性位点催化选择反应路径的性质）。</li><li>负载量可能会<strong>通过活性位点暴露</strong>的角度对极限扩散电流产生影响。但在一定范围内，其影响可能是不大的。</li><li><p>在ORR测试中，需要通过K-L方程计算不同偏压下的转移电子数。这时候一定要注意各数值的<strong>量纲</strong>问题！在转速使用“rpm”（Revolutions Per Minute，圈/分）时，<strong>常数取“0.2”</strong>，[5] 即使用公式：$i_l = 0.2 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$；在转速使用“rad/s”（Radian Per Second，弧度/秒）时，<strong>常数取“0.62”</strong>，[6] 即使用公式：$i_l = 0.62 nFAD_o^{2/3} \omega^{1/2} \mu^{-1/6} C_o^*$（如果纵坐标已经取电流密度，记得将等式右边的A略掉）。 </p></li><li><p>ORR计算常用物理常数：法拉第常数$F=96485 C mol^{-1}$，氧气在电解液中的饱和浓度$C_o = 1.2 \times 10^{-3} mol L^{-1}$，氧气在KOH溶液中的扩散系数$D_o = 1.9 \times 10^{-5} cm s^{-1}$，电解液粘度$\mu = 0.01 cm^2 s^{-1}$. </p></li></ul><p>总之，极限扩散电流影响因素较多，非预期的实验结果一定要仔细分析！</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Bard, A. J., Faulkner, L. R., Leddy, J., &amp; Zoski, C. G. (1980). Electrochemical methods: fundamentals and applications (Vol. 2). New York: wiley.</p><p>[2] Real-Ramirez, C. A., &amp; Gonzalez-Trejo, J. I. (2011). Hydrodynamic Analysis of Electrochemical Cells. In Computational Simulations and Applications. IntechOpen.</p><p>[3] von Kármán, T. (1921). Über laminare und turbulente reibung. Zeitschrift für Angewandte Mathematik und Mechanik, 1, 486.</p><p>[4] Cochran, W. G. (1934). The flow due to a rotating disc. Proceedings of the Cambridge Philosophical Society, 30, 365-375.</p><p>[5] Han S, Hu X, Wang J, et al. Novel Route to Fe‐Based Cathode as an Efficient Bifunctional Catalysts for Rechargeable Zn–Air Battery[J]. Advanced Energy Materials, 2018, 8(22): 1800955.</p><p>[6] Liang Y, Li Y, Wang H, et al. Co 3 O 4 nanocrystals on graphene as a synergistic catalyst for oxygen reduction reaction[J]. Nature materials, 2011, 10(10): 780-786.</p>]]></content>
     
     <summary type="html">
     
@@ -260,27 +260,27 @@
     </summary>
     
     
-      <category term="Electrochemistry  电化学" scheme="http://mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
+      <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
     
     
-      <category term="Chemistry  化学" scheme="http://mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+      <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
-      <category term="Material  材料" scheme="http://mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+      <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
-      <category term="Catalysis  催化" scheme="http://mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
+      <category term="Catalysis  催化" scheme="https://www.mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
     
-      <category term="Model  模型" scheme="http://mozheyang.top/tags/Model-%E6%A8%A1%E5%9E%8B/"/>
+      <category term="Model  模型" scheme="https://www.mozheyang.top/tags/Model-%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
   <entry>
     <title>块体金属变成单个原子？ | 单原子催化剂的大规模制备</title>
-    <link href="http://mozheyang.top/2019/03/19/BulkMetal2SAC/"/>
-    <id>http://mozheyang.top/2019/03/19/BulkMetal2SAC/</id>
+    <link href="https://www.mozheyang.top/2019/03/19/BulkMetal2SAC/"/>
+    <id>https://www.mozheyang.top/2019/03/19/BulkMetal2SAC/</id>
     <published>2019-03-19T14:21:49.000Z</published>
     <updated>2020-04-19T02:25:25.999Z</updated>
     
-    <content type="html"><![CDATA[<p>由于单原子催化剂上金属原子在载体上的分散特点，导致其与块体金属在物理化学方面的性质上产生差异。这种差异往往使得单原子催化剂在各类催化反应上具有较为优异的催化性能。既然单原子催化剂在（能源）催化领域具有如此巨大的吸引力，那么其合成就自然成为了目前能源材料科研和产业界所共同关注的一大焦点问题。</p><a id="more"></a><p>目前应用于单原子催化剂制备的方法主要分为物理方法和化学方法。<strong>物理方法</strong>会使用原子层沉积或者高频激光脉冲设备，而这些设备往往较为昂贵的研究设备，不易普及。<strong>化学方法</strong>主要使用框架化学中的金属有机框架化合物（Metal Organic Framework, MOF）或共价有机框架化合物（Covalence Organic Framework, COF）作为后续高温煅烧前驱体，制备氮掺杂碳作为载体的单原子催化剂。这种方法主要存在两方面问题：第一是框架化合物的反应物较为昂贵，合成步骤也较为复杂，不利于扩大单原子催化剂的生产；第二，分散金属原子在高温煅烧下容易发生团聚，从而降低最后产物的金属原子分散程度。总之，目前需要一种廉价且易于普及的批量生产单原子催化剂的方法。</p><p><strong>中国科学技术大吴宇恩老师课题组</strong>专注于单原子催化剂的合成与应用，近年来产出了大量代表性成果。其中比较吸引笔者的是最近两年有关于使用块体金属制备单原子催化剂的系列文章。这种方法思路新颖，制备简单，具有工业化生产的潜力。</p><h1 id="铜单原子催化剂与其氧还原反应催化活性"><a href="#铜单原子催化剂与其氧还原反应催化活性" class="headerlink" title="铜单原子催化剂与其氧还原反应催化活性"></a>铜单原子催化剂与其氧还原反应催化活性</h1><p>利用铜与常见MOF——ZIF-8在氨气气氛下高温共热，可以制备铜单原子催化剂。这是因为在高温下，氨气能与铜表面原子通过强的路易斯酸作用络合，形成挥发性的Cu(NH<sub>3</sub>)<sub>X</sub>。而Cu(NH<sub>3</sub>)<sub>X</sub>又会被高温下充分石墨化的ZIF-8缺陷碳所捕获，从而形成铜原子在缺陷碳上负载的单原子催化剂。本工艺中关键的一点是<strong>铜在高温下会与氨气形成可挥发性络合物</strong>。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/prepareCuSAC.png" alt="CuSAC"></p><p>同步辐射光源在原子级别表征中正起到越来越重要的作用。这主要是因为同步辐射光源可调制<strong>波长范围较大</strong>，且<strong>连续性好</strong>。我们知道，<strong>化学键的特征运动导致了能量的特征吸收</strong>，如果可以利用更宽广的光源能量范围，就意味着可以探测更为丰富的化学键。这就是目前同步辐射光源在单原子催化剂表征中不可或缺地位的原因所在。更多关于材料表征技术的知识，可以查看笔者总结的课程回顾内容《<a href="https://www.mozheyang.top/2017/12/27/2017AFinal/" target="_blank" rel="noopener">回首2017 | 课程知识回顾</a>》中催化作用基础相关内容，如《<a href="https://www.mozheyang.top/documents/%E5%82%AC%E5%8C%96%E8%A1%A8%E5%BE%81%E6%96%B9%E6%B3%95.pdf" target="_blank" rel="noopener">催化表征方法思维导图</a>》。</p><p>通过同步辐射光源的相关分析可以发现在制备的单原子分散样品（Cu-SAs/N-G和Cu-SAs/N-C）中均无明显Cu-Cu键，取而代之的是铜原子与基底形成的Cu-N/C键。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesCuSAC.png" alt="xanesCu"></p><p>通过该方法制备的铜单原子催化剂在氧还原反应中具有优异表现。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/ORRCuSAC.png" alt="ORRCu"></p><h1 id="镍单原子催化剂与其电还原二氧化碳催化活性"><a href="#镍单原子催化剂与其电还原二氧化碳催化活性" class="headerlink" title="镍单原子催化剂与其电还原二氧化碳催化活性"></a>镍单原子催化剂与其电还原二氧化碳催化活性</h1><p>与之前的铜单原子催化剂的制备工艺略有不同。铜原子是被载气氨气裹挟着来到缺陷碳上，而镍“单原子”催化剂是三聚氰胺转化的氮化碳在镍金属片上生长制备而成的，是一个金属“渗碳”的逆过程——碳“渗”金属镍。最后所得到的镍单原子催化剂是酸蚀镍金属片而得，可以想象，其金属间成键的概率一定会比金属原子跑到碳载体上要大得多。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/prepareNiSAC.png" alt="NiSAC"></p><p>这一猜想可以从同步辐射光源的相关分析中得到验证。</p><p>直接剥离而未经酸蚀的碳层文中将其命名为（Freshly prepare carbon papers, F-CPs），剥离后再经过酸蚀得到的碳层样品文中称其为（Hierarchical carbon papers, H-CPs）。Emmm…反正无定型的碳都可以叫层级结构“Hierarchical structure”吧，当然孔结构丰富的碳（既有micro-pores，又有meso-pores）就更为名副其实啦。可以想象，酸蚀后的碳一定是具有丰富孔结构的。</p><p>在F-CPs中Ni-Ni键比纯镍片要稍微低一些，经过酸蚀的H-CPs样品又相对于F-CPs具有更低的Ni-Ni键强度，说明镍金属在酸蚀过程中损失，从而导致Ni-Ni键更弱了。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesNiSAC.png" alt="xanesNi"></p><p>镍单原子催化剂电还原二氧化碳产一氧化碳的活性，与之前催化剂相比具有极大优势，尤其是在CO的法拉第电流密度方面。而且这种电流密度增长几乎与负偏压成正比，这无疑在工业化的大规模电解还原过程中是一个有利的特点。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/ECRNiSAC.png" alt="ECRNiSAC"></p><h1 id="钴单原子催化剂与其多反应催化性能"><a href="#钴单原子催化剂与其多反应催化性能" class="headerlink" title="钴单原子催化剂与其多反应催化性能"></a>钴单原子催化剂与其多反应催化性能</h1><p>钴基催化剂在OER，ORR和HER三个反应中屡建奇功，因此如何将其规模化制备是一个有趣的研究课题。钴单原子催化剂的制备与镍单原子催化剂的制备没有太大差别，同样基于三聚氰胺在金属片上的生长与反渗透过程——碳渗金属钴。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/prepareCoSAC.png" alt="CoSAC"></p><p>从其同步辐射相关分析中可以看出，其也并非严格的单原子催化剂。其原因我们在上面的镍“单原子”催化剂文章中也已经讨论过了。很明显，该催化剂是在基底上分散着钴原子簇。这些原子簇存在使得其具有催化多种能源催化反应的特点。让笔者感到有些疑惑的是文中没有解释是否有Co-N键的存在，而只是利用同步辐射强调了Co-Co键的存在…杀鸡焉用牛刀？于是笔者怀疑，这可能是一个合成失败的材料（实验重复性可还行？），无奈性能好啊，还是可以发好文章[闭嘴==]。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesCoSAC.png" alt="xanesCo"></p><p>接下来必有老套的ORR，OER和HER三连。虽然“bifunctional”（双功能）和“trifunctional”（三功能）是有些老套了，但是笔者想，这其实也有其背后的科学问题——目前新能源（转化）领域的多个反应居然都可以被同样体系的催化剂（材料）制服，这是否说明我们离<strong>大一统</strong>的目标不远了呢？那么向大一统多前进一步总归是没错的吧，于是可预见的未来还可能会出现“tetrafunctional”（四功能），“pentafunctional”（五功能）…又可以毕业几批学生了呢，开❤。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/TriFuncCo.png" alt="TriFuncCo"></p><p>其实ORR，OER和HER可以被同一个体系材料所征服还不是最令人费解的。</p><p>令人费解的是HER这个与NRR（或NER）和ECR竞争的反应，其催化剂体系被广泛应用于NRR和ECR。这意味着，我们对催化剂活性位点<strong>根本一无所知</strong>！不同的合成路径，合成一个化学成分基本相同的，甚至缺陷结构（目前所能够表征的）都是类似的材料，为什么会产生几乎是相互矛盾的效果？！！</p><p>难受！！！</p><h1 id="铂单原子催化剂与其氢析出反应催化活性"><a href="#铂单原子催化剂与其氢析出反应催化活性" class="headerlink" title="铂单原子催化剂与其氢析出反应催化活性"></a>铂单原子催化剂与其氢析出反应催化活性</h1><p>最开始做的是非贵金属，为什么现在又转回来做贵金属了呢？可能是因为能试的金属都还在一个个试吧。大家可以看着抓抓紧。一种金属一篇文章，加油。</p><p>利用铂网（经费在燃烧…）、双氰胺（Dicyandiamide ，DCD ）和氧化石墨烯（GO）在惰性气氛下高温共热，可以制备铂单原子催化剂。这是因为在高温下，双氰胺释放出氨气，与铂网表面原子通过强的路易斯酸作用络合，形成挥发性的Pt(NH<sub>3</sub>)<sub>X</sub>。而Pt(NH<sub>3</sub>)<sub>X</sub>又会被氧化石墨烯所氧化捕获（其实要说是氧化还原石墨烯上的缺陷捕获铂原子是否也有道理呢？毕竟Pt<sup>0</sup>也并不是容易反应形成化学键的，虽然氨气络合对铂原子的作用不可小觑），从而形成铂原子在缺陷碳上负载的单原子催化剂。</p><p>这一部分内容似曾相识…对，与铜单原子催化剂的制备原理基本相同。但是可能考虑到铂比较贵，在封闭空间反应吧，还是不通氨气了，不然都被载气带走了真的很浪费…而且附着在石英管上的铂该怎么办？很容易影响后来的高温反应，回收也是很不方便了。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/preparePtSAC.png" alt="PtSAC"></p><p>金属原子跑到碳载体上，其单原子效应应该是比较明显的。这可以从下图看出来，笔者就不再分析了，感兴趣的读者可以阅读原文。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesPtSAC.png" alt="xanesPt"></p><p>那，试了很多反应之后，还是HER最奏效。好吧，毕竟贵金属，总应该有点效果的。</p><p>要不然真对不起“燃烧”的经费。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/HERPtSAC.png" alt="HERPt"></p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>一招鲜，吃遍天。</p><p>光靠块体金属合成单原子催化剂就出了多少好文章啊。虽然这个方法的思想是非常巧妙的，但是后来跟进的研究未免有些filling gaps的嫌疑。</p><p>不管怎么说，都还是大师之作啊。</p><p>如果你对本文中的内容有任何不同见解，欢迎指教！</p><p>Email: mozheyang@outlook.com</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>(1) Qu, Y.; Li, Z.; Chen, W.; Lin, Y.; Yuan, T.; Yang, Z.; Zhao, C.; Wang, J.; Zhao, C.; Wang, X.; et al. Single Sites Via Emitting and Trapping of Atoms. Nat. Catal. 2018, 1 (October), 781–786.</p><p>(2) Zhang, Q.; Zhao, C.; Wang, Y.; Li, Y.; Yuan, T.; Xi, D.; Wang, X.; Duan, H.; Luo, J.; Xu, Q.; et al. Solid-Diffusion Synthesis of Single-Atom Catalysts Directly from Bulk Metal for Efficient CO2 Reduction. Joule 2018, 1–11.</p><p>(3) Yang, Z.; Zhao, C.; Qu, Y.; Zhou, H.; Zhou, F.; Wang, J.; Wu, Y.; Li, Y. Trifunctional Self-Supporting Cobalt-Embedded Carbon Nanotube Films for ORR, OER, and HER Triggered by Solid Diffusion from Bulk Metal. Adv. Mater. 2019, 1808043, 1–8.</p><p>(4) Qu, Y.; Chen, B.; Li, Z.; Duan, X.; Wang, L.; Lin, Y.; Yuan, T.; Zhou, F.; Hu, Y.; Yang, Z.; et al. Thermal Emitting Strategy to Synthesize Atomically Dispersed Pt Metal Sites from Bulk Pt Metal. J. Am. Chem. Soc. 2019, jacs.8b09834.</p>]]></content>
+    <content type="html"><![CDATA[<p>由于单原子催化剂上金属原子在载体上的分散特点，导致其与块体金属在物理化学方面的性质上产生差异。这种差异往往使得单原子催化剂在各类催化反应上具有较为优异的催化性能。既然单原子催化剂在（能源）催化领域具有如此巨大的吸引力，那么其合成就自然成为了目前能源材料科研和产业界所共同关注的一大焦点问题。</p><a id="more"></a><p>目前应用于单原子催化剂制备的方法主要分为物理方法和化学方法。<strong>物理方法</strong>会使用原子层沉积或者高频激光脉冲设备，而这些设备往往较为昂贵的研究设备，不易普及。<strong>化学方法</strong>主要使用框架化学中的金属有机框架化合物（Metal Organic Framework, MOF）或共价有机框架化合物（Covalence Organic Framework, COF）作为后续高温煅烧前驱体，制备氮掺杂碳作为载体的单原子催化剂。这种方法主要存在两方面问题：第一是框架化合物的反应物较为昂贵，合成步骤也较为复杂，不利于扩大单原子催化剂的生产；第二，分散金属原子在高温煅烧下容易发生团聚，从而降低最后产物的金属原子分散程度。总之，目前需要一种廉价且易于普及的批量生产单原子催化剂的方法。</p><p><strong>中国科学技术大吴宇恩老师课题组</strong>专注于单原子催化剂的合成与应用，近年来产出了大量代表性成果。其中比较吸引笔者的是最近两年有关于使用块体金属制备单原子催化剂的系列文章。这种方法思路新颖，制备简单，具有工业化生产的潜力。</p><h1 id="铜单原子催化剂与其氧还原反应催化活性"><a href="#铜单原子催化剂与其氧还原反应催化活性" class="headerlink" title="铜单原子催化剂与其氧还原反应催化活性"></a>铜单原子催化剂与其氧还原反应催化活性</h1><p>利用铜与常见MOF——ZIF-8在氨气气氛下高温共热，可以制备铜单原子催化剂。这是因为在高温下，氨气能与铜表面原子通过强的路易斯酸作用络合，形成挥发性的Cu(NH<sub>3</sub>)<sub>X</sub>。而Cu(NH<sub>3</sub>)<sub>X</sub>又会被高温下充分石墨化的ZIF-8缺陷碳所捕获，从而形成铜原子在缺陷碳上负载的单原子催化剂。本工艺中关键的一点是<strong>铜在高温下会与氨气形成可挥发性络合物</strong>。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/prepareCuSAC.png" alt="CuSAC"></p><p>同步辐射光源在原子级别表征中正起到越来越重要的作用。这主要是因为同步辐射光源可调制<strong>波长范围较大</strong>，且<strong>连续性好</strong>。我们知道，<strong>化学键的特征运动导致了能量的特征吸收</strong>，如果可以利用更宽广的光源能量范围，就意味着可以探测更为丰富的化学键。这就是目前同步辐射光源在单原子催化剂表征中不可或缺地位的原因所在。更多关于材料表征技术的知识，可以查看笔者总结的课程回顾内容《<a href="https://www.mozheyang.top/2017/12/27/2017AFinal/">回首2017 | 课程知识回顾</a>》中催化作用基础相关内容，如《<a href="https://www.mozheyang.top/documents/%E5%82%AC%E5%8C%96%E8%A1%A8%E5%BE%81%E6%96%B9%E6%B3%95.pdf">催化表征方法思维导图</a>》。</p><p>通过同步辐射光源的相关分析可以发现在制备的单原子分散样品（Cu-SAs/N-G和Cu-SAs/N-C）中均无明显Cu-Cu键，取而代之的是铜原子与基底形成的Cu-N/C键。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesCuSAC.png" alt="xanesCu"></p><p>通过该方法制备的铜单原子催化剂在氧还原反应中具有优异表现。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/ORRCuSAC.png" alt="ORRCu"></p><h1 id="镍单原子催化剂与其电还原二氧化碳催化活性"><a href="#镍单原子催化剂与其电还原二氧化碳催化活性" class="headerlink" title="镍单原子催化剂与其电还原二氧化碳催化活性"></a>镍单原子催化剂与其电还原二氧化碳催化活性</h1><p>与之前的铜单原子催化剂的制备工艺略有不同。铜原子是被载气氨气裹挟着来到缺陷碳上，而镍“单原子”催化剂是三聚氰胺转化的氮化碳在镍金属片上生长制备而成的，是一个金属“渗碳”的逆过程——碳“渗”金属镍。最后所得到的镍单原子催化剂是酸蚀镍金属片而得，可以想象，其金属间成键的概率一定会比金属原子跑到碳载体上要大得多。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/prepareNiSAC.png" alt="NiSAC"></p><p>这一猜想可以从同步辐射光源的相关分析中得到验证。</p><p>直接剥离而未经酸蚀的碳层文中将其命名为（Freshly prepare carbon papers, F-CPs），剥离后再经过酸蚀得到的碳层样品文中称其为（Hierarchical carbon papers, H-CPs）。Emmm…反正无定型的碳都可以叫层级结构“Hierarchical structure”吧，当然孔结构丰富的碳（既有micro-pores，又有meso-pores）就更为名副其实啦。可以想象，酸蚀后的碳一定是具有丰富孔结构的。</p><p>在F-CPs中Ni-Ni键比纯镍片要稍微低一些，经过酸蚀的H-CPs样品又相对于F-CPs具有更低的Ni-Ni键强度，说明镍金属在酸蚀过程中损失，从而导致Ni-Ni键更弱了。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesNiSAC.png" alt="xanesNi"></p><p>镍单原子催化剂电还原二氧化碳产一氧化碳的活性，与之前催化剂相比具有极大优势，尤其是在CO的法拉第电流密度方面。而且这种电流密度增长几乎与负偏压成正比，这无疑在工业化的大规模电解还原过程中是一个有利的特点。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/ECRNiSAC.png" alt="ECRNiSAC"></p><h1 id="钴单原子催化剂与其多反应催化性能"><a href="#钴单原子催化剂与其多反应催化性能" class="headerlink" title="钴单原子催化剂与其多反应催化性能"></a>钴单原子催化剂与其多反应催化性能</h1><p>钴基催化剂在OER，ORR和HER三个反应中屡建奇功，因此如何将其规模化制备是一个有趣的研究课题。钴单原子催化剂的制备与镍单原子催化剂的制备没有太大差别，同样基于三聚氰胺在金属片上的生长与反渗透过程——碳渗金属钴。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/prepareCoSAC.png" alt="CoSAC"></p><p>从其同步辐射相关分析中可以看出，其也并非严格的单原子催化剂。其原因我们在上面的镍“单原子”催化剂文章中也已经讨论过了。很明显，该催化剂是在基底上分散着钴原子簇。这些原子簇存在使得其具有催化多种能源催化反应的特点。让笔者感到有些疑惑的是文中没有解释是否有Co-N键的存在，而只是利用同步辐射强调了Co-Co键的存在…杀鸡焉用牛刀？于是笔者怀疑，这可能是一个合成失败的材料（实验重复性可还行？），无奈性能好啊，还是可以发好文章[闭嘴==]。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesCoSAC.png" alt="xanesCo"></p><p>接下来必有老套的ORR，OER和HER三连。虽然“bifunctional”（双功能）和“trifunctional”（三功能）是有些老套了，但是笔者想，这其实也有其背后的科学问题——目前新能源（转化）领域的多个反应居然都可以被同样体系的催化剂（材料）制服，这是否说明我们离<strong>大一统</strong>的目标不远了呢？那么向大一统多前进一步总归是没错的吧，于是可预见的未来还可能会出现“tetrafunctional”（四功能），“pentafunctional”（五功能）…又可以毕业几批学生了呢，开❤。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/TriFuncCo.png" alt="TriFuncCo"></p><p>其实ORR，OER和HER可以被同一个体系材料所征服还不是最令人费解的。</p><p>令人费解的是HER这个与NRR（或NER）和ECR竞争的反应，其催化剂体系被广泛应用于NRR和ECR。这意味着，我们对催化剂活性位点<strong>根本一无所知</strong>！不同的合成路径，合成一个化学成分基本相同的，甚至缺陷结构（目前所能够表征的）都是类似的材料，为什么会产生几乎是相互矛盾的效果？！！</p><p>难受！！！</p><h1 id="铂单原子催化剂与其氢析出反应催化活性"><a href="#铂单原子催化剂与其氢析出反应催化活性" class="headerlink" title="铂单原子催化剂与其氢析出反应催化活性"></a>铂单原子催化剂与其氢析出反应催化活性</h1><p>最开始做的是非贵金属，为什么现在又转回来做贵金属了呢？可能是因为能试的金属都还在一个个试吧。大家可以看着抓抓紧。一种金属一篇文章，加油。</p><p>利用铂网（经费在燃烧…）、双氰胺（Dicyandiamide ，DCD ）和氧化石墨烯（GO）在惰性气氛下高温共热，可以制备铂单原子催化剂。这是因为在高温下，双氰胺释放出氨气，与铂网表面原子通过强的路易斯酸作用络合，形成挥发性的Pt(NH<sub>3</sub>)<sub>X</sub>。而Pt(NH<sub>3</sub>)<sub>X</sub>又会被氧化石墨烯所氧化捕获（其实要说是氧化还原石墨烯上的缺陷捕获铂原子是否也有道理呢？毕竟Pt<sup>0</sup>也并不是容易反应形成化学键的，虽然氨气络合对铂原子的作用不可小觑），从而形成铂原子在缺陷碳上负载的单原子催化剂。</p><p>这一部分内容似曾相识…对，与铜单原子催化剂的制备原理基本相同。但是可能考虑到铂比较贵，在封闭空间反应吧，还是不通氨气了，不然都被载气带走了真的很浪费…而且附着在石英管上的铂该怎么办？很容易影响后来的高温反应，回收也是很不方便了。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/preparePtSAC.png" alt="PtSAC"></p><p>金属原子跑到碳载体上，其单原子效应应该是比较明显的。这可以从下图看出来，笔者就不再分析了，感兴趣的读者可以阅读原文。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/xanesPtSAC.png" alt="xanesPt"></p><p>那，试了很多反应之后，还是HER最奏效。好吧，毕竟贵金属，总应该有点效果的。</p><p>要不然真对不起“燃烧”的经费。</p><p><img src="https://www.mozheyang.top/images/BulkMetal2SAC/HERPtSAC.png" alt="HERPt"></p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>一招鲜，吃遍天。</p><p>光靠块体金属合成单原子催化剂就出了多少好文章啊。虽然这个方法的思想是非常巧妙的，但是后来跟进的研究未免有些filling gaps的嫌疑。</p><p>不管怎么说，都还是大师之作啊。</p><p>如果你对本文中的内容有任何不同见解，欢迎指教！</p><p>Email: mozheyang@outlook.com</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>(1) Qu, Y.; Li, Z.; Chen, W.; Lin, Y.; Yuan, T.; Yang, Z.; Zhao, C.; Wang, J.; Zhao, C.; Wang, X.; et al. Single Sites Via Emitting and Trapping of Atoms. Nat. Catal. 2018, 1 (October), 781–786.</p><p>(2) Zhang, Q.; Zhao, C.; Wang, Y.; Li, Y.; Yuan, T.; Xi, D.; Wang, X.; Duan, H.; Luo, J.; Xu, Q.; et al. Solid-Diffusion Synthesis of Single-Atom Catalysts Directly from Bulk Metal for Efficient CO2 Reduction. Joule 2018, 1–11.</p><p>(3) Yang, Z.; Zhao, C.; Qu, Y.; Zhou, H.; Zhou, F.; Wang, J.; Wu, Y.; Li, Y. Trifunctional Self-Supporting Cobalt-Embedded Carbon Nanotube Films for ORR, OER, and HER Triggered by Solid Diffusion from Bulk Metal. Adv. Mater. 2019, 1808043, 1–8.</p><p>(4) Qu, Y.; Chen, B.; Li, Z.; Duan, X.; Wang, L.; Lin, Y.; Yuan, T.; Zhou, F.; Hu, Y.; Yang, Z.; et al. Thermal Emitting Strategy to Synthesize Atomically Dispersed Pt Metal Sites from Bulk Pt Metal. J. Am. Chem. Soc. 2019, jacs.8b09834.</p>]]></content>
     
     <summary type="html">
     
@@ -289,25 +289,25 @@
     </summary>
     
     
-      <category term="Electrochemistry  电化学" scheme="http://mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
+      <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
     
     
-      <category term="Chemistry  化学" scheme="http://mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+      <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
-      <category term="Material  材料" scheme="http://mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+      <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
-      <category term="Catalysis  催化" scheme="http://mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
+      <category term="Catalysis  催化" scheme="https://www.mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>什么是“法拉第效率”？NRR和ECR中的一个重要指标</title>
-    <link href="http://mozheyang.top/2019/03/03/FaradayEfficiency/"/>
-    <id>http://mozheyang.top/2019/03/03/FaradayEfficiency/</id>
+    <link href="https://www.mozheyang.top/2019/03/03/FaradayEfficiency/"/>
+    <id>https://www.mozheyang.top/2019/03/03/FaradayEfficiency/</id>
     <published>2019-03-03T06:37:18.000Z</published>
     <updated>2020-04-19T02:25:26.002Z</updated>
     
-    <content type="html"><![CDATA[<p>题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potential）和一定电位下所能达到的总电流密度（Current density）并驾齐驱。在介绍“法拉第效率”这个概念之前，我们首先来回顾什么是“法拉第定律”。</p><a id="more"></a><h1 id="法拉第定律、法拉第电流与法拉第效率的关系"><a href="#法拉第定律、法拉第电流与法拉第效率的关系" class="headerlink" title="法拉第定律、法拉第电流与法拉第效率的关系"></a>法拉第定律、法拉第电流与法拉第效率的关系</h1><p>法拉第定律建立了宏观电荷量/电流和化学反应导致的微观电子转移之间的联系。</p><script type="math/tex; mode=display">Q=NF</script><p>等式两边同时对时间求导数可得</p><script type="math/tex; mode=display">i = \frac{dQ}{dt} = \frac{dN}{dt}F = nF</script><p>法拉第电流（$i_f$），顾名思义，就是化学反应过程导致电子转移，这部分电子所对应的电流。</p><p>那除了法拉第电流，我们在实际测试中得到的总电流还有非法拉第电流，其中大部分可以认为是电极双电层的充电电流（$i_c$），如上图。关于电极双电层结构的数学模型可以参见博文（<a href="https://www.mozheyang.top/2017/10/22/EClecturenote3/" target="_blank" rel="noopener">课后回顾 | 双电层结构</a>）。简单地来说，在固液界面两边会积累电荷，这些电荷空间距离较近，却无法穿越界面进行结合，像极了平行板电容器。因此双电层电流可以看作该电容器的充电电流。需要注意的是，电极表面修饰会对双电层充电电流产生影响。</p><p><img src="https://www.mozheyang.top/images/FE/Double_Layer.png" alt=""></p><script type="math/tex; mode=display">i_{total} =f(i_f, i_c) \approx i_f + i_c</script><p>以上的关系必定是十分粗略而且非定量的，法拉第电流和双电层充电电流都会随时间和施加偏压的变化而变化。当电压一定时，不存在双电层充电电流，即$i_c = 0$，那么</p><script type="math/tex; mode=display">i_{total} \approx i_f</script><p>注：电化学测试可以获得的信息是十分丰富的，部分技巧甚至具有较深厚的数理背景。如果希望对CV和LSV曲线中的电流了解得更多更深入，可以关注笔者后续的博文：<a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/" target="_blank" rel="noopener">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a>。</p><p>在水中（被施加负压的一极）阴极，在电压足够负的情况下只发生氢析出反应，那么产物也就只有$H_2$。在氮气还原反应中，由于氢气析出所需电位比氮气还原所需电位较正，于是在氮气还原发生的过程中，有很大可能氢气析出反应也是同时发生的（另外很小可能：电催化剂极大减小了氮气还原所需要的负偏压导致氮气还原所需电位比氢气析出正），气相产物还是只有$H_2$，但液相中产物可能会有$NH_4^+$（产生氨气然后溶于电解液中）和$N_2H_4$；在二氧化碳还原反应中，可能的产物会更复杂，气相产物可能有$H_2$、$CO$、$CH_4$、$C_2H_4$……而液相产物又可能有$HCOOH$、$CH_3COOH$、$EtOH$（乙醇）、$n-PrOH$（异丙醇）……</p><p><img src="https://www.mozheyang.top/images/FE/ECRpotential.png" alt=""></p><p class="refs">注：以上部分反应看似具有比氢气析出更正的电位，但实际上，二氧化碳分子还原几乎都必须经过生成羰基自由基CO*的过程，该反应对应的电极电势为-1.90 V (vs. SHE，水溶液). Ref: Sun, Z.; Ma, T.; Tao, H.; Fan, Q.; Han, B. Fundamentals and Challenges of Electrochemical CO2Reduction Using Two-Dimensional Materials. Chem 2017, 3 (4), 560–587.</p><p>所以法拉第电流部分可以由多个不同产物的法拉第电流组成。对于氮气还原反应：</p><script type="math/tex; mode=display">i_{total} = i_f = i_{H_2} + i_{NH_4^+} + i_{N_2H_4}</script><p>对于二氧化碳还原反应：</p><script type="math/tex; mode=display">i_{total} = i_f = \{i_{H_2} + i_{CO} + i_{CH_4} + i_{C_2H_4}\}_{gas}+ \{i_{HCOOH} + i_{CH_3COOH} + i_{EtOH} + i_{n-PrOH}\}_{liquid}</script><p>所以针对某种产物，比如铵根在氮气还原反应中的法拉第效率，其表达式可以写为</p><script type="math/tex; mode=display">FE = \frac{i_{NH_4^+}}{i_{f}} = \frac{i_{NH_4^+}}{i_{total}}</script><h1 id="不同情况下法拉第效率的具体计算方法"><a href="#不同情况下法拉第效率的具体计算方法" class="headerlink" title="不同情况下法拉第效率的具体计算方法"></a>不同情况下法拉第效率的具体计算方法</h1><p>在不同情况下我们都可以依据<strong>物质守恒定律</strong>，结合法拉第定律对法拉第效率建立合理的计算方法。物质守恒定律简单说来就是，若计算平均法拉第效率，那我们便使用一段时间内转移的电子总数求平均后进行计算；若计算瞬时（单位时间）法拉第效率，那我们便用该单位时间下转移的电子个数进行计算。</p><h2 id="平均法拉第效率"><a href="#平均法拉第效率" class="headerlink" title="平均法拉第效率"></a>平均法拉第效率</h2><p>在一定反应时间段内，若某产物的法拉第效率可基本视为恒定（稳定性较好的催化剂，如目前最好的碳基催化剂），那么可以依据以下方法计算该段时间内的对应该产物的<strong>平均法拉第速率</strong></p><script type="math/tex; mode=display">FE = \frac{产物所对应的转移电荷}{总共消耗的电荷}</script><p>由于即使在同一电位下，仍不存在严格恒定的产物法拉第效率，因此目前文献中多用瞬时法拉第效率。</p><h2 id="瞬时法拉第效率"><a href="#瞬时法拉第效率" class="headerlink" title="瞬时法拉第效率"></a>瞬时法拉第效率</h2><p>在法拉第效率不恒定的情况下（稳定性较差的催化剂，如多数金属催化剂），可以依据以下方法计算一段时间内的<strong>瞬时法拉第效率</strong></p><script type="math/tex; mode=display">j_i = n_i F A^{-1} = x_i \times v \times \frac{z_i F p_0}{RT} \times A^{-1} \\FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是单位时间、单位电极面积由于i物种生成所引起的电子转移个数，其与i物种对应电流密度$j_i$之间的关系便可以通过法拉第定律进行描述。式中$v$为气体流速 (mol min<sup>-1</sup>)，$z_i$为每1单位$i$物种生成导致的电子转移个数，$P_0$为标准大气压，$F$和$R$分别为法拉第常数和气体常数（法拉第常数 $F=96485 \quad C \cdot mol^{-1}$，气体常数$R = 8.314 \quad J \cdot mol^{-1} \cdot K^{-1}$）。$i$物种的法拉第效率最终等于$i$物种电流密度与总电流密度之比。</p><p class="refs">Ref: Jiang K, Sandberg R B, Akey A J, et al. Metal ion cycling of Cu foil for selective C–C coupling in electrochemical CO<sub>2</sub> reduction[J]. Nature Catalysis, 2018, 1(2): 111.</p>]]></content>
+    <content type="html"><![CDATA[<p>题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potential）和一定电位下所能达到的总电流密度（Current density）并驾齐驱。在介绍“法拉第效率”这个概念之前，我们首先来回顾什么是“法拉第定律”。</p><a id="more"></a><h1 id="法拉第定律、法拉第电流与法拉第效率的关系"><a href="#法拉第定律、法拉第电流与法拉第效率的关系" class="headerlink" title="法拉第定律、法拉第电流与法拉第效率的关系"></a>法拉第定律、法拉第电流与法拉第效率的关系</h1><p>法拉第定律建立了宏观电荷量/电流和化学反应导致的微观电子转移之间的联系。</p><script type="math/tex; mode=display">Q=NF</script><p>等式两边同时对时间求导数可得</p><script type="math/tex; mode=display">i = \frac{dQ}{dt} = \frac{dN}{dt}F = nF</script><p>法拉第电流（$i_f$），顾名思义，就是化学反应过程导致电子转移，这部分电子所对应的电流。</p><p>那除了法拉第电流，我们在实际测试中得到的总电流还有非法拉第电流，其中大部分可以认为是电极双电层的充电电流（$i_c$），如上图。关于电极双电层结构的数学模型可以参见博文（<a href="https://www.mozheyang.top/2017/10/22/EClecturenote3/">课后回顾 | 双电层结构</a>）。简单地来说，在固液界面两边会积累电荷，这些电荷空间距离较近，却无法穿越界面进行结合，像极了平行板电容器。因此双电层电流可以看作该电容器的充电电流。需要注意的是，电极表面修饰会对双电层充电电流产生影响。</p><p><img src="https://www.mozheyang.top/images/FE/Double_Layer.png" alt=""></p><script type="math/tex; mode=display">i_{total} =f(i_f, i_c) \approx i_f + i_c</script><p>以上的关系必定是十分粗略而且非定量的，法拉第电流和双电层充电电流都会随时间和施加偏压的变化而变化。当电压一定时，不存在双电层充电电流，即$i_c = 0$，那么</p><script type="math/tex; mode=display">i_{total} \approx i_f</script><p>注：电化学测试可以获得的信息是十分丰富的，部分技巧甚至具有较深厚的数理背景。如果希望对CV和LSV曲线中的电流了解得更多更深入，可以关注笔者后续的博文：<a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a>。</p><p>在水中（被施加负压的一极）阴极，在电压足够负的情况下只发生氢析出反应，那么产物也就只有$H_2$。在氮气还原反应中，由于氢气析出所需电位比氮气还原所需电位较正，于是在氮气还原发生的过程中，有很大可能氢气析出反应也是同时发生的（另外很小可能：电催化剂极大减小了氮气还原所需要的负偏压导致氮气还原所需电位比氢气析出正），气相产物还是只有$H_2$，但液相中产物可能会有$NH_4^+$（产生氨气然后溶于电解液中）和$N_2H_4$；在二氧化碳还原反应中，可能的产物会更复杂，气相产物可能有$H_2$、$CO$、$CH_4$、$C_2H_4$……而液相产物又可能有$HCOOH$、$CH_3COOH$、$EtOH$（乙醇）、$n-PrOH$（异丙醇）……</p><p><img src="https://www.mozheyang.top/images/FE/ECRpotential.png" alt=""></p><p class="refs">注：以上部分反应看似具有比氢气析出更正的电位，但实际上，二氧化碳分子还原几乎都必须经过生成羰基自由基CO*的过程，该反应对应的电极电势为-1.90 V (vs. SHE，水溶液). Ref: Sun, Z.; Ma, T.; Tao, H.; Fan, Q.; Han, B. Fundamentals and Challenges of Electrochemical CO2Reduction Using Two-Dimensional Materials. Chem 2017, 3 (4), 560–587.</p><p>所以法拉第电流部分可以由多个不同产物的法拉第电流组成。对于氮气还原反应：</p><script type="math/tex; mode=display">i_{total} = i_f = i_{H_2} + i_{NH_4^+} + i_{N_2H_4}</script><p>对于二氧化碳还原反应：</p><script type="math/tex; mode=display">i_{total} = i_f = \{i_{H_2} + i_{CO} + i_{CH_4} + i_{C_2H_4}\}_{gas}+ \{i_{HCOOH} + i_{CH_3COOH} + i_{EtOH} + i_{n-PrOH}\}_{liquid}</script><p>所以针对某种产物，比如铵根在氮气还原反应中的法拉第效率，其表达式可以写为</p><script type="math/tex; mode=display">FE = \frac{i_{NH_4^+}}{i_{f}} = \frac{i_{NH_4^+}}{i_{total}}</script><h1 id="不同情况下法拉第效率的具体计算方法"><a href="#不同情况下法拉第效率的具体计算方法" class="headerlink" title="不同情况下法拉第效率的具体计算方法"></a>不同情况下法拉第效率的具体计算方法</h1><p>在不同情况下我们都可以依据<strong>物质守恒定律</strong>，结合法拉第定律对法拉第效率建立合理的计算方法。物质守恒定律简单说来就是，若计算平均法拉第效率，那我们便使用一段时间内转移的电子总数求平均后进行计算；若计算瞬时（单位时间）法拉第效率，那我们便用该单位时间下转移的电子个数进行计算。</p><h2 id="平均法拉第效率"><a href="#平均法拉第效率" class="headerlink" title="平均法拉第效率"></a>平均法拉第效率</h2><p>在一定反应时间段内，若某产物的法拉第效率可基本视为恒定（稳定性较好的催化剂，如目前最好的碳基催化剂），那么可以依据以下方法计算该段时间内的对应该产物的<strong>平均法拉第速率</strong></p><script type="math/tex; mode=display">FE = \frac{产物所对应的转移电荷}{总共消耗的电荷}</script><p>由于即使在同一电位下，仍不存在严格恒定的产物法拉第效率，因此目前文献中多用瞬时法拉第效率。</p><h2 id="瞬时法拉第效率"><a href="#瞬时法拉第效率" class="headerlink" title="瞬时法拉第效率"></a>瞬时法拉第效率</h2><p>在法拉第效率不恒定的情况下（稳定性较差的催化剂，如多数金属催化剂），可以依据以下方法计算一段时间内的<strong>瞬时法拉第效率</strong></p><script type="math/tex; mode=display">j_i = n_i F A^{-1} = x_i \times v \times \frac{z_i F p_0}{RT} \times A^{-1} \\FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是单位时间、单位电极面积由于i物种生成所引起的电子转移个数，其与i物种对应电流密度$j_i$之间的关系便可以通过法拉第定律进行描述。式中$v$为气体流速 (mol min<sup>-1</sup>)，$z_i$为每1单位$i$物种生成导致的电子转移个数，$P_0$为标准大气压，$F$和$R$分别为法拉第常数和气体常数（法拉第常数 $F=96485 \quad C \cdot mol^{-1}$，气体常数$R = 8.314 \quad J \cdot mol^{-1} \cdot K^{-1}$）。$i$物种的法拉第效率最终等于$i$物种电流密度与总电流密度之比。</p><p class="refs">Ref: Jiang K, Sandberg R B, Akey A J, et al. Metal ion cycling of Cu foil for selective C–C coupling in electrochemical CO<sub>2</sub> reduction[J]. Nature Catalysis, 2018, 1(2): 111.</p>]]></content>
     
     <summary type="html">
     
@@ -316,19 +316,19 @@
     </summary>
     
     
-      <category term="Electrochemistry  电化学" scheme="http://mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
+      <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
     
     
-      <category term="Chemistry  化学" scheme="http://mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+      <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
-      <category term="Material  材料" scheme="http://mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+      <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
   </entry>
   
   <entry>
     <title>有意思的课题组跟踪</title>
-    <link href="http://mozheyang.top/2019/02/13/groups/"/>
-    <id>http://mozheyang.top/2019/02/13/groups/</id>
+    <link href="https://www.mozheyang.top/2019/02/13/groups/"/>
+    <id>https://www.mozheyang.top/2019/02/13/groups/</id>
     <published>2019-02-13T03:11:52.000Z</published>
     <updated>2020-04-19T02:39:00.004Z</updated>
     
@@ -342,18 +342,18 @@
     
     
     
-      <category term="Updating  持续更新中..." scheme="http://mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+      <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
-      <category term="Chemistry  化学" scheme="http://mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
-      <category term="Information Science &amp; Technology  信息科学与技术" scheme="http://mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+      <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>二零一捌，人生没有那么容易，也没有那么艰难</title>
-    <link href="http://mozheyang.top/2019/02/13/2018thought/"/>
-    <id>http://mozheyang.top/2019/02/13/2018thought/</id>
+    <link href="https://www.mozheyang.top/2019/02/13/2018thought/"/>
+    <id>https://www.mozheyang.top/2019/02/13/2018thought/</id>
     <published>2019-02-13T03:11:36.000Z</published>
     <updated>2020-02-02T07:51:37.000Z</updated>
     
@@ -372,16 +372,16 @@
     
     
     
-      <category term="Thought  随想" scheme="http://mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
-      <category term="Updating  持续更新中..." scheme="http://mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
   </entry>
   
   <entry>
     <title>文献数据库 | BibTeX文件读取的Python实现</title>
-    <link href="http://mozheyang.top/2019/01/06/bibRead20190106/"/>
-    <id>http://mozheyang.top/2019/01/06/bibRead20190106/</id>
+    <link href="https://www.mozheyang.top/2019/01/06/bibRead20190106/"/>
+    <id>https://www.mozheyang.top/2019/01/06/bibRead20190106/</id>
     <published>2019-01-06T09:07:02.000Z</published>
     <updated>2020-02-02T07:53:02.000Z</updated>
     
@@ -396,18 +396,18 @@
     
     
     
-      <category term="Information Science &amp; Technology  信息科学与技术" scheme="http://mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+      <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="Literature  文献" scheme="http://mozheyang.top/tags/Literature-%E6%96%87%E7%8C%AE/"/>
+      <category term="Literature  文献" scheme="https://www.mozheyang.top/tags/Literature-%E6%96%87%E7%8C%AE/"/>
     
-      <category term="Python" scheme="http://mozheyang.top/tags/Python/"/>
+      <category term="Python" scheme="https://www.mozheyang.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | Valid Parentheses (easy level)</title>
-    <link href="http://mozheyang.top/2019/01/06/leetcode20/"/>
-    <id>http://mozheyang.top/2019/01/06/leetcode20/</id>
+    <link href="https://www.mozheyang.top/2019/01/06/leetcode20/"/>
+    <id>https://www.mozheyang.top/2019/01/06/leetcode20/</id>
     <published>2019-01-06T02:47:05.000Z</published>
     <updated>2020-02-02T08:12:59.000Z</updated>
     
@@ -427,14 +427,14 @@
     
     
     
-      <category term="Information Science &amp; Technology  信息科学与技术" scheme="http://mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+      <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>信息社会求生指南 | 怎么在纷繁中找到自己的目标</title>
-    <link href="http://mozheyang.top/2018/12/16/ValueYouself/"/>
-    <id>http://mozheyang.top/2018/12/16/ValueYouself/</id>
+    <link href="https://www.mozheyang.top/2018/12/16/ValueYouself/"/>
+    <id>https://www.mozheyang.top/2018/12/16/ValueYouself/</id>
     <published>2018-12-16T11:07:24.000Z</published>
     <updated>2020-02-02T08:25:30.000Z</updated>
     
@@ -449,14 +449,14 @@
     
     
     
-      <category term="Thought  随想" scheme="http://mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>自然科学视角 | 如何进入一个新的领域（研究入坑指南）</title>
-    <link href="http://mozheyang.top/2018/12/16/HowToResearch/"/>
-    <id>http://mozheyang.top/2018/12/16/HowToResearch/</id>
+    <link href="https://www.mozheyang.top/2018/12/16/HowToResearch/"/>
+    <id>https://www.mozheyang.top/2018/12/16/HowToResearch/</id>
     <published>2018-12-16T11:07:13.000Z</published>
     <updated>2020-04-19T02:25:26.002Z</updated>
     
@@ -470,14 +470,14 @@
     
     
     
-      <category term="Thought  随想" scheme="http://mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>国内科研环境是否顺应时代？</title>
-    <link href="http://mozheyang.top/2018/12/16/complain/"/>
-    <id>http://mozheyang.top/2018/12/16/complain/</id>
+    <link href="https://www.mozheyang.top/2018/12/16/complain/"/>
+    <id>https://www.mozheyang.top/2018/12/16/complain/</id>
     <published>2018-12-16T11:06:58.000Z</published>
     <updated>2020-02-02T07:58:35.000Z</updated>
     
@@ -491,14 +491,14 @@
     
     
     
-      <category term="Thought  随想" scheme="http://mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | Shortest Distance to a Character (easy level)</title>
-    <link href="http://mozheyang.top/2018/12/02/leetcode821/"/>
-    <id>http://mozheyang.top/2018/12/02/leetcode821/</id>
+    <link href="https://www.mozheyang.top/2018/12/02/leetcode821/"/>
+    <id>https://www.mozheyang.top/2018/12/02/leetcode821/</id>
     <published>2018-12-02T08:22:08.000Z</published>
     <updated>2020-02-02T08:13:10.000Z</updated>
     
@@ -520,7 +520,7 @@
     
     
     
-      <category term="Information Science &amp; Technology  信息科学与技术" scheme="http://mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+      <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

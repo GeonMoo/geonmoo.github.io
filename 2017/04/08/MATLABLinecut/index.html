@@ -19,13 +19,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="笔者在之前已经给大家介绍过一种基本的晶粒计数方法了。接下来给大家介绍的方法相较于上一种方法原理上会更复杂一些。 还好，有关于该方法的数学及物理原理都已经被封装在一个名叫“Linecut”的MATLAB插件中了。笔者准备接下来先简要介绍其原理，然后着重对工具的使用进行介绍。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用MATLAB插件Linecut实现晶粒尺寸测量">
-<meta property="og:url" content="http://mozheyang.top/2017/04/08/MATLABLinecut/index.html">
+<meta property="og:url" content="https://www.mozheyang.top/2017/04/08/MATLABLinecut/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="笔者在之前已经给大家介绍过一种基本的晶粒计数方法了。接下来给大家介绍的方法相较于上一种方法原理上会更复杂一些。 还好，有关于该方法的数学及物理原理都已经被封装在一个名叫“Linecut”的MATLAB插件中了。笔者准备接下来先简要介绍其原理，然后着重对工具的使用进行介绍。">
 <meta property="og:image" content="https://www.mozheyang.top/images/MATLABLinecut/krilFormula.png">
@@ -55,7 +55,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.mozheyang.top/images/MATLABLinecut/krilFormula.png">
 
-<link rel="canonical" href="http://mozheyang.top/2017/04/08/MATLABLinecut/">
+<link rel="canonical" href="https://www.mozheyang.top/2017/04/08/MATLABLinecut/">
 
 
 <script id="page-configurations">
@@ -124,7 +124,7 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <p class="site-subtitle">Bridging the virtual and reality | 虚拟与现实的交点</p>
+        <p class="site-subtitle">一个想成为设计师却一直在材料研究路上奔波的信息科技爱好者</p>
   </div>
 
   <div class="site-nav-right">
@@ -226,7 +226,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2017/04/08/MATLABLinecut/">
+    <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2017/04/08/MATLABLinecut/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -291,7 +291,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>笔者在之前已经给大家介绍过<a href="https://www.mozheyang.top/2017/04/06/ImageJLinecut/" target="_blank" rel="noopener">一种基本的晶粒计数方法</a>了。接下来给大家介绍的方法相较于上一种方法原理上会更复杂一些。</p>
+        <p>笔者在之前已经给大家介绍过<a href="https://www.mozheyang.top/2017/04/06/ImageJLinecut/">一种基本的晶粒计数方法</a>了。接下来给大家介绍的方法相较于上一种方法原理上会更复杂一些。</p>
 <p>还好，有关于该方法的数学及物理原理都已经被封装在一个名叫“Linecut”的MATLAB插件中了。笔者准备接下来先简要介绍其原理，然后着重对工具的使用进行介绍。</p>
 <a id="more"></a>
 <h1 id="测量原理"><a href="#测量原理" class="headerlink" title="测量原理"></a>测量原理</h1><hr>
@@ -301,7 +301,7 @@
 <p>晶粒的尺寸分布图及拟合曲线如下图所示。</p>
 <p><img src="https://www.mozheyang.top/images/MATLABLinecut/krilFitting.png" alt=""></p>
 <p>点击下方参考文献可下载原文(有部分笔者标注)。</p>
-<p><a href="https://www.mozheyang.top/documents/kril1998.pdf" target="_blank" rel="noopener">Kril C E, Birringer R. Estimating grain-size distributions in nanocrystalline materials from X-ray diffraction profile analysis[J]. Philosophical Magazine A, 1998, 77(3): 621-640.</a></p>
+<p><a href="https://www.mozheyang.top/documents/kril1998.pdf">Kril C E, Birringer R. Estimating grain-size distributions in nanocrystalline materials from X-ray diffraction profile analysis[J]. Philosophical Magazine A, 1998, 77(3): 621-640.</a></p>
 <h1 id="MATLAB插件Linecut的下载及运行"><a href="#MATLAB插件Linecut的下载及运行" class="headerlink" title="MATLAB插件Linecut的下载及运行"></a>MATLAB插件Linecut的下载及运行</h1><hr>
 <p>MATLAB的使用范围是十分广泛的。在国外，MATLAB的熟练使用是理工科学生的“生存必备技能”之一。</p>
 <p>由于MATLAB各个版本的安装方法在其他地方已经较为广泛地讨论了，在这里便不加赘言。</p>
@@ -371,7 +371,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://mozheyang.top/2017/04/08/MATLABLinecut/" title="利用MATLAB插件Linecut实现晶粒尺寸测量">http://mozheyang.top/2017/04/08/MATLABLinecut/</a>
+    <a href="https://www.mozheyang.top/2017/04/08/MATLABLinecut/" title="利用MATLAB插件Linecut实现晶粒尺寸测量">https://www.mozheyang.top/2017/04/08/MATLABLinecut/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -540,7 +540,7 @@
       <div class="footer-inner">
         
   <div class="beian">
-      <img src="http://mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
+      <img src="https://www.mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
   </div>
 
 <div class="copyright">

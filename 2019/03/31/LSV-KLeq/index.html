@@ -19,13 +19,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论">
-<meta property="og:url" content="http://mozheyang.top/2019/03/31/LSV-KLeq/index.html">
+<meta property="og:url" content="https://www.mozheyang.top/2019/03/31/LSV-KLeq/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2">
 <meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
 
-<link rel="canonical" href="http://mozheyang.top/2019/03/31/LSV-KLeq/">
+<link rel="canonical" href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">
 
 
 <script id="page-configurations">
@@ -111,7 +111,7 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <p class="site-subtitle">Bridging the virtual and reality | 虚拟与现实的交点</p>
+        <p class="site-subtitle">一个想成为设计师却一直在材料研究路上奔波的信息科技爱好者</p>
   </div>
 
   <div class="site-nav-right">
@@ -213,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://mozheyang.top/2019/03/31/LSV-KLeq/">
+    <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -443,7 +443,7 @@ $$
 <p>从上式我们可以看出，Levich方程所描述的极限电流情形是Koutecky-Levich方程中$i_k \rightarrow \infty$时的情形。K-L方程的物理意义是：<u><strong>在无表面修饰的电极上，总电流主要由反应动力学导致的电流$i_k$和传质所导致的电流$i_l$构成。</strong></u></p>
 <p><img src="https://www.mozheyang.top/images/Electrocatalysis/KLplot.png" alt="K-L plot"></p>
 <p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L拟合直线的<strong>斜率</strong>上。当然，这个变化也会反映在拟合直线的<strong>截距</strong>$\frac{1}{i_k}$上，但其中含有$k_f(E)$这一不易确定的反应动力学参数，所以其不容易被定量分析。</p>
-<p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="https://www.mozheyang.top/2018/02/15/ORRbasic/" target="_blank" rel="noopener">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
+<p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="https://www.mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
 <h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>总结本文得到的结论：</p>
 <ul>
 <li>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</li>
@@ -476,7 +476,7 @@ $$
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://mozheyang.top/2019/03/31/LSV-KLeq/" title="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论">http://mozheyang.top/2019/03/31/LSV-KLeq/</a>
+    <a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/" title="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论">https://www.mozheyang.top/2019/03/31/LSV-KLeq/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -647,7 +647,7 @@ $$
       <div class="footer-inner">
         
   <div class="beian">
-      <img src="http://mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
+      <img src="https://www.mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
   </div>
 
 <div class="copyright">
