@@ -22,25 +22,28 @@
     var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="本文所涉及理论内容十分丰富。博主水平有限，暂时不能一次全部覆盖，将会持续修补更新。望各位读者批评指正！ 交流阻抗谱学的优势在哪？我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（稳态分析）的方法，具有高精度（相对）、简化分">
+  <meta name="description" content="交流阻抗谱学的优势在哪？我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（稳态分析）的方法，具有高精度（相对）、简化分析和可分析系统长时表现的特点，一定程度上弥补了暂态分析的不足。 交流阻抗分析的主要思想是将复杂的电化学系">
 <meta property="og:type" content="article">
-<meta property="og:title" content="交流阻抗谱学的理论基础">
+<meta property="og:title" content="交流阻抗谱学与能源电化学">
 <meta property="og:url" content="https://www.mozheyang.top/2020/04/19/EIS/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
-<meta property="og:description" content="本文所涉及理论内容十分丰富。博主水平有限，暂时不能一次全部覆盖，将会持续修补更新。望各位读者批评指正！ 交流阻抗谱学的优势在哪？我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（稳态分析）的方法，具有高精度（相对）、简化分">
-<meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/eq-circuit.png">
+<meta property="og:description" content="交流阻抗谱学的优势在哪？我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（稳态分析）的方法，具有高精度（相对）、简化分析和可分析系统长时表现的特点，一定程度上弥补了暂态分析的不足。 交流阻抗分析的主要思想是将复杂的电化学系">
+<meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/eq-circuit.png">
 <meta property="og:image" content="https://www.mozheyang.top/images/EIS/double-layer.jpg">
 <meta property="og:image" content="https://www.mozheyang.top/images/EIS/in-output.png">
 <meta property="og:image" content="https://www.mozheyang.top/images/EIS/low-frequency.png">
 <meta property="og:image" content="https://www.mozheyang.top/images/EIS/high-frequency.png">
 <meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/Nyquist-plot.png">
+<meta property="og:image" content="https://www.mozheyang.top/images/EIS/eg-high-frequency.png">
+<meta property="og:image" content="https://www.mozheyang.top/images/EIS/eg-low-frequency.png">
+<meta property="og:image" content="https://www.mozheyang.top/images/EIS/multi-semicircles.png">
 <meta property="article:published_time" content="2020-04-19T09:03:20.000Z">
-<meta property="article:modified_time" content="2020-04-19T09:42:32.443Z">
+<meta property="article:modified_time" content="2020-04-22T15:44:05.852Z">
 <meta property="article:author" content="Geon Mo">
 <meta property="article:tag" content="Updating  持续更新中...">
 <meta property="article:tag" content="Chemistry  化学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mozheyang.top/images/Electrocatalysis/eq-circuit.png">
+<meta name="twitter:image" content="https://www.mozheyang.top/images/Electrocatalysis/eq-circuit.png">
 
 <link rel="canonical" href="https://www.mozheyang.top/2020/04/19/EIS/">
 
@@ -54,7 +57,7 @@
   };
 </script>
 
-  <title>交流阻抗谱学的理论基础 | Mo's Notebook | 摸着羊的笔记本</title>
+  <title>交流阻抗谱学与能源电化学 | Mo's Notebook | 摸着羊的笔记本</title>
   
 
 
@@ -226,7 +229,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          交流阻抗谱学的理论基础
+          交流阻抗谱学与能源电化学
         </h1>
 
         <div class="post-meta">
@@ -235,10 +238,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-04-19 17:03:20 / 修改时间：17:42:32" itemprop="dateCreated datePublished" datetime="2020-04-19T17:03:20+08:00">2020-04-19</time>
+              <time title="创建时间：2020-04-19 17:03:20" itemprop="dateCreated datePublished" datetime="2020-04-19T17:03:20+08:00">2020-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-22 23:44:05" itemprop="dateModified" datetime="2020-04-22T23:44:05+08:00">2020-04-22</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -281,17 +290,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文所涉及理论内容十分丰富。<br>博主水平有限，暂时不能一次全部覆盖，将会持续修补更新。<br>望各位读者批评指正！</p>
-<h1 id="交流阻抗谱学的优势在哪？"><a href="#交流阻抗谱学的优势在哪？" class="headerlink" title="交流阻抗谱学的优势在哪？"></a>交流阻抗谱学的优势在哪？</h1><p>我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（<strong>稳态分析</strong>）的方法，具有高精度（相对）、简化分析和可分析系统长时表现的特点，一定程度上弥补了暂态分析的不足。</p>
+        <h1 id="交流阻抗谱学的优势在哪？"><a href="#交流阻抗谱学的优势在哪？" class="headerlink" title="交流阻抗谱学的优势在哪？"></a>交流阻抗谱学的优势在哪？</h1><p>我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（<strong>稳态分析</strong>）的方法，具有高精度（相对）、简化分析和可分析系统长时表现的特点，一定程度上弥补了暂态分析的不足。</p>
 <p>交流阻抗分析的主要思想是将复杂的电化学系统简化为一定的等效电路，通过电信号的输入输出对比，基于电工学探知其内部结构的具体参数。</p>
 <a id="more"></a>
+<blockquote>
+<p>本文所涉及理论内容十分丰富。<br>博主水平有限，暂时不能一次全部覆盖，将会持续修补更新。<br>望各位读者批评指正！</p>
+<p>本文思路及主要内容均来源于Bard老爷子的《Electrochemical methods: Fundamentals and applications》<a href="#参考文献">[1]</a>。</p>
+</blockquote>
 <h1 id="电化学系统中的等效电路"><a href="#电化学系统中的等效电路" class="headerlink" title="电化学系统中的等效电路"></a>电化学系统中的等效电路</h1><p>交流阻抗分析的核心正在于此。若将整个电化学系统（电极、电解质、隔膜、电极片等）视作一个灰盒（介于黑盒与白盒之间），通过输入已知信号，得到一定的输出信号，便可印证灰盒中是否存在之前假定的电路元件。同时，在理想情况下，可以通过拟合，实现对电路元件具体参数的测定。</p>
 <h2 id="构成电化学系统的基本元器件"><a href="#构成电化学系统的基本元器件" class="headerlink" title="构成电化学系统的基本元器件"></a>构成电化学系统的基本元器件</h2><ul>
 <li>物理元器件：电阻、电容、电感（以及，第四类基本电子元器件：忆阻器。新兴领域，非教科书观点。可参考相关文章：<a href="[https://www.cbicr.tsinghua.edu.cn/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E5%9C%A8%E5%BF%86%E9%98%BB%E5%99%A8%E9%98%B5%E5%88%97%E9%9B%86%E6%88%90%E4%B8%8E%E9%AB%98%E8%83%BD%E6%95%88%E7%B1%BB%E8%84%91%E8%AE%A1%E7%AE%97%E7%9A%84%E5%AE%9E/](https://www.cbicr.tsinghua.edu.cn/清华大学在忆阻器阵列集成与高能效类脑计算的实/">钱鹤、吴华强团队在基于新型忆阻器阵列的类脑计算取得重大突破</a>。</li>
 <li>电化学系统元器件：电容（双电层结构）、电阻（溶液电阻、接触电阻、材料电阻等）、阻抗（= 电阻 + 电容）。</li>
 </ul>
 <h2 id="Randles等效电路"><a href="#Randles等效电路" class="headerlink" title="Randles等效电路"></a>Randles等效电路</h2><p>如下的Randles电路是常用的一种针对<strong>单个工作电极</strong>的等效电路。</p>
-<p><img src="http://mozheyang.top/images/Electrocatalysis/eq-circuit.png" alt=""></p>
+<p><img src="https://www.mozheyang.top/images/Electrocatalysis/eq-circuit.png" alt=""></p>
 <center>Randles等效电路</center>
 
 <p>需要注意的是，这里我们说的<strong>“等效”</strong>与<strong>“约等于”</strong>不同：“约等于”代表我们可以用数学结构去描述未知的部分，我们甚至有方法去减小这个未知的部分。比如通过Taylor公式我们知道，$x \rightarrow 0$时，$\ln (1+x) \approx x$。这是因为</p>
@@ -303,7 +315,7 @@
 <p><img src="https://www.mozheyang.top/images/EIS/double-layer.jpg" alt=""></p>
 <p class="refs">Ref: https://www.seas.ucla.edu/~pilon/EDLCs.htm</p>
 
-<p>有关电荷产生原因的电毛细理论和双电层电容理论模型在之前的课后回顾中有所提及，感兴趣的读者可以查看：<a href="http://mozheyang.top/2017/10/22/EClecturenote3/" target="_blank" rel="noopener">课后回顾 | 双电层结构</a>。</p>
+<p>有关电荷产生原因的电毛细理论，和双电层电容理论模型，在之前的课后回顾中有所提及，感兴趣的读者可以查看：<a href="https://www.mozheyang.top/2017/10/22/EClecturenote3/">课后回顾 | 双电层结构</a>。</p>
 <h2 id="法拉第阻抗-Z-f"><a href="#法拉第阻抗-Z-f" class="headerlink" title="法拉第阻抗$Z_f$"></a>法拉第阻抗$Z_f$</h2><p>考虑把法拉第阻抗$Z_f$单独拿出来分析。既然电化学系统中只有电阻和电容两种元器件，那么直观地，阻抗也就可以分解为电阻$R_s$和电容$C_s$的组合。</p>
 <h2 id="如果是纯粹物理电路"><a href="#如果是纯粹物理电路" class="headerlink" title="如果是纯粹物理电路"></a>如果是纯粹物理电路</h2><p>只有电阻$R_s$和电容$C_s$电路的电压-电流特征是</p>
 <script type="math/tex; mode=display">
@@ -312,7 +324,7 @@ E = iR_s + \frac{q}{C_s}</script><p>两边对时间$t$求导</p>
 \frac{\text{d}E}{\text{d}t} = R_s \frac{\text{d}i}{\text{d}t} + \frac{i}{C_s}</script><p>输入正弦交流信号</p>
 <script type="math/tex; mode=display">
 i = I \sin (\omega t)</script><blockquote>
-<p>此处无需考虑电压信号，因此电流信号$i$可以忽略相位差$\phi$，以简化公式。详情可查看附录。</p>
+<p>此处无需考虑电压信号，因此电流信号$i$可以忽略相位差$\phi$，以简化公式。详情可查看<a href="#附录">附录</a>。</p>
 </blockquote>
 <p>得到等效电路电压特征</p>
 <center><div class="eqnBlock" id="eq-circuit">
@@ -337,7 +349,7 @@ C_R &= C_R(0, t)
 \end{split}</script></blockquote>
 <p>反应的电极电势$E$与电流$i$、氧化物浓度$C_O$和还原物浓度$C_R$都有关系</p>
 <script type="math/tex; mode=display">
-E = f(i, C_o, C_R)</script><p>由E的全微分定义有</p>
+E = f(i, C_o, C_R)</script><p>由电极电势$E$的全微分定义有</p>
 <center><div class="eqnBlock" id="dE-dt">
 
 
@@ -373,22 +385,33 @@ R_{ct} &= \frac{\partial E}{\partial i} \\
 \frac{\text{d} C_R}{\text{d} t} 
 = \frac{I}{nFA} \left( \frac{\omega}{2D_R} \right)^{1/2}
 \sin(\omega t) + \cos(\omega t)</script><p>以上三式可带入<a href="#dE-dt">$\text{d}E / \text{d} t$的描述公式</a>中，简化得到</p>
+<center><div class="eqnBlock" id="dE-dt">
+
+
+$$
+\frac{\text{d}E}{\text{d}t} 
+= \left( R_{ct} + \sigma\omega^{-1/2} \right) I\omega \cos(\omega t) 
++ \left( \sigma \omega^{1/2} \right) I \sin(\omega t)
+$$
+ </div></center>
+
+<p>把之前<a href="#eq-circuit">从纯物理角度得到的电压特征</a>取来</p>
 <script type="math/tex; mode=display">
 \frac{\text{d}E}{\text{d}t} 
-= \left( R_{ct} + \sigma\omega^{-1/2} \right) \cos(\omega t) 
-+ \left( \frac{I}{C_s} \right) \sin(\omega t)</script><p>与<a href="#eq-circuit">从纯物理角度得到的电压特征</a>相比后得到</p>
-<script type="math/tex; mode=display">
-\frac{\text{d}E}{\text{d}t} 
-= \left( R_sI\omega \right) \cos(\omega t) 
-+ \left( \frac{I}{C_s} \right) \sin(\omega t)</script><p>于是可得出对应电阻$R_s$和电容$C_s$</p>
+= R_s \cdot I\omega \cos(\omega t) 
++ \left( \frac{1}{C_s} \right) I \sin(\omega t)</script><p>可对比得出对应电阻$R_s$和电容$C_s$</p>
 <script type="math/tex; mode=display">
 R_s = R_{ct} + \sigma \omega^{-1/2}</script><script type="math/tex; mode=display">
-C_s = \sigma^{-1} \omega^{-1/2}</script><p>通过组装可以得出法拉第阻抗$z_f$</p>
+C_s = \sigma^{-1} \omega^{-1/2}</script><p>通过组装可以得出法拉第阻抗$ Z_f $</p>
 <center><div class="eqnBlock" id="dE-dt">
+
+
 $$
-Z_f = R_s - j \frac{1}{\omega C_s}
+Z_f = R_s+ C_s
+= R_s - j \frac{1}{\omega C_s}
 = R_{ct} + \sigma \omega^{-1/2}-j(\sigma \omega^{-1/2})
 $$
+
 
  </div></center>
 
@@ -412,18 +435,46 @@ Z_{Re} = R_\Omega
 {(C_d \sigma \omega^{1/2})^2 + (R_{ct} + \sigma \omega^{-1/2})^2}</script><script type="math/tex; mode=display">
 Z_{Im} = \frac{\omega C_d  (R_{ct} + \sigma \omega^{-1/2}) 
 + \sigma \omega^{-1/2} (\omega^{1/2} C_d + 1)}
-{(\sigma\omega^{1/2} C_d + 1)^2 + \omega^2 C_d^2(R_{ct} + \sigma \omega^{-1/2})^2}</script><h2 id="低频极限时，-omega-rightarrow-0"><a href="#低频极限时，-omega-rightarrow-0" class="headerlink" title="低频极限时，$\omega \rightarrow 0$"></a>低频极限时，$\omega \rightarrow 0$</h2><script type="math/tex; mode=display">
-Z_{Re} = Z_{Re} - R_\Omega - R_{ct} + 2 \sigma C_d</script><p>对应Nyquist图如下</p>
+{(\sigma\omega^{1/2} C_d + 1)^2 + \omega^2 C_d^2(R_{ct} + \sigma \omega^{-1/2})^2}</script><h2 id="低频极限，-omega-rightarrow-0"><a href="#低频极限，-omega-rightarrow-0" class="headerlink" title="低频极限，$\omega \rightarrow 0$"></a>低频极限，$\omega \rightarrow 0$</h2><script type="math/tex; mode=display">
+Z_{Im} = Z_{Re} - R_\Omega - R_{ct} + 2 \sigma^2 C_d</script><p>对应Nyquist图如下</p>
 <p><img src="https://www.mozheyang.top/images/EIS/low-frequency.png" style="zoom:97%;" /></p>
+<p>理想情况下，这应该是一条斜率为1的直线，与$Z_{Re}$轴的交点为$(R_\Omega - R_{ct} + 2 \sigma^2 C_d, 0)$。</p>
 <h2 id="高频极限，-omega-rightarrow-infty"><a href="#高频极限，-omega-rightarrow-infty" class="headerlink" title="高频极限，$\omega \rightarrow \infty$"></a>高频极限，$\omega \rightarrow \infty$</h2><script type="math/tex; mode=display">
 \left( Z_{Re} - R_\Omega - \frac{R_{ct}}{2}\right)^2 + Z_{Im}^2 
 = \left( \frac{R_{ct}}{2} \right)^2</script><p>对应Nyquist图如下</p>
 <p><img src="https://www.mozheyang.top/images/EIS/high-frequency.png" style="zoom:80%;" /></p>
-<p>而中频部分正是高频与低频阻抗谱的过渡，因此呈以下形状</p>
+<p>理想情况下，这应该是一个圆心为$(R_\Omega + \frac{R_{ct}}{2}, 0)$，半径为$\frac{R_{ct}}{2}$的半圆。</p>
+<h2 id="现实阻抗在两个极限情况之间"><a href="#现实阻抗在两个极限情况之间" class="headerlink" title="现实阻抗在两个极限情况之间"></a>现实阻抗在两个极限情况之间</h2><p>中频部分是高频与低频阻抗谱的过渡，以圆弧连接。因此Randles等效电路对应的Nyquist图一般呈如下形状</p>
 <p><img src="https://www.mozheyang.top/images/Electrocatalysis/Nyquist-plot.png" alt=""></p>
-<p>这也就是经典的Randles等效电路对应的Nyquist图。可通过基于最小二乘法等优化方法的软件可对其进行拟合，从而得到具体的电化学系统元器件参数。</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Bard, A. J., Faulkner, L. R., Leddy, J., &amp; Zoski, C. G. (1980). Electrochemical methods: fundamentals and applications (Vol. 2). New York: wiley.</p>
-<h1 id="附录：电工学"><a href="#附录：电工学" class="headerlink" title="附录：电工学"></a>附录：电工学</h1><h2 id="电阻"><a href="#电阻" class="headerlink" title="电阻"></a>电阻</h2><p>假设一个正弦电压信号</p>
+<p>另外，可通过基于最小二乘法等优化方法的软件可对其进行拟合，从而得到具体的电化学系统元器件参数。拟合软件有ZSimDemo等。</p>
+<h1 id="在能源电化学中的应用实例"><a href="#在能源电化学中的应用实例" class="headerlink" title="在能源电化学中的应用实例"></a>在能源电化学中的应用实例</h1><p>在能源电化学中常用的结论有以下几个：</p>
+<ul>
+<li>从以上Nyquist图中不难看出，<strong>高频区域</strong>的半圆与$R_{Im}$的交点为电解质阻值$R_\Omega$，而其直径为$R_{ct}$<a href="#参考文献">[1, 2]</a>。也就是说，半圆直径越小，电子转移阻抗越小，一般也越有利于电化学反应的发生。</li>
+</ul>
+<blockquote>
+<p>为什么说一般呢？要是存在选择性问题，电子转移阻抗对反应电化学活性的影响就可能不同了。</p>
+</blockquote>
+<p><img src="https://www.mozheyang.top/images/EIS/eg-high-frequency.png" style="zoom:67%;" /></p>
+<p class="refs">Ref: Jiang et al. Defect-Rich and Ultrathin N Doped Carbon Nanosheets as Advanced Trifunctional Metal-Free Electrocatalysts for the ORR, OER and HER. Energy Environ. Sci. 2019, 12 (1), 322–333.</p>
+
+<ul>
+<li><strong>低频区域</strong>直线的的斜率与离子扩散系数呈线性关系，反映了离子传输阻抗：斜率越大，离子扩散系数越大<a href="#参考文献">[3]</a>。</li>
+</ul>
+<p><img src="https://www.mozheyang.top/images/EIS/eg-low-frequency.png" style="zoom:75%;" /></p>
+<p class="refs">Ref: Dai* et al. Multifunctional Carbon-Based Metal-Free Electrocatalysts for Simultaneous Oxygen Reduction, Oxygen Evolution, and Hydrogen Evolution. Adv. Mater. 2017, 29 (9), 1604942.</p>
+
+<ul>
+<li>高频和中频区域可能出现两个半圆。其中前一个半圆（高频）对应钝化膜形成阻抗（passivated film impedance），后一个半圆（中频）对应电荷转移阻抗（charge-transfer resistance）<a href="#参考文献">[4]</a>。这种半圆或圆弧的数目与等效电路中的电容个数直接相关<a href="#参考文献">[2]</a>。</li>
+</ul>
+<p><img src="https://www.mozheyang.top/images/EIS/multi-semicircles.png" alt=""></p>
+<p class="refs">Ref: Yuan et al. Electrochemical Impedance Spectroscopy in PEM Fuel Cells; 2010.</p>
+
+
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Bard, A. J., Faulkner, L. R., Leddy, J., &amp; Zoski, C. G. (1980). Electrochemical methods: Fundamentals and applications (Vol. 2). New York: wiley.</p>
+<p>[2] Yang, X.; Rogach, A. L. Electrochemical Techniques in Battery Research: A Tutorial for Nonelectrochemists. Adv. Energy Mater. 2019, 9 (25), 1900747.</p>
+<p>[3] Dai* et al. Multifunctional Carbon-Based Metal-Free Electrocatalysts for Simultaneous Oxygen Reduction, Oxygen Evolution, and Hydrogen Evolution. Adv. Mater. 2017, 29 (9), 1604942.</p>
+<p>[4] (a) Mirzaeian M, Hall P J. Characterizing capacity loss of lithium oxygen batteries by impedance spectroscopy [J]. J Power Sources, 2010, 195: 6817-6824.(b) Song J Y, Lee H H, Wang Y Y, et al. Two- and three-electrode impedance spectroscopy of lithium-ion batteries [J]. J Power Sources, 2002, 111: 255-267. (c) Chang Y C, Sohn H J. Electrochemical impedance analysis for lithium ion intercalation into graphitized carbons [J]. J Electrochem Soc, 2000, 147: 50-58.</p>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="电阻"><a href="#电阻" class="headerlink" title="电阻"></a>电阻</h2><p>假设一个正弦电压信号</p>
 <script type="math/tex; mode=display">
 e = E \sin (\omega t)</script><p>与其对应的电流信号往往会与电压信号存在一定相位差$\phi$</p>
 <script type="math/tex; mode=display">
@@ -457,7 +508,7 @@ i = \frac{e}{Z_C}
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.mozheyang.top/2020/04/19/EIS/" title="交流阻抗谱学的理论基础">https://www.mozheyang.top/2020/04/19/EIS/</a>
+    <a href="https://www.mozheyang.top/2020/04/19/EIS/" title="交流阻抗谱学与能源电化学">https://www.mozheyang.top/2020/04/19/EIS/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -550,7 +601,7 @@ i = \frac{e}{Z_C}
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#交流阻抗谱学的优势在哪？"><span class="nav-number">1.</span> <span class="nav-text">交流阻抗谱学的优势在哪？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电化学系统中的等效电路"><span class="nav-number">2.</span> <span class="nav-text">电化学系统中的等效电路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构成电化学系统的基本元器件"><span class="nav-number">2.1.</span> <span class="nav-text">构成电化学系统的基本元器件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Randles等效电路"><span class="nav-number">2.2.</span> <span class="nav-text">Randles等效电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电解质电阻与双电层电容"><span class="nav-number">2.3.</span> <span class="nav-text">电解质电阻与双电层电容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#法拉第阻抗-Z-f"><span class="nav-number">2.4.</span> <span class="nav-text">法拉第阻抗$Z_f$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果是纯粹物理电路"><span class="nav-number">2.5.</span> <span class="nav-text">如果是纯粹物理电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回到现实电化学系统"><span class="nav-number">2.6.</span> <span class="nav-text">回到现实电化学系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过组装-R-s-和-C-s-获得法拉第阻抗-Z-f"><span class="nav-number">2.7.</span> <span class="nav-text">通过组装$R_s$和$C_s$获得法拉第阻抗$Z_f$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#电荷传递阻抗-R-ct-和-Warburg-阻抗"><span class="nav-number">2.7.1.</span> <span class="nav-text">电荷传递阻抗$R_{ct}$和$Warburg$阻抗</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电化学系统总阻抗"><span class="nav-number">3.</span> <span class="nav-text">电化学系统总阻抗</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#低频极限时，-omega-rightarrow-0"><span class="nav-number">3.1.</span> <span class="nav-text">低频极限时，$\omega \rightarrow 0$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高频极限，-omega-rightarrow-infty"><span class="nav-number">3.2.</span> <span class="nav-text">高频极限，$\omega \rightarrow \infty$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录：电工学"><span class="nav-number">5.</span> <span class="nav-text">附录：电工学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电阻"><span class="nav-number">5.1.</span> <span class="nav-text">电阻</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电容"><span class="nav-number">5.2.</span> <span class="nav-text">电容</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#交流阻抗谱学的优势在哪？"><span class="nav-number">1.</span> <span class="nav-text">交流阻抗谱学的优势在哪？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电化学系统中的等效电路"><span class="nav-number">2.</span> <span class="nav-text">电化学系统中的等效电路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构成电化学系统的基本元器件"><span class="nav-number">2.1.</span> <span class="nav-text">构成电化学系统的基本元器件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Randles等效电路"><span class="nav-number">2.2.</span> <span class="nav-text">Randles等效电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电解质电阻与双电层电容"><span class="nav-number">2.3.</span> <span class="nav-text">电解质电阻与双电层电容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#法拉第阻抗-Z-f"><span class="nav-number">2.4.</span> <span class="nav-text">法拉第阻抗$Z_f$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果是纯粹物理电路"><span class="nav-number">2.5.</span> <span class="nav-text">如果是纯粹物理电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回到现实电化学系统"><span class="nav-number">2.6.</span> <span class="nav-text">回到现实电化学系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过组装-R-s-和-C-s-获得法拉第阻抗-Z-f"><span class="nav-number">2.7.</span> <span class="nav-text">通过组装$R_s$和$C_s$获得法拉第阻抗$Z_f$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#电荷传递阻抗-R-ct-和-Warburg-阻抗"><span class="nav-number">2.7.1.</span> <span class="nav-text">电荷传递阻抗$R_{ct}$和$Warburg$阻抗</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电化学系统总阻抗"><span class="nav-number">3.</span> <span class="nav-text">电化学系统总阻抗</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#低频极限，-omega-rightarrow-0"><span class="nav-number">3.1.</span> <span class="nav-text">低频极限，$\omega \rightarrow 0$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高频极限，-omega-rightarrow-infty"><span class="nav-number">3.2.</span> <span class="nav-text">高频极限，$\omega \rightarrow \infty$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现实阻抗在两个极限情况之间"><span class="nav-number">3.3.</span> <span class="nav-text">现实阻抗在两个极限情况之间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在能源电化学中的应用实例"><span class="nav-number">4.</span> <span class="nav-text">在能源电化学中的应用实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">6.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电阻"><span class="nav-number">6.1.</span> <span class="nav-text">电阻</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电容"><span class="nav-number">6.2.</span> <span class="nav-text">电容</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

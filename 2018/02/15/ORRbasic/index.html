@@ -47,7 +47,7 @@
 <meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/Nyquist-plot.png">
 <meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/Bode-plot.png">
 <meta property="article:published_time" content="2018-02-15T01:44:05.000Z">
-<meta property="article:modified_time" content="2020-04-19T02:39:11.177Z">
+<meta property="article:modified_time" content="2020-04-22T15:28:44.231Z">
 <meta property="article:author" content="Geon Mo">
 <meta property="article:tag" content="Updating  持续更新中...">
 <meta property="article:tag" content="Chemistry  化学">
@@ -255,7 +255,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-19 10:39:11" itemprop="dateModified" datetime="2020-04-19T10:39:11+08:00">2020-04-19</time>
+                <time title="修改时间：2020-04-22 23:28:44" itemprop="dateModified" datetime="2020-04-22T23:28:44+08:00">2020-04-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -302,10 +302,12 @@
         <p>为了更深入地理解文献中所出现的各种电化学方法和指标背后的物理意义，笔者对使用到的基本电化学知识做了一个总结。虽然笔者努力保证所整理知识的正确性（添加引用），但由于笔者水平所限，难免错漏，望各位老师同学不吝赐教！</p>
 <a id="more"></a>
 <h1 id="不同参考电极-Reference-electrode-之间的转换"><a href="#不同参考电极-Reference-electrode-之间的转换" class="headerlink" title="不同参考电极 (Reference electrode) 之间的转换"></a>不同参考电极 (Reference electrode) 之间的转换</h1><h2 id="SCE（Saturated-calomel-electrode，饱和甘汞）电极"><a href="#SCE（Saturated-calomel-electrode，饱和甘汞）电极" class="headerlink" title="SCE（Saturated calomel electrode，饱和甘汞）电极"></a>SCE（Saturated calomel electrode，饱和甘汞）电极</h2><script type="math/tex; mode=display">
-E (vs. \text{RHE}) = E (vs. \text{SCE}) + 0.241 + 0.059 \text{pH}</script><p class="refs">Ref: Han S, Hu X, Wang J, et al. Novel Route to Fe‐Based Cathode as an Efficient Bifunctional Catalysts for Rechargeable Zn–Air Battery[J]. Advanced Energy Materials, 2018, 8(22): 1800955.</p>
+E_\text{RHE} = E_\text{SCE} + E_\text{SCE}^00.241 + 0.059 \times \text{pH}</script><p>其中，室温下可取$E_\text{SCE}^0 = 0.241 V$。</p>
+<p class="refs">Refs: [1] Han S, Hu X, Wang J, et al. Novel Route to Fe‐Based Cathode as an Efficient Bifunctional Catalysts for Rechargeable Zn–Air Battery[J]. Advanced Energy Materials, 2018, 8(22): 1800955. [2] Son C Y, Kwak I H, Lim Y R, et al. FeP and FeP 2 nanowires for efficient electrocatalytic hydrogen evolution reaction[J]. Chemical Communications, 2016, 52(13): 2819-2822.</p>
 
 <h2 id="Ag-AgCl电极"><a href="#Ag-AgCl电极" class="headerlink" title="Ag/AgCl电极"></a>Ag/AgCl电极</h2><script type="math/tex; mode=display">
-E (vs. \text{RHE}) = E (vs. \text{Ag/AgCl}) + 0.197 + 0.059 \text{pH}</script><p class="refs">Ref: Ferrero G A, Preuss K, Marinovic A, et al. Fe–N-doped carbon capsules with outstanding electrochemical performance and stability for the oxygen reduction reaction in both acid and alkaline conditions[J]. ACS nano, 2016, 10(6): 5922-5932.</p>
+E_\text{RHE} = E_\text{Ag/AgCl} + E_\text{Ag/AgCl}^0 + 0.059 \times \text{pH}</script><p>其中，室温下可取$E_\text{Ag/AgCl}^0 = 0.197 V$。</p>
+<p class="refs">Ref: [1] Ferrero G A, Preuss K, Marinovic A, et al. Fe–N-doped carbon capsules with outstanding electrochemical performance and stability for the oxygen reduction reaction in both acid and alkaline conditions[J]. ACS nano, 2016, 10(6): 5922-5932. [2] Son C Y, Kwak I H, Lim Y R, et al. FeP and FeP 2 nanowires for efficient electrocatalytic hydrogen evolution reaction[J]. Chemical Communications, 2016, 52(13): 2819-2822.</p>
 
 <h1 id="不同氢电极-hydrogen-electrodes"><a href="#不同氢电极-hydrogen-electrodes" class="headerlink" title="不同氢电极 (hydrogen electrodes)"></a>不同氢电极 (hydrogen electrodes)</h1><h2 id="一般氢电极，NHE-Normal-Hydrogen-Electrode"><a href="#一般氢电极，NHE-Normal-Hydrogen-Electrode" class="headerlink" title="一般氢电极，NHE (Normal Hydrogen Electrode)"></a>一般氢电极，NHE (Normal Hydrogen Electrode)</h2><p>一般氢电极的定义为“铂电极浸在浓度为1当量浓度*（Normal Concentration, N）的一元强酸中并放出压力约一个标准大气压的氢气”。因其较标准氢电极易于制备，故为旧时电化学常用标准电极。但由于这样的电极并不严格可逆，故电压并不稳定，现在已经被弃用。</p>
 <p><strong>注：</strong>对于氢离子而言，1当量浓度=1摩尔浓度，即1 N = 1 M</p>
@@ -373,7 +375,7 @@ n_{\text{e}^-}=\frac{4I_D}{I_D+I_R/N}</script><p>其经典的图像如下所示�
 <p><img src="https://www.mozheyang.top/images/Electrocatalysis/RRDE-mes.png" alt="RRED measurement"></p>
 <h1 id="非常规氧还原反应电化学测试"><a href="#非常规氧还原反应电化学测试" class="headerlink" title="非常规氧还原反应电化学测试"></a>非常规氧还原反应电化学测试</h1><hr>
 <h2 id="EIS-Electrochemical-impedance-spectroscopy-电化学阻抗谱"><a href="#EIS-Electrochemical-impedance-spectroscopy-电化学阻抗谱" class="headerlink" title="EIS (Electrochemical impedance spectroscopy) 电化学阻抗谱"></a>EIS (Electrochemical impedance spectroscopy) 电化学阻抗谱</h2><p>该方法的基本思想是将所研究的电化学系统视为一个电气电子学中的<strong>等效电路</strong>，通过对该电路施加一定频率、小振幅的交流信号，观测其输出，便可探知等效电路的具体结构。由于不同的等效电路也可能对交流信号有相同的反馈，所以电化学阻抗谱方法是<strong>不能唯一确定一个等效电路</strong>的。如果电化学阻抗谱能够解释你的实验现象，那好，皆大欢喜；如果不能，兄弟（姐妹），放宽心，大家也都差不多。</p>
-<h3 id="等效电路"><a href="#等效电路" class="headerlink" title="等效电路"></a>等效电路</h3><p>我们讨论一个最简单的等效电路如下图。在本文不做具体推导，博主将在未来更新详细的电化学阻抗谱推导过程。</p>
+<h3 id="等效电路"><a href="#等效电路" class="headerlink" title="等效电路"></a>等效电路</h3><p>我们讨论一个最简单的等效电路如下图。有关等效电路与法拉第效率的详细推导，博主已在博客中更新，感兴趣的同学可以关注：<a href="https://www.mozheyang.top/2020/04/19/EIS/">交流阻抗谱学与能源电化学</a>。</p>
 <p><img src="https://www.mozheyang.top/images/Electrocatalysis/eq-circuit.png" alt="Equivalent circuit"></p>
 <p>以上的电路元件是会在下面的图中展现的。</p>
 <h3 id="Nyquist-plot"><a href="#Nyquist-plot" class="headerlink" title="Nyquist plot"></a>Nyquist plot</h3><p>奈奎斯特图（Nyquist plot）是以阻抗的实部为横轴，虚部的<strong>负数</strong>为纵轴，图中的每个点代表不同的频率，左侧的频率高，称为高频区；右侧的频率低，称为低频区。由于其可以在图中直接读出一些比较关键的物理量（如溶液电阻$R_\Omega$、电子转移阻抗$R_{ct}$），因此在电催化分析中，也主要使用的是该图。</p>
