@@ -22,19 +22,23 @@
     var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Problem 821: Shortest Distance to a CharacterGiven a string S and a character C, return an array of integers representing the shortest distance from the character C in the string. Example 1: 12Input:">
+  <meta name="description" content="之前我们说到，如何将LAMMPS正常运行，并对LAMMPS的in文件和输入文件进行修改调试，查看结果。可以说，基本与科学无关，纯属dirty work。但科学也是在dirty work的基础上架构的。 这一次，我们准备触及分子动力学的中的物理内核。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode | Shortest Distance to a Character (easy level)">
-<meta property="og:url" content="https://www.mozheyang.top/2018/12/02/leetcode821/index.html">
+<meta property="og:title" content="LAMMPS学习札记（三）——分子动力学的基本原理">
+<meta property="og:url" content="https://www.mozheyang.top/2020/04/30/lammps3/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
-<meta property="og:description" content="Problem 821: Shortest Distance to a CharacterGiven a string S and a character C, return an array of integers representing the shortest distance from the character C in the string. Example 1: 12Input:">
-<meta property="article:published_time" content="2018-12-02T08:22:08.000Z">
-<meta property="article:modified_time" content="2020-02-02T08:13:10.000Z">
+<meta property="og:description" content="之前我们说到，如何将LAMMPS正常运行，并对LAMMPS的in文件和输入文件进行修改调试，查看结果。可以说，基本与科学无关，纯属dirty work。但科学也是在dirty work的基础上架构的。 这一次，我们准备触及分子动力学的中的物理内核。">
+<meta property="og:image" content="https://lammps.sandia.gov/movies/logo.gif">
+<meta property="og:image" content="https://www.mozheyang.top/images/LAMMPS/Interatomic-potential.gif">
+<meta property="article:published_time" content="2020-04-30T03:35:06.000Z">
+<meta property="article:modified_time" content="2020-04-30T03:51:14.397Z">
 <meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Material  材料">
 <meta property="article:tag" content="Information Science &amp; Technology  信息科学与技术">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lammps.sandia.gov/movies/logo.gif">
 
-<link rel="canonical" href="https://www.mozheyang.top/2018/12/02/leetcode821/">
+<link rel="canonical" href="https://www.mozheyang.top/2020/04/30/lammps3/">
 
 
 <script id="page-configurations">
@@ -46,7 +50,7 @@
   };
 </script>
 
-  <title>LeetCode | Shortest Distance to a Character (easy level) | Mo's Notebook | 摸着羊的笔记本</title>
+  <title>LAMMPS学习札记（三）——分子动力学的基本原理 | Mo's Notebook | 摸着羊的笔记本</title>
   
 
 
@@ -205,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2018/12/02/leetcode821/">
+    <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2020/04/30/lammps3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -218,7 +222,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          LeetCode | Shortest Distance to a Character (easy level)
+          LAMMPS学习札记（三）——分子动力学的基本原理
         </h1>
 
         <div class="post-meta">
@@ -227,16 +231,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2018-12-02 16:22:08" itemprop="dateCreated datePublished" datetime="2018-12-02T16:22:08+08:00">2018-12-02</time>
+              <time title="创建时间：2020-04-30 11:35:06 / 修改时间：11:51:14" itemprop="dateCreated datePublished" datetime="2020-04-30T11:35:06+08:00">2020-04-30</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-02 16:13:10" itemprop="dateModified" datetime="2020-02-02T16:13:10+08:00">2020-02-02</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -254,8 +252,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/12/02/leetcode821/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/12/02/leetcode821/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/30/lammps3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/30/lammps3/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -270,27 +268,111 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Problem-821-Shortest-Distance-to-a-Character"><a href="#Problem-821-Shortest-Distance-to-a-Character" class="headerlink" title="Problem 821: Shortest Distance to a Character"></a>Problem 821: Shortest Distance to a Character</h1><p>Given a string <code>S</code> and a character <code>C</code>, return an array of integers representing the shortest distance from the character <code>C</code> in the string.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">S</span> <span class="string">=</span> <span class="string">"loveleetcode"</span><span class="string">,</span> <span class="string">C</span> <span class="string">=</span> <span class="string">'e'</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[3,</span> <span class="number">2</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">0</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">0</span><span class="string">,</span> <span class="number">0</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">2</span><span class="string">,</span> <span class="number">2</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">0</span><span class="string">]</span></span><br></pre></td></tr></table></figure>
-<p><strong>Note:</strong></p>
-<ol>
-<li><code>S</code> string length is in <code>[1, 10000].</code></li>
-<li><code>C</code> is a single character, and guaranteed to be in string <code>S</code>.</li>
-<li>All letters in <code>S</code> and <code>C</code> are lowercase.</li>
-</ol>
+        <p><img src="https://lammps.sandia.gov/movies/logo.gif" alt=""></p>
+<p>之前我们说到，如何将LAMMPS正常运行，并对LAMMPS的<code>in</code>文件和输入文件进行修改调试，查看结果。可以说，基本与科学无关，纯属dirty work。但科学也是在dirty work的基础上架构的。</p>
+<p>这一次，我们准备触及分子动力学的中的<strong>物理内核</strong>。</p>
 <a id="more"></a>
-<h1 id="Good-solution-for-simplicity"><a href="#Good-solution-for-simplicity" class="headerlink" title="Good solution for simplicity"></a>Good solution for simplicity</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shortestToChar</span><span class="params">(self, S, C)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        clist=[i <span class="keyword">for</span> i,v <span class="keyword">in</span> enumerate(S) <span class="keyword">if</span> v==C]</span><br><span class="line">        <span class="keyword">return</span> [min(abs(i-x) <span class="keyword">for</span> i <span class="keyword">in</span> clist) <span class="keyword">for</span> x <span class="keyword">in</span> range(len(S))]</span><br></pre></td></tr></table></figure>
-<p>This demo uses a <strong>generator</strong> to generate 2 lists: </p>
-<p>one list (clist) stores position where letter equals to C, the other helps to output the final return list, which calculate <strong>every</strong> distances between letters and clist elements. </p>
-<p>However, most of the distances calculation are not necessary. Thus, this method is simple to write, but not the fatest. </p>
-<h1 id="Good-solution-for-efficiency"><a href="#Good-solution-for-efficiency" class="headerlink" title="Good solution for efficiency"></a>Good solution for efficiency</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shortestToChar</span><span class="params">(self, S, C)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        stack = []</span><br><span class="line">        last_C = <span class="literal">None</span></span><br><span class="line">        output = [<span class="number">0</span>] * len(S)</span><br><span class="line">        <span class="keyword">for</span> idx, ch <span class="keyword">in</span> enumerate(S):</span><br><span class="line">            <span class="keyword">if</span> ch != C:</span><br><span class="line">            	stack.append(idx)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">while</span> stack:</span><br><span class="line">                    last_idx = stack.pop()</span><br><span class="line">                    <span class="keyword">if</span> last_C <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                    	output[last_idx] = idx - last_idx</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                    	output[last_idx] = min(</span><br><span class="line">                            idx - last_idx,</span><br><span class="line">                            last_idx - last_C)</span><br><span class="line">                last_C = idx</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            last_idx = stack.pop()</span><br><span class="line">            output[last_idx] = last_idx - last_C <span class="keyword">if</span> last_idx <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">else</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
-<p>This method uses a <strong>stack</strong> data structure. stack <code>append</code> and stack <code>pop</code>. </p>
-<p>For each screened letter, it compares two distances. </p>
-<h1 id="My-ugly-solution-—-faster-than-71-17"><a href="#My-ugly-solution-—-faster-than-71-17" class="headerlink" title="My ugly solution — faster than 71.17%"></a>My ugly solution — faster than 71.17%</h1><p>My solution avoid most of the meaningless calculation in the most simple one, so it’s a litter bit faster.  </p>
-<p>The main point of my solution is to generate an interval defined by <code>left</code> and <code>right</code>. We have to screen string list used <code>enumerate</code> from left to right. <code>index</code> points to where we are, if we are in the interval, we have to compare distance to <code>left</code> and <code>right</code>; if not, we have to redefined <code>left</code> and <code>right</code>, then compare. </p>
-<p>So for every letter, there are only <strong>two distances</strong> waiting to be calculated and compared.  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shortestToChar</span><span class="params">(self, S, C)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        listEqC = []</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> enumerate(S):</span><br><span class="line">            <span class="keyword">if</span> obj == C:</span><br><span class="line">                listEqC.append(index)</span><br><span class="line">        return_list = []</span><br><span class="line">        pointer = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> listEqC != []:</span><br><span class="line">            left = right = listEqC[pointer]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left = right = float(<span class="string">'inf'</span>)</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> enumerate(S):</span><br><span class="line">            <span class="keyword">if</span> index &gt;= right <span class="keyword">and</span> pointer != len(listEqC)<span class="number">-1</span>:</span><br><span class="line">                pointer += <span class="number">1</span></span><br><span class="line">                left = right</span><br><span class="line">                right = listEqC[pointer]</span><br><span class="line">            left_distance = abs(index-left)</span><br><span class="line">            right_distance = abs(index-right)</span><br><span class="line">            return_list.append(min(left_distance, right_distance))</span><br><span class="line">        <span class="keyword">return</span> return_list</span><br></pre></td></tr></table></figure>
+<h1 id="分子动力学是什么？"><a href="#分子动力学是什么？" class="headerlink" title="分子动力学是什么？"></a>分子动力学是什么？</h1><p>先给出Wikipedia的定义<a href="#参考资料">[1]</a>：</p>
+<blockquote>
+<p><strong>Molecular dynamics (MD)</strong> is a computer simulation method for analyzing the physical movements of atoms and molecules. </p>
+</blockquote>
+<p>博主的理解是，分子动力学（Molecular dynamics）是以一个原子为最小单元，基于经典牛顿力学原理，对整个系统的原子/分子运动状态进行模拟的一套理论。由于整套理论的基础是牛顿力学，所以其<strong>适用范围</strong>也就不言自明了——相对论或者量子理论作用不可忽略的有关性质，利用分子动力学模拟是无法得到合理结论的。幸运的是，分子热运动的速度&lt; 1000 m/s，远小于光速<a href="#参考资料">[2]</a>；部分性质如力学性质中，电子转移对原子/分子的运动影响较小。除了近年来研究较多的电子转移，其实很多传统领域（如材料形变、蛋白质分子折叠等）使用分子动力学都不算超纲。</p>
+<h1 id="如何利用分子动力学？"><a href="#如何利用分子动力学？" class="headerlink" title="如何利用分子动力学？"></a>如何利用分子动力学？</h1><p>每个原子所受作用主要分为化学键作用和非键作用。</p>
+<script type="math/tex; mode=display">
+E_{total} = E_{bond} + E_{nonbond}</script><p>这些作用都利用势函数（能量函数）来进行描述。</p>
+<h2 id="势函数（Potential）"><a href="#势函数（Potential）" class="headerlink" title="势函数（Potential）"></a>势函数（Potential）</h2><p>以下是大学物理中可以见到的原子间作用势的基本形状：</p>
+<p><img src="https://www.mozheyang.top/images/LAMMPS/Interatomic-potential.gif" width="60%"></p>
+<p  class="refs">Ref: https://www.princeton.edu/~maelabs/mae324/glos324/potential.htm</p>
+
+<p>出现这种曲线的原因是</p>
+<script type="math/tex; mode=display">
+原子间作用力(r) = -吸引力(r) + 排斥力(r)</script><blockquote>
+<p>吸引力与排斥力方向相反，符号相反。</p>
+</blockquote>
+<p>无穷远处吸引力与排斥力均趋近于0；随着两原子靠近，原子间的吸引力开始气作用；突破平衡距离$r_0$后，排斥力的作用开始逐渐增大，阻止两原子继续靠近。</p>
+<script type="math/tex; mode=display">
+f(r) = -\frac{\text{d} u(r)}{\text{d} r}</script><p>此即</p>
+<script type="math/tex; mode=display">
+\int f(r) \text{d}r = \int \text{d} u(r) = u(r)</script><p>将原子在无穷远处的系统能量定义为0，系统能量增加全部由做功所提供。将原子距离从无穷远缩短为$r$的这段过程中，原子做功为</p>
+<script type="math/tex; mode=display">
+\Delta W = \int_\infty^r f(r) \text{d} r 
+= u(r) |_r - u(r) |_\infty
+= u(r)</script><p>即等于两原子间内能。将原子间作用力两两加和便可达到由$N$个原子组成系统的内能。当不考虑物体外力场的作用时，由$N$个原子组成系统的总能量也就等于系统内能：</p>
+<script type="math/tex; mode=display">
+E(r) = U(r) = \frac{1}{2} \sum^N_{i=1} \sum^N_{i \neq j} u(r_{ij})</script><p>需要注意的是，为排除重复计算的原子间作用力，需要加上系数$\frac{1}{2}$。以上就是原子间作用力计算系统内能的基本原理。</p>
+<h2 id="化学键作用-E-bond"><a href="#化学键作用-E-bond" class="headerlink" title="化学键作用$E_{bond}$"></a>化学键作用$E_{bond}$</h2><h3 id="谐振子势（Harmonic）"><a href="#谐振子势（Harmonic）" class="headerlink" title="谐振子势（Harmonic）"></a>谐振子势（Harmonic）</h3><center><p class="eqnBlock">
+
+$$
+\begin{split}
+E_{stretch} &= K_{stretch} (r-r_0)^2 \\
+E_{bend} &= K_{bend} (\theta-\theta_0)^2 \\
+\end{split}
+$$
+
+</p></center>
+
+<p>其中$r-r_0$和$\theta-\theta_0$即为分子间伸缩运动和弯剪运动偏离平衡的量，$K_{stretch}$和$K_{bend}$都是常数。“Harmonic”指的应该是“Harmonic oscillator”，以下是Wikipedia的定义<a href="#参考资料">[3]</a>：</p>
+<blockquote>
+<p><strong>谐振子（Harmonic oscillator）</strong></p>
+<p>In classical mechanics, a harmonic oscillator is a system that, when displaced <strong>from its equilibrium position</strong>, experiences a restoring force $\vec{F}$ proportional to the <strong>displacement</strong> $\vec{x}$:</p>
+<script type="math/tex; mode=display">
+\vec{F} = -k \vec{x}</script></blockquote>
+<p>即遵循Hooke定律的系统，可称为谐振子。由力与能量的关系，不难得：</p>
+<script type="math/tex; mode=display">
+E = \frac{1}{2} k x^2</script><p>其中，$k$为弹簧系数，$x$为偏离平衡的位移。这也就是Harmonic势中的公式形式。</p>
+<h2 id="非键作用-E-non-bond"><a href="#非键作用-E-non-bond" class="headerlink" title="非键作用$E_{non-bond}$"></a>非键作用$E_{non-bond}$</h2><p>分子动力学模拟使用力场实现对每个原子所受作用的计算。力场就是通过一定的函数，在所有原子之间，计算两两原子之间的相互作用力。这其中主要包括范德华力（Van der Waals force）、静电作用力（Coulomb force）等。</p>
+<h3 id="静电作用力"><a href="#静电作用力" class="headerlink" title="静电作用力"></a>静电作用力</h3><p>静电作用力与高中课本中描述的没有差异。原子$i$和原子$j$间的静电作用力为</p>
+<script type="math/tex; mode=display">
+E^C_{ij} = \frac{C q_i q_j}{\epsilon r}</script><h3 id="范德华力"><a href="#范德华力" class="headerlink" title="范德华力"></a>范德华力</h3><h4 id="两体势（Pair-potential）"><a href="#两体势（Pair-potential）" class="headerlink" title="两体势（Pair potential）"></a>两体势（Pair potential）</h4><p>广泛应用的两体势是Lennard-Jones（L-J）势，在描述Ar, Kr, CH<sub>4</sub>, O<sub>2</sub>, H<sub>2</sub>, C<sub>2</sub>H<sub>4</sub>等小分子的范德华力方面具有明显优势<a href="#参考资料">[4]</a>。原子$i$和原子$j$间的范德华力为</p>
+<center><p class="eqnBlock">
+
+$$
+E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}
+- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right]
+$$
+
+</p></center>
+
+<p>为了节省计算资源，两体之间的势都有截断能。引入截断能（cut off）$r_C$后，原子$i$和原子$j$间的范德华力为</p>
+<script type="math/tex; mode=display">
+E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}
+- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right] , r<r_C</script><p>使用<code>lj/cut</code>势并设定参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pair_style lj/cut 2.5</span><br><span class="line">pair_coeff 1 1 1 1.1 2.8</span><br></pre></td></tr></table></figure>
+<p>其中<code>2.5</code>为截断能。<code>pair_coeff</code>共有5个参数，前两个参数指定原子类型，后三个参数指定势函数参数。</p>
+<p>若将静电作用力（也考虑截断能）也考虑进来，可选择<code>lj/cut/coul/cut</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pair_style lj/cut/coul/cut 10.0 8.0</span><br><span class="line">pair_coeff 1 1 100.0 3.5 9.0 9.0</span><br></pre></td></tr></table></figure>
+<p>其中<code>10.0</code>为L-J势的截断能，<code>8.0</code>为静电作用力力的截断能。</p>
+<h4 id="多体势"><a href="#多体势" class="headerlink" title="多体势"></a>多体势</h4><p>Baskes和Daw基于密度泛函理论和准原子近似理论，导出了嵌入原子理论（embedded atom method, EAM）模型势<a href="#参考资料">[5]</a>。该势函数是目前描述金属及其合金原子间作用最有效的，几乎<strong>适用于任何金属元素及合金</strong>。唯一的问题是<strong>势函数的参数</strong>需要拟合确定。</p>
+<center><p class="eqnBlock">
+
+$$
+E_{EAM} = \sum_i \left\{ F_i(\rho_i) 
++ \frac{1}{2} \sum_{i \neq j} \phi_{ij} (r_{ij}) \right\}
+$$
+</p></center>
+
+<p>在LAMMPS中，对应EAM势的势函数为<code>eam</code>势：<br>使用<code>eam</code>势：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_style eam</span><br></pre></td></tr></table></figure>
+<p>通过<code>library.meam</code>设置势函数参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_coeff * * cuu3</span><br></pre></td></tr></table></figure>
+<p>在LAMMPS中还有一个常用的多体势。<code>mean</code>势——Modified Embedded-atom Method (MEAM)。“Modified”的部分在于相对EAM，MEAM还加入了键角的作用（angular forces）。据LAMMPS官方文档描述，在2018年12月的版本后，<code>mean</code>势被替换为<code>mean/c</code>。二者基本可以等效，但<code>mean/c</code>要更为高效<a href="#参考资料">[5]</a>。</p>
+<p>使用<code>mean/c</code>势：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_style meam/c</span><br></pre></td></tr></table></figure>
+<p>通过<code>library.meam</code>设置势函数参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_coeff * * ../potentials/library.meam Ni Al NULL Ni Al Ni Ni</span><br></pre></td></tr></table></figure>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>以上博主对LAMMPS的介绍还只是LAMMPS的冰山一角。</p>
+<p>如果恰好引起了你的兴趣，请到LAMMPS官网查看相关文档。</p>
+<p>博主只希望本系列文章能够让更多<strong>自然科学与实验科学</strong>的同学关注对应的<strong>计算与信息</strong>方向。</p>
+<p>三百六十行，行行信息化。</p>
+<p>我相信，利用信息技术可以让传统学科焕发出新的活力，并呈现出无限可能。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] <a href="https://en.wikipedia.org/wiki/Molecular_dynamics" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Molecular_dynamics</a>. </p>
+<p>[2] <a href="https://en.wikipedia.org/wiki/Thermal_velocity" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Thermal_velocity</a>. </p>
+<p>[3] <a href="https://en.wikipedia.org/wiki/Harmonic_oscillator" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Harmonic_oscillator</a>. </p>
+<p>[4] The Journal of Chemical Physics 104:21, 8627-8638.</p>
+<p>[5] Daw, Baskes, Phys Rev Lett, 50, 1285 (1983). Daw, Baskes, Phys Rev B, 29, 6443 (1984).</p>
+<p>[6] <a href="https://lammps.sandia.gov/doc/pair_meamc.html" target="_blank" rel="noopener">https://lammps.sandia.gov/doc/pair_meamc.html</a>. </p>
+<p>[7] <a href="https://lammps.sandia.gov/doc/pairs.html" target="_blank" rel="noopener">https://lammps.sandia.gov/doc/pairs.html</a>. </p>
+
     </div>
 
     
@@ -305,7 +387,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.mozheyang.top/2018/12/02/leetcode821/" title="LeetCode | Shortest Distance to a Character (easy level)">https://www.mozheyang.top/2018/12/02/leetcode821/</a>
+    <a href="https://www.mozheyang.top/2020/04/30/lammps3/" title="LAMMPS学习札记（三）——分子动力学的基本原理">https://www.mozheyang.top/2020/04/30/lammps3/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -321,6 +403,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
+              <a href="/tags/Material-%E6%9D%90%E6%96%99/" rel="tag"><i class="fa fa-tag"></i> Material  材料</a>
               <a href="/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> Information Science & Technology  信息科学与技术</a>
           </div>
 
@@ -330,12 +413,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/10/02/RigidRotation/" rel="prev" title="Physics behind Rotation of Rigid Body">
-      <i class="fa fa-chevron-left"></i> Physics behind Rotation of Rigid Body
+    <a href="/2020/04/19/EIS/" rel="prev" title="交流阻抗谱学与能源电化学">
+      <i class="fa fa-chevron-left"></i> 交流阻抗谱学与能源电化学
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/12/16/complain/" rel="next" title="国内科研环境是否顺应时代？">
-      国内科研环境是否顺应时代？ <i class="fa fa-chevron-right"></i>
+    <a href="/2201/03/14/TOP/" rel="next" title="置顶公告">
+      置顶公告 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -397,7 +480,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-821-Shortest-Distance-to-a-Character"><span class="nav-number">1.</span> <span class="nav-text">Problem 821: Shortest Distance to a Character</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Good-solution-for-simplicity"><span class="nav-number">2.</span> <span class="nav-text">Good solution for simplicity</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Good-solution-for-efficiency"><span class="nav-number">3.</span> <span class="nav-text">Good solution for efficiency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#My-ugly-solution-—-faster-than-71-17"><span class="nav-number">4.</span> <span class="nav-text">My ugly solution — faster than 71.17%</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分子动力学是什么？"><span class="nav-number">1.</span> <span class="nav-text">分子动力学是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何利用分子动力学？"><span class="nav-number">2.</span> <span class="nav-text">如何利用分子动力学？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#势函数（Potential）"><span class="nav-number">2.1.</span> <span class="nav-text">势函数（Potential）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#化学键作用-E-bond"><span class="nav-number">2.2.</span> <span class="nav-text">化学键作用$E_{bond}$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#谐振子势（Harmonic）"><span class="nav-number">2.2.1.</span> <span class="nav-text">谐振子势（Harmonic）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非键作用-E-non-bond"><span class="nav-number">2.3.</span> <span class="nav-text">非键作用$E_{non-bond}$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静电作用力"><span class="nav-number">2.3.1.</span> <span class="nav-text">静电作用力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#范德华力"><span class="nav-number">2.3.2.</span> <span class="nav-text">范德华力</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两体势（Pair-potential）"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">两体势（Pair potential）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多体势"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">多体势</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">3.</span> <span class="nav-text">写在后面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -413,7 +496,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-count">69</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
