@@ -47,22 +47,63 @@
   </entry>
   
   <entry>
+    <title>Kramers–Kronig关系及其与电化学阻抗测试的关系</title>
+    <link href="https://www.mozheyang.top/2021/01/10/KKrelation/"/>
+    <id>https://www.mozheyang.top/2021/01/10/KKrelation/</id>
+    <published>2021-01-10T07:09:13.000Z</published>
+    <updated>2021-01-10T07:29:00.813Z</updated>
+    
+    <content type="html"><![CDATA[<p>在20世纪20年代，Kramers和Kronig发现，一个随频率变化的物理量$Z(\omega)$的实部$Z’(\omega)$和虚部$Z’’(\omega)$间存在一定关系，即Kramers–Kronig关系：</p><script type="math/tex; mode=display">Z(\omega) = Z'(\omega) + iZ''(\omega)</script><center><div class="eqnBlock" id="KKrelation1">$$Z'(\omega) = \frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z''(\omega')}{\omega'-\omega} \text{d}\omega'$$ </div></center><center><div class="eqnBlock" id="KKrelation2">$$Z''(\omega) = -\frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z'(\omega')}{\omega'-\omega} \text{d}\omega'$$ </div></center><p>其中$P$表示柯西主值（Cauchy principle value）。</p><blockquote><p>建议将本文与<a href="https://mozheyang.top/2020/04/19/EIS/" target="_blank" rel="noopener"> 交流阻抗谱学与能源电化学 </a>一文一同食用~</p></blockquote><a id="more"></a><h1 id="Kramers–Kronig关系成立的四个条件"><a href="#Kramers–Kronig关系成立的四个条件" class="headerlink" title="Kramers–Kronig关系成立的四个条件"></a>Kramers–Kronig关系成立的四个条件</h1><p>要得到以上关系，要求该物理系统满足以下四个条件：</p><ul><li><strong>因果性条件</strong>：物理体系只对所施加扰动进行响应。对信噪比有要求。</li><li><strong>线性条件</strong>：物理体系的响应与施加扰动间为线性关系。施加扰动不可过大——在小扰动范围内，电压与电流近乎线性关系。</li><li><strong>稳定性条件</strong>：对体系停止扰动后，体系能回到受扰动前的状态。施加扰动不可过大，从而使体系不转移到另一个状态。</li><li><strong>有限性条件</strong>：随频率变化的物理量（阻抗）在全频率范围内（包括零和无穷大）都是有限值。部分RC电路不满足有限性条件，因此也不存在Kramers–Kronig关系。</li></ul><h1 id="Kramers–Kronig关系的证明"><a href="#Kramers–Kronig关系的证明" class="headerlink" title="Kramers–Kronig关系的证明"></a>Kramers–Kronig关系的证明</h1><p>满足以上四个条件，复数的Kramers–Kronig关系便成为了纯数学问题。观察Kramers–Kronig关系，可以发现我们需要求解复变函数$f(x)$在$(\infty, -\infty)$范围内的积分：</p><script type="math/tex; mode=display">\int^{\infty}_{-\infty} \frac{f(x)}{x-\omega}\text{d}x</script><p>解决该问题的一种相对简单的方式是构造积分域，并利用解析函数$f(x)$的积分与路径无关的特性。构造如下积分域：</p><p><img src="https://www.mozheyang.top/images/KKrelation/integral.png" alt=""></p><p>由Cauchy留数定理可得</p><script type="math/tex; mode=display">\oint \frac{Z(\omega')}{\omega'-\omega}\text{d}\omega'=0</script><p>又由Sokhotski–Plemelj定理可得</p><script type="math/tex; mode=display">\oint \frac{Z(\omega')}{\omega'-\omega}\text{d}\omega'= P \int^{\infty}_{-\infty} \frac{Z(\omega')}{\omega'-\omega} \text{d}\omega'- i \pi Z(\omega) = 0</script><blockquote><p>关注笔者博客的同学可能记得，以上定理的离散函数形式在另一篇博文中也有应用：<a href="https://mozheyang.top/2018/01/15/QMGreenFunction/" target="_blank" rel="noopener">量子物理中的Green函数定义及其应用</a>。</p></blockquote><p>等式后半部分移项整理可得</p><script type="math/tex; mode=display">\begin{split}Z'(\omega) + iZ''(\omega) = Z(\omega) &= \frac{1}{i\pi}\int^{\infty}_{-\infty}\frac{Z(\omega')}{\omega'-\omega} \text{d}\omega' \\&= \frac{1}{i\pi}\int^{\infty}_{-\infty}\frac{Z'(\omega') + iZ''(\omega')}{\omega'-\omega} \text{d}\omega' \\&= \frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z''(\omega')}{\omega'-\omega} \text{d}\omega' -i\frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z'(\omega')}{\omega'-\omega} \text{d}\omega'\end{split}</script><p>综上所述，等式两边复数的实部和虚部相对应便可得到<a href="#KKrelation1">Kramers–Kronig关系</a>。</p><h1 id="与电化学阻抗谱的关系"><a href="#与电化学阻抗谱的关系" class="headerlink" title="与电化学阻抗谱的关系"></a>与电化学阻抗谱的关系</h1><p>对线性电子元件系统来说，测试得到复阻抗的Kramers–Kronig关系一般都是能被满足的；但在电化学电极系统中，Kramers–Kronig关系成立的四个条件并不总是能够满足（<a href="#Kramers–Kronig关系成立的四个条件">如上讨论</a>）。因此，可通过Kramers–Kronig关系来检验所获得电化学阻抗谱的可靠性。基于可靠的电化学阻抗谱数据，我们才能对系统的物理化学特性进行准确分析。</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] 曹楚南. 电化学阻抗谱导论[M]. 科学出版社, 2002.<br>[2] <a href="https://en.wikipedia.org/wiki/Kramers%E2%80%93Kronig_relations" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Kramers–Kronig_relations</a>. </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在20世纪20年代，Kramers和Kronig发现，一个随频率变化的物理量$Z(\omega)$的实部$Z’(\omega)$和虚部$Z’’(\omega)$间存在一定关系，即Kramers–Kronig关系：&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+Z(\omega) = Z&#39;(\omega) + iZ&#39;&#39;(\omega)&lt;/script&gt;&lt;center&gt;&lt;div class=&quot;eqnBlock&quot; id=&quot;KKrelation1&quot;&gt;
+
+
+$$
+Z&#39;(\omega) = \frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z&#39;&#39;(\omega&#39;)}{\omega&#39;-\omega} \text{d}\omega&#39;
+$$
+
+ &lt;/div&gt;&lt;/center&gt;
+
+&lt;center&gt;&lt;div class=&quot;eqnBlock&quot; id=&quot;KKrelation2&quot;&gt;
+
+$$
+Z&#39;&#39;(\omega) = -\frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z&#39;(\omega&#39;)}{\omega&#39;-\omega} \text{d}\omega&#39;
+$$
+
+ &lt;/div&gt;&lt;/center&gt;
+
+&lt;p&gt;其中$P$表示柯西主值（Cauchy principle value）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建议将本文与&lt;a href=&quot;https://mozheyang.top/2020/04/19/EIS/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; 交流阻抗谱学与能源电化学 &lt;/a&gt;一文一同食用~&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
+    
+    
+      <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在WAIC开发者大会蹭吃蹭喝的一天</title>
     <link href="https://www.mozheyang.top/2021/01/09/WAICdeveloper2020/"/>
     <id>https://www.mozheyang.top/2021/01/09/WAICdeveloper2020/</id>
     <published>2021-01-09T09:54:53.000Z</published>
-    <updated>2021-01-09T10:45:40.715Z</updated>
+    <updated>2021-01-10T07:30:38.079Z</updated>
     
-    <content type="html"><![CDATA[<p>入职快六个月了，博客也停更了六、七个月。不是因为没空，主要还是懒惰了。诱惑太多，时间太少。</p><p>好不容易等来个可以白嫖的活动，这周六凑个热闹，let’s go。</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/pathway.png" style="zoom:50%;" /></p><p>地方是真偏，而我住的也偏。周末来回5h+白嫖个会议，也算是真爱了吧。</p><p>但没白来，还有饭吃！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/fengjianfeng.jpg" alt=""></p><p>复旦大学冯建峰教授的演讲挺有启发的，总结下来主要有三个观点：</p><ul><li>人工智能受生物神经科学的启发</li><li>人工智能在自动驾驶（机器视觉）和智慧医疗（心理疾病靶向治疗，如抑郁症）方面大有可为</li><li>类脑计算机有望成为经典计算机和量子计算机外，第三类计算机架构</li></ul><p><img src="https://mozheyang.top/images/WAICdeveloper2020/john2017.jpg" alt=""></p><p>2017年图灵奖获得者John Hennessy“发言”（不好意思，没给您美颜），主要讨论了人工智能发展亟需更大计算量，而目前摩尔定律的消失导致计算量增加遇到瓶颈，如何解决二者矛盾的问题。John提出，将现有CPU架构改变，使其适应于矢量运算，可以减少20+%的寄存器控制计算量，从而将更多算力分配给运算。。。或许这就是Tensor Processing Unit（TPU）或其他人工智能专用芯片的其中一种实现思路？</p><p>遗憾的是，本以为John会亲临现场，看来本会阵仗还不够大。不过转念一想，白嫖的会议，要啥自行车？</p><p>一会儿午饭时间就到了。加油，干饭人！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/lunch.jpg" alt=""></p><p>下午是技术专场。</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto1.jpg" alt=""></p><p>高精度地图与自动驾驶</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto2.jpg" alt=""></p><p>自动驾驶仿真</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto3.jpg" alt=""></p><p>低速自动驾驶的SLAM系统</p><p>都很精彩，收获很多。但是更多是经典方法的应用，很少人工智能的落地（噱头更多）？这可能正是当前人工智能发展的现实。</p>]]></content>
+    <content type="html"><![CDATA[<p>入职快六个月了，博客也停更了七个月。不找借口，不是因为没空，主要还是懒惰了。诱惑太多，时间太少。好不容易等来个可以白嫖的活动，这周六凑个热闹，let’s go！！！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/pathway.png" style="zoom:50%;" /></p><a id="more"></a><p>地方是真偏，而我住的也偏。周末来回5h+白嫖个会议，也算是真爱了吧。</p><p>但没白来，还有饭吃！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/fengjianfeng.jpg" alt=""></p><p>复旦大学冯建峰教授的演讲挺有启发的，总结下来主要有三个观点：</p><ul><li>人工智能受生物神经科学的启发</li><li>人工智能在自动驾驶（机器视觉）和智慧医疗（心理疾病靶向治疗，如抑郁症）方面大有可为</li><li>类脑计算机有望成为经典计算机和量子计算机外，第三类计算机架构</li></ul><p><img src="https://mozheyang.top/images/WAICdeveloper2020/john2017.jpg" alt=""></p><p>2017年图灵奖获得者John Hennessy“发言”（不好意思，没给您美颜），主要讨论了人工智能发展亟需更大计算量，而目前摩尔定律的消失导致计算量增加遇到瓶颈，如何解决二者矛盾的问题。John提出，将现有CPU架构改变，使其适应于矢量运算，可以减少20+%的寄存器控制计算量，从而将更多算力分配给运算。。。或许这就是Tensor Processing Unit（TPU）或其他人工智能专用芯片的其中一种实现思路？</p><p>遗憾的是，本以为John会亲临现场，看来本会阵仗还不够大。不过转念一想，白嫖的会议，要啥自行车？一会儿午饭时间就到了。加油，干饭人！！！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/lunch.jpg" alt=""></p><p>下午是技术专场。</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto1.jpg" alt=""></p><p>高精度地图与自动驾驶</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto2.jpg" alt=""></p><p>自动驾驶仿真</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto3.jpg" alt=""></p><p>低速自动驾驶的SLAM系统</p><p>都很精彩，收获很多。但是更多是经典方法的应用，很少人工智能的落地（噱头更多）？这可能正是当前人工智能发展的现实。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;入职快六个月了，博客也停更了六、七个月。不是因为没空，主要还是懒惰了。诱惑太多，时间太少。&lt;/p&gt;
-&lt;p&gt;好不容易等来个可以白嫖的活动，这周六凑个热闹，let’s go。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://mozheyang.top/images/WAICd
-      
+      &lt;p&gt;入职快六个月了，博客也停更了七个月。不找借口，不是因为没空，主要还是懒惰了。诱惑太多，时间太少。好不容易等来个可以白嫖的活动，这周六凑个热闹，let’s go！！！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mozheyang.top/images/WAICdeveloper2020/pathway.png&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
     
     </summary>
     
@@ -117,9 +158,9 @@
       <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
     
     
-      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    
       <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+    
+      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
   </entry>
   
@@ -421,9 +462,9 @@
     
     
     
-      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    
       <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+    
+      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
       <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
@@ -451,9 +492,9 @@
     
     
     
-      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    
       <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
   </entry>
   
@@ -496,27 +537,6 @@
     
       &lt;p&gt;如今社会纷繁而复杂，各色消息充斥眼球。虽有人向往纸醉金迷，却也有人向往平淡闲适。&lt;/p&gt;
 &lt;p&gt;不知道各位有没有思考过这样一个问题：&lt;strong&gt;我们从哪来？到哪去？这一切的意义到底是什么？&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自然科学视角 | 如何进入一个新的领域（研究入坑指南）</title>
-    <link href="https://www.mozheyang.top/2018/12/16/HowToResearch/"/>
-    <id>https://www.mozheyang.top/2018/12/16/HowToResearch/</id>
-    <published>2018-12-16T11:07:13.000Z</published>
-    <updated>2020-04-19T02:25:26.002Z</updated>
-    
-    <content type="html"><![CDATA[<p>笔者理工科在读研究生，从高中开始嗜读科普读物，开始参加化学竞赛，与自然科学结下不解之缘。本科专业方向金属加工相关，也由于项目原因接触过能源材料相关课题（锂电、电催化），同时多次参加创新创业项目及数学建模竞赛，结识了不少不同专业的同学。因此笔者斗胆认为，相对于同龄人，本人还是具有较强的跨学科意识的，习惯于进入新的（研究）领域。</p><a id="more"></a><p>笔者研究生方向为“电催化”，与本科方向“金属材料加工”大相径庭。那么在笔者这个“具有跨学科意识”的研究生眼中，以怎样一个姿态进入一个新的研究领域最轻松呢？</p><p>在<strong>自然科学领域</strong>，<strong>从一个方向的最基本原理出发</strong>可能是最省力的，而且这种方法给我们提供了广阔的发展空间。这其实与Elon Musk（电动汽车企业Tesla和航天企业Space X创始人）所提出的“第一性原理”不谋而合——用物理学的角度看待世界，一层层拨开事物表象，看到里面的本质，再从本质一层层往上走。</p><p><img src="https://www.mozheyang.top/images/HowToResearch/ElonMusk.jpg" alt=""></p><p>自然科学的基础是<strong>物理</strong>。而物理大厦的基石是<strong>数学</strong>。很遗憾，笔者高中学的最差的也正是这两科，但这却并没有影响笔者对数学和物理思想的欣赏与求索。笔者很庆幸能够在多次数学建模竞赛中磨炼出<strong>快速抽象数学模型</strong>的能力。这让笔者从此擦亮了眼睛一般，分析问题总习惯于较旁人更为深入。</p><p>在介绍了这个最基本原理之后，笔者将把自己从大四开始进行新领域探索的心路历程和具体实践写出来与大家分享。希望能给大家带来一些小小的启发。见笑。</p><h1 id="第一步：形成感性认识"><a href="#第一步：形成感性认识" class="headerlink" title="第一步：形成感性认识"></a>第一步：形成感性认识</h1><p>大四保研的生活是那么悠闲。悠闲到有一些无聊。无聊到让我有时间想想要不要做一些未来研究方向的了解。</p><p>既然我已经对原来方向没了兴趣，那么可以做一些新研究方向的探索吗？比如从现在就看一些催化方向的<strong>最新研究论文</strong>？当时我的研究方向还没有定，只知道应该是催化，至于是传统催化、光催化还是电催化，那就不得而知了。</p><p>大三的我本来准备出国，把<strong>托福和GRE都考了一遍</strong>，但成绩都不很理想。最后放弃了出国的计划，在国内读研。近六个月的高强度英语学习没有浪费，我的单词量、阅读能力和口语能力都在那段时间得到了显著的提高，这也成为我后来阅读英文论文及其它英文资料打好了基础。</p><p>一开始我就是读的<strong>英文论文</strong>，以<strong>综述</strong>类文章为主，研究类文章为辅（没有也不行）。但在在一些基本概念的理解上，需要辅以<strong>中文学术专著</strong>和<strong>中文硕博士论文</strong>。刚开始看论文肯定是要栽的。毕竟真的是在几乎不相干的两个领域（结构材料与功能材料）跨越。论文中频繁出现的专有名词和各类表征手段，让我直接找不着北，甚至让我产生了这辈子都学不会的绝望……但是这种感觉在数学建模初期已经体验得足够多了，所以我也没有害怕，硬着头皮继续读了下去。</p><p>读着读着，大量论文中出现了一些“统计”规律：</p><ul><li>如果所找的文章没有问题，<strong>同属于一个很小的主题</strong>（比如光催化中的二氧化碳还原、电催化中的氧还原等），那么介绍部分（introduction）对方向发展历史沿革的介绍，会十分相似。由此看出，<strong>在方向入门初期，精确检索出一定数量的文献是极其重要的。</strong></li><li>高分（高影响因子）的文章各有各的不同，<strong><del>低分的文章却总是相似的</del>水刊的文章却总是相似的</strong>（水刊并不一定是低分期刊，大部分是发文的“中流砥柱”）。这种相似不仅体现在介绍部分，还主要体现在<strong>研究思路</strong>和<strong>主要研究方法</strong>（如表征手段、测试手段）上。一种研究思路刚开始看没看懂没关系，多看几篇类似的文章就能明白了。从这个角度来说，科研入门初期不宜阅读过多高分文章。可以考虑精读一两篇经典文献，提高自己的科学鉴赏力。而后可以<strong>通过大量阅读同质的<del>低分</del>水刊文章</strong>，形成对这个方向的感性认识。</li></ul><p>通过之前的几步操作，我已经对一个方向的最基本原理、研究思路和研究方法有了一定感性认识。这一阶段不必要从专业书啃起。我之前就走了不少弯路，不少时间浪费在了不能理解的，而且也不太重要的学术专著上。研究生的学习不比本科学习——研究生阶段是先有了需求再去学习，有别于本科阶段无差别地进行系统学习。</p><p>我后来的方向在研一上半学期进行一半之后被确认为“电催化”，我把以上的那一套学习方法又复制了一遍，也不是很费劲。同时对光催化的了解也对我理解电催化有一定帮助。当然这是后话了。</p><blockquote><p>总结一下，形成研究方向的感性认识可以直接从<strong>最新研究论文</strong>着手，对热门领域更是如此（论文数量庞大）。首要推荐的论文资料是<strong>最新英文综述（reviews）</strong>，同时可以辅以中文专著和硕博士论文，少量研究论文（research articles）。阅读论文有两点需要注意：</p><ul><li>精确检索同一主题论文（可以向老师和师兄师姐寻求帮助，也可以自己锻炼）</li><li>关注同质化的<del>低分</del>水刊文章，了解主流的研究思想和研究方法</li></ul></blockquote><h1 id="第二阶段：上升理性认识"><a href="#第二阶段：上升理性认识" class="headerlink" title="第二阶段：上升理性认识"></a>第二阶段：上升理性认识</h1><p>研一的我，开始了系统的课程学习。这一阶段为我后来的文献阅读产生了极大的帮助。</p><p>我们不能总停留于对论文结论的粗浅认识，终究需要明白论文背后的科学意义——即论文内容到底解决了一个什么<strong>科学问题</strong>。什么是“科学问题”？对这个概念，没有一个类似数学定义中那样精确的定义。我的理解是，<strong>一个科学问题，至少应该在方向发展历程主线/支线上的一个抽象的、没有被解决过的问题</strong>。一个没有被解决过的问题是不会存在于现有结论中的，但是可能可以通过对现有结论进行演绎而得到，或者可以通过对大量现有结论/实验事实进行归纳得到。但那些工作都是极为复杂的工作，可以被称之为有意义的科学工作。这样的工作是值得被发表的。</p><p><img src="https://www.mozheyang.top/images/HowToResearch/SciTree.png" alt=""></p><p>要明白论文背后的科学意义，而不是浮于表面只知道它所采用的具体方法，这是我们将所需研究领域上升理性认识所需要走的第一步。因为只有上升到理性认识，我们才能<strong>站在更高的维度去审视一个问题</strong>，避免“只见树木不见森林”。在这一阶段，我主要通过硬啃<strong>研究生课程</strong>和<strong>对应学科基础专著</strong>来实现。显然，这是十分耗时耗力的。大多数不需要做研究的同学，如果只是要了解一个新的领域，没有必要使用这样的方法。而且即使是做研究，也可以不求甚解。毕竟即使同是科学研究，也有“阳春白雪”和“下里巴人”的嘛。</p><blockquote><p>为了站在更高维度去审视问题，我们需要：</p><ul><li>研究生课程学习（或者相应网络课程的系统学习）</li><li>对应学科基础专著（略高于本科水平的研究生课程专著）</li></ul></blockquote><h1 id="第三阶段：欲知此事必躬行"><a href="#第三阶段：欲知此事必躬行" class="headerlink" title="第三阶段：欲知此事必躬行"></a>第三阶段：欲知此事必躬行</h1><p>研一下学期，下了实验室，我才发现并不是所有的结论都被写在了纸上。一方面，论文作者会出于不愿意让竞争者快速重复出来实验的原因，往往都会在论文中对实验细节有所隐瞒；另一方面，部分实验细节（如离心速度、工作电极的具体处理方法等）本身是需要依赖经验和直觉的，不一定具有普适性，那么这就不是“科学”，因此没有资格出现在科学论文中。</p><p>这样的情况就对科研新手不是很友好了。科研新手（比如我），常常会迷失于可以使用的各种实验参数中，对什么是关键的，什么不是关键的控制因素没有清晰的认识。这就会导致科研新手的实验往往难以重现。<strong>一个科学现象如果不能被重现，那我们就不能算是真正“发现”了它。</strong></p><p>为了能够真正在现实中观察到科学现象，我们必须要试错。试错的过程是极为痛苦的，至少对我来说是如此。从仪器的使用到实验参数的控制，到最后的结果分析，我都走了很多很多弯路。当然，我们可以安慰自己，在科研过程中，<strong>该走的弯路一点都不会少</strong>。现在少走的弯路，还会在前面等着我们。我们把面前的路走直了，那曙光也就在眼前了。</p><blockquote><p>纸上得来终觉浅，绝知此事要躬行。</p><p>亲自实践是必不可少的。该走的弯路一点都不会少走。</p></blockquote><h1 id="第四阶段：质疑、猜想与验证"><a href="#第四阶段：质疑、猜想与验证" class="headerlink" title="第四阶段：质疑、猜想与验证"></a>第四阶段：质疑、猜想与验证</h1><p>要解决新的科学问题，就要在已解决的问题中发现问题。鉴于大多数论文都会对论文结果的缺点避而不谈的原因，作为一个领域的研究者，我们必须要<strong>以辩证的思维，甚至是批判的思维去看待现有结论</strong>——这也就是对现有结论的质疑。</p><p>质疑是最简单的步骤。不相信一个结论很简单，自己不相信就好了；但是要让别人相信我们的结论，那就很费事了。因此，质疑的下一步是要<strong>提出我们自己的结论</strong>——也即提出假设或者提出猜想。</p><p>猜想是存在于脑海中的论点，它是虚无缥缈的。要解决一个问题，必须<strong>提出一个有充分论据佐证的论点</strong>。我们在设计验证过程时，一定要<strong>结合现实实际来进行设计</strong>——我们有什么条件，有可能做出来什么样的论据。这是极其trick（需要经验技巧）的一件事。</p><blockquote><p>创新，就是要发现新的问题，并且用自己可以实现的合理方法去解决该问题：</p><ul><li>质疑——以辩证思维审视现有结论</li><li>猜想——提出自己的论点</li><li>验证——设计并拿到论据支持论点</li></ul></blockquote><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>笔者自己也还是个科研新手。以一个科研新手的角度来思考这些问题，难免有失偏颇。所以如果有任何意见或建议，笔者都非常欢迎！Email: mozheyang@outlook.com. </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;笔者理工科在读研究生，从高中开始嗜读科普读物，开始参加化学竞赛，与自然科学结下不解之缘。本科专业方向金属加工相关，也由于项目原因接触过能源材料相关课题（锂电、电催化），同时多次参加创新创业项目及数学建模竞赛，结识了不少不同专业的同学。因此笔者斗胆认为，相对于同龄人，本人还是具有较强的跨学科意识的，习惯于进入新的（研究）领域。&lt;/p&gt;
     
     </summary>
     
