@@ -22,25 +22,25 @@
     var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^-  \rightleftharpoons 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^-  \rightlef">
+  <meta name="description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论">
 <meta property="og:url" content="https://www.mozheyang.top/2019/03/31/LSV-KLeq/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
-<meta property="og:description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^-  \rightleftharpoons 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^-  \rightlef">
-<meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
-<meta property="og:image" content="https://www.mozheyang.top/images/LSV_KLeq/RDEcoordinate.png">
-<meta property="og:image" content="https://www.mozheyang.top/images/LSV_KLeq/GammaFunc.png">
-<meta property="og:image" content="https://www.mozheyang.top/images/Electrocatalysis/KLplot.png">
+<meta property="og:description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2">
+<meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
+<meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/RDEcoordinate.png">
+<meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/GammaFunc.png">
+<meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/KLplot.png">
 <meta property="article:published_time" content="2019-03-31T02:10:32.000Z">
-<meta property="article:modified_time" content="2020-04-19T05:29:05.442Z">
+<meta property="article:modified_time" content="2020-03-19T12:40:59.000Z">
 <meta property="article:author" content="Geon Mo">
 <meta property="article:tag" content="Chemistry  化学">
 <meta property="article:tag" content="Material  材料">
 <meta property="article:tag" content="Catalysis  催化">
 <meta property="article:tag" content="Model  模型">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
+<meta name="twitter:image" content="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
 
 <link rel="canonical" href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">
 
@@ -243,7 +243,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-19 13:29:05" itemprop="dateModified" datetime="2020-04-19T13:29:05+08:00">2020-04-19</time>
+                <time title="修改时间：2020-03-19 20:40:59" itemprop="dateModified" datetime="2020-03-19T20:40:59+08:00">2020-03-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -289,18 +289,16 @@
       
         <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：</p>
 <script type="math/tex; mode=display">
-\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- 
-\rightleftharpoons 4\text{OH}^-</script><p>一种是二电子过程：</p>
+\text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- = 4\text{OH}^-</script><p>一种是二电子过程：</p>
 <script type="math/tex; mode=display">
-\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- 
-\rightleftharpoons 2\text{H}_2 \text{O}_2</script><a id="more"></a>
+\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2</script><a id="more"></a>
 <p><strong>四电子过程</strong>可以保证在更短的时间内提供更大的电流，即四电子过程可以保证更大的电池（fuel cell/metal-air batteries）功率。氧还原反应的电化学性能测试常使用基于K-L方程的旋转圆盘电极（RDE）方法对反应转移电子数进行测算。</p>
-<p><img src="https://www.mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p>
+<p><img src="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p>
 <p class="refs">Ref: 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p>
 
 <p>K-L方程实际上建立了极限扩散电流$i_l$与旋转圆盘转速等物理因素之间的关系。通过不同转速下测试极限扩散电流，便可以拟合出关键的反应动力学参数——转移电子数。那么极限扩散电流到底是不是材料的本征性质呢？这个问题没有想象的那么简单，笔者首先介绍了K-L理论后我们再作判断不迟。</p>
 <h1 id="RDE下液流层的流体力学描述"><a href="#RDE下液流层的流体力学描述" class="headerlink" title="RDE下液流层的流体力学描述"></a>RDE下液流层的流体力学描述</h1><p>如下图，建立RDE的柱坐标系。z = 0处为圆盘电极表面。</p>
-<p><img src="https://www.mozheyang.top/images/LSV_KLeq/RDEcoordinate.png" alt=""></p>
+<p><img src="http://mozheyang.top/images/LSV_KLeq/RDEcoordinate.png" alt=""></p>
 <p class="refs">Ref: Bard et al., Electrochemical Methods: Fundamentals and Applications; wiley New York, 1980; Vol. 2.</p>
 
 <p>定义液流速度</p>
@@ -404,7 +402,7 @@ $$
 \exp(a z^3) dz = (-a)^{1/3} \Gamma(\frac{4}{3}) = 0.8934(-a)^{1/3}</script><p>其中$\Gamma$函数为</p>
 <script type="math/tex; mode=display">
 \Gamma(x) = \int_0^\infty t^{x-1} e^{-t} dt</script><p>其在[0,3]区间的函数图像如下</p>
-<p><img src="https://www.mozheyang.top/images/LSV_KLeq/GammaFunc.png" alt=""></p>
+<p><img src="http://mozheyang.top/images/LSV_KLeq/GammaFunc.png" alt=""></p>
 <p>故</p>
 <script type="math/tex; mode=display">
 C_o^* = (\frac{\partial C_o}{\partial z})_{z=0} 0.8934(3B)^{1/3}
@@ -443,9 +441,9 @@ $$
 
 
 <p>从上式我们可以看出，Levich方程所描述的极限电流情形是Koutecky-Levich方程中$i_k \rightarrow \infty$时的情形。K-L方程的物理意义是：<u><strong>在无表面修饰的电极上，总电流主要由反应动力学导致的电流$i_k$和传质所导致的电流$i_l$构成。</strong></u></p>
-<p><img src="https://www.mozheyang.top/images/Electrocatalysis/KLplot.png" alt="K-L plot"></p>
+<p><img src="http://mozheyang.top/images/Electrocatalysis/KLplot.png" alt="K-L plot"></p>
 <p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L拟合直线的<strong>斜率</strong>上。当然，这个变化也会反映在拟合直线的<strong>截距</strong>$\frac{1}{i_k}$上，但其中含有$k_f(E)$这一不易确定的反应动力学参数，所以其不容易被定量分析。</p>
-<p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="https://www.mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
+<p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="http://mozheyang.top/2018/02/15/ORRbasic/" target="_blank" rel="noopener">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
 <h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>总结本文得到的结论：</p>
 <ul>
 <li>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</li>
@@ -589,7 +587,7 @@ $$
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -602,7 +600,7 @@ $$
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

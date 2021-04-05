@@ -28,19 +28,19 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/05/11/MathModellingGA/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="关键词：摄像头、组合优化、遗传算法">
-<meta property="og:image" content="https://www.mozheyang.top/images/MathModellingGA/CircleSector.png">
-<meta property="og:image" content="https://www.mozheyang.top/images/MathModellingGA/CameraCover.gif">
-<meta property="og:image" content="https://www.mozheyang.top/images/MathModellingGA/MAIGallery.png">
-<meta property="og:image" content="https://www.mozheyang.top/images/MathModellingGA/SG&amp;NG.png">
-<meta property="og:image" content="https://www.mozheyang.top/images/MathModellingGA/PEA.png">
-<meta property="og:image" content="https://www.mozheyang.top/images/MathModellingGA/Optimum.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/CircleSector.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/CameraCover.gif">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/MAIGallery.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/SG&amp;NG.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/PEA.png">
+<meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/Optimum.png">
 <meta property="article:published_time" content="2017-05-11T07:51:49.000Z">
-<meta property="article:modified_time" content="2020-04-19T02:25:26.043Z">
+<meta property="article:modified_time" content="2020-02-02T08:15:45.000Z">
 <meta property="article:author" content="Geon Mo">
 <meta property="article:tag" content="Model  模型">
 <meta property="article:tag" content="MATLAB">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.mozheyang.top/images/MathModellingGA/CircleSector.png">
+<meta name="twitter:image" content="http://mozheyang.top/images/MathModellingGA/CircleSector.png">
 
 <link rel="canonical" href="https://www.mozheyang.top/2017/05/11/MathModellingGA/">
 
@@ -243,7 +243,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-19 10:25:26" itemprop="dateModified" datetime="2020-04-19T10:25:26+08:00">2020-04-19</time>
+                <time title="修改时间：2020-02-02 16:15:45" itemprop="dateModified" datetime="2020-02-02T16:15:45+08:00">2020-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -319,26 +319,26 @@
 <p>在最后，题目还要求我们做出“安全性评价”。由于这个“安全性”这个名词没有任何严格定义，实际上我们能够选择任何我们喜欢的指标进行评价，例如监视覆盖面积（很明显）、地面覆盖面积、单位时间覆盖面积等等。</p>
 <p>题目分析基本完成以后，就可以开始以下的解题过程了。</p>
 <h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1><h2 id="摄像头模型分析"><a href="#摄像头模型分析" class="headerlink" title="摄像头模型分析"></a>摄像头模型分析</h2><p>题中给出摄像头的两种安装方式：固定式安装和旋转式安装，其中固定式安装清晰分辨的距离为7.5米，旋转式安装清晰分辨的距离为2.5米，两种方式摄像头视角大约为50°。由题意得固定式摄像头的监控为一个顶角为50°，母线长为7.5m的圆锥和半径为7.5m的球壳围成的区域，旋转式摄像头的监控范围为一个半径为2.5m的半球壳被一个同旋转中心的顶角为50°，母线长2.5m的圆锥截剩下区域。假设监控设备水平安装，在距固定式摄像头垂直距离不超过5.74m，距旋转式摄像头垂直距离不超过1.92m的一水平高度上两者监视范围分别为监视区域的一个水平截面。<br>由于摄像头尽量安装在角落处，固定式摄像头有效监视区与墙壁及临近摄像头有效监视区可将监视盲区包围，旋转式摄像头自身监视盲区被有效监视区包围，参观者无法避过监视区域到达监视盲区，可将该盲区视为安全范围，因此可将两者的三维监视区域二维化，简化为其监视区域在水平面上的投影，即一个顶角为50°，半径为7.5m的扇形和一个半径为2.5m的圆。如下图所示：</p>
-<p><img src="https://www.mozheyang.top/images/MathModellingGA/CircleSector.png" alt=""> </p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/CircleSector.png" alt=""> </p>
 <div  align="center">
 摄像头监视范围示意图
 </div>
 
 <h2 id="摄像头安装策略"><a href="#摄像头安装策略" class="headerlink" title="摄像头安装策略"></a>摄像头安装策略</h2><h3 id="样本制作（从0到1）"><a href="#样本制作（从0到1）" class="headerlink" title="样本制作（从0到1）"></a>样本制作（从0到1）</h3><p>为了将<strong>“所有摄像头安装策略量化”</strong>，我们想到的方案是，人工筛选摄像头安装方案的<strong>样本</strong>。这样做不仅使得安装策略变成了简单的<strong>安装方案的简单叠加</strong>，还使得安装策略个数限制在了<strong>有限个数</strong>内，效果如下图所示：</p>
-<p><img src="https://www.mozheyang.top/images/MathModellingGA/CameraCover.gif" alt=""> </p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/CameraCover.gif" alt=""> </p>
 <p>整个制作过程主要依赖Photoshop 2014cc版本进行完成，这其中，当然不可避免的会掺杂主观因素——至少基本的摄像头安装方案样本是我们主观选取的。可以想象，选取的基本样本不同，对最后的安装方案也会有一定影响。但是，这些问题在数学建模这个大背景下显得不是那么重要，我们需要做的就是大胆想象，并客观地分析模型利弊。</p>
 <p>具体地，三个展厅分别的基础样本展示如下：</p>
-<p><img src="https://www.mozheyang.top/images/MathModellingGA/MAIGallery.png" alt=""> </p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/MAIGallery.png" alt=""> </p>
 <div  align="center">
 Challenge of Modern Art Interactive Gallery摄像头安装方案样本
 </div>
 
-<p><img src="https://www.mozheyang.top/images/MathModellingGA/SG&amp;NG.png" alt=""> </p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/SG&amp;NG.png" alt=""> </p>
 <div  align="center">
 South Gallery & North Gallery摄像头安装方案样本
 </div>
 
-<p><img src="https://www.mozheyang.top/images/MathModellingGA/PEA.png" alt=""> </p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/PEA.png" alt=""> </p>
 <div  align="center">
 Permanent Exhibition Area摄像头安装方案样本
 </div>
@@ -360,7 +360,7 @@ Permanent Exhibition Area摄像头安装方案样本
 <p>在下面，由于空间所限，笔者暂时只讲核心算法——遗传算法代码（使用MATLAB编写）列于下方。需要声明的是，本段代码设计参考并修改自网络上的开源代码，如有侵权，请联系本人删除。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 二进制编码遗传算法求解</span></span><br><span class="line">clc;</span><br><span class="line">clear all;</span><br><span class="line">close all;</span><br><span class="line"><span class="comment">% 主程序中声明global，子程序可调用</span></span><br><span class="line"><span class="keyword">global</span> BitLength</span><br><span class="line"><span class="keyword">global</span> boundsbegin</span><br><span class="line"><span class="keyword">global</span> boundsend</span><br><span class="line"><span class="comment">%% 算法初始状态设置</span></span><br><span class="line">bounds=[<span class="number">0</span> <span class="number">1</span>];<span class="comment">%一维自变量的取值范围</span></span><br><span class="line">precision=<span class="number">1e-4</span>; <span class="comment">%运算精度</span></span><br><span class="line">boundsbegin=bounds(:,<span class="number">1</span>);</span><br><span class="line">boundsend=bounds(:,<span class="number">2</span>);</span><br><span class="line">BitLength=<span class="number">27</span>;</span><br><span class="line">popsize=<span class="number">50</span>; <span class="comment">%初始种群大小</span></span><br><span class="line">Generationnmax=<span class="number">20</span>;  <span class="comment">%最大代数</span></span><br><span class="line">pcrossover=<span class="number">0.60</span>; <span class="comment">%交配概率</span></span><br><span class="line">pmutation=<span class="number">0.02</span>; <span class="comment">%变异概率</span></span><br><span class="line"><span class="comment">%% 主程序</span></span><br><span class="line"><span class="comment">%产生初始种群，摄像头个数在9个以上</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    population=<span class="built_in">round</span>(<span class="built_in">rand</span>(popsize,BitLength));</span><br><span class="line">    <span class="keyword">if</span> sum(population)&gt;<span class="number">9</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%计算适应度,返回适应度Fitvalue和累积概率cumsump</span></span><br><span class="line">[Fitvalue,cumsump]=fitnessval(population);  </span><br><span class="line">Generation=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 循环终止条件为达到最大代数，在机时较充裕时可设置达到误差精度后终止</span></span><br><span class="line"><span class="keyword">while</span> Generation&lt;Generationnmax+<span class="number">1</span></span><br><span class="line">    str=strcat(<span class="string">'目前是第'</span>,Generation,<span class="string">'代！'</span>);</span><br><span class="line">    <span class="built_in">disp</span>(str)</span><br><span class="line">   <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:<span class="number">2</span>:popsize </span><br><span class="line">      <span class="comment">%选择操作</span></span><br><span class="line">      seln=selection(population,cumsump);</span><br><span class="line">      <span class="comment">%交叉操作</span></span><br><span class="line">      scro=crossover(population,seln,pcrossover);</span><br><span class="line">      scnew(<span class="built_in">j</span>,:)=scro(<span class="number">1</span>,:);</span><br><span class="line">      scnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=scro(<span class="number">2</span>,:);</span><br><span class="line">      <span class="comment">%变异操作</span></span><br><span class="line">      smnew(<span class="built_in">j</span>,:)=mutation(scnew(<span class="built_in">j</span>,:),pmutation);</span><br><span class="line">      smnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=mutation(scnew(<span class="built_in">j</span>+<span class="number">1</span>,:),pmutation);</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line">   population=smnew;  <span class="comment">%产生了新的种群</span></span><br><span class="line">   <span class="comment">%计算新种群的适应度   </span></span><br><span class="line">   [Fitvalue,cumsump]=fitnessval(population);</span><br><span class="line">   <span class="comment">%记录当前代最好的适应度和平均适应度</span></span><br><span class="line">   [fmax,nmax]=<span class="built_in">max</span>(Fitvalue);</span><br><span class="line">   fmean=<span class="built_in">mean</span>(Fitvalue);</span><br><span class="line">   ymax(Generation)=fmax;</span><br><span class="line">   ymean(Generation)=fmean;</span><br><span class="line">   <span class="comment">%记录当前代的最佳染色体个体</span></span><br><span class="line">   xmax(Generation)=Room1Search(population(nmax,:));</span><br><span class="line">   Bestpopulation=population(nmax,:);</span><br><span class="line">   Generation=Generation+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%% 结果显示</span></span><br><span class="line">Generation=Generation<span class="number">-1</span></span><br><span class="line">Besttargetfunvalue=Room1Search(Bestpopulation)</span><br><span class="line">Bestpopulation</span><br><span class="line">hand=<span class="built_in">plot</span>(<span class="number">1</span>:Generation,ymean);</span><br><span class="line">set(hand,<span class="string">'color'</span>,<span class="string">'r'</span>,<span class="string">'linestyle'</span>,<span class="string">'-'</span>,<span class="string">'linewidth'</span>,<span class="number">1.8</span>,<span class="string">'marker'</span>,<span class="string">'h'</span>,<span class="string">'markersize'</span>,<span class="number">6</span>)</span><br><span class="line">xlabel(<span class="string">'进化代数'</span>);ylabel(<span class="string">'最大/平均适应度'</span>);xlim([<span class="number">1</span> Generationnmax]);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'最大适应度'</span>,<span class="string">'平均适应度'</span>);</span><br><span class="line">box off;<span class="built_in">hold</span> off;</span><br></pre></td></tr></table></figure>
 <h3 id="求解结果"><a href="#求解结果" class="headerlink" title="求解结果"></a>求解结果</h3><p>最后最优方案的覆盖示意图：</p>
-<p><img src="https://www.mozheyang.top/images/MathModellingGA/Optimum.png" alt=""> </p>
+<p><img src="http://mozheyang.top/images/MathModellingGA/Optimum.png" alt=""> </p>
 <div  align="center">
 三个展馆最优方案的MATLAB二值化覆盖示意图
 (a) Permanent Exhibition Area
@@ -493,7 +493,7 @@ Permanent Exhibition Area摄像头安装方案样本
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -506,7 +506,7 @@ Permanent Exhibition Area摄像头安装方案样本
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
