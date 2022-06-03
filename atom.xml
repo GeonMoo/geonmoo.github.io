@@ -46,6 +46,29 @@
   </entry>
   
   <entry>
+    <title>好久不见了，大家还好吗</title>
+    <link href="https://www.mozheyang.top/2022/06/03/latest202206/"/>
+    <id>https://www.mozheyang.top/2022/06/03/latest202206/</id>
+    <published>2022-06-03T13:23:29.000Z</published>
+    <updated>2022-06-03T13:27:43.940Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="好久不见啊"><a href="#好久不见啊" class="headerlink" title="好久不见啊"></a>好久不见啊</h1><p>很久没发干货了呀。</p><p><strong>客观原因</strong>是已经不在材料方向继续研究了，而新的领域又需要时间沉淀，以保证所发布的内容至少让我自己认为是合格的。<strong>主观原因</strong>是……国内上班真挺卷的，不再像求学时期那样有充足时间构思写作了；而且上班的话，知识产权是公司的，也不敢乱说话。于是……</p><p>不过我还是那个我。今年打算挖下另一个坑了。有关新能源和大数据的交叉方向，请感兴趣的同学拭目以待吧。</p><a id="more"></a><h1 id="“不在线”的日子"><a href="#“不在线”的日子" class="headerlink" title="“不在线”的日子"></a>“不在线”的日子</h1><p>近两个月，Hexo Next主题的cdn网站被DNS污染了，导致本网站访问异常。</p><blockquote><p>Thank you all for your tests, feedback and support. I am personally sorry for the issues we had today.</p><p>We can consider the issue as resolved, now its a question of DNS propagation getting to everyone.</p><p>Our official announcement regarding the problems today:</p><p>Unfortunately today jsDelivr unexpectedly lost its ICP license in China. As effect the regional CDN disabled our account.</p><p>This resulted in the extended outage we had in mainland China and Taiwan.</p><p>Other regions were unaffected.</p><p>We understand how difficult it was for our users to experience this unique situation.</p><p>From now on all Chinese traffic will be served by “near China” locations provided by global CDN providers.</p><p>This will have the additional benefit of better failover logic in the future.</p><p>——jimaek on 20 Dec 2021</p><p><a href="https://github.com/jsdelivr/jsdelivr/issues/18348#issuecomment-997777996" target="_blank" rel="noopener">https://github.com/jsdelivr/jsdelivr/issues/18348#issuecomment-997777996</a></p></blockquote><p>前段时间有同学提醒我才发现的，直到今天才彻底修复。非常感谢你们的帮助和陪伴，让我重新找回继续写作的动力；也让我还能想起，对我来说，生命的一大重要意义在于留下更多有价值的见解，而不“只是”追名逐利（现实点XD，还是需要的……）。</p><p>希望能持续听到你们的声音。谢谢！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;好久不见啊&quot;&gt;&lt;a href=&quot;#好久不见啊&quot; class=&quot;headerlink&quot; title=&quot;好久不见啊&quot;&gt;&lt;/a&gt;好久不见啊&lt;/h1&gt;&lt;p&gt;很久没发干货了呀。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;客观原因&lt;/strong&gt;是已经不在材料方向继续研究了，而新的领域又需要时间沉淀，以保证所发布的内容至少让我自己认为是合格的。&lt;strong&gt;主观原因&lt;/strong&gt;是……国内上班真挺卷的，不再像求学时期那样有充足时间构思写作了；而且上班的话，知识产权是公司的，也不敢乱说话。于是……&lt;/p&gt;
+&lt;p&gt;不过我还是那个我。今年打算挖下另一个坑了。有关新能源和大数据的交叉方向，请感兴趣的同学拭目以待吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>上海，加油</title>
     <link href="https://www.mozheyang.top/2022/04/05/qingming2022/"/>
     <id>https://www.mozheyang.top/2022/04/05/qingming2022/</id>
@@ -510,34 +533,6 @@ $$
       <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
       <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二零一捌，人生没有那么容易，也没有那么艰难</title>
-    <link href="https://www.mozheyang.top/2019/02/13/2018thought/"/>
-    <id>https://www.mozheyang.top/2019/02/13/2018thought/</id>
-    <published>2019-02-13T03:11:36.000Z</published>
-    <updated>2020-02-02T07:51:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="变化中的不变"><a href="#变化中的不变" class="headerlink" title="变化中的不变"></a>变化中的不变</h1><blockquote><p>The secret to that is to focus on the things that don’t change in your buisiness.<br>——Jeff Bezos</p></blockquote><p class="refs">来源：https://medium.com/</p><p>亚马逊CEO贝佐斯有句话说，<br>别人都在思考未来什么会变，<br>他思考什么不会变。</p><a id="more"></a><p>从这个角度出发，<br>你喜欢什么，<br>如何将喜好价值最大化，<br>并予人以满足，<br>那么你就填补了这个市场。</p><p>历史有其进程，<br>各人也有个人的发展，<br>最重要的能力应该是：思通、思辨、思退。</p><p>追浪逐潮，<br>总有潮退的那一天，<br>不如思考商业的本质，<br>并从自己的爱好出发，<br>挖掘自己以及所从事工作的潜力与价值。</p><h1 id="思想同质化"><a href="#思想同质化" class="headerlink" title="思想同质化"></a>思想同质化</h1><p>互联网和全球交通的发展，<br>增强了主流（掌握主动）一方的控制力。<br>在不损失既得利益的情况下，<br>进一步巩固了其地位。</p><p>以至于最高阶级以下思想趋于同质，<br>而两极（阶级经济实力）分化持续加剧。</p><p>保持<strong>多样性</strong>的存在是维持人类可持续发展的前提，<br>而思想同质化是扼杀多样性。<br>如果没有相应对抗平衡机制的话，<br>那么人类就在给自己的未来设置倒计时。</p><h1 id="政策学习"><a href="#政策学习" class="headerlink" title="政策学习"></a>政策学习</h1><p>学习另一个学科领域很有可能并不是要掌握其如何被使用，<br>也有可能是为了了解这个领域的人们如何思考问题。</p><p>世界发展潮流之上可能有更上层的结构，<br>那就是<strong>国与国之间的博弈</strong>。<br>这些博弈主要体现在各国的政策制定方面。<br><strong>公共政策学</strong>和<strong>政治经济学</strong>是值得了解的领域。</p><h1 id="尝试理解科研实质"><a href="#尝试理解科研实质" class="headerlink" title="尝试理解科研实质"></a>尝试理解科研实质</h1><p>科学研究无非是是<strong>找积木</strong>与<strong>搭积木</strong>两个过程：</p><p>在搭积木的过程中，<br>我们能直观体会到“积木”选择技巧的精巧，<br>这是一个从1到n的过程；</p><p>深入到找出新的积木，<br>我们才能真正创造全新的知识，<br>这是一个从0到1的过程。</p><h1 id="科研与探案"><a href="#科研与探案" class="headerlink" title="科研与探案"></a>科研与探案</h1><p>探案是在时间维度尝试对事物关系进行解释（其它维度的关系已经较为清楚）。<br>科研是从不同角度尝试解释事物关系，<br>或许不止空间和时间维度，<br>其维数可能远大于探案。</p><p>但探案的难度还可能存在于其可能是一个犯罪人与探案者之间的博弈过程，<br>而大自然永远不改变规则。</p><h1 id="什么是民科"><a href="#什么是民科" class="headerlink" title="什么是民科"></a>什么是民科</h1><p>民科是<strong>未曾仔细思考过已有理论</strong>，<br>而进行凭空臆测的伪科学。</p><p>这也侧面说明了，<br>为什么科研资料越多，<br>但科研的难度却日益增加<br>——因为很多其它的可能性都被排除了。</p><p>现在的理论要与之前的理论相容，<br>或者能够解释之前的现象，<br>这才是一个可能被正统科学所接受的理论。</p><h1 id="科学研究水平高低"><a href="#科学研究水平高低" class="headerlink" title="科学研究水平高低"></a>科学研究水平高低</h1><p>水平高低主要在思考深度积累上进行体现：<br>别人思考过的我们要思考（构建自洽系统），<br>别人没思考过的我们更要思考（创造新知识）。</p><p>总之，<br>具有<strong>快速知识吸收能力</strong>，<br>一定的<strong>记忆力</strong>，<br>和<strong>辩证的思考能力</strong>，<br>会是从事研究的必备条件。</p><h1 id="本科生与研究生学习方式的转变"><a href="#本科生与研究生学习方式的转变" class="headerlink" title="本科生与研究生学习方式的转变"></a>本科生与研究生学习方式的转变</h1><p>本科之前的学习属于单来源学习，<br>即，信息来源只有一个，我们只需要理解其内容，不需判断其可信度</p><p>而本科之后的研究生学习则完全不同。<br>信息来源一定不止一个，<br>我们需要在混乱的研究材料和逻辑中理出自己的思路。</p><h1 id="什么样的科学研究最有意义"><a href="#什么样的科学研究最有意义" class="headerlink" title="什么样的科学研究最有意义"></a>什么样的科学研究最有意义</h1><p>教科书和前人研究可以给我们提供基本的<strong>描述函数</strong>，<br>而我们真正重要的研究是寻找<strong>边界条件</strong>，<br>而不是对描述函数的一次次冗余验证。<br>我们也还可以综合多个描述函数以构造更复杂的函数，<br>但这些研究的意义总不会有寻找边界条件大。</p><h1 id="时机感"><a href="#时机感" class="headerlink" title="时机感"></a>时机感</h1><p>在各行各业获益所需要的最重要的能力是<strong>时机感</strong>，<br>也就是预测具体何时会发生某事的能力。<br>落后或者超前的预测都会使得获益受损。</p><h1 id="实验科学不讨喜"><a href="#实验科学不讨喜" class="headerlink" title="实验科学不讨喜"></a>实验科学不讨喜</h1><p>无论如何深入探求底层原理，<br>要考虑的问题也一样不少，<br>任何地方都可能发生问题。<br>这导致了实验科学的极大困难。<br>但对于喜欢挑战的人来说，<br>这可能正是快乐的源泉。</p><p>目前的实验科学还缺乏自动化、模块化的思想，<br>对新手来说，<br>解决重复性的问题是十分困难的，<br>已经重复多次的模块操作也并不能够复用。</p><p>机械操作的准确性，<br>而不是<br>实验设计的创新性，<br>是实验成功的决定因素。</p><p>这使得该类研究更像是一种<strong>体力劳动</strong>，<br>而非<strong>脑力劳动</strong>，<br>让人缺乏成就感，<br>较大地消耗了研究人员的热情。</p><h1 id="生物高通量不能硬搬到材料领域"><a href="#生物高通量不能硬搬到材料领域" class="headerlink" title="生物高通量不能硬搬到材料领域"></a>生物高通量不能硬搬到材料领域</h1><p>生物和信息科技行业<br>都自然存在大量待挖掘数据，<br>其瓶颈在于如何挖掘。</p><p>材料都是人工合成，<br>而并不自然存在的事物。<br>其瓶颈在于如果创造足够多的数据。</p><p>因此，<br>材料基因组成功的关键在于<br>如何<strong>批量制备</strong>材料和<strong>批量表征</strong>其结构和性能。</p><h1 id="人生是一个复杂优化问题"><a href="#人生是一个复杂优化问题" class="headerlink" title="人生是一个复杂优化问题"></a>人生是一个复杂优化问题</h1><p>有目标的问题都是优化问题。<br>有目标，大多数是褒义的。<br>但“功利”，却被认为是贬义的。</p><p>那是因为，功利指的是<br><strong>单目标、无约束</strong>问题。<br>这种思想企图将复杂的人生，<br>简化为<strong>最简单的优化模型</strong>。</p><h1 id="上课的意义"><a href="#上课的意义" class="headerlink" title="上课的意义"></a>上课的意义</h1><p>破除课程的界限，<br>甚至破除学科的界限，<br>将线性知识变成<strong>立体知识</strong>。</p><h1 id="证明自己走到领域前沿的方法（参考）"><a href="#证明自己走到领域前沿的方法（参考）" class="headerlink" title="证明自己走到领域前沿的方法（参考）"></a>证明自己走到领域前沿的方法（参考）</h1><p>想出该领域的一个问题，<br>并在权威平台 ，<br>最好是在权威人士的论调中对该问题进行检索，</p><p>——如果正好有人也认为这是一个问题，<br>说明我们对该领域理解到了一定深度，<br>能跟上发展前沿。</p><h1 id="太聪明不容易成功"><a href="#太聪明不容易成功" class="headerlink" title="太聪明不容易成功"></a>太聪明不容易成功</h1><p>抽象世界反馈很快，<br>现实（物理）世界反馈很慢。<br>“聪明人”会备受打击。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;变化中的不变&quot;&gt;&lt;a href=&quot;#变化中的不变&quot; class=&quot;headerlink&quot; title=&quot;变化中的不变&quot;&gt;&lt;/a&gt;变化中的不变&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;The secret to that is to focus on the things that don’t change in your buisiness.&lt;br&gt;——Jeff Bezos&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p class=&quot;refs&quot;&gt;来源：https://medium.com/&lt;/p&gt;
-
-&lt;p&gt;亚马逊CEO贝佐斯有句话说，&lt;br&gt;别人都在思考未来什么会变，&lt;br&gt;他思考什么不会变。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
-    
-      <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
   </entry>
   

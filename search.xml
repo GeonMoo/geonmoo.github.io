@@ -4749,4 +4749,32 @@ $$
     <content><![CDATA[<p><img src="https://mozheyang.top/images/posts/qingming2022.png" alt=""></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>好久不见了，大家还好吗</title>
+    <url>/2022/06/03/latest202206/</url>
+    <content><![CDATA[<h1 id="好久不见啊"><a href="#好久不见啊" class="headerlink" title="好久不见啊"></a>好久不见啊</h1><p>很久没发干货了呀。</p>
+<p><strong>客观原因</strong>是已经不在材料方向继续研究了，而新的领域又需要时间沉淀，以保证所发布的内容至少让我自己认为是合格的。<strong>主观原因</strong>是……国内上班真挺卷的，不再像求学时期那样有充足时间构思写作了；而且上班的话，知识产权是公司的，也不敢乱说话。于是……</p>
+<p>不过我还是那个我。今年打算挖下另一个坑了。有关新能源和大数据的交叉方向，请感兴趣的同学拭目以待吧。</p>
+<a id="more"></a>
+<h1 id="“不在线”的日子"><a href="#“不在线”的日子" class="headerlink" title="“不在线”的日子"></a>“不在线”的日子</h1><p>近两个月，Hexo Next主题的cdn网站被DNS污染了，导致本网站访问异常。</p>
+<blockquote>
+<p>Thank you all for your tests, feedback and support. I am personally sorry for the issues we had today.</p>
+<p>We can consider the issue as resolved, now its a question of DNS propagation getting to everyone.</p>
+<p>Our official announcement regarding the problems today:</p>
+<p>Unfortunately today jsDelivr unexpectedly lost its ICP license in China. As effect the regional CDN disabled our account.</p>
+<p>This resulted in the extended outage we had in mainland China and Taiwan.</p>
+<p>Other regions were unaffected.</p>
+<p>We understand how difficult it was for our users to experience this unique situation.</p>
+<p>From now on all Chinese traffic will be served by “near China” locations provided by global CDN providers.</p>
+<p>This will have the additional benefit of better failover logic in the future.</p>
+<p>——jimaek on 20 Dec 2021</p>
+<p><a href="https://github.com/jsdelivr/jsdelivr/issues/18348#issuecomment-997777996" target="_blank" rel="noopener">https://github.com/jsdelivr/jsdelivr/issues/18348#issuecomment-997777996</a></p>
+</blockquote>
+<p>前段时间有同学提醒我才发现的，直到今天才彻底修复。非常感谢你们的帮助和陪伴，让我重新找回继续写作的动力；也让我还能想起，对我来说，生命的一大重要意义在于留下更多有价值的见解，而不“只是”追名逐利（现实点XD，还是需要的……）。</p>
+<p>希望能持续听到你们的声音。谢谢！</p>
+]]></content>
+      <tags>
+        <tag>Thought  随想</tag>
+      </tags>
+  </entry>
 </search>
