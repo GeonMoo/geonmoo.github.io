@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <meta name="google-site-verification" content="true">
+  <meta name="msvalidate.01" content="true">
+  <meta name="yandex-verification" content="true">
+  <meta name="baidu-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/black/pace-theme-minimal.min.css">
+  <script src="//cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="大家好啊。今天我们讨论一个电化学与数据的交叉主题哈。 大家在对材料进行电化学性能表征时，可能经常会使用到交流阻抗法。但大家是否曾好奇过“交流阻抗”是如何计算的呢？“阻抗”是一个直接观测量还是一个间接计算量？接下来，我们就要聊聊这个话题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从入门到放弃 | 电化学阻抗是如何计算的？">
+<meta property="og:url" content="https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/index.html">
+<meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
+<meta property="og:description" content="大家好啊。今天我们讨论一个电化学与数据的交叉主题哈。 大家在对材料进行电化学性能表征时，可能经常会使用到交流阻抗法。但大家是否曾好奇过“交流阻抗”是如何计算的呢？“阻抗”是一个直接观测量还是一个间接计算量？接下来，我们就要聊聊这个话题。">
+<meta property="og:image" content="https://mozheyang.top/images/ImpCal/curr_volt.png">
+<meta property="og:image" content="https://mozheyang.top/images/ImpCal/fft.png">
+<meta property="article:published_time" content="2022-06-26T08:49:17.000Z">
+<meta property="article:modified_time" content="2022-06-26T08:53:57.655Z">
+<meta property="article:author" content="Geon Mo">
+<meta property="article:tag" content="Chemistry  化学">
+<meta property="article:tag" content="Updating  持续更新中...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mozheyang.top/images/ImpCal/curr_volt.png">
+
+<link rel="canonical" href="https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>从入门到放弃 | 电化学阻抗是如何计算的？ | Mo's Notebook | 摸着羊的笔记本</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Mo's Notebook | 摸着羊的笔记本" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mo's Notebook | 摸着羊的笔记本</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">设计 / 思考 / 材料 / 信息</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-项目">
+
+    <a href="/projects/" rel="section"><i class="fa fa-fw fa-coffee"></i>项目</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Geon Mo">
+      <meta itemprop="description" content="主业搬砖，兼职磕盐">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mo's Notebook | 摸着羊的笔记本">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从入门到放弃 | 电化学阻抗是如何计算的？
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-06-26 16:49:17 / 修改时间：16:53:57" itemprop="dateCreated datePublished" datetime="2022-06-26T16:49:17+08:00">2022-06-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">Electrochemistry  电化学</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/06/26/ImpedanceCalculation/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/06/26/ImpedanceCalculation/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>大家好啊。今天我们讨论一个电化学与数据的交叉主题哈。</p>
+<p>大家在对材料进行电化学性能表征时，可能经常会使用到交流阻抗法。但大家是否曾好奇过“交流阻抗”是如何计算的呢？“阻抗”是一个直接观测量还是一个间接计算量？接下来，我们就要聊聊这个话题。</p>
+<a id="more"></a>
+<blockquote>
+<p>内容真挺难的，笔者没能完全hold住，很多内容其实都没有讨论得特别透彻。博主会继续更新相关技术内容。希望各领域的老师们不吝赐教！</p>
+</blockquote>
+<h1 id="从欧姆定律（Ohm’s-Law）开始——纯电阻电路"><a href="#从欧姆定律（Ohm’s-Law）开始——纯电阻电路" class="headerlink" title="从欧姆定律（Ohm’s Law）开始——纯电阻电路"></a>从欧姆定律（Ohm’s Law）开始——纯电阻电路</h1><p>德国物理学家Georg Ohm在 1827 年发表的一篇论文中描述了通过包含各种长度电线的简单电路测量施加的电压和电流。他提出，通过两点之间导体的电流与两点之间的电压成<strong>正比</strong>。</p>
+<script type="math/tex; mode=display">
+R = \frac{U}{I}</script><p>其中，$U$为电压，$I$为电流。$R$被认为是一种跟电子元件性质有关的比例常数，即电阻（Resistance）。在测试的绝大多数材料中，这一关系都能够成立。因此，欧姆定理作为一个经验公式可以得到广泛应用。但并不是所有的电子元件都能满足该性质。这给我们带来了疑问：除了电阻外，还有哪些电子元件？如何理解这些电子元器件的性质？</p>
+<h1 id="非纯电阻电路——交流阻抗的定义"><a href="#非纯电阻电路——交流阻抗的定义" class="headerlink" title="非纯电阻电路——交流阻抗的定义"></a>非纯电阻电路——交流阻抗的定义</h1><p>电路的四大基本变量是电流$I$、电压$U$、电荷$Q$和磁通量$\Phi$。其中：</p>
+<ul>
+<li>电阻（Resistor）：表征电压与电流之间的关系；</li>
+<li>电容（Capacitor）：表征电量与电压之间的关系；</li>
+<li>电感（Inductor）：表征磁通量与电流之间的关系；</li>
+<li>忆阻器（Memristor）：表征磁通量与电荷之间的关系（最近大火的电子元件，笔者也很感兴趣，但不在本文讨论范围内）。</li>
+</ul>
+<p>在直流电路中，电感短路，电容断路；欧姆定律没有描述电路中的电抗应该如何计算。很神奇的地方是，引入复阻抗后，对非纯电阻电路，交流电路中，阻抗的定义竟跟电阻很相似——引入电抗后，阻抗为电阻（实数）与电抗（虚数）之和，为一个复数：</p>
+<script type="math/tex; mode=display">
+Z(\omega) = \frac{U(t)}{I(t)}</script><h1 id="从理论到工程——数字信号处理"><a href="#从理论到工程——数字信号处理" class="headerlink" title="从理论到工程——数字信号处理"></a>从理论到工程——数字信号处理</h1><p>在定义好交流电路中阻抗的具体定义后，接下来就是如何在实际生活中计算的问题了。我们知道，直接能够观测（或采集）的物理量是电压和电流。但根据阻抗的定义，$Z(\omega)$是一个复数，电压$U(t)$和电流$I(t)$也应该是复数。那么，电压和电流为何能够使用复数来进行表示呢？</p>
+<p>这就涉及到接下来提及的一种<strong>数学工具</strong>了。通过这种数学工具，我们能够将采集到的离散（电压/电流）数据点转化为复数。</p>
+<h2 id="空间变换"><a href="#空间变换" class="headerlink" title="空间变换"></a>空间变换</h2><p>笔者对“空间变换”的概念是在不断跨学科的过程中逐渐形成的：空间域到能量域（光的衍射），态矢量与能量（量子力学），特征值与特征向量（线性代数），时域到频域（信号处理）等等……貌似“空间变换”是一个很高大上的概念。</p>
+<p>但实际上，我们很早就熟悉了空间变换的思想：比如，在解析几何中将笛卡尔（直角）坐标变换为极坐标，通过对数变换将乘法运算变换为加法运算等等。</p>
+<h2 id="Fourier变换（Fourier-Transform）"><a href="#Fourier变换（Fourier-Transform）" class="headerlink" title="Fourier变换（Fourier Transform）"></a>Fourier变换（Fourier Transform）</h2><h3 id="Fourier级数（离散变量）"><a href="#Fourier级数（离散变量）" class="headerlink" title="Fourier级数（离散变量）"></a>Fourier级数（离散变量）</h3><p>任何周期信号都可以通过多个三角波信号组合。</p>
+<h3 id="连续变量"><a href="#连续变量" class="headerlink" title="连续变量"></a>连续变量</h3><p>从离散变量推广至连续变量，无限多个三角函数之和可以无限逼近任何周期信号。</p>
+<h3 id="欧拉公式（Euler’s-Formula）"><a href="#欧拉公式（Euler’s-Formula）" class="headerlink" title="欧拉公式（Euler’s Formula）"></a>欧拉公式（Euler’s Formula）</h3><p>根据欧拉公式</p>
+<script type="math/tex; mode=display">
+e^{ix} = cos(x) + i \cdot sin(x)</script><p>任意三角函数都可以表示为一个复数。这也意味着，任何周期信号可以被一个复数所表示，也包括我们之前所提及的复阻抗$Z(\omega)$、交流电压$U(t)$和交流电流$I(t)$。</p>
+<h2 id="离散数据点的处理"><a href="#离散数据点的处理" class="headerlink" title="离散数据点的处理"></a>离散数据点的处理</h2><p>真实信号中，由于信噪比不可能无穷大，而我们只对数字信号中的有效信号感兴趣，而不希望引入噪声。而一般地，信号频率与噪声频率存在差别（需要事先考虑设计），于是我们就能利用以下傅里叶变换方法，先把数字信号从时域转换到频域，就能够提取到指定频率信号。该信号以复数形式呈现。</p>
+<p>由以上推导，通过下式得出时域到频域的变换公式：</p>
+<script type="math/tex; mode=display">
+F(\omega) = \mathscr{F}\{f(t)\} 
+= \int_{-\infty}^{\infty} f(t) \cdot e^{-2 \pi \omega i \cdot t} dt</script><p>其中，$F(\omega)$为频域函数，$f(t)$为时域函数。</p>
+<p>通过相同方法，分别提取交流电流/电压扰动与交流电压/电流响应，就可以通过复阻抗计算公式计算阻抗值啦。以下为车用燃料电池系统上进行阻抗测试的部分数据[2]：</p>
+<p><img src="https://mozheyang.top/images/ImpCal/curr_volt.png" alt=""><br>电流与电压信号</p>
+<p><img src="https://mozheyang.top/images/ImpCal/fft.png" alt=""><br>（快速）傅里叶变换后，提取320Hz处的</p>
+<p>该过程的原理是相对简单的，但由于阻抗计算对环境相当敏感，在实际测试时，会遇到各种意想不到的干扰，从而影响判断。这就需要我们对阻抗测量手段硬件和软件进行不断投入。</p>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>以下部分供参考，后续会重新展开谈谈该部分内容~</p>
+<h2 id="快速傅里叶变换（Fast-Fourier-transform-FFT）"><a href="#快速傅里叶变换（Fast-Fourier-transform-FFT）" class="headerlink" title="快速傅里叶变换（Fast Fourier transform, FFT）"></a>快速傅里叶变换（Fast Fourier transform, FFT）</h2><p>基于稀疏矩阵分解，快速离散傅里叶变换（Discrete Fourier Transform, DFT）或其逆变换的方法。</p>
+<h2 id="拉普拉斯（Laplace-Transform）变换"><a href="#拉普拉斯（Laplace-Transform）变换" class="headerlink" title="拉普拉斯（Laplace Transform）变换"></a>拉普拉斯（Laplace Transform）变换</h2><p>从傅立叶变换公式中，我们可以看出，要满足使用条件，要求$f(t)$的柯西主值积分应该是有限值。但是，并非所有信号都满足该条件，可能导致积分发散。</p>
+<p>为使得任何信号函数都可积分，可以在傅立叶变换公式中引入衰减因子$e^{\sigma t}$，有</p>
+<script type="math/tex; mode=display">
+\begin{align}
+F(\omega) 
+& = \int_{-\infty}^{\infty} [f(t) \cdot e^{\sigma \cdot t}]
+\cdot e^{-2 \pi \omega i \cdot t} dt \\
+& = \int_{-\infty}^{\infty} f(t) \cdot e^{(\sigma-2 \pi \omega i) \cdot t} dt \\
+\end{align}</script><p>令$s = \sigma - 2 \pi \omega i$，可得到拉普拉斯变换：</p>
+<script type="math/tex; mode=display">
+F(s) = \mathscr{L}\{f(t)\} 
+= \int_{-\infty}^{\infty} f(t) \cdot e^{s \cdot t} dt</script><p>其中，$s=\sigma+i \nu$为任意复数。从这个角度来看，拉普拉斯变换是为了对某些不可积函数进行的傅立叶变换的拓展。</p>
+<h2 id="Z变换"><a href="#Z变换" class="headerlink" title="Z变换"></a>Z变换</h2><p>傅立叶变换的离散形式。</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Yuan X Z, Song C, Wang H, et al. Electrochemical impedance spectroscopy in PEM fuel cells: fundamentals and applications[J]. 2010.</p>
+<p>[2] Hong P, Xu L, Jiang H, et al. A new approach to online AC impedance measurement at high frequency of PEM fuel cell stack[J]. international journal of hydrogen energy, 2017, 42(30): 19156-19169.</p>
+<p>[3] <a href="https://en.wikipedia.org/wiki/Memristor" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Memristor</a>. </p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Geon Mo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/" title="从入门到放弃 | 电化学阻抗是如何计算的？">https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+  <li class="post-copyright-contact">
+    <strong>联系方式： </strong>
+    <a href="mailto:mozheyang@outlook.com" target="_blank">mozheyang@outlook.com</a>
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Chemistry-%E5%8C%96%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> Chemistry  化学</a>
+              <a href="/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> Updating  持续更新中...</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/06/03/latest202206/" rel="prev" title="好久不见了，大家还好吗">
+      <i class="fa fa-chevron-left"></i> 好久不见了，大家还好吗
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2201/03/14/TOP/" rel="next" title="置顶公告">
+      置顶公告 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从欧姆定律（Ohm’s-Law）开始——纯电阻电路"><span class="nav-number">1.</span> <span class="nav-text">从欧姆定律（Ohm’s Law）开始——纯电阻电路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非纯电阻电路——交流阻抗的定义"><span class="nav-number">2.</span> <span class="nav-text">非纯电阻电路——交流阻抗的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从理论到工程——数字信号处理"><span class="nav-number">3.</span> <span class="nav-text">从理论到工程——数字信号处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#空间变换"><span class="nav-number">3.1.</span> <span class="nav-text">空间变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fourier变换（Fourier-Transform）"><span class="nav-number">3.2.</span> <span class="nav-text">Fourier变换（Fourier Transform）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fourier级数（离散变量）"><span class="nav-number">3.2.1.</span> <span class="nav-text">Fourier级数（离散变量）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续变量"><span class="nav-number">3.2.2.</span> <span class="nav-text">连续变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉公式（Euler’s-Formula）"><span class="nav-number">3.2.3.</span> <span class="nav-text">欧拉公式（Euler’s Formula）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#离散数据点的处理"><span class="nav-number">3.3.</span> <span class="nav-text">离散数据点的处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速傅里叶变换（Fast-Fourier-transform-FFT）"><span class="nav-number">4.1.</span> <span class="nav-text">快速傅里叶变换（Fast Fourier transform, FFT）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉普拉斯（Laplace-Transform）变换"><span class="nav-number">4.2.</span> <span class="nav-text">拉普拉斯（Laplace Transform）变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Z变换"><span class="nav-number">4.3.</span> <span class="nav-text">Z变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Geon Mo"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Geon Mo</p>
+  <div class="site-description" itemprop="description">主业搬砖，兼职磕盐</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:mozheyang@outlook.com" title="E-Mail → mailto:mozheyang@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/sitemap.xml" title="Sitemap → &#x2F;sitemap.xml"><i class="fa fa-fw fa-sitemap"></i>Sitemap</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      我的朋友
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://slykiten.com/" title="https:&#x2F;&#x2F;slykiten.com&#x2F;" rel="noopener" target="_blank">狡猫三窝</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian">
+      <img src="https://www.mozheyang.top/images/beian.png" style="display: inline-block; margin-right: 5px; margin-bottom: -5px">  <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">桂ICP备17010030号</a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Geon Mo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.bootcdn.net/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
+      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
+      placeholder: "请开始你的表演",
+      avatar     : '',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
