@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/05/11/MathModellingPrimer/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="基本思路  Google、百度题目中相关关键词，了解其学科背景； 由学科背景，制定检索关键词（推荐为中文），在学术搜索引擎进行检索（推荐百度学术，内含知网、万方、维普及其他主流中英文数据库）； 总结所有参考文献所使用的方法（这也是为什么最后大家方法类似的原因），然后可以进行模型匹配（对经典模型熟悉的同学会有印象）； 进行本题匹配的尝试： 抽象出最基础的知识（如该领域基本方程） 将其中常量看作“变量">
+<meta property="og:locale">
 <meta property="article:published_time" content="2017-05-11T07:42:59.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:38:40.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -175,7 +176,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -248,27 +253,6 @@
             </span>
 
           
-            <span id="/2017/05/11/MathModellingPrimer/" class="post-meta-item leancloud_visitors" data-flag-title="思路整理 | 数学建模解题思路" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/05/11/MathModellingPrimer/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/05/11/MathModellingPrimer/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -291,7 +275,7 @@
 </ul>
 </li>
 </ol>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><hr>
 <h2 id="关于论文结构"><a href="#关于论文结构" class="headerlink" title="关于论文结构"></a>关于论文结构</h2><p>主要负责论文的同学应该统筹全局。论文是最重要的，其他的都是锦上添花。论文结构会随着阅读文献的增加而发生变化，一个好的论文结构（模型结构）应该是具有较强包容性的。可以考虑将大题目拆解成一个个小问题（国赛不需要），再分别使用模型方法解决。</p>
 <blockquote>
@@ -359,7 +343,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -406,7 +389,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本思路"><span class="nav-number">1.</span> <span class="nav-text">基本思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">2.</span> <span class="nav-text">写在后面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于论文结构"><span class="nav-number">2.1.</span> <span class="nav-text">关于论文结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于审题"><span class="nav-number">2.2.</span> <span class="nav-text">关于审题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于工具"><span class="nav-number">2.3.</span> <span class="nav-text">关于工具</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">基本思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">写在后面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%AE%BA%E6%96%87%E7%BB%93%E6%9E%84"><span class="nav-number">2.1.</span> <span class="nav-text">关于论文结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%AE%A1%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">关于审题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%B7%A5%E5%85%B7"><span class="nav-number">2.3.</span> <span class="nav-text">关于工具</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -465,6 +448,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -488,7 +474,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -641,35 +627,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

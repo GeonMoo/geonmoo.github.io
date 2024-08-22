@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2020/04/04/lammps1/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="对“分子动力学”的认识最初来自于本科时的《计算材料学》课程。那时候就听说有个叫做LAMMPS的开源软件，可以实现分子动力学模拟。但是苦于安装困难，并没有继续深究。作为一个热爱折腾的人，没有深究这件事一直让我过意不去。 好在，时过境迁。今天的LAMMPS早已不是过去的LAMMPS，行云流水的安装进度让人止不住地鼓掌叫好。那么，究竟有多简单？">
+<meta property="og:locale">
 <meta property="og:image" content="https://lammps.sandia.gov/movies/logo.gif">
 <meta property="og:image" content="https://www.mozheyang.top/images/LAMMPS/download.png">
 <meta property="og:image" content="https://www.mozheyang.top/images/LAMMPS/folder.png">
@@ -182,7 +183,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -246,27 +251,6 @@
               </span>
 
           
-            <span id="/2020/04/04/lammps1/" class="post-meta-item leancloud_visitors" data-flag-title="LAMMPS学习札记（一）——安装篇" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/04/04/lammps1/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/lammps1/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -280,8 +264,8 @@
         <p><img src="https://lammps.sandia.gov/movies/logo.gif" alt=""></p>
 <p>对“分子动力学”的认识最初来自于本科时的《计算材料学》课程。那时候就听说有个叫做LAMMPS的开源软件，可以实现分子动力学模拟。但是苦于安装困难，并没有继续深究。作为一个热爱折腾的人，没有深究这件事一直让我过意不去。</p>
 <p>好在，时过境迁。今天的LAMMPS早已不是过去的LAMMPS，<strong>行云流水的安装进度</strong>让人止不住地鼓掌叫好。那么，究竟有多简单？</p>
-<a id="more"></a>
-<h1 id="Windows-10系统上安装"><a href="#Windows-10系统上安装" class="headerlink" title="Windows 10系统上安装"></a>Windows 10系统上安装</h1><p>在Windows上的安装，可以直接访问美国Sandia国家实验室地官网：<a href="https://lammps.sandia.gov/" target="_blank" rel="noopener">https://lammps.sandia.gov/</a>。进入Download界面，找到你所需要的Windows版本。说时候，网站导航不是一般的迷惑，很容易迷路，所以在这我给大家一个参考：关键词是<a href="https://lammps.sandia.gov/doc/Install_windows.html" target="_blank" rel="noopener">Pre-built Windows executables</a>，含义是已经编译好的Windows可运行程序（<code>exe</code>文件）。如果你是开发者的话，也可以选源代码，自己编译代码运行，灵活度更高。</p>
+<span id="more"></span>
+<h1 id="Windows-10系统上安装"><a href="#Windows-10系统上安装" class="headerlink" title="Windows 10系统上安装"></a>Windows 10系统上安装</h1><p>在Windows上的安装，可以直接访问美国Sandia国家实验室地官网：<a target="_blank" rel="noopener" href="https://lammps.sandia.gov/">https://lammps.sandia.gov/</a>。进入Download界面，找到你所需要的Windows版本。说时候，网站导航不是一般的迷惑，很容易迷路，所以在这我给大家一个参考：关键词是<a target="_blank" rel="noopener" href="https://lammps.sandia.gov/doc/Install_windows.html">Pre-built Windows executables</a>，含义是已经编译好的Windows可运行程序（<code>exe</code>文件）。如果你是开发者的话，也可以选源代码，自己编译代码运行，灵活度更高。</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/download.png" alt=""></p>
 <p>下载下来一步步安装就好了。然后我们会收获一个文件夹。</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/folder.png" alt=""></p>
@@ -291,18 +275,18 @@
 <p>这就是一个简单的colloid示例所在的项目位置。LAMMPS启动的方式很GEEK：先进入以上文件夹（colloid），右键单击后，选择在此处打开<code>Powershell</code>（<code>cmd</code>也可以，俗称小黑框）：</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/powershell.png" alt=""></p>
 <p>输入<code>ls</code>，可以显示当前文件下下的文件：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; ls                                                        </span><br><span class="line"></span><br><span class="line">    目录: D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line">----                -------------         ------ ----</span><br><span class="line"><span class="literal">-a</span>----        <span class="number">2020</span>/<span class="number">2</span>/<span class="number">28</span>      <span class="number">5</span>:<span class="number">21</span>           <span class="number">1117</span> in.colloid</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; <span class="built_in">ls</span>                                                        </span><br><span class="line"></span><br><span class="line">    目录: D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line"><span class="literal">----</span>                <span class="literal">-------------</span>         <span class="literal">------</span> <span class="literal">----</span></span><br><span class="line"><span class="literal">-a----</span>        <span class="number">2020</span>/<span class="number">2</span>/<span class="number">28</span>      <span class="number">5</span>:<span class="number">21</span>           <span class="number">1117</span> in.colloid</span><br></pre></td></tr></table></figure>
 <p>或者输入<code>dir</code>（cmd中没有<code>ls</code>命令）：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; dir                                                       </span><br><span class="line"></span><br><span class="line">    目录: D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line">----                -------------         ------ ----</span><br><span class="line"><span class="literal">-a</span>----        <span class="number">2020</span>/<span class="number">2</span>/<span class="number">28</span>      <span class="number">5</span>:<span class="number">21</span>           <span class="number">1117</span> in.colloid</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; <span class="built_in">dir</span>                                                       </span><br><span class="line"></span><br><span class="line">    目录: D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line"><span class="literal">----</span>                <span class="literal">-------------</span>         <span class="literal">------</span> <span class="literal">----</span></span><br><span class="line"><span class="literal">-a----</span>        <span class="number">2020</span>/<span class="number">2</span>/<span class="number">28</span>      <span class="number">5</span>:<span class="number">21</span>           <span class="number">1117</span> in.colloid</span><br></pre></td></tr></table></figure>
 <p>可以看到文件夹里有一个叫做<code>in.collide</code>的文件。这便是LAMMPS的输入文件了。更改输入文件，我们可以实现不同模型的计算。对原子/分子结构和坐标还可以用<code>data</code>文件定义，我们之后再进行讨论。</p>
 <p>一定要进入有<code>in.collide</code>文件的文件夹，要不然下一步操作是无效的。</p>
 <h2 id="正确的运行"><a href="#正确的运行" class="headerlink" title="正确的运行"></a>正确的运行</h2><p>接下来输入一个<strong>简单的命令</strong><code>lmp_serial -i in.collid</code>（这是最重要的）：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; lmp_serial <span class="literal">-i</span> in.collid</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; lmp_serial <span class="literal">-i</span> in.collid</span><br></pre></td></tr></table></figure>
 <p>如果出现下列状态，恭喜你，运行成功了。</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/running.png" alt=""></p>
 <p>知其然，还要知其所以然。这命令是什么意思呢？</p>
 <p>我试着查了一下，输入<code>lmp_serial -h</code>（<code>-h</code>参数常做help使用）：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; lmp_serial <span class="literal">-h</span>                                             </span><br><span class="line">Large<span class="literal">-scale</span> Atomic/Molecular Massively Parallel Simulator - <span class="number">27</span> Feb <span class="number">2020</span></span><br><span class="line"></span><br><span class="line">Usage example: D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\bin\lmp_serial.exe <span class="literal">-var</span> t <span class="number">300</span> <span class="literal">-echo</span> screen <span class="operator">-in</span> in.alloy</span><br><span class="line"></span><br><span class="line">List of command line options supported by this LAMMPS executable:</span><br><span class="line"></span><br><span class="line"><span class="literal">-echo</span> none/screen/log/both  : echoing of input script (<span class="literal">-e</span>)</span><br><span class="line"><span class="literal">-help</span>                       : print this help message (<span class="literal">-h</span>)</span><br><span class="line"><span class="operator">-in</span> filename                : read input from file, not stdin (<span class="literal">-i</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\Examples\colloid&gt; lmp_serial <span class="literal">-h</span>                                             </span><br><span class="line">Large<span class="literal">-scale</span> Atomic/Molecular Massively Parallel Simulator - <span class="number">27</span> Feb <span class="number">2020</span></span><br><span class="line"></span><br><span class="line">Usage example: D:\Program Files\LAMMPS <span class="number">64</span><span class="literal">-bit</span> <span class="number">27</span>Feb2020\bin\lmp_serial.exe <span class="literal">-var</span> t <span class="number">300</span> <span class="literal">-echo</span> screen <span class="operator">-in</span> in.alloy</span><br><span class="line"></span><br><span class="line">List of command line options supported by this LAMMPS executable:</span><br><span class="line"></span><br><span class="line"><span class="literal">-echo</span> none/screen/log/both  : echoing of input script (<span class="literal">-e</span>)</span><br><span class="line"><span class="literal">-help</span>                       : print this help message (<span class="literal">-h</span>)</span><br><span class="line"><span class="operator">-in</span> filename                : read input from file, not stdin (<span class="literal">-i</span>)</span><br></pre></td></tr></table></figure>
 <p>OK，我们这里的<code>lmp_serial</code>是串行（serial）的版本的LAMMPS；<code>-i</code>的意思是”read input from file“，即从<code>in</code>文件中读取关于LAMMPS运行的一切模型和参数；最后接上<code>in</code>文件的名字<code>in.collid</code>，就大功告成了。</p>
 <blockquote>
 <p>对应串行运行命令<code>lmp_serial</code>的是并行运行命令<code>lmp_mpi</code>。如果在计算中心进行模拟，多是并行多核计算。</p>
@@ -370,7 +354,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -417,7 +400,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-10系统上安装"><span class="nav-number">1.</span> <span class="nav-text">Windows 10系统上安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行LAMMPS"><span class="nav-number">2.</span> <span class="nav-text">运行LAMMPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正确的文件夹"><span class="nav-number">2.1.</span> <span class="nav-text">正确的文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正确的运行"><span class="nav-number">2.2.</span> <span class="nav-text">正确的运行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">3.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-10%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">Windows 10系统上安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E8%A1%8CLAMMPS"><span class="nav-number">2.</span> <span class="nav-text">运行LAMMPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">2.1.</span> <span class="nav-text">正确的文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%BF%90%E8%A1%8C"><span class="nav-number">2.2.</span> <span class="nav-text">正确的运行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -476,6 +459,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -499,7 +485,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -652,35 +638,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

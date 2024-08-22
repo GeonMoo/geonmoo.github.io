@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/06/07/KindleCalibre/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="Calibre是一个电子书管理器。所有格式的电子书可以放入里面。常见的如txt、mobi、epdu，甚至PDF格式的电子书都可以通过Calibre进行存储和管理，并互相进行转换。">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreConvert.png">
 <meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreFormat.png">
 <meta property="og:image" content="http://mozheyang.top/images/KindleCalibre/snip_CalibreOption.png">
@@ -183,7 +184,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -247,27 +252,6 @@
               </span>
 
           
-            <span id="/2017/06/07/KindleCalibre/" class="post-meta-item leancloud_visitors" data-flag-title="Kindle神器Calibre | 电子书管理 & 无线同步书籍" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/06/07/KindleCalibre/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/06/07/KindleCalibre/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -279,7 +263,7 @@
 
       
         <p>Calibre是一个电子书管理器。所有格式的电子书可以放入里面。常见的如txt、mobi、epdu，甚至PDF格式的电子书都可以通过Calibre进行存储和管理，并互相进行转换。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="电子书管理"><a href="#电子书管理" class="headerlink" title="电子书管理"></a>电子书管理</h1><p>亚马逊官方已经提供了不少的免费书籍了，但这往往还不能满足我们的需求。</p>
 <blockquote>
 <p>一种情况可能是，亚马逊官方不提供该书籍的正版版本，有钱都无法购买；还有另一种情况，中国用户不很习惯为书籍这种知识产品付费，希望找免费盗版资源替代正版资源。当然后者是不提倡的，如果有正版书籍资源请支持正版。</p>
@@ -300,7 +284,7 @@
 <h1 id="无线同步书籍"><a href="#无线同步书籍" class="headerlink" title="无线同步书籍"></a>无线同步书籍</h1><h2 id="Kindle同步书籍常见方法"><a href="#Kindle同步书籍常见方法" class="headerlink" title="Kindle同步书籍常见方法"></a>Kindle同步书籍常见方法</h2><p>在这里笔者首先要给大家提一下Kindle同步书籍的两种常见方法：</p>
 <ol>
 <li>USB同步书籍。使用usb线连接Kindle和pc，将电子书拷贝至Kindle内部存储的“Document”文件夹中。断开Kindle和pc的连接后，在Kindle中就能看到刚拷贝进去的图书了。</li>
-<li>电子邮箱同步书籍。设定一个可接受的邮箱，发送到Kindle绑定账号的专属邮箱（xxx@kindle.cn）。在联网的情况下，Kindle会自动同步发送到邮箱的电子书。关于如何进行电子邮箱传书，大家可以参考这篇文章：<a href="https://kindlefere.com/post/3.html" target="_blank" rel="noopener">Kindle 推送教程：教你用电子邮箱推送电子书</a>。</li>
+<li>电子邮箱同步书籍。设定一个可接受的邮箱，发送到Kindle绑定账号的专属邮箱（xxx@kindle.cn）。在联网的情况下，Kindle会自动同步发送到邮箱的电子书。关于如何进行电子邮箱传书，大家可以参考这篇文章：<a target="_blank" rel="noopener" href="https://kindlefere.com/post/3.html">Kindle 推送教程：教你用电子邮箱推送电子书</a>。</li>
 </ol>
 <p>以上所说的方法2，结合了邮箱，为自定义玩家提供了很大的自由度，增加了很多乐趣。我们可以自己发送该邮件，也可以让朋友发送该邮件，可以使用网络服务（IFTTT）发送该邮件，也可以使用软件（Calibre）发送该邮件，甚至也可以写一段发送该邮件的代码来发送该邮件…只要最后触发了发送邮件的动作，我们就能在Kindle上收到书籍，感觉很GEEK有！没！有！</p>
 <h2 id="使用Calibre给Kindle同步书籍"><a href="#使用Calibre给Kindle同步书籍" class="headerlink" title="使用Calibre给Kindle同步书籍"></a>使用Calibre给Kindle同步书籍</h2><p>那么，老规矩，咱就不卖关子了。接下来我们就将讨论如何使用Calibre发送该邮件。掌握该方法后，以后Kindle就不再需要再使用USB数据线来同步书籍了。这样的同步方式很方便，很干净！</p>
@@ -382,7 +366,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -429,7 +412,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#电子书管理"><span class="nav-number">1.</span> <span class="nav-text">电子书管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无线同步书籍"><span class="nav-number">2.</span> <span class="nav-text">无线同步书籍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kindle同步书籍常见方法"><span class="nav-number">2.1.</span> <span class="nav-text">Kindle同步书籍常见方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Calibre给Kindle同步书籍"><span class="nav-number">2.2.</span> <span class="nav-text">使用Calibre给Kindle同步书籍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-more-thing…"><span class="nav-number">2.3.</span> <span class="nav-text">One more thing…</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%AE%A1%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">电子书管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF%E5%90%8C%E6%AD%A5%E4%B9%A6%E7%B1%8D"><span class="nav-number">2.</span> <span class="nav-text">无线同步书籍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kindle%E5%90%8C%E6%AD%A5%E4%B9%A6%E7%B1%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">Kindle同步书籍常见方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Calibre%E7%BB%99Kindle%E5%90%8C%E6%AD%A5%E4%B9%A6%E7%B1%8D"><span class="nav-number">2.2.</span> <span class="nav-text">使用Calibre给Kindle同步书籍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-more-thing%E2%80%A6"><span class="nav-number">2.3.</span> <span class="nav-text">One more thing…</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -488,6 +471,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -511,7 +497,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -664,35 +650,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

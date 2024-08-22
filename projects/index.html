@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,8 +28,9 @@
 <meta property="og:url" content="https://www.mozheyang.top/projects/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="期刊数据可视化的初步尝试        数据来源：2020年 Chemical Engineering Journal官网刊文时间节点。    数据来源：2020年 Journal of Materials Chemistry A官网刊文时间节点。    数据来源：2020年Journal of The Electrochemical Society官网刊文时间节点。 Powered by Sel">
+<meta property="og:locale">
 <meta property="article:published_time" content="2020-04-08T09:27:31.000Z">
-<meta property="article:modified_time" content="2020-05-11T02:24:08.000Z">
+<meta property="article:modified_time" content="2024-04-05T05:00:15.112Z">
 <meta property="article:author" content="Geon Mo">
 <meta name="twitter:card" content="summary">
 
@@ -175,7 +176,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -231,16 +236,16 @@
 <script src="/js/histplot.js" charset="utf-8"></script>
 <!-- The journal-->
 <div id="hist_ecj"></div>
-<p class="refs">数据来源：2020年<a href="https://www.journals.elsevier.com/chemical-engineering-journal" target="_blank" rel="noopener"> Chemical Engineering Journal官网</a>刊文时间节点。
+<p class="refs">数据来源：2020年<a target="_blank" rel="noopener" href="https://www.journals.elsevier.com/chemical-engineering-journal"> Chemical Engineering Journal官网</a>刊文时间节点。
 
 <!-- The journal-->
 <div id="hist_jmca"></div>
-<p class="refs">数据来源：2020年<a href="https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry-a/" target="_blank" rel="noopener"> Journal of Materials Chemistry A官网</a>刊文时间节点。
+<p class="refs">数据来源：2020年<a target="_blank" rel="noopener" href="https://www.rsc.org/journals-books-databases/about-journals/journal-of-materials-chemistry-a/"> Journal of Materials Chemistry A官网</a>刊文时间节点。
 
 <!-- The journal-->
 <div id="hist_ecs"></div>
-<p class="refs">数据来源：2020年<a href="https://iopscience.iop.org/journal/1945-7111" target="_blank" rel="noopener">Journal of The Electrochemical Society官网</a>刊文时间节点。<br>
-Powered by <a href="https://www.selenium.dev/" target="_blank" rel="noopener">Selenium (Python)</a> and <a href="https://plotly.com/" target="blank">plotly (JavaScript). </a>  </p>
+<p class="refs">数据来源：2020年<a target="_blank" rel="noopener" href="https://iopscience.iop.org/journal/1945-7111">Journal of The Electrochemical Society官网</a>刊文时间节点。<br>
+Powered by <a target="_blank" rel="noopener" href="https://www.selenium.dev/">Selenium (Python)</a> and <a href="https://plotly.com/" target="blank">plotly (JavaScript). </a>  </p>
 <!--here is the js code-->
 <script>
 <!--title here-->
@@ -267,7 +272,6 @@ Powered by <a href="https://www.selenium.dev/" target="_blank" rel="noopener">Se
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -314,7 +318,7 @@ Powered by <a href="https://www.selenium.dev/" target="_blank" rel="noopener">Se
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">期刊数据可视化的初步尝试</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">期刊数据可视化的初步尝试</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -373,6 +377,9 @@ Powered by <a href="https://www.selenium.dev/" target="_blank" rel="noopener">Se
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -396,7 +403,7 @@ Powered by <a href="https://www.selenium.dev/" target="_blank" rel="noopener">Se
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -549,35 +556,6 @@ Powered by <a href="https://www.selenium.dev/" target="_blank" rel="noopener">Se
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/11/02/collins2017/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.原文地址：https:&#x2F;&#x2F;www.nature.com&#x2F;nature&#x2F;journal&#x2F;v546&#x2F;n">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/collins2017/collins2017-title.png">
 <meta property="og:image" content="http://mozheyang.top/images/collins2017/collins2017-fig1.png">
 <meta property="article:published_time" content="2017-11-02T03:11:20.000Z">
@@ -179,7 +180,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -243,27 +248,6 @@
               </span>
 
           
-            <span id="/2017/11/02/collins2017/" class="post-meta-item leancloud_visitors" data-flag-title="IT与材料 | 通过MC-EMMA算法探索无机材料最优结构" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/11/02/collins2017/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/11/02/collins2017/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -275,10 +259,10 @@
 
       
         <p><img src="http://mozheyang.top/images/collins2017/collins2017-title.png" alt=""></p>
-<p><em>解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.</em><br><em>原文地址：<a href="https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html" target="_blank" rel="noopener">https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html</a></em></p>
-<a id="more"></a>
+<p><em>解读文章：Collins, C., et al. (2017). “Accelerated discovery of two crystal structure types in a complex inorganic phase field.” Nature 546(7657): 280-284.</em><br><em>原文地址：<a target="_blank" rel="noopener" href="https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html">https://www.nature.com/nature/journal/v546/n7657/full/nature22374.html</a></em></p>
+<span id="more"></span>
 <p>原文地址中的补充数据也是很有价值的，例如计算数据等。</p>
-<p>另外，Collins等人公开了MC-EMMA算法的Python源码。感兴趣的朋友可前去下载一读。笔者也计划在后来的博客中对源码内容进行分析。<br>MC-EMMA算法源码地址如下：<br><a href="http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html" target="_blank" rel="noopener">http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html</a></p>
+<p>另外，Collins等人公开了MC-EMMA算法的Python源码。感兴趣的朋友可前去下载一读。笔者也计划在后来的博客中对源码内容进行分析。<br>MC-EMMA算法源码地址如下：<br><a target="_blank" rel="noopener" href="http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html">http://pcwww.liverpool.ac.uk/~msd30/software/MC-EMMA.html</a></p>
 <hr>
 <p>在已知物质结构领域，计算方法的应用已经取得了许多成就。但是，纯粹的第一性原理计算，由于计算量巨大，无法完成普遍宏观尺度材料的模拟；只在已知结构的物质里，利用大数据原理进行新材料结构的搜索，又很有可能找不到最优的材料结构，不能很好地发挥计算模拟方法先于实验，从而指导实验方法的优势。</p>
 <p>因此，大数据原理和第一性原理的结合是一个很好的思路。这就产生了<strong>Extended Module Materials Assembly (EMMA) </strong>此类算法。本研究在原有的EMMA算法的基础上，利用有权值的<strong>蒙特卡洛（MC，Monte Carlo；即随机算法算法）</strong>进行改进，对已知无机物成分及结构进行复杂置换，实现了对新的无机物质结构的探索，并通过实验验证了其可行性。</p>
@@ -351,7 +335,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -398,7 +381,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#核心算法"><span class="nav-number">1.</span> <span class="nav-text">核心算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">2.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">核心算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -457,6 +440,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -480,7 +466,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -633,35 +619,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

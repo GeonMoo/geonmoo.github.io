@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2018/10/02/RigidRotation/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="Why are we interested in this?These days I knew something called “Gimbal”, which offsets random movements of camera when we are videoing or shooting, in order to make smoother video. It acts like this">
+<meta property="og:locale">
 <meta property="og:image" content="https://steemitimages.com/0x0/https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/2018-09-24/a439ef08-ezgif.com-video-to-gif.gif">
 <meta property="og:image" content="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5822/5822514_rd.jpg;maxHeight=640;maxWidth=550">
 <meta property="og:image" content="https://www.dailydot.com/wp-content/uploads/2018/04/pattern-2048x1024.jpg">
@@ -182,7 +183,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -255,27 +260,6 @@
             </span>
 
           
-            <span id="/2018/10/02/RigidRotation/" class="post-meta-item leancloud_visitors" data-flag-title="Physics behind Rotation of Rigid Body" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/10/02/RigidRotation/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/10/02/RigidRotation/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -289,7 +273,7 @@
         <h1 id="Why-are-we-interested-in-this"><a href="#Why-are-we-interested-in-this" class="headerlink" title="Why are we interested in this?"></a>Why are we interested in this?</h1><p>These days I knew something called “Gimbal”, which offsets random movements of camera when we are videoing or shooting, in order to make smoother video. It acts like this</p>
 <p><img src="https://steemitimages.com/0x0/https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/2018-09-24/a439ef08-ezgif.com-video-to-gif.gif" alt=""></p>
 <p>Also, several days before, we carefully analyze divers’ physics during diving. </p>
-<a id="more"></a>
+<span id="more"></span>
 <p>So, em… I think, we can bring those two together, to achieve a deeper understanding of the physics behind gimbal or diving. OK, let’s get started. </p>
 <h1 id="Here-we-start"><a href="#Here-we-start" class="headerlink" title="Here we start!"></a>Here we start!</h1><h2 id="Basis-of-momentum"><a href="#Basis-of-momentum" class="headerlink" title="Basis of momentum"></a>Basis of momentum</h2><p>According to <strong>Newton’s Second Law</strong> (in a vector form), we have</p>
 <script type="math/tex; mode=display">
@@ -335,7 +319,7 @@ R^{t}\dot{R} V=\vec{\Omega} \times V</script><p>So, we gain</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] Dullin H R, Tong W. Twisting Somersault[J]. Physics, 2016.</p>
 <p>[2] Dullin H R. The Diver with a Rotor[J].  2015.</p>
 <p>[3] Tong W, Dullin H R. A New Twisting Somersault: 513XD[J]. Journal of Nonlinear Science, 2017, 27(6):2037-2061.</p>
-<p>[4] <a href="https://en.wikipedia.org/wiki/Euler_angles" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Euler_angles</a>. </p>
+<p>[4] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Euler_angles">https://en.wikipedia.org/wiki/Euler_angles</a>. </p>
 
     </div>
 
@@ -397,7 +381,6 @@ R^{t}\dot{R} V=\vec{\Omega} \times V</script><p>So, we gain</p>
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -444,7 +427,7 @@ R^{t}\dot{R} V=\vec{\Omega} \times V</script><p>So, we gain</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-are-we-interested-in-this"><span class="nav-number">1.</span> <span class="nav-text">Why are we interested in this?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Here-we-start"><span class="nav-number">2.</span> <span class="nav-text">Here we start!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basis-of-momentum"><span class="nav-number">2.1.</span> <span class="nav-text">Basis of momentum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#In-a-“free”-rigid-body-system"><span class="nav-number">2.2.</span> <span class="nav-text">In a “free” rigid body system</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vector-matrix-tensor…"><span class="nav-number">3.</span> <span class="nav-text">Vector, matrix, tensor…</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-are-we-interested-in-this"><span class="nav-number">1.</span> <span class="nav-text">Why are we interested in this?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Here-we-start"><span class="nav-number">2.</span> <span class="nav-text">Here we start!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basis-of-momentum"><span class="nav-number">2.1.</span> <span class="nav-text">Basis of momentum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#In-a-%E2%80%9Cfree%E2%80%9D-rigid-body-system"><span class="nav-number">2.2.</span> <span class="nav-text">In a “free” rigid body system</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vector-matrix-tensor%E2%80%A6"><span class="nav-number">3.</span> <span class="nav-text">Vector, matrix, tensor…</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -503,6 +486,9 @@ R^{t}\dot{R} V=\vec{\Omega} \times V</script><p>So, we gain</p>
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -526,7 +512,7 @@ R^{t}\dot{R} V=\vec{\Omega} \times V</script><p>So, we gain</p>
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -679,35 +665,6 @@ R^{t}\dot{R} V=\vec{\Omega} \times V</script><p>So, we gain</p>
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

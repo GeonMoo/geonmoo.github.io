@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2020/04/10/lammps2/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="上回我们说到，如何实现LAMMPS的安装和（利用串行程序）运行一次LAMMPS。">
+<meta property="og:locale">
 <meta property="og:image" content="https://lammps.sandia.gov/movies/logo.gif">
 <meta property="og:image" content="https://www.mozheyang.top/images/LAMMPS/dumpfile.png">
 <meta property="og:image" content="https://www.mozheyang.top/images/LAMMPS/dumpstructure.png">
@@ -182,7 +183,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -246,27 +251,6 @@
               </span>
 
           
-            <span id="/2020/04/10/lammps2/" class="post-meta-item leancloud_visitors" data-flag-title="LAMMPS学习札记（二）——输出与输入篇" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/04/10/lammps2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/lammps2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -279,25 +263,25 @@
       
         <p><img src="https://lammps.sandia.gov/movies/logo.gif" alt=""></p>
 <p><a href="">上回</a>我们说到，如何实现LAMMPS的安装和（利用串行程序）运行一次LAMMPS。</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>本文的题目是输出与输入，而不是常见顺序（输入与输出），目的是强调将<strong>输出</strong>命令的学习顺序放在前面，有利于我们调试程序，从而更好地理解LAMMPS中各命令的作用。</p>
 <h1 id="输出命令——dump"><a href="#输出命令——dump" class="headerlink" title="输出命令——dump"></a>输出命令——dump</h1><p>本文还是先以<code>Example/colloid/in.colloid</code>为例。</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#dump		<span class="number">1</span> all atom <span class="number">1000</span> dump.colloid</span><br><span class="line"></span><br><span class="line">#dump		<span class="number">2</span> all image <span class="number">1000</span> image.*.jpg type type &amp;</span><br><span class="line">#		zoom <span class="number">1.5</span> center d <span class="number">0.5</span> <span class="number">0.5</span> <span class="number">0.5</span></span><br><span class="line">#dump_modify	<span class="number">2</span> pad <span class="number">5</span> adiam <span class="number">1</span> <span class="number">5.0</span> adiam <span class="number">2</span> <span class="number">1.5</span></span><br><span class="line"></span><br><span class="line">#dump		<span class="number">3</span> all movie <span class="number">1000</span> movie.mpg type type &amp;</span><br><span class="line">#		zoom <span class="number">1.5</span> center d <span class="number">0.5</span> <span class="number">0.5</span> <span class="number">0.5</span></span><br><span class="line">#dump_modify	<span class="number">3</span> pad <span class="number">5</span> adiam <span class="number">1</span> <span class="number">5.0</span> adiam <span class="number">2</span> <span class="number">1.5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">dump		1 all atom 1000 dump.colloid</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">dump		2 all image 1000 image.*.jpg <span class="built_in">type</span> <span class="built_in">type</span> &amp;</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">		zoom 1.5 center d 0.5 0.5 0.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">dump_modify	2 pad 5 adiam 1 5.0 adiam 2 1.5</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">dump		3 all movie 1000 movie.mpg <span class="built_in">type</span> <span class="built_in">type</span> &amp;</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">		zoom 1.5 center d 0.5 0.5 0.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">dump_modify	3 pad 5 adiam 1 5.0 adiam 2 1.5</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>“#”是注释的意思。<code>in.colloid</code>默认把输出都注释掉了，所以没有输出文件。<br>我们只要把“#”删除，就可以执行对应的命令。</p>
 </blockquote>
 <p>以上命令中出现了三种类型的数据：<strong>dump数据文件</strong>、<strong>jpg格式图片</strong>以及<strong>mpg格式视频</strong>。</p>
-<p>最简单的是<code>dump</code>数据文件，也是我们最常用的。通过dump文件我们可以利用其它软件，例如<a href="https://www.ovito.org/" target="_blank" rel="noopener">OVITO</a>，很方便的进行数据可视化。效果要比LAMMPS内置的图片和视频输出效果更好。对应的命令是：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dump		<span class="number">1</span> all atom <span class="number">1000</span> dump.colloid</span><br></pre></td></tr></table></figure>
+<p>最简单的是<code>dump</code>数据文件，也是我们最常用的。通过dump文件我们可以利用其它软件，例如<a target="_blank" rel="noopener" href="https://www.ovito.org/">OVITO</a>，很方便的进行数据可视化。效果要比LAMMPS内置的图片和视频输出效果更好。对应的命令是：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">dump</span>		<span class="number">1</span> <span class="literal">all</span> atom <span class="number">1000</span> dump.colloid</span><br></pre></td></tr></table></figure>
 <p>他的意思其实是：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">dump</span>		<span class="selector-attr">[ID]</span> <span class="selector-attr">[group ID]</span> <span class="selector-attr">[style]</span> <span class="selector-attr">[timestep]</span> <span class="selector-attr">[filename]</span> <span class="selector-attr">[args]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dump		<span class="selector-attr">[ID]</span> <span class="selector-attr">[group ID]</span> <span class="selector-attr">[style]</span> <span class="selector-attr">[timestep]</span> <span class="selector-attr">[filename]</span> <span class="selector-attr">[args]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>ID</code>：为一个<code>dump</code>命令起一个唯一的代号，一般就是1、2、3</li>
 <li><code>group ID</code>：之前定义的一组对象的组（group）唯一代号，比如所有原子（all），后者氧原子氢原子。除了默认的<code>group ID</code>外，其它<code>group ID</code>需要在使用之前通过<code>group</code>命令定义。</li>
 <li><code>style</code>：数据类型，比如原子三维坐标（<code>atom</code>）。</li>
 <li><code>timestep</code>：记录的时间步长，每隔一个<code>timestep</code>就会记录一行数据。</li>
 <li><code>filename</code>：输出文件名。这里面的“*”指的是每一个<code>timestep</code>记录一个<code>dump</code>文件，“*”处利用当时的时间步进行替代。</li>
-<li><code>args</code>：对应于不同<code>style</code>的一些其它参数，在<a href="https://lammps.sandia.gov/doc/dump.html" target="_blank" rel="noopener"><code>dump</code>命令</a>有更详细的介绍。</li>
+<li><code>args</code>：对应于不同<code>style</code>的一些其它参数，在<a target="_blank" rel="noopener" href="https://lammps.sandia.gov/doc/dump.html"><code>dump</code>命令</a>有更详细的介绍。</li>
 </ul>
 <p>输出文件的格式如下所示：</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/dumpfile.png" alt=""></p>
@@ -306,7 +290,7 @@
 </blockquote>
 <p>可以分析LAMMPS输出的dump文件格式为：</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/dumpstructure.png" alt=""></p>
-<p><a href="https://lammps.sandia.gov/doc/dump_image.html" target="_blank" rel="noopener">图片或视频</a>的输出类似，不过在<code>args</code>处有其他的参数。博主认为直接输出图片或视频不很必要，感兴趣的读者可以自行了解。另外，<code>dump_modify</code>命令是对之前<code>dump</code>命令中的设置进行的调整，一般是一些默认设置。博主作为新手也不是很了解，感兴趣的读者可以参考官方文档：<a href="https://lammps.sandia.gov/doc/dump.html" target="_blank" rel="noopener">dump命令</a>和<a href="https://lammps.sandia.gov/doc/dump_modify.html" target="_blank" rel="noopener">dump_modify命令</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://lammps.sandia.gov/doc/dump_image.html">图片或视频</a>的输出类似，不过在<code>args</code>处有其他的参数。博主认为直接输出图片或视频不很必要，感兴趣的读者可以自行了解。另外，<code>dump_modify</code>命令是对之前<code>dump</code>命令中的设置进行的调整，一般是一些默认设置。博主作为新手也不是很了解，感兴趣的读者可以参考官方文档：<a target="_blank" rel="noopener" href="https://lammps.sandia.gov/doc/dump.html">dump命令</a>和<a target="_blank" rel="noopener" href="https://lammps.sandia.gov/doc/dump_modify.html">dump_modify命令</a>。</p>
 <p>OVITO可视化<code>dump</code>文件是很方便的。在这里博主直接引用一个操作流程。</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/OVITO.png" alt=""></p>
 <p class="refs">Ref: http://cms.sjtu.edu.cn/md_manual.html</p>
@@ -314,10 +298,10 @@
 <h1 id="输入命令read-data"><a href="#输入命令read-data" class="headerlink" title="输入命令read_data"></a>输入命令read_data</h1><p>LAMMPS支持<code>lattice</code>命令建立晶体模型，对金属模拟来说是很有用的，在互联网上的教程也很多。博主主要研究的是分子运动的模拟，不属于晶体模拟范畴；而且分子形态和位置都需要自己定义，那么<code>lattice</code>命令就不是那么理想了。接下来博主准备以<code>molecule</code>目录的<code>in.water</code>为例进行LAMMPS数据输入的实例介绍：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LAMMPS根目录\Examples\USER\atc\molecule</span><br></pre></td></tr></table></figure>
 <p>在这个例子中，<code>in.water</code>读取了一个文件<code>water.init</code>。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">read_data</span> <span class="selector-tag">water</span><span class="selector-class">.init</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read_data water.<span class="keyword">init</span></span><br></pre></td></tr></table></figure>
 <p>通过LAMMPS运行文件，只要是<code>utf-8</code>编码的文本文件，那么后缀或前缀的不同不会产生太大影响。但一般均按照习惯进行命名。<code>*.init</code>文件也可命名为<code>*.data</code>。我们可以来看看<code>water.init</code>文件的格式。此格式即LAMMPS输入文件的格式。</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/datafile.png" alt=""></p>
-<p>LAMMPS输入文件格式要求较为严格。如果格式不正确将不能正常运行。好在LAMMPS系统做的错误提示比较好用，一般能够根据提示找到输入文件的问题所在。输入文件可以很立体全面地定义输入分子的结构和作用势信息，如原子质量、原子间作用势参数、原子坐标、原子成键等等。读者可以具体参考关于<a href="https://lammps.sandia.gov/doc/99/data_format.html" target="_blank" rel="noopener">data format的官方链接</a>。</p>
+<p>LAMMPS输入文件格式要求较为严格。如果格式不正确将不能正常运行。好在LAMMPS系统做的错误提示比较好用，一般能够根据提示找到输入文件的问题所在。输入文件可以很立体全面地定义输入分子的结构和作用势信息，如原子质量、原子间作用势参数、原子坐标、原子成键等等。读者可以具体参考关于<a target="_blank" rel="noopener" href="https://lammps.sandia.gov/doc/99/data_format.html">data format的官方链接</a>。</p>
 <h1 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h1><p>到此为止，我们已经是一个可以随意调试脚本并查看调试结果的LAMMPS“脚本小子”了。</p>
 <p>如何利用LAMMPS成为真正的盐酒者与磕雪家呢？那其中命令的物理意义是一定要了解的。</p>
 <p>博主会挑一些自己用过的命令进行实践和介绍。Love and peace。</p>
@@ -382,7 +366,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -429,7 +412,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#输出命令——dump"><span class="nav-number">1.</span> <span class="nav-text">输出命令——dump</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入命令read-data"><span class="nav-number">2.</span> <span class="nav-text">输入命令read_data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下期预告"><span class="nav-number">3.</span> <span class="nav-text">下期预告</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94dump"><span class="nav-number">1.</span> <span class="nav-text">输出命令——dump</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E5%91%BD%E4%BB%A4read-data"><span class="nav-number">2.</span> <span class="nav-text">输入命令read_data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E6%9C%9F%E9%A2%84%E5%91%8A"><span class="nav-number">3.</span> <span class="nav-text">下期预告</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -488,6 +471,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -511,7 +497,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -664,35 +650,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

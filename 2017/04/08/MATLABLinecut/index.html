@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/04/08/MATLABLinecut/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="笔者在之前已经给大家介绍过一种基本的晶粒计数方法了。接下来给大家介绍的方法相较于上一种方法原理上会更复杂一些。 还好，有关于该方法的数学及物理原理都已经被封装在一个名叫“Linecut”的MATLAB插件中了。笔者准备接下来先简要介绍其原理，然后着重对工具的使用进行介绍。">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/MATLABLinecut/krilFormula.png">
 <meta property="og:image" content="http://mozheyang.top/images/MATLABLinecut/krilFitting.png">
 <meta property="og:image" content="http://mozheyang.top/images/MATLABLinecut/snap_LinecutSearch.png">
@@ -196,7 +197,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -260,27 +265,6 @@
               </span>
 
           
-            <span id="/2017/04/08/MATLABLinecut/" class="post-meta-item leancloud_visitors" data-flag-title="利用MATLAB插件Linecut实现晶粒尺寸测量" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/04/08/MATLABLinecut/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/04/08/MATLABLinecut/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -291,9 +275,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>笔者在之前已经给大家介绍过<a href="http://mozheyang.top/2017/04/06/ImageJLinecut/" target="_blank" rel="noopener">一种基本的晶粒计数方法</a>了。接下来给大家介绍的方法相较于上一种方法原理上会更复杂一些。</p>
+        <p>笔者在之前已经给大家介绍过<a target="_blank" rel="noopener" href="http://mozheyang.top/2017/04/06/ImageJLinecut/">一种基本的晶粒计数方法</a>了。接下来给大家介绍的方法相较于上一种方法原理上会更复杂一些。</p>
 <p>还好，有关于该方法的数学及物理原理都已经被封装在一个名叫“Linecut”的MATLAB插件中了。笔者准备接下来先简要介绍其原理，然后着重对工具的使用进行介绍。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="测量原理"><a href="#测量原理" class="headerlink" title="测量原理"></a>测量原理</h1><hr>
 <p>该插件所依据的原理在Kril的论文中得到详细介绍。Kril等人提出，使用X射线衍射的方法可以较准确地得出晶粒的尺寸分布图（横坐标为晶粒尺寸，纵坐标为出现频率）。Kril与其合作者同时使用X射线衍射（XRD）和透射电子显微镜（TEM）方法对Pd金属的晶粒进行了测量，结果表明，两种测量方法得到的晶粒尺寸结果符合得很好。Kril等人又从数学的角度，推导出晶粒的尺寸分布符合一定的分布函数。其中位置参数中就有平均晶粒尺寸D0。 通过使用该公式对晶粒的尺寸分布进行分布拟合，便可以得到材料的<strong>平均晶粒尺寸</strong>。</p>
 <p><img src="http://mozheyang.top/images/MATLABLinecut/krilFormula.png" alt=""></p>
@@ -301,14 +285,14 @@
 <p>晶粒的尺寸分布图及拟合曲线如下图所示。</p>
 <p><img src="http://mozheyang.top/images/MATLABLinecut/krilFitting.png" alt=""></p>
 <p>点击下方参考文献可下载原文(有部分笔者标注)。</p>
-<p><a href="http://mozheyang.top/documents/kril1998.pdf" target="_blank" rel="noopener">Kril C E, Birringer R. Estimating grain-size distributions in nanocrystalline materials from X-ray diffraction profile analysis[J]. Philosophical Magazine A, 1998, 77(3): 621-640.</a></p>
+<p><a target="_blank" rel="noopener" href="http://mozheyang.top/documents/kril1998.pdf">Kril C E, Birringer R. Estimating grain-size distributions in nanocrystalline materials from X-ray diffraction profile analysis[J]. Philosophical Magazine A, 1998, 77(3): 621-640.</a></p>
 <h1 id="MATLAB插件Linecut的下载及运行"><a href="#MATLAB插件Linecut的下载及运行" class="headerlink" title="MATLAB插件Linecut的下载及运行"></a>MATLAB插件Linecut的下载及运行</h1><hr>
 <p>MATLAB的使用范围是十分广泛的。在国外，MATLAB的熟练使用是理工科学生的“生存必备技能”之一。</p>
 <p>由于MATLAB各个版本的安装方法在其他地方已经较为广泛地讨论了，在这里便不加赘言。</p>
-<p>今天要介绍的这款插件也是我在Google搜索“晶粒尺寸测量”的过程中偶然发现的。该插件可以在<a href="http://cn.mathworks.com/" target="_blank" rel="noopener">MathWorks中国</a>的社区中被搜索到，其最后更新日期为2012年。</p>
+<p>今天要介绍的这款插件也是我在Google搜索“晶粒尺寸测量”的过程中偶然发现的。该插件可以在<a target="_blank" rel="noopener" href="http://cn.mathworks.com/">MathWorks中国</a>的社区中被搜索到，其最后更新日期为2012年。</p>
 <p><img src="http://mozheyang.top/images/MATLABLinecut/snap_LinecutSearch.png" alt=""></p>
 <p>当然我们也可以直接使用Google或百度进行搜索得到其下载链接。</p>
-<p>该插件可以<a href="http://cn.mathworks.com/matlabcentral/fileexchange/35203-grain-and-particle-analysis-with-line-intersection-method" target="_blank" rel="noopener">点击这里</a>进入其主页并下载。其下载和使用都是免费的。</p>
+<p>该插件可以<a target="_blank" rel="noopener" href="http://cn.mathworks.com/matlabcentral/fileexchange/35203-grain-and-particle-analysis-with-line-intersection-method">点击这里</a>进入其主页并下载。其下载和使用都是免费的。</p>
 <p>该插件介绍页面上有详细的视频教程。不过该教程使用英文解说，并且存储在Youtube上，除非“渴学尚往”，否则国内网络无法对其进行访问。关于“渴学尚往”的具体方法请大家自行搜索。</p>
 <p>如下图，点击“Download”之后我们便可以开始下载其压缩包文件。</p>
 <p><img src="http://mozheyang.top/images/MATLABLinecut/snap_LinecutDownload.png" alt=""></p>
@@ -417,7 +401,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -464,7 +447,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#测量原理"><span class="nav-number">1.</span> <span class="nav-text">测量原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MATLAB插件Linecut的下载及运行"><span class="nav-number">2.</span> <span class="nav-text">MATLAB插件Linecut的下载及运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linecut插件的基本使用"><span class="nav-number">3.</span> <span class="nav-text">Linecut插件的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#界面介绍"><span class="nav-number">3.1.</span> <span class="nav-text">界面介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#File"><span class="nav-number">3.1.1.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Length-of-metering-bar（比例尺长度）"><span class="nav-number">3.1.2.</span> <span class="nav-text">Length of metering bar（比例尺长度）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Results-directory"><span class="nav-number">3.1.3.</span> <span class="nav-text">Results directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lines"><span class="nav-number">3.1.4.</span> <span class="nav-text">lines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L-D（截线修正系数）"><span class="nav-number">3.1.5.</span> <span class="nav-text">L&#x2F;D（截线修正系数）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plot-Settings"><span class="nav-number">3.1.6.</span> <span class="nav-text">Plot Settings</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析步骤"><span class="nav-number">3.2.</span> <span class="nav-text">分析步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">测量原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MATLAB%E6%8F%92%E4%BB%B6Linecut%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%8F%8A%E8%BF%90%E8%A1%8C"><span class="nav-number">2.</span> <span class="nav-text">MATLAB插件Linecut的下载及运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linecut%E6%8F%92%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">Linecut插件的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%95%8C%E9%9D%A2%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.1.</span> <span class="nav-text">界面介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#File"><span class="nav-number">3.1.1.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Length-of-metering-bar%EF%BC%88%E6%AF%94%E4%BE%8B%E5%B0%BA%E9%95%BF%E5%BA%A6%EF%BC%89"><span class="nav-number">3.1.2.</span> <span class="nav-text">Length of metering bar（比例尺长度）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Results-directory"><span class="nav-number">3.1.3.</span> <span class="nav-text">Results directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lines"><span class="nav-number">3.1.4.</span> <span class="nav-text">lines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L-D%EF%BC%88%E6%88%AA%E7%BA%BF%E4%BF%AE%E6%AD%A3%E7%B3%BB%E6%95%B0%EF%BC%89"><span class="nav-number">3.1.5.</span> <span class="nav-text">L&#x2F;D（截线修正系数）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plot-Settings"><span class="nav-number">3.1.6.</span> <span class="nav-text">Plot Settings</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.2.</span> <span class="nav-text">分析步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -523,6 +506,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -546,7 +532,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -699,35 +685,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

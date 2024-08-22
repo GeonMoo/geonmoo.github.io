@@ -1,0 +1,25 @@
+.refs {
+  color: #808080;
+  font-style: italic;
+  font-size: 0.8em;
+}
+.eqnBlock {
+  padding: 2px 5px 2px 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+.blackBlock {
+  color: #fff;
+  background-color: #222;
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}

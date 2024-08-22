@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2020/02/05/AdvancedSearch/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="检索式&#x3D;关键词+逻辑运算符+搜索指令（语法）+...">
+<meta property="og:locale">
 <meta property="article:published_time" content="2020-02-05T03:10:28.000Z">
 <meta property="article:modified_time" content="2020-02-05T04:07:39.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -175,7 +176,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -233,27 +238,6 @@
             </span>
 
           
-            <span id="/2020/02/05/AdvancedSearch/" class="post-meta-item leancloud_visitors" data-flag-title="检索原理与技巧" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/02/05/AdvancedSearch/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/05/AdvancedSearch/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -265,7 +249,7 @@
 
       
         <script type="math/tex; mode=display">
-检索式=关键词+逻辑运算符+搜索指令（语法）+...</script><a id="more"></a>
+检索式=关键词+逻辑运算符+搜索指令（语法）+...</script><span id="more"></span>
 <p><strong>主体：</strong>关键词<br><strong>限定条件：</strong>逻辑运算符、搜索指令（语法）</p>
 <p>以下搜索实践在Web of Science、Google、Bing和百度等搜索引擎适用或部分适用！</p>
 <h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><h2 id="布尔（逻辑）运算符"><a href="#布尔（逻辑）运算符" class="headerlink" title="布尔（逻辑）运算符"></a>布尔（逻辑）运算符</h2><ul>
@@ -363,7 +347,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -410,7 +393,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.</span> <span class="nav-text">逻辑运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔（逻辑）运算符"><span class="nav-number">1.1.</span> <span class="nav-text">布尔（逻辑）运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#截词算符（通配符）"><span class="nav-number">1.2.</span> <span class="nav-text">截词算符（通配符）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位置算符"><span class="nav-number">1.3.</span> <span class="nav-text">位置算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精确检索（词组检索）"><span class="nav-number">1.4.</span> <span class="nav-text">精确检索（词组检索）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检索策略"><span class="nav-number">2.</span> <span class="nav-text">检索策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#扩大检索结果"><span class="nav-number">2.1.</span> <span class="nav-text">扩大检索结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缩小检索结果"><span class="nav-number">2.2.</span> <span class="nav-text">缩小检索结果</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">逻辑运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%EF%BC%88%E9%80%BB%E8%BE%91%EF%BC%89%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.1.</span> <span class="nav-text">布尔（逻辑）运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%AA%E8%AF%8D%E7%AE%97%E7%AC%A6%EF%BC%88%E9%80%9A%E9%85%8D%E7%AC%A6%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">截词算符（通配符）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E7%AE%97%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">位置算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%BE%E7%A1%AE%E6%A3%80%E7%B4%A2%EF%BC%88%E8%AF%8D%E7%BB%84%E6%A3%80%E7%B4%A2%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">精确检索（词组检索）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A3%80%E7%B4%A2%E7%AD%96%E7%95%A5"><span class="nav-number">2.</span> <span class="nav-text">检索策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%A9%E5%A4%A7%E6%A3%80%E7%B4%A2%E7%BB%93%E6%9E%9C"><span class="nav-number">2.1.</span> <span class="nav-text">扩大检索结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%A9%E5%B0%8F%E6%A3%80%E7%B4%A2%E7%BB%93%E6%9E%9C"><span class="nav-number">2.2.</span> <span class="nav-text">缩小检索结果</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -469,6 +452,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -492,7 +478,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -645,35 +631,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

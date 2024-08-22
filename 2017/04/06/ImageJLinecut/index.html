@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/04/06/ImageJLinecut/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="摘要：截线法的基本思想是，通过用一定长度的直线截过晶粒，可以计算平均多长的直线可以截过一个晶粒，也就是平均晶粒尺寸。">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/ImageJLinecut/sketch_GrainLinecut.jpg">
 <meta property="og:image" content="http://mozheyang.top/images/ImageJLinecut/snap_ImageJInstall.png">
 <meta property="og:image" content="http://mozheyang.top/images/ImageJLinecut/snap_ImageJOpen.png">
@@ -191,7 +192,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -255,27 +260,6 @@
               </span>
 
           
-            <span id="/2017/04/06/ImageJLinecut/" class="post-meta-item leancloud_visitors" data-flag-title="利用Image J进行晶粒尺寸测量" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/04/06/ImageJLinecut/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/04/06/ImageJLinecut/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -287,7 +271,7 @@
 
       
         <p><strong>摘要：</strong>截线法的基本思想是，通过用一定长度的直线截过晶粒，可以计算平均多长的直线可以截过一个晶粒，也就是平均晶粒尺寸。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="晶粒尺寸测量原理"><a href="#晶粒尺寸测量原理" class="headerlink" title="晶粒尺寸测量原理"></a>晶粒尺寸测量原理</h1><hr>
 <h2 id="统计学（平均数）"><a href="#统计学（平均数）" class="headerlink" title="统计学（平均数）"></a>统计学（平均数）</h2><p>统计的样本总量越大，最后得出的平均晶粒尺寸越可靠。</p>
 <h2 id="截线法晶粒计数"><a href="#截线法晶粒计数" class="headerlink" title="截线法晶粒计数"></a>截线法晶粒计数</h2><p>截线法的基本思想是，通过用一定长度的直线截过晶粒，可以计算平均多长的直线可以截过一个晶粒，也就是平均晶粒尺寸。若记直线长度为L，截过晶粒总数为N，则平均晶粒尺寸可表示为：</p>
@@ -303,8 +287,8 @@ Average Grain Size = \dfrac {L}{N}</script><p><strong>需要注意的是，</str
 <p>橙色截线共穿过5个晶粒边界，即穿过4个晶粒。截线两端未穿过完整晶粒。依据上述原则，可计算截线共穿过5个晶粒。</p>
 <p>此时我们只需要再记录截线长度即可得到平均晶粒尺寸。</p>
 <h1 id="Image-J软件操作"><a href="#Image-J软件操作" class="headerlink" title="Image J软件操作"></a>Image J软件操作</h1><hr>
-<p><a href="http://baike.baidu.com/link?url=cAc6B0PRoG8U1hbcE0PFYjAZ10PQbR1X4dJBAVgLk4VAeZj5ZfrNpxAphfw_uzk-T2N54d2Sn6piN6AMfEzK2X0jmKKiN3CSaxJMewIYpUC" target="_blank" rel="noopener">ImageJ</a>是一个基于java的公共的图像处理软件，它是由National Institutes of Health开发的。可运行于Microsoft Windows，Mac OS，Mac OS X，Linux，和Sharp Zaurus等多种平台。其基于java的特点，使得它编写的程序能以applet等方式分发。</p>
-<p>首先，没有下载Image J的同学可以去<a href="http://imagej.nih.gov/ij/download.html" target="_blank" rel="noopener">Image J官网下载界面</a>免费下载，该软件为开源软件。考虑到大多数同学使用的是windows版本系统，请下载如下图红框所示版本后进行安装。安装过程十分简单。</p>
+<p><a target="_blank" rel="noopener" href="http://baike.baidu.com/link?url=cAc6B0PRoG8U1hbcE0PFYjAZ10PQbR1X4dJBAVgLk4VAeZj5ZfrNpxAphfw_uzk-T2N54d2Sn6piN6AMfEzK2X0jmKKiN3CSaxJMewIYpUC">ImageJ</a>是一个基于java的公共的图像处理软件，它是由National Institutes of Health开发的。可运行于Microsoft Windows，Mac OS，Mac OS X，Linux，和Sharp Zaurus等多种平台。其基于java的特点，使得它编写的程序能以applet等方式分发。</p>
+<p>首先，没有下载Image J的同学可以去<a target="_blank" rel="noopener" href="http://imagej.nih.gov/ij/download.html">Image J官网下载界面</a>免费下载，该软件为开源软件。考虑到大多数同学使用的是windows版本系统，请下载如下图红框所示版本后进行安装。安装过程十分简单。</p>
 <p><img src="http://mozheyang.top/images/ImageJLinecut/snap_ImageJInstall.png" alt=""></p>
 <p>安装完成后打开软件（要记住安装位置，双击安装根目录下ImageJ.exe便可以打开软件），打开后是下图所示界面。很简洁，只有菜单栏、工具栏和状态栏。</p>
 <p><img src="http://mozheyang.top/images/ImageJLinecut/snap_ImageJOpen.png" alt=""></p>
@@ -399,7 +383,6 @@ Average Grain Size = \dfrac {L}{N}</script><p><strong>需要注意的是，</str
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -446,7 +429,7 @@ Average Grain Size = \dfrac {L}{N}</script><p><strong>需要注意的是，</str
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#晶粒尺寸测量原理"><span class="nav-number">1.</span> <span class="nav-text">晶粒尺寸测量原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#统计学（平均数）"><span class="nav-number">1.1.</span> <span class="nav-text">统计学（平均数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#截线法晶粒计数"><span class="nav-number">1.2.</span> <span class="nav-text">截线法晶粒计数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Image-J软件操作"><span class="nav-number">2.</span> <span class="nav-text">Image J软件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置比例尺"><span class="nav-number">2.1.</span> <span class="nav-text">设置比例尺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#记录直线长度及其截过晶粒数目"><span class="nav-number">2.2.</span> <span class="nav-text">记录直线长度及其截过晶粒数目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">3.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%99%B6%E7%B2%92%E5%B0%BA%E5%AF%B8%E6%B5%8B%E9%87%8F%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">晶粒尺寸测量原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%AD%A6%EF%BC%88%E5%B9%B3%E5%9D%87%E6%95%B0%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">统计学（平均数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%AA%E7%BA%BF%E6%B3%95%E6%99%B6%E7%B2%92%E8%AE%A1%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">截线法晶粒计数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Image-J%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">Image J软件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E6%AF%94%E4%BE%8B%E5%B0%BA"><span class="nav-number">2.1.</span> <span class="nav-text">设置比例尺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E7%9B%B4%E7%BA%BF%E9%95%BF%E5%BA%A6%E5%8F%8A%E5%85%B6%E6%88%AA%E8%BF%87%E6%99%B6%E7%B2%92%E6%95%B0%E7%9B%AE"><span class="nav-number">2.2.</span> <span class="nav-text">记录直线长度及其截过晶粒数目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -505,6 +488,9 @@ Average Grain Size = \dfrac {L}{N}</script><p><strong>需要注意的是，</str
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -528,7 +514,7 @@ Average Grain Size = \dfrac {L}{N}</script><p><strong>需要注意的是，</str
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -681,35 +667,6 @@ Average Grain Size = \dfrac {L}{N}</script><p><strong>需要注意的是，</str
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

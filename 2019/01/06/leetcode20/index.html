@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -22,12 +22,13 @@
     var CONFIG = {"hostname":"www.mozheyang.top","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Problem 20: Valid ParenthesesGiven a string containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;{&#39;, &#39;}&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is valid. An i">
+  <meta name="description" content="Problem 20: Valid ParenthesesGiven a string containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;&#123;&#39;, &#39;&#125;&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode | Valid Parentheses (easy level)">
 <meta property="og:url" content="https://www.mozheyang.top/2019/01/06/leetcode20/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
-<meta property="og:description" content="Problem 20: Valid ParenthesesGiven a string containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;{&#39;, &#39;}&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is valid. An i">
+<meta property="og:description" content="Problem 20: Valid ParenthesesGiven a string containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;&#123;&#39;, &#39;&#125;&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is v">
+<meta property="og:locale">
 <meta property="article:published_time" content="2019-01-06T02:47:05.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:12:59.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -175,7 +176,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -239,27 +244,6 @@
               </span>
 
           
-            <span id="/2019/01/06/leetcode20/" class="post-meta-item leancloud_visitors" data-flag-title="LeetCode | Valid Parentheses (easy level)" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/01/06/leetcode20/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/01/06/leetcode20/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -270,35 +254,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Problem-20-Valid-Parentheses"><a href="#Problem-20-Valid-Parentheses" class="headerlink" title="Problem 20: Valid Parentheses"></a>Problem 20: Valid Parentheses</h1><p>Given a string containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
+        <h1 id="Problem-20-Valid-Parentheses"><a href="#Problem-20-Valid-Parentheses" class="headerlink" title="Problem 20: Valid Parentheses"></a>Problem 20: Valid Parentheses</h1><p>Given a string containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;&#123;&#39;</code>, <code>&#39;&#125;&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
 <p>An input string is valid if:</p>
 <ol>
 <li>Open brackets must be closed by the same type of brackets.</li>
 <li>Open brackets must be closed in the correct order.</li>
 </ol>
 <p>Note that an empty string is also considered valid.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Input:</span> <span class="string">"()"</span></span><br><span class="line"><span class="string">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> <span class="string">&quot;()&quot;</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Input:</span> <span class="string">"()[]&#123;&#125;"</span></span><br><span class="line"><span class="string">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> <span class="string">&quot;()[]&#123;&#125;&quot;</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 3:</strong></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Input:</span> <span class="string">"(]"</span></span><br><span class="line"><span class="string">Output:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> <span class="string">&quot;(]&quot;</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 4:</strong></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Input:</span> <span class="string">"([)]"</span></span><br><span class="line"><span class="string">Output:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> <span class="string">&quot;([)]&quot;</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 5:</strong></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Input:</span> <span class="string">"&#123;[]&#125;"</span></span><br><span class="line"><span class="string">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h1 id="Good-solution-for-efficiency"><a href="#Good-solution-for-efficiency" class="headerlink" title="Good solution for efficiency"></a>Good solution for efficiency</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isValid</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        stack = []</span><br><span class="line">        left = [<span class="string">'('</span>,<span class="string">'&#123;'</span>,<span class="string">'['</span>]</span><br><span class="line">        right = [<span class="string">')'</span>,<span class="string">'&#125;'</span>,<span class="string">']'</span>]</span><br><span class="line">        mapping = dict(zip(right,left))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> mapping:</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> stack <span class="keyword">or</span> mapping[s[i]] != stack.pop():</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(s[i])</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">not</span> stack</span><br></pre></td></tr></table></figure>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> <span class="string">&quot;&#123;[]&#125;&quot;</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="Good-solution-for-efficiency"><a href="#Good-solution-for-efficiency" class="headerlink" title="Good solution for efficiency"></a>Good solution for efficiency</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">isValid</span>(<span class="params">self, s</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        stack = []</span><br><span class="line">        left = [<span class="string">&#x27;(&#x27;</span>,<span class="string">&#x27;&#123;&#x27;</span>,<span class="string">&#x27;[&#x27;</span>]</span><br><span class="line">        right = [<span class="string">&#x27;)&#x27;</span>,<span class="string">&#x27;&#125;&#x27;</span>,<span class="string">&#x27;]&#x27;</span>]</span><br><span class="line">        mapping = <span class="built_in">dict</span>(<span class="built_in">zip</span>(right,left))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> mapping:</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> stack <span class="keyword">or</span> mapping[s[i]] != stack.pop():</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(s[i])</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">not</span> stack</span><br></pre></td></tr></table></figure>
 <p><code>left</code> and <code>right</code> are lists. <code>mapping</code> is a dictionary, which combines <code>right</code> and <code>left</code> using <code>dict</code> and <code>zip</code> function. Searching/matching in dictionary would be more efficient than in list. </p>
 <p>Pythonic way to express checking:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> s[i] <span class="keyword">in</span> mapping:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> stack <span class="keyword">or</span> mapping[s[i]] != stack.pop():</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	stack.append(s[i])</span><br></pre></td></tr></table></figure>
 <p>If s[i] is not ‘)’,’}’,’]’, then stack.append(s[i]); if s[i] is ‘)’,’}’,’]’, then compare it with stack.pop() — the top element in stack. Concise code speeds the execution… </p>
-<h1 id="My-ugly-solution"><a href="#My-ugly-solution" class="headerlink" title="My ugly solution"></a>My ugly solution</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isValid</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        </span><br><span class="line">        dict1 = &#123;<span class="string">'('</span>:<span class="number">1</span>, <span class="string">'&#123;'</span>:<span class="number">2</span>, <span class="string">'['</span>:<span class="number">3</span>&#125;</span><br><span class="line">        dict2 = &#123;<span class="string">')'</span>:<span class="string">'('</span>, <span class="string">'&#125;'</span>:<span class="string">'&#123;'</span>, <span class="string">']'</span>:<span class="string">'['</span>&#125;</span><br><span class="line">        stack = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            char = s[n]</span><br><span class="line">            <span class="keyword">if</span> char <span class="keyword">in</span> dict1:</span><br><span class="line">                stack.append(char)</span><br><span class="line">            <span class="keyword">elif</span> char <span class="keyword">in</span> dict2:</span><br><span class="line">                <span class="keyword">if</span> stack == []:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">                <span class="keyword">if</span> dict2[char] == stack[<span class="number">-1</span>]:</span><br><span class="line">                    stack.pop()</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> stack == []</span><br></pre></td></tr></table></figure>
+<h1 id="My-ugly-solution"><a href="#My-ugly-solution" class="headerlink" title="My ugly solution"></a>My ugly solution</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">isValid</span>(<span class="params">self, s</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        dict1 = &#123;<span class="string">&#x27;(&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;&#123;&#x27;</span>:<span class="number">2</span>, <span class="string">&#x27;[&#x27;</span>:<span class="number">3</span>&#125;</span><br><span class="line">        dict2 = &#123;<span class="string">&#x27;)&#x27;</span>:<span class="string">&#x27;(&#x27;</span>, <span class="string">&#x27;&#125;&#x27;</span>:<span class="string">&#x27;&#123;&#x27;</span>, <span class="string">&#x27;]&#x27;</span>:<span class="string">&#x27;[&#x27;</span>&#125;</span><br><span class="line">        stack = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            char = s[n]</span><br><span class="line">            <span class="keyword">if</span> char <span class="keyword">in</span> dict1:</span><br><span class="line">                stack.append(char)</span><br><span class="line">            <span class="keyword">elif</span> char <span class="keyword">in</span> dict2:</span><br><span class="line">                <span class="keyword">if</span> stack == []:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">                <span class="keyword">if</span> dict2[char] == stack[-<span class="number">1</span>]:</span><br><span class="line">                    stack.pop()</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> stack == []</span><br></pre></td></tr></table></figure>
 <p>Too many “if” checks slow the solution. </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> stack == []:</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 <p>This check above for test case without left brackets:</p>
 <p>“]”</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> dict2[char] == stack[<span class="number">-1</span>]:</span><br><span class="line">	stack.pop()</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> dict2[char] == stack[-<span class="number">1</span>]:</span><br><span class="line">	stack.pop()</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 <p>This check above for test case in disorder:</p>
 <p>“(])”</p>
 
@@ -361,7 +345,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -467,6 +450,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -490,7 +476,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -643,35 +629,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

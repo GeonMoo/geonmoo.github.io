@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2018/02/15/ORRbasic/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="为了更深入地理解文献中所出现的各种电化学方法和指标背后的物理意义，笔者对使用到的基本电化学知识做了一个总结。虽然笔者努力保证所整理知识的正确性（添加引用），但由于笔者水平所限，难免错漏，望各位老师同学不吝赐教！">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/TypicalORRpara.png">
 <meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
 <meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/onset-potential-cutdef.png">
@@ -195,7 +196,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -268,27 +273,6 @@
             </span>
 
           
-            <span id="/2018/02/15/ORRbasic/" class="post-meta-item leancloud_visitors" data-flag-title="氧还原反应（Oxygen Reduction Reaction）基础" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/02/15/ORRbasic/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/02/15/ORRbasic/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -300,7 +284,7 @@
 
       
         <p>为了更深入地理解文献中所出现的各种电化学方法和指标背后的物理意义，笔者对使用到的基本电化学知识做了一个总结。虽然笔者努力保证所整理知识的正确性（添加引用），但由于笔者水平所限，难免错漏，望各位老师同学不吝赐教！</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="不同参考电极-Reference-electrode-之间的转换"><a href="#不同参考电极-Reference-electrode-之间的转换" class="headerlink" title="不同参考电极 (Reference electrode) 之间的转换"></a>不同参考电极 (Reference electrode) 之间的转换</h1><h2 id="SCE（Saturated-calomel-electrode，饱和甘汞）电极"><a href="#SCE（Saturated-calomel-electrode，饱和甘汞）电极" class="headerlink" title="SCE（Saturated calomel electrode，饱和甘汞）电极"></a>SCE（Saturated calomel electrode，饱和甘汞）电极</h2><script type="math/tex; mode=display">
 E (vs. \text{RHE}) = E (vs. \text{SCE}) + 0.241 + 0.059 \text{pH}</script><p class="refs">Ref: Han S, Hu X, Wang J, et al. Novel Route to Fe‐Based Cathode as an Efficient Bifunctional Catalysts for Rechargeable Zn–Air Battery[J]. Advanced Energy Materials, 2018, 8(22): 1800955.</p>
 
@@ -464,7 +448,6 @@ j \approx j_0 \exp \left(-\frac{\alpha f \eta}{RT} \right)</script><p>因此</p>
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -511,7 +494,7 @@ j \approx j_0 \exp \left(-\frac{\alpha f \eta}{RT} \right)</script><p>因此</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#不同参考电极-Reference-electrode-之间的转换"><span class="nav-number">1.</span> <span class="nav-text">不同参考电极 (Reference electrode) 之间的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SCE（Saturated-calomel-electrode，饱和甘汞）电极"><span class="nav-number">1.1.</span> <span class="nav-text">SCE（Saturated calomel electrode，饱和甘汞）电极</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ag-AgCl电极"><span class="nav-number">1.2.</span> <span class="nav-text">Ag&#x2F;AgCl电极</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不同氢电极-hydrogen-electrodes"><span class="nav-number">2.</span> <span class="nav-text">不同氢电极 (hydrogen electrodes)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一般氢电极，NHE-Normal-Hydrogen-Electrode"><span class="nav-number">2.1.</span> <span class="nav-text">一般氢电极，NHE (Normal Hydrogen Electrode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标准氢电极，SHE-Standard-Hydrogen-Electrode"><span class="nav-number">2.2.</span> <span class="nav-text">标准氢电极，SHE (Standard Hydrogen Electrode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可逆氢电极，RHE-Reversible-Hydrogen-Electrode"><span class="nav-number">2.3.</span> <span class="nav-text">可逆氢电极，RHE (Reversible Hydrogen Electrode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RHE-Reversible-Hydrogen-Electrode"><span class="nav-number">2.4.</span> <span class="nav-text">RHE (Reversible Hydrogen Electrode)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ORR-performance-氧还原反应性能指标"><span class="nav-number">3.</span> <span class="nav-text">ORR performance  氧还原反应性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Onset-potential-起始点位-amp-Half-wave-potential-半波电位"><span class="nav-number">3.1.</span> <span class="nav-text">Onset potential 起始点位 &amp; Half-wave potential 半波电位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diffusion-limited-current-density-DLCD-极限扩散电流密度"><span class="nav-number">3.2.</span> <span class="nav-text">Diffusion-limited current density (DLCD) 极限扩散电流密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Electron-transfer-number-电子转移数"><span class="nav-number">3.3.</span> <span class="nav-text">Electron transfer number 电子转移数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Koutecky–Levich方程"><span class="nav-number">3.3.1.</span> <span class="nav-text">Koutecky–Levich方程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tafel-slope-塔菲尔斜率"><span class="nav-number">3.4.</span> <span class="nav-text">Tafel slope 塔菲尔斜率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Durability-耐久性"><span class="nav-number">3.5.</span> <span class="nav-text">Durability 耐久性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#循环耐久测试"><span class="nav-number">3.5.1.</span> <span class="nav-text">循环耐久测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恒电位耐久测试"><span class="nav-number">3.5.2.</span> <span class="nav-text">恒电位耐久测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overpotential-过电位"><span class="nav-number">3.6.</span> <span class="nav-text">Overpotential 过电位</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Electrochemical-test-电化学测试"><span class="nav-number">4.</span> <span class="nav-text">Electrochemical test 电化学测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RDE-Rotating-Disk-Electrode-旋转圆盘电极"><span class="nav-number">4.1.</span> <span class="nav-text">RDE (Rotating Disk Electrode) 旋转圆盘电极</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RRDE-Rotating-Ring-Disk-Electrode-旋转环-盘电极"><span class="nav-number">4.2.</span> <span class="nav-text">RRDE (Rotating Ring-Disk Electrode) 旋转环-盘电极</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非常规氧还原反应电化学测试"><span class="nav-number">5.</span> <span class="nav-text">非常规氧还原反应电化学测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EIS-Electrochemical-impedance-spectroscopy-电化学阻抗谱"><span class="nav-number">5.1.</span> <span class="nav-text">EIS (Electrochemical impedance spectroscopy) 电化学阻抗谱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#等效电路"><span class="nav-number">5.1.1.</span> <span class="nav-text">等效电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nyquist-plot"><span class="nav-number">5.1.2.</span> <span class="nav-text">Nyquist plot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bode-plot"><span class="nav-number">5.1.3.</span> <span class="nav-text">Bode plot</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tafel分析"><span class="nav-number">5.2.</span> <span class="nav-text">Tafel分析</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E5%8F%82%E8%80%83%E7%94%B5%E6%9E%81-Reference-electrode-%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.</span> <span class="nav-text">不同参考电极 (Reference electrode) 之间的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SCE%EF%BC%88Saturated-calomel-electrode%EF%BC%8C%E9%A5%B1%E5%92%8C%E7%94%98%E6%B1%9E%EF%BC%89%E7%94%B5%E6%9E%81"><span class="nav-number">1.1.</span> <span class="nav-text">SCE（Saturated calomel electrode，饱和甘汞）电极</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ag-AgCl%E7%94%B5%E6%9E%81"><span class="nav-number">1.2.</span> <span class="nav-text">Ag&#x2F;AgCl电极</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E6%B0%A2%E7%94%B5%E6%9E%81-hydrogen-electrodes"><span class="nav-number">2.</span> <span class="nav-text">不同氢电极 (hydrogen electrodes)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%B0%A2%E7%94%B5%E6%9E%81%EF%BC%8CNHE-Normal-Hydrogen-Electrode"><span class="nav-number">2.1.</span> <span class="nav-text">一般氢电极，NHE (Normal Hydrogen Electrode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E6%B0%A2%E7%94%B5%E6%9E%81%EF%BC%8CSHE-Standard-Hydrogen-Electrode"><span class="nav-number">2.2.</span> <span class="nav-text">标准氢电极，SHE (Standard Hydrogen Electrode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%80%86%E6%B0%A2%E7%94%B5%E6%9E%81%EF%BC%8CRHE-Reversible-Hydrogen-Electrode"><span class="nav-number">2.3.</span> <span class="nav-text">可逆氢电极，RHE (Reversible Hydrogen Electrode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RHE-Reversible-Hydrogen-Electrode"><span class="nav-number">2.4.</span> <span class="nav-text">RHE (Reversible Hydrogen Electrode)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ORR-performance-%E6%B0%A7%E8%BF%98%E5%8E%9F%E5%8F%8D%E5%BA%94%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-number">3.</span> <span class="nav-text">ORR performance  氧还原反应性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Onset-potential-%E8%B5%B7%E5%A7%8B%E7%82%B9%E4%BD%8D-amp-Half-wave-potential-%E5%8D%8A%E6%B3%A2%E7%94%B5%E4%BD%8D"><span class="nav-number">3.1.</span> <span class="nav-text">Onset potential 起始点位 &amp; Half-wave potential 半波电位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diffusion-limited-current-density-DLCD-%E6%9E%81%E9%99%90%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%81%E5%AF%86%E5%BA%A6"><span class="nav-number">3.2.</span> <span class="nav-text">Diffusion-limited current density (DLCD) 极限扩散电流密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Electron-transfer-number-%E7%94%B5%E5%AD%90%E8%BD%AC%E7%A7%BB%E6%95%B0"><span class="nav-number">3.3.</span> <span class="nav-text">Electron transfer number 电子转移数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Koutecky%E2%80%93Levich%E6%96%B9%E7%A8%8B"><span class="nav-number">3.3.1.</span> <span class="nav-text">Koutecky–Levich方程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tafel-slope-%E5%A1%94%E8%8F%B2%E5%B0%94%E6%96%9C%E7%8E%87"><span class="nav-number">3.4.</span> <span class="nav-text">Tafel slope 塔菲尔斜率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Durability-%E8%80%90%E4%B9%85%E6%80%A7"><span class="nav-number">3.5.</span> <span class="nav-text">Durability 耐久性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%80%90%E4%B9%85%E6%B5%8B%E8%AF%95"><span class="nav-number">3.5.1.</span> <span class="nav-text">循环耐久测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%92%E7%94%B5%E4%BD%8D%E8%80%90%E4%B9%85%E6%B5%8B%E8%AF%95"><span class="nav-number">3.5.2.</span> <span class="nav-text">恒电位耐久测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overpotential-%E8%BF%87%E7%94%B5%E4%BD%8D"><span class="nav-number">3.6.</span> <span class="nav-text">Overpotential 过电位</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Electrochemical-test-%E7%94%B5%E5%8C%96%E5%AD%A6%E6%B5%8B%E8%AF%95"><span class="nav-number">4.</span> <span class="nav-text">Electrochemical test 电化学测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RDE-Rotating-Disk-Electrode-%E6%97%8B%E8%BD%AC%E5%9C%86%E7%9B%98%E7%94%B5%E6%9E%81"><span class="nav-number">4.1.</span> <span class="nav-text">RDE (Rotating Disk Electrode) 旋转圆盘电极</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RRDE-Rotating-Ring-Disk-Electrode-%E6%97%8B%E8%BD%AC%E7%8E%AF-%E7%9B%98%E7%94%B5%E6%9E%81"><span class="nav-number">4.2.</span> <span class="nav-text">RRDE (Rotating Ring-Disk Electrode) 旋转环-盘电极</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%9E%E5%B8%B8%E8%A7%84%E6%B0%A7%E8%BF%98%E5%8E%9F%E5%8F%8D%E5%BA%94%E7%94%B5%E5%8C%96%E5%AD%A6%E6%B5%8B%E8%AF%95"><span class="nav-number">5.</span> <span class="nav-text">非常规氧还原反应电化学测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EIS-Electrochemical-impedance-spectroscopy-%E7%94%B5%E5%8C%96%E5%AD%A6%E9%98%BB%E6%8A%97%E8%B0%B1"><span class="nav-number">5.1.</span> <span class="nav-text">EIS (Electrochemical impedance spectroscopy) 电化学阻抗谱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF"><span class="nav-number">5.1.1.</span> <span class="nav-text">等效电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nyquist-plot"><span class="nav-number">5.1.2.</span> <span class="nav-text">Nyquist plot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bode-plot"><span class="nav-number">5.1.3.</span> <span class="nav-text">Bode plot</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tafel%E5%88%86%E6%9E%90"><span class="nav-number">5.2.</span> <span class="nav-text">Tafel分析</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -570,6 +553,9 @@ j \approx j_0 \exp \left(-\frac{\alpha f \eta}{RT} \right)</script><p>因此</p>
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -593,7 +579,7 @@ j \approx j_0 \exp \left(-\frac{\alpha f \eta}{RT} \right)</script><p>因此</p>
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -746,35 +732,6 @@ j \approx j_0 \exp \left(-\frac{\alpha f \eta}{RT} \right)</script><p>因此</p>
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

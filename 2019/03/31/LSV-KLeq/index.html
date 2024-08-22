@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2019/03/31/LSV-KLeq/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="写在前面目前的主流研究认为，碱性环境中的氧还原反应（ORR）主要有两种反应途径。一种是四电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- &#x3D; 4\text{OH}^-一种是二电子过程：  \text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- &#x3D; 2\text{H}_2 \text{O}_2">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png">
 <meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/RDEcoordinate.png">
 <meta property="og:image" content="http://mozheyang.top/images/LSV_KLeq/GammaFunc.png">
@@ -183,7 +184,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -256,27 +261,6 @@
             </span>
 
           
-            <span id="/2019/03/31/LSV-KLeq/" class="post-meta-item leancloud_visitors" data-flag-title="极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/03/31/LSV-KLeq/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/03/31/LSV-KLeq/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -291,7 +275,7 @@
 <script type="math/tex; mode=display">
 \text{O}_2 + 2\text{H}_2 \text{O} + 4\text{e}^- = 4\text{OH}^-</script><p>一种是二电子过程：</p>
 <script type="math/tex; mode=display">
-\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2</script><a id="more"></a>
+\text{O}_2 + 2\text{H}_2 \text{O} + 2\text{e}^- = 2\text{H}_2 \text{O}_2</script><span id="more"></span>
 <p><strong>四电子过程</strong>可以保证在更短的时间内提供更大的电流，即四电子过程可以保证更大的电池（fuel cell/metal-air batteries）功率。氧还原反应的电化学性能测试常使用基于K-L方程的旋转圆盘电极（RDE）方法对反应转移电子数进行测算。</p>
 <p><img src="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p>
 <p class="refs">Ref: 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p>
@@ -443,7 +427,7 @@ $$
 <p>从上式我们可以看出，Levich方程所描述的极限电流情形是Koutecky-Levich方程中$i_k \rightarrow \infty$时的情形。K-L方程的物理意义是：<u><strong>在无表面修饰的电极上，总电流主要由反应动力学导致的电流$i_k$和传质所导致的电流$i_l$构成。</strong></u></p>
 <p><img src="http://mozheyang.top/images/Electrocatalysis/KLplot.png" alt="K-L plot"></p>
 <p>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L拟合直线的<strong>斜率</strong>上。当然，这个变化也会反映在拟合直线的<strong>截距</strong>$\frac{1}{i_k}$上，但其中含有$k_f(E)$这一不易确定的反应动力学参数，所以其不容易被定量分析。</p>
-<p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a href="http://mozheyang.top/2018/02/15/ORRbasic/" target="_blank" rel="noopener">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
+<p>理论上可以通过取不同电压的电流和转速作图，便能够获得不同电压的转移电子数。要更明确地得到不同电位下的转移电子数，需要采用旋转环盘电极（RRDE）方法。旋转环盘电极方法在笔者之前的博文中有介绍其原理（<a target="_blank" rel="noopener" href="http://mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a>）。</p>
 <h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>总结本文得到的结论：</p>
 <ul>
 <li>如果电极的表面物理化学性质发生变化（也即电极经过表面修饰），那么反应的转移电子数必定会发生变化，从而反映在K-L方程拟合直线的<strong>斜率</strong>和<strong>截距</strong>上。</li>
@@ -524,7 +508,6 @@ $$
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -571,7 +554,7 @@ $$
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RDE下液流层的流体力学描述"><span class="nav-number">2.</span> <span class="nav-text">RDE下液流层的流体力学描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RDE法向的物质对流及扩散"><span class="nav-number">3.</span> <span class="nav-text">RDE法向的物质对流及扩散</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#极限电流情形"><span class="nav-number">3.1.</span> <span class="nav-text">极限电流情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非极限电流情形"><span class="nav-number">3.2.</span> <span class="nav-text">非极限电流情形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RDE%E4%B8%8B%E6%B6%B2%E6%B5%81%E5%B1%82%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E6%8F%8F%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">RDE下液流层的流体力学描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RDE%E6%B3%95%E5%90%91%E7%9A%84%E7%89%A9%E8%B4%A8%E5%AF%B9%E6%B5%81%E5%8F%8A%E6%89%A9%E6%95%A3"><span class="nav-number">3.</span> <span class="nav-text">RDE法向的物质对流及扩散</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%94%B5%E6%B5%81%E6%83%85%E5%BD%A2"><span class="nav-number">3.1.</span> <span class="nav-text">极限电流情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E6%9E%81%E9%99%90%E7%94%B5%E6%B5%81%E6%83%85%E5%BD%A2"><span class="nav-number">3.2.</span> <span class="nav-text">非极限电流情形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -630,6 +613,9 @@ $$
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -653,7 +639,7 @@ $$
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -806,35 +792,6 @@ $$
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

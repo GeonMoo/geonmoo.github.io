@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/04/25/ImageJParticle/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="摘要：第二相的尺寸和分布分析是材料分析中重要的一环。通过Image J软件，我们可以实现统计不同大小的颗粒占整个图像的面积。">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/ImageJParticle/snap_ImageJOpen.png">
 <meta property="og:image" content="http://mozheyang.top/images/ImageJParticle/OriginImage.png">
 <meta property="og:image" content="http://mozheyang.top/images/ImageJParticle/ProcessedImage.png">
@@ -186,7 +187,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -250,27 +255,6 @@
               </span>
 
           
-            <span id="/2017/04/25/ImageJParticle/" class="post-meta-item leancloud_visitors" data-flag-title="利用Image J进行第二相尺寸和分布分析" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/04/25/ImageJParticle/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/04/25/ImageJParticle/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -282,17 +266,17 @@
 
       
         <p><strong>摘要：</strong>第二相的尺寸和分布分析是材料分析中重要的一环。通过Image J软件，我们可以实现统计不同大小的颗粒占整个图像的面积。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>“相 (Phase)”是指成分和组织均匀统一的物质部分。在金属材料中，一般除了基体相外，还会存在许多的“第二相”。虽然在数量上，这些第二相不会有太大优势，但其对于整个金属材料的性能影响往往是巨大的。</p>
 <p>第二相与基体相之间存在相界面，界面处协调不好就很可能成为裂纹萌生的起源。而第二相尺寸越大，界面处的 协调就越困难；随着第二相尺寸的减小，界面处的协调会变得愈加容易。第二相可以存在于晶界，削弱晶粒之间的协调性，从而降低金属材料的塑性；第二相也可以弥散分布于基体中，在变形过程中阻挡位错运动，从而提高金属材料的强度。这种通过第二相的析出对金属屈服强度进行提高的方法，称为“第二相强化”。</p>
 <p>由以上分析可知，第二相的尺寸和分布分析是材料分析中重要的一环。通过Image J软件，我们可以实现<strong>统计不同大小的颗粒占整个图像的面积</strong>。</p>
-<h1 id="Image-J具体操作"><a href="#Image-J具体操作" class="headerlink" title="Image J具体操作"></a>Image J具体操作</h1><p>笔者在<a href="http://mozheyang.top/2017/04/06/ImageJLinecut/" target="_blank" rel="noopener">之前的博文</a>中已经介绍了Image J软件。</p>
+<h1 id="Image-J具体操作"><a href="#Image-J具体操作" class="headerlink" title="Image J具体操作"></a>Image J具体操作</h1><p>笔者在<a target="_blank" rel="noopener" href="http://mozheyang.top/2017/04/06/ImageJLinecut/">之前的博文</a>中已经介绍了Image J软件。</p>
 <p>同样的，今天我们仍然需要先打开软件。</p>
 <p><img src="http://mozheyang.top/images/ImageJParticle/snap_ImageJOpen.png" alt=""> </p>
 <p>统计不同大小的颗粒占整个图像的面积的应用需求，实际上与Image J经典应用——<strong>“颗粒统计 (particle analysis)”</strong>本质相同。下面我们就来讨论具体的实施方法。</p>
 <p><strong>1. 设置比例尺。</strong></p>
 <p><img src="http://mozheyang.top/images/ImageJParticle/OriginImage.png" alt=""> </p>
-<p>本图是SEM导出的原图，上面有比例尺。比例尺设置的具体操作与晶粒尺寸测量时类同，请参考笔者博文（<a href="http://mozheyang.top/2017/04/06/ImageJLinecut/" target="_blank" rel="noopener">利用Image J进行晶粒尺寸测量</a>）。</p>
+<p>本图是SEM导出的原图，上面有比例尺。比例尺设置的具体操作与晶粒尺寸测量时类同，请参考笔者博文（<a target="_blank" rel="noopener" href="http://mozheyang.top/2017/04/06/ImageJLinecut/">利用Image J进行晶粒尺寸测量</a>）。</p>
 <p><strong>2. Photoshop灰阶处理。</strong><br>​<br>通过Photoshop将以上图片进行灰阶（增强图像对比度）和裁剪（将比例尺去除）处理后，得到下图：</p>
 <p><img src="http://mozheyang.top/images/ImageJParticle/ProcessedImage.png" alt=""> </p>
 <p>对图片的灰阶进行调节后，图像对比度有了明显提升，去除了图像噪点，方便了接下来所需进行的图像二值化操作。</p>
@@ -315,14 +299,14 @@
 <h1 id="Image-J脚本-Scripts"><a href="#Image-J脚本-Scripts" class="headerlink" title="Image J脚本 (Scripts)"></a>Image J脚本 (Scripts)</h1><p>对少量样品进行第二相（颗粒）分析，那么以上方法便已经足够了。</p>
 <p>但我们知道，一个实验中，样品往往不止一个，甚至会是几十上百个；一次实验统计后也许结果还不会一步到位，这也意味着这种机械过程可能要进行多次。这种工作不仅占用了科研人员宝贵的思考时间，还容易使科研人员产生疲劳，从而使统计结果出现错误。那么是否有办法避免这种机械的重复工作呢？</p>
 <p>机械的重复工作正是计算机所擅长的。Image J软件也为我们提供了<strong>脚本</strong>编程方法。</p>
-<h2 id="Image-J-Scipts源代码"><a href="#Image-J-Scipts源代码" class="headerlink" title="Image J Scipts源代码"></a>Image J Scipts源代码</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">run</span>(<span class="string">"8-bit"</span>);</span><br><span class="line">setOption(<span class="string">"BlackBackground"</span>, <span class="literal">false</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Make Binary"</span>);</span><br><span class="line"></span><br><span class="line">filename = getTitle();</span><br><span class="line"></span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Analyze Particles..."</span>, <span class="string">"size=0-0.5024 show=Outlines display summarize"</span>);</span><br><span class="line">saveAs(<span class="string">"Results"</span>, <span class="string">"F:\\Personal\\Desktop\\0-0.5024.txt"</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Clear Results"</span>); </span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Close"</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Analyze Particles..."</span>, <span class="string">"size=0.5024-3.14 show=Outlines display summarize"</span>);</span><br><span class="line">saveAs(<span class="string">"Results"</span>, <span class="string">"F:\\Personal\\Desktop\\0.5024-3.14.txt"</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Clear Results"</span>); </span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Close"</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Analyze Particles..."</span>, <span class="string">"size=3.14-inf show=Outlines display summarize"</span>);</span><br><span class="line">saveAs(<span class="string">"Results"</span>, <span class="string">"F:\\Personal\\Desktop\\3.14-inf.txt"</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Clear Results"</span>); </span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Close"</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Analyze Particles..."</span>, <span class="string">"size=0-inf show=Outlines display summarize"</span>);</span><br><span class="line">saveAs(<span class="string">"Results"</span>, <span class="string">"F:\\Personal\\Desktop\\0-inf.txt"</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Clear Results"</span>); </span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Close"</span>);</span><br><span class="line"></span><br><span class="line">saveAs(<span class="string">"Tiff"</span>, <span class="string">"F:\\Personal\\Desktop\\"</span> + filename);</span><br><span class="line">selectWindow(<span class="string">"Summary"</span>);</span><br><span class="line">saveAs(<span class="string">"Text"</span>, <span class="string">"F:\\Personal\\Desktop\\Summary.csv"</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>将图片转为8-bit格式。<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">run</span><span class="bash">(<span class="string">"8-bit"</span>);</span></span><br></pre></td></tr></table></figure></p>
-<p>图片二值化。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setOption(<span class="string">"BlackBackground"</span>, <span class="literal">false</span>);</span><br><span class="line"><span class="builtin-name">run</span>(<span class="string">"Make Binary"</span>);</span><br></pre></td></tr></table></figure></p>
-<p>获取导入图片名字到“filename”，在后续命名操作中能用到。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">filename</span> = getTitle()<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Image-J-Scipts源代码"><a href="#Image-J-Scipts源代码" class="headerlink" title="Image J Scipts源代码"></a>Image J Scipts源代码</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">run</span>(<span class="string">&quot;8-bit&quot;</span>);</span><br><span class="line">setOption(<span class="string">&quot;BlackBackground&quot;</span>, <span class="literal">false</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Make Binary&quot;</span>);</span><br><span class="line"></span><br><span class="line">filename = getTitle();</span><br><span class="line"></span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Analyze Particles...&quot;</span>, <span class="string">&quot;size=0-0.5024 show=Outlines display summarize&quot;</span>);</span><br><span class="line">saveAs(<span class="string">&quot;Results&quot;</span>, <span class="string">&quot;F:\\Personal\\Desktop\\0-0.5024.txt&quot;</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Clear Results&quot;</span>); </span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Close&quot;</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Analyze Particles...&quot;</span>, <span class="string">&quot;size=0.5024-3.14 show=Outlines display summarize&quot;</span>);</span><br><span class="line">saveAs(<span class="string">&quot;Results&quot;</span>, <span class="string">&quot;F:\\Personal\\Desktop\\0.5024-3.14.txt&quot;</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Clear Results&quot;</span>); </span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Close&quot;</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Analyze Particles...&quot;</span>, <span class="string">&quot;size=3.14-inf show=Outlines display summarize&quot;</span>);</span><br><span class="line">saveAs(<span class="string">&quot;Results&quot;</span>, <span class="string">&quot;F:\\Personal\\Desktop\\3.14-inf.txt&quot;</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Clear Results&quot;</span>); </span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Close&quot;</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Analyze Particles...&quot;</span>, <span class="string">&quot;size=0-inf show=Outlines display summarize&quot;</span>);</span><br><span class="line">saveAs(<span class="string">&quot;Results&quot;</span>, <span class="string">&quot;F:\\Personal\\Desktop\\0-inf.txt&quot;</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Clear Results&quot;</span>); </span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Close&quot;</span>);</span><br><span class="line"></span><br><span class="line">saveAs(<span class="string">&quot;Tiff&quot;</span>, <span class="string">&quot;F:\\Personal\\Desktop\\&quot;</span> + filename);</span><br><span class="line">selectWindow(<span class="string">&quot;Summary&quot;</span>);</span><br><span class="line">saveAs(<span class="string">&quot;Text&quot;</span>, <span class="string">&quot;F:\\Personal\\Desktop\\Summary.csv&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>将图片转为8-bit格式。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">run</span>(<span class="string">&quot;8-bit&quot;</span>);</span><br></pre></td></tr></table></figure></p>
+<p>图片二值化。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setOption(<span class="string">&quot;BlackBackground&quot;</span>, <span class="literal">false</span>);</span><br><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Make Binary&quot;</span>);</span><br></pre></td></tr></table></figure></p>
+<p>获取导入图片名字到“filename”，在后续命名操作中能用到。<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">filename</span> <span class="operator">=</span> getTitle()<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
 <p>运行”Analyze Particles…”，统计尺寸范围在$ 0-0.5024 \mu $m$^{2}$之间的粒子，“Show”的下拉选项中选择“Outlines”，并勾选复选框“Display results”和“Summarize”。</p>
 <p>后来几句类似的语句，分别统计了尺寸范围在$ 0.5024-3.14 \mu $m$^{2}$之间和 $ 3.14 \mu $m$^{2}$ 以上的粒子，最后还统计了所有粒子的面积占比。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">run</span><span class="bash">(<span class="string">"Analyze Particles..."</span>, <span class="string">"size=0-0.5024 show=Outlines display summarize"</span>);</span></span><br></pre></td></tr></table></figure>
-<p>保存结果文件。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">saveAs(<span class="string">"Results"</span>, <span class="string">"F:<span class="subst">\\</span>Personal<span class="subst">\\</span>Desktop<span class="subst">\\</span>0-0.5024.txt"</span>);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">run</span>(<span class="string">&quot;Analyze Particles...&quot;</span>, <span class="string">&quot;size=0-0.5024 show=Outlines display summarize&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>保存结果文件。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">saveAs(<span class="string">&quot;Results&quot;</span>, <span class="string">&quot;F:<span class="subst">\\</span>Personal<span class="subst">\\</span>Desktop<span class="subst">\\</span>0-0.5024.txt&quot;</span>);</span><br></pre></td></tr></table></figure></p>
 <p>其余命令也比较方便理解，大家若不是很明白可以自行调试，或者联系笔者。<br>Email: mozheyang@outlook.com</p>
 
     </div>
@@ -385,7 +369,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -432,7 +415,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Image-J具体操作"><span class="nav-number">2.</span> <span class="nav-text">Image J具体操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Image-J脚本-Scripts"><span class="nav-number">3.</span> <span class="nav-text">Image J脚本 (Scripts)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-J-Scipts源代码"><span class="nav-number">3.1.</span> <span class="nav-text">Image J Scipts源代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码解析"><span class="nav-number">3.2.</span> <span class="nav-text">代码解析</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Image-J%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">Image J具体操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Image-J%E8%84%9A%E6%9C%AC-Scripts"><span class="nav-number">3.</span> <span class="nav-text">Image J脚本 (Scripts)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-J-Scipts%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text">Image J Scipts源代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-number">3.2.</span> <span class="nav-text">代码解析</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -491,6 +474,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -514,7 +500,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -667,35 +653,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

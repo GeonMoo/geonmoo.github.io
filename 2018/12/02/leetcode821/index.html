@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2018/12/02/leetcode821/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="Problem 821: Shortest Distance to a CharacterGiven a string S and a character C, return an array of integers representing the shortest distance from the character C in the string. Example 1: 12Input:">
+<meta property="og:locale">
 <meta property="article:published_time" content="2018-12-02T08:22:08.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:13:10.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -175,7 +176,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -239,27 +244,6 @@
               </span>
 
           
-            <span id="/2018/12/02/leetcode821/" class="post-meta-item leancloud_visitors" data-flag-title="LeetCode | Shortest Distance to a Character (easy level)" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/12/02/leetcode821/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/12/02/leetcode821/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -272,25 +256,25 @@
       
         <h1 id="Problem-821-Shortest-Distance-to-a-Character"><a href="#Problem-821-Shortest-Distance-to-a-Character" class="headerlink" title="Problem 821: Shortest Distance to a Character"></a>Problem 821: Shortest Distance to a Character</h1><p>Given a string <code>S</code> and a character <code>C</code>, return an array of integers representing the shortest distance from the character <code>C</code> in the string.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">S</span> <span class="string">=</span> <span class="string">"loveleetcode"</span><span class="string">,</span> <span class="string">C</span> <span class="string">=</span> <span class="string">'e'</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[3,</span> <span class="number">2</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">0</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">0</span><span class="string">,</span> <span class="number">0</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">2</span><span class="string">,</span> <span class="number">2</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">0</span><span class="string">]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> S = <span class="string">&quot;loveleetcode&quot;</span>, C = <span class="string">&#x27;e&#x27;</span></span><br><span class="line"><span class="symbol">Output:</span> [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
 <p><strong>Note:</strong></p>
 <ol>
 <li><code>S</code> string length is in <code>[1, 10000].</code></li>
 <li><code>C</code> is a single character, and guaranteed to be in string <code>S</code>.</li>
 <li>All letters in <code>S</code> and <code>C</code> are lowercase.</li>
 </ol>
-<a id="more"></a>
-<h1 id="Good-solution-for-simplicity"><a href="#Good-solution-for-simplicity" class="headerlink" title="Good solution for simplicity"></a>Good solution for simplicity</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shortestToChar</span><span class="params">(self, S, C)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        clist=[i <span class="keyword">for</span> i,v <span class="keyword">in</span> enumerate(S) <span class="keyword">if</span> v==C]</span><br><span class="line">        <span class="keyword">return</span> [min(abs(i-x) <span class="keyword">for</span> i <span class="keyword">in</span> clist) <span class="keyword">for</span> x <span class="keyword">in</span> range(len(S))]</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h1 id="Good-solution-for-simplicity"><a href="#Good-solution-for-simplicity" class="headerlink" title="Good solution for simplicity"></a>Good solution for simplicity</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        clist=[i <span class="keyword">for</span> i,v <span class="keyword">in</span> <span class="built_in">enumerate</span>(S) <span class="keyword">if</span> v==C]</span><br><span class="line">        <span class="keyword">return</span> [<span class="built_in">min</span>(<span class="built_in">abs</span>(i-x) <span class="keyword">for</span> i <span class="keyword">in</span> clist) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(S))]</span><br></pre></td></tr></table></figure>
 <p>This demo uses a <strong>generator</strong> to generate 2 lists: </p>
 <p>one list (clist) stores position where letter equals to C, the other helps to output the final return list, which calculate <strong>every</strong> distances between letters and clist elements. </p>
 <p>However, most of the distances calculation are not necessary. Thus, this method is simple to write, but not the fatest. </p>
-<h1 id="Good-solution-for-efficiency"><a href="#Good-solution-for-efficiency" class="headerlink" title="Good solution for efficiency"></a>Good solution for efficiency</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shortestToChar</span><span class="params">(self, S, C)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        stack = []</span><br><span class="line">        last_C = <span class="literal">None</span></span><br><span class="line">        output = [<span class="number">0</span>] * len(S)</span><br><span class="line">        <span class="keyword">for</span> idx, ch <span class="keyword">in</span> enumerate(S):</span><br><span class="line">            <span class="keyword">if</span> ch != C:</span><br><span class="line">            	stack.append(idx)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">while</span> stack:</span><br><span class="line">                    last_idx = stack.pop()</span><br><span class="line">                    <span class="keyword">if</span> last_C <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                    	output[last_idx] = idx - last_idx</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                    	output[last_idx] = min(</span><br><span class="line">                            idx - last_idx,</span><br><span class="line">                            last_idx - last_C)</span><br><span class="line">                last_C = idx</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            last_idx = stack.pop()</span><br><span class="line">            output[last_idx] = last_idx - last_C <span class="keyword">if</span> last_idx <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">else</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
+<h1 id="Good-solution-for-efficiency"><a href="#Good-solution-for-efficiency" class="headerlink" title="Good solution for efficiency"></a>Good solution for efficiency</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        stack = []</span><br><span class="line">        last_C = <span class="literal">None</span></span><br><span class="line">        output = [<span class="number">0</span>] * <span class="built_in">len</span>(S)</span><br><span class="line">        <span class="keyword">for</span> idx, ch <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> ch != C:</span><br><span class="line">            	stack.append(idx)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">while</span> stack:</span><br><span class="line">                    last_idx = stack.pop()</span><br><span class="line">                    <span class="keyword">if</span> last_C <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                    	output[last_idx] = idx - last_idx</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                    	output[last_idx] = <span class="built_in">min</span>(</span><br><span class="line">                            idx - last_idx,</span><br><span class="line">                            last_idx - last_C)</span><br><span class="line">                last_C = idx</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            last_idx = stack.pop()</span><br><span class="line">            output[last_idx] = last_idx - last_C <span class="keyword">if</span> last_idx <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
 <p>This method uses a <strong>stack</strong> data structure. stack <code>append</code> and stack <code>pop</code>. </p>
 <p>For each screened letter, it compares two distances. </p>
 <h1 id="My-ugly-solution-—-faster-than-71-17"><a href="#My-ugly-solution-—-faster-than-71-17" class="headerlink" title="My ugly solution — faster than 71.17%"></a>My ugly solution — faster than 71.17%</h1><p>My solution avoid most of the meaningless calculation in the most simple one, so it’s a litter bit faster.  </p>
 <p>The main point of my solution is to generate an interval defined by <code>left</code> and <code>right</code>. We have to screen string list used <code>enumerate</code> from left to right. <code>index</code> points to where we are, if we are in the interval, we have to compare distance to <code>left</code> and <code>right</code>; if not, we have to redefined <code>left</code> and <code>right</code>, then compare. </p>
 <p>So for every letter, there are only <strong>two distances</strong> waiting to be calculated and compared.  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shortestToChar</span><span class="params">(self, S, C)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        listEqC = []</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> enumerate(S):</span><br><span class="line">            <span class="keyword">if</span> obj == C:</span><br><span class="line">                listEqC.append(index)</span><br><span class="line">        return_list = []</span><br><span class="line">        pointer = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> listEqC != []:</span><br><span class="line">            left = right = listEqC[pointer]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left = right = float(<span class="string">'inf'</span>)</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> enumerate(S):</span><br><span class="line">            <span class="keyword">if</span> index &gt;= right <span class="keyword">and</span> pointer != len(listEqC)<span class="number">-1</span>:</span><br><span class="line">                pointer += <span class="number">1</span></span><br><span class="line">                left = right</span><br><span class="line">                right = listEqC[pointer]</span><br><span class="line">            left_distance = abs(index-left)</span><br><span class="line">            right_distance = abs(index-right)</span><br><span class="line">            return_list.append(min(left_distance, right_distance))</span><br><span class="line">        <span class="keyword">return</span> return_list</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        listEqC = []</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> obj == C:</span><br><span class="line">                listEqC.append(index)</span><br><span class="line">        return_list = []</span><br><span class="line">        pointer = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> listEqC != []:</span><br><span class="line">            left = right = listEqC[pointer]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left = right = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> index &gt;= right <span class="keyword">and</span> pointer != <span class="built_in">len</span>(listEqC)-<span class="number">1</span>:</span><br><span class="line">                pointer += <span class="number">1</span></span><br><span class="line">                left = right</span><br><span class="line">                right = listEqC[pointer]</span><br><span class="line">            left_distance = <span class="built_in">abs</span>(index-left)</span><br><span class="line">            right_distance = <span class="built_in">abs</span>(index-right)</span><br><span class="line">            return_list.append(<span class="built_in">min</span>(left_distance, right_distance))</span><br><span class="line">        <span class="keyword">return</span> return_list</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -350,7 +334,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -397,7 +380,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-821-Shortest-Distance-to-a-Character"><span class="nav-number">1.</span> <span class="nav-text">Problem 821: Shortest Distance to a Character</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Good-solution-for-simplicity"><span class="nav-number">2.</span> <span class="nav-text">Good solution for simplicity</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Good-solution-for-efficiency"><span class="nav-number">3.</span> <span class="nav-text">Good solution for efficiency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#My-ugly-solution-—-faster-than-71-17"><span class="nav-number">4.</span> <span class="nav-text">My ugly solution — faster than 71.17%</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-821-Shortest-Distance-to-a-Character"><span class="nav-number">1.</span> <span class="nav-text">Problem 821: Shortest Distance to a Character</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Good-solution-for-simplicity"><span class="nav-number">2.</span> <span class="nav-text">Good solution for simplicity</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Good-solution-for-efficiency"><span class="nav-number">3.</span> <span class="nav-text">Good solution for efficiency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#My-ugly-solution-%E2%80%94-faster-than-71-17"><span class="nav-number">4.</span> <span class="nav-text">My ugly solution — faster than 71.17%</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -456,6 +439,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -479,7 +465,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -632,35 +618,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

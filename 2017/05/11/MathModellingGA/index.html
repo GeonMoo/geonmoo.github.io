@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/05/11/MathModellingGA/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="关键词：摄像头、组合优化、遗传算法">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/CircleSector.png">
 <meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/CameraCover.gif">
 <meta property="og:image" content="http://mozheyang.top/images/MathModellingGA/MAIGallery.png">
@@ -183,7 +184,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -256,27 +261,6 @@
             </span>
 
           
-            <span id="/2017/05/11/MathModellingGA/" class="post-meta-item leancloud_visitors" data-flag-title="遗传算法 | 展馆安全保障问题" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/05/11/MathModellingGA/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/05/11/MathModellingGA/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -288,7 +272,7 @@
 
       
         <p><strong>关键词：</strong>摄像头、组合优化、遗传算法</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="原题目及其分析"><a href="#原题目及其分析" class="headerlink" title="原题目及其分析"></a>原题目及其分析</h1><p>首先，放上完整的题目，如下所示。</p>
 <blockquote>
 <p>你们保安公司与某艺术展馆签订了一项安保合同，为他们安装摄像监视装置。由于这些摄像装置较大，会对展馆参观者视线形成干扰，所以展馆管理方希望这些装置安装得越少越好，并且希望摄像机尽可能装在角落处。<br>摄像机当固定摄像时能清晰分辨的距离为7.5米，当水平旋转摄像时能清晰分辨的距离为2.5米，摄像头视角大约为50度。<br>多数展馆都希望最大限度地利用空间展示展品，所以展馆的平面布局相当复杂，有一些隔板会以各种角度立在房间中间或者走廊上。尽管该展厅很大（见图1、图2），但任何两个对面墙之间的距离并不大，所以参观者不需要无谓地走很多路。所有的墙壁以及隔板都是平的。</p>
@@ -358,7 +342,7 @@ Permanent Exhibition Area摄像头安装方案样本
 <p>通过上机进行穷举实验，我们发现，$2^{13-15}$的解空间是可以利用穷举法求解的，即对各基础样本进行叠加实验，试出最大的监视区域覆盖面积。很顺利的，笔者通过两次穷举方法求解出了最佳安装方案（最大的摄像头单位覆盖面积），可参见本文最后图中结果。</p>
 <h3 id="遗传算法求解"><a href="#遗传算法求解" class="headerlink" title="遗传算法求解"></a>遗传算法求解</h3><p>而$2^{27}$的解空间大小则不能通过简单的穷举方法进行求解。因此，考虑使用遗传算法对Permanent Exhibition Area的安装方案进行优化求解。</p>
 <p>在下面，由于空间所限，笔者暂时只讲核心算法——遗传算法代码（使用MATLAB编写）列于下方。需要声明的是，本段代码设计参考并修改自网络上的开源代码，如有侵权，请联系本人删除。</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 二进制编码遗传算法求解</span></span><br><span class="line">clc;</span><br><span class="line">clear all;</span><br><span class="line">close all;</span><br><span class="line"><span class="comment">% 主程序中声明global，子程序可调用</span></span><br><span class="line"><span class="keyword">global</span> BitLength</span><br><span class="line"><span class="keyword">global</span> boundsbegin</span><br><span class="line"><span class="keyword">global</span> boundsend</span><br><span class="line"><span class="comment">%% 算法初始状态设置</span></span><br><span class="line">bounds=[<span class="number">0</span> <span class="number">1</span>];<span class="comment">%一维自变量的取值范围</span></span><br><span class="line">precision=<span class="number">1e-4</span>; <span class="comment">%运算精度</span></span><br><span class="line">boundsbegin=bounds(:,<span class="number">1</span>);</span><br><span class="line">boundsend=bounds(:,<span class="number">2</span>);</span><br><span class="line">BitLength=<span class="number">27</span>;</span><br><span class="line">popsize=<span class="number">50</span>; <span class="comment">%初始种群大小</span></span><br><span class="line">Generationnmax=<span class="number">20</span>;  <span class="comment">%最大代数</span></span><br><span class="line">pcrossover=<span class="number">0.60</span>; <span class="comment">%交配概率</span></span><br><span class="line">pmutation=<span class="number">0.02</span>; <span class="comment">%变异概率</span></span><br><span class="line"><span class="comment">%% 主程序</span></span><br><span class="line"><span class="comment">%产生初始种群，摄像头个数在9个以上</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    population=<span class="built_in">round</span>(<span class="built_in">rand</span>(popsize,BitLength));</span><br><span class="line">    <span class="keyword">if</span> sum(population)&gt;<span class="number">9</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%计算适应度,返回适应度Fitvalue和累积概率cumsump</span></span><br><span class="line">[Fitvalue,cumsump]=fitnessval(population);  </span><br><span class="line">Generation=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 循环终止条件为达到最大代数，在机时较充裕时可设置达到误差精度后终止</span></span><br><span class="line"><span class="keyword">while</span> Generation&lt;Generationnmax+<span class="number">1</span></span><br><span class="line">    str=strcat(<span class="string">'目前是第'</span>,Generation,<span class="string">'代！'</span>);</span><br><span class="line">    <span class="built_in">disp</span>(str)</span><br><span class="line">   <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:<span class="number">2</span>:popsize </span><br><span class="line">      <span class="comment">%选择操作</span></span><br><span class="line">      seln=selection(population,cumsump);</span><br><span class="line">      <span class="comment">%交叉操作</span></span><br><span class="line">      scro=crossover(population,seln,pcrossover);</span><br><span class="line">      scnew(<span class="built_in">j</span>,:)=scro(<span class="number">1</span>,:);</span><br><span class="line">      scnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=scro(<span class="number">2</span>,:);</span><br><span class="line">      <span class="comment">%变异操作</span></span><br><span class="line">      smnew(<span class="built_in">j</span>,:)=mutation(scnew(<span class="built_in">j</span>,:),pmutation);</span><br><span class="line">      smnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=mutation(scnew(<span class="built_in">j</span>+<span class="number">1</span>,:),pmutation);</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line">   population=smnew;  <span class="comment">%产生了新的种群</span></span><br><span class="line">   <span class="comment">%计算新种群的适应度   </span></span><br><span class="line">   [Fitvalue,cumsump]=fitnessval(population);</span><br><span class="line">   <span class="comment">%记录当前代最好的适应度和平均适应度</span></span><br><span class="line">   [fmax,nmax]=<span class="built_in">max</span>(Fitvalue);</span><br><span class="line">   fmean=<span class="built_in">mean</span>(Fitvalue);</span><br><span class="line">   ymax(Generation)=fmax;</span><br><span class="line">   ymean(Generation)=fmean;</span><br><span class="line">   <span class="comment">%记录当前代的最佳染色体个体</span></span><br><span class="line">   xmax(Generation)=Room1Search(population(nmax,:));</span><br><span class="line">   Bestpopulation=population(nmax,:);</span><br><span class="line">   Generation=Generation+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%% 结果显示</span></span><br><span class="line">Generation=Generation<span class="number">-1</span></span><br><span class="line">Besttargetfunvalue=Room1Search(Bestpopulation)</span><br><span class="line">Bestpopulation</span><br><span class="line">hand=<span class="built_in">plot</span>(<span class="number">1</span>:Generation,ymean);</span><br><span class="line">set(hand,<span class="string">'color'</span>,<span class="string">'r'</span>,<span class="string">'linestyle'</span>,<span class="string">'-'</span>,<span class="string">'linewidth'</span>,<span class="number">1.8</span>,<span class="string">'marker'</span>,<span class="string">'h'</span>,<span class="string">'markersize'</span>,<span class="number">6</span>)</span><br><span class="line">xlabel(<span class="string">'进化代数'</span>);ylabel(<span class="string">'最大/平均适应度'</span>);xlim([<span class="number">1</span> Generationnmax]);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'最大适应度'</span>,<span class="string">'平均适应度'</span>);</span><br><span class="line">box off;<span class="built_in">hold</span> off;</span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 二进制编码遗传算法求解</span></span><br><span class="line">clc;</span><br><span class="line">clear all;</span><br><span class="line">close all;</span><br><span class="line"><span class="comment">% 主程序中声明global，子程序可调用</span></span><br><span class="line"><span class="keyword">global</span> BitLength</span><br><span class="line"><span class="keyword">global</span> boundsbegin</span><br><span class="line"><span class="keyword">global</span> boundsend</span><br><span class="line"><span class="comment">%% 算法初始状态设置</span></span><br><span class="line">bounds=[<span class="number">0</span> <span class="number">1</span>];<span class="comment">%一维自变量的取值范围</span></span><br><span class="line">precision=<span class="number">1e-4</span>; <span class="comment">%运算精度</span></span><br><span class="line">boundsbegin=bounds(:,<span class="number">1</span>);</span><br><span class="line">boundsend=bounds(:,<span class="number">2</span>);</span><br><span class="line">BitLength=<span class="number">27</span>;</span><br><span class="line">popsize=<span class="number">50</span>; <span class="comment">%初始种群大小</span></span><br><span class="line">Generationnmax=<span class="number">20</span>;  <span class="comment">%最大代数</span></span><br><span class="line">pcrossover=<span class="number">0.60</span>; <span class="comment">%交配概率</span></span><br><span class="line">pmutation=<span class="number">0.02</span>; <span class="comment">%变异概率</span></span><br><span class="line"><span class="comment">%% 主程序</span></span><br><span class="line"><span class="comment">%产生初始种群，摄像头个数在9个以上</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    population=<span class="built_in">round</span>(<span class="built_in">rand</span>(popsize,BitLength));</span><br><span class="line">    <span class="keyword">if</span> sum(population)&gt;<span class="number">9</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%计算适应度,返回适应度Fitvalue和累积概率cumsump</span></span><br><span class="line">[Fitvalue,cumsump]=fitnessval(population);  </span><br><span class="line">Generation=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 循环终止条件为达到最大代数，在机时较充裕时可设置达到误差精度后终止</span></span><br><span class="line"><span class="keyword">while</span> Generation&lt;Generationnmax+<span class="number">1</span></span><br><span class="line">    str=strcat(<span class="string">&#x27;目前是第&#x27;</span>,Generation,<span class="string">&#x27;代！&#x27;</span>);</span><br><span class="line">    <span class="built_in">disp</span>(str)</span><br><span class="line">   <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:<span class="number">2</span>:popsize </span><br><span class="line">      <span class="comment">%选择操作</span></span><br><span class="line">      seln=selection(population,cumsump);</span><br><span class="line">      <span class="comment">%交叉操作</span></span><br><span class="line">      scro=crossover(population,seln,pcrossover);</span><br><span class="line">      scnew(<span class="built_in">j</span>,:)=scro(<span class="number">1</span>,:);</span><br><span class="line">      scnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=scro(<span class="number">2</span>,:);</span><br><span class="line">      <span class="comment">%变异操作</span></span><br><span class="line">      smnew(<span class="built_in">j</span>,:)=mutation(scnew(<span class="built_in">j</span>,:),pmutation);</span><br><span class="line">      smnew(<span class="built_in">j</span>+<span class="number">1</span>,:)=mutation(scnew(<span class="built_in">j</span>+<span class="number">1</span>,:),pmutation);</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line">   population=smnew;  <span class="comment">%产生了新的种群</span></span><br><span class="line">   <span class="comment">%计算新种群的适应度   </span></span><br><span class="line">   [Fitvalue,cumsump]=fitnessval(population);</span><br><span class="line">   <span class="comment">%记录当前代最好的适应度和平均适应度</span></span><br><span class="line">   [fmax,nmax]=<span class="built_in">max</span>(Fitvalue);</span><br><span class="line">   fmean=<span class="built_in">mean</span>(Fitvalue);</span><br><span class="line">   ymax(Generation)=fmax;</span><br><span class="line">   ymean(Generation)=fmean;</span><br><span class="line">   <span class="comment">%记录当前代的最佳染色体个体</span></span><br><span class="line">   xmax(Generation)=Room1Search(population(nmax,:));</span><br><span class="line">   Bestpopulation=population(nmax,:);</span><br><span class="line">   Generation=Generation+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%% 结果显示</span></span><br><span class="line">Generation=Generation<span class="number">-1</span></span><br><span class="line">Besttargetfunvalue=Room1Search(Bestpopulation)</span><br><span class="line">Bestpopulation</span><br><span class="line">hand=<span class="built_in">plot</span>(<span class="number">1</span>:Generation,ymean);</span><br><span class="line">set(hand,<span class="string">&#x27;color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>,<span class="string">&#x27;linestyle&#x27;</span>,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;linewidth&#x27;</span>,<span class="number">1.8</span>,<span class="string">&#x27;marker&#x27;</span>,<span class="string">&#x27;h&#x27;</span>,<span class="string">&#x27;markersize&#x27;</span>,<span class="number">6</span>)</span><br><span class="line">xlabel(<span class="string">&#x27;进化代数&#x27;</span>);ylabel(<span class="string">&#x27;最大/平均适应度&#x27;</span>);xlim([<span class="number">1</span> Generationnmax]);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">&#x27;最大适应度&#x27;</span>,<span class="string">&#x27;平均适应度&#x27;</span>);</span><br><span class="line">box off;<span class="built_in">hold</span> off;</span><br></pre></td></tr></table></figure>
 <h3 id="求解结果"><a href="#求解结果" class="headerlink" title="求解结果"></a>求解结果</h3><p>最后最优方案的覆盖示意图：</p>
 <p><img src="http://mozheyang.top/images/MathModellingGA/Optimum.png" alt=""> </p>
 <div  align="center">
@@ -430,7 +414,6 @@ Permanent Exhibition Area摄像头安装方案样本
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -477,7 +460,7 @@ Permanent Exhibition Area摄像头安装方案样本
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原题目及其分析"><span class="nav-number">1.</span> <span class="nav-text">原题目及其分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题过程"><span class="nav-number">2.</span> <span class="nav-text">解题过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#摄像头模型分析"><span class="nav-number">2.1.</span> <span class="nav-text">摄像头模型分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#摄像头安装策略"><span class="nav-number">2.2.</span> <span class="nav-text">摄像头安装策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#样本制作（从0到1）"><span class="nav-number">2.2.1.</span> <span class="nav-text">样本制作（从0到1）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样本叠加（从1到n）"><span class="nav-number">2.2.2.</span> <span class="nav-text">样本叠加（从1到n）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监视区域覆盖面积"><span class="nav-number">2.3.</span> <span class="nav-text">监视区域覆盖面积</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#穷举法求解"><span class="nav-number">2.3.1.</span> <span class="nav-text">穷举法求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遗传算法求解"><span class="nav-number">2.3.2.</span> <span class="nav-text">遗传算法求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求解结果"><span class="nav-number">2.3.3.</span> <span class="nav-text">求解结果</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E9%A2%98%E7%9B%AE%E5%8F%8A%E5%85%B6%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">原题目及其分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">解题过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%84%E5%83%8F%E5%A4%B4%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90"><span class="nav-number">2.1.</span> <span class="nav-text">摄像头模型分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%89%E8%A3%85%E7%AD%96%E7%95%A5"><span class="nav-number">2.2.</span> <span class="nav-text">摄像头安装策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E5%88%B6%E4%BD%9C%EF%BC%88%E4%BB%8E0%E5%88%B01%EF%BC%89"><span class="nav-number">2.2.1.</span> <span class="nav-text">样本制作（从0到1）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E5%8F%A0%E5%8A%A0%EF%BC%88%E4%BB%8E1%E5%88%B0n%EF%BC%89"><span class="nav-number">2.2.2.</span> <span class="nav-text">样本叠加（从1到n）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%91%E8%A7%86%E5%8C%BA%E5%9F%9F%E8%A6%86%E7%9B%96%E9%9D%A2%E7%A7%AF"><span class="nav-number">2.3.</span> <span class="nav-text">监视区域覆盖面积</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%B7%E4%B8%BE%E6%B3%95%E6%B1%82%E8%A7%A3"><span class="nav-number">2.3.1.</span> <span class="nav-text">穷举法求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3"><span class="nav-number">2.3.2.</span> <span class="nav-text">遗传算法求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82%E8%A7%A3%E7%BB%93%E6%9E%9C"><span class="nav-number">2.3.3.</span> <span class="nav-text">求解结果</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -536,6 +519,9 @@ Permanent Exhibition Area摄像头安装方案样本
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -559,7 +545,7 @@ Permanent Exhibition Area摄像头安装方案样本
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -712,35 +698,6 @@ Permanent Exhibition Area摄像头安装方案样本
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

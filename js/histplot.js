@@ -20,6 +20,6 @@ function setplot(listdata, div, title) {
 function histplot(filepath, div, title) {
     $.get(filepath, function(listdata) {
         let jsondata = JSON.parse(listdata);
-        setplot(jsondata.data,div, title);
+        setplot(jsondata.data, div, title);
     });
 }

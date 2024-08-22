@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/11/07/EClecturenote5/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="本文还在持续写作中… 这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者对其中的两条思路进行了归纳。第一条推导思路已经完成，详情请见PDF文件。第二条推导思路正在完善中，敬请期待。本文的主要参考材料为何师兄的LectureNote[1]。 本章节其实只讨论了电化学过程的传质过程，物理假设很多，推导复杂，笔者会继续完善思路细节。">
+<meta property="og:locale">
 <meta property="article:published_time" content="2017-11-07T03:05:14.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:05:12.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -176,7 +177,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -249,27 +254,6 @@
             </span>
 
           
-            <span id="/2017/11/07/EClecturenote5/" class="post-meta-item leancloud_visitors" data-flag-title="课后回顾 | 电化学动力学（介观尺度）" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/11/07/EClecturenote5/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/11/07/EClecturenote5/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -281,9 +265,9 @@
 
       
         <p>本文还在持续写作中…</p>
-<p>这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者对其中的两条思路进行了归纳。第一条推导思路已经完成，详情请见<a href="http://mozheyang.top/documents/FirstPath20171129.pdf" target="_blank" rel="noopener">PDF文件</a>。第二条推导思路正在完善中，敬请期待。本文的主要参考材料为何师兄的LectureNote[1]。</p>
+<p>这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者对其中的两条思路进行了归纳。第一条推导思路已经完成，详情请见<a target="_blank" rel="noopener" href="http://mozheyang.top/documents/FirstPath20171129.pdf">PDF文件</a>。第二条推导思路正在完善中，敬请期待。本文的主要参考材料为何师兄的LectureNote[1]。</p>
 <p>本章节其实只讨论了电化学过程的<strong>传质过程</strong>，物理假设很多，推导复杂，笔者会继续完善思路细节。</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
 <h1 id="随机过程"><a href="#随机过程" class="headerlink" title="随机过程"></a>随机过程</h1><p>本部分内容通过Markov链模型推导出Chapman-Kolmogorov方程，为后来的得到Fokker-Planck方程作理论铺垫。</p>
 <h2 id="一维随机行走——Drunk-man模型"><a href="#一维随机行走——Drunk-man模型" class="headerlink" title="一维随机行走——Drunk-man模型"></a>一维随机行走——Drunk-man模型</h2><p>若Drunk-man在$x=0$位置处出发，记在直线方向上的每一步“行走”距离为$a_{1},a_{2}, \cdots , a_{n}$ ，则$n$步之后Drunk-man的位置在哪？这就是Drunk-man模型的所需要解决的问题. </p>
@@ -446,7 +430,6 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -493,7 +476,7 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#随机过程"><span class="nav-number">1.</span> <span class="nav-text">随机过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一维随机行走——Drunk-man模型"><span class="nav-number">1.1.</span> <span class="nav-text">一维随机行走——Drunk-man模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三维随机行走——Brownian运动"><span class="nav-number">1.2.</span> <span class="nav-text">三维随机行走——Brownian运动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fluctuation-Dissipation-Theory"><span class="nav-number">1.3.</span> <span class="nav-text">Fluctuation Dissipation Theory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Einstein关系"><span class="nav-number">1.4.</span> <span class="nav-text">Einstein关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一条通向Fokker-Planck方程的路径"><span class="nav-number">2.</span> <span class="nav-text">第一条通向Fokker-Planck方程的路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapman-Kolmogorov方程"><span class="nav-number">2.1.</span> <span class="nav-text">Chapman-Kolmogorov方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Master方程"><span class="nav-number">2.2.</span> <span class="nav-text">Master方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fokker-Planck方程"><span class="nav-number">2.3.</span> <span class="nav-text">Fokker-Planck方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二条通向Fokker-Planck方程的路径"><span class="nav-number">3.</span> <span class="nav-text">第二条通向Fokker-Planck方程的路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Langevin方程"><span class="nav-number">3.1.</span> <span class="nav-text">Langevin方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fokker-Planck方程-1"><span class="nav-number">3.2.</span> <span class="nav-text">Fokker-Planck方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fick第二定律的三种推导方式"><span class="nav-number">4.</span> <span class="nav-text">Fick第二定律的三种推导方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#唯象模型方法"><span class="nav-number">4.1.</span> <span class="nav-text">唯象模型方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Brownian-motion"><span class="nav-number">4.2.</span> <span class="nav-text">Brownian motion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Einstein方法"><span class="nav-number">4.3.</span> <span class="nav-text">Einstein方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考材料"><span class="nav-number">5.</span> <span class="nav-text">参考材料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">随机过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E9%9A%8F%E6%9C%BA%E8%A1%8C%E8%B5%B0%E2%80%94%E2%80%94Drunk-man%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">一维随机行走——Drunk-man模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E9%9A%8F%E6%9C%BA%E8%A1%8C%E8%B5%B0%E2%80%94%E2%80%94Brownian%E8%BF%90%E5%8A%A8"><span class="nav-number">1.2.</span> <span class="nav-text">三维随机行走——Brownian运动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fluctuation-Dissipation-Theory"><span class="nav-number">1.3.</span> <span class="nav-text">Fluctuation Dissipation Theory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Einstein%E5%85%B3%E7%B3%BB"><span class="nav-number">1.4.</span> <span class="nav-text">Einstein关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%9D%A1%E9%80%9A%E5%90%91Fokker-Planck%E6%96%B9%E7%A8%8B%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="nav-number">2.</span> <span class="nav-text">第一条通向Fokker-Planck方程的路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapman-Kolmogorov%E6%96%B9%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">Chapman-Kolmogorov方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Master%E6%96%B9%E7%A8%8B"><span class="nav-number">2.2.</span> <span class="nav-text">Master方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fokker-Planck%E6%96%B9%E7%A8%8B"><span class="nav-number">2.3.</span> <span class="nav-text">Fokker-Planck方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%9D%A1%E9%80%9A%E5%90%91Fokker-Planck%E6%96%B9%E7%A8%8B%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="nav-number">3.</span> <span class="nav-text">第二条通向Fokker-Planck方程的路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Langevin%E6%96%B9%E7%A8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">Langevin方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fokker-Planck%E6%96%B9%E7%A8%8B-1"><span class="nav-number">3.2.</span> <span class="nav-text">Fokker-Planck方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fick%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B%E7%9A%84%E4%B8%89%E7%A7%8D%E6%8E%A8%E5%AF%BC%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">Fick第二定律的三种推导方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%94%AF%E8%B1%A1%E6%A8%A1%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">唯象模型方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Brownian-motion"><span class="nav-number">4.2.</span> <span class="nav-text">Brownian motion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Einstein%E6%96%B9%E6%B3%95"><span class="nav-number">4.3.</span> <span class="nav-text">Einstein方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%9D%90%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考材料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -552,6 +535,9 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -575,7 +561,7 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -728,35 +714,6 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

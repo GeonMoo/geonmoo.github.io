@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2018/01/21/GreenFunction/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="在物理中可以引用Green函数求解下列形式的线性微分方程  [z-\hat{L}(\mathbf{r})]u(\textbf{r}) &#x3D; f(\mathbf{r})">
+<meta property="og:locale">
 <meta property="article:published_time" content="2018-01-21T11:04:06.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:34:38.000Z">
 <meta property="article:author" content="Geon Mo">
@@ -175,7 +176,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -248,27 +253,6 @@
             </span>
 
           
-            <span id="/2018/01/21/GreenFunction/" class="post-meta-item leancloud_visitors" data-flag-title="Green函数在量子物理中定义与广义定义的联系" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/01/21/GreenFunction/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/01/21/GreenFunction/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -281,7 +265,7 @@
       
         <p>在物理中可以引用Green函数求解下列形式的线性微分方程</p>
 <script type="math/tex; mode=display">
-[z-\hat{L}(\mathbf{r})]u(\textbf{r}) = f(\mathbf{r})</script><a id="more"></a>
+[z-\hat{L}(\mathbf{r})]u(\textbf{r}) = f(\mathbf{r})</script><span id="more"></span>
 <p>那么$u(\mathbf{r’})$可以通过Green函数$G$进行表示</p>
 <script type="math/tex; mode=display">
 u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r'};z) f(\mathbf{r'}) \text{d} \mathbf{r'}</script><p>这时的Green函数$G$可以被定义为</p>
@@ -385,7 +369,6 @@ u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r'};z) f(\mathbf{r'}) \text{d} \mathbf
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -490,6 +473,9 @@ u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r'};z) f(\mathbf{r'}) \text{d} \mathbf
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -513,7 +499,7 @@ u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r'};z) f(\mathbf{r'}) \text{d} \mathbf
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -666,35 +652,6 @@ u(\mathbf{r}) = \int G(\mathbf{r},\mathbf{r'};z) f(\mathbf{r'}) \text{d} \mathbf
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

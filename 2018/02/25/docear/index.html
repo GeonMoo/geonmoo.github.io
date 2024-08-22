@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2018/02/25/docear/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="如果你喜欢笔者的这篇分享，欢迎联系笔者：mozheyang@outlook.com Docear初体验Docear是一款结合了Freeplane（思维导图）和JabRef（文献管理）两个开源工具的思维导图文献管理工具 ，其也是开源的。思维导图的好处自不必笔者赘述，若有感兴趣的读者可以读一读东尼.伯赞（Buzan T.）思维导图系列丛书。">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/docear/newproject.png">
 <meta property="og:image" content="http://mozheyang.top/images/docear/newmindmap.png">
 <meta property="og:image" content="http://mozheyang.top/images/docear/editnode.png">
@@ -191,7 +192,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -255,27 +260,6 @@
               </span>
 
           
-            <span id="/2018/02/25/docear/" class="post-meta-item leancloud_visitors" data-flag-title="思维导图+文献管理 | Docear使用体会" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/02/25/docear/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/02/25/docear/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -288,11 +272,11 @@
       
         <p>如果你喜欢笔者的这篇分享，欢迎联系笔者：mozheyang@outlook.com</p>
 <h1 id="Docear初体验"><a href="#Docear初体验" class="headerlink" title="Docear初体验"></a>Docear初体验</h1><p>Docear是一款结合了Freeplane（思维导图）和JabRef（文献管理）两个开源工具的<strong>思维导图文献管理工具</strong> ，其也是开源的。思维导图的好处自不必笔者赘述，若有感兴趣的读者可以读一读东尼.伯赞（Buzan T.）思维导图系列丛书。</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>除了通过思维导图进行文献管理这一特点以外，Docear吸引理工磕盐汪的另一大特色便是可以使用LaTeX进行公式编辑并嵌入思维导图中。这意味着，复杂晦涩的公式知识也可以通过思维导图软件进行整理啦，Amazing！</p>
-<h2 id="环境配置与安装"><a href="#环境配置与安装" class="headerlink" title="环境配置与安装"></a>环境配置与安装</h2><p>Docear官网：<a href="http://www.docear.org/" target="_blank" rel="noopener">http://www.docear.org/</a></p>
-<p>Docear下载页面：<a href="http://www.docear.org/software/download/" target="_blank" rel="noopener">http://www.docear.org/software/download/</a></p>
-<p>我们需要在Docear下载页面上将Docear最新版本安装包（Windows版本有msi和zip两种格式可以下载）下载下来并进行安装。笔者在安装过程中发生了错误，是由于缺乏较新的JAVA开发支持环境所致（Docear是使用JAVA开发的开源软件）。于是笔者来到了Oracle官网下载了最新的Server JRE (Java SE Runtime Environment) 8.0版本，下载地址如下：<a href="http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html" target="_blank" rel="noopener">Server JRE (Java SE Runtime Environment) 8 Downloads</a>. </p>
+<h2 id="环境配置与安装"><a href="#环境配置与安装" class="headerlink" title="环境配置与安装"></a>环境配置与安装</h2><p>Docear官网：<a target="_blank" rel="noopener" href="http://www.docear.org/">http://www.docear.org/</a></p>
+<p>Docear下载页面：<a target="_blank" rel="noopener" href="http://www.docear.org/software/download/">http://www.docear.org/software/download/</a></p>
+<p>我们需要在Docear下载页面上将Docear最新版本安装包（Windows版本有msi和zip两种格式可以下载）下载下来并进行安装。笔者在安装过程中发生了错误，是由于缺乏较新的JAVA开发支持环境所致（Docear是使用JAVA开发的开源软件）。于是笔者来到了Oracle官网下载了最新的Server JRE (Java SE Runtime Environment) 8.0版本，下载地址如下：<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html">Server JRE (Java SE Runtime Environment) 8 Downloads</a>. </p>
 <h2 id="思维导图（Freeplane）"><a href="#思维导图（Freeplane）" class="headerlink" title="思维导图（Freeplane）"></a>思维导图（Freeplane）</h2><p>虽然Docear是一个非常强大的思维导图+文献管理工具，但其思维导图方面的应用极其简单。</p>
 <ol>
 <li><p>新建项目。<img src="http://mozheyang.top/images/docear/newproject.png" alt=""></p>
@@ -511,7 +495,7 @@
 <p>以下对比图来自Docear官网：</p>
 <p><img src="http://mozheyang.top/images/docear/pdfeditor.png" alt=""></p>
 <p>综上所述，最适合搭配Docear使用的PDF编辑器是<strong>PDF-Xchange Viewer</strong>，其次是福昕(Foxit) PDF Viewer和Adobe Acrobat。</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] <a href="http://www.docear.org/support/user-manual/" target="_blank" rel="noopener">http://www.docear.org/support/user-manual/</a> </p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] <a target="_blank" rel="noopener" href="http://www.docear.org/support/user-manual/">http://www.docear.org/support/user-manual/</a> </p>
 
     </div>
 
@@ -572,7 +556,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -619,7 +602,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docear初体验"><span class="nav-number">1.</span> <span class="nav-text">Docear初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置与安装"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置与安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思维导图（Freeplane）"><span class="nav-number">1.2.</span> <span class="nav-text">思维导图（Freeplane）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文献管理（JabRef）"><span class="nav-number">1.3.</span> <span class="nav-text">文献管理（JabRef）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#体验提升"><span class="nav-number">2.</span> <span class="nav-text">体验提升</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">2.1.</span> <span class="nav-text">快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增加节点"><span class="nav-number">2.1.1.</span> <span class="nav-text">增加节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑节点"><span class="nav-number">2.1.2.</span> <span class="nav-text">编辑节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看导图"><span class="nav-number">2.1.3.</span> <span class="nav-text">查看导图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同的分享格式"><span class="nav-number">2.2.</span> <span class="nav-text">不同的分享格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF标注软件对比及推荐"><span class="nav-number">2.3.</span> <span class="nav-text">PDF标注软件对比及推荐</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docear%E5%88%9D%E4%BD%93%E9%AA%8C"><span class="nav-number">1.</span> <span class="nav-text">Docear初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置与安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%EF%BC%88Freeplane%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">思维导图（Freeplane）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%EF%BC%88JabRef%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">文献管理（JabRef）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%93%E9%AA%8C%E6%8F%90%E5%8D%87"><span class="nav-number">2.</span> <span class="nav-text">体验提升</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">2.1.</span> <span class="nav-text">快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E8%8A%82%E7%82%B9"><span class="nav-number">2.1.1.</span> <span class="nav-text">增加节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E8%8A%82%E7%82%B9"><span class="nav-number">2.1.2.</span> <span class="nav-text">编辑节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AF%BC%E5%9B%BE"><span class="nav-number">2.1.3.</span> <span class="nav-text">查看导图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%9A%84%E5%88%86%E4%BA%AB%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">不同的分享格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF%E6%A0%87%E6%B3%A8%E8%BD%AF%E4%BB%B6%E5%AF%B9%E6%AF%94%E5%8F%8A%E6%8E%A8%E8%8D%90"><span class="nav-number">2.3.</span> <span class="nav-text">PDF标注软件对比及推荐</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -678,6 +661,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -701,7 +687,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -854,35 +840,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

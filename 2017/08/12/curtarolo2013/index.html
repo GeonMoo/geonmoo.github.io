@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/08/12/curtarolo2013/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="关键词：大数据、材料信息学、计算材料学、高通量计算 原文链接：Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038&#x2F;nmat3568">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-title.png">
 <meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/curtarolo2013-table1.png">
 <meta property="og:image" content="http://mozheyang.top/images/curtarolo2013/high-throughput.jpg">
@@ -188,7 +189,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -252,27 +257,6 @@
               </span>
 
           
-            <span id="/2017/08/12/curtarolo2013/" class="post-meta-item leancloud_visitors" data-flag-title="高通量计算 | 现状及展望" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/08/12/curtarolo2013/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/08/12/curtarolo2013/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -284,16 +268,16 @@
 
       
         <p><strong>关键词：</strong>大数据、材料信息学、计算材料学、高通量计算</p>
-<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf" target="_blank" rel="noopener">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
-<a id="more"></a>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近“人工智能（AI）”的风头很盛。如果说前几年国内所有行业都在追求“互联网+”的话，那这几年，以及未来几年，国内所有行业可能都会追求“人工智能+”。这可不是空穴来风，国务院甚至已经下达了人工智能未来发展规划（且看<a href="http://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm" target="_blank" rel="noopener">《国务院关于印发新一代人工智能发展规划的通知》</a>。</p>
+<p><em>原文链接：<a target="_blank" rel="noopener" href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
+<span id="more"></span>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近“人工智能（AI）”的风头很盛。如果说前几年国内所有行业都在追求“互联网+”的话，那这几年，以及未来几年，国内所有行业可能都会追求“人工智能+”。这可不是空穴来风，国务院甚至已经下达了人工智能未来发展规划（且看<a target="_blank" rel="noopener" href="http://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm">《国务院关于印发新一代人工智能发展规划的通知》</a>。</p>
 <p>这么看来，“三百六十行，行行写代码”的未来生活真是越来越清晰了。要是在目前这个时代，用不上先进的信息/效率工具来充实自己，来强大自己，还真有可能被快速发展的时代所抛弃。</p>
 <p>要说信息科技目前在材料科学领域的成功应用，那是有目共睹的：通过计算机的降噪和球差矫正算法，最先进的透射电子显微镜已经能够达到亚埃级别的分辨能力；通过计算力学、计算材料学可以完成宏观、微观（微米、纳米）不同尺度下的材料理论模拟，成功预测不少高性能新材料；通过材料数据库的构建，工业界各企业能够快速选取适当性能的材料，为自己所用，很好地兼顾了性能与成本的平衡…而今，随着信息科技的不断发展，我们迎来了新的技术——通过对大量数据的计算收集，完成人类难以胜任的分析任务，从而发现材料结构与性能之间的规律。这就是目前“数据智能”技术可以给我们材料科研工作者们带来的一大有力工具。</p>
 <h1 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h1><p>“高通量（high-throughput）”，顾名思义，意味着较大的流量。在这里，可以理解为巨大的<strong>数据流量</strong>。人类习惯于通过小样本数据进行规律寻找，进行学习。这样的学习效率很高，也是我们人类传统的学习和研究习惯。</p>
 <p>但是计算机往往比较“笨”，目前还没有开发出能够通过小样本数据就能完成复杂学习的算法。不过，他们擅长与做重复的事情。又脏又累的机械工作，计算机可以轻松胜任。人类的精力只能保证完成少量的信息输入，而计算机可以快速获取大量信息，再快速（机械）处理，最后输出。因此，在大数据的处理方面，计算机的出现和发展，拓展了人类所能达到的信息处理水平。</p>
 <p>今天所介绍的是一篇在Nature Material期刊上发表的关于”高通量计算“在材料设计方面应用的综述。</p>
 <p><img src="http://mozheyang.top/images/curtarolo2013/curtarolo2013-title.png" alt=""></p>
-<p><em>原文链接：<a href="http://mozheyang.top/documents/curtarolo2013.pdf" target="_blank" rel="noopener">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
+<p><em>原文链接：<a target="_blank" rel="noopener" href="http://mozheyang.top/documents/curtarolo2013.pdf">Curtarolo, S. et al. The high-throughput highway to computational materials design. Nat. Mater. 12, 191–201 (2013). doi: 10.1038/nmat3568</a></em></p>
 <p>本文着重对高通量“计算”进行了介绍，并声明本文中的“高通量材料研究（HT material research）”与“材料性能的综合评价（combinatorial evaluation of material properties）”不同。此处的“高通量“特指数据量过大，而不能直接研究，必需通过计算机自动化完成的此类研究。<em>（原文：Here we defne HT as the throughput of data that is way too high to be produced or analysed by the researcher’s direct intervention, and must therefore be performed automatically: HT implies an automatic ﬂow from ideas to results. Te confusion of HT with combinatorial approaches is thus resolved. Te latter, in fact, specifes how the degrees of freedom are investigated, whereas HT strictly defnes the overwhelming and automatic ﬂow of the investigations.）</em></p>
 <p>高通量计算通过三个结合紧密的步骤完成：</p>
 <ul>
@@ -406,7 +390,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -453,7 +436,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#研究背景"><span class="nav-number">2.</span> <span class="nav-text">研究背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#综述主要内容"><span class="nav-number">3.</span> <span class="nav-text">综述主要内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">研究背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%BC%E8%BF%B0%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="nav-number">3.</span> <span class="nav-text">综述主要内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -512,6 +495,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -535,7 +521,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -688,35 +674,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

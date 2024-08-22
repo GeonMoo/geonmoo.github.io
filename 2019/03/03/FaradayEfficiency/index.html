@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2019/03/03/FaradayEfficiency/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potentia">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/FE/Double_Layer.png">
 <meta property="og:image" content="http://mozheyang.top/images/FE/ECRpotential.png">
 <meta property="article:published_time" content="2019-03-03T06:37:18.000Z">
@@ -179,7 +180,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -252,27 +257,6 @@
             </span>
 
           
-            <span id="/2019/03/03/FaradayEfficiency/" class="post-meta-item leancloud_visitors" data-flag-title="什么是“法拉第效率”？NRR和ECR中的一个重要指标" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/03/03/FaradayEfficiency/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/03/03/FaradayEfficiency/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -284,18 +268,18 @@
 
       
         <p>题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potential）和一定电位下所能达到的总电流密度（Current density）并驾齐驱。在介绍“法拉第效率”这个概念之前，我们首先来回顾什么是“法拉第定律”。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="法拉第定律、法拉第电流与法拉第效率的关系"><a href="#法拉第定律、法拉第电流与法拉第效率的关系" class="headerlink" title="法拉第定律、法拉第电流与法拉第效率的关系"></a>法拉第定律、法拉第电流与法拉第效率的关系</h1><p>法拉第定律建立了宏观电荷量/电流和化学反应导致的微观电子转移之间的联系。</p>
 <script type="math/tex; mode=display">
 Q=NF</script><p>等式两边同时对时间求导数可得</p>
 <script type="math/tex; mode=display">
 i = \frac{dQ}{dt} = \frac{dN}{dt}F = nF</script><p>法拉第电流（$i_f$），顾名思义，就是化学反应过程导致电子转移，这部分电子所对应的电流。</p>
-<p>那除了法拉第电流，我们在实际测试中得到的总电流还有非法拉第电流，其中大部分可以认为是电极双电层的充电电流（$i_c$），如上图。关于电极双电层结构的数学模型可以参见博文（<a href="http://mozheyang.top/2017/10/22/EClecturenote3/" target="_blank" rel="noopener">课后回顾 | 双电层结构</a>）。简单地来说，在固液界面两边会积累电荷，这些电荷空间距离较近，却无法穿越界面进行结合，像极了平行板电容器。因此双电层电流可以看作该电容器的充电电流。需要注意的是，电极表面修饰会对双电层充电电流产生影响。</p>
+<p>那除了法拉第电流，我们在实际测试中得到的总电流还有非法拉第电流，其中大部分可以认为是电极双电层的充电电流（$i_c$），如上图。关于电极双电层结构的数学模型可以参见博文（<a target="_blank" rel="noopener" href="http://mozheyang.top/2017/10/22/EClecturenote3/">课后回顾 | 双电层结构</a>）。简单地来说，在固液界面两边会积累电荷，这些电荷空间距离较近，却无法穿越界面进行结合，像极了平行板电容器。因此双电层电流可以看作该电容器的充电电流。需要注意的是，电极表面修饰会对双电层充电电流产生影响。</p>
 <p><img src="http://mozheyang.top/images/FE/Double_Layer.png" alt=""></p>
 <script type="math/tex; mode=display">
 i_{total} =f(i_f, i_c) \approx i_f + i_c</script><p>以上的关系必定是十分粗略而且非定量的，法拉第电流和双电层充电电流都会随时间和施加偏压的变化而变化。当电压一定时，不存在双电层充电电流，即$i_c = 0$，那么</p>
 <script type="math/tex; mode=display">
-i_{total} \approx i_f</script><p>注：电化学测试可以获得的信息是十分丰富的，部分技巧甚至具有较深厚的数理背景。如果希望对CV和LSV曲线中的电流了解得更多更深入，可以关注笔者后续的博文：<a href="http://mozheyang.top/2019/03/31/LSV-KLeq/" target="_blank" rel="noopener">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a>。</p>
+i_{total} \approx i_f</script><p>注：电化学测试可以获得的信息是十分丰富的，部分技巧甚至具有较深厚的数理背景。如果希望对CV和LSV曲线中的电流了解得更多更深入，可以关注笔者后续的博文：<a target="_blank" rel="noopener" href="http://mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a>。</p>
 <p>在水中（被施加负压的一极）阴极，在电压足够负的情况下只发生氢析出反应，那么产物也就只有$H_2$。在氮气还原反应中，由于氢气析出所需电位比氮气还原所需电位较正，于是在氮气还原发生的过程中，有很大可能氢气析出反应也是同时发生的（另外很小可能：电催化剂极大减小了氮气还原所需要的负偏压导致氮气还原所需电位比氢气析出正），气相产物还是只有$H_2$，但液相中产物可能会有$NH_4^+$（产生氨气然后溶于电解液中）和$N_2H_4$；在二氧化碳还原反应中，可能的产物会更复杂，气相产物可能有$H_2$、$CO$、$CH_4$、$C_2H_4$……而液相产物又可能有$HCOOH$、$CH_3COOH$、$EtOH$（乙醇）、$n-PrOH$（异丙醇）……</p>
 <p><img src="http://mozheyang.top/images/FE/ECRpotential.png" alt=""></p>
 <p class="refs">
@@ -380,7 +364,6 @@ FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -427,7 +410,7 @@ FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#法拉第定律、法拉第电流与法拉第效率的关系"><span class="nav-number">1.</span> <span class="nav-text">法拉第定律、法拉第电流与法拉第效率的关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不同情况下法拉第效率的具体计算方法"><span class="nav-number">2.</span> <span class="nav-text">不同情况下法拉第效率的具体计算方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#平均法拉第效率"><span class="nav-number">2.1.</span> <span class="nav-text">平均法拉第效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#瞬时法拉第效率"><span class="nav-number">2.2.</span> <span class="nav-text">瞬时法拉第效率</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%95%E6%8B%89%E7%AC%AC%E5%AE%9A%E5%BE%8B%E3%80%81%E6%B3%95%E6%8B%89%E7%AC%AC%E7%94%B5%E6%B5%81%E4%B8%8E%E6%B3%95%E6%8B%89%E7%AC%AC%E6%95%88%E7%8E%87%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.</span> <span class="nav-text">法拉第定律、法拉第电流与法拉第效率的关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E6%83%85%E5%86%B5%E4%B8%8B%E6%B3%95%E6%8B%89%E7%AC%AC%E6%95%88%E7%8E%87%E7%9A%84%E5%85%B7%E4%BD%93%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">不同情况下法拉第效率的具体计算方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E6%B3%95%E6%8B%89%E7%AC%AC%E6%95%88%E7%8E%87"><span class="nav-number">2.1.</span> <span class="nav-text">平均法拉第效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9E%AC%E6%97%B6%E6%B3%95%E6%8B%89%E7%AC%AC%E6%95%88%E7%8E%87"><span class="nav-number">2.2.</span> <span class="nav-text">瞬时法拉第效率</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -486,6 +469,9 @@ FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -509,7 +495,7 @@ FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -662,35 +648,6 @@ FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

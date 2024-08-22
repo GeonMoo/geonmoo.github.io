@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/08/26/ModelPPT/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="快开学了。发一篇半心情半展示的日志吧。 大四的时候，很幸运地，笔者能够加入到一个优秀的团队，做一件很酷的事情——给低年级本科生同学“讲课”，介绍数学建模经验以及相关背景知识。 那时的我也是第一次，体验了如教师一般，从自己了解掌握知识，再尝试将其与其他同学分享的那种既痛苦又享受的过程。">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/ModelPPT/PDE-PPT.jpg">
 <meta property="og:image" content="http://mozheyang.top/images/ModelPPT/Fitting-PPT.jpg">
 <meta property="article:published_time" content="2017-08-26T07:49:32.000Z">
@@ -179,7 +180,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -243,27 +248,6 @@
               </span>
 
           
-            <span id="/2017/08/26/ModelPPT/" class="post-meta-item leancloud_visitors" data-flag-title="任何事情都没那么简单——尤其是你真的想把它做好的时候" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/08/26/ModelPPT/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/08/26/ModelPPT/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -277,7 +261,7 @@
         <p>快开学了。发一篇半心情半展示的日志吧。</p>
 <p>大四的时候，很幸运地，笔者能够加入到一个优秀的团队，做一件很酷的事情——给低年级本科生同学“讲课”，介绍数学建模经验以及相关背景知识。</p>
 <p>那时的我也是第一次，体验了如教师一般，从自己了解掌握知识，再尝试将其与其他同学分享的那种<strong>既痛苦又享受</strong>的过程。</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>其实这并不矛盾。</p>
 <p>“痛苦”是因为我把这个任务当做我自己的艺术作品来对待，我需要耗费大量的精力，来打磨其细节。一份PPT只进行两节2h时长的授课，前前后后却将近花费了我们2个月时间仔细揣摩和修改。笔者不敢说最后大家听的热情有多高，讲说的效果有多好，但至少我自己认为：它的确成为了一份<strong>值得收藏的工艺品</strong>。</p>
 <p><img src="http://mozheyang.top/images/ModelPPT/PDE-PPT.jpg" alt=""></p>
@@ -346,7 +330,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -451,6 +434,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -474,7 +460,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -627,35 +613,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>

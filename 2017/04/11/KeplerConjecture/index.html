@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 7.3.0">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
@@ -28,6 +28,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/04/11/KeplerConjecture/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="学过晶体学的同学都知道，空间中球体的最密堆积是面心立方堆积 (FCC)和密排六方堆积 (HCP)。这似乎是毋庸置疑的。  但是，大家有没有怀疑过为什么没有更多的最密堆积方法呢？">
+<meta property="og:locale">
 <meta property="og:image" content="http://mozheyang.top/images/KeplerConjecture/FCC_HCP.jpg">
 <meta property="article:published_time" content="2017-04-11T09:05:32.000Z">
 <meta property="article:modified_time" content="2020-02-02T08:11:27.000Z">
@@ -178,7 +179,11 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
+<div id="search-summary">
+  <div id="no-summary">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
   </div>
 </div>
 
@@ -242,27 +247,6 @@
               </span>
 
           
-            <span id="/2017/04/11/KeplerConjecture/" class="post-meta-item leancloud_visitors" data-flag-title="空间最密堆积 | 开普勒猜想" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2017/04/11/KeplerConjecture/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/04/11/KeplerConjecture/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 
         </div>
       </header>
@@ -276,13 +260,13 @@
         <p>学过晶体学的同学都知道，空间中球体的最密堆积是<strong>面心立方堆积 (FCC)</strong>和<strong>密排六方堆积 (HCP)</strong>。这似乎是毋庸置疑的。</p>
 <p><img src="http://mozheyang.top/images/KeplerConjecture/FCC_HCP.jpg" alt=""></p>
 <p>但是，大家有没有怀疑过为什么没有更多的最密堆积方法呢？</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>事实上这是一个古老的数学问题。其被命名为“开普勒猜想（Kepler Conjecture）”，这个猜想的内容是：<strong>没有任何其他的排列方式能够得到比面心立方堆积和密排六方堆积更大的平均空间利用率，同时这个最大的空间利用率大概是74.05%. </strong></p>
-<p>关于这段数学历史，知乎有<a href="https://www.zhihu.com/question/30015911/answer/46599858" target="_blank" rel="noopener">一个挺有趣的回答</a>。</p>
+<p>关于这段数学历史，知乎有<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/30015911/answer/46599858">一个挺有趣的回答</a>。</p>
 <p>1998年，Hales声称已经证明了这个猜想。这个证明方法是通过复杂的程序计算“穷举”了所有球体在空间中的排列方式。在后来的一段时间里，“开普勒猜想”已经被认为是一个公理。</p>
-<p>直到2014年，Hales领导的Flyspeck团队称，使用Isabelle和HOL Light这两个辅助数学证明软件，正式证明了“开普勒猜想”。其全部代码已公开于GitHub（<a href="https://github.com/flyspeck/flyspeck" target="_blank" rel="noopener">GitHub链接</a>）。</p>
+<p>直到2014年，Hales领导的Flyspeck团队称，使用Isabelle和HOL Light这两个辅助数学证明软件，正式证明了“开普勒猜想”。其全部代码已公开于GitHub（<a target="_blank" rel="noopener" href="https://github.com/flyspeck/flyspeck">GitHub链接</a>）。</p>
 <p>其证明思路以Hales在2005年发表的一篇论文为基础。点击下方参考文献可下载原文。</p>
-<p><a href="http://mozheyang.top/documents/Hales-2005-A proof of the Kepler Conjecture.pdf" target="_blank" rel="noopener">Hales T C. A proof of the Kepler conjecture[J]. Annals of mathematics, 2005, 162(3): 1065-1185.</a></p>
+<p><a target="_blank" rel="noopener" href="http://mozheyang.top/documents/Hales-2005-A proof of the Kepler Conjecture.pdf">Hales T C. A proof of the Kepler conjecture[J]. Annals of mathematics, 2005, 162(3): 1065-1185.</a></p>
 
     </div>
 
@@ -344,7 +328,6 @@
 
           </div>
           
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -449,6 +432,9 @@
         <li class="links-of-blogroll-item">
           <a href="https://fatesinger.com/" title="https:&#x2F;&#x2F;fatesinger.com&#x2F;" rel="noopener" target="_blank">Fatesinger-大发</a>
         </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dragonscience.top/" title="https:&#x2F;&#x2F;dragonscience.top&#x2F;" rel="noopener" target="_blank">Dragon🐉Science</a>
+        </li>
     </ul>
   </div>
 
@@ -472,7 +458,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -625,35 +611,6 @@
     
 
   
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
-      appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
-      placeholder: "请开始你的表演",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '5' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
 </body>
 </html>
