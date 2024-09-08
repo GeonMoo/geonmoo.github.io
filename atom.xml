@@ -43,6 +43,26 @@
   </entry>
   
   <entry>
+    <title>Live2D模型初体验</title>
+    <link href="https://www.mozheyang.top/2024/09/07/live2dinit/"/>
+    <id>https://www.mozheyang.top/2024/09/07/live2dinit/</id>
+    <published>2024-09-07T04:46:11.000Z</published>
+    <updated>2024-09-08T03:34:21.255Z</updated>
+    
+    <content type="html"><![CDATA[<p>哈喽，大家近来如何？最近在筹划给博客增加一些互动性，考虑结合近期大火的大语言模型。API（可直接调用）都已经准备好了（后期成功部署后也准备与各位分享），正愁采用什么样的交互模式。在浏览博客的时候发现了这个动画，瞬间被吸引住了，而且考虑也是一个交互入口，当下决定带到博客里来。</p><p>当然，这个Live2D技术也并不只是在我当下使用的Hexo博客框架才能使用。各位感兴趣可以检索看看，是不是有迁移至你们喜欢平台的方案哈。话不多说，接下来分享给各位小伙伴。Enjoy~</p><span id="more"></span><h1 id="Live2D技术前世今生"><a href="#Live2D技术前世今生" class="headerlink" title="Live2D技术前世今生"></a>Live2D技术前世今生</h1><p>Live2D技术是一种2D立体表现技术，它允许2D图像在保持其独特形状和画风的同时，在三维空间中自由移动。这项技术由<a href="https://www.live2d.jp/">株式会社Live2D（原名サイバーノイズ，Cybernoids）</a>开发。公司自2006年创立以来，一直专注于Live2D的技术研发。公司成立前9年没有进行任何的合同开发，也曾经历过多次濒临倒闭的境地。</p><p>在Live2D技术出现之前，要让2D角色动起来，通常需要通过手绘每一帧或者创建3D多边形模型来实现。这些方法不仅耗时耗力，而且往往会牺牲2D角色的原有风格。Live2D技术的出现解决了这些问题。它能够帮助制作方在不增加绘图量、保留原画艺术风格的基础上制作动态角色，相比采用3D或手绘动画来说，Live2D是一个性价比和制作效率更高的选项。</p><p><img src="/images/live2d/interaction.gif" alt="交互"></p><p>Live2D技术的第一个产品是<code>Live2D Cubism</code>，它允许角色在左右30度的范围内变化。随后，<code>Live2D Euclid</code>的开发使得角色可以实现360度的立体表现。目前，Live2D技术已经在游戏领域被广泛使用。该项技术的主要缺点在于无法实现大角度视角。结合最近看到的一些生成式人工技术，我想2D到3D投射的技术领域，应该很快也会有所突破。</p><h1 id="在Hexo-Next主题下的部署"><a href="#在Hexo-Next主题下的部署" class="headerlink" title="在Hexo Next主题下的部署"></a>在Hexo Next主题下的部署</h1><p>比我想象的容易部署，主要分为三个部分：hexo-helper-live2d插件的安装、对应模型的安装（或引入）、Hexo博客yaml配置修改（不要在主题配置里增加）。</p><h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>我采用npm进行安装。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure></p><p>npm和hexo都容易出现版本问题，附我使用版本如下：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\xxx&gt; npm --version</span><br><span class="line">10.8.2</span><br><span class="line">PS C:\Users\xxx&gt; node --version       </span><br><span class="line">v21.7.2</span><br><span class="line">PS C:\Users\xxx&gt; hexo --version</span><br><span class="line">hexo-cli: 4.3.2</span><br></pre></td></tr></table></figure></p><p>关于npm版本问题，建议使用<a href="https://github.com/nvm-sh/nvm">nvm</a>进行版本管理。</p><h2 id="模型安装"><a href="#模型安装" class="headerlink" title="模型安装"></a>模型安装</h2><p>默认支持的数款模型预览可见：<a href="https://blog.csdn.net/wang_123_zy/article/details/87181892">Hexo添加Live2D看板娘+模型预览</a>。</p><p>个人比较喜欢：</p><ul><li>live2d-widget-model-hijiki</li><li>live2d-widget-model-koharu</li><li>live2d-widget-model-shizuku</li><li>live2d-widget-model-tororo</li></ul><p>接下来还是npm安装就好。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;live2d-widget-model-xxx&gt;</span><br></pre></td></tr></table></figure></p><h2 id="博客配置修改"><a href="#博客配置修改" class="headerlink" title="博客配置修改"></a>博客配置修改</h2><p>在主题里配置可以使用模型，但是模型不能修改，属性也不生效。还是建议直接在博客配置里修改。位置参考如下：</p><p><img src="/images/live2d/blog_config.png" alt="博客配置修改"></p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>还会关注新的web交互新方式。love &amp; peace。</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] 【Live2D】会社消滅寸前だったとあるベンチャーが、世界初の2D立体表現技術を完成できたワケ。<a href="https://type.jp/et/feature/161/。">https://type.jp/et/feature/161/。</a><br>[2] Live2D的介绍及在Web端的运用。<a href="https://tgideas.qq.com/gicp/news/475/8723118.html?form=list。">https://tgideas.qq.com/gicp/news/475/8723118.html?form=list。</a><br>[3] <a href="https://github.com/EYHN/hexo-helper-live2d。">https://github.com/EYHN/hexo-helper-live2d。</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;哈喽，大家近来如何？最近在筹划给博客增加一些互动性，考虑结合近期大火的大语言模型。API（可直接调用）都已经准备好了（后期成功部署后也准备与各位分享），正愁采用什么样的交互模式。在浏览博客的时候发现了这个动画，瞬间被吸引住了，而且考虑也是一个交互入口，当下决定带到博客里来。&lt;/p&gt;
+&lt;p&gt;当然，这个Live2D技术也并不只是在我当下使用的Hexo博客框架才能使用。各位感兴趣可以检索看看，是不是有迁移至你们喜欢平台的方案哈。话不多说，接下来分享给各位小伙伴。Enjoy~&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Geek" scheme="https://www.mozheyang.top/tags/Geek/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从入门到放弃 | 电化学阻抗是如何计算的？</title>
     <link href="https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/"/>
     <id>https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/</id>
@@ -470,29 +490,6 @@ $$
     <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
     <category term="Catalysis  催化" scheme="https://www.mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是“法拉第效率”？NRR和ECR中的一个重要指标</title>
-    <link href="https://www.mozheyang.top/2019/03/03/FaradayEfficiency/"/>
-    <id>https://www.mozheyang.top/2019/03/03/FaradayEfficiency/</id>
-    <published>2019-03-03T06:37:18.000Z</published>
-    <updated>2020-02-02T08:05:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potential）和一定电位下所能达到的总电流密度（Current density）并驾齐驱。在介绍“法拉第效率”这个概念之前，我们首先来回顾什么是“法拉第定律”。</p><span id="more"></span><h1 id="法拉第定律、法拉第电流与法拉第效率的关系"><a href="#法拉第定律、法拉第电流与法拉第效率的关系" class="headerlink" title="法拉第定律、法拉第电流与法拉第效率的关系"></a>法拉第定律、法拉第电流与法拉第效率的关系</h1><p>法拉第定律建立了宏观电荷量/电流和化学反应导致的微观电子转移之间的联系。</p><script type="math/tex; mode=display">Q=NF</script><p>等式两边同时对时间求导数可得</p><script type="math/tex; mode=display">i = \frac{dQ}{dt} = \frac{dN}{dt}F = nF</script><p>法拉第电流（$i_f$），顾名思义，就是化学反应过程导致电子转移，这部分电子所对应的电流。</p><p>那除了法拉第电流，我们在实际测试中得到的总电流还有非法拉第电流，其中大部分可以认为是电极双电层的充电电流（$i_c$），如上图。关于电极双电层结构的数学模型可以参见博文（<a href="http://mozheyang.top/2017/10/22/EClecturenote3/">课后回顾 | 双电层结构</a>）。简单地来说，在固液界面两边会积累电荷，这些电荷空间距离较近，却无法穿越界面进行结合，像极了平行板电容器。因此双电层电流可以看作该电容器的充电电流。需要注意的是，电极表面修饰会对双电层充电电流产生影响。</p><p><img src="http://mozheyang.top/images/FE/Double_Layer.png" alt=""></p><script type="math/tex; mode=display">i_{total} =f(i_f, i_c) \approx i_f + i_c</script><p>以上的关系必定是十分粗略而且非定量的，法拉第电流和双电层充电电流都会随时间和施加偏压的变化而变化。当电压一定时，不存在双电层充电电流，即$i_c = 0$，那么</p><script type="math/tex; mode=display">i_{total} \approx i_f</script><p>注：电化学测试可以获得的信息是十分丰富的，部分技巧甚至具有较深厚的数理背景。如果希望对CV和LSV曲线中的电流了解得更多更深入，可以关注笔者后续的博文：<a href="http://mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a>。</p><p>在水中（被施加负压的一极）阴极，在电压足够负的情况下只发生氢析出反应，那么产物也就只有$H_2$。在氮气还原反应中，由于氢气析出所需电位比氮气还原所需电位较正，于是在氮气还原发生的过程中，有很大可能氢气析出反应也是同时发生的（另外很小可能：电催化剂极大减小了氮气还原所需要的负偏压导致氮气还原所需电位比氢气析出正），气相产物还是只有$H_2$，但液相中产物可能会有$NH_4^+$（产生氨气然后溶于电解液中）和$N_2H_4$；在二氧化碳还原反应中，可能的产物会更复杂，气相产物可能有$H_2$、$CO$、$CH_4$、$C_2H_4$……而液相产物又可能有$HCOOH$、$CH_3COOH$、$EtOH$（乙醇）、$n-PrOH$（异丙醇）……</p><p><img src="http://mozheyang.top/images/FE/ECRpotential.png" alt=""></p><p class="refs">注：以上部分反应看似具有比氢气析出更正的电位，但实际上，二氧化碳分子还原几乎都必须经过生成羰基自由基CO*的过程，该反应对应的电极电势为-1.90 V (vs. SHE，水溶液). Ref: Sun, Z.; Ma, T.; Tao, H.; Fan, Q.; Han, B. Fundamentals and Challenges of Electrochemical CO2Reduction Using Two-Dimensional Materials. Chem 2017, 3 (4), 560–587.</p><p>所以法拉第电流部分可以由多个不同产物的法拉第电流组成。对于氮气还原反应：</p><script type="math/tex; mode=display">i_{total} = i_f = i_{H_2} + i_{NH_4^+} + i_{N_2H_4}</script><p>对于二氧化碳还原反应：</p><script type="math/tex; mode=display">i_{total} = i_f = \{i_{H_2} + i_{CO} + i_{CH_4} + i_{C_2H_4}\}_{gas}+ \{i_{HCOOH} + i_{CH_3COOH} + i_{EtOH} + i_{n-PrOH}\}_{liquid}</script><p>所以针对某种产物，比如铵根在氮气还原反应中的法拉第效率，其表达式可以写为</p><script type="math/tex; mode=display">FE = \frac{i_{NH_4^+}}{i_{f}} = \frac{i_{NH_4^+}}{i_{total}}</script><h1 id="不同情况下法拉第效率的具体计算方法"><a href="#不同情况下法拉第效率的具体计算方法" class="headerlink" title="不同情况下法拉第效率的具体计算方法"></a>不同情况下法拉第效率的具体计算方法</h1><p>在不同情况下我们都可以依据<strong>物质守恒定律</strong>，结合法拉第定律对法拉第效率建立合理的计算方法。物质守恒定律简单说来就是，若计算平均法拉第效率，那我们便使用一段时间内转移的电子总数求平均后进行计算；若计算瞬时（单位时间）法拉第效率，那我们便用该单位时间下转移的电子个数进行计算。</p><h2 id="平均法拉第效率"><a href="#平均法拉第效率" class="headerlink" title="平均法拉第效率"></a>平均法拉第效率</h2><p>在一定反应时间段内，若某产物的法拉第效率可基本视为恒定（稳定性较好的催化剂，如目前最好的碳基催化剂），那么可以依据以下方法计算该段时间内的对应该产物的<strong>平均法拉第速率</strong></p><script type="math/tex; mode=display">FE = \frac{产物所对应的转移电荷}{总共消耗的电荷}</script><p>由于即使在同一电位下，仍不存在严格恒定的产物法拉第效率，因此目前文献中多用瞬时法拉第效率。</p><h2 id="瞬时法拉第效率"><a href="#瞬时法拉第效率" class="headerlink" title="瞬时法拉第效率"></a>瞬时法拉第效率</h2><p>在法拉第效率不恒定的情况下（稳定性较差的催化剂，如多数金属催化剂），可以依据以下方法计算一段时间内的<strong>瞬时法拉第效率</strong></p><script type="math/tex; mode=display">j_i = n_i F A^{-1} = x_i \times v \times \frac{z_i F p_0}{RT} \times A^{-1} \\FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是单位时间、单位电极面积由于i物种生成所引起的电子转移个数，其与i物种对应电流密度$j_i$之间的关系便可以通过法拉第定律进行描述。式中$v$为气体流速 (mol min<sup>-1</sup>)，$z_i$为每1单位$i$物种生成导致的电子转移个数，$P_0$为标准大气压，$F$和$R$分别为法拉第常数和气体常数（法拉第常数 $F=96485 \quad C \cdot mol^{-1}$，气体常数$R = 8.314 \quad J \cdot mol^{-1} \cdot K^{-1}$）。$i$物种的法拉第效率最终等于$i$物种电流密度与总电流密度之比。</p><p class="refs">Ref: Jiang K, Sandberg R B, Akey A J, et al. Metal ion cycling of Cu foil for selective C–C coupling in electrochemical CO<sub>2</sub> reduction[J]. Nature Catalysis, 2018, 1(2): 111.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potential）和一定电位下所能达到的总电流密度（Current density）并驾齐驱。在介绍“法拉第效率”这个概念之前，我们首先来回顾什么是“法拉第定律”。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
-    
-    
-    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
-    
-    <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
     
   </entry>
   
