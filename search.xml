@@ -202,6 +202,53 @@
       </tags>
   </entry>
   <entry>
+    <title>检索原理与技巧</title>
+    <url>/2020/02/05/AdvancedSearch/</url>
+    <content><![CDATA[<script type="math/tex; mode=display">
+检索式=关键词+逻辑运算符+搜索指令（语法）+...</script><span id="more"></span>
+<p><strong>主体：</strong>关键词<br><strong>限定条件：</strong>逻辑运算符、搜索指令（语法）</p>
+<p>以下搜索实践在Web of Science、Google、Bing和百度等搜索引擎适用或部分适用！</p>
+<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><h2 id="布尔（逻辑）运算符"><a href="#布尔（逻辑）运算符" class="headerlink" title="布尔（逻辑）运算符"></a>布尔（逻辑）运算符</h2><ul>
+<li>与运算 AND</li>
+<li>或运算 OR</li>
+<li>非运算 NOT</li>
+<li>优先处理算符 （）</li>
+</ul>
+<h2 id="截词算符（通配符）"><a href="#截词算符（通配符）" class="headerlink" title="截词算符（通配符）"></a>截词算符（通配符）</h2><p>后截断（开放式截断）</p>
+<h2 id="位置算符"><a href="#位置算符" class="headerlink" title="位置算符"></a>位置算符</h2><p>位置算符又称邻接算符（adjacent operators），适用于两个检索词以指定间隔距离或者指定的顺序出现的场合，比如，以词组形式表达的概念；彼此相邻的两个或两个以上的词；被禁用词或特殊符号分隔的词以及化学分子式等。</p>
+<blockquote>
+<ul>
+<li>NEAR</li>
+<li>SAME</li>
+</ul>
+</blockquote>
+<h2 id="精确检索（词组检索）"><a href="#精确检索（词组检索）" class="headerlink" title="精确检索（词组检索）"></a>精确检索（词组检索）</h2><p>短语/词组，应将其放置于引号内。</p>
+<blockquote>
+<p>“Oxygen reduction reaction”</p>
+</blockquote>
+<h1 id="检索策略"><a href="#检索策略" class="headerlink" title="检索策略"></a>检索策略</h1><h2 id="扩大检索结果"><a href="#扩大检索结果" class="headerlink" title="扩大检索结果"></a>扩大检索结果</h2><ul>
+<li>模糊检索</li>
+<li>使用不同表达方式（上位词）</li>
+<li>使用通配符</li>
+<li>不使用检索入口限制（年限、文献类型等）</li>
+</ul>
+<h2 id="缩小检索结果"><a href="#缩小检索结果" class="headerlink" title="缩小检索结果"></a>缩小检索结果</h2><ul>
+<li>精确检索</li>
+<li>查看主题词表，改用精确词条检索（下位词）</li>
+<li>使用合适的布尔逻辑运算符</li>
+<li>使用检索入口限制（年限、文献类型等）</li>
+<li>使用数据库提供的过滤功能</li>
+</ul>
+<p><strong>解释：</strong>上位词与下位词的涵义</p>
+<blockquote>
+<p>“水果”是“苹果”的上位词<br>“苹果”是“水果”的下位词</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Information Science &amp; Technology  信息科学与技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bookmarks of Websites | 网站书签收藏</title>
     <url>/2017/04/08/Bookmarks/</url>
     <content><![CDATA[<p>最后更新时间2020年3月18日。<strong>鼠标悬停</strong>在特定项目上可显示更详细的介绍哦！</p>
@@ -312,53 +359,6 @@
       </tags>
   </entry>
   <entry>
-    <title>检索原理与技巧</title>
-    <url>/2020/02/05/AdvancedSearch/</url>
-    <content><![CDATA[<script type="math/tex; mode=display">
-检索式=关键词+逻辑运算符+搜索指令（语法）+...</script><span id="more"></span>
-<p><strong>主体：</strong>关键词<br><strong>限定条件：</strong>逻辑运算符、搜索指令（语法）</p>
-<p>以下搜索实践在Web of Science、Google、Bing和百度等搜索引擎适用或部分适用！</p>
-<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><h2 id="布尔（逻辑）运算符"><a href="#布尔（逻辑）运算符" class="headerlink" title="布尔（逻辑）运算符"></a>布尔（逻辑）运算符</h2><ul>
-<li>与运算 AND</li>
-<li>或运算 OR</li>
-<li>非运算 NOT</li>
-<li>优先处理算符 （）</li>
-</ul>
-<h2 id="截词算符（通配符）"><a href="#截词算符（通配符）" class="headerlink" title="截词算符（通配符）"></a>截词算符（通配符）</h2><p>后截断（开放式截断）</p>
-<h2 id="位置算符"><a href="#位置算符" class="headerlink" title="位置算符"></a>位置算符</h2><p>位置算符又称邻接算符（adjacent operators），适用于两个检索词以指定间隔距离或者指定的顺序出现的场合，比如，以词组形式表达的概念；彼此相邻的两个或两个以上的词；被禁用词或特殊符号分隔的词以及化学分子式等。</p>
-<blockquote>
-<ul>
-<li>NEAR</li>
-<li>SAME</li>
-</ul>
-</blockquote>
-<h2 id="精确检索（词组检索）"><a href="#精确检索（词组检索）" class="headerlink" title="精确检索（词组检索）"></a>精确检索（词组检索）</h2><p>短语/词组，应将其放置于引号内。</p>
-<blockquote>
-<p>“Oxygen reduction reaction”</p>
-</blockquote>
-<h1 id="检索策略"><a href="#检索策略" class="headerlink" title="检索策略"></a>检索策略</h1><h2 id="扩大检索结果"><a href="#扩大检索结果" class="headerlink" title="扩大检索结果"></a>扩大检索结果</h2><ul>
-<li>模糊检索</li>
-<li>使用不同表达方式（上位词）</li>
-<li>使用通配符</li>
-<li>不使用检索入口限制（年限、文献类型等）</li>
-</ul>
-<h2 id="缩小检索结果"><a href="#缩小检索结果" class="headerlink" title="缩小检索结果"></a>缩小检索结果</h2><ul>
-<li>精确检索</li>
-<li>查看主题词表，改用精确词条检索（下位词）</li>
-<li>使用合适的布尔逻辑运算符</li>
-<li>使用检索入口限制（年限、文献类型等）</li>
-<li>使用数据库提供的过滤功能</li>
-</ul>
-<p><strong>解释：</strong>上位词与下位词的涵义</p>
-<blockquote>
-<p>“水果”是“苹果”的上位词<br>“苹果”是“水果”的下位词</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>Information Science &amp; Technology  信息科学与技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>块体金属变成单个原子？ | 单原子催化剂的大规模制备</title>
     <url>/2019/03/19/BulkMetal2SAC/</url>
     <content><![CDATA[<p>由于单原子催化剂上金属原子在载体上的分散特点，导致其与块体金属在物理化学方面的性质上产生差异。这种差异往往使得单原子催化剂在各类催化反应上具有较为优异的催化性能。既然单原子催化剂在（能源）催化领域具有如此巨大的吸引力，那么其合成就自然成为了目前能源材料科研和产业界所共同关注的一大焦点问题。</p>
@@ -415,37 +415,6 @@
         <tag>Chemistry  化学</tag>
         <tag>Material  材料</tag>
         <tag>Catalysis  催化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>课后回顾 | 吸附反应动态学</title>
-    <url>/2018/02/15/CATAlecturenote2/</url>
-    <content><![CDATA[<p>本文还在持续写作中…</p>
-<p><strong>关键词：</strong>物理吸附、化学吸附、活化吸附、非活化吸附、CO的Blyholder模型、d带中心理论（d-band center theory）</p>
-<span id="more"></span>
-<p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>反应动态学：分子水平<br>反应动力学：宏观</p>
-<h1 id="物理吸附-amp-化学吸附"><a href="#物理吸附-amp-化学吸附" class="headerlink" title="物理吸附 &amp; 化学吸附"></a>物理吸附 &amp; 化学吸附</h1><p>物理吸附：范德华力</p>
-<h1 id="活化吸附-amp-非活化吸附"><a href="#活化吸附-amp-非活化吸附" class="headerlink" title="活化吸附 &amp; 非活化吸附"></a>活化吸附 &amp; 非活化吸附</h1><p>一维，二维示意图</p>
-<p>非活化吸附：无势垒</p>
-<h1 id="吸附与扩散"><a href="#吸附与扩散" class="headerlink" title="吸附与扩散"></a>吸附与扩散</h1><h1 id="分子轨道理论"><a href="#分子轨道理论" class="headerlink" title="分子轨道理论"></a>分子轨道理论</h1><p>CO的Blyholder模型</p>
-<p>d-band center</p>
-<h1 id="吸附粒子与衬底原子作用"><a href="#吸附粒子与衬底原子作用" class="headerlink" title="吸附粒子与衬底原子作用"></a>吸附粒子与衬底原子作用</h1><p>双金属表面吸附机理</p>
-<ul>
-<li>配合</li>
-<li>集合</li>
-<li>应力</li>
-</ul>
-<h1 id="吸附粒子相互作用"><a href="#吸附粒子相互作用" class="headerlink" title="吸附粒子相互作用"></a>吸附粒子相互作用</h1><h2 id="吸附次序"><a href="#吸附次序" class="headerlink" title="吸附次序"></a>吸附次序</h2><ul>
-<li>竞争吸附</li>
-<li>共吸附</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Lecture Notes  课程知识回顾</category>
-      </categories>
-      <tags>
-        <tag>Chemistry  化学</tag>
       </tags>
   </entry>
   <entry>
@@ -576,6 +545,77 @@ ln \left( \frac{\beta}{T_{p}^{2}} \right)
       </tags>
   </entry>
   <entry>
+    <title>课后回顾 | 吸附反应动态学</title>
+    <url>/2018/02/15/CATAlecturenote2/</url>
+    <content><![CDATA[<p>本文还在持续写作中…</p>
+<p><strong>关键词：</strong>物理吸附、化学吸附、活化吸附、非活化吸附、CO的Blyholder模型、d带中心理论（d-band center theory）</p>
+<span id="more"></span>
+<p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>反应动态学：分子水平<br>反应动力学：宏观</p>
+<h1 id="物理吸附-amp-化学吸附"><a href="#物理吸附-amp-化学吸附" class="headerlink" title="物理吸附 &amp; 化学吸附"></a>物理吸附 &amp; 化学吸附</h1><p>物理吸附：范德华力</p>
+<h1 id="活化吸附-amp-非活化吸附"><a href="#活化吸附-amp-非活化吸附" class="headerlink" title="活化吸附 &amp; 非活化吸附"></a>活化吸附 &amp; 非活化吸附</h1><p>一维，二维示意图</p>
+<p>非活化吸附：无势垒</p>
+<h1 id="吸附与扩散"><a href="#吸附与扩散" class="headerlink" title="吸附与扩散"></a>吸附与扩散</h1><h1 id="分子轨道理论"><a href="#分子轨道理论" class="headerlink" title="分子轨道理论"></a>分子轨道理论</h1><p>CO的Blyholder模型</p>
+<p>d-band center</p>
+<h1 id="吸附粒子与衬底原子作用"><a href="#吸附粒子与衬底原子作用" class="headerlink" title="吸附粒子与衬底原子作用"></a>吸附粒子与衬底原子作用</h1><p>双金属表面吸附机理</p>
+<ul>
+<li>配合</li>
+<li>集合</li>
+<li>应力</li>
+</ul>
+<h1 id="吸附粒子相互作用"><a href="#吸附粒子相互作用" class="headerlink" title="吸附粒子相互作用"></a>吸附粒子相互作用</h1><h2 id="吸附次序"><a href="#吸附次序" class="headerlink" title="吸附次序"></a>吸附次序</h2><ul>
+<li>竞争吸附</li>
+<li>共吸附</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Lecture Notes  课程知识回顾</category>
+      </categories>
+      <tags>
+        <tag>Chemistry  化学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>课后回顾 | 吸附动力学</title>
+    <url>/2017/12/28/CATAlecturenote3/</url>
+    <content><![CDATA[<p>本文还在持续写作中…</p>
+<p><strong>关键词：</strong>表面黏附几率、一/二/三维扩散、前驱态吸附、L-H（Langmuir-Hinshelwood）机理、E-R（Eley-Rideal）机理</p>
+<span id="more"></span>
+<p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><h2 id="表面粘附几率"><a href="#表面粘附几率" class="headerlink" title="表面粘附几率"></a>表面粘附几率</h2><p>吸附速率</p>
+<script type="math/tex; mode=display">
+r_a = \frac{dn_s}{dt} = sZ</script><p>其中，$Z$ 为吸附分子碰撞表面的频率，$s$ 便可以被定义为<strong>表面粘附系数</strong> </p>
+<script type="math/tex; mode=display">
+s=\frac{1}{Z} \frac{dn_s}{dt}</script><p>在Langmiur模型的推导中我们已经提到了分子碰撞频率的有关公式</p>
+<script type="math/tex; mode=display">
+Z=\frac{dn}{dt}=\frac{P}{\sqrt{2 \pi m k_B T}}</script><p>于是表面粘附系数可以写为</p>
+<script type="math/tex; mode=display">
+s = \frac{\sqrt{2 \pi m k_B T}}{P} \frac{dn_s}{dt} = \frac{\sqrt{2 \pi m k_B T} dn_s}{dE_x}</script><p>其中气体暴露量$E_x = Pdt$。</p>
+<h2 id="扩散系数"><a href="#扩散系数" class="headerlink" title="扩散系数"></a>扩散系数</h2><ul>
+<li><p>一维扩散$E(x^2)=(2Dt)^{\frac{1}{2}}$</p>
+</li>
+<li><p>二维扩散$E(x^2)=(4Dt)^{\frac{1}{2}}$</p>
+</li>
+<li><p>三维扩散$E(x^2)=(6Dt)^{\frac{1}{2}}$</p>
+</li>
+</ul>
+<h1 id="直接吸附（Langmuir吸附）"><a href="#直接吸附（Langmuir吸附）" class="headerlink" title="直接吸附（Langmuir吸附）"></a>直接吸附（Langmuir吸附）</h1><h1 id="前驱态吸附"><a href="#前驱态吸附" class="headerlink" title="前驱态吸附"></a>前驱态吸附</h1><h1 id="表面反应"><a href="#表面反应" class="headerlink" title="表面反应"></a>表面反应</h1><h2 id="L-H（Langmuir-Hinshelwood）机理"><a href="#L-H（Langmuir-Hinshelwood）机理" class="headerlink" title="L-H（Langmuir-Hinshelwood）机理"></a>L-H（Langmuir-Hinshelwood）机理</h2><p>符合大多数实际表面反应情形。前提：<strong>表面反应</strong>为速控步。</p>
+<script type="math/tex; mode=display">
+A_{ads} + B_{ads} \rightarrow C</script><p>其中$C$可为$C_{ads}$或$C_g$。</p>
+<h2 id="E-R（Eley-Rideal）机理"><a href="#E-R（Eley-Rideal）机理" class="headerlink" title="E-R（Eley-Rideal）机理"></a>E-R（Eley-Rideal）机理</h2><p>实例很少，反应要求没有活化能，并且放热。例如：自由基反应。</p>
+<script type="math/tex; mode=display">
+A_g + B_a \rightarrow C</script><h2 id="“热原子”（布朗运动）机理"><a href="#“热原子”（布朗运动）机理" class="headerlink" title="“热原子”（布朗运动）机理"></a>“热原子”（布朗运动）机理</h2><p>例如：氢原子覆盖的Cu，Ni，Al，Pt等金属表面反应。</p>
+<script type="math/tex; mode=display">
+A_a + B_a \rightarrow C</script><h1 id="表面脱附"><a href="#表面脱附" class="headerlink" title="表面脱附"></a>表面脱附</h1><p>补偿效应</p>
+]]></content>
+      <categories>
+        <category>Lecture Notes  课程知识回顾</category>
+      </categories>
+      <tags>
+        <tag>Chemistry  化学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Something About Dirac and Kronecker Delta Function</title>
     <url>/2018/01/16/DeltaFunction/</url>
     <content><![CDATA[<h1 id="Dirac-delta-Function"><a href="#Dirac-delta-Function" class="headerlink" title="Dirac $\delta$ Function"></a>Dirac $\delta$ Function</h1><p>We can firstly focus on a defined $\delta_l$ function as follow: </p>
@@ -667,46 +707,6 @@ E=\phi_{+}-\phi_{-}</script><p>依照这个思路，若希望测量某个电极�
 \phi = \phi^{0} + \frac{RT}{nF}ln \frac{a_{ox}}{a_{red}}</script>]]></content>
       <categories>
         <category>Electrochemistry  电化学</category>
-      </categories>
-      <tags>
-        <tag>Chemistry  化学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>课后回顾 | 吸附动力学</title>
-    <url>/2017/12/28/CATAlecturenote3/</url>
-    <content><![CDATA[<p>本文还在持续写作中…</p>
-<p><strong>关键词：</strong>表面黏附几率、一/二/三维扩散、前驱态吸附、L-H（Langmuir-Hinshelwood）机理、E-R（Eley-Rideal）机理</p>
-<span id="more"></span>
-<p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><h2 id="表面粘附几率"><a href="#表面粘附几率" class="headerlink" title="表面粘附几率"></a>表面粘附几率</h2><p>吸附速率</p>
-<script type="math/tex; mode=display">
-r_a = \frac{dn_s}{dt} = sZ</script><p>其中，$Z$ 为吸附分子碰撞表面的频率，$s$ 便可以被定义为<strong>表面粘附系数</strong> </p>
-<script type="math/tex; mode=display">
-s=\frac{1}{Z} \frac{dn_s}{dt}</script><p>在Langmiur模型的推导中我们已经提到了分子碰撞频率的有关公式</p>
-<script type="math/tex; mode=display">
-Z=\frac{dn}{dt}=\frac{P}{\sqrt{2 \pi m k_B T}}</script><p>于是表面粘附系数可以写为</p>
-<script type="math/tex; mode=display">
-s = \frac{\sqrt{2 \pi m k_B T}}{P} \frac{dn_s}{dt} = \frac{\sqrt{2 \pi m k_B T} dn_s}{dE_x}</script><p>其中气体暴露量$E_x = Pdt$。</p>
-<h2 id="扩散系数"><a href="#扩散系数" class="headerlink" title="扩散系数"></a>扩散系数</h2><ul>
-<li><p>一维扩散$E(x^2)=(2Dt)^{\frac{1}{2}}$</p>
-</li>
-<li><p>二维扩散$E(x^2)=(4Dt)^{\frac{1}{2}}$</p>
-</li>
-<li><p>三维扩散$E(x^2)=(6Dt)^{\frac{1}{2}}$</p>
-</li>
-</ul>
-<h1 id="直接吸附（Langmuir吸附）"><a href="#直接吸附（Langmuir吸附）" class="headerlink" title="直接吸附（Langmuir吸附）"></a>直接吸附（Langmuir吸附）</h1><h1 id="前驱态吸附"><a href="#前驱态吸附" class="headerlink" title="前驱态吸附"></a>前驱态吸附</h1><h1 id="表面反应"><a href="#表面反应" class="headerlink" title="表面反应"></a>表面反应</h1><h2 id="L-H（Langmuir-Hinshelwood）机理"><a href="#L-H（Langmuir-Hinshelwood）机理" class="headerlink" title="L-H（Langmuir-Hinshelwood）机理"></a>L-H（Langmuir-Hinshelwood）机理</h2><p>符合大多数实际表面反应情形。前提：<strong>表面反应</strong>为速控步。</p>
-<script type="math/tex; mode=display">
-A_{ads} + B_{ads} \rightarrow C</script><p>其中$C$可为$C_{ads}$或$C_g$。</p>
-<h2 id="E-R（Eley-Rideal）机理"><a href="#E-R（Eley-Rideal）机理" class="headerlink" title="E-R（Eley-Rideal）机理"></a>E-R（Eley-Rideal）机理</h2><p>实例很少，反应要求没有活化能，并且放热。例如：自由基反应。</p>
-<script type="math/tex; mode=display">
-A_g + B_a \rightarrow C</script><h2 id="“热原子”（布朗运动）机理"><a href="#“热原子”（布朗运动）机理" class="headerlink" title="“热原子”（布朗运动）机理"></a>“热原子”（布朗运动）机理</h2><p>例如：氢原子覆盖的Cu，Ni，Al，Pt等金属表面反应。</p>
-<script type="math/tex; mode=display">
-A_a + B_a \rightarrow C</script><h1 id="表面脱附"><a href="#表面脱附" class="headerlink" title="表面脱附"></a>表面脱附</h1><p>补偿效应</p>
-]]></content>
-      <categories>
-        <category>Lecture Notes  课程知识回顾</category>
       </categories>
       <tags>
         <tag>Chemistry  化学</tag>
@@ -958,54 +958,6 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
       </tags>
   </entry>
   <entry>
-    <title>什么是“法拉第效率”？NRR和ECR中的一个重要指标</title>
-    <url>/2019/03/03/FaradayEfficiency/</url>
-    <content><![CDATA[<p>题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potential）和一定电位下所能达到的总电流密度（Current density）并驾齐驱。在介绍“法拉第效率”这个概念之前，我们首先来回顾什么是“法拉第定律”。</p>
-<span id="more"></span>
-<h1 id="法拉第定律、法拉第电流与法拉第效率的关系"><a href="#法拉第定律、法拉第电流与法拉第效率的关系" class="headerlink" title="法拉第定律、法拉第电流与法拉第效率的关系"></a>法拉第定律、法拉第电流与法拉第效率的关系</h1><p>法拉第定律建立了宏观电荷量/电流和化学反应导致的微观电子转移之间的联系。</p>
-<script type="math/tex; mode=display">
-Q=NF</script><p>等式两边同时对时间求导数可得</p>
-<script type="math/tex; mode=display">
-i = \frac{dQ}{dt} = \frac{dN}{dt}F = nF</script><p>法拉第电流（$i_f$），顾名思义，就是化学反应过程导致电子转移，这部分电子所对应的电流。</p>
-<p>那除了法拉第电流，我们在实际测试中得到的总电流还有非法拉第电流，其中大部分可以认为是电极双电层的充电电流（$i_c$），如上图。关于电极双电层结构的数学模型可以参见博文（<a href="http://mozheyang.top/2017/10/22/EClecturenote3/">课后回顾 | 双电层结构</a>）。简单地来说，在固液界面两边会积累电荷，这些电荷空间距离较近，却无法穿越界面进行结合，像极了平行板电容器。因此双电层电流可以看作该电容器的充电电流。需要注意的是，电极表面修饰会对双电层充电电流产生影响。</p>
-<p><img src="http://mozheyang.top/images/FE/Double_Layer.png" alt=""></p>
-<script type="math/tex; mode=display">
-i_{total} =f(i_f, i_c) \approx i_f + i_c</script><p>以上的关系必定是十分粗略而且非定量的，法拉第电流和双电层充电电流都会随时间和施加偏压的变化而变化。当电压一定时，不存在双电层充电电流，即$i_c = 0$，那么</p>
-<script type="math/tex; mode=display">
-i_{total} \approx i_f</script><p>注：电化学测试可以获得的信息是十分丰富的，部分技巧甚至具有较深厚的数理背景。如果希望对CV和LSV曲线中的电流了解得更多更深入，可以关注笔者后续的博文：<a href="http://mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a>。</p>
-<p>在水中（被施加负压的一极）阴极，在电压足够负的情况下只发生氢析出反应，那么产物也就只有$H_2$。在氮气还原反应中，由于氢气析出所需电位比氮气还原所需电位较正，于是在氮气还原发生的过程中，有很大可能氢气析出反应也是同时发生的（另外很小可能：电催化剂极大减小了氮气还原所需要的负偏压导致氮气还原所需电位比氢气析出正），气相产物还是只有$H_2$，但液相中产物可能会有$NH_4^+$（产生氨气然后溶于电解液中）和$N_2H_4$；在二氧化碳还原反应中，可能的产物会更复杂，气相产物可能有$H_2$、$CO$、$CH_4$、$C_2H_4$……而液相产物又可能有$HCOOH$、$CH_3COOH$、$EtOH$（乙醇）、$n-PrOH$（异丙醇）……</p>
-<p><img src="http://mozheyang.top/images/FE/ECRpotential.png" alt=""></p>
-<p class="refs">
-
-注：以上部分反应看似具有比氢气析出更正的电位，但实际上，二氧化碳分子还原几乎都必须经过生成羰基自由基CO*的过程，该反应对应的电极电势为-1.90 V (vs. SHE，水溶液). Ref: Sun, Z.; Ma, T.; Tao, H.; Fan, Q.; Han, B. Fundamentals and Challenges of Electrochemical CO2Reduction Using Two-Dimensional Materials. Chem 2017, 3 (4), 560–587.
-
-</p>
-
-<p>所以法拉第电流部分可以由多个不同产物的法拉第电流组成。对于氮气还原反应：</p>
-<script type="math/tex; mode=display">
-i_{total} = i_f = i_{H_2} + i_{NH_4^+} + i_{N_2H_4}</script><p>对于二氧化碳还原反应：</p>
-<script type="math/tex; mode=display">
-i_{total} = i_f = \{i_{H_2} + i_{CO} + i_{CH_4} + i_{C_2H_4}\}_{gas}
-+ \{i_{HCOOH} + i_{CH_3COOH} + i_{EtOH} + i_{n-PrOH}\}_{liquid}</script><p>所以针对某种产物，比如铵根在氮气还原反应中的法拉第效率，其表达式可以写为</p>
-<script type="math/tex; mode=display">
-FE = \frac{i_{NH_4^+}}{i_{f}} = \frac{i_{NH_4^+}}{i_{total}}</script><h1 id="不同情况下法拉第效率的具体计算方法"><a href="#不同情况下法拉第效率的具体计算方法" class="headerlink" title="不同情况下法拉第效率的具体计算方法"></a>不同情况下法拉第效率的具体计算方法</h1><p>在不同情况下我们都可以依据<strong>物质守恒定律</strong>，结合法拉第定律对法拉第效率建立合理的计算方法。物质守恒定律简单说来就是，若计算平均法拉第效率，那我们便使用一段时间内转移的电子总数求平均后进行计算；若计算瞬时（单位时间）法拉第效率，那我们便用该单位时间下转移的电子个数进行计算。</p>
-<h2 id="平均法拉第效率"><a href="#平均法拉第效率" class="headerlink" title="平均法拉第效率"></a>平均法拉第效率</h2><p>在一定反应时间段内，若某产物的法拉第效率可基本视为恒定（稳定性较好的催化剂，如目前最好的碳基催化剂），那么可以依据以下方法计算该段时间内的对应该产物的<strong>平均法拉第速率</strong></p>
-<script type="math/tex; mode=display">
-FE = \frac{产物所对应的转移电荷}{总共消耗的电荷}</script><p>由于即使在同一电位下，仍不存在严格恒定的产物法拉第效率，因此目前文献中多用瞬时法拉第效率。</p>
-<h2 id="瞬时法拉第效率"><a href="#瞬时法拉第效率" class="headerlink" title="瞬时法拉第效率"></a>瞬时法拉第效率</h2><p>在法拉第效率不恒定的情况下（稳定性较差的催化剂，如多数金属催化剂），可以依据以下方法计算一段时间内的<strong>瞬时法拉第效率</strong></p>
-<script type="math/tex; mode=display">
-j_i = n_i F A^{-1} = x_i \times v \times \frac{z_i F p_0}{RT} \times A^{-1} \\
-FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是单位时间、单位电极面积由于i物种生成所引起的电子转移个数，其与i物种对应电流密度$j_i$之间的关系便可以通过法拉第定律进行描述。式中$v$为气体流速 (mol min<sup>-1</sup>)，$z_i$为每1单位$i$物种生成导致的电子转移个数，$P_0$为标准大气压，$F$和$R$分别为法拉第常数和气体常数（法拉第常数 $F=96485 \quad C \cdot mol^{-1}$，气体常数$R = 8.314 \quad J \cdot mol^{-1} \cdot K^{-1}$）。$i$物种的法拉第效率最终等于$i$物种电流密度与总电流密度之比。</p>
-<p class="refs">Ref: Jiang K, Sandberg R B, Akey A J, et al. Metal ion cycling of Cu foil for selective C–C coupling in electrochemical CO<sub>2</sub> reduction[J]. Nature Catalysis, 2018, 1(2): 111.</p>]]></content>
-      <categories>
-        <category>Electrochemistry  电化学</category>
-      </categories>
-      <tags>
-        <tag>Chemistry  化学</tag>
-        <tag>Material  材料</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>交流阻抗谱学与能源电化学</title>
     <url>/2020/04/19/EIS/</url>
     <content><![CDATA[<h1 id="交流阻抗谱学的优势在哪？"><a href="#交流阻抗谱学的优势在哪？" class="headerlink" title="交流阻抗谱学的优势在哪？"></a>交流阻抗谱学的优势在哪？</h1><p>我们一般更常用的电势阶跃法、线性伏安法和循环伏安法等，都属于暂态分析，即在系统的非稳态下进行分析。交流阻抗谱学（Electrochemical impedance spectroscopy, EIS）是一种在系统稳态下进行分析（<strong>稳态分析</strong>）的方法，具有高精度（相对）、简化分析和可分析系统长时表现的特点，一定程度上弥补了暂态分析的不足。</p>
@@ -1218,6 +1170,54 @@ i = \frac{e}{Z_C}
       <tags>
         <tag>Chemistry  化学</tag>
         <tag>Updating  持续更新中...</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>什么是“法拉第效率”？NRR和ECR中的一个重要指标</title>
+    <url>/2019/03/03/FaradayEfficiency/</url>
+    <content><![CDATA[<p>题目中的NRR（Nitrogen Reduction Reaction）对应的是氮气（电）还原反应，ECR（Electrochemical Carbon dioxide Reduction）对应的是二氧化碳电还原反应。在不同电压下，电催化剂产生所期望产物的法拉第效率（Faraday efficiency, FE），成为了考察该催化剂电催化性能的一个重要指标，与起始电位（Onset potential）和一定电位下所能达到的总电流密度（Current density）并驾齐驱。在介绍“法拉第效率”这个概念之前，我们首先来回顾什么是“法拉第定律”。</p>
+<span id="more"></span>
+<h1 id="法拉第定律、法拉第电流与法拉第效率的关系"><a href="#法拉第定律、法拉第电流与法拉第效率的关系" class="headerlink" title="法拉第定律、法拉第电流与法拉第效率的关系"></a>法拉第定律、法拉第电流与法拉第效率的关系</h1><p>法拉第定律建立了宏观电荷量/电流和化学反应导致的微观电子转移之间的联系。</p>
+<script type="math/tex; mode=display">
+Q=NF</script><p>等式两边同时对时间求导数可得</p>
+<script type="math/tex; mode=display">
+i = \frac{dQ}{dt} = \frac{dN}{dt}F = nF</script><p>法拉第电流（$i_f$），顾名思义，就是化学反应过程导致电子转移，这部分电子所对应的电流。</p>
+<p>那除了法拉第电流，我们在实际测试中得到的总电流还有非法拉第电流，其中大部分可以认为是电极双电层的充电电流（$i_c$），如上图。关于电极双电层结构的数学模型可以参见博文（<a href="http://mozheyang.top/2017/10/22/EClecturenote3/">课后回顾 | 双电层结构</a>）。简单地来说，在固液界面两边会积累电荷，这些电荷空间距离较近，却无法穿越界面进行结合，像极了平行板电容器。因此双电层电流可以看作该电容器的充电电流。需要注意的是，电极表面修饰会对双电层充电电流产生影响。</p>
+<p><img src="http://mozheyang.top/images/FE/Double_Layer.png" alt=""></p>
+<script type="math/tex; mode=display">
+i_{total} =f(i_f, i_c) \approx i_f + i_c</script><p>以上的关系必定是十分粗略而且非定量的，法拉第电流和双电层充电电流都会随时间和施加偏压的变化而变化。当电压一定时，不存在双电层充电电流，即$i_c = 0$，那么</p>
+<script type="math/tex; mode=display">
+i_{total} \approx i_f</script><p>注：电化学测试可以获得的信息是十分丰富的，部分技巧甚至具有较深厚的数理背景。如果希望对CV和LSV曲线中的电流了解得更多更深入，可以关注笔者后续的博文：<a href="http://mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a>。</p>
+<p>在水中（被施加负压的一极）阴极，在电压足够负的情况下只发生氢析出反应，那么产物也就只有$H_2$。在氮气还原反应中，由于氢气析出所需电位比氮气还原所需电位较正，于是在氮气还原发生的过程中，有很大可能氢气析出反应也是同时发生的（另外很小可能：电催化剂极大减小了氮气还原所需要的负偏压导致氮气还原所需电位比氢气析出正），气相产物还是只有$H_2$，但液相中产物可能会有$NH_4^+$（产生氨气然后溶于电解液中）和$N_2H_4$；在二氧化碳还原反应中，可能的产物会更复杂，气相产物可能有$H_2$、$CO$、$CH_4$、$C_2H_4$……而液相产物又可能有$HCOOH$、$CH_3COOH$、$EtOH$（乙醇）、$n-PrOH$（异丙醇）……</p>
+<p><img src="http://mozheyang.top/images/FE/ECRpotential.png" alt=""></p>
+<p class="refs">
+
+注：以上部分反应看似具有比氢气析出更正的电位，但实际上，二氧化碳分子还原几乎都必须经过生成羰基自由基CO*的过程，该反应对应的电极电势为-1.90 V (vs. SHE，水溶液). Ref: Sun, Z.; Ma, T.; Tao, H.; Fan, Q.; Han, B. Fundamentals and Challenges of Electrochemical CO2Reduction Using Two-Dimensional Materials. Chem 2017, 3 (4), 560–587.
+
+</p>
+
+<p>所以法拉第电流部分可以由多个不同产物的法拉第电流组成。对于氮气还原反应：</p>
+<script type="math/tex; mode=display">
+i_{total} = i_f = i_{H_2} + i_{NH_4^+} + i_{N_2H_4}</script><p>对于二氧化碳还原反应：</p>
+<script type="math/tex; mode=display">
+i_{total} = i_f = \{i_{H_2} + i_{CO} + i_{CH_4} + i_{C_2H_4}\}_{gas}
++ \{i_{HCOOH} + i_{CH_3COOH} + i_{EtOH} + i_{n-PrOH}\}_{liquid}</script><p>所以针对某种产物，比如铵根在氮气还原反应中的法拉第效率，其表达式可以写为</p>
+<script type="math/tex; mode=display">
+FE = \frac{i_{NH_4^+}}{i_{f}} = \frac{i_{NH_4^+}}{i_{total}}</script><h1 id="不同情况下法拉第效率的具体计算方法"><a href="#不同情况下法拉第效率的具体计算方法" class="headerlink" title="不同情况下法拉第效率的具体计算方法"></a>不同情况下法拉第效率的具体计算方法</h1><p>在不同情况下我们都可以依据<strong>物质守恒定律</strong>，结合法拉第定律对法拉第效率建立合理的计算方法。物质守恒定律简单说来就是，若计算平均法拉第效率，那我们便使用一段时间内转移的电子总数求平均后进行计算；若计算瞬时（单位时间）法拉第效率，那我们便用该单位时间下转移的电子个数进行计算。</p>
+<h2 id="平均法拉第效率"><a href="#平均法拉第效率" class="headerlink" title="平均法拉第效率"></a>平均法拉第效率</h2><p>在一定反应时间段内，若某产物的法拉第效率可基本视为恒定（稳定性较好的催化剂，如目前最好的碳基催化剂），那么可以依据以下方法计算该段时间内的对应该产物的<strong>平均法拉第速率</strong></p>
+<script type="math/tex; mode=display">
+FE = \frac{产物所对应的转移电荷}{总共消耗的电荷}</script><p>由于即使在同一电位下，仍不存在严格恒定的产物法拉第效率，因此目前文献中多用瞬时法拉第效率。</p>
+<h2 id="瞬时法拉第效率"><a href="#瞬时法拉第效率" class="headerlink" title="瞬时法拉第效率"></a>瞬时法拉第效率</h2><p>在法拉第效率不恒定的情况下（稳定性较差的催化剂，如多数金属催化剂），可以依据以下方法计算一段时间内的<strong>瞬时法拉第效率</strong></p>
+<script type="math/tex; mode=display">
+j_i = n_i F A^{-1} = x_i \times v \times \frac{z_i F p_0}{RT} \times A^{-1} \\
+FE = \frac{j_i}{j_{total}} \times 100\%</script><p>由上式，$n_i$代表的是单位时间、单位电极面积由于i物种生成所引起的电子转移个数，其与i物种对应电流密度$j_i$之间的关系便可以通过法拉第定律进行描述。式中$v$为气体流速 (mol min<sup>-1</sup>)，$z_i$为每1单位$i$物种生成导致的电子转移个数，$P_0$为标准大气压，$F$和$R$分别为法拉第常数和气体常数（法拉第常数 $F=96485 \quad C \cdot mol^{-1}$，气体常数$R = 8.314 \quad J \cdot mol^{-1} \cdot K^{-1}$）。$i$物种的法拉第效率最终等于$i$物种电流密度与总电流密度之比。</p>
+<p class="refs">Ref: Jiang K, Sandberg R B, Akey A J, et al. Metal ion cycling of Cu foil for selective C–C coupling in electrochemical CO<sub>2</sub> reduction[J]. Nature Catalysis, 2018, 1(2): 111.</p>]]></content>
+      <categories>
+        <category>Electrochemistry  电化学</category>
+      </categories>
+      <tags>
+        <tag>Chemistry  化学</tag>
+        <tag>Material  材料</tag>
       </tags>
   </entry>
   <entry>
@@ -1606,43 +1606,6 @@ Z(\omega) &= \frac{1}{i\pi}
       </tags>
   </entry>
   <entry>
-    <title>利用Kindle和Anki进行阅读生词闭环记忆</title>
-    <url>/2017/05/12/KindleAnki/</url>
-    <content><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>从阅读中记忆单词的方法，是启蒙自“恶膜的奶爸”提到的伍君仪老师英语单词学习方法——透析法。其意在“阅读吸收信息语流的过程中，顺带积累下生词量”。通过阅读熟悉单词语境，在阅读中真正理解单词的意义，辅以适当的复习，从而实现更全面高效的单词学习记忆效果。</p>
-<span id="more"></span>
-<p>另外，笔者认为还有必要解释一下标题中所谓“闭环记忆”的意思。在整批单词从“首次输入”到“永久记忆”的过程中，难免出现部分单词的遗忘问题。“闭环”的意思是，不让遗忘的单词淡出记忆后就任其淡出，而是把它们揪回来，重新记忆，并且整个记忆过程会依照记忆曲线进行安排，极大提高记忆效率。</p>
-<p>这么一介绍之后，相信大家对<strong>阅读单词记忆</strong>的基本思路有了更全面的认知，那么如果感兴趣的话，欢迎与笔者一起交流更多高效记忆方法~</p>
-<h1 id="硬件要求"><a href="#硬件要求" class="headerlink" title="硬件要求"></a>硬件要求</h1><p>我们以下方法主要需要三种硬件：</p>
-<ul>
-<li>Kindle</li>
-<li>Windows系统个人电脑</li>
-<li>Android或者IOS系统移动端</li>
-</ul>
-<p><img src="http://mozheyang.top/images/KindleAnki/KindleMateAnki.JPG" alt=""> </p>
-<h1 id="方法流程"><a href="#方法流程" class="headerlink" title="方法流程"></a>方法流程</h1><p>基本思路是通过Kindle生词本功能，记录在Kindle中阅读的生词。然后通过Kindle Mate 1.38（目前最新版本）导入Kindle生词本数据（主要是生词和<strong>例句</strong>数据），在这里可以选择加上不同单词释义，并导出成Anki可以读取的格式。接着通过Anki PC端对生词、释义和例句进行编辑，转换成Anki移动端可以导入的akpg格式文件。</p>
-<p><strong>强烈建议：</strong>或者我们也可以免费申请一个Ankiweb账号，可以实现PC端、Web端和移动端的同步。这样就不需要导出akpg格式再导入移动手机了。</p>
-<p><strong>需要注意的是，</strong><br>Anki PC和Ankiweb目前是免费提供的，可以单击<a href="https://apps.ankiweb.net/">本链接</a>进入官网下载。<br>同时，AnkiDroid是Android开放用户们开发的，也是免费的。但Anki作者目前全职开发本软件，因此在IOS端Anki是收费软件，而且很贵，大家可以自己权衡。</p>
-<p><img src="http://mozheyang.top/images/KindleAnki/KindlePC.JPG" alt=""> </p>
-<p><img src="http://mozheyang.top/images/KindleAnki/PC.JPG" alt=""> </p>
-<p>Kindle Mate也是免费软件，可以单击<a href="http://kmate.me/cn/">本链接</a>进入官网下载最新版本。以上操作是通过USB接口将生词数据导入Kindle Mate。</p>
-<p><img src="http://mozheyang.top/images/KindleAnki/KindleMate1.JPG" alt=""> </p>
-<p><img src="http://mozheyang.top/images/KindleAnki/KindleMate2.JPG" alt=""></p>
-<p><img src="http://mozheyang.top/images/KindleAnki/KindleMate3.JPG" alt=""></p>
-<p>以上操作是通过Kindle Mate导出Anki可导入的txt文件。</p>
-<p><img src="http://mozheyang.top/images/KindleAnki/KindleAnkiPC.JPG" alt=""></p>
-<p><img src="http://mozheyang.top/images/KindleAnki/AnkiPCPhone.JPG" alt=""></p>
-<p>以上操作是数据流示意图。</p>
-<p><img src="http://mozheyang.top/images/KindleAnki/Ankiweb.JPG" alt=""></p>
-<p>Ankiweb是很有用的同步工具，可以通过单击<a href="https://ankiweb.net/about">本链接</a>免费申请Ankiweb账号。</p>
-<p><img src="http://mozheyang.top/images/KindleAnki/Enjoy.JPG" alt=""></p>
-<p><img src="http://mozheyang.top/images/KindleAnki/Thanks.JPG" alt=""></p>
-]]></content>
-      <tags>
-        <tag>Kindle</tag>
-        <tag>Anki</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Kindle神器Calibre | 电子书管理 &amp; 无线同步书籍</title>
     <url>/2017/06/07/KindleCalibre/</url>
     <content><![CDATA[<p>Calibre是一个电子书管理器。所有格式的电子书可以放入里面。常见的如txt、mobi、epdu，甚至PDF格式的电子书都可以通过Calibre进行存储和管理，并互相进行转换。</p>
@@ -1692,6 +1655,43 @@ Z(\omega) &= \frac{1}{i\pi}
 ]]></content>
       <tags>
         <tag>Kindle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用Kindle和Anki进行阅读生词闭环记忆</title>
+    <url>/2017/05/12/KindleAnki/</url>
+    <content><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>从阅读中记忆单词的方法，是启蒙自“恶膜的奶爸”提到的伍君仪老师英语单词学习方法——透析法。其意在“阅读吸收信息语流的过程中，顺带积累下生词量”。通过阅读熟悉单词语境，在阅读中真正理解单词的意义，辅以适当的复习，从而实现更全面高效的单词学习记忆效果。</p>
+<span id="more"></span>
+<p>另外，笔者认为还有必要解释一下标题中所谓“闭环记忆”的意思。在整批单词从“首次输入”到“永久记忆”的过程中，难免出现部分单词的遗忘问题。“闭环”的意思是，不让遗忘的单词淡出记忆后就任其淡出，而是把它们揪回来，重新记忆，并且整个记忆过程会依照记忆曲线进行安排，极大提高记忆效率。</p>
+<p>这么一介绍之后，相信大家对<strong>阅读单词记忆</strong>的基本思路有了更全面的认知，那么如果感兴趣的话，欢迎与笔者一起交流更多高效记忆方法~</p>
+<h1 id="硬件要求"><a href="#硬件要求" class="headerlink" title="硬件要求"></a>硬件要求</h1><p>我们以下方法主要需要三种硬件：</p>
+<ul>
+<li>Kindle</li>
+<li>Windows系统个人电脑</li>
+<li>Android或者IOS系统移动端</li>
+</ul>
+<p><img src="http://mozheyang.top/images/KindleAnki/KindleMateAnki.JPG" alt=""> </p>
+<h1 id="方法流程"><a href="#方法流程" class="headerlink" title="方法流程"></a>方法流程</h1><p>基本思路是通过Kindle生词本功能，记录在Kindle中阅读的生词。然后通过Kindle Mate 1.38（目前最新版本）导入Kindle生词本数据（主要是生词和<strong>例句</strong>数据），在这里可以选择加上不同单词释义，并导出成Anki可以读取的格式。接着通过Anki PC端对生词、释义和例句进行编辑，转换成Anki移动端可以导入的akpg格式文件。</p>
+<p><strong>强烈建议：</strong>或者我们也可以免费申请一个Ankiweb账号，可以实现PC端、Web端和移动端的同步。这样就不需要导出akpg格式再导入移动手机了。</p>
+<p><strong>需要注意的是，</strong><br>Anki PC和Ankiweb目前是免费提供的，可以单击<a href="https://apps.ankiweb.net/">本链接</a>进入官网下载。<br>同时，AnkiDroid是Android开放用户们开发的，也是免费的。但Anki作者目前全职开发本软件，因此在IOS端Anki是收费软件，而且很贵，大家可以自己权衡。</p>
+<p><img src="http://mozheyang.top/images/KindleAnki/KindlePC.JPG" alt=""> </p>
+<p><img src="http://mozheyang.top/images/KindleAnki/PC.JPG" alt=""> </p>
+<p>Kindle Mate也是免费软件，可以单击<a href="http://kmate.me/cn/">本链接</a>进入官网下载最新版本。以上操作是通过USB接口将生词数据导入Kindle Mate。</p>
+<p><img src="http://mozheyang.top/images/KindleAnki/KindleMate1.JPG" alt=""> </p>
+<p><img src="http://mozheyang.top/images/KindleAnki/KindleMate2.JPG" alt=""></p>
+<p><img src="http://mozheyang.top/images/KindleAnki/KindleMate3.JPG" alt=""></p>
+<p>以上操作是通过Kindle Mate导出Anki可导入的txt文件。</p>
+<p><img src="http://mozheyang.top/images/KindleAnki/KindleAnkiPC.JPG" alt=""></p>
+<p><img src="http://mozheyang.top/images/KindleAnki/AnkiPCPhone.JPG" alt=""></p>
+<p>以上操作是数据流示意图。</p>
+<p><img src="http://mozheyang.top/images/KindleAnki/Ankiweb.JPG" alt=""></p>
+<p>Ankiweb是很有用的同步工具，可以通过单击<a href="https://ankiweb.net/about">本链接</a>免费申请Ankiweb账号。</p>
+<p><img src="http://mozheyang.top/images/KindleAnki/Enjoy.JPG" alt=""></p>
+<p><img src="http://mozheyang.top/images/KindleAnki/Thanks.JPG" alt=""></p>
+]]></content>
+      <tags>
+        <tag>Kindle</tag>
+        <tag>Anki</tag>
       </tags>
   </entry>
   <entry>
@@ -2539,65 +2539,6 @@ $$
       </tags>
   </entry>
   <entry>
-    <title>横看成岭侧成峰 | 理工科思维论现象与本质</title>
-    <url>/2018/07/22/PhenoNature/</url>
-    <content><![CDATA[<p>众所周知，现象不等于本质。所谓“本质”，一定是隐藏在现象背后的“真理”。</p>
-<p>但如果现象与本质不同，那二者又究竟是何种关系呢？为什么我们需要透过现象才能看到本质，而不能直接看到本质？</p>
-<p>笔者最近看到一篇文章，又重新思考起这个问题来。</p>
-<span id="more"></span>
-<h1 id="人类思维？计算机思维？"><a href="#人类思维？计算机思维？" class="headerlink" title="人类思维？计算机思维？"></a>人类思维？计算机思维？</h1><p>这篇文章介绍了计算机视觉领域中的一种识别PS处理过的图片的方法[1]。文中通过对原图（Authentic image）和修改图（Tampered image）进行运算，获取了二者的噪声谱（Noise map）。再通过模型识别出噪声谱中的异常来对异常增加（或减少）的物体进行识别。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv1.png" alt=""></p>
-<p>如上图，PS中被增加或者减少的物体都逃不过这种算法的“火眼金睛”。这似乎让人们觉得，计算机实在是比人类强大很多，人类都不能分辨真假的东西，却仍然逃不过计算机的眼睛。</p>
-<p>但我们也应该认识到，计算机也是可以被欺骗的。我们人类至少不会因为一个或几个像素的改变而轻易改变对一个图像的判断。但目前的计算机人工智能会。一些具有明确意义的图片，通过一个像素的改变就可以显著降低计算机（现有深度学习算法）对其识别率[2]。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv2.png" alt=""></p>
-<p>对无明确意义的图片，也可以通过一个像素点的改变欺骗计算机，将其归于任何一个分类（近乎100%的置信度）[2]。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv3.png" alt=""></p>
-<p>在以上研究的基础上，我们也开始质疑计算机的可靠性了。不过，在这个世界上还真是没有什么东西是完全靠谱的。在笔者狭隘的眼中，还是会认为，普遍地计算机会比人类更靠谱些。毕竟人类比计算机更容易被欺骗，例如目前发展很快的GAN（生成式对抗网络）技术，可以极其方便地生成以假乱真的图片[3]。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/arxiv4.png" alt=""></p>
-<p>你真的能相信图中虚拟世界（Virtural world）不是真实世界（Real world）吗？</p>
-<p>当然，我们不需要对此感到绝望。因为这个世界本就是如此。</p>
-<p>我们人类的思维与计算机的思维是<strong><u>看待世界的不同角度</u></strong>。</p>
-<p>而真理，永远隐藏在我们所看到的现象背后。</p>
-<h1 id="现象与本质的量子物理意义"><a href="#现象与本质的量子物理意义" class="headerlink" title="现象与本质的量子物理意义"></a>现象与本质的量子物理意义</h1><p>测量（Measurement）是需要通过干扰我们所需测量的系统，获得其干扰反馈，从而实现分析我们感兴趣系统内部信息的一个过程。如果说$A$是一个需要我们测量的系统，$M$是我们测量$A$时所采用的一种（干扰）方法，而$B$是我们最终的测量结果。那么三者之间的关系可以被表示为</p>
-<script type="math/tex; mode=display">
-B = MA</script><p>在公式中，$M$可以理解为算符，其作用在$A$这个对象上，结果是获得了$B$这个对象。很好理解对不对？</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/seeThings.png" alt=""></p>
-<p>我们能够看到东西，也正是通过<strong>光作用于我们关注的物体并与之作用，我们利用眼睛接收到光信号，最终大脑对光信号作出处理和判断</strong>的这样一个过程。在这个现实过程中，我们关注的物体是$A$，光（包括其所经历的一切过程）是$M$，而我们大脑最终接收到的信号是$B$。容易理解，因为经过了<strong>复杂</strong>方法$M$的作用，$A$与$B$在<strong>大多数情况下</strong>都是难以相等的（理论上存在相等的可能，但目前在现实世界中没有遇到过二者相等的例子）。</p>
-<p>如果简单地，将$A$、$B$对象看作向量，$M$算符看作矩阵，那么当且仅当$M$为单位矩阵时，可以满足$A=B$。这时可以实现所谓“现象即本质”。但这在现实生活中并没有被观测的例子。可以理解，当$M$可以为任何算符，其取单位矩阵值的可能性无限趋近于零。</p>
-<h1 id="线性代数与现象本质的关系"><a href="#线性代数与现象本质的关系" class="headerlink" title="线性代数与现象本质的关系"></a>线性代数与现象本质的关系</h1><p>从数学角度来看，$M$算符属于一种变换（Transform）。那么$B = MA$可以看作是一种<strong>降维（投影）变换</strong>。</p>
-<p><img src="http://mozheyang.top/images/PhenoNature/projection.png" alt=""></p>
-<p>从上图中简单的二维投影一维的例子中，我们不难得知，降维会损失维度信息（从x、y坐标到只剩下x坐标）。低维度信息难以完美重构高维度的情况。正如上图，只从x轴上的投影无法得知是以上哪种二维图线投影得到的。当然，如果我们再获得了二维图线在y轴上的投影，那么就可以重构出原来的二维图线了。这也正是我们需要<strong>多角度看待事物</strong>的原因。</p>
-<p>另外，从上图我们还可以得到启发：当各观测角度相互正交（相互独立，毫不相关）时，我们能够在最少的观测次数下得到事物的“本质”。当然这是后话了。</p>
-<h1 id="给我们带来启发"><a href="#给我们带来启发" class="headerlink" title="给我们带来启发"></a>给我们带来启发</h1><p>作为一个材料科研工作者，笔者还希望从自然科学发展的角度思考思考我们能够前进的方向。</p>
-<p>生物信息中基因组的利用最初是从孟德尔遗传定律开始的。笔者认为这个思想的基础是“确定的基因决定了生物的特性”。这与材料科学中“成分结构决定性能”的理论基础不谋而合。</p>
-<p>在电催化研究中，我们常使用“描述符（descriptor）”尝试对电极催化剂的催化活性进行“描述”。从线性代数的角度上说，也可以说，它是在试图做一种“投影”。把复杂无比的影响催化活性的各种因素，全都包含在一个“描述符”中去。那这个描述符可以认为是各种混杂因素在催化活性这个角度的一个投影。</p>
-<p>在计算机优化算法中，有些目标优化函数会过于复杂，会占用很长的机时才能得到答案，也就是寻找最优解所需机时以及最优解。针对此，我们可以采用较简单的代价估计函数来替代目标优化函数，进行一个机时估计，从而缩短调试算法的时间。</p>
-<p>在材料研究中，我们实际也面临着这样一个规模巨大的优化问题。我们在思考，何种成分，何种工艺处理，在何种条件下，能够获得期望的最佳材料性能。这么说来，材料与计算机都使用“炼丹”的原理，但到底是什么限制了材料学科的发展速度呢？笔者认为是<strong><u>反馈速度</u></strong>。计算机学科拥有相对更确定的物理规律，也就能够拥有对目标函数更好的掌控能力。这意味着，“代价估计函数来替代目标优化函数”的这条道路对计算机学科来说是相对容易的。但对自然科学，如材料学科来说，不然。材料缺少的就是这样一个（更准确说是”多个“）好用的代价估计函数，更本质的，可以认为其也是一种描述符。</p>
-<p>在笔者眼中，高通量计算与高通量实验（材料基因组）的研究工作，正是材料学科模仿生物学科进行的描述符快速搜索的研究工作。找到了材料某种性能的描述符，也即建立起了目标和材料结构参数（或其它可调控参数）之间的桥梁。与工程经验公式同理，这也就意味着该性能在工程上已经具有实际应用的价值（或可能），材料研发速度将会迎来质的飞跃。届时，限制材料研发速度的关键很可能会重新回到计算速度和机械自动化的速度上，极大地解放了材料领域科研人员的劳动力。可以预见，材料（科学与工程）学科将会迎来新的发展机会。</p>
-<p>目前已经有很多研究者在进行着描述符的研究。描述符的发现方面，笔者已经发现不少文章利用近年来大热的机器学习方法对影响材料最终性能的因素进行研究[4]；描述符的理解方面，每种材料体系已经总结出了“各自不同”的物理描述符，但对影响材料性能的物理本质理解还有待加深[5-7]。</p>
-<h1 id="我们能做些什么"><a href="#我们能做些什么" class="headerlink" title="我们能做些什么"></a>我们能做些什么</h1><p>说了那么多，那现象与本质关系的理解能给我们一般的生活带来什么启发呢？</p>
-<p>笔者认为至少应该有两点。</p>
-<p>第一，日常生活中的判断我们应该能够做到<strong><u>多角度听取意见</u></strong>。任何个体、组织所发表的意见言论都是片面的，他们只能从自己的角度去看待一个问题。甚至是新闻媒体，也无法回避（如政治倾向）。或许他们本意不坏，但人类认识事物、做成判断的片面性物理本质已经限制了其作出完全立体判断的能力。所以好的（或理想的）新闻和学术论文应该能够把相左的意见都陈列出来，并基于此给出自己的判断。这就给读者留下了自己独立判断的空间（笔者认为，个体独立思考的空间总是有的，不过是个体进入的难度有差异）。</p>
-<p>第二，在获得多角度意见后，我们还应该<strong><u>多角度分析问题</u></strong>。由于个体受到所处环境和所受教育等因素的限制，作出完全客观无偏见的判断是十分困难的。但这不意味着我们不能去追求一种相对理性客观的思考方式。当我们意识到自己已经具有某种偏见，或者已经盲从大流时，就应该提醒自己需要从另一个角度去思考问题了。在最近大热的电影《我不是药神》中，就涉及了多个利益角度。从人民角度来说，药企制定的过高药价是不人道的行为；从药企角度来说，需要制定足够高的药价，以维持给研发人员提供的有吸引力的工资，从而持续进行新药的研发；从政府的角度来说，每个阶段社会所面对的主要矛盾都有所不同，同时保证人民的生命权益和药企的可持续发展并不是一朝一夕就能完成的。虽然对问题的全面（多角度）分析并不意味着能够解决问题本身（矛盾无处不在），但却可以从根本上为我们提供对问题更深入的理解。</p>
-<hr>
-<p>以上便是笔者近日对“现象与本质”关系的一些微小的思考。</p>
-<p>欢迎各位读者提出意见与建议！</p>
-<p>Email: mozheyang@outlook.com</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Zhou P, Han X, Morariu V I, et al. Learning rich features for image manipulation detection[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018: 1053-1061.</p>
-<p>[2] Su J, Vargas D V, Sakurai K. One pixel attack for fooling deep neural networks[J]. IEEE Transactions on Evolutionary Computation, 2019, 23(5): 828-841.</p>
-<p>[3] Li P, Liang X, Jia D, et al. Semantic-aware grad-gan for virtual-to-real urban scene adaption[J]. arXiv preprint arXiv:1801.01726, 2018.</p>
-<p>[4] Jonayat, A. S. M.; Janik, M. J.; Senftle, T. P. Interaction Trends between Single Metal Atoms and Oxide Supports Identified with Density Functional Theory and Statistical Learning. Nat. Catal. 2018.</p>
-<p>[5] Suntivich, J.; Gasteiger, H. A.; Yabuuchi, N.; Nakanishi, H.; Goodenough, J. B.; Shao-Horn, Y. Design Principles for Oxygen-Reduction Activity on Perovskite Oxide Catalysts for Fuel Cells and Metal-Air Batteries. Nat. Chem. 2011, 3 (7), 546–550.</p>
-<p>[6] Wei, C.; Feng, Z.; Scherer, G. G.; Barber, J.; Shao-Horn, Y.; Xu, Z. J. Cations in Octahedral Sites: A Descriptor for Oxygen Electrocatalysis on Transition-Metal Spinels. Adv. Mater. 2017, 29 (23), 1–8.</p>
-<p>[7] Tang, C.; Wang, H. F.; Chen, X.; Li, B. Q.; Hou, T. Z.; Zhang, B.; Zhang, Q.; Titirici, M. M.; Wei, F. Topological Defects in Metal-Free Nanocarbon for Oxygen Electrocatalysis. Advanced Materials. 2016, 7030.</p>
-]]></content>
-      <tags>
-        <tag>Thought  随想</tag>
-        <tag>Information Science &amp; Technology  信息科学与技术</tag>
-        <tag>Material  材料</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PPT Design | PPT设计资源整合</title>
     <url>/2017/05/29/PPTDesign/</url>
     <content><![CDATA[<p>最后更新时间2017年5月29日。<br><img src="http://mozheyang.top/images/gif/content.gif" alt=""> </p>
@@ -2687,6 +2628,65 @@ B = MA</script><p>在公式中，$M$可以理解为算符，其作用在$A$这�
         <tag>Updating  持续更新中...</tag>
         <tag>Resources  资源</tag>
         <tag>PPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>横看成岭侧成峰 | 理工科思维论现象与本质</title>
+    <url>/2018/07/22/PhenoNature/</url>
+    <content><![CDATA[<p>众所周知，现象不等于本质。所谓“本质”，一定是隐藏在现象背后的“真理”。</p>
+<p>但如果现象与本质不同，那二者又究竟是何种关系呢？为什么我们需要透过现象才能看到本质，而不能直接看到本质？</p>
+<p>笔者最近看到一篇文章，又重新思考起这个问题来。</p>
+<span id="more"></span>
+<h1 id="人类思维？计算机思维？"><a href="#人类思维？计算机思维？" class="headerlink" title="人类思维？计算机思维？"></a>人类思维？计算机思维？</h1><p>这篇文章介绍了计算机视觉领域中的一种识别PS处理过的图片的方法[1]。文中通过对原图（Authentic image）和修改图（Tampered image）进行运算，获取了二者的噪声谱（Noise map）。再通过模型识别出噪声谱中的异常来对异常增加（或减少）的物体进行识别。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv1.png" alt=""></p>
+<p>如上图，PS中被增加或者减少的物体都逃不过这种算法的“火眼金睛”。这似乎让人们觉得，计算机实在是比人类强大很多，人类都不能分辨真假的东西，却仍然逃不过计算机的眼睛。</p>
+<p>但我们也应该认识到，计算机也是可以被欺骗的。我们人类至少不会因为一个或几个像素的改变而轻易改变对一个图像的判断。但目前的计算机人工智能会。一些具有明确意义的图片，通过一个像素的改变就可以显著降低计算机（现有深度学习算法）对其识别率[2]。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv2.png" alt=""></p>
+<p>对无明确意义的图片，也可以通过一个像素点的改变欺骗计算机，将其归于任何一个分类（近乎100%的置信度）[2]。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv3.png" alt=""></p>
+<p>在以上研究的基础上，我们也开始质疑计算机的可靠性了。不过，在这个世界上还真是没有什么东西是完全靠谱的。在笔者狭隘的眼中，还是会认为，普遍地计算机会比人类更靠谱些。毕竟人类比计算机更容易被欺骗，例如目前发展很快的GAN（生成式对抗网络）技术，可以极其方便地生成以假乱真的图片[3]。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/arxiv4.png" alt=""></p>
+<p>你真的能相信图中虚拟世界（Virtural world）不是真实世界（Real world）吗？</p>
+<p>当然，我们不需要对此感到绝望。因为这个世界本就是如此。</p>
+<p>我们人类的思维与计算机的思维是<strong><u>看待世界的不同角度</u></strong>。</p>
+<p>而真理，永远隐藏在我们所看到的现象背后。</p>
+<h1 id="现象与本质的量子物理意义"><a href="#现象与本质的量子物理意义" class="headerlink" title="现象与本质的量子物理意义"></a>现象与本质的量子物理意义</h1><p>测量（Measurement）是需要通过干扰我们所需测量的系统，获得其干扰反馈，从而实现分析我们感兴趣系统内部信息的一个过程。如果说$A$是一个需要我们测量的系统，$M$是我们测量$A$时所采用的一种（干扰）方法，而$B$是我们最终的测量结果。那么三者之间的关系可以被表示为</p>
+<script type="math/tex; mode=display">
+B = MA</script><p>在公式中，$M$可以理解为算符，其作用在$A$这个对象上，结果是获得了$B$这个对象。很好理解对不对？</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/seeThings.png" alt=""></p>
+<p>我们能够看到东西，也正是通过<strong>光作用于我们关注的物体并与之作用，我们利用眼睛接收到光信号，最终大脑对光信号作出处理和判断</strong>的这样一个过程。在这个现实过程中，我们关注的物体是$A$，光（包括其所经历的一切过程）是$M$，而我们大脑最终接收到的信号是$B$。容易理解，因为经过了<strong>复杂</strong>方法$M$的作用，$A$与$B$在<strong>大多数情况下</strong>都是难以相等的（理论上存在相等的可能，但目前在现实世界中没有遇到过二者相等的例子）。</p>
+<p>如果简单地，将$A$、$B$对象看作向量，$M$算符看作矩阵，那么当且仅当$M$为单位矩阵时，可以满足$A=B$。这时可以实现所谓“现象即本质”。但这在现实生活中并没有被观测的例子。可以理解，当$M$可以为任何算符，其取单位矩阵值的可能性无限趋近于零。</p>
+<h1 id="线性代数与现象本质的关系"><a href="#线性代数与现象本质的关系" class="headerlink" title="线性代数与现象本质的关系"></a>线性代数与现象本质的关系</h1><p>从数学角度来看，$M$算符属于一种变换（Transform）。那么$B = MA$可以看作是一种<strong>降维（投影）变换</strong>。</p>
+<p><img src="http://mozheyang.top/images/PhenoNature/projection.png" alt=""></p>
+<p>从上图中简单的二维投影一维的例子中，我们不难得知，降维会损失维度信息（从x、y坐标到只剩下x坐标）。低维度信息难以完美重构高维度的情况。正如上图，只从x轴上的投影无法得知是以上哪种二维图线投影得到的。当然，如果我们再获得了二维图线在y轴上的投影，那么就可以重构出原来的二维图线了。这也正是我们需要<strong>多角度看待事物</strong>的原因。</p>
+<p>另外，从上图我们还可以得到启发：当各观测角度相互正交（相互独立，毫不相关）时，我们能够在最少的观测次数下得到事物的“本质”。当然这是后话了。</p>
+<h1 id="给我们带来启发"><a href="#给我们带来启发" class="headerlink" title="给我们带来启发"></a>给我们带来启发</h1><p>作为一个材料科研工作者，笔者还希望从自然科学发展的角度思考思考我们能够前进的方向。</p>
+<p>生物信息中基因组的利用最初是从孟德尔遗传定律开始的。笔者认为这个思想的基础是“确定的基因决定了生物的特性”。这与材料科学中“成分结构决定性能”的理论基础不谋而合。</p>
+<p>在电催化研究中，我们常使用“描述符（descriptor）”尝试对电极催化剂的催化活性进行“描述”。从线性代数的角度上说，也可以说，它是在试图做一种“投影”。把复杂无比的影响催化活性的各种因素，全都包含在一个“描述符”中去。那这个描述符可以认为是各种混杂因素在催化活性这个角度的一个投影。</p>
+<p>在计算机优化算法中，有些目标优化函数会过于复杂，会占用很长的机时才能得到答案，也就是寻找最优解所需机时以及最优解。针对此，我们可以采用较简单的代价估计函数来替代目标优化函数，进行一个机时估计，从而缩短调试算法的时间。</p>
+<p>在材料研究中，我们实际也面临着这样一个规模巨大的优化问题。我们在思考，何种成分，何种工艺处理，在何种条件下，能够获得期望的最佳材料性能。这么说来，材料与计算机都使用“炼丹”的原理，但到底是什么限制了材料学科的发展速度呢？笔者认为是<strong><u>反馈速度</u></strong>。计算机学科拥有相对更确定的物理规律，也就能够拥有对目标函数更好的掌控能力。这意味着，“代价估计函数来替代目标优化函数”的这条道路对计算机学科来说是相对容易的。但对自然科学，如材料学科来说，不然。材料缺少的就是这样一个（更准确说是”多个“）好用的代价估计函数，更本质的，可以认为其也是一种描述符。</p>
+<p>在笔者眼中，高通量计算与高通量实验（材料基因组）的研究工作，正是材料学科模仿生物学科进行的描述符快速搜索的研究工作。找到了材料某种性能的描述符，也即建立起了目标和材料结构参数（或其它可调控参数）之间的桥梁。与工程经验公式同理，这也就意味着该性能在工程上已经具有实际应用的价值（或可能），材料研发速度将会迎来质的飞跃。届时，限制材料研发速度的关键很可能会重新回到计算速度和机械自动化的速度上，极大地解放了材料领域科研人员的劳动力。可以预见，材料（科学与工程）学科将会迎来新的发展机会。</p>
+<p>目前已经有很多研究者在进行着描述符的研究。描述符的发现方面，笔者已经发现不少文章利用近年来大热的机器学习方法对影响材料最终性能的因素进行研究[4]；描述符的理解方面，每种材料体系已经总结出了“各自不同”的物理描述符，但对影响材料性能的物理本质理解还有待加深[5-7]。</p>
+<h1 id="我们能做些什么"><a href="#我们能做些什么" class="headerlink" title="我们能做些什么"></a>我们能做些什么</h1><p>说了那么多，那现象与本质关系的理解能给我们一般的生活带来什么启发呢？</p>
+<p>笔者认为至少应该有两点。</p>
+<p>第一，日常生活中的判断我们应该能够做到<strong><u>多角度听取意见</u></strong>。任何个体、组织所发表的意见言论都是片面的，他们只能从自己的角度去看待一个问题。甚至是新闻媒体，也无法回避（如政治倾向）。或许他们本意不坏，但人类认识事物、做成判断的片面性物理本质已经限制了其作出完全立体判断的能力。所以好的（或理想的）新闻和学术论文应该能够把相左的意见都陈列出来，并基于此给出自己的判断。这就给读者留下了自己独立判断的空间（笔者认为，个体独立思考的空间总是有的，不过是个体进入的难度有差异）。</p>
+<p>第二，在获得多角度意见后，我们还应该<strong><u>多角度分析问题</u></strong>。由于个体受到所处环境和所受教育等因素的限制，作出完全客观无偏见的判断是十分困难的。但这不意味着我们不能去追求一种相对理性客观的思考方式。当我们意识到自己已经具有某种偏见，或者已经盲从大流时，就应该提醒自己需要从另一个角度去思考问题了。在最近大热的电影《我不是药神》中，就涉及了多个利益角度。从人民角度来说，药企制定的过高药价是不人道的行为；从药企角度来说，需要制定足够高的药价，以维持给研发人员提供的有吸引力的工资，从而持续进行新药的研发；从政府的角度来说，每个阶段社会所面对的主要矛盾都有所不同，同时保证人民的生命权益和药企的可持续发展并不是一朝一夕就能完成的。虽然对问题的全面（多角度）分析并不意味着能够解决问题本身（矛盾无处不在），但却可以从根本上为我们提供对问题更深入的理解。</p>
+<hr>
+<p>以上便是笔者近日对“现象与本质”关系的一些微小的思考。</p>
+<p>欢迎各位读者提出意见与建议！</p>
+<p>Email: mozheyang@outlook.com</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Zhou P, Han X, Morariu V I, et al. Learning rich features for image manipulation detection[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018: 1053-1061.</p>
+<p>[2] Su J, Vargas D V, Sakurai K. One pixel attack for fooling deep neural networks[J]. IEEE Transactions on Evolutionary Computation, 2019, 23(5): 828-841.</p>
+<p>[3] Li P, Liang X, Jia D, et al. Semantic-aware grad-gan for virtual-to-real urban scene adaption[J]. arXiv preprint arXiv:1801.01726, 2018.</p>
+<p>[4] Jonayat, A. S. M.; Janik, M. J.; Senftle, T. P. Interaction Trends between Single Metal Atoms and Oxide Supports Identified with Density Functional Theory and Statistical Learning. Nat. Catal. 2018.</p>
+<p>[5] Suntivich, J.; Gasteiger, H. A.; Yabuuchi, N.; Nakanishi, H.; Goodenough, J. B.; Shao-Horn, Y. Design Principles for Oxygen-Reduction Activity on Perovskite Oxide Catalysts for Fuel Cells and Metal-Air Batteries. Nat. Chem. 2011, 3 (7), 546–550.</p>
+<p>[6] Wei, C.; Feng, Z.; Scherer, G. G.; Barber, J.; Shao-Horn, Y.; Xu, Z. J. Cations in Octahedral Sites: A Descriptor for Oxygen Electrocatalysis on Transition-Metal Spinels. Adv. Mater. 2017, 29 (23), 1–8.</p>
+<p>[7] Tang, C.; Wang, H. F.; Chen, X.; Li, B. Q.; Hou, T. Z.; Zhang, B.; Zhang, Q.; Titirici, M. M.; Wei, F. Topological Defects in Metal-Free Nanocarbon for Oxygen Electrocatalysis. Advanced Materials. 2016, 7030.</p>
+]]></content>
+      <tags>
+        <tag>Thought  随想</tag>
+        <tag>Information Science &amp; Technology  信息科学与技术</tag>
+        <tag>Material  材料</tag>
       </tags>
   </entry>
   <entry>
@@ -3059,8 +3059,8 @@ Im  <a|G |a> = - \pi \rho_a(E)</script><h1 id="参考文献"><a href="#参考文
 <p class="notImportant">来源：微信公众号--CVer & 量子位<br>原文：Github开源项目--mlhub123</p>]]></content>
       <tags>
         <tag>Updating  持续更新中...</tag>
-        <tag>Resources  资源</tag>
         <tag>Information Science &amp; Technology  信息科学与技术</tag>
+        <tag>Resources  资源</tag>
       </tags>
   </entry>
   <entry>
@@ -3346,21 +3346,6 @@ Z=\frac{1}{3}C_{V} \nu_{0} \lambda</script>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>置顶公告</title>
-    <url>/2201/03/14/TOP/</url>
-    <content><![CDATA[<h1 id="最近更新"><a href="#最近更新" class="headerlink" title="最近更新"></a>最近更新</h1><ul>
-<li>由于个人原因，<code>评论功能</code>暂时停止维护。</li>
-<li>大家可以通过微信公众号（SciGeek）或者邮箱（<a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a>）联系到我，非常感谢大家的理解和支持！</li>
-</ul>
-<h1 id="热门博客"><a href="#热门博客" class="headerlink" title="热门博客"></a>热门博客</h1><ul>
-<li><a href="https://www.mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a></li>
-<li><a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a></li>
-<li><a href="https://www.mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a></li>
-<li><a href="https://www.mozheyang.top/2018/07/22/PhenoNature/">横看成岭侧成峰 | 理工科思维论现象与本质</a></li>
-</ul>
-<span id="more"></span>]]></content>
-  </entry>
-  <entry>
     <title>The Application of Titanium for Photoreduction of Carbon Dioxide</title>
     <url>/2018/01/18/TiO2ForCO2/</url>
     <content><![CDATA[<h1 id="ABSTRACT"><a href="#ABSTRACT" class="headerlink" title="ABSTRACT"></a>ABSTRACT</h1><p>Greenhouse gas emission mostly accounts for global warming effect, hence the urgency to realize $\text{CO}_{2}$ removal efficiently and harmlessly to the environment. Base on all of these requirements, utilization of abundant solar energy to achieve $\text{CO}_{2}$ reduction seems the be the best choice. In this review, mechanisms of $\text{CO}_{2}$ photoreduction is briefly introduced, including electrochemical potential analysis and chemical reaction mechanism. Efficiency measurements in this filed are summarized, mainly divided into two groups: catalyst-based measurement and light-based measurement. Applications of $\text{TiO}_{2}$ on $\text{CO}_{2}$ reduction will follow. Subsequently, the modifications on $\text{TiO}_{2}$ specifically for its efficiency and selectivity are discussed in details. </p>
@@ -3373,6 +3358,21 @@ Z=\frac{1}{3}C_{V} \nu_{0} \lambda</script>]]></content>
       <tags>
         <tag>Material  材料</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>置顶公告</title>
+    <url>/2201/03/14/TOP/</url>
+    <content><![CDATA[<h1 id="最近更新"><a href="#最近更新" class="headerlink" title="最近更新"></a>最近更新</h1><ul>
+<li><code>评论功能</code>已修复，欢迎大家积极留言~原评论有序恢复中，敬请期待~</li>
+<li>大家还可以通过邮箱（<a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a>）联系到我，感谢大家的理解和支持！</li>
+</ul>
+<h1 id="热门博客"><a href="#热门博客" class="headerlink" title="热门博客"></a>热门博客</h1><ul>
+<li><a href="https://www.mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a></li>
+<li><a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a></li>
+<li><a href="https://www.mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a></li>
+<li><a href="https://www.mozheyang.top/2018/07/22/PhenoNature/">横看成岭侧成峰 | 理工科思维论现象与本质</a></li>
+</ul>
+<span id="more"></span>]]></content>
   </entry>
   <entry>
     <title>利用Tushare和Pandas进行金融数据收集</title>
@@ -4186,6 +4186,14 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>最大熵模型与Logistic回归</title>
+    <url>/2024/07/27/emlr/</url>
+    <content><![CDATA[<p>线性回归大家一定都不陌生了，那逻辑回归（Logistic Regression, LR）呢？<br>机器学习中常用的sigmoid和softmax函数，背后又包含了何种假设？<br>最大熵模型到底是什么意思？<br>今天我们一起来一探究竟。Enjoy~</p>
+<span id="more"></span>
+<embed src="/files/EMLR/expetation_maximization_and_logistic_regression.pdf" width="100%" height="750" type="application/pdf">
+]]></content>
+  </entry>
+  <entry>
     <title>有意思的课题组跟踪</title>
     <url>/2019/02/13/groups/</url>
     <content><![CDATA[<p><strong>关键词：</strong>催化、3D打印（bits to atoms）、合成自动化（atoms to bits）、机器视觉、自然语言处理</p>
@@ -4662,6 +4670,34 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>LeetCode | Shortest Distance to a Character (easy level)</title>
+    <url>/2018/12/02/leetcode821/</url>
+    <content><![CDATA[<h1 id="Problem-821-Shortest-Distance-to-a-Character"><a href="#Problem-821-Shortest-Distance-to-a-Character" class="headerlink" title="Problem 821: Shortest Distance to a Character"></a>Problem 821: Shortest Distance to a Character</h1><p>Given a string <code>S</code> and a character <code>C</code>, return an array of integers representing the shortest distance from the character <code>C</code> in the string.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Input:</span> S = <span class="string">&quot;loveleetcode&quot;</span>, C = <span class="string">&#x27;e&#x27;</span></span><br><span class="line"><span class="symbol">Output:</span> [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ol>
+<li><code>S</code> string length is in <code>[1, 10000].</code></li>
+<li><code>C</code> is a single character, and guaranteed to be in string <code>S</code>.</li>
+<li>All letters in <code>S</code> and <code>C</code> are lowercase.</li>
+</ol>
+<span id="more"></span>
+<h1 id="Good-solution-for-simplicity"><a href="#Good-solution-for-simplicity" class="headerlink" title="Good solution for simplicity"></a>Good solution for simplicity</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        clist=[i <span class="keyword">for</span> i,v <span class="keyword">in</span> <span class="built_in">enumerate</span>(S) <span class="keyword">if</span> v==C]</span><br><span class="line">        <span class="keyword">return</span> [<span class="built_in">min</span>(<span class="built_in">abs</span>(i-x) <span class="keyword">for</span> i <span class="keyword">in</span> clist) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(S))]</span><br></pre></td></tr></table></figure>
+<p>This demo uses a <strong>generator</strong> to generate 2 lists: </p>
+<p>one list (clist) stores position where letter equals to C, the other helps to output the final return list, which calculate <strong>every</strong> distances between letters and clist elements. </p>
+<p>However, most of the distances calculation are not necessary. Thus, this method is simple to write, but not the fatest. </p>
+<h1 id="Good-solution-for-efficiency"><a href="#Good-solution-for-efficiency" class="headerlink" title="Good solution for efficiency"></a>Good solution for efficiency</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        stack = []</span><br><span class="line">        last_C = <span class="literal">None</span></span><br><span class="line">        output = [<span class="number">0</span>] * <span class="built_in">len</span>(S)</span><br><span class="line">        <span class="keyword">for</span> idx, ch <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> ch != C:</span><br><span class="line">            	stack.append(idx)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">while</span> stack:</span><br><span class="line">                    last_idx = stack.pop()</span><br><span class="line">                    <span class="keyword">if</span> last_C <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                    	output[last_idx] = idx - last_idx</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                    	output[last_idx] = <span class="built_in">min</span>(</span><br><span class="line">                            idx - last_idx,</span><br><span class="line">                            last_idx - last_C)</span><br><span class="line">                last_C = idx</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            last_idx = stack.pop()</span><br><span class="line">            output[last_idx] = last_idx - last_C <span class="keyword">if</span> last_idx <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
+<p>This method uses a <strong>stack</strong> data structure. stack <code>append</code> and stack <code>pop</code>. </p>
+<p>For each screened letter, it compares two distances. </p>
+<h1 id="My-ugly-solution-—-faster-than-71-17"><a href="#My-ugly-solution-—-faster-than-71-17" class="headerlink" title="My ugly solution — faster than 71.17%"></a>My ugly solution — faster than 71.17%</h1><p>My solution avoid most of the meaningless calculation in the most simple one, so it’s a litter bit faster.  </p>
+<p>The main point of my solution is to generate an interval defined by <code>left</code> and <code>right</code>. We have to screen string list used <code>enumerate</code> from left to right. <code>index</code> points to where we are, if we are in the interval, we have to compare distance to <code>left</code> and <code>right</code>; if not, we have to redefined <code>left</code> and <code>right</code>, then compare. </p>
+<p>So for every letter, there are only <strong>two distances</strong> waiting to be calculated and compared.  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        listEqC = []</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> obj == C:</span><br><span class="line">                listEqC.append(index)</span><br><span class="line">        return_list = []</span><br><span class="line">        pointer = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> listEqC != []:</span><br><span class="line">            left = right = listEqC[pointer]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left = right = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> index &gt;= right <span class="keyword">and</span> pointer != <span class="built_in">len</span>(listEqC)-<span class="number">1</span>:</span><br><span class="line">                pointer += <span class="number">1</span></span><br><span class="line">                left = right</span><br><span class="line">                right = listEqC[pointer]</span><br><span class="line">            left_distance = <span class="built_in">abs</span>(index-left)</span><br><span class="line">            right_distance = <span class="built_in">abs</span>(index-right)</span><br><span class="line">            return_list.append(<span class="built_in">min</span>(left_distance, right_distance))</span><br><span class="line">        <span class="keyword">return</span> return_list</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Information Science &amp; Technology  信息科学与技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LeetCode | Valid Parentheses (easy level)</title>
     <url>/2019/01/06/leetcode20/</url>
     <content><![CDATA[<h1 id="Problem-20-Valid-Parentheses"><a href="#Problem-20-Valid-Parentheses" class="headerlink" title="Problem 20: Valid Parentheses"></a>Problem 20: Valid Parentheses</h1><p>Given a string containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;&#123;&#39;</code>, <code>&#39;&#125;&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
@@ -4696,34 +4732,6 @@ $$
 <p>This check above for test case in disorder:</p>
 <p>“(])”</p>
 ]]></content>
-      <tags>
-        <tag>Information Science &amp; Technology  信息科学与技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LeetCode | Shortest Distance to a Character (easy level)</title>
-    <url>/2018/12/02/leetcode821/</url>
-    <content><![CDATA[<h1 id="Problem-821-Shortest-Distance-to-a-Character"><a href="#Problem-821-Shortest-Distance-to-a-Character" class="headerlink" title="Problem 821: Shortest Distance to a Character"></a>Problem 821: Shortest Distance to a Character</h1><p>Given a string <code>S</code> and a character <code>C</code>, return an array of integers representing the shortest distance from the character <code>C</code> in the string.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Input:</span> S = <span class="string">&quot;loveleetcode&quot;</span>, C = <span class="string">&#x27;e&#x27;</span></span><br><span class="line"><span class="symbol">Output:</span> [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<p><strong>Note:</strong></p>
-<ol>
-<li><code>S</code> string length is in <code>[1, 10000].</code></li>
-<li><code>C</code> is a single character, and guaranteed to be in string <code>S</code>.</li>
-<li>All letters in <code>S</code> and <code>C</code> are lowercase.</li>
-</ol>
-<span id="more"></span>
-<h1 id="Good-solution-for-simplicity"><a href="#Good-solution-for-simplicity" class="headerlink" title="Good solution for simplicity"></a>Good solution for simplicity</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        clist=[i <span class="keyword">for</span> i,v <span class="keyword">in</span> <span class="built_in">enumerate</span>(S) <span class="keyword">if</span> v==C]</span><br><span class="line">        <span class="keyword">return</span> [<span class="built_in">min</span>(<span class="built_in">abs</span>(i-x) <span class="keyword">for</span> i <span class="keyword">in</span> clist) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(S))]</span><br></pre></td></tr></table></figure>
-<p>This demo uses a <strong>generator</strong> to generate 2 lists: </p>
-<p>one list (clist) stores position where letter equals to C, the other helps to output the final return list, which calculate <strong>every</strong> distances between letters and clist elements. </p>
-<p>However, most of the distances calculation are not necessary. Thus, this method is simple to write, but not the fatest. </p>
-<h1 id="Good-solution-for-efficiency"><a href="#Good-solution-for-efficiency" class="headerlink" title="Good solution for efficiency"></a>Good solution for efficiency</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        stack = []</span><br><span class="line">        last_C = <span class="literal">None</span></span><br><span class="line">        output = [<span class="number">0</span>] * <span class="built_in">len</span>(S)</span><br><span class="line">        <span class="keyword">for</span> idx, ch <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> ch != C:</span><br><span class="line">            	stack.append(idx)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">while</span> stack:</span><br><span class="line">                    last_idx = stack.pop()</span><br><span class="line">                    <span class="keyword">if</span> last_C <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                    	output[last_idx] = idx - last_idx</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                    	output[last_idx] = <span class="built_in">min</span>(</span><br><span class="line">                            idx - last_idx,</span><br><span class="line">                            last_idx - last_C)</span><br><span class="line">                last_C = idx</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            last_idx = stack.pop()</span><br><span class="line">            output[last_idx] = last_idx - last_C <span class="keyword">if</span> last_idx <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
-<p>This method uses a <strong>stack</strong> data structure. stack <code>append</code> and stack <code>pop</code>. </p>
-<p>For each screened letter, it compares two distances. </p>
-<h1 id="My-ugly-solution-—-faster-than-71-17"><a href="#My-ugly-solution-—-faster-than-71-17" class="headerlink" title="My ugly solution — faster than 71.17%"></a>My ugly solution — faster than 71.17%</h1><p>My solution avoid most of the meaningless calculation in the most simple one, so it’s a litter bit faster.  </p>
-<p>The main point of my solution is to generate an interval defined by <code>left</code> and <code>right</code>. We have to screen string list used <code>enumerate</code> from left to right. <code>index</code> points to where we are, if we are in the interval, we have to compare distance to <code>left</code> and <code>right</code>; if not, we have to redefined <code>left</code> and <code>right</code>, then compare. </p>
-<p>So for every letter, there are only <strong>two distances</strong> waiting to be calculated and compared.  </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, S, C</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type S: str</span></span><br><span class="line"><span class="string">        :type C: str</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        listEqC = []</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> obj == C:</span><br><span class="line">                listEqC.append(index)</span><br><span class="line">        return_list = []</span><br><span class="line">        pointer = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> listEqC != []:</span><br><span class="line">            left = right = listEqC[pointer]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left = right = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> index, obj <span class="keyword">in</span> <span class="built_in">enumerate</span>(S):</span><br><span class="line">            <span class="keyword">if</span> index &gt;= right <span class="keyword">and</span> pointer != <span class="built_in">len</span>(listEqC)-<span class="number">1</span>:</span><br><span class="line">                pointer += <span class="number">1</span></span><br><span class="line">                left = right</span><br><span class="line">                right = listEqC[pointer]</span><br><span class="line">            left_distance = <span class="built_in">abs</span>(index-left)</span><br><span class="line">            right_distance = <span class="built_in">abs</span>(index-right)</span><br><span class="line">            return_list.append(<span class="built_in">min</span>(left_distance, right_distance))</span><br><span class="line">        <span class="keyword">return</span> return_list</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Information Science &amp; Technology  信息科学与技术</tag>
       </tags>
@@ -4866,6 +4874,73 @@ $$
       <tags>
         <tag>Material  材料</tag>
         <tag>Characterization  表征</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文献推荐 | 能源与人工智能（2024.9.2-2024.9.8）</title>
+    <url>/2024/09/08/paper20240908/</url>
+    <content><![CDATA[<ul>
+<li>【⭐⭐⭐】2024/09/18：Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios (电池累积使用寿命预测：连接实验室与实际应用场景)。</li>
+<li>【⭐⭐】2020/06/23：Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation (电池系统的数字孪生：基于SOC和SOH估计的云电池管理系统)。</li>
+</ul>
+<span id="more"></span>
+<h1 id="Click-here-Paper-I-Battery-cumulative-lifetime-prognostics-to-bridge-laboratory-and-real-life-scenarios"><a href="#Click-here-Paper-I-Battery-cumulative-lifetime-prognostics-to-bridge-laboratory-and-real-life-scenarios" class="headerlink" title="[Click here] Paper I: Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios"></a>[Click here] Paper I: Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios</h1><div class="news-container">
+    <!-- Main content -->
+    <div class="news-content">
+        <div class="news-image">
+            <img src="/images/20240908/lyu2024.png" alt="文章图片" />
+        </div>
+        <div class="news-text">
+            <h1>Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios (电池累积使用寿命预测：连接实验室与实际应用场景)</h1>
+            <p><a class="paper-journal">Cell Reports Physical Science (IF=7.9)</a></p>
+            <p>本文亮点一是提出了<b>电池累积使用寿命指标</b>，从而可忽略了动态工况的复杂性，我觉得这是统一复杂实际工况和实验室工况的关键。从能量角度来说，不考虑局部失效的情况下，该假设理应是成立的。不过作者也承认该概念并非首创。亮点二是<b>公开了一个电池数据集</b>，这可能是本文的最大贡献（从描述看是实验室做的实验，300粒电池做了4年）。预测模型使用的是GPR（Gaussian Process Regressor，高斯过程回归），通过Python容易实现，应该是前几年Nature Communication上文章一脉相承的方法。</p>
+            <div class="news-url">
+                <a href="https://doi.org/10.1016/j.xcrp.2024.102164">查看原文</a>
+            </div>
+            <div class="news-author">
+                <img src="/images/logos/cell.jfif" alt="作者" />
+                <div class="news-author-details">
+                    <p class="paper-author">Dongzhen Lyu (吕东祯) et al. </p>
+                    <p class="paper-affiliation">Wenzhou University (温州大学)</p>
+                    <span class="date">2024/09/18</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p></p>
+
+<p>提供一个通过<code>sklearn</code>实现GPR模型的参考案例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> sklearn.gaussian_process <span class="keyword">import</span> GaussianProcessRegressor</span><br><span class="line"><span class="keyword">from</span> sklearn.gaussian_process.kernels <span class="keyword">import</span> RBF, ConstantKernel <span class="keyword">as</span> C</span><br><span class="line"></span><br><span class="line">kernel = C(<span class="number">1.0</span>, (<span class="number">1e-3</span>, <span class="number">1e3</span>)) * RBF(<span class="number">10</span>, (<span class="number">1e-2</span>, <span class="number">1e2</span>))</span><br><span class="line">gpr = GaussianProcessRegressor(kernel=kernel, n_restarts_optimizer=<span class="number">10</span>)  <span class="comment"># 模型定义</span></span><br><span class="line">gpr.fit(X_train, y_train)  <span class="comment"># 模型训练</span></span><br><span class="line">y_pred, y_std = gpr.predict(X_test, return_std=<span class="literal">True</span>)  <span class="comment"># 模型预测</span></span><br><span class="line"></span><br><span class="line">mpe = np.mean(np.<span class="built_in">abs</span>((y_pred - y_test) / y_test) * <span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均百分比误差 (MPE):&quot;</span>, mpe)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Click-here-Paper-II-Digital-twin-for-battery-systems-Cloud-battery-management-system-with-online-state-of-charge-and-state-of-health-estimation"><a href="#Click-here-Paper-II-Digital-twin-for-battery-systems-Cloud-battery-management-system-with-online-state-of-charge-and-state-of-health-estimation" class="headerlink" title="[Click here] Paper II: Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation"></a>[Click here] Paper II: Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation</h1><div class="news-container">
+    <!-- Main content -->
+    <div class="news-content">
+        <div class="news-image">
+            <img src="/images/20240908/li2024.jpg" alt="文章图片" />
+        </div>
+        <div class="news-text">
+            <h1>Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation (电池系统的数字孪生：基于SOC和SOH估计的云电池管理系统)</h1>
+            <p><a class="paper-journal">Journal of Energy Storage (IF=8.9)</a></p>
+            <p>云端BMS的文章相对还比较少，相对于传统的嵌入式BMS，初始投资成本高，对网络基建要求也高，而ROI（投资回报）待验证。另外，对于两种方法，我认为主要的区别在于可执行的计算复杂度有差异——如果找到必要的指标，只能通过复杂计算和大量数据得出，那这个技术大概率适合于云端BMS技术。虽然应用方面的路线还不太明晰，但本文所提及的概念却并非最新的，主要创新点还是在于算法上（实际的验证工作感觉有点牵强）——使用<b>自适应扩展H-无穷大滤波器（AEHF）</b>进行<b>电池状态充电（SOC）估计</b>，以及使用<b>粒子群优化（PSO）</b>进行<b>电池健康状态（SOH）估计</b>。关键词：Cloud BMS（云端电池管理系统）、Digital twin（数字孪生）、SOC、SOH。</p>
+            <div class="news-url">
+                <a href="https://doi.org/10.1016/j.est.2020.101557">查看原文</a>
+            </div>
+            <div class="news-author">
+                <img src="/images/logos/elsevier.png" alt="作者" />
+                <div class="news-author-details">
+                    <p class="paper-author">Weihan Li et al.</p>
+                    <p class="paper-affiliation">RWTH Aachen University, Germany (德国亚琛工业大学)</p>
+                    <span class="date">2020/06/23</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+]]></content>
+      <tags>
+        <tag>Information Science &amp; Technology  信息科学与技术</tag>
+        <tag>Energy 能源</tag>
       </tags>
   </entry>
   <entry>
