@@ -43,6 +43,27 @@
   </entry>
   
   <entry>
+    <title>我与外公</title>
+    <link href="https://www.mozheyang.top/2024/09/17/grandfather/"/>
+    <id>https://www.mozheyang.top/2024/09/17/grandfather/</id>
+    <published>2024-09-17T12:30:30.000Z</published>
+    <updated>2024-09-17T15:43:46.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>值此中秋佳节，祝大家合家团圆，开开心心！！！🌕🌕🌕</p><p>刚从香港飞回来，一去一回，恰好躲过了台风贝碧嘉。今晚一轮圆月，正是与家人共赏之时。</p><p>去年就想写一篇给外公的文，没想到直到今日才补上。</p><span id="more"></span><p>去年清明节，是第一次给外公过的节。</p><p>上一次见到外公也是三年前的五一了。我刚工作，攒了钱，给外公带了一个黑色包包（当时还在恋爱的老婆推荐的）。外公还说看起来太贵了，让我拿回去。我说没事，这个包适合您，好看开心就好。他还犹豫着。最后还是老妈说，孩子带的东西，不论贵贱，都是一片心意。外公收下了，他很开心，还说要带我看看他最近的“研究成果”。我屁颠儿屁颠儿跟了过去，给这位大学者留影：</p><p><img src="/images/grandfather/grandfather.jpg" alt=""></p><p>第一次用自己挣的钱，给从小带我长大的外公反馈了，这种感觉真的很好。但我也没有想到，那居然是最后一次，跟外公在一起的美好体验。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;值此中秋佳节，祝大家合家团圆，开开心心！！！🌕🌕🌕&lt;/p&gt;
+&lt;p&gt;刚从香港飞回来，一去一回，恰好躲过了台风贝碧嘉。今晚一轮圆月，正是与家人共赏之时。&lt;/p&gt;
+&lt;p&gt;去年就想写一篇给外公的文，没想到直到今日才补上。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Thought  随想yue" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3yue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献推荐 | 能源与人工智能（2024.9.2-2024.9.8）</title>
     <link href="https://www.mozheyang.top/2024/09/08/paper20240908/"/>
     <id>https://www.mozheyang.top/2024/09/08/paper20240908/</id>
@@ -448,33 +469,6 @@ $$
     
     
     <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从学术到工业 | 氧还原反应中的性能指标与实际燃料电池应用有何关系？</title>
-    <link href="https://www.mozheyang.top/2019/06/16/ORRresearch2industry/"/>
-    <id>https://www.mozheyang.top/2019/06/16/ORRresearch2industry/</id>
-    <published>2019-06-16T14:00:33.000Z</published>
-    <updated>2020-02-02T08:31:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>关键词：</strong>起始电位、极限扩散电流、燃料电池效率、燃料电池功率</p><span id="more"></span><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><blockquote><p> 一如科研深似海。</p></blockquote><p>这一方面是科学研究无边界的深度和广度所致，另一方面，也是由于我们自身思考的局限所致。</p><p>为什么这么说？</p><p>至少对国内的硕博士研究生来说，进入科研之后，我们就都面临着巨大的发文压力：满足毕业要求需要发文，评奖评优以发文为指标，在学术界生存那更是需要高质量的发文……久而久之，我们就都认识到了：文章（papers）是学术界的“<strong>硬通货</strong>”，与当今社会的<strong>一般等价物</strong>——货币，可以“相提并论”。</p><p>对于不擅长发文的同学们来说，其实还有另一条路可以选择——常常与学术界相对的工业界。</p><p>对大多数科研萌新来说，入门科研可能会经历以下历程（针对可工业化的科研方向）：</p><p>尝试理解文章逻辑-&gt;尝试理解测试指标-&gt;尝试掌握指标测试原理及方法-&gt;尝试理解其与工业产品指标的关系-&gt;优化产品设计</p><p>对工业界来说，创新性固然重要。但不同于学术界的任何意义上的创新，以实用为目的的创新，才是工业界真正急切需要的，也是目前中国所急切需要的。</p><p><img src="http://mozheyang.top/images/Electrocatalysis/ORRdefinition.png" alt="Typical ORR curve"></p><p class="refs">Ref: 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p>笔者决定，针对自己的研究方向与目前研究热点，尝试讨论氧还原反应中极化曲线**起始电位（onset potential）**和**极限扩散电流密度（diffusion-limited current density）**所影响的燃料电池性能指标。希望能给各位从事新能源行业的新人们提供一些可以借鉴的思路。# 起始电位与燃料电池效率## 如何理解起始电位目前研究氧还原反应催化剂的文章中，起始电位（onset potential）是一个非常重要的指标。如果氧还原反应是一个**可逆**电化学反应，那么会有起始电位等于平衡电极电位$$E_{onset} = E_{eq}$$而平衡电极电位与反应的Gibbs自由能变化密切相关。如果有反应$$O_2 + 4H^++4e^- \to 2H_2O \quad 对应反应自由能变化\Delta G$$那么根据Gibbs自由能变化与平衡电极电势的关系有$$\Delta G = -nFE_{eq}$$即$$E_{eq} = -\frac{\Delta G}{nF}$$回到之前讨论的，燃料电池阴极上发生的氧还原反应比阳极上发生的燃料氧化反应慢好几个数量级，是一个不折不扣的**非可逆**电化学反应。如果将氧还原反应发生时所需过电势定义为$$\eta = |E_{onset} - E_{eq}|$$那么必须满足$\eta>0$且$E\_{onset}<E\_{eq}$才能使得氧还原反应发生。**氧还原反应发生所需的过电势越小，起始电位越正，就意味着该反应越趋向于可逆反应。**类比Carnot热机，可逆的热机效率更高，因为没有把更多的化学能变成难以回收的热能（根据热力学第二定律可知，孤立系统中熵从不减少，热总是不可逆地从高温向低温流动），从而提高热机的效率。燃料电池中减小过电势就是减少向热能转换的化学能，也是同样的道理。需要注意的是，以上我们所讨论的只是燃料电池中的阴极半反应（cathode reaction）。而燃料端阳极半反应（anode reaction）也可以用相同方法分析。不过，由于在燃料电池中阴极反应动力学要比阳极反应学慢几个数量级（例如在氢燃料电池中ORR比HER慢六个数量级），这也就以为着二者要达到反应速率匹配，阴极需要更大的过电势来驱动阴极反应的发生。过电势的增大导致了不可回收热的大量产生，从而降低燃料电池效率。这也就是目前学术界对燃料电池阴极反应——氧还原反应进行大量研究的原因。## 燃料电池效率定量地来看，燃料电池效率可以定义为输出电能与燃料消耗能量之间的比例，能量可以以功率（单位时间输出能量）表示：$$\delta = \frac{W_{elec}}{W_{fuel}} = \frac{P_{elec}}{P_{fuel}}$$根据法拉第定理$I=n N\_{fuel} F$，燃料消耗量与电流应该成正比，有$$P_{elec} = I \cdot V_{real} \\P_{fuel} = N_{fuel} \cdot \Delta H = \frac{I}{nF} \cdot \Delta H = V_{thermoneutral}$$代入燃料电池效率的计算公式，可得$$\delta = \frac{V_{real}}{V_{thermoneutral}} \times 100\%$$式中，$V\_{real}$是燃料电池实际能够输出的电压，$V\_{thermoneutral}$是基于热力学给出的燃料电池理论上能输出的电压。燃料消耗释放的能量，一部分用来做电功，一部分以熵增的形式释放，即产生热能。这是由反应的热力学本质所决定的，理想状态下自由能变可以全部用来做功$$\Delta H = \Delta G + T \Delta S = W_{elec} + T \Delta S$$![](http://mozheyang.top/images/ORRresearch2industry/fc_potential_distribution.png)<center><b>燃料电池内电势降分布示意图</b></center><p class="refs">Ref: Barbir F. PEM fuel cells: theory and practice[M]. Academic Press, 2012.</p>而事实上，自由能的一部分还会被燃料电池中的电势损耗消耗，如电化学极化、浓差极化等因素，所以一般地<center><p class="eqnBlock">$$\Delta H = (W_{elec} + \int_{0}^{worktime} \eta I \text{d}t) + T \Delta S$$</p></center>上式中每一项均大于等于零，因此一般实际的燃料电池的效率在40%到60%之间。# 极限扩散电流密度与燃料电池功率在电极动力学足够快时，氧还原反应电流被氧气传质速率所控制。在氧气扩散速率达到最大时，此时对应电流成为极限扩散电流（diffusion-limited current）。电极面积越大，便可以通过更大的电流。因此要研究材料本征性能，我们主要采用极限扩散电流密度（diffusion-limited current density）来描述材料的这类本征性能。根据功率计算公式$$P = V \times I$$在燃料电池实际输出电压可以确定之后，其可输出的功率实际由其电流决定。电流越大，燃料电池可以输出的功率越大。![NEV fuel cell](http://mozheyang.top/images/ORRresearch2industry/2016_Toyota_Fuel_Cell_Vehicle.jpg)<p class="refs">Sources: https://www.nerdwallet.com/blog/loans/2016-toyota-mirai-fuel-cell-test-drive/</p><p>对新能源汽车应用来说，极限扩散电流密度越大，以一定功率为指标，我们的燃料电池电堆（相当于汽车内燃机发动机）便可以做得更小。</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Barbir F. PEM fuel cells: theory and practice[M]. Academic Press, 2012.</p><p>[2] 周学俊. M-Nx/C类非贵金属氧还原催化材料的构筑及其电化学性能研究[D]. 东华大学, 2016.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;关键词：&lt;/strong&gt;起始电位、极限扩散电流、燃料电池效率、燃料电池功率&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Industry  产业" scheme="https://www.mozheyang.top/categories/Industry-%E4%BA%A7%E4%B8%9A/"/>
-    
-    
-    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
-    
-    <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
-    
-    <category term="Catalysis  催化" scheme="https://www.mozheyang.top/tags/Catalysis-%E5%82%AC%E5%8C%96/"/>
-    
-    <category term="Fuel cell  燃料电池" scheme="https://www.mozheyang.top/tags/Fuel-cell-%E7%87%83%E6%96%99%E7%94%B5%E6%B1%A0/"/>
     
   </entry>
   
