@@ -14,8 +14,8 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/black/pace-theme-minimal.min.css">
-  <script src="//cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+  <link rel="stylesheet" href="//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/themes/black/pace-theme-minimal.min.css">
+  <script src="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -557,7 +557,7 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.bootcdn.net/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+  <script src="//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/medium-zoom/1.0.6/medium-zoom.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -649,7 +649,7 @@
     };
     (function () {
       var script = document.createElement('script');
-      script.src = '//cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js';
+      script.src = '//lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/mathjax/3.2.0/es5/tex-mml-chtml.min.js';
       script.defer = true;
       document.head.appendChild(script);
     })();
@@ -667,7 +667,7 @@
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+  NexT.utils.getScript('//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/valine/1.4.16/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item => {
@@ -680,7 +680,8 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       appId      : 'XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va',
       appKey     : 'WTlVtXkhnVRf7Gkjryijsy2Q',
       placeholder: "请开始你的表演",
-      avatar     : '',
+      avatar     : 'mp',
+      avatar_cdn : 'https://cravatar.cn/avatar/', 
       meta       : guest,
       pageSize   : '5' || 10,
       visitor    : true,
