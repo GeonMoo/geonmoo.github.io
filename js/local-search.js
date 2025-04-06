@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   const input = document.querySelector('.search-input');
   const resultContent = document.getElementById('search-result');
+  const summaryContent = document.getElementById('summary-result');
 
   // Ref: https://github.com/ForbesLindesay/unescape-html
   const unescapeHtml = html => {
@@ -280,12 +281,48 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.search-pop-overlay').style.display = '';
   };
 
+  // Monitor search summary box
+  const onPopupSummary = () => {
+    // Refresh loading animation
+    if (document.getElementById('no-summary')) {
+      document.getElementById('no-summary').innerHTML = '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>';
+    } else {
+      summaryContent.innerHTML = '<div id="no-summary"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div>';
+    }
+    
+    if (resultContent) {
+      console.log(resultContent.textContent);
+      LLMSummary(resultContent.textContent, input.value);
+    } else {
+      console.log("总结");
+    }
+  };
+
+  // Summary function
+  const LLMSummary = function(content, question){
+    let prompt = "请你扮演友好的费曼老师（不要说出你的身份），耐心地给博客来访者解答问题或者总结知识，使用活泼调皮的语气~~~称呼来访者为 小可爱~~~"
+    prompt += "如果来访者有问题，请根据以下博客目录内容，清楚引用博客内容（至少1项），回答提问者的问题，引用格式为：[量子物理中的Green函数定义及其应用]。"
+    prompt += "如果来访者没有问题，请总结以下博客目录内容，总结格式为：1.内容一；2.内容二；3.内容三。"
+    prompt += `以下是博客目录问题："""${content}"""。请根据以下来访者的对话来判断来访者是否提问。来访者："""${question}"""`
+    axios.post("http://81.68.165.134:8787/", {
+        'question': prompt, 
+        'history': [], 
+        'token': 'wa;eijxc856,vwerps27ghftj75dfhgergg'
+    }).then(response=>{
+        summaryContent.innerHTML = `<p id="summary-text">${response.data}</p>` ;
+        console.log(response.data);
+    }).catch(error=>{
+        console.log()
+    })
+  }
+
   document.querySelector('.search-pop-overlay').addEventListener('click', event => {
     if (event.target === document.querySelector('.search-pop-overlay')) {
       onPopupClose();
     }
   });
   document.querySelector('.popup-btn-close').addEventListener('click', onPopupClose);
+  document.querySelector('.popup-btn-summary').addEventListener('click', onPopupSummary);  // Summary box
   window.addEventListener('pjax:success', onPopupClose);
   window.addEventListener('keyup', event => {
     if (event.key === 'Escape') {
