@@ -43,6 +43,42 @@
   </entry>
   
   <entry>
+    <title>近年来AI时间线记录</title>
+    <link href="https://www.mozheyang.top/2025/05/18/AIhistory/"/>
+    <id>https://www.mozheyang.top/2025/05/18/AIhistory/</id>
+    <published>2025-05-18T07:16:12.000Z</published>
+    <updated>2025-05-18T07:18:38.665Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>记录了 AI 这几年发展过程中的重要时间节点、事件。<br><a href="https://nhlocal.github.io/AiTimeline">https://nhlocal.github.io/AiTimeline</a></p><span id="more"></span><iframe  src="https://nhlocal.github.io/AiTimeline"  width="100%"    height="600px"   frameborder="0"    allowfullscreen></iframe>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;记录了 AI 这几年发展过程中的重要时间节点、事件。&lt;br&gt;&lt;a href=&quot;https://nhlocal.github.io/AiTimeline&quot;&gt;https://nhlocal.github.io/AiTimeline&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LLMs帕累托前沿更新</title>
+    <link href="https://www.mozheyang.top/2025/05/18/LLMpareto/"/>
+    <id>https://www.mozheyang.top/2025/05/18/LLMpareto/</id>
+    <published>2025-05-18T06:56:37.000Z</published>
+    <updated>2025-05-18T08:52:49.358Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>不必苦恼用什么LLMs API了，有大神总结了性价比高的API对比，感兴趣的大家伙可以看看，部分需要魔法。</p><p>还有什么学不会的知识吗？只要是人类已知的，甚至部分未知的问题，不必再抱怨环境，多问问AI就好了。</p><p>引自：<a href="https://winston-bosan.github.io/llm-pareto-frontier/">https://winston-bosan.github.io/llm-pareto-frontier/</a></p><span id="more"></span><p>据数据显示，不到两年的时间里，GPT-4 级模型的成本下降了 99.7%，世界上最先进的模型也便宜了 82%，GPT-4.5 因为巨额成本更是回档 4.1。现在是谷歌锋芒毕露，Gemini 2.5 现在已经达到或接近 Human PhD Range，在某些特定的专家任务中达到或超越人类。</p><iframe  src="https://winston-bosan.github.io/llm-pareto-frontier/"  width="100%"    height="600px"   frameborder="0"    allowfullscreen></iframe><p>LLM的帕累托前沿本质是​​多目标优化的效率边界​​——它描绘了当前技术条件下，模型性能（如推理准确率、多模态能力）与API调用成本之间的​​终极权衡关系​​。这个边界上的每个点都代表一种最优解：任何性能提升必然伴随成本上升，反之亦然。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;不必苦恼用什么LLMs API了，有大神总结了性价比高的API对比，感兴趣的大家伙可以看看，部分需要魔法。&lt;/p&gt;
+&lt;p&gt;还有什么学不会的知识吗？只要是人类已知的，甚至部分未知的问题，不必再抱怨环境，多问问AI就好了。&lt;/p&gt;
+&lt;p&gt;引自：&lt;a href=&quot;https://winston-bosan.github.io/llm-pareto-frontier/&quot;&gt;https://winston-bosan.github.io/llm-pareto-frontier/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>记忆中的爷爷和奶奶</title>
     <link href="https://www.mozheyang.top/2025/04/06/qingming2025/"/>
     <id>https://www.mozheyang.top/2025/04/06/qingming2025/</id>
@@ -156,30 +192,6 @@
   </entry>
   
   <entry>
-    <title>文献推荐 | 能源与人工智能（2024.9.2-2024.9.8）</title>
-    <link href="https://www.mozheyang.top/2024/09/08/paper20240908/"/>
-    <id>https://www.mozheyang.top/2024/09/08/paper20240908/</id>
-    <published>2024-09-08T08:01:57.000Z</published>
-    <updated>2024-09-08T14:34:41.160Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><ul><li>【⭐⭐⭐】2024/09/18：Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios (电池累积使用寿命预测：连接实验室与实际应用场景)。</li><li>【⭐⭐】2020/06/23：Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation (电池系统的数字孪生：基于SOC和SOH估计的云电池管理系统)。</li></ul><span id="more"></span><h1 id="Click-here-Paper-I-Battery-cumulative-lifetime-prognostics-to-bridge-laboratory-and-real-life-scenarios"><a href="#Click-here-Paper-I-Battery-cumulative-lifetime-prognostics-to-bridge-laboratory-and-real-life-scenarios" class="headerlink" title="[Click here] Paper I: Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios"></a>[Click here] Paper I: Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios</h1><div class="news-container">    <!-- Main content -->    <div class="news-content">        <div class="news-image">            <img src="/images/20240908/lyu2024.png" alt="文章图片" />        </div>        <div class="news-text">            <h1>Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios (电池累积使用寿命预测：连接实验室与实际应用场景)</h1>            <p><a class="paper-journal">Cell Reports Physical Science (IF=7.9)</a></p>            <p>本文亮点一是提出了<b>电池累积使用寿命指标</b>，从而可忽略了动态工况的复杂性，我觉得这是统一复杂实际工况和实验室工况的关键。从能量角度来说，不考虑局部失效的情况下，该假设理应是成立的。不过作者也承认该概念并非首创。亮点二是<b>公开了一个电池数据集</b>，这可能是本文的最大贡献（从描述看是实验室做的实验，300粒电池做了4年）。预测模型使用的是GPR（Gaussian Process Regressor，高斯过程回归），通过Python容易实现，应该是前几年Nature Communication上文章一脉相承的方法。</p>            <div class="news-url">                <a href="https://doi.org/10.1016/j.xcrp.2024.102164">查看原文</a>            </div>            <div class="news-author">                <img src="/images/logos/cell.jfif" alt="作者" />                <div class="news-author-details">                    <p class="paper-author">Dongzhen Lyu (吕东祯) et al. </p>                    <p class="paper-affiliation">Wenzhou University (温州大学)</p>                    <span class="date">2024/09/18</span>                </div>            </div>        </div>    </div></div><p></p><p>提供一个通过<code>sklearn</code>实现GPR模型的参考案例：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> sklearn.gaussian_process <span class="keyword">import</span> GaussianProcessRegressor</span><br><span class="line"><span class="keyword">from</span> sklearn.gaussian_process.kernels <span class="keyword">import</span> RBF, ConstantKernel <span class="keyword">as</span> C</span><br><span class="line"></span><br><span class="line">kernel = C(<span class="number">1.0</span>, (<span class="number">1e-3</span>, <span class="number">1e3</span>)) * RBF(<span class="number">10</span>, (<span class="number">1e-2</span>, <span class="number">1e2</span>))</span><br><span class="line">gpr = GaussianProcessRegressor(kernel=kernel, n_restarts_optimizer=<span class="number">10</span>)  <span class="comment"># 模型定义</span></span><br><span class="line">gpr.fit(X_train, y_train)  <span class="comment"># 模型训练</span></span><br><span class="line">y_pred, y_std = gpr.predict(X_test, return_std=<span class="literal">True</span>)  <span class="comment"># 模型预测</span></span><br><span class="line"></span><br><span class="line">mpe = np.mean(np.<span class="built_in">abs</span>((y_pred - y_test) / y_test) * <span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均百分比误差 (MPE):&quot;</span>, mpe)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="Click-here-Paper-II-Digital-twin-for-battery-systems-Cloud-battery-management-system-with-online-state-of-charge-and-state-of-health-estimation"><a href="#Click-here-Paper-II-Digital-twin-for-battery-systems-Cloud-battery-management-system-with-online-state-of-charge-and-state-of-health-estimation" class="headerlink" title="[Click here] Paper II: Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation"></a>[Click here] Paper II: Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation</h1><div class="news-container">    <!-- Main content -->    <div class="news-content">        <div class="news-image">            <img src="/images/20240908/li2024.jpg" alt="文章图片" />        </div>        <div class="news-text">            <h1>Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation (电池系统的数字孪生：基于SOC和SOH估计的云电池管理系统)</h1>            <p><a class="paper-journal">Journal of Energy Storage (IF=8.9)</a></p>            <p>云端BMS的文章相对还比较少，相对于传统的嵌入式BMS，初始投资成本高，对网络基建要求也高，而ROI（投资回报）待验证。另外，对于两种方法，我认为主要的区别在于可执行的计算复杂度有差异——如果找到必要的指标，只能通过复杂计算和大量数据得出，那这个技术大概率适合于云端BMS技术。虽然应用方面的路线还不太明晰，但本文所提及的概念却并非最新的，主要创新点还是在于算法上（实际的验证工作感觉有点牵强）——使用<b>自适应扩展H-无穷大滤波器（AEHF）</b>进行<b>电池状态充电（SOC）估计</b>，以及使用<b>粒子群优化（PSO）</b>进行<b>电池健康状态（SOH）估计</b>。关键词：Cloud BMS（云端电池管理系统）、Digital twin（数字孪生）、SOC、SOH。</p>            <div class="news-url">                <a href="https://doi.org/10.1016/j.est.2020.101557">查看原文</a>            </div>            <div class="news-author">                <img src="/images/logos/elsevier.png" alt="作者" />                <div class="news-author-details">                    <p class="paper-author">Weihan Li et al.</p>                    <p class="paper-affiliation">RWTH Aachen University, Germany (德国亚琛工业大学)</p>                    <span class="date">2020/06/23</span>                </div>            </div>        </div>    </div></div>]]></content>
-    
-    
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;【⭐⭐⭐】2024/09/18：Battery cumulative lifetime prognostics to bridge laboratory and real-life scenarios (电池累积使用寿命预测：连接实验室与实际应用场景)。&lt;/li&gt;
-&lt;li&gt;【⭐⭐】2020/06/23：Digital twin for battery systems: Cloud battery management system with online state-of-charge and state-of-health estimation (电池系统的数字孪生：基于SOC和SOH估计的云电池管理系统)。&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="Energy 能源" scheme="https://www.mozheyang.top/tags/Energy-%E8%83%BD%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Live2D模型初体验</title>
     <link href="https://www.mozheyang.top/2024/09/07/live2dinit/"/>
     <id>https://www.mozheyang.top/2024/09/07/live2dinit/</id>
@@ -234,9 +246,9 @@
     <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
     
     
-    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
-    
     <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    
+    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
   </entry>
   
@@ -406,9 +418,9 @@ $$
     <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
     
     
-    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
-    
     <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    
+    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
   </entry>
   
@@ -454,26 +466,6 @@ $$
     <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     
     <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在路上，略感焦虑</title>
-    <link href="https://www.mozheyang.top/2020/04/03/insane/"/>
-    <id>https://www.mozheyang.top/2020/04/03/insane/</id>
-    <published>2020-04-03T12:04:23.000Z</published>
-    <updated>2020-04-03T12:27:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p><img src="http://mozheyang.top/images/others/ontheway.jpg" alt=""></p><p>如题。</p><span id="more"></span><h1 id="不能失去控制的贪婪"><a href="#不能失去控制的贪婪" class="headerlink" title="不能失去控制的贪婪"></a>不能失去控制的贪婪</h1><p>贪念。最近贪念太重。<br>很多东西要是够不到的话可能就不会去想了。<br>但是一旦能够到而又最终不可得，那一定会很难受。<br>一旦贪念得到满足，那下一个贪念又会冒出来。</p><p>是好是坏？<br>要知道贪婪也是人类持续进步的动力啊。<br>贪婪需要把握尺度。<br>把握得好，为我所用；把握不好，反噬成魔。</p><h1 id="没有失去控制的混沌"><a href="#没有失去控制的混沌" class="headerlink" title="没有失去控制的混沌"></a>没有失去控制的混沌</h1><p>蝴蝶效应，又在空间和时间维度都有着巨大影响：<br>某处RNA、DNA的突变，导致了COVID-19疫情在全球的蔓延；<br>很久之前一个不经意的决定，对今天的成败产生了巨大的影响。</p><p>有点类似于物理学中的<strong>混沌（chaos）现象</strong>。</p><blockquote><p>混沌是指<strong>确定性动力学系统</strong>因对<strong>初值</strong>敏感而表现出的不可预测的、类似随机性的运动。<br>——引自百度百科</p></blockquote><p>回想起来，很多今天出现的问题都是几年前的决定所致。<br>物理模型中的混沌动力学系统，影响因素相对较少，能够呈现更清晰的模式，但仍无法预测；<br>现实生活中的混沌动力学系统，或许掺入了随机因素，使得各种作用关系和变化变得扑朔迷离，直叫人措手不及。</p><p>但这不代表我们对自己的人生失去了控制。<br>我们还能控制<strong>初值</strong>，根据自己认定的模式去选择遵守的<strong>原则</strong>和采取的<strong>行动</strong>。<br>为接下来的人生播下幸福的种子，静等花开。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;http://mozheyang.top/images/others/ontheway.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如题。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
