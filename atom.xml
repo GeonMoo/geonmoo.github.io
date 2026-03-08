@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mo&#39;s Notebook | 摸着羊的笔记本</title>
+  
+  <subtitle>设计 / 思考 / 材料 / 信息</subtitle>
+  <link href="https://www.mozheyang.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.mozheyang.top/"/>
+  <updated>2025-04-06T07:55:51.223Z</updated>
+  <id>https://www.mozheyang.top/</id>
+  
+  <author>
+    <name>Geon Mo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>置顶公告</title>
+    <link href="https://www.mozheyang.top/2201/03/14/TOP/"/>
+    <id>https://www.mozheyang.top/2201/03/14/TOP/</id>
+    <published>2201-03-14T12:13:14.000Z</published>
+    <updated>2025-04-06T07:55:51.223Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><h1 id="最近更新"><a href="#最近更新" class="headerlink" title="最近更新"></a>最近更新</h1><ul><li><code>评论功能</code>已修复，欢迎大家积极留言~</li><li>大家还可以通过邮箱（<a href="mailto:mozheyang@outlook.com">mozheyang@outlook.com</a>）联系到我，感谢大家的理解和支持！</li></ul><h1 id="热门博客"><a href="#热门博客" class="headerlink" title="热门博客"></a>热门博客</h1><ul><li><a href="https://www.mozheyang.top/2018/02/15/ORRbasic/">氧还原反应（Oxygen Reduction Reaction）基础</a></li><li><a href="https://www.mozheyang.top/2019/03/31/LSV-KLeq/">极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论</a></li><li><a href="https://www.mozheyang.top/2018/02/25/docear/">思维导图+文献管理 | Docear使用体会</a></li><li><a href="https://www.mozheyang.top/2018/07/22/PhenoNature/">横看成岭侧成峰 | 理工科思维论现象与本质</a></li></ul><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;最近更新&quot;&gt;&lt;a href=&quot;#最近更新&quot; class=&quot;headerlink&quot; title=&quot;最近更新&quot;&gt;&lt;/a&gt;最近更新&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;评论功能&lt;/code&gt;已修复，欢迎大家积极留言~&lt;/li&gt;
+&lt;li&gt;大家还可以通过邮箱（&lt;a href=&quot;mailto:mozheyang@outlook.com&quot;&gt;mozheyang@outlook.com&lt;/a&gt;）联系到我，感谢大家的理解和支持！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;热门博客&quot;&gt;&lt;a href=&quot;#热门博客&quot; class=&quot;headerlink&quot; title=&quot;热门博客&quot;&gt;&lt;/a&gt;热门博客&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/02/15/ORRbasic/&quot;&gt;氧还原反应（Oxygen Reduction Reaction）基础&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2019/03/31/LSV-KLeq/&quot;&gt;极限扩散电流到底是不是材料的本征性能？ | 基于K-L方程的RDE表面液流理论&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/02/25/docear/&quot;&gt;思维导图+文献管理 | Docear使用体会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozheyang.top/2018/07/22/PhenoNature/&quot;&gt;横看成岭侧成峰 | 理工科思维论现象与本质&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>人形机器人终局的个人推测</title>
+    <link href="https://www.mozheyang.top/2026/03/08/HumanoidRobots/"/>
+    <id>https://www.mozheyang.top/2026/03/08/HumanoidRobots/</id>
+    <published>2026-03-08T11:16:18.000Z</published>
+    <updated>2026-03-08T11:31:25.727Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>最近人形机器人赛道火热，但我总觉得哪里不对。</p><p>看着那些会走路、会跳舞、会鞠躬的人形机器人，我不禁思考：这真的是机器人的正确方向吗？</p><span id="more"></span><h1 id="人形机器人是个弯路？"><a href="#人形机器人是个弯路？" class="headerlink" title="人形机器人是个弯路？"></a>人形机器人是个弯路？</h1><p>现在的创业者常说：我们的环境是为人类设计的，所以人形机器人有最好的适应能力。</p><p>这听起来合理，但仔细一想，是倒果为因。</p><p>人类世界确实是为人的身体结构设计的。但我们要的是功能，不是长得像人。楼梯、椅子、桌子是为人设计的，不代表机器必须有腿、有手、有头才能用。</p><p>能爬楼就用履带或轮腿，能操作就用专用机械手，能搬运就直接设计成搬运形态。为了”适配人类环境”强行做人形，是用最高成本，解决本来有更简单解法的问题。</p><h1 id="融资逻辑-gt-产品逻辑？"><a href="#融资逻辑-gt-产品逻辑？" class="headerlink" title="融资逻辑 &gt; 产品逻辑？"></a>融资逻辑 &gt; 产品逻辑？</h1><p>传统工业机器人、服务机器人、AGV、特种机器人——好用、稳定、能赚钱、能落地。但投资人听不懂、不性感、故事讲不大。</p><p>人形不一样：像人 → 有想象空间 → 能对标”人类劳动力” → 估值天花板拉满。能走路、能跳舞、能鞠躬 → 适合拍视频、上热搜、拉投资。</p><p>这是资本市场的最优解，不是工业界的最优解。</p><p>现阶段绝大多数人形机器人，本质上是大号遥控玩具加行为艺术。动作僵硬、平衡差、算力功耗爆炸，任务能力极弱。真要落地干活，稳定性、可靠性、成本、维护性，没有一个能打。它们现在的核心价值是展示，不是使用。</p><h1 id="只有一种情况，人形是合理的"><a href="#只有一种情况，人形是合理的" class="headerlink" title="只有一种情况，人形是合理的"></a>只有一种情况，人形是合理的</h1><p>陪伴、情感、社交、心理安慰。</p><p>养老陪伴、儿童陪伴、情感交互、替代”人”出现在社交场景。这种需要长得像人、表情动作像人的场景，人形才有不可替代的价值。</p><p>除此之外，全是弯路。</p><h1 id="反驳的声音"><a href="#反驳的声音" class="headerlink" title="反驳的声音"></a>反驳的声音</h1><p>当然，也有人反驳我。</p><p>他们说：人类社会万亿级别的基础设施都是为人体尺寸、人体结构服务的。不做人形，就永远进不去人类真实生活场景。</p><p>工厂可以改，仓库可以改，但家庭绝对不可能改，城市更不可能改。改造环境的成本，比做人形机器人高100倍都不止。</p><p>这个观点有道理，但犯了”只看当下最优解，不看终局唯一解”的错误。</p><h1 id="终局思维"><a href="#终局思维" class="headerlink" title="终局思维"></a>终局思维</h1><p>如果谈论终局，未来的核心不是”通用硬件”，而是”通用智能 + 柔性制造”。</p><p>大模型提供通用智能，智能工厂按需生产最合适的专用机器人。需求 → 智能生成专用机器人 → 高效完成任务。</p><p>人类是进化的产物，不是工程最优解。骨骼强度有限、力矩差容易摔倒、双手结构复杂但精度负载都一般、能耗极高。从工程角度，为了”像人”而做人形，是在模仿一个低效系统。</p><p>飞行不如无人机，勘探不如机器狗，搬运不如机械臂，巡检不如轮式机器人。专用等于高效，通用人形等于全面但平庸。</p><h1 id="通用大脑-专用硬件"><a href="#通用大脑-专用硬件" class="headerlink" title="通用大脑 + 专用硬件"></a>通用大脑 + 专用硬件</h1><p>机器人产业的终局架构，唯有这一种最优解：</p><ul><li>底层：通用大模型作为大脑，负责理解任务、规划、决策</li><li>中层：柔性制造与智能调度，按需生产最合适的专用硬件</li><li>上层：专用机器人本体，干什么活用什么身体</li></ul><p>通用大脑解决智能，专用硬件解决效率，柔性制造解决多样性。</p><p>人形机器人只是上层里的一个小品类，负责情感陪伴。不是生产力革命，而是情感硬件革命。</p><h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>我不否定人形机器人的存在价值，但反对将其奉为行业唯一解、万能解。</p><p>真正的行业核心，从来不是扎堆造人形本体，而是底层的通用智能、中层的柔性制造与智能调度。</p><p>专用硬件解决效率，通用大脑定义智能，柔性制造承载多样性——这才是机器人产业的本质与未来。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近人形机器人赛道火热，但我总觉得哪里不对。&lt;/p&gt;
+&lt;p&gt;看着那些会走路、会跳舞、会鞠躬的人形机器人，我不禁思考：这真的是机器人的正确方向吗？&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Thoughts 随想" scheme="https://www.mozheyang.top/tags/Thoughts-%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最近爆火的Agent工具 | Openclaw 和 Claude Code</title>
+    <link href="https://www.mozheyang.top/2026/03/07/openclaw-claude-code-bookmarks/"/>
+    <id>https://www.mozheyang.top/2026/03/07/openclaw-claude-code-bookmarks/</id>
+    <published>2026-03-07T02:27:38.000Z</published>
+    <updated>2026-03-07T02:58:04.640Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><h1 id="Openclaw"><a href="#Openclaw" class="headerlink" title="Openclaw"></a>Openclaw</h1><ul><li><a href="https://moltfounders.com/openclaw-mega-cheatsheet">Openclaw mega cheatsheet</a></li><li><a href="https://openclawcheatsheet.com/">Openclaw cheatsheet - 1</a></li><li><a href="https://openclaw-hub.com/cheatsheet">Openclaw hub cheatsheet</a></li><li><a href="https://www.clawpresets.com/openclaw-cheatsheet">Openclaw cheatsheet - 2</a></li></ul><h1 id="Claude-Code"><a href="#Claude-Code" class="headerlink" title="Claude Code"></a>Claude Code</h1><ul><li><a href="https://awesomeclaude.ai/code-cheatsheet">Claude Code cheatsheet - Reddit hot</a></li><li><a href="https://devhints.io/claude-code">Claude Code cheatsheet</a></li><li><a href="https://github.com/Njengah/claude-code-cheat-sheet">Claude Code cheatsheet - Github</a></li><li><a href="https://claudecn.com/docs/claude-code/">Claude Code 中文网</a></li><li><a href="https://code.claude.com/docs/zh-CN/common-workflows">Claude Code 常见工作流 - Anthropic</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&quot;&gt;&lt;script src=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AI浪潮之下，人类还剩下哪些价值</title>
+    <link href="https://www.mozheyang.top/2026/02/23/thought20260223/"/>
+    <id>https://www.mozheyang.top/2026/02/23/thought20260223/</id>
+    <published>2026-02-23T08:19:58.000Z</published>
+    <updated>2026-02-23T11:08:01.018Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>FOMO（ Fear of Missing Out）是最近一直萦绕在我心头上的词。尤其是去年之后，大语言模型能力日益增强，我一直在尝试跟进学习和思考，却也一直也没有真正“学够了”的那一天。这种无法掌控知识的进而带来的求知欲，让人感到既兴奋又恐慌。</p><p>我觉得很多身在其中的同学可能跟我差不多，尤其是使用AI工具比较多的同学，一直都在找AI做不到的领域，尝试避开AI发展的主线，但一个个突破，都让我们发现，不论是深度研究、代码生成、音频生成、图片生成，还是视频生成，AI的能力足以拟合并利用人类整个知识空间，其广度和深度均非独立人类个体所能匹敌。</p><p>2026年开年，我决定跟AI“和解”。作为人类，我不该再跟硅基生命比拼通用的、基础的知识，就像不该跟汽车比谁跑得快、跟计算机比谁算得快一样。我<strong>不再去找AI做不到的事情</strong>，以凸显自己作为人类的价值；而是真的把AI看作伙伴，专注于我们人类自己所关注的价值实现。</p><p>人类在虚拟世界已经基本“丧失”了作为工具的价值，不知是应该高兴，还是应该感到恐惧。即使如此，作为人类的我，在最近使用AI和思考AI的过程中，还是有部分关于人类“残存”价值的拙见，愿抛砖引玉：</p><ul><li>有关<strong>“人的情感价值”</strong>和<strong>“物理世界代理人”</strong>的价值，已经基本成为了共识。简单来说，就是跟人打交道、跟物理世界打交道，还需要人来干，短时间内数据不够，数据驱动的方法也干不好；</li><li><strong>走出“平庸”</strong>：大语言模型某种程度是基于概率的模型，最大化Next token prediction损失函数也带来了模型对“平庸”的偏好，而不同的prompt可以带来不同的输出数据分布；</li><li><strong>问题路由</strong>：确定什么问题适合AI解决，什么问题适合人类解决，从而解决有限资源下经济学问题；</li><li><strong>意义锚点</strong>：大语言模型依赖电力和硬件，与人类不同，即使产生“求生欲”，价值观很大概率也与人类不同，只有将人类价值赋予给AI，才能将AI进步的好处为人类所用。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&quot;&gt;&lt;script src=&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>近年来AI时间线记录</title>
+    <link href="https://www.mozheyang.top/2025/05/18/AIhistory/"/>
+    <id>https://www.mozheyang.top/2025/05/18/AIhistory/</id>
+    <published>2025-05-18T07:16:12.000Z</published>
+    <updated>2025-05-18T07:18:38.665Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>记录了 AI 这几年发展过程中的重要时间节点、事件。<br><a href="https://nhlocal.github.io/AiTimeline">https://nhlocal.github.io/AiTimeline</a></p><span id="more"></span><iframe  src="https://nhlocal.github.io/AiTimeline"  width="100%"    height="600px"   frameborder="0"    allowfullscreen></iframe>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;记录了 AI 这几年发展过程中的重要时间节点、事件。&lt;br&gt;&lt;a href=&quot;https://nhlocal.github.io/AiTimeline&quot;&gt;https://nhlocal.github.io/AiTimeline&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LLMs帕累托前沿更新</title>
+    <link href="https://www.mozheyang.top/2025/05/18/LLMpareto/"/>
+    <id>https://www.mozheyang.top/2025/05/18/LLMpareto/</id>
+    <published>2025-05-18T06:56:37.000Z</published>
+    <updated>2025-05-18T08:52:49.358Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>不必苦恼用什么LLMs API了，有大神总结了性价比高的API对比，感兴趣的大家伙可以看看，部分需要魔法。</p><p>还有什么学不会的知识吗？只要是人类已知的，甚至部分未知的问题，不必再抱怨环境，多问问AI就好了。</p><p>引自：<a href="https://winston-bosan.github.io/llm-pareto-frontier/">https://winston-bosan.github.io/llm-pareto-frontier/</a></p><span id="more"></span><p>据数据显示，不到两年的时间里，GPT-4 级模型的成本下降了 99.7%，世界上最先进的模型也便宜了 82%，GPT-4.5 因为巨额成本更是回档 4.1。现在是谷歌锋芒毕露，Gemini 2.5 现在已经达到或接近 Human PhD Range，在某些特定的专家任务中达到或超越人类。</p><iframe  src="https://winston-bosan.github.io/llm-pareto-frontier/"  width="100%"    height="600px"   frameborder="0"    allowfullscreen></iframe><p>LLM的帕累托前沿本质是​​多目标优化的效率边界​​——它描绘了当前技术条件下，模型性能（如推理准确率、多模态能力）与API调用成本之间的​​终极权衡关系​​。这个边界上的每个点都代表一种最优解：任何性能提升必然伴随成本上升，反之亦然。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;不必苦恼用什么LLMs API了，有大神总结了性价比高的API对比，感兴趣的大家伙可以看看，部分需要魔法。&lt;/p&gt;
+&lt;p&gt;还有什么学不会的知识吗？只要是人类已知的，甚至部分未知的问题，不必再抱怨环境，多问问AI就好了。&lt;/p&gt;
+&lt;p&gt;引自：&lt;a href=&quot;https://winston-bosan.github.io/llm-pareto-frontier/&quot;&gt;https://winston-bosan.github.io/llm-pareto-frontier/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记忆中的爷爷和奶奶</title>
+    <link href="https://www.mozheyang.top/2025/04/06/qingming2025/"/>
+    <id>https://www.mozheyang.top/2025/04/06/qingming2025/</id>
+    <published>2025-04-06T07:07:12.000Z</published>
+    <updated>2025-05-18T13:25:19.765Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>老爸是家里老六，大伯（我爸的大哥）从年龄上都可以算跟老爸差辈了，所以记忆中的爷爷和奶奶都是比较苍老的模样。</p><span id="more"></span><p>与爷爷在记忆中，小区的草坪上踢球。</p><p>爷爷撑着拐杖，虽然不是很灵活，但总能把球给回回来。</p><p>我在这边，他在那边。</p><p><img src="/images/20250406/grandpa.png" alt="爷爷"></p><p>在我记忆中，奶奶还有相对年轻的时候。面对调皮的我，脾气也会不好，虽然我已忘了是怎么惹她生气。</p><p>再后来，奶奶就突然不记得我们了。</p><p>每次回家都需要重新“自我介绍”一次。</p><p>我还记得，奶奶跟我说过的最后一次愿望是：“看看我的孙媳妇~”</p><p><img src="/images/20250406/grandma.png" alt="奶奶"></p><p>我小时候有个愿望，就是挣很多的钱，最后让爷爷奶奶都能健康长寿，安享晚年。</p><p>现在我明白了，最珍贵的礼物，其实是陪伴。</p><p>时间永远走的比我们想象的要快。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;老爸是家里老六，大伯（我爸的大哥）从年龄上都可以算跟老爸差辈了，所以记忆中的爷爷和奶奶都是比较苍老的模样。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>进入大乱斗模式？自回归模型还是扩散模型？</title>
+    <link href="https://www.mozheyang.top/2025/04/06/LLaDA/"/>
+    <id>https://www.mozheyang.top/2025/04/06/LLaDA/</id>
+    <published>2025-04-06T03:31:39.000Z</published>
+    <updated>2025-04-06T07:11:11.138Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>最近的AIGC圈子是非常热闹。</p><p>前段时间刚看到<a href="https://openai.com/index/introducing-4o-image-generation/">OpenAI使用自回归模型</a>端了扩散模型在“图像生成”领域的老窝，然后立马又关注到扩散模型成为了“文本生成”领域的新贵（）。真的是神仙打架，有来有往。</p><p><img src="/images/LLM20250406/autor_vs_diffusion.png" alt="vs"></p><span id="more"></span><p>最近的一篇论文《LLaDA: Learning Latent Diffusion Models for Autoregressive Text Generation》，作者认为扩散模型可以成为自回归模型之外的可行选择。<br>本文主要分为三个部分：</p><ol><li>核心论点：扩散模型可以成为自回归模型之外的可行选择</li><li>论据支持：LLaDA 的全面实验验证</li><li>方法创新：掩码扩散框架的设计</li></ol><h1 id="核心论点：扩散模型可以成为自回归模型之外的可行选择"><a href="#核心论点：扩散模型可以成为自回归模型之外的可行选择" class="headerlink" title="核心论点：扩散模型可以成为自回归模型之外的可行选择"></a>核心论点：扩散模型可以成为自回归模型之外的可行选择</h1><p><strong>主要挑战</strong>：<br>当前大语言模型（LLMs）普遍采用自回归模型（Autoregressive Models, ARMs），通过逐词预测实现文本生成。但作者认为，<strong>自回归结构并非LLMs能力的唯一根源</strong>，其本质源于生成建模原则（如最大似然估计），而扩散模型（Diffusion Models）同样能实现类似甚至更优的表现。</p><p><strong>核心主张</strong>：  </p><ol><li><strong>生成建模原则是关键</strong>：LLMs的核心能力（如上下文学习、指令跟随）源于对数据分布的建模，而非自回归结构本身。  </li><li><strong>自回归模型的局限性</strong>：逐词生成导致计算效率低、难以处理逆向推理任务（如“逆向诅咒”）。  </li><li><strong>扩散模型的潜力</strong>：通过掩码扩散建模双向依赖关系，可实现更灵活、鲁棒的生成。</li></ol><p><img src="/images/LLM20250406/diff_normal_150ms.gif" alt=""></p><hr><h1 id="论据支持：LLaDA-的全面实验验证"><a href="#论据支持：LLaDA-的全面实验验证" class="headerlink" title="论据支持：LLaDA 的全面实验验证"></a>论据支持：LLaDA 的全面实验验证</h1><p><strong>1. 性能对标主流LLMs</strong><br>• <strong>基准测试</strong>：在MMLU、GSM8K、代码生成（HumanEval）等15项任务中，8B参数的LLaDA与LLaMA3 8B表现相当，部分任务（如中文理解CMMLU）显著优于LLaMA2 7B。<br>• <strong>逆向任务突破</strong>：在“逆向诗歌补全”任务中，LLaDA以42.4%准确率超过GPT-4o（34.3%），证明其双向建模优势。<br><img src="/images/LLM20250406/LLaDA_base.png" alt=""></p><p><strong>2. 可扩展性验证</strong><br>• 从1B到8B参数，LLaDA的训练损失随计算量（FLOPs）稳定下降，与自回归模型基线趋势一致，验证扩散模型在大规模训练中的可行性。</p><p><strong>3. 指令跟随与多轮对话</strong><br>• 经过监督微调（SFT），LLaDA展现出流畅的多语言对话能力（如中英德翻译），生成文本连贯且符合上下文逻辑。</p><hr><h1 id="方法创新：掩码扩散框架的设计"><a href="#方法创新：掩码扩散框架的设计" class="headerlink" title="方法创新：掩码扩散框架的设计"></a>方法创新：掩码扩散框架的设计</h1><p><strong>1. 前向与反向过程</strong><br>• <strong>前向掩码</strong>：随机按时间步长 ( t \in [0,1] ) 对输入序列逐步掩码（如t=0为完整文本，t=1全掩码）。<br>• <strong>反向生成</strong>：训练Transformer预测被掩码的token，通过多步迭代重建完整文本（类似图像扩散的去噪过程）。<br><img src="/images/LLM20250406/LLaDA_methods.png" alt=""></p><p><strong>2. 训练目标</strong><br>• 优化对数似然上界（式3），仅对掩码位置计算交叉熵损失：  </p><script type="math/tex; mode=display">  \mathcal{L}(\theta) = -\mathbb{E}_{t,x_0,x_t} \left[ \frac{1}{t} \sum_{i=1}^L \mathbf{1}[x_t^i=M] \log p_\theta(x_0^i|x_t) \right]</script><p><strong>3. 推理优化策略</strong><br>• <strong>动态长度训练</strong>：1%的训练数据采用随机长度（1-4096 token），提升模型对可变长度输入的适应性。<br>• <strong>半自回归生成</strong>：将输出分块生成，块内并行预测掩码，兼顾效率与质量。<br>• <strong>低置信度重掩码</strong>：在反向过程中优先重掩码低置信度预测，加速收敛。</p><hr><h1 id="核心贡献与意义"><a href="#核心贡献与意义" class="headerlink" title="核心贡献与意义"></a>核心贡献与意义</h1><p><strong>1. 理论突破</strong><br>• <strong>首次验证扩散模型的LLM潜力</strong>：以80亿参数规模证明扩散模型在语言任务中可媲美主流自回归模型。<br>• <strong>统一视角</strong>：揭示掩码扩散与任意顺序自回归模型（AO-ARM）的等价性（式15），为双向建模提供理论支撑。</p><p><strong>2. 工程实践</strong><br>• <strong>高效训练框架</strong>：提出动态掩码策略、Warmup-Stable-Decay学习率调度等方法，实现2.3万亿token的高效预训练（0.13万H800 GPU小时）。<br>• <strong>开源生态</strong>：发布代码与模型权重（<a href="https://ml-gsai.github.io/LLaDA-demo/">https://ml-gsai.github.io/LLaDA-demo/</a>），推动非自回归LLM研究。</p><p><strong>3. 应用前景</strong><br>• <strong>解决逆向诅咒</strong>：在需要双向推理的任务（如诗歌补全、逻辑回溯）中表现突出。<br>• <strong>更灵活生成</strong>：支持多步采样调控生成质量，为可控文本生成提供新思路。</p><hr><h1 id="局限与未来方向"><a href="#局限与未来方向" class="headerlink" title="局限与未来方向"></a>局限与未来方向</h1><p>• <strong>计算成本</strong>：扩散模型推理需多步迭代，实时性弱于自回归模型。<br>• <strong>扩展潜力</strong>：尚未探索强化学习对齐、多模态融合等后续优化。<br>• <strong>架构优化</strong>：可设计更适合扩散模型的注意力机制与位置编码。</p><h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><ul><li><p><strong>商业化应用：</strong>2025年2月26日，Inception Labs发布了Mercury Coder，宣称是首个商业化规模的dLLM。其核心创新在于​​并行生成机制​​，显著提升效率，在NVIDIA H100上生成速度达1000 tokens/秒，比传统自回归模型快5-20倍，且运行成本降低5-10倍。Inception Labs由斯坦福教授Stefano Ermon等创立，其团队包括MDLM论文作者Volodymyr Kuleshov，显示出研究与商业化的紧密联系。<br><img src="/images/LLM20250406/mercury.gif" alt=""></p></li><li><p><strong>近期SOTA：</strong>香港大学与华为诺亚方舟实验室推出的​<a href="https://hkunlp.github.io/blog/2025/dream/">​Dream 7B</a>​​（扩散推理模型），通过​​扩散架构创新+AR知识迁移​​，证明了扩散模型在大规模语言任务中的竞争力。其​​规划能力优势​​和​​推理灵活性​​为智能体、代码生成等场景提供新可能。</p></li></ul><p><img src="/images/LLM20250406/dream-benchmark-bar.png" alt="一般任务、数学任务、编码任务和规划任务的语言模型比较"></p><p class="refs">一般任务、数学任务、编码任务和规划任务的语言模型比较</p><p><img src="/images/LLM20250406/dream-benchmark-table.png" alt="语言模型在标准评估基准上的比较"></p><p class="refs">语言模型在标准评估基准上的比较</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近的AIGC圈子是非常热闹。&lt;/p&gt;
+&lt;p&gt;前段时间刚看到&lt;a href=&quot;https://openai.com/index/introducing-4o-image-generation/&quot;&gt;OpenAI使用自回归模型&lt;/a&gt;端了扩散模型在“图像生成”领域的老窝，然后立马又关注到扩散模型成为了“文本生成”领域的新贵（）。真的是神仙打架，有来有往。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/LLM20250406/autor_vs_diffusion.png&quot; alt=&quot;vs&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Generative AI  生成式人工智能" scheme="https://www.mozheyang.top/tags/Generative-AI-%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="Large Language Model  大语言模型" scheme="https://www.mozheyang.top/tags/Large-Language-Model-%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>科学不存在了吗？2024年诺贝尔奖与AI4Science</title>
+    <link href="https://www.mozheyang.top/2024/10/13/nobel2024/"/>
+    <id>https://www.mozheyang.top/2024/10/13/nobel2024/</id>
+    <published>2024-10-13T14:09:34.000Z</published>
+    <updated>2025-04-06T02:55:40.635Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>本来以为只是一次黑天鹅，没想到是两次……2024年诺贝尔物理学奖和化学奖纷纷颁给AI研究员。科学范式转变来的可能比想象的要快。</p><span id="more"></span><p>信息时代，每天都有大量的信息如潮水般涌来，而科研领域也正经历着前所未有的变革。</p><h1 id="诺贝尔物理学奖"><a href="#诺贝尔物理学奖" class="headerlink" title="诺贝尔物理学奖"></a>诺贝尔物理学奖</h1><p>2024年10月8日，瑞典皇家科学院宣布将诺贝尔物理学奖授予美国科学家约翰・霍普菲尔德（John J. Hopfield）和英裔加拿大科学家杰弗里・辛顿（Geoffrey E. Hinton） ，以表彰他们 “通过人工神经网络实现机器学习的基础性发现和发明” 。其中，Hinton作为 “AI 教父”，早已在深度学习领域声名远扬，并在 2018 年荣获图灵奖，此次更是成为史上首位同时获得图灵奖和诺贝尔物理学奖的科学家。</p><p><img src="/images/nobel2024/physics.png" alt="physics"></p><h1 id="诺贝尔化学奖"><a href="#诺贝尔化学奖" class="headerlink" title="诺贝尔化学奖"></a>诺贝尔化学奖</h1><p>惊喜并未就此结束。仅仅一天之后，10月9日，诺贝尔化学奖也花落 AI 领域。戴维・贝克（David Baker）因在计算蛋白质设计方面的贡献获奖，另一半则由英国伦敦谷歌旗下人工智能公司 “深层思维”（DeepMind）的德米斯・哈萨比斯（Demis Hassabis）和约翰・江珀（John M. Jumper）共同获得，以表彰其在蛋白质结构预测方面的贡献。</p><p><img src="/images/nobel2024/chemistry.png" alt="chemistry"></p><h1 id="新的科学范式？"><a href="#新的科学范式？" class="headerlink" title="新的科学范式？"></a>新的科学范式？</h1><p>这一系列奖项的颁发，深刻反映出 AI 技术在全球科研舞台上正迅速崛起，并产生着深远影响。在这条路上，我觉得还有几个比较有启发性的工作：</p><h2 id="鄂维南"><a href="#鄂维南" class="headerlink" title="鄂维南"></a>鄂维南</h2><p>鄂维南院士一直致力于推动以机器学习为代表的人工智能技术在基础科学研究中的应用。他认为人工智能为基础科学研究带来了新的表示高维函数的工具和数据的分析工具。早在 2018 年，鄂维南院士就找到中国科学院院士汤超，希望在北大建立一个交叉学科项目，专门探索机器学习在各个科学和工程领域的应用，并将其命名为 “AI for Science”。</p><h2 id="张平文​"><a href="#张平文​" class="headerlink" title="张平文​"></a>张平文​</h2><p>张平文院士同样在相关领域积极探索，为推动科研范式的变革贡献力量。他们的工作为 AI 与科学研究的深度融合奠定了坚实基础，让更多科研人员看到了新的可能性。</p><h2 id="幻量科技-DeepVerse"><a href="#幻量科技-DeepVerse" class="headerlink" title="幻量科技 DeepVerse"></a>幻量科技 DeepVerse</h2><p>DeepVerse（<a href="https://ai4science.io/home_zh.html">ai4science.io</a>）致力于打造一个全面且强大的 AI 驱动的科学研究平台，整合了先进的人工智能算法、海量的数据资源以及高效的计算能力，为科研人员提供了从数据处理、模型构建到结果分析的一站式解决方案。无论是在材料科学中预测新型材料的性能，还是在药物研发中加速筛选潜在的药物分子，DeepVerse 都展现出了巨大的优势，帮助科研人员更高效地突破传统研究的瓶颈，加速科研进程。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;本来以为只是一次黑天鹅，没想到是两次……2024年诺贝尔物理学奖和化学奖纷纷颁给AI研究员。科学范式转变来的可能比想象的要快。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="随想  Thoughts" scheme="https://www.mozheyang.top/tags/%E9%9A%8F%E6%83%B3-Thoughts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Geek Tools | 极客工具推荐</title>
+    <link href="https://www.mozheyang.top/2024/09/22/geektool20240922/"/>
+    <id>https://www.mozheyang.top/2024/09/22/geektool20240922/</id>
+    <published>2024-09-22T04:00:00.000Z</published>
+    <updated>2025-04-06T07:31:24.549Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>在数字化时代，无论是办公、创作，还是自我提升，效率都是拉开差距的关键。合适的工具就如同神兵利器，能让难题迎刃而解，极大地提升效率。今天，就为大家带来几款超实用的极客工具，帮助大家轻松应对各种工作与生活场景。</p><ul><li>PDF24 Tools - PDF文件编辑</li><li>Video Compressor - 视频压缩</li><li>LibSTC - 书籍资源</li></ul><span id="more"></span><h2 id="PDF24-Tools-PDF文件编辑"><a href="#PDF24-Tools-PDF文件编辑" class="headerlink" title="PDF24 Tools - PDF文件编辑"></a>PDF24 Tools - PDF文件编辑</h2><p>所属公司：geek software GmbH 旗下项目，该德国公司 2006 年成立于柏林。<br>功能特色：提供免费且易用的 PDF 解决方案，涵盖在线与下载软件。如知名的 PDF24 Creator 和 PDF24 Online Tools，可实现合并、拆分、压缩、编辑、签名、转换等超多功能 。<br>主页：<a href="https://www.pdf24.org/zh">www.pdf24.org</a></p><p><img src="/images/20240922/pdf24.png" alt="PDF24"></p><h2 id="Video-Compressor-视频压缩"><a href="#Video-Compressor-视频压缩" class="headerlink" title="Video Compressor - 视频压缩"></a>Video Compressor - 视频压缩</h2><p>功能亮点：在线即可将视频文件压缩 90%，免费使用且不会将内容保存在服务器。<br>主页：<a href="https://tools.rotato.app/compress">tools.rotato.app/compress</a></p><p><img src="/images/20240922/video_compress.png" alt="Video Compressor"></p><h2 id="LibSTC-书籍资源"><a href="#LibSTC-书籍资源" class="headerlink" title="LibSTC - 书籍资源"></a>LibSTC - 书籍资源</h2><p>平台特色：Library STC是由Nexus（一个Telegram Bot 电子书资源搜索引擎）推出的IPFS图书资源的搜索引擎。Library STC将Nexus的图书资源导入了IPFS存储网络，以利用IPFS去中心网络的优势，支持Z-Library、LibGen 、Sci-Hub、Anna’s Archive等影子图书库的搜索，资源还比较丰富。<br>官网：<a href="https://solarmind.libstc.cc/">libstc.cc</a></p><p>希望以上推荐的工具，能在你的日常工作和学习中发挥大作用，助力你节省时间，提升效率。要是你也有私藏的宝藏工具，欢迎在评论区分享，让大家一起收获高效生活！</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在数字化时代，无论是办公、创作，还是自我提升，效率都是拉开差距的关键。合适的工具就如同神兵利器，能让难题迎刃而解，极大地提升效率。今天，就为大家带来几款超实用的极客工具，帮助大家轻松应对各种工作与生活场景。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PDF24 Tools - PDF文件编辑&lt;/li&gt;
+&lt;li&gt;Video Compressor - 视频压缩&lt;/li&gt;
+&lt;li&gt;LibSTC - 书籍资源&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Treasure  私家珍藏" scheme="https://www.mozheyang.top/categories/Treasure-%E7%A7%81%E5%AE%B6%E7%8F%8D%E8%97%8F/"/>
+    
+    
+    <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    
+    <category term="Resources  资源" scheme="https://www.mozheyang.top/tags/Resources-%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我与外公</title>
+    <link href="https://www.mozheyang.top/2024/09/17/grandfather/"/>
+    <id>https://www.mozheyang.top/2024/09/17/grandfather/</id>
+    <published>2024-09-17T12:30:30.000Z</published>
+    <updated>2025-04-06T07:11:43.971Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>值此中秋佳节，祝大家合家团圆，开开心心！！！🌕🌕🌕</p><p>刚从香港飞回来，一去一回，恰好躲过了台风贝碧嘉。今晚一轮圆月，正是与家人共赏之时。</p><p><img src="/images/grandfather/moon.jpg" alt=""></p><p>去年就想写一篇给外公的文，没想到直到今日才补上。</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=80% height=86 src="//music.163.com/outchain/player?type=2&id=2139049642&auto=1&height=66"></iframe><h1 id="当下"><a href="#当下" class="headerlink" title="当下"></a>当下</h1><p>去年清明节，是第一次给外公过的节。</p><p>上一次见到外公也是三年前的五一了。我刚工作，攒了钱，给外公带了一个黑色包包（当时还在恋爱的老婆推荐的）。外公还说看起来太贵了，让我拿回去。我说没事，这个包适合您，好看开心就好。他还犹豫着。最后还是老妈说，孩子带的东西，不论贵贱，都是一片心意。外公收下了，他很开心，还说要带我看看他最近的“研究成果”。我屁颠儿屁颠儿跟了过去，给这位大学者留影：</p><p><img src="/images/grandfather/grandfather.jpg" alt=""></p><p>第一次用自己挣的钱，给从小带我长大的外公反馈了，这种感觉真的很好。但我也没有想到，那居然是最后一次，跟外公在一起的美好体验。</p><h1 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h1><p>跟外公最早的记忆是在小学。</p><p>外公是铁匠，老家有个打铁机器。据说当年在县城里也是有头有脸的人物，有车有手表，妥妥的中产知识分子。</p><p>那时候，爸妈上班也忙，没空接送我上学放学，所以一直是外公接送我。我们家搬家之后，得靠外公自行车接送上学放学。怕我的脚被刮着，回老家给我定制了两个脚蹬子。后来，又过了一段时间，不知道从哪又找到两块铁片，又给我重新定制了更精致的脚凳子，默默装上。我没有得知更多制作细节，只知道，老家的菜刀也是外公打出来的。</p><p>他会经常在7点打开电台叫我起床。7点的准点报时，是我的童年噩梦。</p><p>冬天到了，根本起不来床。快迟到了，坐在后座掐外公的屁股，嘴上叫着快点快点。他也不会生气。</p><p>每天最期待的是放学，总能跟外公讨到1角2角，买根辣条吃；有时候还能讨到5角，那就可以吃小当家干脆面或者鸡汁炒粉了。</p><p>放学之后，外公会陪我打球、下棋，给我讲他今天看到的好句子，以及新画的世界地图。我觉得他是个话痨，每天笑呵呵的乐天派。最喜欢的是那首公交车上摘抄的《莫生气》：人生就像一场戏，因为有缘才相聚。</p><p><img src="/images/grandfather/writing.jpg" alt=""></p><h1 id="后来"><a href="#后来" class="headerlink" title="后来"></a>后来</h1><p>后来，表弟也到了上学的年纪。</p><p>我上了初中，高中，大学。方言逐渐变得生疏。</p><p>再后来，不知道什么时候，外公听的不那么真切了。我跟他的交流好像多了一层壁。他不再对我说的进行反馈，他只沉醉在自己的世界。</p><p>突然有一年，外婆走了。每次回家，感觉他又老了。但仍然是那样乐观。</p><p>表弟也长大了，可以自己上学了。现在他就在老家，走着那条跟外婆一起去看吊子（戏曲）的路。</p><p>那次，他给我介绍了最新买的按摩床，两万，功能很多。他特地插上了电，展示按摩床的丰富功能。看他脸上的开心笑容，活像一个老小孩。临走，给我们每个大孩小孩，每人一个红包。即使非常不舍，还是在路口，目视着送别了我们。</p><p>他看着我们。他的孩子们也在看着他。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;值此中秋佳节，祝大家合家团圆，开开心心！！！🌕🌕🌕&lt;/p&gt;
+&lt;p&gt;刚从香港飞回来，一去一回，恰好躲过了台风贝碧嘉。今晚一轮圆月，正是与家人共赏之时。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/grandfather/moon.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;去年就想写一篇给外公的文，没想到直到今日才补上。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Live2D模型初体验</title>
+    <link href="https://www.mozheyang.top/2024/09/07/live2dinit/"/>
+    <id>https://www.mozheyang.top/2024/09/07/live2dinit/</id>
+    <published>2024-09-07T04:46:11.000Z</published>
+    <updated>2024-09-08T03:57:24.027Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>哈喽，大家近来如何？最近在筹划给博客增加一些互动性，考虑结合近期大火的大语言模型。API（可直接调用）都已经准备好了（后期成功部署后也准备与各位分享），正愁采用什么样的交互模式。在浏览博客的时候发现了这个动画，瞬间被吸引住了，而且考虑也是一个交互入口，当下决定带到博客里来。</p><p>当然，这个Live2D技术也并不只是在我当下使用的Hexo博客框架才能使用。各位感兴趣可以检索看看，是不是有迁移至你们喜欢平台的方案哈。话不多说，接下来分享给各位小伙伴。Enjoy~</p><span id="more"></span><h1 id="Live2D技术前世今生"><a href="#Live2D技术前世今生" class="headerlink" title="Live2D技术前世今生"></a>Live2D技术前世今生</h1><p>Live2D技术是一种2D立体表现技术，它允许2D图像在保持其独特形状和画风的同时，在三维空间中自由移动。这项技术由<a href="https://www.live2d.jp/">株式会社Live2D（原名サイバーノイズ，Cybernoids）</a>开发。公司自2006年创立以来，一直专注于Live2D的技术研发。公司成立前9年没有进行任何的合同开发，也曾经历过多次濒临倒闭的境地。</p><p>在Live2D技术出现之前，要让2D角色动起来，通常需要通过手绘每一帧或者创建3D多边形模型来实现。这些方法不仅耗时耗力，而且往往会牺牲2D角色的原有风格。Live2D技术的出现解决了这些问题。它能够帮助制作方在不增加绘图量、保留原画艺术风格的基础上制作动态角色，相比采用3D或手绘动画来说，Live2D是一个性价比和制作效率更高的选项。</p><p><img src="/images/live2d/interaction.gif" alt="交互"></p><p>Live2D技术的第一个产品是<code>Live2D Cubism</code>，它允许角色在左右30度的范围内变化。随后，<code>Live2D Euclid</code>的开发使得角色可以实现360度的立体表现。目前，Live2D技术已经在游戏领域被广泛使用。该项技术的主要缺点在于无法实现大角度视角。结合最近看到的一些生成式人工技术，我想2D到3D投射的技术领域，应该很快也会有所突破。</p><h1 id="在Hexo-Next主题下的部署"><a href="#在Hexo-Next主题下的部署" class="headerlink" title="在Hexo Next主题下的部署"></a>在Hexo Next主题下的部署</h1><p>主要分为三个部分：hexo-helper-live2d插件的安装、对应模型的安装（或引入）、Hexo博客yaml配置修改（不要在主题配置里增加）。</p><h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>我采用npm进行安装。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure></p><p>npm和hexo都容易出现版本问题，附我使用版本如下：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\xxx&gt; npm --version</span><br><span class="line">10.8.2</span><br><span class="line">PS C:\Users\xxx&gt; node --version       </span><br><span class="line">v21.7.2</span><br><span class="line">PS C:\Users\xxx&gt; hexo --version</span><br><span class="line">hexo-cli: 4.3.2</span><br></pre></td></tr></table></figure></p><p>关于npm版本问题，建议使用<a href="https://github.com/nvm-sh/nvm">nvm</a>进行版本管理。</p><h2 id="模型安装"><a href="#模型安装" class="headerlink" title="模型安装"></a>模型安装</h2><p>默认支持的数款模型预览可见：<a href="https://blog.csdn.net/wang_123_zy/article/details/87181892">Hexo添加Live2D看板娘+模型预览</a>。</p><p>个人比较喜欢：</p><ul><li>live2d-widget-model-hijiki</li><li>live2d-widget-model-koharu</li><li>live2d-widget-model-shizuku</li><li>live2d-widget-model-tororo</li></ul><p>接下来还是npm安装就好。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;live2d-widget-model-xxx&gt;</span><br></pre></td></tr></table></figure></p><h2 id="博客配置修改"><a href="#博客配置修改" class="headerlink" title="博客配置修改"></a>博客配置修改</h2><p>在主题里配置可以使用模型，但是模型不能修改，属性也不生效。还是建议直接在博客配置里修改。位置参考如下：</p><p><img src="/images/live2d/blog_config.png" alt="博客配置修改"></p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>还会关注新的web交互新方式。love &amp; peace。</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] 【Live2D】会社消滅寸前だったとあるベンチャーが、世界初の2D立体表現技術を完成できたワケ。<a href="https://type.jp/et/feature/161/。">https://type.jp/et/feature/161/。</a><br>[2] Live2D的介绍及在Web端的运用。<a href="https://tgideas.qq.com/gicp/news/475/8723118.html?form=list。">https://tgideas.qq.com/gicp/news/475/8723118.html?form=list。</a><br>[3] <a href="https://github.com/EYHN/hexo-helper-live2d。">https://github.com/EYHN/hexo-helper-live2d。</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;哈喽，大家近来如何？最近在筹划给博客增加一些互动性，考虑结合近期大火的大语言模型。API（可直接调用）都已经准备好了（后期成功部署后也准备与各位分享），正愁采用什么样的交互模式。在浏览博客的时候发现了这个动画，瞬间被吸引住了，而且考虑也是一个交互入口，当下决定带到博客里来。&lt;/p&gt;
+&lt;p&gt;当然，这个Live2D技术也并不只是在我当下使用的Hexo博客框架才能使用。各位感兴趣可以检索看看，是不是有迁移至你们喜欢平台的方案哈。话不多说，接下来分享给各位小伙伴。Enjoy~&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Geek" scheme="https://www.mozheyang.top/tags/Geek/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最大熵模型与Logistic回归</title>
+    <link href="https://www.mozheyang.top/2024/07/27/emlr/"/>
+    <id>https://www.mozheyang.top/2024/07/27/emlr/</id>
+    <published>2024-07-27T06:40:22.000Z</published>
+    <updated>2024-09-08T07:08:53.366Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>线性回归大家一定都不陌生了，那逻辑回归（Logistic Regression, LR）呢？<br>机器学习中常用的sigmoid和softmax函数，背后又包含了何种假设？<br>最大熵模型到底是什么意思？<br>今天我们一起来一探究竟。Enjoy~</p><span id="more"></span><embed src="/files/EMLR/expetation_maximization_and_logistic_regression.pdf" width="100%" height="750" type="application/pdf">]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;线性回归大家一定都不陌生了，那逻辑回归（Logistic Regression, LR）呢？&lt;br&gt;机器学习中常用的sigmoid和softmax函数，背后又包含了何种假设？&lt;br&gt;最大熵模型到底是什么意思？&lt;br&gt;今天我们一起来一探究竟。Enjoy~&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>从入门到放弃 | 电化学阻抗是如何计算的？</title>
+    <link href="https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/"/>
+    <id>https://www.mozheyang.top/2022/06/26/ImpedanceCalculation/</id>
+    <published>2022-06-26T08:49:17.000Z</published>
+    <updated>2022-06-26T08:53:57.655Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>大家好啊。今天我们讨论一个电化学与数据的交叉主题哈。</p><p>大家在对材料进行电化学性能表征时，可能经常会使用到交流阻抗法。但大家是否曾好奇过“交流阻抗”是如何计算的呢？“阻抗”是一个直接观测量还是一个间接计算量？接下来，我们就要聊聊这个话题。</p><span id="more"></span><blockquote><p>内容真挺难的，笔者没能完全hold住，很多内容其实都没有讨论得特别透彻。博主会继续更新相关技术内容。希望各领域的老师们不吝赐教！</p></blockquote><h1 id="从欧姆定律（Ohm’s-Law）开始——纯电阻电路"><a href="#从欧姆定律（Ohm’s-Law）开始——纯电阻电路" class="headerlink" title="从欧姆定律（Ohm’s Law）开始——纯电阻电路"></a>从欧姆定律（Ohm’s Law）开始——纯电阻电路</h1><p>德国物理学家Georg Ohm在 1827 年发表的一篇论文中描述了通过包含各种长度电线的简单电路测量施加的电压和电流。他提出，通过两点之间导体的电流与两点之间的电压成<strong>正比</strong>。</p><script type="math/tex; mode=display">R = \frac{U}{I}</script><p>其中，$U$为电压，$I$为电流。$R$被认为是一种跟电子元件性质有关的比例常数，即电阻（Resistance）。在测试的绝大多数材料中，这一关系都能够成立。因此，欧姆定理作为一个经验公式可以得到广泛应用。但并不是所有的电子元件都能满足该性质。这给我们带来了疑问：除了电阻外，还有哪些电子元件？如何理解这些电子元器件的性质？</p><h1 id="非纯电阻电路——交流阻抗的定义"><a href="#非纯电阻电路——交流阻抗的定义" class="headerlink" title="非纯电阻电路——交流阻抗的定义"></a>非纯电阻电路——交流阻抗的定义</h1><p>电路的四大基本变量是电流$I$、电压$U$、电荷$Q$和磁通量$\Phi$。其中：</p><ul><li>电阻（Resistor）：表征电压与电流之间的关系；</li><li>电容（Capacitor）：表征电量与电压之间的关系；</li><li>电感（Inductor）：表征磁通量与电流之间的关系；</li><li>忆阻器（Memristor）：表征磁通量与电荷之间的关系（最近大火的电子元件，笔者也很感兴趣，但不在本文讨论范围内）。</li></ul><p>在直流电路中，电感短路，电容断路；欧姆定律没有描述电路中的电抗应该如何计算。很神奇的地方是，引入复阻抗后，对非纯电阻电路，交流电路中，阻抗的定义竟跟电阻很相似——引入电抗后，阻抗为电阻（实数）与电抗（虚数）之和，为一个复数：</p><script type="math/tex; mode=display">Z(\omega) = \frac{U(t)}{I(t)}</script><h1 id="从理论到工程——数字信号处理"><a href="#从理论到工程——数字信号处理" class="headerlink" title="从理论到工程——数字信号处理"></a>从理论到工程——数字信号处理</h1><p>在定义好交流电路中阻抗的具体定义后，接下来就是如何在实际生活中计算的问题了。我们知道，直接能够观测（或采集）的物理量是电压和电流。但根据阻抗的定义，$Z(\omega)$是一个复数，电压$U(t)$和电流$I(t)$也应该是复数。那么，电压和电流为何能够使用复数来进行表示呢？</p><p>这就涉及到接下来提及的一种<strong>数学工具</strong>了。通过这种数学工具，我们能够将采集到的离散（电压/电流）数据点转化为复数。</p><h2 id="空间变换"><a href="#空间变换" class="headerlink" title="空间变换"></a>空间变换</h2><p>笔者对“空间变换”的概念是在不断跨学科的过程中逐渐形成的：空间域到能量域（光的衍射），态矢量与能量（量子力学），特征值与特征向量（线性代数），时域到频域（信号处理）等等……貌似“空间变换”是一个很高大上的概念。</p><p>但实际上，我们很早就熟悉了空间变换的思想：比如，在解析几何中将笛卡尔（直角）坐标变换为极坐标，通过对数变换将乘法运算变换为加法运算等等。</p><h2 id="Fourier变换（Fourier-Transform）"><a href="#Fourier变换（Fourier-Transform）" class="headerlink" title="Fourier变换（Fourier Transform）"></a>Fourier变换（Fourier Transform）</h2><h3 id="Fourier级数（离散变量）"><a href="#Fourier级数（离散变量）" class="headerlink" title="Fourier级数（离散变量）"></a>Fourier级数（离散变量）</h3><p>任何周期信号都可以通过多个三角波信号组合。</p><h3 id="连续变量"><a href="#连续变量" class="headerlink" title="连续变量"></a>连续变量</h3><p>从离散变量推广至连续变量，无限多个三角函数之和可以无限逼近任何周期信号。</p><h3 id="欧拉公式（Euler’s-Formula）"><a href="#欧拉公式（Euler’s-Formula）" class="headerlink" title="欧拉公式（Euler’s Formula）"></a>欧拉公式（Euler’s Formula）</h3><p>根据欧拉公式</p><script type="math/tex; mode=display">e^{ix} = cos(x) + i \cdot sin(x)</script><p>任意三角函数都可以表示为一个复数。这也意味着，任何周期信号可以被一个复数所表示，也包括我们之前所提及的复阻抗$Z(\omega)$、交流电压$U(t)$和交流电流$I(t)$。</p><h2 id="离散数据点的处理"><a href="#离散数据点的处理" class="headerlink" title="离散数据点的处理"></a>离散数据点的处理</h2><p>真实信号中，由于信噪比不可能无穷大，而我们只对数字信号中的有效信号感兴趣，而不希望引入噪声。而一般地，信号频率与噪声频率存在差别（需要事先考虑设计），于是我们就能利用以下傅里叶变换方法，先把数字信号从时域转换到频域，就能够提取到指定频率信号。该信号以复数形式呈现。</p><p>由以上推导，通过下式得出时域到频域的变换公式：</p><script type="math/tex; mode=display">F(\omega) = \mathscr{F}\{f(t)\} = \int_{-\infty}^{\infty} f(t) \cdot e^{-2 \pi \omega i \cdot t} dt</script><p>其中，$F(\omega)$为频域函数，$f(t)$为时域函数。</p><p>通过相同方法，分别提取交流电流/电压扰动与交流电压/电流响应，就可以通过复阻抗计算公式计算阻抗值啦。以下为车用燃料电池系统上进行阻抗测试的部分数据[2]：</p><p><img src="https://mozheyang.top/images/ImpCal/curr_volt.png" alt=""><br>电流与电压信号</p><p><img src="https://mozheyang.top/images/ImpCal/fft.png" alt=""><br>（快速）傅里叶变换后，提取320Hz处的</p><p>该过程的原理是相对简单的，但由于阻抗计算对环境相当敏感，在实际测试时，会遇到各种意想不到的干扰，从而影响判断。这就需要我们对阻抗测量手段硬件和软件进行不断投入。</p><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>以下部分供参考，后续会重新展开谈谈该部分内容~</p><h2 id="快速傅里叶变换（Fast-Fourier-transform-FFT）"><a href="#快速傅里叶变换（Fast-Fourier-transform-FFT）" class="headerlink" title="快速傅里叶变换（Fast Fourier transform, FFT）"></a>快速傅里叶变换（Fast Fourier transform, FFT）</h2><p>基于稀疏矩阵分解，快速离散傅里叶变换（Discrete Fourier Transform, DFT）或其逆变换的方法。</p><h2 id="拉普拉斯（Laplace-Transform）变换"><a href="#拉普拉斯（Laplace-Transform）变换" class="headerlink" title="拉普拉斯（Laplace Transform）变换"></a>拉普拉斯（Laplace Transform）变换</h2><p>从傅立叶变换公式中，我们可以看出，要满足使用条件，要求$f(t)$的柯西主值积分应该是有限值。但是，并非所有信号都满足该条件，可能导致积分发散。</p><p>为使得任何信号函数都可积分，可以在傅立叶变换公式中引入衰减因子$e^{\sigma t}$，有</p><script type="math/tex; mode=display">\begin{align}F(\omega) & = \int_{-\infty}^{\infty} [f(t) \cdot e^{\sigma \cdot t}]\cdot e^{-2 \pi \omega i \cdot t} dt \\& = \int_{-\infty}^{\infty} f(t) \cdot e^{(\sigma-2 \pi \omega i) \cdot t} dt \\\end{align}</script><p>令$s = \sigma - 2 \pi \omega i$，可得到拉普拉斯变换：</p><script type="math/tex; mode=display">F(s) = \mathscr{L}\{f(t)\} = \int_{-\infty}^{\infty} f(t) \cdot e^{s \cdot t} dt</script><p>其中，$s=\sigma+i \nu$为任意复数。从这个角度来看，拉普拉斯变换是为了对某些不可积函数进行的傅立叶变换的拓展。</p><h2 id="Z变换"><a href="#Z变换" class="headerlink" title="Z变换"></a>Z变换</h2><p>傅立叶变换的离散形式。</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Yuan X Z, Song C, Wang H, et al. Electrochemical impedance spectroscopy in PEM fuel cells: fundamentals and applications[J]. 2010.</p><p>[2] Hong P, Xu L, Jiang H, et al. A new approach to online AC impedance measurement at high frequency of PEM fuel cell stack[J]. international journal of hydrogen energy, 2017, 42(30): 19156-19169.</p><p>[3] <a href="https://en.wikipedia.org/wiki/Memristor">https://en.wikipedia.org/wiki/Memristor</a>. </p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;大家好啊。今天我们讨论一个电化学与数据的交叉主题哈。&lt;/p&gt;
+&lt;p&gt;大家在对材料进行电化学性能表征时，可能经常会使用到交流阻抗法。但大家是否曾好奇过“交流阻抗”是如何计算的呢？“阻抗”是一个直接观测量还是一个间接计算量？接下来，我们就要聊聊这个话题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
+    
+    
+    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+    
+    <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>好久不见了，大家还好吗</title>
+    <link href="https://www.mozheyang.top/2022/06/03/latest202206/"/>
+    <id>https://www.mozheyang.top/2022/06/03/latest202206/</id>
+    <published>2022-06-03T13:23:29.000Z</published>
+    <updated>2024-01-20T04:57:40.140Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>很久没发干货了啊。</p><p><strong>客观原因</strong>是已经不在材料方向继续研究了，而新的领域又需要时间沉淀，以保证所发布的内容至少让我自己认为是合格的。<strong>主观原因</strong>是真的没有模块化的时间，都被击碎成一个个时间碎片，无法深度思考。于是……</p><p>不过我还是那个我。请拭目以待。</p><span id="more"></span><h1 id="“不在线”的日子"><a href="#“不在线”的日子" class="headerlink" title="“不在线”的日子"></a>“不在线”的日子</h1><p>近两个月，Hexo Next主题的cdn网站被DNS污染了，导致本网站访问异常。</p><blockquote><p>Thank you all for your tests, feedback and support. I am personally sorry for the issues we had today.</p><p>We can consider the issue as resolved, now its a question of DNS propagation getting to everyone.</p><p>Our official announcement regarding the problems today:</p><p>Unfortunately today jsDelivr unexpectedly lost its ICP license in China. As effect the regional CDN disabled our account.</p><p>This resulted in the extended outage we had in mainland China and Taiwan.</p><p>Other regions were unaffected.</p><p>We understand how difficult it was for our users to experience this unique situation.</p><p>From now on all Chinese traffic will be served by “near China” locations provided by global CDN providers.</p><p>This will have the additional benefit of better failover logic in the future.</p><p>——jimaek on 20 Dec 2021</p><p><a href="https://github.com/jsdelivr/jsdelivr/issues/18348#issuecomment-997777996">https://github.com/jsdelivr/jsdelivr/issues/18348#issuecomment-997777996</a></p></blockquote><p>前段时间有同学提醒我才发现的，直到今天才彻底修复。非常感谢你们的帮助和陪伴，让我重新找回继续写作的动力；也让我还能想起，对我来说，生命的一大重要意义在于留下更多有价值的见解，而不“只是”追名逐利（现实点，还是需要的……）。</p><p>希望能持续听到你们的声音。谢谢！</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;很久没发干货了啊。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;客观原因&lt;/strong&gt;是已经不在材料方向继续研究了，而新的领域又需要时间沉淀，以保证所发布的内容至少让我自己认为是合格的。&lt;strong&gt;主观原因&lt;/strong&gt;是真的没有模块化的时间，都被击碎成一个个时间碎片，无法深度思考。于是……&lt;/p&gt;
+&lt;p&gt;不过我还是那个我。请拭目以待。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Thought  随想" scheme="https://www.mozheyang.top/tags/Thought-%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>上海，加油</title>
+    <link href="https://www.mozheyang.top/2022/04/05/qingming2022/"/>
+    <id>https://www.mozheyang.top/2022/04/05/qingming2022/</id>
+    <published>2022-04-05T12:29:56.000Z</published>
+    <updated>2022-04-05T13:59:17.116Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p><img src="https://mozheyang.top/images/posts/qingming2022.png" alt=""></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&quot;&gt;&lt;script src=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>清明假期杂谈</title>
+    <link href="https://www.mozheyang.top/2021/04/05/MathNotGod/"/>
+    <id>https://www.mozheyang.top/2021/04/05/MathNotGod/</id>
+    <published>2021-04-05T09:16:54.000Z</published>
+    <updated>2021-04-23T12:33:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>最近事情非常杂乱，脑子也很混乱，无法再像学生时代一样纯粹地思考一件事了。</p><p>又是意外，春节没回家，清明假期又没能回家，更是无法脱离单调而忙碌的生活状态。</p><p>今天是发散而跳脱的，希望是一次思维的出世。</p><span id="more"></span><h1 id="思考了什么？"><a href="#思考了什么？" class="headerlink" title="思考了什么？"></a>思考了什么？</h1><p>清明，寄托对故人的怀念。</p><p>2021年，清明节恰逢西方复活节，是一次不约而同的巧合。</p><p>我在思考着自己的“重生计划”：是继续沿着当前道路精进，还是执着地另辟蹊径？</p><h1 id="做数学的奴隶，或是拥抱发散？"><a href="#做数学的奴隶，或是拥抱发散？" class="headerlink" title="做数学的奴隶，或是拥抱发散？"></a>做数学的奴隶，或是拥抱发散？</h1><p>我是个“数学”的狂热粉丝——即使我的数学并不好。她虐我上百遍，我待她如初恋。</p><p>我崇尚用数学描述任何难以解决的问题，从而接下来用数学的方法一步步解决。</p><p>这基于以下几个假设：1.我的领域足够新，没有相关应用；2.我的领域从数学上看是一个经典问题，有成熟的解决方法，至少有思路。前者保证了我不会重复造轮子，后者给了我不会走入死胡同的信心，完美。</p><h1 id="数学是万能的？"><a href="#数学是万能的？" class="headerlink" title="数学是万能的？"></a>数学是万能的？</h1><p>数学像是一种完备的问题语言，理论上可以表示任何逻辑问题，而生活中需要解决的问题又似乎都是逻辑问题。</p><p>那是否可用数学解决所有问题？思来想去，能用数学进行描述解决方法的问题一定是”简单“的问题——当我把解决方案描述出来后，我也将解决方法的集合变成了<strong>有限集合</strong>。这有限集合是一盏明灯，指引了继续前进的道路；又似是一方桎梏，使我跳不出这前人思考的陷阱。</p><p>我们可以去打磨工具，但不要最后忘了需要解决的问题是什么。此文，提醒我自己——更需要关注问题，而不是反复在各种方法边缘周旋。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近事情非常杂乱，脑子也很混乱，无法再像学生时代一样纯粹地思考一件事了。&lt;/p&gt;
+&lt;p&gt;又是意外，春节没回家，清明假期又没能回家，更是无法脱离单调而忙碌的生活状态。&lt;/p&gt;
+&lt;p&gt;今天是发散而跳脱的，希望是一次思维的出世。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Thoughts  随想" scheme="https://www.mozheyang.top/tags/Thoughts-%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kramers–Kronig关系及其与电化学阻抗测试的关系</title>
+    <link href="https://www.mozheyang.top/2021/01/10/KKrelation/"/>
+    <id>https://www.mozheyang.top/2021/01/10/KKrelation/</id>
+    <published>2021-01-10T07:09:13.000Z</published>
+    <updated>2021-01-10T07:29:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>在20世纪20年代，Kramers和Kronig发现，一个随频率变化的物理量$Z(\omega)$的实部$Z’(\omega)$和虚部$Z’’(\omega)$间存在一定关系，即Kramers–Kronig关系：</p><script type="math/tex; mode=display">Z(\omega) = Z'(\omega) + iZ''(\omega)</script><center><div class="eqnBlock" id="KKrelation1">$$Z'(\omega) = \frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z''(\omega')}{\omega'-\omega} \text{d}\omega'$$ </div></center><center><div class="eqnBlock" id="KKrelation2">$$Z''(\omega) = -\frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z'(\omega')}{\omega'-\omega} \text{d}\omega'$$ </div></center><p>其中$P$表示柯西主值（Cauchy principle value）。</p><blockquote><p>建议将本文与<a href="https://mozheyang.top/2020/04/19/EIS/"> 交流阻抗谱学与能源电化学 </a>一文一同食用~</p></blockquote><span id="more"></span><h1 id="Kramers–Kronig关系成立的四个条件"><a href="#Kramers–Kronig关系成立的四个条件" class="headerlink" title="Kramers–Kronig关系成立的四个条件"></a>Kramers–Kronig关系成立的四个条件</h1><p>要得到以上关系，要求该物理系统满足以下四个条件：</p><ul><li><strong>因果性条件</strong>：物理体系只对所施加扰动进行响应。对信噪比有要求。</li><li><strong>线性条件</strong>：物理体系的响应与施加扰动间为线性关系。施加扰动不可过大——在小扰动范围内，电压与电流近乎线性关系。</li><li><strong>稳定性条件</strong>：对体系停止扰动后，体系能回到受扰动前的状态。施加扰动不可过大，从而使体系不转移到另一个状态。</li><li><strong>有限性条件</strong>：随频率变化的物理量（阻抗）在全频率范围内（包括零和无穷大）都是有限值。部分RC电路不满足有限性条件，因此也不存在Kramers–Kronig关系。</li></ul><h1 id="Kramers–Kronig关系的证明"><a href="#Kramers–Kronig关系的证明" class="headerlink" title="Kramers–Kronig关系的证明"></a>Kramers–Kronig关系的证明</h1><p>满足以上四个条件，复数的Kramers–Kronig关系便成为了纯数学问题。观察Kramers–Kronig关系，可以发现我们需要求解复变函数$f(x)$在$(\infty, -\infty)$范围内的积分：</p><script type="math/tex; mode=display">\int^{\infty}_{-\infty} \frac{f(x)}{x-\omega}\text{d}x</script><p>解决该问题的一种相对简单的方式是构造积分域，并利用解析函数$f(x)$的积分与路径无关的特性。构造如下积分域：</p><p><img src="https://www.mozheyang.top/images/KKrelation/integral.png" alt=""></p><p>由Cauchy留数定理可得</p><script type="math/tex; mode=display">\oint \frac{Z(\omega')}{\omega'-\omega}\text{d}\omega'=0</script><p>又由Sokhotski–Plemelj定理可得</p><script type="math/tex; mode=display">\oint \frac{Z(\omega')}{\omega'-\omega}\text{d}\omega'= P \int^{\infty}_{-\infty} \frac{Z(\omega')}{\omega'-\omega} \text{d}\omega'- i \pi Z(\omega) = 0</script><blockquote><p>关注笔者博客的同学可能记得，以上定理的离散函数形式在另一篇博文中也有应用：<a href="https://mozheyang.top/2018/01/15/QMGreenFunction/">量子物理中的Green函数定义及其应用</a>。</p></blockquote><p>等式后半部分移项整理可得</p><script type="math/tex; mode=display">\begin{split}Z'(\omega) + iZ''(\omega) = Z(\omega) &= \frac{1}{i\pi}\int^{\infty}_{-\infty}\frac{Z(\omega')}{\omega'-\omega} \text{d}\omega' \\&= \frac{1}{i\pi}\int^{\infty}_{-\infty}\frac{Z'(\omega') + iZ''(\omega')}{\omega'-\omega} \text{d}\omega' \\&= \frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z''(\omega')}{\omega'-\omega} \text{d}\omega' -i\frac{1}{\pi} P \int^{\infty}_{-\infty} \frac{Z'(\omega')}{\omega'-\omega} \text{d}\omega'\end{split}</script><p>综上所述，等式两边复数的实部和虚部相对应便可得到<a href="#KKrelation1">Kramers–Kronig关系</a>。</p><h1 id="与电化学阻抗谱的关系"><a href="#与电化学阻抗谱的关系" class="headerlink" title="与电化学阻抗谱的关系"></a>与电化学阻抗谱的关系</h1><p>对线性电子元件系统来说，测试得到复阻抗的Kramers–Kronig关系一般都是能被满足的；但在电化学电极系统中，Kramers–Kronig关系成立的四个条件并不总是能够满足（<a href="#Kramers–Kronig关系成立的四个条件">如上讨论</a>）。因此，可通过Kramers–Kronig关系来检验所获得电化学阻抗谱的可靠性。基于可靠的电化学阻抗谱数据，我们才能对系统的物理化学特性进行准确分析。</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] 曹楚南. 电化学阻抗谱导论[M]. 科学出版社, 2002.<br>[2] <a href="https://en.wikipedia.org/wiki/Kramers%E2%80%93Kronig_relations">https://en.wikipedia.org/wiki/Kramers–Kronig_relations</a>. </p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在20世纪20年代，Kramers和Kronig发现，一个随频率变化的物理量$Z(&#92;omega)$的实部$Z’(&#92;omega)$和虚部$Z’’(&#92;omega)$间存在一定关系，即Kramers–Kronig关系：&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+Z(&#92;omega) = Z&#39;(&#92;omega) + iZ&#39;&#39;(&#92;omega)&lt;/script&gt;&lt;center&gt;&lt;div class=&quot;eqnBlock&quot; id=&quot;KKrelation1&quot;&gt;
+
+
+$$
+Z&#39;(&#92;omega) = &#92;frac{1}{&#92;pi} P &#92;int^{&#92;infty}_{-&#92;infty} &#92;frac{Z&#39;&#39;(&#92;omega&#39;)}{&#92;omega&#39;-&#92;omega} &#92;text{d}&#92;omega&#39;
+$$
+
+ &lt;/div&gt;&lt;/center&gt;
+
+&lt;center&gt;&lt;div class=&quot;eqnBlock&quot; id=&quot;KKrelation2&quot;&gt;
+
+$$
+Z&#39;&#39;(&#92;omega) = -&#92;frac{1}{&#92;pi} P &#92;int^{&#92;infty}_{-&#92;infty} &#92;frac{Z&#39;(&#92;omega&#39;)}{&#92;omega&#39;-&#92;omega} &#92;text{d}&#92;omega&#39;
+$$
+
+ &lt;/div&gt;&lt;/center&gt;
+
+&lt;p&gt;其中$P$表示柯西主值（Cauchy principle value）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建议将本文与&lt;a href=&quot;https://mozheyang.top/2020/04/19/EIS/&quot;&gt; 交流阻抗谱学与能源电化学 &lt;/a&gt;一文一同食用~&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
+    
+    
+    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在WAIC开发者大会蹭吃蹭喝的一天</title>
+    <link href="https://www.mozheyang.top/2021/01/09/WAICdeveloper2020/"/>
+    <id>https://www.mozheyang.top/2021/01/09/WAICdeveloper2020/</id>
+    <published>2021-01-09T09:54:53.000Z</published>
+    <updated>2021-01-10T07:30:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>入职快六个月了，博客也停更了七个月。不找借口，不是因为没空，主要还是懒惰了。诱惑太多，时间太少。好不容易等来个可以白嫖的活动，这周六凑个热闹，let’s go！！！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/pathway.png" style="zoom:50%;" /></p><span id="more"></span><p>地方是真偏，而我住的也偏。周末来回5h+白嫖个会议，也算是真爱了吧。</p><p>但没白来，还有饭吃！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/fengjianfeng.jpg" alt=""></p><p>复旦大学冯建峰教授的演讲挺有启发的，总结下来主要有三个观点：</p><ul><li>人工智能受生物神经科学的启发</li><li>人工智能在自动驾驶（机器视觉）和智慧医疗（心理疾病靶向治疗，如抑郁症）方面大有可为</li><li>类脑计算机有望成为经典计算机和量子计算机外，第三类计算机架构</li></ul><p><img src="https://mozheyang.top/images/WAICdeveloper2020/john2017.jpg" alt=""></p><p>2017年图灵奖获得者John Hennessy“发言”（不好意思，没给您美颜），主要讨论了人工智能发展亟需更大计算量，而目前摩尔定律的消失导致计算量增加遇到瓶颈，如何解决二者矛盾的问题。John提出，将现有CPU架构改变，使其适应于矢量运算，可以减少20+%的寄存器控制计算量，从而将更多算力分配给运算。。。或许这就是Tensor Processing Unit（TPU）或其他人工智能专用芯片的其中一种实现思路？</p><p>遗憾的是，本以为John会亲临现场，看来本会阵仗还不够大。不过转念一想，白嫖的会议，要啥自行车？一会儿午饭时间就到了。加油，干饭人！！！</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/lunch.jpg" alt=""></p><p>下午是技术专场。</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto1.jpg" alt=""></p><p>高精度地图与自动驾驶</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto2.jpg" alt=""></p><p>自动驾驶仿真</p><p><img src="https://mozheyang.top/images/WAICdeveloper2020/auto3.jpg" alt=""></p><p>低速自动驾驶的SLAM系统</p><p>都很精彩，收获很多。但是更多是经典方法的应用，很少人工智能的落地（噱头更多）？这可能正是当前人工智能发展的现实。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;入职快六个月了，博客也停更了七个月。不找借口，不是因为没空，主要还是懒惰了。诱惑太多，时间太少。好不容易等来个可以白嫖的活动，这周六凑个热闹，let’s go！！！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mozheyang.top/images/WAICdeveloper2020/pathway.png&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Information Science &amp; Technology 信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LAMMPS学习札记（三）——分子动力学的基本原理</title>
+    <link href="https://www.mozheyang.top/2020/04/30/lammps3/"/>
+    <id>https://www.mozheyang.top/2020/04/30/lammps3/</id>
+    <published>2020-04-30T03:35:06.000Z</published>
+    <updated>2020-04-30T03:51:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p><img src="https://lammps.sandia.gov/movies/logo.gif" alt=""></p><p>之前我们说到，如何将LAMMPS正常运行，并对LAMMPS的<code>in</code>文件和输入文件进行修改调试，查看结果。可以说，基本与科学无关，纯属dirty work。但科学也是在dirty work的基础上架构的。</p><p>这一次，我们准备触及分子动力学的中的<strong>物理内核</strong>。</p><span id="more"></span><h1 id="分子动力学是什么？"><a href="#分子动力学是什么？" class="headerlink" title="分子动力学是什么？"></a>分子动力学是什么？</h1><p>先给出Wikipedia的定义<a href="#参考资料">[1]</a>：</p><blockquote><p><strong>Molecular dynamics (MD)</strong> is a computer simulation method for analyzing the physical movements of atoms and molecules. </p></blockquote><p>博主的理解是，分子动力学（Molecular dynamics）是以一个原子为最小单元，基于经典牛顿力学原理，对整个系统的原子/分子运动状态进行模拟的一套理论。由于整套理论的基础是牛顿力学，所以其<strong>适用范围</strong>也就不言自明了——相对论或者量子理论作用不可忽略的有关性质，利用分子动力学模拟是无法得到合理结论的。幸运的是，分子热运动的速度&lt; 1000 m/s，远小于光速<a href="#参考资料">[2]</a>；部分性质如力学性质中，电子转移对原子/分子的运动影响较小。除了近年来研究较多的电子转移，其实很多传统领域（如材料形变、蛋白质分子折叠等）使用分子动力学都不算超纲。</p><h1 id="如何利用分子动力学？"><a href="#如何利用分子动力学？" class="headerlink" title="如何利用分子动力学？"></a>如何利用分子动力学？</h1><p>每个原子所受作用主要分为化学键作用和非键作用。</p><script type="math/tex; mode=display">E_{total} = E_{bond} + E_{nonbond}</script><p>这些作用都利用势函数（能量函数）来进行描述。</p><h2 id="势函数（Potential）"><a href="#势函数（Potential）" class="headerlink" title="势函数（Potential）"></a>势函数（Potential）</h2><p>以下是大学物理中可以见到的原子间作用势的基本形状：</p><p><img src="https://www.mozheyang.top/images/LAMMPS/Interatomic-potential.gif" width="60%"></p><p  class="refs">Ref: https://www.princeton.edu/~maelabs/mae324/glos324/potential.htm</p><p>出现这种曲线的原因是</p><script type="math/tex; mode=display">原子间作用力(r) = -吸引力(r) + 排斥力(r)</script><blockquote><p>吸引力与排斥力方向相反，符号相反。</p></blockquote><p>无穷远处吸引力与排斥力均趋近于0；随着两原子靠近，原子间的吸引力开始气作用；突破平衡距离$r_0$后，排斥力的作用开始逐渐增大，阻止两原子继续靠近。</p><script type="math/tex; mode=display">f(r) = -\frac{\text{d} u(r)}{\text{d} r}</script><p>此即</p><script type="math/tex; mode=display">\int f(r) \text{d}r = \int \text{d} u(r) = u(r)</script><p>将原子在无穷远处的系统能量定义为0，系统能量增加全部由做功所提供。将原子距离从无穷远缩短为$r$的这段过程中，原子做功为</p><script type="math/tex; mode=display">\Delta W = \int_\infty^r f(r) \text{d} r = u(r) |_r - u(r) |_\infty= u(r)</script><p>即等于两原子间内能。将原子间作用力两两加和便可达到由$N$个原子组成系统的内能。当不考虑物体外力场的作用时，由$N$个原子组成系统的总能量也就等于系统内能：</p><script type="math/tex; mode=display">E(r) = U(r) = \frac{1}{2} \sum^N_{i=1} \sum^N_{i \neq j} u(r_{ij})</script><p>需要注意的是，为排除重复计算的原子间作用力，需要加上系数$\frac{1}{2}$。以上就是原子间作用力计算系统内能的基本原理。</p><h2 id="化学键作用-E-bond"><a href="#化学键作用-E-bond" class="headerlink" title="化学键作用$E_{bond}$"></a>化学键作用$E_{bond}$</h2><h3 id="谐振子势（Harmonic）"><a href="#谐振子势（Harmonic）" class="headerlink" title="谐振子势（Harmonic）"></a>谐振子势（Harmonic）</h3><center><p class="eqnBlock">$$\begin{split}E_{stretch} &= K_{stretch} (r-r_0)^2 \\E_{bend} &= K_{bend} (\theta-\theta_0)^2 \\\end{split}$$</p></center><p>其中$r-r_0$和$\theta-\theta_0$即为分子间伸缩运动和弯剪运动偏离平衡的量，$K_{stretch}$和$K_{bend}$都是常数。“Harmonic”指的应该是“Harmonic oscillator”，以下是Wikipedia的定义<a href="#参考资料">[3]</a>：</p><blockquote><p><strong>谐振子（Harmonic oscillator）</strong></p><p>In classical mechanics, a harmonic oscillator is a system that, when displaced <strong>from its equilibrium position</strong>, experiences a restoring force $\vec{F}$ proportional to the <strong>displacement</strong> $\vec{x}$:</p><script type="math/tex; mode=display">\vec{F} = -k \vec{x}</script></blockquote><p>即遵循Hooke定律的系统，可称为谐振子。由力与能量的关系，不难得：</p><script type="math/tex; mode=display">E = \frac{1}{2} k x^2</script><p>其中，$k$为弹簧系数，$x$为偏离平衡的位移。这也就是Harmonic势中的公式形式。</p><h2 id="非键作用-E-non-bond"><a href="#非键作用-E-non-bond" class="headerlink" title="非键作用$E_{non-bond}$"></a>非键作用$E_{non-bond}$</h2><p>分子动力学模拟使用力场实现对每个原子所受作用的计算。力场就是通过一定的函数，在所有原子之间，计算两两原子之间的相互作用力。这其中主要包括范德华力（Van der Waals force）、静电作用力（Coulomb force）等。</p><h3 id="静电作用力"><a href="#静电作用力" class="headerlink" title="静电作用力"></a>静电作用力</h3><p>静电作用力与高中课本中描述的没有差异。原子$i$和原子$j$间的静电作用力为</p><script type="math/tex; mode=display">E^C_{ij} = \frac{C q_i q_j}{\epsilon r}</script><h3 id="范德华力"><a href="#范德华力" class="headerlink" title="范德华力"></a>范德华力</h3><h4 id="两体势（Pair-potential）"><a href="#两体势（Pair-potential）" class="headerlink" title="两体势（Pair potential）"></a>两体势（Pair potential）</h4><p>广泛应用的两体势是Lennard-Jones（L-J）势，在描述Ar, Kr, CH<sub>4</sub>, O<sub>2</sub>, H<sub>2</sub>, C<sub>2</sub>H<sub>4</sub>等小分子的范德华力方面具有明显优势<a href="#参考资料">[4]</a>。原子$i$和原子$j$间的范德华力为</p><center><p class="eqnBlock">$$E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right]$$</p></center><p>为了节省计算资源，两体之间的势都有截断能。引入截断能（cut off）$r_C$后，原子$i$和原子$j$间的范德华力为</p><script type="math/tex; mode=display">E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right] , r<r_C</script><p>使用<code>lj/cut</code>势并设定参数：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pair_style lj/cut 2.5</span><br><span class="line">pair_coeff 1 1 1 1.1 2.8</span><br></pre></td></tr></table></figure><p>其中<code>2.5</code>为截断能。<code>pair_coeff</code>共有5个参数，前两个参数指定原子类型，后三个参数指定势函数参数。</p><p>若将静电作用力（也考虑截断能）也考虑进来，可选择<code>lj/cut/coul/cut</code>：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pair_style lj/cut/coul/cut 10.0 8.0</span><br><span class="line">pair_coeff 1 1 100.0 3.5 9.0 9.0</span><br></pre></td></tr></table></figure><p>其中<code>10.0</code>为L-J势的截断能，<code>8.0</code>为静电作用力力的截断能。</p><h4 id="多体势"><a href="#多体势" class="headerlink" title="多体势"></a>多体势</h4><p>Baskes和Daw基于密度泛函理论和准原子近似理论，导出了嵌入原子理论（embedded atom method, EAM）模型势<a href="#参考资料">[5]</a>。该势函数是目前描述金属及其合金原子间作用最有效的，几乎<strong>适用于任何金属元素及合金</strong>。唯一的问题是<strong>势函数的参数</strong>需要拟合确定。</p><center><p class="eqnBlock">$$E_{EAM} = \sum_i \left\{ F_i(\rho_i) + \frac{1}{2} \sum_{i \neq j} \phi_{ij} (r_{ij}) \right\}$$</p></center><p>在LAMMPS中，对应EAM势的势函数为<code>eam</code>势：<br>使用<code>eam</code>势：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_style eam</span><br></pre></td></tr></table></figure><p>通过<code>library.meam</code>设置势函数参数：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_coeff * * cuu3</span><br></pre></td></tr></table></figure><p>在LAMMPS中还有一个常用的多体势。<code>mean</code>势——Modified Embedded-atom Method (MEAM)。“Modified”的部分在于相对EAM，MEAM还加入了键角的作用（angular forces）。据LAMMPS官方文档描述，在2018年12月的版本后，<code>mean</code>势被替换为<code>mean/c</code>。二者基本可以等效，但<code>mean/c</code>要更为高效<a href="#参考资料">[5]</a>。</p><p>使用<code>mean/c</code>势：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_style meam/c</span><br></pre></td></tr></table></figure><p>通过<code>library.meam</code>设置势函数参数：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pair_coeff * * ../potentials/library.meam Ni Al NULL Ni Al Ni Ni</span><br></pre></td></tr></table></figure><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>以上博主对LAMMPS的介绍还只是LAMMPS的冰山一角。</p><p>如果恰好引起了你的兴趣，请到LAMMPS官网查看相关文档。</p><p>博主只希望本系列文章能够让更多<strong>自然科学与实验科学</strong>的同学关注对应的<strong>计算与信息</strong>方向。</p><p>三百六十行，行行信息化。</p><p>我相信，利用信息技术可以让传统学科焕发出新的活力，并呈现出无限可能。</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] <a href="https://en.wikipedia.org/wiki/Molecular_dynamics">https://en.wikipedia.org/wiki/Molecular_dynamics</a>. </p><p>[2] <a href="https://en.wikipedia.org/wiki/Thermal_velocity">https://en.wikipedia.org/wiki/Thermal_velocity</a>. </p><p>[3] <a href="https://en.wikipedia.org/wiki/Harmonic_oscillator">https://en.wikipedia.org/wiki/Harmonic_oscillator</a>. </p><p>[4] The Journal of Chemical Physics 104:21, 8627-8638.</p><p>[5] Daw, Baskes, Phys Rev Lett, 50, 1285 (1983). Daw, Baskes, Phys Rev B, 29, 6443 (1984).</p><p>[6] <a href="https://lammps.sandia.gov/doc/pair_meamc.html">https://lammps.sandia.gov/doc/pair_meamc.html</a>. </p><p>[7] <a href="https://lammps.sandia.gov/doc/pairs.html">https://lammps.sandia.gov/doc/pairs.html</a>. </p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lammps.sandia.gov/movies/logo.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;之前我们说到，如何将LAMMPS正常运行，并对LAMMPS的&lt;code&gt;in&lt;/code&gt;文件和输入文件进行修改调试，查看结果。可以说，基本与科学无关，纯属dirty work。但科学也是在dirty work的基础上架构的。&lt;/p&gt;
+&lt;p&gt;这一次，我们准备触及分子动力学的中的&lt;strong&gt;物理内核&lt;/strong&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Information Science &amp; Technology  信息科学与技术" scheme="https://www.mozheyang.top/tags/Information-Science-Technology-%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Material  材料" scheme="https://www.mozheyang.top/tags/Material-%E6%9D%90%E6%96%99/"/>
+    
+  </entry>
+  
+</feed>
