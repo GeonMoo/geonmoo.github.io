@@ -43,17 +43,18 @@
   </entry>
   
   <entry>
-    <title>人形机器人终局的个人推测</title>
+    <title>人形机器人，未来将何去何从？</title>
     <link href="https://www.mozheyang.top/2026/03/08/HumanoidRobots/"/>
     <id>https://www.mozheyang.top/2026/03/08/HumanoidRobots/</id>
     <published>2026-03-08T11:16:18.000Z</published>
-    <updated>2026-03-08T11:31:25.727Z</updated>
+    <updated>2026-03-08T14:06:42.291Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>最近人形机器人赛道火热，但我总觉得哪里不对。</p><p>看着那些会走路、会跳舞、会鞠躬的人形机器人，我不禁思考：这真的是机器人的正确方向吗？</p><span id="more"></span><h1 id="人形机器人是个弯路？"><a href="#人形机器人是个弯路？" class="headerlink" title="人形机器人是个弯路？"></a>人形机器人是个弯路？</h1><p>现在的创业者常说：我们的环境是为人类设计的，所以人形机器人有最好的适应能力。</p><p>这听起来合理，但仔细一想，是倒果为因。</p><p>人类世界确实是为人的身体结构设计的。但我们要的是功能，不是长得像人。楼梯、椅子、桌子是为人设计的，不代表机器必须有腿、有手、有头才能用。</p><p>能爬楼就用履带或轮腿，能操作就用专用机械手，能搬运就直接设计成搬运形态。为了”适配人类环境”强行做人形，是用最高成本，解决本来有更简单解法的问题。</p><h1 id="融资逻辑-gt-产品逻辑？"><a href="#融资逻辑-gt-产品逻辑？" class="headerlink" title="融资逻辑 &gt; 产品逻辑？"></a>融资逻辑 &gt; 产品逻辑？</h1><p>传统工业机器人、服务机器人、AGV、特种机器人——好用、稳定、能赚钱、能落地。但投资人听不懂、不性感、故事讲不大。</p><p>人形不一样：像人 → 有想象空间 → 能对标”人类劳动力” → 估值天花板拉满。能走路、能跳舞、能鞠躬 → 适合拍视频、上热搜、拉投资。</p><p>这是资本市场的最优解，不是工业界的最优解。</p><p>现阶段绝大多数人形机器人，本质上是大号遥控玩具加行为艺术。动作僵硬、平衡差、算力功耗爆炸，任务能力极弱。真要落地干活，稳定性、可靠性、成本、维护性，没有一个能打。它们现在的核心价值是展示，不是使用。</p><h1 id="只有一种情况，人形是合理的"><a href="#只有一种情况，人形是合理的" class="headerlink" title="只有一种情况，人形是合理的"></a>只有一种情况，人形是合理的</h1><p>陪伴、情感、社交、心理安慰。</p><p>养老陪伴、儿童陪伴、情感交互、替代”人”出现在社交场景。这种需要长得像人、表情动作像人的场景，人形才有不可替代的价值。</p><p>除此之外，全是弯路。</p><h1 id="反驳的声音"><a href="#反驳的声音" class="headerlink" title="反驳的声音"></a>反驳的声音</h1><p>当然，也有人反驳我。</p><p>他们说：人类社会万亿级别的基础设施都是为人体尺寸、人体结构服务的。不做人形，就永远进不去人类真实生活场景。</p><p>工厂可以改，仓库可以改，但家庭绝对不可能改，城市更不可能改。改造环境的成本，比做人形机器人高100倍都不止。</p><p>这个观点有道理，但犯了”只看当下最优解，不看终局唯一解”的错误。</p><h1 id="终局思维"><a href="#终局思维" class="headerlink" title="终局思维"></a>终局思维</h1><p>如果谈论终局，未来的核心不是”通用硬件”，而是”通用智能 + 柔性制造”。</p><p>大模型提供通用智能，智能工厂按需生产最合适的专用机器人。需求 → 智能生成专用机器人 → 高效完成任务。</p><p>人类是进化的产物，不是工程最优解。骨骼强度有限、力矩差容易摔倒、双手结构复杂但精度负载都一般、能耗极高。从工程角度，为了”像人”而做人形，是在模仿一个低效系统。</p><p>飞行不如无人机，勘探不如机器狗，搬运不如机械臂，巡检不如轮式机器人。专用等于高效，通用人形等于全面但平庸。</p><h1 id="通用大脑-专用硬件"><a href="#通用大脑-专用硬件" class="headerlink" title="通用大脑 + 专用硬件"></a>通用大脑 + 专用硬件</h1><p>机器人产业的终局架构，唯有这一种最优解：</p><ul><li>底层：通用大模型作为大脑，负责理解任务、规划、决策</li><li>中层：柔性制造与智能调度，按需生产最合适的专用硬件</li><li>上层：专用机器人本体，干什么活用什么身体</li></ul><p>通用大脑解决智能，专用硬件解决效率，柔性制造解决多样性。</p><p>人形机器人只是上层里的一个小品类，负责情感陪伴。不是生产力革命，而是情感硬件革命。</p><h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>我不否定人形机器人的存在价值，但反对将其奉为行业唯一解、万能解。</p><p>真正的行业核心，从来不是扎堆造人形本体，而是底层的通用智能、中层的柔性制造与智能调度。</p><p>专用硬件解决效率，通用大脑定义智能，柔性制造承载多样性——这才是机器人产业的本质与未来。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>最近人形机器人赛道火热，但我总觉得哪里不对。</p><p>看着那些会走路、会跳舞、会鞠躬的人形机器人，我不禁思考：这真的是机器人的正确方向吗？</p><p><img src="/images/20260308/FutureMachines.png" alt="机器人军团"></p><span id="more"></span><h1 id="人形机器人是个弯路？"><a href="#人形机器人是个弯路？" class="headerlink" title="人形机器人是个弯路？"></a>人形机器人是个弯路？</h1><p>现在的创业者常说：我们的环境是为人类设计的，所以人形机器人有最好的适应能力。</p><p>这听起来合理，但仔细一想，是倒果为因。</p><p>人类世界确实是为人的身体结构设计的。但我们要的是功能，不是长得像人。楼梯、椅子、桌子是为人设计的，不代表机器必须有腿、有手、有头才能用。</p><p>能爬楼就用履带或轮腿，能操作就用专用机械手，能搬运就直接设计成搬运形态。为了”适配人类环境”强行做人形，是用最高成本，解决本来有更简单解法的问题。</p><h1 id="融资逻辑-gt-产品逻辑？"><a href="#融资逻辑-gt-产品逻辑？" class="headerlink" title="融资逻辑 &gt; 产品逻辑？"></a>融资逻辑 &gt; 产品逻辑？</h1><p>传统工业机器人、服务机器人、AGV、特种机器人——好用、稳定、能赚钱、能落地。但投资人听不懂、不性感、故事讲不大。</p><p>人形不一样：像人 → 有想象空间 → 能对标”人类劳动力” → 估值天花板拉满。能走路、能跳舞、能鞠躬 → 适合拍视频、上热搜、拉投资。</p><p>这是资本市场的最优解，不是工业界的最优解。</p><p>现阶段绝大多数人形机器人，本质上是大号遥控玩具加行为艺术。动作僵硬、平衡差、算力功耗爆炸，任务能力极弱。真要落地干活，稳定性、可靠性、成本、维护性，没有一个能打。它们现在的核心价值是展示，不是使用。</p><h1 id="只有一种情况，人形是合理的"><a href="#只有一种情况，人形是合理的" class="headerlink" title="只有一种情况，人形是合理的"></a>只有一种情况，人形是合理的</h1><p>陪伴、情感、社交、心理安慰。</p><p>养老陪伴、儿童陪伴、情感交互、替代”人”出现在社交场景。这种需要长得像人、表情动作像人的场景，人形才有不可替代的价值。</p><p>除此之外，全是弯路。</p><h1 id="反驳的声音"><a href="#反驳的声音" class="headerlink" title="反驳的声音"></a>反驳的声音</h1><p>当然，也有人反驳我。</p><p>他们说：人类社会万亿级别的基础设施都是为人体尺寸、人体结构服务的。不做人形，就永远进不去人类真实生活场景。</p><p>工厂可以改，仓库可以改，但家庭绝对不可能改，城市更不可能改。改造环境的成本，比做人形机器人高100倍都不止。</p><p>这个观点有道理，但犯了”只看当下最优解，不看终局唯一解”的错误。</p><h1 id="终局思维"><a href="#终局思维" class="headerlink" title="终局思维"></a>终局思维</h1><p>如果谈论终局，未来的核心不是”通用硬件”，而是”通用智能 + 柔性制造”。</p><p>大模型提供通用智能，智能工厂按需生产最合适的专用机器人。需求 → 智能生成专用机器人 → 高效完成任务。</p><p>人类是进化的产物，不是工程最优解。骨骼强度有限、力矩差容易摔倒、双手结构复杂但精度负载都一般、能耗极高。从工程角度，为了”像人”而做人形，是在模仿一个低效系统。</p><p>飞行不如无人机，勘探不如机器狗，搬运不如机械臂，巡检不如轮式机器人。专用等于高效，通用人形等于全面但平庸。</p><h1 id="通用大脑-专用硬件"><a href="#通用大脑-专用硬件" class="headerlink" title="通用大脑 + 专用硬件"></a>通用大脑 + 专用硬件</h1><p>机器人产业的终局架构，唯有这一种最优解：</p><ul><li>底层：通用大模型作为大脑，负责理解任务、规划、决策</li><li>中层：柔性制造与智能调度，按需生产最合适的专用硬件</li><li>上层：专用机器人本体，干什么活用什么身体</li></ul><p>通用大脑解决智能，专用硬件解决效率，柔性制造解决多样性。</p><p>人形机器人只是上层里的一个小品类，负责情感陪伴。不是生产力革命，而是情感硬件革命。</p><h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>我不否定人形机器人的存在价值，但反对将其奉为行业唯一解、万能解。</p><p>真正的行业核心，从来不是扎堆造人形本体，而是底层的通用智能、中层的柔性制造与智能调度。</p><p>专用硬件解决效率，通用大脑定义智能，柔性制造承载多样性——这才是机器人产业的本质与未来。</p><blockquote><p>本文与豆包、GLM-5和Claude Code共创，起源于跟豆包的一次辩论。</p></blockquote>]]></content>
     
     
     <summary type="html">&lt;p&gt;最近人形机器人赛道火热，但我总觉得哪里不对。&lt;/p&gt;
-&lt;p&gt;看着那些会走路、会跳舞、会鞠躬的人形机器人，我不禁思考：这真的是机器人的正确方向吗？&lt;/p&gt;</summary>
+&lt;p&gt;看着那些会走路、会跳舞、会鞠躬的人形机器人，我不禁思考：这真的是机器人的正确方向吗？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/20260308/FutureMachines.png&quot; alt=&quot;机器人军团&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -308,9 +309,9 @@
     <category term="Electrochemistry  电化学" scheme="https://www.mozheyang.top/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/"/>
     
     
-    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
-    
     <category term="Updating  持续更新中..." scheme="https://www.mozheyang.top/tags/Updating-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    
+    <category term="Chemistry  化学" scheme="https://www.mozheyang.top/tags/Chemistry-%E5%8C%96%E5%AD%A6/"/>
     
   </entry>
   
