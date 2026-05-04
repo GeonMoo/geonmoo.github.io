@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/favicon.ico" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.mozheyang.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"بحث...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.mozheyang.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="之前我们说到，如何将LAMMPS正常运行，并对LAMMPS的in文件和输入文件进行修改调试，查看结果。可以说，基本与科学无关，纯属dirty work。但科学也是在dirty work的基础上架构的。 这一次，我们准备触及分子动力学的中的物理内核。">
 <meta property="og:type" content="article">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2020/04/30/lammps3/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="之前我们说到，如何将LAMMPS正常运行，并对LAMMPS的in文件和输入文件进行修改调试，查看结果。可以说，基本与科学无关，纯属dirty work。但科学也是在dirty work的基础上架构的。 这一次，我们准备触及分子动力学的中的物理内核。">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://lammps.sandia.gov/movies/logo.gif">
 <meta property="og:image" content="https://www.mozheyang.top/images/LAMMPS/Interatomic-potential.gif">
 <meta property="article:published_time" content="2020-04-30T03:35:06.000Z">
@@ -42,7 +42,7 @@
 <link rel="canonical" href="https://www.mozheyang.top/2020/04/30/lammps3/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-Hans","comments":true,"permalink":"https://www.mozheyang.top/2020/04/30/lammps3/","path":"2020/04/30/lammps3/","title":"LAMMPS学习札记（三）——分子动力学的基本原理"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.mozheyang.top/2020/04/30/lammps3/","path":"2020/04/30/lammps3/","title":"LAMMPS学习札记（三）——分子动力学的基本原理"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>LAMMPS学习札记（三）——分子动力学的基本原理 | Mo's Notebook | 摸着羊的笔记本</title>
@@ -58,7 +58,7 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
 <script src="/js/third-party/search/local-search.js" defer></script>
@@ -78,7 +78,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"/js/mathjax.min.js"}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -96,7 +96,7 @@
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح" role="button">
+    <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -114,7 +114,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="بحث" role="button">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -123,9 +123,9 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>التصنيفات</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>الوسوم</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>معلومات</a></li><li class="menu-item menu-item-项目"><a href="/projects/" rel="section"><i class="fa fa-coffee fa-fw"></i>项目</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-项目"><a href="/projects/" rel="section"><i class="fa fa-coffee fa-fw"></i>项目</a></li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>بحث
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
       </li>
   </ul>
@@ -141,7 +141,7 @@
         </span>
         <div class="search-input-container">
           <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="بحث..." spellcheck="false"
+                placeholder="搜索..." spellcheck="false"
                 type="search" class="search-input">
         </div>
         <span class="popup-btn-close" role="button">
@@ -164,10 +164,10 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          المحتويات
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          站点概览
         </li>
       </ul>
 
@@ -190,18 +190,18 @@
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
           <span class="site-state-item-count">91</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">التصنيفات</span></a>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
         <span class="site-state-item-count">34</span>
-        <span class="site-state-item-name">الوسوم</span></a>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -225,7 +225,7 @@
     <div class="sidebar-inner sidebar-blogroll">
       <div class="links-of-blogroll animated">
         <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-          Links
+          链接
         </div>
         <ul class="links-of-blogroll-list">
             <li class="links-of-blogroll-item">
@@ -255,7 +255,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2020/04/30/lammps3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -283,33 +283,33 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">نُشر في</span>
+      <span class="post-meta-item-text">发表于</span>
 
-      <time title="أُنشأ: 2020-04-30 11:35:06" itemprop="dateCreated datePublished" datetime="2020-04-30T11:35:06+08:00">2020-04-30</time>
+      <time title="创建时间：2020-04-30 11:35:06" itemprop="dateCreated datePublished" datetime="2020-04-30T11:35:06+08:00">2020-04-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
-      <span class="post-meta-item-text">عُدل في</span>
-      <time title="عُدل: 2026-03-10 22:23:24" itemprop="dateModified" datetime="2026-03-10T22:23:24+08:00">2026-03-10</time>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-10 22:23:24" itemprop="dateModified" datetime="2026-03-10T22:23:24+08:00">2026-03-10</time>
     </span>
 
   
     <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="عدد الحروف في المقال">
+    <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
-      <span class="post-meta-item-text">عدد الحروف في المقال: </span>
+      <span class="post-meta-item-text">本文字数：</span>
       <span>2.4k</span>
     </span>
-    <span class="post-meta-item" title="زمن القراءة">
+    <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">زمن القراءة &asymp;</span>
-      <span>4 دقائق.</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -329,36 +329,28 @@
 </blockquote>
 <p>博主的理解是，分子动力学（Molecular dynamics）是以一个原子为最小单元，基于经典牛顿力学原理，对整个系统的原子/分子运动状态进行模拟的一套理论。由于整套理论的基础是牛顿力学，所以其<strong>适用范围</strong>也就不言自明了——相对论或者量子理论作用不可忽略的有关性质，利用分子动力学模拟是无法得到合理结论的。幸运的是，分子热运动的速度&lt; 1000 m/s，远小于光速<a href="#参考资料">[2]</a>；部分性质如力学性质中，电子转移对原子/分子的运动影响较小。除了近年来研究较多的电子转移，其实很多传统领域（如材料形变、蛋白质分子折叠等）使用分子动力学都不算超纲。</p>
 <h1 id="如何利用分子动力学？"><a href="#如何利用分子动力学？" class="headerlink" title="如何利用分子动力学？"></a>如何利用分子动力学？</h1><p>每个原子所受作用主要分为化学键作用和非键作用。</p>
-<script type="math/tex; mode=display">
-E_{total} = E_{bond} + E_{nonbond}</script><p>这些作用都利用势函数（能量函数）来进行描述。</p>
+\[E_{total} = E_{bond} + E_{nonbond}\]<p>这些作用都利用势函数（能量函数）来进行描述。</p>
 <h2 id="势函数（Potential）"><a href="#势函数（Potential）" class="headerlink" title="势函数（Potential）"></a>势函数（Potential）</h2><p>以下是大学物理中可以见到的原子间作用势的基本形状：</p>
 <p><img src="https://www.mozheyang.top/images/LAMMPS/Interatomic-potential.gif" width="60%"></p>
 <p  class="refs">Ref: https://www.princeton.edu/~maelabs/mae324/glos324/potential.htm</p>
 
 <p>出现这种曲线的原因是</p>
-<script type="math/tex; mode=display">
-原子间作用力(r) = -吸引力(r) + 排斥力(r)</script><blockquote>
+\[原子间作用力(r) = -吸引力(r) + 排斥力(r)\]<blockquote>
 <p>吸引力与排斥力方向相反，符号相反。</p>
 </blockquote>
 <p>无穷远处吸引力与排斥力均趋近于0；随着两原子靠近，原子间的吸引力开始气作用；突破平衡距离$r_0$后，排斥力的作用开始逐渐增大，阻止两原子继续靠近。</p>
-<script type="math/tex; mode=display">
-f(r) = -\frac{\text{d} u(r)}{\text{d} r}</script><p>此即</p>
-<script type="math/tex; mode=display">
-\int f(r) \text{d}r = \int \text{d} u(r) = u(r)</script><p>将原子在无穷远处的系统能量定义为0，系统能量增加全部由做功所提供。将原子距离从无穷远缩短为$r$的这段过程中，原子做功为</p>
-<script type="math/tex; mode=display">
-\Delta W = \int_\infty^r f(r) \text{d} r 
+\[f(r) = -\frac{\text{d} u(r)}{\text{d} r}\]<p>此即</p>
+\[\int f(r) \text{d}r = \int \text{d} u(r) = u(r)\]<p>将原子在无穷远处的系统能量定义为0，系统能量增加全部由做功所提供。将原子距离从无穷远缩短为$r$的这段过程中，原子做功为</p>
+\[\Delta W = \int_\infty^r f(r) \text{d} r 
 = u(r) |_r - u(r) |_\infty
-= u(r)</script><p>即等于两原子间内能。将原子间作用力两两加和便可达到由$N$个原子组成系统的内能。当不考虑物体外力场的作用时，由$N$个原子组成系统的总能量也就等于系统内能：</p>
-<script type="math/tex; mode=display">
-E(r) = U(r) = \frac{1}{2} \sum^N_{i=1} \sum^N_{i \neq j} u(r_{ij})</script><p>需要注意的是，为排除重复计算的原子间作用力，需要加上系数$\frac{1}{2}$。以上就是原子间作用力计算系统内能的基本原理。</p>
+= u(r)\]<p>即等于两原子间内能。将原子间作用力两两加和便可达到由$N$个原子组成系统的内能。当不考虑物体外力场的作用时，由$N$个原子组成系统的总能量也就等于系统内能：</p>
+\[E(r) = U(r) = \frac{1}{2} \sum^N_{i=1} \sum^N_{i \neq j} u(r_{ij})\]<p>需要注意的是，为排除重复计算的原子间作用力，需要加上系数$\frac{1}{2}$。以上就是原子间作用力计算系统内能的基本原理。</p>
 <h2 id="化学键作用-E-bond"><a href="#化学键作用-E-bond" class="headerlink" title="化学键作用$E_{bond}$"></a>化学键作用$E_{bond}$</h2><h3 id="谐振子势（Harmonic）"><a href="#谐振子势（Harmonic）" class="headerlink" title="谐振子势（Harmonic）"></a>谐振子势（Harmonic）</h3><center><p class="eqnBlock">
 
-$$
-\begin{split}
+\[\begin{split}
 E_{stretch} &= K_{stretch} (r-r_0)^2 \\
 E_{bend} &= K_{bend} (\theta-\theta_0)^2 \\
-\end{split}
-$$
+\end{split}\]
 
 </p></center>
 
@@ -366,28 +358,22 @@ $$
 <blockquote>
 <p><strong>谐振子（Harmonic oscillator）</strong></p>
 <p>In classical mechanics, a harmonic oscillator is a system that, when displaced <strong>from its equilibrium position</strong>, experiences a restoring force $\vec{F}$ proportional to the <strong>displacement</strong> $\vec{x}$:</p>
-<script type="math/tex; mode=display">
-\vec{F} = -k \vec{x}</script></blockquote>
+\[\vec{F} = -k \vec{x}\]</blockquote>
 <p>即遵循Hooke定律的系统，可称为谐振子。由力与能量的关系，不难得：</p>
-<script type="math/tex; mode=display">
-E = \frac{1}{2} k x^2</script><p>其中，$k$为弹簧系数，$x$为偏离平衡的位移。这也就是Harmonic势中的公式形式。</p>
+\[E = \frac{1}{2} k x^2\]<p>其中，$k$为弹簧系数，$x$为偏离平衡的位移。这也就是Harmonic势中的公式形式。</p>
 <h2 id="非键作用-E-non-bond"><a href="#非键作用-E-non-bond" class="headerlink" title="非键作用$E_{non-bond}$"></a>非键作用$E_{non-bond}$</h2><p>分子动力学模拟使用力场实现对每个原子所受作用的计算。力场就是通过一定的函数，在所有原子之间，计算两两原子之间的相互作用力。这其中主要包括范德华力（Van der Waals force）、静电作用力（Coulomb force）等。</p>
 <h3 id="静电作用力"><a href="#静电作用力" class="headerlink" title="静电作用力"></a>静电作用力</h3><p>静电作用力与高中课本中描述的没有差异。原子$i$和原子$j$间的静电作用力为</p>
-<script type="math/tex; mode=display">
-E^C_{ij} = \frac{C q_i q_j}{\epsilon r}</script><h3 id="范德华力"><a href="#范德华力" class="headerlink" title="范德华力"></a>范德华力</h3><h4 id="两体势（Pair-potential）"><a href="#两体势（Pair-potential）" class="headerlink" title="两体势（Pair potential）"></a>两体势（Pair potential）</h4><p>广泛应用的两体势是Lennard-Jones（L-J）势，在描述Ar, Kr, CH<sub>4</sub>, O<sub>2</sub>, H<sub>2</sub>, C<sub>2</sub>H<sub>4</sub>等小分子的范德华力方面具有明显优势<a href="#参考资料">[4]</a>。原子$i$和原子$j$间的范德华力为</p>
+\[E^C_{ij} = \frac{C q_i q_j}{\epsilon r}\]<h3 id="范德华力"><a href="#范德华力" class="headerlink" title="范德华力"></a>范德华力</h3><h4 id="两体势（Pair-potential）"><a href="#两体势（Pair-potential）" class="headerlink" title="两体势（Pair potential）"></a>两体势（Pair potential）</h4><p>广泛应用的两体势是Lennard-Jones（L-J）势，在描述Ar, Kr, CH<sub>4</sub>, O<sub>2</sub>, H<sub>2</sub>, C<sub>2</sub>H<sub>4</sub>等小分子的范德华力方面具有明显优势<a href="#参考资料">[4]</a>。原子$i$和原子$j$间的范德华力为</p>
 <center><p class="eqnBlock">
 
-$$
-E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}
-- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right]
-$$
+\[E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}
+- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right]\]
 
 </p></center>
 
 <p>为了节省计算资源，两体之间的势都有截断能。引入截断能（cut off）$r_C$后，原子$i$和原子$j$间的范德华力为</p>
-<script type="math/tex; mode=display">
-E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}
-- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right] , r<r_C</script><p>使用<code>lj/cut</code>势并设定参数：</p>
+\[E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}
+- \left( \frac{\sigma_{ij}}{r} \right)^{6} \right] , r<r_C\]<p>使用<code>lj/cut</code>势并设定参数：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pair_style lj/cut 2.5</span><br><span class="line">pair_coeff 1 1 1 1.1 2.8</span><br></pre></td></tr></table></figure>
 <p>其中<code>2.5</code>为截断能。<code>pair_coeff</code>共有5个参数，前两个参数指定原子类型，后三个参数指定势函数参数。</p>
 <p>若将静电作用力（也考虑截断能）也考虑进来，可选择<code>lj/cut/coul/cut</code>：</p>
@@ -396,10 +382,8 @@ E^{LJ}_{ij} = 4 \epsilon \left[ \left( \frac{\sigma_{ij}}{r} \right)^{12}
 <h4 id="多体势"><a href="#多体势" class="headerlink" title="多体势"></a>多体势</h4><p>Baskes和Daw基于密度泛函理论和准原子近似理论，导出了嵌入原子理论（embedded atom method, EAM）模型势<a href="#参考资料">[5]</a>。该势函数是目前描述金属及其合金原子间作用最有效的，几乎<strong>适用于任何金属元素及合金</strong>。唯一的问题是<strong>势函数的参数</strong>需要拟合确定。</p>
 <center><p class="eqnBlock">
 
-$$
-E_{EAM} = \sum_i \left\{ F_i(\rho_i) 
-+ \frac{1}{2} \sum_{i \neq j} \phi_{ij} (r_{ij}) \right\}
-$$
+\[E_{EAM} = \sum_i \left\{ F_i(\rho_i) 
++ \frac{1}{2} \sum_{i \neq j} \phi_{ij} (r_{ij}) \right\}\]
 </p></center>
 
 <p>在LAMMPS中，对应EAM势的势函数为<code>eam</code>势：<br>使用<code>eam</code>势：</p>
@@ -436,14 +420,14 @@ $$
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>مؤلف المقال:  </strong>Geon Mo
+      <strong>本文作者： </strong>Geon Mo
   </li>
   <li class="post-copyright-link">
-      <strong>رابط المقال: </strong>
+      <strong>本文链接：</strong>
       <a href="https://www.mozheyang.top/2020/04/30/lammps3/" title="LAMMPS学习札记（三）——分子动力学的基本原理">https://www.mozheyang.top/2020/04/30/lammps3/</a>
   </li>
   <li class="post-copyright-license">
-      <strong>حقوق الملكية:  </strong>حميع المقالات في هذه المدوّنة منشورة تحت رخصة <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> إلا عند التنويه بخلافه.
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -476,7 +460,20 @@ $$
 
 
 
-    <div class="comments gitalk-container"></div>
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-valine">Valine</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments valine-container"></div>
+            </div>
+        </div>
+      </div>
 </div>
   </main>
 
@@ -499,13 +496,13 @@ $$
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="مُجمل عدد الحروف">192k</span>
+    <span title="站点总字数">192k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="مُجمل زمن القراءة">5:49</span>
+    <span title="站点阅读时长">5:49</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -513,7 +510,7 @@ $$
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="إجمالي الزوار">
+      <span class="site-uv" title="总访客量">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -521,12 +518,12 @@ $$
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="إجمالي المشاهدات">
+      <span class="site-pv" title="总访问量">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
@@ -539,7 +536,7 @@ $$
     <span class="toggle-line"></span>
   </div>
   <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
   </div>
@@ -553,6 +550,8 @@ $$
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"GeonMoo","repo":"geonmoo.github.io","client_id":null,"client_secret":null,"admin_user":"GeonMoo","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"7ee8ea587f0fe02bf4cb5fdaf9364c69"}</script>
 <script src="/js/third-party/comments/gitalk.js" defer></script>
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appid":"XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va","appkey":"WTlVtXkhnVRf7Gkjryijsy2Q","notify":false,"verify":false,"placeholder":"请开始你的表演","avatar":"mp","avatar_cdn":"https://cravatar.cn/avatar/","guest_info":"nick,mail,link","pageSize":5,"language":"zh-cn","visitor":true,"comment_count":false,"recordIP":false,"serverURLs":"https://xxdglday.lc-cn-n1-shared.com","path":"2020/04/30/lammps3/","title":"LAMMPS学习札记（三）——分子动力学的基本原理","url":"https://www.mozheyang.top/2020/04/30/lammps3/"}</script>
+<script src="/js/valine.js" defer></script>
 
 <script src="/js/tracker.js"></script>
 

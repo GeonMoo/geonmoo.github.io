@@ -186,7 +186,7 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1em;
   line-height: 2;
   min-height: 100%;
@@ -199,7 +199,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 30px 0 15px;
@@ -541,7 +541,7 @@ pre .caption a:hover {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
+  font-family: "Cascadia Code", Consolas, Menlo, Monaco, "PingFang SC", "Microsoft YaHei", monospace, consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
 }
 code {
   border-radius: 3px;
@@ -1107,7 +1107,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1277,7 +1277,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #d24441;
+  background: #ffb9ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -1908,7 +1908,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2097,7 +2097,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
@@ -2718,19 +2718,92 @@ header.header {
     right: 320px;
   }
 }
+.rtl.post-title,
+.rtl.post-body,
+.rtl.post-body p,
+.rtl.post-body a,
+.rtl.post-body h1,
+.rtl.post-body h2,
+.rtl.post-body h3,
+.rtl.post-body h4,
+.rtl.post-body h5,
+.rtl.post-body h6,
+.rtl.post-body li,
+.rtl.post-body ul,
+.rtl.post-body ol {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
 .refs {
   color: #808080;
   font-style: italic;
   font-size: 0.8em;
 }
+.journal-chart {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.2em auto 0.8em;
+}
+.journal-chart .js-plotly-plot,
+.journal-chart .plot-container,
+.journal-chart .svg-container {
+  width: 100% !important;
+}
+.journal-chart .svg-container {
+  position: relative !important;
+}
+.journal-chart svg.main-svg {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+.journal-chart svg text,
+.journal-chart svg tspan {
+  display: inline !important;
+  line-height: normal !important;
+}
+.post-body {
+  font-family: "Latin Modern Roman", "Computer Modern Serif", "Times New Roman", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  font-size: 1.05em;
+  line-height: 1.9;
+}
+.post-body p,
+.post-body li {
+  letter-spacing: 0;
+}
 .eqnBlock {
-  padding: 2px 5px 2px 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #000;
-  display: inline-block;
+  border: 1px solid #000;
+  display: block;
   text-align: center;
-  margin: auto;
+  margin: 1.1em auto;
+  padding: 0.45em 0.8em;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.post-body center {
+  display: block;
+  margin: 1.1em 0;
+  text-align: center;
+}
+.post-body mjx-container {
+  color: var(--text-color);
+  font-size: 1.02em;
+  line-height: 1.2;
+}
+.post-body mjx-container[jax="CHTML"][display="true"] {
+  margin: 1.15em auto 1.25em;
+  padding: 0.05em 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.post-body mjx-container[jax="CHTML"]:not([display="true"]) {
+  margin: 0 0.08em;
+}
+.post-body mjx-container[jax="CHTML"] mjx-mtext {
+  font-family: "Latin Modern Roman", "Times New Roman", "Noto Serif CJK SC", "Songti SC", SimSun, serif;
+}
+.post-body mjx-container[jax="CHTML"] mjx-math {
+  letter-spacing: 0;
 }
 .blackBlock {
   color: #fff;
@@ -2860,4 +2933,113 @@ header.header {
 .news-sidebar a:hover {
   color: #007bff;
   font-weight: bold;
+}
+.mline-box {
+  margin-top: 24px;
+}
+.mline-form {
+  margin-bottom: 24px;
+}
+.mline-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.mline-form input,
+.mline-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 12px;
+  background: var(--content-bg-color);
+  color: var(--text-color);
+  font: inherit;
+}
+.mline-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.mline-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+.mline-actions button {
+  border: 0;
+  border-radius: 4px;
+  padding: 9px 18px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+.mline-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.mline-status,
+.mline-loading,
+.mline-error,
+.mline-list-title {
+  color: #777;
+  font-size: 14px;
+}
+.mline-error {
+  color: #c0392b;
+}
+.mline-list {
+  margin-top: 14px;
+}
+.mline-comment {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+}
+.mline-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  background: #eee;
+}
+.mline-comment-body {
+  flex: 1;
+  min-width: 0;
+}
+.mline-comment-meta {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.mline-comment-author {
+  font-weight: 600;
+}
+.mline-comment-meta time {
+  color: #888;
+  font-size: 13px;
+}
+.mline-comment-content {
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.valine-container {
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .mline-fields {
+    grid-template-columns: 1fr;
+  }
+  .mline-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }

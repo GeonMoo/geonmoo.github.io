@@ -4,13 +4,13 @@
   font-size: 0.8em;
 }
 .eqnBlock {
-  padding: 2px 5px 2px 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #000;
-  display: inline-block;
+  border: 1px solid #000;
+  display: block;
   text-align: center;
-  margin: auto;
+  margin: 1.1em auto;
+  padding: 0.45em 0.8em;
+  max-width: 100%;
+  overflow-x: auto;
 }
 .blackBlock {
   color: #fff;

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/favicon.ico" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.mozheyang.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"بحث...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.mozheyang.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="本文还在继续写作过程中… Gouy-Chapman模型的详细推导思路见PDF文件：GCTheory :)电毛细方程的详细推导思路见PDF文件：ElectrocapillaryEquation :)而以下博客正文只进行重要观点的归纳。">
 <meta property="og:type" content="article">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/10/22/EClecturenote3/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="本文还在继续写作过程中… Gouy-Chapman模型的详细推导思路见PDF文件：GCTheory :)电毛细方程的详细推导思路见PDF文件：ElectrocapillaryEquation :)而以下博客正文只进行重要观点的归纳。">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-10-22T03:02:58.000Z">
 <meta property="article:modified_time" content="2026-03-10T14:23:24.156Z">
 <meta property="article:author" content="Geon Mo">
@@ -39,7 +39,7 @@
 <link rel="canonical" href="https://www.mozheyang.top/2017/10/22/EClecturenote3/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-Hans","comments":true,"permalink":"https://www.mozheyang.top/2017/10/22/EClecturenote3/","path":"2017/10/22/EClecturenote3/","title":"课后回顾 | 双电层结构"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.mozheyang.top/2017/10/22/EClecturenote3/","path":"2017/10/22/EClecturenote3/","title":"课后回顾 | 双电层结构"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>课后回顾 | 双电层结构 | Mo's Notebook | 摸着羊的笔记本</title>
@@ -55,7 +55,7 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
 <script src="/js/third-party/search/local-search.js" defer></script>
@@ -75,7 +75,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"/js/mathjax.min.js"}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -93,7 +93,7 @@
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح" role="button">
+    <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -111,7 +111,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="بحث" role="button">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -120,9 +120,9 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>التصنيفات</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>الوسوم</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>معلومات</a></li><li class="menu-item menu-item-项目"><a href="/projects/" rel="section"><i class="fa fa-coffee fa-fw"></i>项目</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-项目"><a href="/projects/" rel="section"><i class="fa fa-coffee fa-fw"></i>项目</a></li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>بحث
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
       </li>
   </ul>
@@ -138,7 +138,7 @@
         </span>
         <div class="search-input-container">
           <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="بحث..." spellcheck="false"
+                placeholder="搜索..." spellcheck="false"
                 type="search" class="search-input">
         </div>
         <span class="popup-btn-close" role="button">
@@ -161,10 +161,10 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          المحتويات
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          站点概览
         </li>
       </ul>
 
@@ -187,18 +187,18 @@
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
           <span class="site-state-item-count">91</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">التصنيفات</span></a>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
         <span class="site-state-item-count">34</span>
-        <span class="site-state-item-name">الوسوم</span></a>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -222,7 +222,7 @@
     <div class="sidebar-inner sidebar-blogroll">
       <div class="links-of-blogroll animated">
         <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-          Links
+          链接
         </div>
         <ul class="links-of-blogroll-list">
             <li class="links-of-blogroll-item">
@@ -252,7 +252,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2017/10/22/EClecturenote3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -280,22 +280,22 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">نُشر في</span>
+      <span class="post-meta-item-text">发表于</span>
 
-      <time title="أُنشأ: 2017-10-22 11:02:58" itemprop="dateCreated datePublished" datetime="2017-10-22T11:02:58+08:00">2017-10-22</time>
+      <time title="创建时间：2017-10-22 11:02:58" itemprop="dateCreated datePublished" datetime="2017-10-22T11:02:58+08:00">2017-10-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
-      <span class="post-meta-item-text">عُدل في</span>
-      <time title="عُدل: 2026-03-10 22:23:24" itemprop="dateModified" datetime="2026-03-10T22:23:24+08:00">2026-03-10</time>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-10 22:23:24" itemprop="dateModified" datetime="2026-03-10T22:23:24+08:00">2026-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">في</span>
+      <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">Electrochemistry  电化学</span></a>
         </span>
@@ -303,19 +303,19 @@
 
   
     <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="عدد الحروف في المقال">
+    <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
-      <span class="post-meta-item-text">عدد الحروف في المقال: </span>
+      <span class="post-meta-item-text">本文字数：</span>
       <span>969</span>
     </span>
-    <span class="post-meta-item" title="زمن القراءة">
+    <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">زمن القراءة &asymp;</span>
-      <span>2 دقائق.</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -331,10 +331,8 @@
 <p>欢迎提出任何宝贵的改错改进意见，谢谢！<br>笔者联系方式：mozheyang@outlook.com</p>
 <h1 id="Gouy-Chapman模型"><a href="#Gouy-Chapman模型" class="headerlink" title="Gouy-Chapman模型"></a>Gouy-Chapman模型</h1><p>在理想极化电极条件下，电极与溶液没有电荷交换，并且只有库仑力导致的离子吸附。</p>
 <p>通过对该模型进行近似求解可以得到其电容为</p>
-<script type="math/tex; mode=display">
-C=\epsilon_{0}\epsilon_{r}\kappa</script><p>对该模型进行精确解析求解，其电容为</p>
-<script type="math/tex; mode=display">
-C=\epsilon_{0}\epsilon_{r}\kappa cosh \frac{ze\phi(x)}{k_{B}T}</script><p>其中， </p>
+\[C=\epsilon_{0}\epsilon_{r}\kappa\]<p>对该模型进行精确解析求解，其电容为</p>
+\[C=\epsilon_{0}\epsilon_{r}\kappa cosh \frac{ze\phi(x)}{k_{B}T}\]<p>其中， </p>
 <ul>
 <li>$\epsilon_{0}$为真空介电常数；</li>
 <li>$\epsilon_{r}$ 为相对介电常数；</li>
@@ -345,10 +343,9 @@ C=\epsilon_{0}\epsilon_{r}\kappa cosh \frac{ze\phi(x)}{k_{B}T}</script><p>其中
 <p>电极界面剩余电荷量越大，同性电荷的相互排斥越强，从而界面张力就越小。电极电势改变了电<br>极界面剩余电荷量，从而便会影响到界面张力。</p>
 <p>从以上分析可知，当界面剩余电荷为零时，界面张力最大。</p>
 <p>电毛细方程（Electrocapillary Equation）将电化学系统中，化学势与静电二者分别对表面张力的影响分开。其方程形式如下：</p>
-<script type="math/tex; mode=display">
-d \gamma
+\[d \gamma
 = - \sum_{i} \Gamma_{i} d\bar{\mu}_{i}^{s}
-- \sigma d \phi^{m}</script><p>其中，$\sigma$为界面电荷密度，$\Gamma_{i}$为物种i的表面超量。</p>
+- \sigma d \phi^{m}\]<p>其中，$\sigma$为界面电荷密度，$\Gamma_{i}$为物种i的表面超量。</p>
 <h1 id="零电荷电势（PZC-Potential-of-Zero-Charge）"><a href="#零电荷电势（PZC-Potential-of-Zero-Charge）" class="headerlink" title="零电荷电势（PZC, Potential of Zero Charge）"></a>零电荷电势（PZC, Potential of Zero Charge）</h1><p>零电荷电势，即使得电极界面剩余电荷量为零时所对应的电势。在该点双电层电容取得极小值，而界面张力取得极大值。从而我们可以通过以下两种作图法找到零电荷电势。</p>
 <ul>
 <li>电容-电压曲线的<strong>极小值</strong>点；</li>
@@ -367,14 +364,14 @@ d \gamma
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>مؤلف المقال:  </strong>Geon Mo
+      <strong>本文作者： </strong>Geon Mo
   </li>
   <li class="post-copyright-link">
-      <strong>رابط المقال: </strong>
+      <strong>本文链接：</strong>
       <a href="https://www.mozheyang.top/2017/10/22/EClecturenote3/" title="课后回顾 | 双电层结构">https://www.mozheyang.top/2017/10/22/EClecturenote3/</a>
   </li>
   <li class="post-copyright-license">
-      <strong>حقوق الملكية:  </strong>حميع المقالات في هذه المدوّنة منشورة تحت رخصة <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> إلا عند التنويه بخلافه.
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -407,7 +404,20 @@ d \gamma
 
 
 
-    <div class="comments gitalk-container"></div>
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-valine">Valine</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments valine-container"></div>
+            </div>
+        </div>
+      </div>
 </div>
   </main>
 
@@ -430,13 +440,13 @@ d \gamma
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="مُجمل عدد الحروف">192k</span>
+    <span title="站点总字数">192k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="مُجمل زمن القراءة">5:49</span>
+    <span title="站点阅读时长">5:49</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -444,7 +454,7 @@ d \gamma
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="إجمالي الزوار">
+      <span class="site-uv" title="总访客量">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -452,12 +462,12 @@ d \gamma
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="إجمالي المشاهدات">
+      <span class="site-pv" title="总访问量">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
@@ -470,7 +480,7 @@ d \gamma
     <span class="toggle-line"></span>
   </div>
   <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
   </div>
@@ -484,6 +494,8 @@ d \gamma
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"GeonMoo","repo":"geonmoo.github.io","client_id":null,"client_secret":null,"admin_user":"GeonMoo","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1b821122643ea8be5d26db05479cd7ab"}</script>
 <script src="/js/third-party/comments/gitalk.js" defer></script>
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appid":"XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va","appkey":"WTlVtXkhnVRf7Gkjryijsy2Q","notify":false,"verify":false,"placeholder":"请开始你的表演","avatar":"mp","avatar_cdn":"https://cravatar.cn/avatar/","guest_info":"nick,mail,link","pageSize":5,"language":"zh-cn","visitor":true,"comment_count":false,"recordIP":false,"serverURLs":"https://xxdglday.lc-cn-n1-shared.com","path":"2017/10/22/EClecturenote3/","title":"课后回顾 | 双电层结构","url":"https://www.mozheyang.top/2017/10/22/EClecturenote3/"}</script>
+<script src="/js/valine.js" defer></script>
 
 <script src="/js/tracker.js"></script>
 

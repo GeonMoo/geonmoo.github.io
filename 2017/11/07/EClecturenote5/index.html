@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/favicon.ico" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.mozheyang.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"بحث...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.mozheyang.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="本文还在持续写作中… 这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者对其中的两条思路进行了归纳。第一条推导思路已经完成，详情请见PDF文件。第二条推导思路正在完善中，敬请期待。本文的主要参考材料为何师兄的LectureNote[1]。 本章节其实只讨论了电化学过程的传质过程，物理假设很多，推导复杂，笔者会继续完善思路细节。">
 <meta property="og:type" content="article">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="https://www.mozheyang.top/2017/11/07/EClecturenote5/index.html">
 <meta property="og:site_name" content="Mo&#39;s Notebook | 摸着羊的笔记本">
 <meta property="og:description" content="本文还在持续写作中… 这部分内容已经在何师兄的LectureNote中进行了详细叙述，笔者对其中的两条思路进行了归纳。第一条推导思路已经完成，详情请见PDF文件。第二条推导思路正在完善中，敬请期待。本文的主要参考材料为何师兄的LectureNote[1]。 本章节其实只讨论了电化学过程的传质过程，物理假设很多，推导复杂，笔者会继续完善思路细节。">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-11-07T03:05:14.000Z">
 <meta property="article:modified_time" content="2026-03-10T14:23:24.157Z">
 <meta property="article:author" content="Geon Mo">
@@ -39,7 +39,7 @@
 <link rel="canonical" href="https://www.mozheyang.top/2017/11/07/EClecturenote5/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-Hans","comments":true,"permalink":"https://www.mozheyang.top/2017/11/07/EClecturenote5/","path":"2017/11/07/EClecturenote5/","title":"课后回顾 | 电化学动力学（介观尺度）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.mozheyang.top/2017/11/07/EClecturenote5/","path":"2017/11/07/EClecturenote5/","title":"课后回顾 | 电化学动力学（介观尺度）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>课后回顾 | 电化学动力学（介观尺度） | Mo's Notebook | 摸着羊的笔记本</title>
@@ -55,7 +55,7 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
 <script src="/js/third-party/search/local-search.js" defer></script>
@@ -75,7 +75,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"/js/mathjax.min.js"}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -93,7 +93,7 @@
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح" role="button">
+    <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -111,7 +111,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="بحث" role="button">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -120,9 +120,9 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>التصنيفات</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>الوسوم</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>معلومات</a></li><li class="menu-item menu-item-项目"><a href="/projects/" rel="section"><i class="fa fa-coffee fa-fw"></i>项目</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-项目"><a href="/projects/" rel="section"><i class="fa fa-coffee fa-fw"></i>项目</a></li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>بحث
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
       </li>
   </ul>
@@ -138,7 +138,7 @@
         </span>
         <div class="search-input-container">
           <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="بحث..." spellcheck="false"
+                placeholder="搜索..." spellcheck="false"
                 type="search" class="search-input">
         </div>
         <span class="popup-btn-close" role="button">
@@ -161,10 +161,10 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          المحتويات
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          站点概览
         </li>
       </ul>
 
@@ -187,18 +187,18 @@
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
           <span class="site-state-item-count">91</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">التصنيفات</span></a>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
         <span class="site-state-item-count">34</span>
-        <span class="site-state-item-name">الوسوم</span></a>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -222,7 +222,7 @@
     <div class="sidebar-inner sidebar-blogroll">
       <div class="links-of-blogroll animated">
         <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-          Links
+          链接
         </div>
         <ul class="links-of-blogroll-list">
             <li class="links-of-blogroll-item">
@@ -252,7 +252,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.mozheyang.top/2017/11/07/EClecturenote5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -280,22 +280,22 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">نُشر في</span>
+      <span class="post-meta-item-text">发表于</span>
 
-      <time title="أُنشأ: 2017-11-07 11:05:14" itemprop="dateCreated datePublished" datetime="2017-11-07T11:05:14+08:00">2017-11-07</time>
+      <time title="创建时间：2017-11-07 11:05:14" itemprop="dateCreated datePublished" datetime="2017-11-07T11:05:14+08:00">2017-11-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
-      <span class="post-meta-item-text">عُدل في</span>
-      <time title="عُدل: 2026-03-10 22:23:24" itemprop="dateModified" datetime="2026-03-10T22:23:24+08:00">2026-03-10</time>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-10 22:23:24" itemprop="dateModified" datetime="2026-03-10T22:23:24+08:00">2026-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">في</span>
+      <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Electrochemistry-%E7%94%B5%E5%8C%96%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">Electrochemistry  电化学</span></a>
         </span>
@@ -303,19 +303,19 @@
 
   
     <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="عدد الحروف في المقال">
+    <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
-      <span class="post-meta-item-text">عدد الحروف في المقال: </span>
+      <span class="post-meta-item-text">本文字数：</span>
       <span>3.9k</span>
     </span>
-    <span class="post-meta-item" title="زمن القراءة">
+    <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">زمن القراءة &asymp;</span>
-      <span>7 دقائق.</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -333,103 +333,68 @@
 <h1 id="随机过程"><a href="#随机过程" class="headerlink" title="随机过程"></a>随机过程</h1><p>本部分内容通过Markov链模型推导出Chapman-Kolmogorov方程，为后来的得到Fokker-Planck方程作理论铺垫。</p>
 <h2 id="一维随机行走——Drunk-man模型"><a href="#一维随机行走——Drunk-man模型" class="headerlink" title="一维随机行走——Drunk-man模型"></a>一维随机行走——Drunk-man模型</h2><p>若Drunk-man在$x=0$位置处出发，记在直线方向上的每一步“行走”距离为$a_{1},a_{2}, \cdots , a_{n}$ ，则$n$步之后Drunk-man的位置在哪？这就是Drunk-man模型的所需要解决的问题. </p>
 <p>最终位置期望</p>
-<script type="math/tex; mode=display">
-E(x)=<x>=0</script><p>最终位置方差</p>
-<script type="math/tex; mode=display">
-var(x)=<x^{2}>=n</script><p>概率分布函数$P(N,x)$. 首先写出二项分布表达式如下</p>
-<script type="math/tex; mode=display">
-P(N,x)=\frac{N!}{(\frac{N+x}{2})!(\frac{N-x}{2})!}
-p^{\frac{N+x}{2}} q^{\frac{N-x}{2}}</script><p>在$N \rightarrow \infty$时，由中心极限定理可将二项分布转变成正态分布</p>
-<script type="math/tex; mode=display">
-P(N,x)=\sqrt{\frac{1}{2Npq}} \exp\{ -\frac{[x-(p-q)N]^{2}}{8pqN} \}</script><p>概率分布的动力学性质. 在一维运动中，向正负两个方向移动概率相等，均为$\frac{1}{2}$，所以可以将动力学方程写为</p>
-<script type="math/tex; mode=display">
-\frac{\partial P(x,t)}{\partial t}
+\[E(x)=<x>=0\]<p>最终位置方差</p>
+\[var(x)=<x^{2}>=n\]<p>概率分布函数$P(N,x)$. 首先写出二项分布表达式如下</p>
+\[P(N,x)=\frac{N!}{(\frac{N+x}{2})!(\frac{N-x}{2})!}
+p^{\frac{N+x}{2}} q^{\frac{N-x}{2}}\]<p>在$N \rightarrow \infty$时，由中心极限定理可将二项分布转变成正态分布</p>
+\[P(N,x)=\sqrt{\frac{1}{2Npq}} \exp\{ -\frac{[x-(p-q)N]^{2}}{8pqN} \}\]<p>概率分布的动力学性质. 在一维运动中，向正负两个方向移动概率相等，均为$\frac{1}{2}$，所以可以将动力学方程写为</p>
+\[\frac{\partial P(x,t)}{\partial t}
 = \frac{1}{2}[P(x+\Delta x,t)-P(x,t)]+\frac{1}{2}[P(x,t)-P(x-\Delta x,t)]
-= \frac{1}{2}P(x+\Delta x,t)-P(x,t)+\frac{1}{2}P(x-\Delta x,t)</script><p>从而可以得到Fick第二定律</p>
-<script type="math/tex; mode=display">
-\frac{\partial P(x,t)}{\partial t}
-= D\frac{\partial^{2} P(x,t)}{\partial t^{2}}</script><p>通过Fourier变换可以求解得到</p>
-<script type="math/tex; mode=display">
-P(x,t)= \frac{1}{2 \pi Dt} \exp(-\frac{x^{2}}{4Dt})</script><h2 id="三维随机行走——Brownian运动"><a href="#三维随机行走——Brownian运动" class="headerlink" title="三维随机行走——Brownian运动"></a>三维随机行走——Brownian运动</h2><p>溶液中粒子的运动可能受到三种类型的力的影响：</p>
+= \frac{1}{2}P(x+\Delta x,t)-P(x,t)+\frac{1}{2}P(x-\Delta x,t)\]<p>从而可以得到Fick第二定律</p>
+\[\frac{\partial P(x,t)}{\partial t}
+= D\frac{\partial^{2} P(x,t)}{\partial t^{2}}\]<p>通过Fourier变换可以求解得到</p>
+\[P(x,t)= \frac{1}{2 \pi Dt} \exp(-\frac{x^{2}}{4Dt})\]<h2 id="三维随机行走——Brownian运动"><a href="#三维随机行走——Brownian运动" class="headerlink" title="三维随机行走——Brownian运动"></a>三维随机行走——Brownian运动</h2><p>溶液中粒子的运动可能受到三种类型的力的影响：</p>
 <ul>
 <li>粘滞阻力$m \gamma v$</li>
 <li>随机力$\eta(t)$</li>
 <li>外力$F(x)$</li>
 </ul>
 <p>在忽略外力的情况下可以通过牛顿第二定律写出Langevin方程</p>
-<script type="math/tex; mode=display">
-m\dot{v}=-m \gamma v+\eta(t)</script><p>最终位置期望与一维情况相同，不过已经不是我们所需要关注的了. </p>
-<script type="math/tex; mode=display">
-E(x)=<x>=0</script><p>假设溶液为<strong>均质溶液</strong>，则随机力$\eta (t)$不存在，可求解Langevin方程得到速度函数的表达式</p>
-<script type="math/tex; mode=display">
-v(t)=v_{0}e^{-\gamma t}</script><p>式中$v_{0}$为初始时刻$t=0$时的速度。</p>
+\[m\dot{v}=-m \gamma v+\eta(t)\]<p>最终位置期望与一维情况相同，不过已经不是我们所需要关注的了. </p>
+\[E(x)=<x>=0\]<p>假设溶液为<strong>均质溶液</strong>，则随机力$\eta (t)$不存在，可求解Langevin方程得到速度函数的表达式</p>
+\[v(t)=v_{0}e^{-\gamma t}\]<p>式中$v_{0}$为初始时刻$t=0$时的速度。</p>
 <p>若溶液并未均质溶液，我们可以给速度乘一个时间相关的变量$C(t)$，此时其物理意义尚未明确。</p>
-<script type="math/tex; mode=display">
-v(t)=v_{0}e^{-\gamma t} C(t)</script><p>初始时刻速度仍为$v_{0}$，则有$C(0)=1$. 带回Langevin方程可以解得</p>
-<script type="math/tex; mode=display">
-C(t)=1+\frac{1}{mv_{0}} \int_{0}^{t}d \tau \eta (t) e^{\gamma \tau}</script><p>那么<strong>非均质溶液</strong>的速度函数可表示为</p>
-<script type="math/tex; mode=display">
-v(t)=v_{0}e^{-\gamma t} + \frac{1}{m} \int_{0}^{t}d \tau \eta (t)</script><p>位移函数可表示为</p>
-<script type="math/tex; mode=display">
-r(t)=r(0)+\int_{0}^{t} v(\tau) d\tau</script><p>利用Temporal Correlation Function（协方差函数），可以求出</p>
-<script type="math/tex; mode=display">
-<r^{2}(t)>=\frac{\lambda}{\gamma^{2} m^{2}} t</script><h2 id="Fluctuation-Dissipation-Theory"><a href="#Fluctuation-Dissipation-Theory" class="headerlink" title="Fluctuation Dissipation Theory"></a>Fluctuation Dissipation Theory</h2><p>首先，回忆一下之前已经讨论过的<strong>非均质溶液</strong>的速度函数</p>
-<script type="math/tex; mode=display">
-v(t)=v_{0}e^{-\gamma t} + \frac{1}{m} \int_{0}^{t}d \tau \eta (t)</script><blockquote>
+\[v(t)=v_{0}e^{-\gamma t} C(t)\]<p>初始时刻速度仍为$v_{0}$，则有$C(0)=1$. 带回Langevin方程可以解得</p>
+\[C(t)=1+\frac{1}{mv_{0}} \int_{0}^{t}d \tau \eta (t) e^{\gamma \tau}\]<p>那么<strong>非均质溶液</strong>的速度函数可表示为</p>
+\[v(t)=v_{0}e^{-\gamma t} + \frac{1}{m} \int_{0}^{t}d \tau \eta (t)\]<p>位移函数可表示为</p>
+\[r(t)=r(0)+\int_{0}^{t} v(\tau) d\tau\]<p>利用Temporal Correlation Function（协方差函数），可以求出</p>
+\[<r^{2}(t)>=\frac{\lambda}{\gamma^{2} m^{2}} t\]<h2 id="Fluctuation-Dissipation-Theory"><a href="#Fluctuation-Dissipation-Theory" class="headerlink" title="Fluctuation Dissipation Theory"></a>Fluctuation Dissipation Theory</h2><p>首先，回忆一下之前已经讨论过的<strong>非均质溶液</strong>的速度函数</p>
+\[v(t)=v_{0}e^{-\gamma t} + \frac{1}{m} \int_{0}^{t}d \tau \eta (t)\]<blockquote>
 <p>接下来首先解释两个符号概念<br>符号$&lt; &gt;_{v_{0}}$的意思为<strong>初始速度为$v_{0}$时的期望值</strong>；<br>符号$&lt; &gt;_{all}$的意思为<strong>初始速度$v$符合Maxwell速率分布时的期望值</strong>，相当于要将所有可能的初识速度全都考虑进来，从而</p>
-<script type="math/tex; mode=display">
-<x>_{all}=\int_{-\infty}^{\infty} dv <x>_{v} f(v)</script><p>其中$f(v)$为Maxwell速率分布函数. </p>
+\[<x>_{all}=\int_{-\infty}^{\infty} dv <x>_{v} f(v)\]<p>其中$f(v)$为Maxwell速率分布函数. </p>
 </blockquote>
 <p>通过Temporal Correlation Function（协方差函数），可以依次求出</p>
-<script type="math/tex; mode=display">
-<v(t)>_{v_{0}}=v_{0}e^{-\gamma t}</script><script type="math/tex; mode=display">
-<v^{2}(t)>_{v_{0}}=\frac{\lambda}{2m^{2} \gamma}
-+ e^{-2 \gamma t} (v_{0}^{2} - \frac{\lambda}{2m^{2} \gamma} )</script><script type="math/tex; mode=display">
-<v^{2}(t)>_{all}=\frac{\lambda}{2m^{2} \gamma}
-+ e^{-2 \gamma t} (\frac{k_{B}T}{m} - \frac{\lambda}{2m^{2} \gamma} )</script><p>因为所有时刻的<strong>微观状态</strong>应该相同，所以</p>
-<script type="math/tex; mode=display">
-< v^{2}(t) >_{all}</script><p>应该与时间无关，其时间项系数应该为0，即</p>
-<script type="math/tex; mode=display">
-\frac{k_{B}T}{m} - \frac{\lambda}{2m^{2} \gamma} = 0</script><p>从而有<strong>Fluctuation Dissipation Theory</strong></p>
-<script type="math/tex; mode=display">
-\lambda = 6mk_{B}T \gamma</script><h2 id="Einstein关系"><a href="#Einstein关系" class="headerlink" title="Einstein关系"></a>Einstein关系</h2><p>除了通过随机过程分析理论，我们还可以通过求解Fick第二定律非稳态扩散方程得到<r^{2}(t)>，这样我们便可以将扩散系数的物理意义用有明确物理意义的变量阐明. </p>
+\[<v(t)>_{v_{0}}=v_{0}e^{-\gamma t}\]\[<v^{2}(t)>_{v_{0}}=\frac{\lambda}{2m^{2} \gamma}
++ e^{-2 \gamma t} (v_{0}^{2} - \frac{\lambda}{2m^{2} \gamma} )\]\[<v^{2}(t)>_{all}=\frac{\lambda}{2m^{2} \gamma}
++ e^{-2 \gamma t} (\frac{k_{B}T}{m} - \frac{\lambda}{2m^{2} \gamma} )\]<p>因为所有时刻的<strong>微观状态</strong>应该相同，所以</p>
+\[< v^{2}(t) >_{all}\]<p>应该与时间无关，其时间项系数应该为0，即</p>
+\[\frac{k_{B}T}{m} - \frac{\lambda}{2m^{2} \gamma} = 0\]<p>从而有<strong>Fluctuation Dissipation Theory</strong></p>
+\[\lambda = 6mk_{B}T \gamma\]<h2 id="Einstein关系"><a href="#Einstein关系" class="headerlink" title="Einstein关系"></a>Einstein关系</h2><p>除了通过随机过程分析理论，我们还可以通过求解Fick第二定律非稳态扩散方程得到<r^{2}(t)>，这样我们便可以将扩散系数的物理意义用有明确物理意义的变量阐明. </p>
 <p>三维情况下非稳态扩散方程的解（概率分布）为</p>
-<script type="math/tex; mode=display">
-P(\vec{r},t)=(\frac{1}{2 \pi})^{3}(\frac{\pi}{Dt})^{3/2} 
-\exp(-\frac{|\vec{r}-\vec{r_{0}}|^{2}}{4Dt})</script><p>从而</p>
-<script type="math/tex; mode=display">
-<r(t)^{2}>=\int_{-\infty}^{\infty} d\vec{r} \vec{r}^{2} P(\vec{r},t)
-= 6Dt</script><p>即</p>
-<script type="math/tex; mode=display">
-<r(t)^{2}> = \frac{\lambda}{\gamma^{2} m^{2}} t
-= 6Dt</script><p>结合Fluctuation Dissipation Theory，可得<strong>Einstein关系</strong></p>
-<script type="math/tex; mode=display">
-D=\frac{k_{B}T}{\gamma m}</script><p>至此，我们通过随机过程分析获得了Fick定律中扩散系数物理意义. </p>
-<h1 id="第一条通向Fokker-Planck方程的路径"><a href="#第一条通向Fokker-Planck方程的路径" class="headerlink" title="第一条通向Fokker-Planck方程的路径"></a>第一条通向Fokker-Planck方程的路径</h1><h2 id="Chapman-Kolmogorov方程"><a href="#Chapman-Kolmogorov方程" class="headerlink" title="Chapman-Kolmogorov方程"></a>Chapman-Kolmogorov方程</h2><script type="math/tex; mode=display">
-P_{2}(y_{3},t_{3}|y_{1},t_{1})=\int dy_{2} 
+\[P(\vec{r},t)=(\frac{1}{2 \pi})^{3}(\frac{\pi}{Dt})^{3/2} 
+\exp(-\frac{|\vec{r}-\vec{r_{0}}|^{2}}{4Dt})\]<p>从而</p>
+\[<r(t)^{2}>=\int_{-\infty}^{\infty} d\vec{r} \vec{r}^{2} P(\vec{r},t)
+= 6Dt\]<p>即</p>
+\[<r(t)^{2}> = \frac{\lambda}{\gamma^{2} m^{2}} t
+= 6Dt\]<p>结合Fluctuation Dissipation Theory，可得<strong>Einstein关系</strong></p>
+\[D=\frac{k_{B}T}{\gamma m}\]<p>至此，我们通过随机过程分析获得了Fick定律中扩散系数物理意义. </p>
+<h1 id="第一条通向Fokker-Planck方程的路径"><a href="#第一条通向Fokker-Planck方程的路径" class="headerlink" title="第一条通向Fokker-Planck方程的路径"></a>第一条通向Fokker-Planck方程的路径</h1><h2 id="Chapman-Kolmogorov方程"><a href="#Chapman-Kolmogorov方程" class="headerlink" title="Chapman-Kolmogorov方程"></a>Chapman-Kolmogorov方程</h2>\[P_{2}(y_{3},t_{3}|y_{1},t_{1})=\int dy_{2} 
 P_{1|1}(y_{3},t_{3}|y_{2},t_{2})
-P_{1|1}(y_{2},t_{2}|y_{1},t_{1})</script><h2 id="Master方程"><a href="#Master方程" class="headerlink" title="Master方程"></a>Master方程</h2><script type="math/tex; mode=display">
-\frac{\partial P_{1}(y,t)}{\partial t}=\int dy_{1}
-\{ W_{t}(y_{1},y_{2})P_{1}(y_{1},t)-W_{t}(y_{2},y_{1})P_{1}(y_{2},t) \}</script><h2 id="Fokker-Planck方程"><a href="#Fokker-Planck方程" class="headerlink" title="Fokker-Planck方程"></a>Fokker-Planck方程</h2><script type="math/tex; mode=display">
-\frac{\partial P_{1}(y,t)}{\partial t}=
+P_{1|1}(y_{2},t_{2}|y_{1},t_{1})\]<h2 id="Master方程"><a href="#Master方程" class="headerlink" title="Master方程"></a>Master方程</h2>\[\frac{\partial P_{1}(y,t)}{\partial t}=\int dy_{1}
+\{ W_{t}(y_{1},y_{2})P_{1}(y_{1},t)-W_{t}(y_{2},y_{1})P_{1}(y_{2},t) \}\]<h2 id="Fokker-Planck方程"><a href="#Fokker-Planck方程" class="headerlink" title="Fokker-Planck方程"></a>Fokker-Planck方程</h2>\[\frac{\partial P_{1}(y,t)}{\partial t}=
 \sum_{n=0}^{\infty}\frac{(-1)^{n}}{n!} 
 \frac{\partial^{n}}{\partial y^{n}}
-\left\{ \left[ \int d \xi \xi^{n} W(y,\xi) \right] P_{1}(y,t) \right\}</script><p>等式右边为级数表达，若只取前两项有</p>
-<script type="math/tex; mode=display">
-\frac{\partial P_{1}(y,t)}{\partial t} \approx
+\left\{ \left[ \int d \xi \xi^{n} W(y,\xi) \right] P_{1}(y,t) \right\}\]<p>等式右边为级数表达，若只取前两项有</p>
+\[\frac{\partial P_{1}(y,t)}{\partial t} \approx
 \frac{\partial}{\partial y}[\alpha_{1}(y)P_{1}(y,t)]
-+ \frac{1}{2} \frac{\partial^{2}}{\partial y^{2}}[\alpha_{2}(y)P_{1}(y,t)]</script><p>其中，</p>
-<script type="math/tex; mode=display">
-\alpha_{1} = \int d \xi \xi W(y,\xi) \\
-\alpha_{2} = \int d \xi \xi^{2} W(y,\xi)</script><h1 id="第二条通向Fokker-Planck方程的路径"><a href="#第二条通向Fokker-Planck方程的路径" class="headerlink" title="第二条通向Fokker-Planck方程的路径"></a>第二条通向Fokker-Planck方程的路径</h1><p>以下推导过程涉及<strong>变分法</strong>，尚未完成。</p>
-<h2 id="Langevin方程"><a href="#Langevin方程" class="headerlink" title="Langevin方程"></a>Langevin方程</h2><script type="math/tex; mode=display">
-m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fokker-Planck方程-1" class="headerlink" title="Fokker-Planck方程"></a>Fokker-Planck方程</h2><script type="math/tex; mode=display">
-\frac{\partial P_{1}(y,t)}{\partial t} \approx
++ \frac{1}{2} \frac{\partial^{2}}{\partial y^{2}}[\alpha_{2}(y)P_{1}(y,t)]\]<p>其中，</p>
+\[\alpha_{1} = \int d \xi \xi W(y,\xi) \\
+\alpha_{2} = \int d \xi \xi^{2} W(y,\xi)\]<h1 id="第二条通向Fokker-Planck方程的路径"><a href="#第二条通向Fokker-Planck方程的路径" class="headerlink" title="第二条通向Fokker-Planck方程的路径"></a>第二条通向Fokker-Planck方程的路径</h1><p>以下推导过程涉及<strong>变分法</strong>，尚未完成。</p>
+<h2 id="Langevin方程"><a href="#Langevin方程" class="headerlink" title="Langevin方程"></a>Langevin方程</h2>\[m\dot{v}=-m \gamma v+\eta(t)\]<h2 id="Fokker-Planck方程-1"><a href="#Fokker-Planck方程-1" class="headerlink" title="Fokker-Planck方程"></a>Fokker-Planck方程</h2>\[\frac{\partial P_{1}(y,t)}{\partial t} \approx
 \frac{\partial}{\partial y}[\alpha_{1}(y)P_{1}(y,t)]
-+ \frac{1}{2} \frac{\partial^{2}}{\partial y^{2}}[\alpha_{2}(y)P_{1}(y,t)]</script><p>其中，</p>
-<script type="math/tex; mode=display">
-\alpha_{1} = \int d \xi \xi W(y,\xi) \\
-\alpha_{2} = \int d \xi \xi^{2} W(y,\xi)</script><h1 id="Fick第二定律的三种推导方式"><a href="#Fick第二定律的三种推导方式" class="headerlink" title="Fick第二定律的三种推导方式"></a>Fick第二定律的三种推导方式</h1><h2 id="唯象模型方法"><a href="#唯象模型方法" class="headerlink" title="唯象模型方法"></a>唯象模型方法</h2><h2 id="Brownian-motion"><a href="#Brownian-motion" class="headerlink" title="Brownian motion"></a>Brownian motion</h2><h2 id="Einstein方法"><a href="#Einstein方法" class="headerlink" title="Einstein方法"></a>Einstein方法</h2><h1 id="参考材料"><a href="#参考材料" class="headerlink" title="参考材料"></a>参考材料</h1><p>[1] 何政达. LectureNote of Electrochemistry. 2017. </p>
++ \frac{1}{2} \frac{\partial^{2}}{\partial y^{2}}[\alpha_{2}(y)P_{1}(y,t)]\]<p>其中，</p>
+\[\alpha_{1} = \int d \xi \xi W(y,\xi) \\
+\alpha_{2} = \int d \xi \xi^{2} W(y,\xi)\]<h1 id="Fick第二定律的三种推导方式"><a href="#Fick第二定律的三种推导方式" class="headerlink" title="Fick第二定律的三种推导方式"></a>Fick第二定律的三种推导方式</h1><h2 id="唯象模型方法"><a href="#唯象模型方法" class="headerlink" title="唯象模型方法"></a>唯象模型方法</h2><h2 id="Brownian-motion"><a href="#Brownian-motion" class="headerlink" title="Brownian motion"></a>Brownian motion</h2><h2 id="Einstein方法"><a href="#Einstein方法" class="headerlink" title="Einstein方法"></a>Einstein方法</h2><h1 id="参考材料"><a href="#参考材料" class="headerlink" title="参考材料"></a>参考材料</h1><p>[1] 何政达. LectureNote of Electrochemistry. 2017. </p>
 
     </div>
 
@@ -443,14 +408,14 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>مؤلف المقال:  </strong>Geon Mo
+      <strong>本文作者： </strong>Geon Mo
   </li>
   <li class="post-copyright-link">
-      <strong>رابط المقال: </strong>
+      <strong>本文链接：</strong>
       <a href="https://www.mozheyang.top/2017/11/07/EClecturenote5/" title="课后回顾 | 电化学动力学（介观尺度）">https://www.mozheyang.top/2017/11/07/EClecturenote5/</a>
   </li>
   <li class="post-copyright-license">
-      <strong>حقوق الملكية:  </strong>حميع المقالات في هذه المدوّنة منشورة تحت رخصة <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> إلا عند التنويه بخلافه.
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -483,7 +448,20 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
 
 
 
-    <div class="comments gitalk-container"></div>
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-valine">Valine</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments valine-container"></div>
+            </div>
+        </div>
+      </div>
 </div>
   </main>
 
@@ -506,13 +484,13 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="مُجمل عدد الحروف">192k</span>
+    <span title="站点总字数">192k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="مُجمل زمن القراءة">5:49</span>
+    <span title="站点阅读时长">5:49</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -520,7 +498,7 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="إجمالي الزوار">
+      <span class="site-uv" title="总访客量">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -528,12 +506,12 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="إجمالي المشاهدات">
+      <span class="site-pv" title="总访问量">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
@@ -546,7 +524,7 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
     <span class="toggle-line"></span>
   </div>
   <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
   </div>
@@ -560,6 +538,8 @@ m\dot{v}=-m \gamma v+\eta(t)</script><h2 id="Fokker-Planck方程-1"><a href="#Fo
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"GeonMoo","repo":"geonmoo.github.io","client_id":null,"client_secret":null,"admin_user":"GeonMoo","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"12ab1aecb6499a79da3cc265feb49187"}</script>
 <script src="/js/third-party/comments/gitalk.js" defer></script>
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appid":"XXDgldaYnClF172bvGQcHJj3-9Nh9j0Va","appkey":"WTlVtXkhnVRf7Gkjryijsy2Q","notify":false,"verify":false,"placeholder":"请开始你的表演","avatar":"mp","avatar_cdn":"https://cravatar.cn/avatar/","guest_info":"nick,mail,link","pageSize":5,"language":"zh-cn","visitor":true,"comment_count":false,"recordIP":false,"serverURLs":"https://xxdglday.lc-cn-n1-shared.com","path":"2017/11/07/EClecturenote5/","title":"课后回顾 | 电化学动力学（介观尺度）","url":"https://www.mozheyang.top/2017/11/07/EClecturenote5/"}</script>
+<script src="/js/valine.js" defer></script>
 
 <script src="/js/tracker.js"></script>
 

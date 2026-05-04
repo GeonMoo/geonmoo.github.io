@@ -1,13 +1,43 @@
 /* global NexT, CONFIG, MathJax */
 
-document.addEventListener('page:loaded', () => {
-  if (!CONFIG.enableMath) return;
+(function() {
+  let loading = false;
+  let loaded = false;
 
-  if (typeof MathJax === 'undefined') {
+  const getMathJaxUrl = () => {
+    const source = CONFIG.mathjax.js;
+    return typeof source === 'string' ? source : source.url;
+  };
+
+  const typeset = () => {
+    if (typeof MathJax === 'undefined' || !MathJax.typesetPromise) return;
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  };
+
+  const boot = () => {
+    if (!CONFIG.enableMath) return;
+
+    if (typeof MathJax !== 'undefined') {
+      loaded = true;
+      typeset();
+      return;
+    }
+
+    if (loading || loaded) return;
+    loading = true;
+
     window.MathJax = {
       tex: {
-        inlineMath: { '[+]': [['$', '$']] },
-        tags      : CONFIG.mathjax.tags
+        inlineMath : { '[+]': [['$', '$']] },
+        displayMath: { '[+]': [['$$', '$$']] },
+        tags       : CONFIG.mathjax.tags
+      },
+      chtml: {
+        matchFontHeight: false,
+        scale          : 1
       },
       options: {
         renderActions: {
@@ -20,17 +50,27 @@ document.addEventListener('page:loaded', () => {
             });
           }, '', false]
         }
+      },
+      startup: {
+        pageReady: () => MathJax.startup.defaultPageReady().then(() => {
+          loaded = true;
+        })
       }
     };
-    NexT.utils.getScript(CONFIG.mathjax.js, {
-      attributes: {
-        defer: true
-      }
-    });
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.typesetClear();
-    MathJax.texReset();
-    MathJax.typesetPromise();
-  }
-});
+
+    const url = getMathJaxUrl();
+    if (NexT?.utils?.getScript) {
+      NexT.utils.getScript({ url }, { attributes: { defer: true } });
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = url;
+    script.defer = true;
+    document.head.appendChild(script);
+  };
+
+  document.addEventListener('page:loaded', boot);
+  document.addEventListener('DOMContentLoaded', boot);
+  if (document.readyState !== 'loading') setTimeout(boot, 0);
+})();
