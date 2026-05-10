@@ -1277,7 +1277,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #956cb4;
+  background: #d25c42;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3033,6 +3033,15 @@ header.header {
 }
 .valine-container {
   margin-top: 24px;
+}
+.comment-fallback {
+  margin-top: 24px;
+  padding: 12px 14px;
+  border: 1px solid #e5d3a1;
+  border-radius: 4px;
+  background: #fff9e8;
+  color: #7a5a00;
+  font-size: 14px;
 }
 @media (max-width: 767px) {
   .mline-fields {

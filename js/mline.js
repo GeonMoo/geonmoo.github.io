@@ -57,7 +57,10 @@
   };
 
   const apiUrl = (path, params = {}) => {
-    const base = (CONFIG.mline.api_base || '').replace(/\/+$/, '');
+    const configuredBase = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+      ? (CONFIG.mline.local_api_base || CONFIG.mline.api_base)
+      : CONFIG.mline.api_base;
+    const base = (configuredBase || '').replace(/\/+$/, '');
     const url = new URL(`${base}${path}`, location.origin);
     Object.entries(params).forEach(([key, value]) => {
       if (Array.isArray(value)) {
@@ -184,6 +187,10 @@
     container.innerHTML = '<div class="mline-loading">加载评论中...</div>';
 
     try {
+      const health = await request('/health');
+      if (!health.ok) {
+        throw new Error('MLine API is not healthy');
+      }
       const data = await request('/comments', {
         query: {
           path: CONFIG.mline.path || location.pathname
@@ -193,7 +200,7 @@
       render(container);
       bind(container);
     } catch (err) {
-      container.innerHTML = `<div class="mline-error">${escapeHtml(err.message)}</div>`;
+      container.innerHTML = `<div class="mline-error">${escapeHtml(CONFIG.mline.unavailable_text || 'MLine 暂时不可用，请切换到其他评论方式。')}</div>`;
     }
   };
 
